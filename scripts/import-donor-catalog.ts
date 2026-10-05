@@ -221,7 +221,7 @@ function argValue(name: string): string | undefined {
 	return i >= 0 ? process.argv[i + 1] : undefined;
 }
 
-if (process.argv[1] && process.argv[1].endsWith("import-donor-catalog.ts")) {
+if (process.argv[1]?.endsWith("import-donor-catalog.ts")) {
 	const donor = argValue("donor");
 	const commit = argValue("commit");
 	const outDir = argValue("out") ?? join(process.cwd(), "data", "catalog");
