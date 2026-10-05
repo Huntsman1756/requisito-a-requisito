@@ -247,3 +247,12 @@ D-7 y D-8. **Siguen reservados a Daniel:** revisión de los lotes de reglas y de
 las personas golden (G10; formato ligero), contactos y sesiones del piloto,
 revisión final de la memoria, firma y presentación, y cualquier gasto (dominio).
 Los agentes no envían correos ni contactan con terceros en nombre de Daniel.
+
+## ADR-037 — Bono social eléctrico: 42,5 % / 57,5 % en 2026 (verificado)
+2026-10-05 · aceptada · Contrastado por Claude: el RDL 7/2026, de 20 de marzo (BOE
+del 21/03/2026), fija descuentos excepcionales del 42,5 % (vulnerable) y del 57,5 %
+(vulnerable severo) del 1 de enero al 31 de diciembre de 2026. El texto
+consolidado del RD 897/2017 (35 % / 50 %) solo rige cuando acaba la prórroga.
+El catálogo donante era correcto. Caso de ejemplo de ADR-035 para la memoria
+(«el sistema obliga a comprobar la vigencia temporal»). **El job F9 debe vigilar
+este RuleSet a partir del 01/01/2027.**
