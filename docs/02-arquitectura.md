@@ -5,7 +5,7 @@ motor → `07-motor-evaluacion.md` · fuentes → `08-fuentes-y-datos.md` ·
 diseño → `09-diseno-ux.md` · QA → `10-qa-matriz.md` · back/infra →
 `11-infra-despliegue.md` · contratos → `schemas/`.
 
-## 1. Stack (heredado de la-ayuda; no se cambia)
+## 1. Stack (el mismo que la-ayuda, para portar código sin fricción)
 
 | Capa | Tecnología | Versión en `package.json` |
 |---|---|---|
@@ -20,9 +20,8 @@ diseño → `09-diseno-ux.md` · QA → `10-qa-matriz.md` · back/infra →
 
 **Sin dependencias nuevas** salvo autorización (ADR-010).
 
-Repo destino: `F:\_Proyectos\la-ayuda` (GitHub `mapa-de-beneficios`), en el
-worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama
-`feat/premio-gtl-elegibilidad`.
+Repo: **este** (`F:\_Proyectos\datawardsmadrid`), proyecto nuevo e independiente
+(ADR-022). Donantes de solo lectura y qué se porta de cada uno: `docs/13`.
 
 ## 2. Flujo
 
@@ -31,7 +30,7 @@ worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama
 ┌─────────────────┐  ┌─────────────────────────┐  ┌───────────────────────┐   ┌───────────────────────────────┐
 │ fuentes oficiales│─▶│ sources/<id>.json + .txt│─▶│ eligibility:validate  │   │ cuestionario (≤10, progresivo) │
 │ (BOE/BOCM/BDNS/  │  │ (sha256, texto normaliz.)│  │  · Zod                │   │          │                     │
-│  sede)           │  └─────────────────────────┘  │  · autoridad ledger   │   │  CitizenProfile (memoria)      │
+│  sede)           │  └─────────────────────────┘  │  · ficha en catálogo │   │  CitizenProfile (memoria)      │
 └─────────────────┘  ┌─────────────────────────┐  │  · citas ∈ texto      │   │          ▼                     │
                      │ rules/<slug>.json       │─▶│  · dominios/frescura  │   │  evaluate(profile,bundle,today)│
                      │ parameters.json         │  │  · conflictos         │──▶│          ▼                     │
@@ -41,7 +40,7 @@ worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama
                                                     + eligibility-report.json  └───────────────────────────────┘
 ```
 
-## 3. Módulos en la-ayuda (rutas propuestas; ajustar a las convenciones reales)
+## 3. Módulos del proyecto
 
 | Ruta | Responsabilidad |
 |---|---|
@@ -62,12 +61,17 @@ worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama
 | `data/eligibility/{rules,sources,parameters.json,questions.json}` | Datos de entrada |
 | `data/eligibility/sources/registry.json` | Dominios permitidos y rangos |
 | `scripts/eligibility-*.ts` | snapshot / validate / build / exhaustive / mutate |
-| `src/app/…/comprobar/` | Ruta del orientador (según el router de locales actual) |
+| `src/app/page.tsx` (entrada) · `src/app/comprobar/` · `src/app/resultados/` · `src/app/como-funciona/` · `src/app/ayudas/[slug]/` | Rutas (solo `es`; ADR-024) |
+| `data/catalog/benefits/*.json` + `data/catalog/provenance.json` + `data/catalog/leads.json` | Catálogo importado de la-ayuda con procedencia (ADR-023) |
+| `scripts/import-donor-catalog.ts` | Importación desde un commit fijado del donante |
+| `src/lib/catalog/schema.ts` | Zod del catálogo (subconjunto de `types.ts` del donante) |
+| `src/lib/related/rank.ts` | Ranking de relevancia portado de `rankBenefits` (solo nivel 2) |
+| `src/lib/user-state.ts` | Contrato de privacidad portado |
 | `src/components/eligibility/*` | Componentes de docs/09 §3 |
 | `tests/eligibility/{unit,exhaustive,golden,gate,e2e}` | Pruebas |
 | `playwright.eligibility.config.ts` | Matriz de navegadores (docs/10 §2) |
 
-### 3.1 Código existente que hay que respetar y reutilizar (observado el 2026-10-05)
+### 3.1 Código de la-ayuda que se porta (detalle y lista cerrada en docs/13 §3)
 
 - `src/lib/eligibility.ts` → `eligibilityChecklist(benefit, lang)`: **solo
   presentación** de `eligibilityFactors` («Encajas si…»). No evalúa perfiles ni
@@ -89,7 +93,7 @@ worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama
   pre-filtro, **no** regla.
 - i18n: `t(lang, key)` de `src/lib/i18n`. Las claves nuevas llevan el prefijo `elig_`.
 - Diseño: tokens de `src/app/globals.css` y estilos por página en `src/styles/pages.css`.
-- Autoridad editorial: la función que usa `pipeline:authority` (no reimplementar).
+- Autoridad: aquí **no** hay ledger. Nivel 1 = RuleSet propio con gates G1–G10 y revisión humana; nivel 2 = ficha importada `active && revisada` del donante en un commit fijado.
 
 ### 3.2 Origen del motor
 

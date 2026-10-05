@@ -5,7 +5,7 @@
 1. Leer `AGENTS.md` de este repo y `TASK_QUEUE.md`.
 2. Abrir **solo** el fichero de la fase activa: `phases/Fx.md`.
 3. Leer el último handoff (`handoffs/`, el más reciente).
-4. En el worktree de la-ayuda: `git status --short` y `git log --oneline -5`.
+4. En este repo: `git status --short` y `git log --oneline -5`.
    Si hay cambios que no son tuyos, **no tocarlos**. Si se solapan con tu tarea,
    parar y reportarlo.
 5. Elegir la primera tarea `TODO` de la fase activa cuyas dependencias estén
@@ -40,8 +40,8 @@
 
 - Una regla no se puede representar fielmente (ambigüedad jurídica, discrecionalidad).
 - Dos fuentes oficiales del mismo rango se contradicen.
-- Hace falta una dependencia nueva, cambiar un contrato de la-ayuda, tocar el
-  ledger o las fichas, hacer push, desplegar o enviar algo.
+- Hace falta una dependencia nueva, escribir en un repo donante, hacer push,
+  crear el repo remoto, desplegar o enviar algo.
 - Un test que no es tuyo falla en la línea base, o aparece trabajo sucio ajeno
   solapado con el tuyo.
 - Recortar alcance (ver §5).
@@ -50,7 +50,7 @@
 
 Recortar **en este orden**:
 1. Número de ayudas del vertical (mínimo 8).
-2. Traducción del contenido de reglas (la interfaz sí en 5 locales).
+2. Inglés (Should, ADR-024).
 3. Estimación de esfuerzo (se oculta).
 4. Pulido visual secundario (impresión, animaciones).
 5. Demo desplegada (se usa vídeo).

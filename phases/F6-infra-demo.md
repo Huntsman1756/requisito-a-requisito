@@ -20,7 +20,7 @@
 curl.exe -sI https://<demo>/comprobar/ | Select-String "content-security-policy|strict-transport|referrer-policy"
 # Digest servido frente al local
 curl.exe -s https://<demo>/<ruta-bundle> | node -e "..."   # comparar con manifest local
-$env:E2E_BASE_URL='https://<demo>'; npx playwright test --config playwright.eligibility.config.ts --project desktop-chromium --project mobile-ios --grep "@smoke|@privacy"
+$env:E2E_BASE_URL='https://<demo>'; npx playwright test --config playwright.config.ts --project desktop-chromium --project mobile-ios --grep "@smoke|@privacy"
 ```
 
 ## Puerta de salida

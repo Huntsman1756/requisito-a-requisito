@@ -1,6 +1,6 @@
 # Cola de tareas
 
-**Fase activa: F0** (F1 y F2 pueden empezar en cuanto F0-4 y F1-1 estén hechos).
+**Fase activa: F0** — reorientada el 2026-10-05 a **proyecto nuevo e independiente en este repo** (ADR-022). Próximo: F0-7 → F0-8 → F0-9 → F0-5b; después F1/F2.
 Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit · evidencia)` · `BLOQUEADO: motivo — quién`.
 
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
@@ -10,13 +10,17 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F0-3 | Inventario de impacto real | agente | 06/10 | — | HECHO (2026-10-05 · evidence/2026-10-05-F0/impacto/inventario.json) | Repos privados (0 stars); GA4 de edubecas sin acceso — cifras de tráfico quedan BLOQUEADO — Daniel |
 | F0-4 | Worktree + línea base | agente | 05/10 | — | HECHO (2026-10-05 · evidence/2026-10-05-F0/baseline.json) | check PASS; test 750/750; build PASS; a11y 12/12. Sin pipeline:authority en main (desviación documentada) |
 | F0-5 | Ayudas candidatas del vertical con autoridad | agente | 06/10 | F0-4 | HECHO (2026-10-05 · evidence/2026-10-05-F0/vertical/candidatas.json) | 16 candidatas con autoridad vigente (8 open, 6 rolling, 2 unknown) ≥ 8 ✓ |
+| F0-7 | **Andamiaje del proyecto en este repo** (phases/F0 F0-7) | agente | 06/10 | — | TODO | Mismas versiones que la-ayuda; nada más |
+| F0-8 | **Portar `6595a533`** (Zod) del worktree de la-ayuda | agente | 06/10 | F0-7 | TODO | El worktree se conserva; no se trabaja más ahí |
+| F0-9 | **Importar el catálogo** de la-ayuda con procedencia (docs/13 §2) | agente | 06/10 | F0-7 | TODO | ≈ 54 Madrid + ≈ 191 estatales `active && revisada`, sin fiscales |
+| D-6 | Nombre del producto (provisional «Ayudas Madrid · con fuente») y dominio/subdominio de la demo | **Daniel** | 08/10 | — | TODO | Necesario para F4-1 y F6 |
 | F0-6 | Navegadores de Playwright en la caché de F: | agente | 06/10 | F0-4 | HECHO (2026-10-05 · baseline.json) | chromium-1228, firefox-1532, webkit-2311 ya en F:\Caches\ms-playwright |
 | F0-3b | Search Console de edubecas.es aportado por Daniel | agente | 05/10 | — | HECHO (2026-10-05 · evidence/2026-10-05-F0/impacto/edubecas-search-console-resumen.json) | 1 clic / 1.128 impresiones en 75 días (posición ~71). **No es tracción: no se cita como impacto** |
-| F0-5b | **Rehacer el inventario con ámbito Comunidad de Madrid (ADR-020):** ayudas con `scopeRegion` Madrid o municipales de la CM, más estatales que puede pedir un residente en Madrid; categorías familia, educación/becas, juventud, vivienda, empleo, discapacidad/dependencia; excluir `tax_deduction`; mismo gate de vigencia que F0-5; anotar el plazo | agente | 06/10 | F0-4 | TODO | **Prioritario: bloquea F3.** Salida: `evidence/<fecha>-F0/vertical/candidatas-madrid.json`. Si < 8 ⇒ avisar a Daniel con las opciones |
-| D-1 | Vehículo (ADR-006): **propuesta: la-ayuda sola** (edubecas.es no aporta tracción medible) | **Daniel** | 07/10 | F0-3b | TODO | Confirmar |
-| D-4 | **Publicar código y datos** (criterio de ecosistema, 30 % en Impact y 25 % en Leader): `mapa-de-beneficios` público, o al menos el motor y las reglas como datos abiertos. Antes: el agente ejecuta `npm run secrets:scan` + revisión del historial y entrega un informe | **Daniel** (decisión) + agente (escaneo) | 08/10 | — | TODO | Sin esto, el ecosistema queda en promesa |
+| F0-5b | **Inventario de candidatas al nivel 1, ámbito Comunidad de Madrid (ADR-021)**, sobre el catálogo importado en F0-9 + pistas BOCM: ayudas con `scopeRegion` Madrid o municipales de la CM, más estatales que puede pedir un residente en Madrid; categorías familia, educación/becas, juventud, vivienda, empleo, discapacidad/dependencia; excluir `tax_deduction`; mismo gate de vigencia que F0-5; anotar el plazo | agente | 06/10 | F0-4 | TODO | **Prioritario: bloquea F3.** Salida: `evidence/<fecha>-F0/vertical/candidatas-madrid.json`. Si < 8 ⇒ avisar a Daniel con las opciones |
+| D-1 | Vehículo | **Daniel** | — | — | HECHO (2026-10-05 · ADR-022) | Proyecto nuevo, solo Madrid; la-ayuda y EduAyudas como donantes de solo lectura |
+| D-4 | **Crear el repo GitHub público** de este proyecto (ADR-025) y autorizar el push. Al ser nuevo, no hay historial heredado que auditar; el agente comprueba que no haya secretos antes del primer push | **Daniel** (decisión) + agente (escaneo) | 08/10 | — | TODO | Sin esto, el ecosistema queda en promesa |
 | D-5 | Categoría: con los datos de F0, **recomendación: Leader** si no hay respuesta afirmativa sobre Impact antes del 12/10 | **Daniel** | ≤ 12/10 | F0-2 | TODO | Ver docs/01 «Evaluación tras F0» |
-| F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | EN CURSO (2026-10-05, F1-1) | |
+| F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | TODO (F1-1 se porta en F0-8) | |
 | F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | TODO | |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | TODO | |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |

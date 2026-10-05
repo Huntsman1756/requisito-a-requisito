@@ -116,7 +116,7 @@ editorial vigente es `status=active && reviewStatus=revisada`, reforzado por
 (condición de contorno, no rebaja de rigor). Si Daniel prefiere basar el
 worktree en `integrate/autonomous-pipeline`, la rama se recrea.
 
-## ADR-020 — Ámbito: Comunidad de Madrid
+## ADR-021 — Ámbito: Comunidad de Madrid
 2026-10-05 · aceptada (Daniel) · El premio es de la Comunidad de Madrid. El
 orientador cubre ayudas autonómicas y municipales de la CM y las estatales que
 puede solicitar un residente en Madrid. Sustituye en parte al ADR-004: «familias
@@ -129,3 +129,44 @@ y las ayudas de otras comunidades quedan fuera del bundle y del nivel 2.
 2026-10-05 · propuesta · Search Console de edubecas.es muestra 1 clic en 75 días:
 no aporta tracción. Propuesta: presentar la-ayuda sola; EduBecas se menciona como
 trabajo previo propio. Pendiente de que Daniel confirme (D-1).
+
+## ADR-022 — Proyecto nuevo e independiente, solo Madrid, para este concurso
+2026-10-05 · aceptada (Daniel) · **Sustituye ADR-002 y ADR-006.** El producto es un
+proyecto nuevo que vive en este mismo repo (`F:\_Proyectos\datawardsmadrid`, que
+pasa de centro de mando a repo del producto + candidatura). No se modifican
+la-ayuda ni EduAyudas: son donantes de solo lectura (docs/13). Consecuencias:
+- Se abandona el worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`: **se
+  conserva** (no se borra) y su commit `6595a533` (Zod) se porta aquí.
+- Se elimina la dependencia de los gates editoriales de la-ayuda (ledger/strict).
+  La autoridad aquí = gates propios de citas (G1–G10) + revisión humana.
+- El despliegue ya no está bloqueado por la deuda legacy de la-ayuda (ADR-025).
+- Impacto: un proyecto nuevo no tiene uso histórico. La memoria lo presenta como
+  piloto, con la trayectoria y el código propios como base. Esto refuerza la
+  preferencia por Leader (D-5), pendiente de la consulta.
+- ADR-016 (dos niveles) se mantiene: el nivel 2 sale del catálogo importado con un
+  ranking portado. ADR-007 (revisión) se mantiene sobre una **copia** propia de
+  `user-state.ts`. ADR-010 se lee como «el mismo conjunto de dependencias que
+  la-ayuda, nada más».
+
+## ADR-023 — Catálogo importado con procedencia; importar no es aprobar
+2026-10-05 · aceptada · `scripts/import-donor-catalog.ts` lee la-ayuda en un commit
+fijado (`git show`), filtra Madrid + estatales, `active && revisada` y sin
+`tax_deduction`, y escribe JSON normalizado + `provenance.json` (commit, ruta,
+sha256). Lo importado solo alimenta el nivel 2; el nivel 1 exige un RuleSet propio
+aprobado.
+
+## ADR-024 — Idioma: español (inglés como Should)
+2026-10-05 · aceptada · Ámbito Madrid: se elimina el requisito de 5 locales. `es`
+obligatorio; `en` solo si sobra tiempo (residentes internacionales).
+
+## ADR-025 — Repo propio público y despliegue independiente
+2026-10-05 · propuesta · Repo nuevo en GitHub, **público desde el primer push**
+(sin historial heredado que auditar), con licencia MIT para el código y licencia
+abierta para los datos de reglas (verificar la compatibilidad con las fuentes).
+Demo desplegable en un vhost propio. Requiere autorización de Daniel para crear
+el repo remoto, hacer push y desplegar (D-4, D-3).
+
+## ADR-026 — Candidato: persona física
+2026-10-05 · aceptada (Daniel) · Daniel se presenta como persona física, titular y
+responsable directo del proyecto (art. 5.1 y 6 de la Orden). No se constituirá
+ninguna entidad. La categoría sigue pendiente de la consulta (F0-2) y de D-5.

@@ -1,18 +1,22 @@
 # datawardsmadrid — Guía para agentes
 
-Candidatura de Daniel a los **Premios Global Tech Leaders Awards 2026** (Comunidad
-de Madrid, Orden 566/2026, BOCM del 01/10/2026). Este repo es el **centro de mando**:
-especificación, fases, esquemas, plantillas, evidencias y memoria. **El código
-del producto no vive aquí**: se escribe en un worktree de la-ayuda (§3).
+Candidatura de Daniel (**persona física**, ADR-026) a los **Premios Global Tech
+Leaders Awards 2026** (Comunidad de Madrid, Orden 566/2026, BOCM del 01/10/2026).
+Este repo contiene **el producto y la candidatura**: código, especificación,
+fases, esquemas, plantillas, evidencias y memoria (ADR-022).
 
-Producto: **La Ayuda · Tus derechos, con fuente**. Orientador que, a partir de
+Es un **proyecto nuevo e independiente**, hecho para este concurso. Reutiliza
+código y datos de proyectos propios estatales (la-ayuda, EduAyudas) **sin
+modificarlos**: son donantes de solo lectura (docs/13).
+
+Producto (nombre provisional, D-6): **Ayudas Madrid · con fuente**. Orientador que, a partir de
 ≤ 10 preguntas, dice qué ayudas públicas merece la pena comprobar, qué requisitos
 cumples, cuáles no y cuáles no se pueden saber, **qué te falta**, plazo,
 documentos y dónde solicitar, con cada afirmación enlazada a la fuente oficial.
 Las reglas deterministas deciden y nada se envía fuera del navegador.
 **Ámbito: Comunidad de Madrid** (ayudas autonómicas y municipales de la CM, más las
 estatales que puede solicitar un residente en Madrid). El premio es de la
-Comunidad de Madrid (ADR-020).
+Comunidad de Madrid (ADR-021).
 
 Aplica además `F:\_Proyectos\AGENTS.md` (unidades, worktrees, temporales y caché).
 
@@ -25,13 +29,12 @@ Aplica además `F:\_Proyectos\AGENTS.md` (unidades, worktrees, temporales y cach
 5. Según la tarea:
    - motor → `docs/07-motor-evaluacion.md` + `schemas/`
    - fuentes y reglas → `docs/08-fuentes-y-datos.md`
-   - interfaz → `docs/09-diseno-ux.md` + `la-ayuda/DESIGN.md`
+   - interfaz → `docs/09-diseno-ux.md` + `DESIGN.md` (portado de la-ayuda en F0-7)
    - QA → `docs/10-qa-matriz.md`
    - build, servido o demo → `docs/11-infra-despliegue.md`
    - visión de conjunto → `docs/02-arquitectura.md`
 6. `DECISIONS.md`: no reabras decisiones aceptadas sin evidencia nueva.
-7. `F:\_Proyectos\la-ayuda\AGENTS.md`: **contrato fuerte del repo destino**;
-   prevalece sobre este documento en todo lo que afecte a ese repo.
+7. `docs/13-reutilizacion-donantes.md`: qué se toma de cada repo propio y cómo.
 
 Contexto de fondo (solo si hace falta): `docs/00` (convocatoria), `docs/01`
 (estrategia), `docs/04` (referencias), `docs/05` (memoria) y `docs/06` (consulta).
@@ -47,30 +50,26 @@ Contexto de fondo (solo si hace falta): `docs/00` (convocatoria), `docs/01`
 
 | Qué | Dónde |
 |---|---|
-| Especificación, evidencias, memoria, handoffs | `F:\_Proyectos\datawardsmadrid\` |
-| Código del producto | worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, rama `feat/premio-gtl-elegibilidad` desde `main` |
-| Donante del motor (solo lectura) | `G:\_Proyectos\eduayudas\packages\rules-engine` |
+| **Código del producto** + especificación + evidencias + memoria | **este repo**: `F:\_Proyectos\datawardsmadrid` (rama `main`; ramas de trabajo `feat/<tarea>` si conviene) |
+| Donantes (**solo lectura**, nunca escribir) | `F:\_Proyectos\la-ayuda` (catálogo, diseño, privacidad), `G:\_Proyectos\eduayudas` (motor de referencia, avisos legales, QA), `F:\_Proyectos
+enta-verificable` (modelo de evidencia). Ver docs/13 |
+| Trabajo previo que hay que portar | worktree `F:\AgentState\worktrees\la-ayuda\premio-gtl`, commit `6595a533` (Zod). **Conservar; no borrar; no seguir trabajando ahí** |
 | Bytes de fuentes oficiales | `F:\AgentState\datawardsmadrid\snapshots\` |
 | Scratch | `F:\Temp\datawardsmadrid-<tarea>\` |
 | Navegadores de Playwright | `F:\Caches\ms-playwright` (`PLAYWRIGHT_BROWSERS_PATH`) |
 
-**Repos locales ↔ GitHub.** El local suele ir por delante y es la fuente de
-verdad. GitHub se usa solo para leer; no se hace push sin autorización.
+**Repos donantes ↔ GitHub** (lectura; el local suele ir por delante):
 
-| Local | GitHub | Papel |
+| Local | GitHub | Qué se reutiliza |
 |---|---|---|
-| `F:\_Proyectos\la-ayuda` | [Huntsman1756/mapa-de-beneficios](https://github.com/Huntsman1756/mapa-de-beneficios) | Producto destino |
-| `G:\_Proyectos\eduayudas` | [Huntsman1756/edubecas](https://github.com/Huntsman1756/edubecas) (en producción: edubecas.es) | Referencia del motor de reglas |
-| `F:\_Proyectos\renta-verificable` | [Huntsman1756/renta-verificable](https://github.com/Huntsman1756/renta-verificable) | Referencia del modelo claim → evidencia |
+| `F:\_Proyectos\la-ayuda` | [Huntsman1756/mapa-de-beneficios](https://github.com/Huntsman1756/mapa-de-beneficios) (MIT) | 57 fichas Madrid + 191 estatales (activas y revisadas), tokens de diseño, `user-state.ts`, ranking de relevancia, configuración de tooling |
+| `G:\_Proyectos\eduayudas` | [Huntsman1756/edubecas](https://github.com/Huntsman1756/edubecas) | Referencia del motor, casos de territorio, avisos legales, checklist de QA |
+| `F:\_Proyectos
+enta-verificable` | [Huntsman1756/renta-verificable](https://github.com/Huntsman1756/renta-verificable) | Modelo claim → evidencia |
 
-Crear el worktree (una vez):
-
-```powershell
-git -C F:\_Proyectos\la-ayuda worktree add F:\AgentState\worktrees\la-ayuda\premio-gtl -b feat/premio-gtl-elegibilidad main
-```
-
-**No** trabajar en el checkout principal de la-ayuda: tiene cambios sucios ajenos
-que hay que preservar.
+Para leer un donante sin depender de su working tree:
+`git -C F:\_Proyectos\la-ayuda show <commit>:<ruta>`. Fija el commit en
+`data/catalog/provenance.json`.
 
 ## 4. Reglas no negociables
 
@@ -81,17 +80,19 @@ que hay que preservar.
 3. **UNKNOWN ≠ NO.** Un dato que falta o es impreciso da `U`, nunca `F`.
 4. **Comprobación antes de responder.** Cada evaluación pasa los invariantes
    I1–I10 en el navegador; si alguno falla, no se muestra veredicto (docs/07 §5).
-5. **Solo ayudas con autoridad vigente** en el ledger de la-ayuda. No se tocan
-   las fichas, el ledger ni `data/pipeline/authority/`.
+5. **Los donantes no se modifican.** Ni commits, ni ramas, ni builds en su
+   checkout. Lo importado lleva procedencia (commit + sha256) y **solo** alimenta el
+   nivel 2. El nivel 1 exige un RuleSet propio aprobado (ADR-023).
 6. **Privacidad:** el perfil nunca sale del navegador ni va en telemetría, URL o
-   cookies (ADR-007; test bloqueante en todos los navegadores).
+   cookies (ADR-007; contrato portado de `user-state.ts`; test bloqueante en todos
+   los navegadores).
 7. **Solo se citan cifras medidas** en la memoria (0 cifras huérfanas, F7-6).
 8. **Sin dependencias nuevas, sin push, sin merge a main, sin despliegue y sin
    envíos** sin autorización explícita de Daniel en esa sesión.
 9. **No copiar** código, textos, CSS, iconos ni datos de proyectos de terceros;
    solo patrones, anotados en `docs/04` (docs/12 §6).
-10. Validación del repo destino: `npm run check`, `npm test` y `npm run build`, en
-    secuencia. Windows + Node/npm, sin Bun. Commits pequeños por unidad, sin
+10. Validación: `npm run check`, `npm run lint`, `npm test` y `npm run build`, en
+    secuencia (y `npm run validate:full` al cerrar una fase). Windows + Node/npm, sin Bun. Commits pequeños por unidad, sin
     `git add .`, `reset --hard` ni `clean`.
 
 ## 5. Cerrar tarea y fase
@@ -101,8 +102,7 @@ que hay que preservar.
 - Fase: puerta de `phases/Fx.md` + `evidence/<fecha>-Fx/receipt.json`
   (plantilla `templates/phase-receipt.json`) + `handoffs/<fecha>-Fx.md`
   (plantilla `templates/handoff.md`).
-- Decisión de diseño ⇒ ADR en `DECISIONS.md` (las del repo destino, en su propio
-  `docs/decisions/`).
+- Decisión de diseño ⇒ ADR en `DECISIONS.md`.
 - Bloqueo ⇒ `BLOQUEADO: <qué> — <quién>` y seguir con la siguiente tarea independiente.
 
 ## 6. Mapa del repo
@@ -122,6 +122,8 @@ docs/12              forma de trabajo
 phases/F0..F7        una fase por fichero con su puerta
 schemas/             JSON Schema 2020-12 (contrato normativo; Zod en el código)
 templates/           ejemplos y plantillas (RuleSet, golden, recibo, handoff, checklist manual)
+docs/13              reutilización de donantes (la-ayuda, EduAyudas…)
+src/ data/ scripts/ tests/ public/   código y datos del producto (se crean en F0-7)
 evidence/            evidencias fechadas
 handoffs/            relevos entre sesiones
 submission/          paquete final

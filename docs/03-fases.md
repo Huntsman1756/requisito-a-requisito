@@ -32,6 +32,6 @@ Presentación                                         ███  ⚑ límite
 
 | Must | Should | Could | Won't (ahora) |
 |---|---|---|---|
-| Motor con Kleene sobre intervalos e invariantes I1–I10 · gates de citas · ≥ 8 ayudas aprobadas · ≥ 12 personas golden · cuestionario + resultados + «qué te falta» · privacidad · axe AA en verde · Chromium, Firefox y WebKit + 2 móviles emulados · vídeo · memoria verificada | Elegibilidad futura · 5 locales de interfaz · regresión visual · estimación de esfuerzo · demo desplegada · datos abiertos publicados · 15–25 ayudas | Telemetría desplegada · traducción del contenido de reglas · impresión pulida | LLM explicativo · otros verticales · API dinámica · cuentas o alertas |
+| Motor con Kleene sobre intervalos e invariantes I1–I10 · gates de citas · ≥ 8 ayudas aprobadas · ≥ 12 personas golden · cuestionario + resultados + «qué te falta» · privacidad · axe AA en verde · Chromium, Firefox y WebKit + 2 móviles emulados · catálogo importado con procedencia (nivel 2) · repo público · vídeo · memoria verificada | Elegibilidad futura · interfaz en inglés · regresión visual · estimación de esfuerzo · demo desplegada · datos abiertos publicados · 15–25 ayudas | Telemetría desplegada · traducción del contenido de reglas · impresión pulida | LLM explicativo · otros verticales · API dinámica · cuentas o alertas |
 
 Recortes, en el orden de `docs/12-forma-de-trabajo.md` §5.

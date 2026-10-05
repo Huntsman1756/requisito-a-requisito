@@ -2,7 +2,7 @@
 
 ## 1. Pirámide
 
-| Nivel | Herramienta (ya en la-ayuda) | Qué cubre | Cuándo |
+| Nivel | Herramienta (mismo stack que la-ayuda) | Qué cubre | Cuándo |
 |---|---|---|---|
 | Tipos | `tsc --noEmit` (`npm run check`) | Contratos | Cada cambio |
 | Lint/formato | Biome (`npm run lint`) | Estilo | Cada commit (husky) |
@@ -12,11 +12,11 @@
 | Mutación dirigida | script Node | Que los tests detectan cambios de umbral | Fin de F2 y F3 |
 | Gate de reglas | `eligibility-build` | Esquema, autoridad, citas, extractos, dominios, frescura | Build |
 | Componentes | Vitest (render de estados, si el repo lo hace ya) o Playwright | Estados de §3 de docs/09 | F4 |
-| E2E multinavegador | Playwright (`playwright.eligibility.config.ts`, nuevo) | Recorridos completos | F4–F5 |
+| E2E multinavegador | Playwright (`playwright.config.ts`, nuevo) | Recorridos completos | F4–F5 |
 | Accesibilidad auto | `@axe-core/playwright` | WCAG 2.2 A/AA | F4–F5 |
 | Regresión visual | Playwright `toHaveScreenshot` | Pantallas clave × proyectos | F5 |
 | Privacidad | Playwright (intercepción de red + storage) | Que el perfil no sale | F4–F5 |
-| Rendimiento | Script con CDP (método de `docs/ops/mobile-performance-lab.md` de la-ayuda) + tamaños de `out/` | Presupuestos §5 | F5 |
+| Rendimiento | Script con CDP (método portado de `docs/ops/mobile-performance-lab.md` de la-ayuda) + tamaños de `out/` | Presupuestos §5 | F5 |
 | Manual | Checklist `templates/manual-device-checklist.md` | Dispositivos reales y lectores de pantalla | F5 (Daniel, unos 30 min) |
 
 **Sin dependencias nuevas** salvo autorización (ADR-010). Los navegadores de
@@ -25,8 +25,7 @@ Playwright se instalan con la caché en F:
 
 ## 2. Matriz de navegadores y dispositivos (Playwright `projects`)
 
-Nueva config `playwright.eligibility.config.ts` (no tocar la existente
-`playwright.config.ts`, que es la suite a11y del repo):
+Config `playwright.config.ts` del proyecto con estos proyectos:
 
 | Proyecto | Motor | Dispositivo/viewport | Extras |
 |---|---|---|---|
@@ -45,8 +44,8 @@ Cada proyecto ejecuta: recorrido feliz, recorrido «todo no lo sé», responder 
 dato faltante desde resultados, ir atrás sin perder respuestas, conmutador de
 cerradas, desplegar cita, copiar/imprimir y borrar respuestas.
 
-Los 5 locales (es, ca, gl, eu, oc) se ejecutan en `desktop-chromium` y
-`mobile-ios` (patrón 5 locales × viewports que ya usa la-ayuda).
+Idioma: solo `es` (ADR-024). Si se añade `en` (Should), se ejecuta en
+`desktop-chromium` y `mobile-ios`.
 
 **Límites honestos:** WebKit de Playwright no es Safari real, y la emulación
 móvil no es un dispositivo. Por eso hay checklist manual (§4).
@@ -102,9 +101,7 @@ Test E2E en todos los proyectos:
 ## 7. Calidad de datos y contenido
 
 - `npm run link:check` sobre las URL de fuentes y canales del bundle.
-- Las claves i18n nuevas están en los 5 locales (test). Las que falten caen al
-  español y se listan en un informe; se acepta en contenido de reglas (ADR),
-  no en la interfaz.
+- Ninguna cadena de interfaz fuera del sistema i18n (test); si existe `en`, ninguna clave ausente.
 - Ninguna palabra prohibida del microcopy (docs/09 §5) aparece en el `out/` de
   la ruta (test por búsqueda de texto).
 

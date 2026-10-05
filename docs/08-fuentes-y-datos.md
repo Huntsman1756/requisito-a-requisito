@@ -28,7 +28,7 @@ no pasa el gate.
 1. Descargar el documento oficial (PDF/HTML) con la herramienta de snapshot.
    Bytes en `F:\AgentState\datawardsmadrid\snapshots\<sha256>.<ext>` (fuera del
    repo, no se suben a git).
-2. Extraer texto: PDF con `pdfjs-dist` (ya es dependencia de la-ayuda), HTML con
+2. Extraer texto: PDF con `pdfjs-dist` (misma versión que la-ayuda), HTML con
    el extractor existente si lo hay. Normalizar (NFC, espacios colapsados, guiones
    de corte de línea unidos, comillas tipográficas → rectas).
 3. Guardar en el repo: `data/eligibility/sources/<sourceId>.json` con `url`,
@@ -52,22 +52,24 @@ no pasa el gate.
 Los valores concretos (p. ej. el IPREM de 2026) **los debe localizar y citar el
 agente en F1**; este documento no los da por buenos.
 
-## 4. Fichas y autoridad de la-ayuda
+## 4. Catálogo importado de la-ayuda (ADR-023)
 
-- Solo entran ayudas cuya ficha tenga **autoridad vigente** en el ledger
-  (`npm run pipeline:authority -- --strict`, `pipeline:explain publication <id>`).
-  Se reutiliza la función del pipeline; no se reimplementa.
-- `eligibilityFactors` de la ficha = **pre-filtro** para decidir qué preguntar.
-  No es regla (no tiene cita).
-- Si el RuleSet contradice la ficha (p. ej. distinto plazo), se reporta en
-  `eligibility-report.json` y la ayuda queda fuera hasta corregir una de las dos
-  por el circuito editorial de la-ayuda. **Este trabajo no edita fichas ni el
-  ledger.**
+- Importación desde un **commit fijado** del donante (docs/13 §2): Madrid +
+  estatales, `status == active && reviewStatus == revisada`, sin `tax_deduction`.
+  Procedencia por ficha (ruta + sha256) en `data/catalog/provenance.json`.
+- `eligibilityFactors` de la ficha importada = **pre-filtro** y señal para el
+  ranking de nivel 2. No es regla (no tiene cita).
+- Si un RuleSet propio contradice la ficha importada (p. ej. distinto plazo), el
+  RuleSet manda (lleva cita literal) y la contradicción se lista en
+  `eligibility-report.json` para avisar al donante **por otra vía** (este proyecto
+  no edita la-ayuda).
+- Los borradores del donante (328 de Madrid del BOCM) son **pistas** para F3, no
+  catálogo.
 
 ## 5. Datos abiertos (contribución al ecosistema)
 
 Los RuleSets validados, `parameters.json` y el catálogo de preguntas se publican
-en el export estático como JSON con licencia (la misma del corpus de la-ayuda; el
+en el export estático como JSON con licencia (ver ADR-025; el
 agente la verifica) en `/datos/elegibilidad/…`, con su manifiesto y digest.
 Esto es el equivalente «rules as open data» y es el argumento central del criterio
 de ecosistema (30%).
@@ -79,22 +81,21 @@ de ecosistema (30%).
 - Discapacidad, dependencia y salud son **categorías especiales** (RGPD art. 9):
   preguntas marcadas `sensitivity: "special"`, siempre opcionales, con texto que
   explica por qué se pregunta y que no sale del dispositivo.
-- **Contrato existente que manda: `la-ayuda/src/lib/user-state.ts`** («USER STATE
+- **Contrato portado de `la-ayuda/src/lib/user-state.ts`** a `src/lib/user-state.ts` («USER STATE
   CONSISTENCY V1»). No se crea un contrato paralelo:
-  - Todos los campos nuevos del orientador (`incomeAnnual`, `residenceSince`,
-    `dependents`, `municipality`, `disabilityDegree`…) se añaden a
-    `SENSITIVE_FIELDS` ⇒ nunca en query params.
+  - Los campos del orientador (`incomeAnnual`, `residenceSince`, `dependents`,
+    `municipality`, `disabilityDegree`…) van en `SENSITIVE_FIELDS` ⇒ nunca en
+    query params.
   - Persistencia: solo las vías ya definidas, es decir, el handoff de la pestaña
     en `sessionStorage` y el perfil local **con consentimiento explícito**
     (`mb_user_profile`, `localStorage`). Si el usuario no lo ha aceptado, nada en
     `localStorage`. Botón visible «Borrar mis respuestas», que limpia ambos.
   - El «share hash» explícito existente **no** se habilita para las respuestas del
     orientador en esta entrega (riesgo de compartir datos sensibles sin querer).
-  - Reutilización: se prerrellenan desde el perfil existente solo los campos con
-    correspondencia **exacta** (`region`, `familyType`, `housingStatus`,
-    `employmentStatus`). Las bandas gruesas actuales (`ageGroup` joven/adulto/senior,
-    `incomeBand` bajo/medio/alto) **no** se convierten a intervalos: no tienen
-    límites definidos y harían pasar como `T` o `F` lo que es `U`.
+  - Al portar: las bandas gruesas del donante (`ageGroup` joven/adulto/senior,
+    `incomeBand` bajo/medio/alto) **no** se convierten a intervalos. No tienen
+    límites definidos y harían pasar como `T` o `F` lo que es `U`. El orientador
+    usa sus propias bandas con límites.
 - Sin cookies. Sin datos en la URL.
 - **Menores (minimización, como en EduAyudas `LEGAL_NOTES.md`):** de las personas a
   cargo se pide solo la banda de edad (0–2, 3–5, 6–11, 12–15, 16–17, 18–25) y, si

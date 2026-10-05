@@ -2,13 +2,13 @@
 
 **Fechas:** 07–11/10 (wireframes desde el 07 con datos fixture) · **Depende de:**
 F2 para datos reales (los wireframes no) · **Responsable:** agente; **revisión de diseño: Daniel**
-**Especificación:** `docs/09-diseno-ux.md`, `la-ayuda/DESIGN.md`
+**Especificación:** `docs/09-diseno-ux.md`, `DESIGN.md` (portado)
 
 ## Tareas
 
 | ID | Tarea |
 |---|---|
-| F4-1 | Leer el asistente actual (`assistant-form.ts`, `assistant-data.json`, sus contratos en `docs/ops/`) y su router de locales; ADR del repo: **extender** el asistente o crear una ruta hermana enlazada desde él. Criterio: no romper los contratos localizados aceptados |
+| F4-1 | Identidad del producto Madrid sobre los tokens portados: nombre (D-6), un acento, logotipo textual y favicon; cabecera y pie con «No somos una administración pública». ADR si cambia algún token |
 | F4-2 | Wireframes de todas las pantallas de docs/09 §2 en 375 y 1366 px, con fixtures → `evidence/<fecha>-F4/wireframes/` → **revisión de Daniel** |
 | F4-3 | Componentes de docs/09 §3 con todos sus estados, usando **solo tokens existentes** |
 | F4-4 | Ruta de entrada + cuestionario progresivo (preguntas filtradas por el bundle, `showIf`, coherencia, atrás sin pérdida, foco y anuncio) |
@@ -17,10 +17,11 @@ F2 para datos reales (los wireframes no) · **Responsable:** agente; **revisión
 | F4-7 | Integración del self-check: una ayuda con invariante fallido ⇒ tarjeta «no evaluable»; bundle inválido ⇒ página de error honesta |
 | F4-8 | «Cómo funciona»: método, jerarquía de fuentes, límites, privacidad y enlace a los datos abiertos |
 | F4-9 | Persistencia por las vías de `user-state.ts` (handoff de pestaña + perfil local con consentimiento), «Borrar mis respuestas», «Copiar resumen», hoja de impresión |
-| F4-10 | i18n: todas las claves `elig_*` en es/ca/gl/eu/oc (la interfaz completa; si una traducción no es fiable, marcarla en el informe para revisión) |
+| F4-10 | i18n: todas las cadenas por `t('es', key)`; `en` solo si Should |
 | F4-11 | Sin JS: la ruta muestra una explicación y un enlace al catálogo (export estático) |
-| F4-13 | Nivel 2 de resultados con `rankBenefits` existente, separado visualmente y con su etiqueta (ADR-016); test: ninguna tarjeta de nivel 2 muestra ✓, «probable» ni «cumples» |
-| F4-14 | Privacidad sobre `user-state.ts`: campos nuevos en `SENSITIVE_FIELDS`, prerrelleno solo de correspondencias exactas, «Borrar mis respuestas» limpia el handoff y el perfil con consentimiento; los tests existentes de `user-state` siguen en verde |
+| F4-13 | Nivel 2 de resultados con el ranking portado (`src/lib/related/rank.ts`) sobre el catálogo importado, separado visualmente y con su etiqueta (ADR-016); test: ninguna tarjeta de nivel 2 muestra ✓, «probable» ni «cumples» |
+| F4-14 | Privacidad con `user-state.ts` portado: campos del orientador en `SENSITIVE_FIELDS`; «Borrar mis respuestas» limpia el handoff y el perfil con consentimiento; tests portados y nuevos en verde |
+| F4-15 | Ficha de ayuda (`/ayudas/[slug]`) para nivel 1 y nivel 2, con fuente, fecha y procedencia (incluido «importada de la-ayuda@<commit>» en el pie técnico) |
 | F4-12 | Datos abiertos: publicar RuleSets, parámetros y catálogo en `/datos/elegibilidad/` con licencia y manifiesto |
 
 ## Pruebas a escribir
@@ -37,15 +38,13 @@ F2 para datos reales (los wireframes no) · **Responsable:** agente; **revisión
 
 ```powershell
 npm run check; npm test; npm run build
-npx playwright test --config playwright.eligibility.config.ts --project desktop-chromium --project mobile-ios
-npm run test:a11y          # la suite existente sigue en verde (no regresión)
-npm run test:e2e:audit -- product-smoke publication-regressions   # no regresión del producto actual
+npx playwright test --project desktop-chromium --project mobile-ios
 ```
 
 ## Puerta de salida
 - [ ] Wireframes aprobados por Daniel antes de pulir.
 - [ ] Todos los estados de componentes renderizados y capturados (`evidence/<fecha>-F4/estados/`).
-- [ ] E2E y axe en verde en los dos proyectos; la suite a11y y las auditorías existentes sin regresión.
+- [ ] E2E y axe en verde en los dos proyectos.
 - [ ] Test de privacidad en verde.
-- [ ] 5 locales sin claves de interfaz ausentes.
+- [ ] Ninguna cadena de interfaz fuera de i18n.
 - [ ] Recibo y handoff.

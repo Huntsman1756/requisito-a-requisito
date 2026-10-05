@@ -17,20 +17,22 @@ fases no trabaje sobre supuestos.
 | F0-4 | Crear el worktree de la-ayuda (AGENTS.md §3), `npm ci`, línea base `npm run check`, `npm test`, `npm run build` y `npm run test:a11y` | `evidence/<fecha>-F0/baseline.json` (exit codes y recuentos). Si la base ya falla: documentarlo como rojo preexistente |
 | F0-5 | Inventario de ayudas candidatas al vertical familias/educación: `type ∈ {child_support, education_support, scholarship}` o `category ∈ {familia, educacion, beca}`; cruzar con autoridad vigente; excluir `tax_deduction` y las fichas de la auditoría del 27/09; anotar el estado del plazo | `evidence/<fecha>-F0/vertical/candidatas.json` ordenado por plazo abierto/próximo |
 | F0-6 | Instalar los navegadores de Playwright en la caché de F: (docs/10 §1) | Versiones anotadas en baseline.json |
-| F0-5b | Rehacer el inventario con **ámbito Comunidad de Madrid** (ADR-020): autonómicas y municipales de la CM más estatales que puede pedir un residente; familia, educación/becas, juventud, vivienda, empleo, discapacidad/dependencia; sin `tax_deduction` | `evidence/<fecha>-F0/vertical/candidatas-madrid.json`; si < 8, opciones a Daniel |
-| D-1 | **Daniel**: vehículo (la-ayuda sola o ecosistema La Ayuda + EduBecas), a la vista de F0-3 | ADR-006 aceptado |
+| F0-5b | Rehacer el inventario con **ámbito Comunidad de Madrid** (ADR-021): autonómicas y municipales de la CM más estatales que puede pedir un residente; familia, educación/becas, juventud, vivienda, empleo, discapacidad/dependencia; sin `tax_deduction` | `evidence/<fecha>-F0/vertical/candidatas-madrid.json`; si < 8, opciones a Daniel |
+| F0-7 | **Andamiaje del proyecto en este repo** (ADR-022): `package.json` con el subconjunto de dependencias de la-ayuda y **sus mismas versiones**, `tsconfig.json`, `biome.json`, `vitest.config.ts`, `playwright.config.ts` (10 proyectos de docs/10 §2), `next.config.ts` (`output: export`), `scripts/serve-export.mjs`, `src/app/globals.css` + `public/fonts/` + `DESIGN.md` portados (docs/13 §3), página de entrada vacía con layout accesible (skip link, landmarks), scripts npm (`check`, `lint`, `test`, `build`, `preview`, `validate:full`). `.gitignore` con `node_modules/`, `.next/`, `out/` | `npm ci && npm run check && npm run lint && npm test && npm run build` en verde; `out/index.html` servido con `npm run preview` |
+| F0-8 | **Portar el commit `6595a533`** (Zod de los 7 esquemas + tests) del worktree de la-ayuda a `src/lib/eligibility-engine/schema.ts`, con un encabezado de origen | Tests en verde aquí. El worktree **no se borra** |
+| F0-9 | **Importar el catálogo** (docs/13 §2): `scripts/import-donor-catalog.ts --donor F:\_Proyectos\la-ayuda --commit <sha de main>`; Madrid + estatales, `active && revisada`, sin `tax_deduction`; pistas BOCM aparte | `data/catalog/` + `provenance.json`; test de determinismo; recuentos en el recibo (esperado ≈ 54 Madrid + ≈ 191 estatales) |
+| D-1 | ~~Vehículo~~ — **cerrado por ADR-022** (proyecto nuevo) | — |
 
 ## Verificación (comandos)
 
 ```powershell
-# Worktree
-git -C F:\_Proyectos\la-ayuda worktree list
-cd F:\AgentState\worktrees\la-ayuda\premio-gtl
-git status --short            # debe estar limpio
+cd F:\_Proyectos\datawardsmadrid
+git status --short
 npm ci
-npm run check; npm test; npm run build; npm run test:a11y
-npm run pipeline:authority -- --strict   # se espera exit 1 por deuda legacy: anotar los números, no corregir
-# Hashes
+npm run check; npm run lint; npm test; npm run build
+npm run preview   # y abrir / en el navegador o con Playwright
+npm run catalog:import -- --donor F:\_Proyectos\la-ayuda --commit <sha>
+git -C F:\_Proyectos\la-ayuda status --short   # debe seguir IGUAL que antes: el donante no se toca
 Get-FileHash -Algorithm SHA256 evidence\<fecha>-F0\fuentes\*.pdf
 ```
 
@@ -39,12 +41,13 @@ Get-FileHash -Algorithm SHA256 evidence\<fecha>-F0\fuentes\*.pdf
 - [ ] La consulta está enviada (o hay una fecha de decisión por defecto fijada con Daniel).
 - [ ] `inventario.json` existe; ninguna cifra sin fuente.
 - [ ] `baseline.json` existe; los rojos preexistentes están identificados.
-- [ ] `candidatas.json` tiene ≥ 8 ayudas con autoridad vigente (si hay menos: escalar a Daniel **hoy**).
+- [ ] `candidatas-madrid.json` (F0-5b) tiene ≥ 8 ayudas de Madrid o estatales (si hay menos: escalar a Daniel **hoy**).
+- [ ] Andamiaje en verde (F0-7), Zod portado (F0-8) y catálogo importado con procedencia (F0-9).
+- [ ] Los repos donantes no tienen cambios nuevos atribuibles a este trabajo.
 - [ ] Recibo `evidence/<fecha>-F0/receipt.json` y handoff escritos.
 
 ## Riesgos
-- Menos de 8 ayudas con autoridad en el vertical ⇒ opciones para Daniel: ampliar
-  el vertical (por ejemplo, vivienda joven) o regularizar fichas por el circuito
-  editorial de la-ayuda (más lento).
+- Menos de 8 ayudas de Madrid aptas para reglas ⇒ usar pistas del BOCM (borradores
+  del donante) descargando la fuente oficial directamente, o ampliar a estatales.
 - edubecas.es sin analítica ⇒ la memoria usa métricas de producto (cobertura,
   fuentes, verificación), no de uso.

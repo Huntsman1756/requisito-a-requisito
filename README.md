@@ -2,15 +2,16 @@
 
 **Qué:** presentar una candidatura a los premios de la Comunidad de Madrid
 (Orden 566/2026). Plazo: **16/10/2026**. Premio en especie (≤100 €): el valor es
-visibilidad (entrega 03/11/2026, Real Casa de Correos, Madrid Tech Week).
+visibilidad (entrega durante Madrid Tech Week, 28/10–05/11/2026, según la sede).
 
-**Apuesta (plan A):** categoría *Global Tech Impact* con **La Ayuda — Tus derechos,
-con fuente**: evolución de `la-ayuda` desde catálogo de ayudas a orientador de
-elegibilidad verificable — el ciudadano responde 7–10 preguntas y recibe qué
-ayudas merece la pena comprobar, qué requisitos cumple / no cumple / no sabemos,
-**qué le falta**, plazo, documentos, dónde solicitar y la fuente oficial de cada
-afirmación. Reglas deterministas (rules-as-code, motor donado por EduAyudas);
-sin IA decidiendo nada.
+**Qué se presenta:** un **proyecto nuevo**, *Ayudas Madrid · con fuente* (nombre
+provisional), hecho para este concurso: orientador de ayudas **solo de la
+Comunidad de Madrid** (+ estatales). Con ≤ 10 preguntas dice qué ayudas merece
+la pena comprobar, qué requisitos cumples, cuáles no y cuáles no se pueden
+saber, **qué te falta**, plazo, documentos y dónde solicitar, con la fuente
+oficial de cada afirmación. Reglas deterministas; nada sale del navegador.
+Reutiliza código y datos de proyectos propios estatales (la-ayuda, EduAyudas)
+sin modificarlos (docs/13). Candidato: Daniel, **persona física**.
 
 **Plan B:** si una persona física no puede concurrir a Impact, *Global Tech Leader*
 con la trayectoria open-source sobre datos públicos españoles (ver

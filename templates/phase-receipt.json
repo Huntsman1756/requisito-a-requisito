@@ -2,8 +2,8 @@
   "phase": "F?",
   "date": "YYYY-MM-DD",
   "agent": "modelo/herramienta y sesión",
-  "repo": "la-ayuda",
-  "branch": "feat/premio-gtl-elegibilidad",
+  "repo": "datawardsmadrid",
+  "branch": "main",
   "headCommit": "<sha>",
   "baseCommit": "<sha de main en el que se basa>",
   "commands": [

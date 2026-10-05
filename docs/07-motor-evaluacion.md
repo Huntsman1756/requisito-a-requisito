@@ -5,7 +5,7 @@ y **qué comprobaciones pasan antes de mostrar un resultado**. Es la parte más
 importante del producto: si el motor se equivoca, el producto hace daño.
 
 Esquemas formales: `schemas/*.schema.json`. Implementación: TypeScript estricto en
-`la-ayuda/src/lib/eligibility-engine/` (funciones puras, sin I/O, reloj inyectado).
+`src/lib/eligibility-engine/` (funciones puras, sin I/O, reloj inyectado).
 
 Inspiración (patrones, no código): OpenFisca (parámetros con vigencia, reglas como
 datos), ACCESS NYC / MyFriendBen (screener por preguntas), Aides Jeunes
@@ -138,15 +138,15 @@ víctimas de violencia de género»). Se modelan como `any` cuyos hijos llevan
 
 ### 2.4 Coexistencia con el asistente actual (ADR-016)
 
-la-ayuda ya ordena las fichas con un **ranking heurístico de relevancia**
+la-ayuda ordena sus fichas con un **ranking heurístico de relevancia**
 (`src/lib/rules/assistant.ts`, `rankBenefits`, pesos documentados en
-`src/lib/rules/README.md`). Ese ranking **no es elegibilidad** y no se toca. La
+`src/lib/rules/README.md`). Aquí se **porta** a `src/lib/related/rank.ts` (docs/13). Ese ranking **no es elegibilidad**. La
 página de resultados muestra **dos niveles que nunca se mezclan**:
 
 | Nivel | Origen | Etiquetas permitidas | Etiquetas prohibidas |
 |---|---|---|---|
 | **Comprobadas con las reglas oficiales** | Motor (este documento), solo ayudas con RuleSet aprobado | probable / posible / faltan datos / no parece aplicarte | — |
-| **También podrían interesarte** | `rankBenefits` sobre el resto del catálogo | «Relacionada con tu situación — no hemos comprobado los requisitos» | probable, cumples, cualquier ✓ de requisito |
+| **También podrían interesarte** | Ranking portado (`src/lib/related/rank.ts`) sobre el catálogo importado sin RuleSet | «Relacionada con tu situación — no hemos comprobado los requisitos» | probable, cumples, cualquier ✓ de requisito |
 
 Así el producto es útil más allá del vertical sin aparentar más rigor del que tiene.
 

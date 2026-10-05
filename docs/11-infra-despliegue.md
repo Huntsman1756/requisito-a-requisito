@@ -2,8 +2,7 @@
 
 ## 1. No hay backend en tiempo de ejecución (decisión)
 
-El «back» es el **pipeline de build** (Node 22 + TypeScript, scripts de
-la-ayuda). Ningún servidor evalúa perfiles: así se garantiza la privacidad, el
+El «back» es el **pipeline de build** (Node 22 + TypeScript, scripts propios). Ningún servidor evalúa perfiles: así se garantiza la privacidad, el
 coste es casi nulo y escala a cualquier número de usuarios (criterio de
 escalabilidad). ADR-011.
 
@@ -17,7 +16,7 @@ snapshot de fuentes ──▶ validate (Zod + gates) ──▶ eligibility-bundl
                                                      nginx en el VPS (o vídeo para el jurado)
 ```
 
-### 1.1 Scripts (en la-ayuda; nombres orientativos)
+### 1.1 Scripts npm del proyecto
 
 | Script npm | Hace | Falla si |
 |---|---|---|
@@ -27,62 +26,58 @@ snapshot de fuentes ──▶ validate (Zod + gates) ──▶ eligibility-bundl
 | `eligibility:exhaustive` | Tests exhaustivos y de monotonía (puede ir dentro de `npm test` si tarda < 60 s) | Invariante o monotonía |
 | `eligibility:mutate` | Mutación dirigida de umbrales | Algún mutante sobrevive |
 
-Integración con el build bloqueado de la-ayuda (`scripts/build-locked.ts`):
-añadir el paso **sin** alterar los gates editoriales existentes. Si eso no es
-posible sin tocar contratos, se ejecuta `eligibility:build` como `prebuild`
-documentado. Decisión en un ADR del repo destino.
+Además: `catalog:import` (docs/13 §2) y `validate:full` (check + lint + test +
+build + exhaustivo + E2E de humo + a11y; lo usa el cierre de cada fase). El
+`build` ejecuta `eligibility:validate` y `eligibility:build` **antes** de
+`next build` y falla si fallan.
 
-### 1.2 Telemetría (opcional)
+### 1.2 Telemetría (Could)
 
-Se reutiliza el colector existente (ADR-020 de la-ayuda). Eventos permitidos:
-`elig_start`, `elig_complete{probable:n,posible:n,insuficiente:n}`,
-`elig_missing_answered`, `elig_apply_click{slug}` e `invariant_failed{slug,code}`.
-Nada del perfil. Si el colector no está desplegado, la memoria lo dice.
+No hay colector propio. Si se añade, eventos agregados sin perfil (`elig_start`,
+`elig_complete{probable:n,…}`, `elig_apply_click{slug}`, `invariant_failed{slug,code}`)
+a un endpoint del mismo dominio, y requiere autorización. Por defecto, **sin
+telemetría** y la memoria explica cómo se medirá.
 
 ## 2. Infraestructura de servido
 
-Estado observado el 2026-10-05: el VPS tiene nodo de pipeline/telemetría, **sin
-nginx ni dominio para la-ayuda**, con el disco al 91–93 %. El gate strict está en
-rojo por deuda legacy, y **la-ayuda no se puede desplegar**.
+Al ser un proyecto independiente, **la demo no depende del estado de la-ayuda**
+(ADR-022/025). Daniel ya opera un VPS (el de edubecas.es).
 
-Opciones para que el jurado vea la demo (decide Daniel, D-3):
-
-| Opción | Qué es | Requisitos | Riesgo |
+| Opción | Qué es | Requisitos | Recomendación |
 |---|---|---|---|
-| A. Demo estática separada | Build del worktree servido en un vhost/ruta de demo (`demo.<dominio>`) solo con el vertical y un banner «Demostración» | Autorización explícita, dominio, nginx, TLS, espacio en disco | No debe presentarse como la-ayuda en producción. Requiere su propio canary y comprobación posterior al despliegue |
-| B. Vídeo + capturas + repositorio | Vídeo de 2–3 min, capturas por dispositivo y enlace a GitHub | Ninguno | Menos impacto, pero cero riesgo |
-| C. Ambas | B siempre; A si se autoriza | — | Recomendada |
+| A. Demo pública en un vhost propio | `out/` servido por nginx en el VPS existente, en un subdominio o dominio propio (D-3) | Autorización explícita, DNS, TLS (Let's Encrypt), espacio en disco comprobado antes | **Sí**, si Daniel autoriza: el jurado puede usarla |
+| B. Vídeo + capturas + repo público | 2–3 min de recorrido | Ninguno | **Siempre** (respaldo) |
 
-### 2.1 Configuración del servido (si se elige A)
+### 2.1 Configuración del servido
 
 - Nginx estático, HTTP→HTTPS y HSTS.
-- Cabeceras: `Content-Security-Policy: default-src 'self'; script-src 'self'` (sin
-  `unsafe-inline` si el export lo permite; si no, hashes); `connect-src 'self'`
-  más el colector, si se usa; `frame-ancestors 'none'`;
+- Cabeceras: `Content-Security-Policy: default-src 'self'; script-src 'self'` (con
+  hashes si el export necesita inline); `connect-src 'self'`; `frame-ancestors 'none'`;
   `Referrer-Policy: no-referrer`; `Permissions-Policy` restrictiva;
   `X-Content-Type-Options: nosniff`.
-- Caché: `/_next/static/*` inmutable 1 año; bundle con nombre con digest
-  inmutable; HTML `no-cache`.
-- Compresión gzip/brotli.
-- Despliegue atómico por cambio de symlink (`current`), como en el procedimiento
-  de releases de la-ayuda, con rollback al symlink anterior.
-- Comprobaciones posteriores: HTTP 200 en rutas clave, digest del bundle servido
-  igual al local, cabeceras presentes y una pasada de E2E con `E2E_BASE_URL`
-  apuntando a la demo.
+- Caché: `/_next/static/*` inmutable 1 año; bundle de reglas con digest en el
+  nombre, inmutable; HTML `no-cache`. Compresión gzip/brotli.
+- Despliegue atómico: `releases/<id>/` + symlink `current`; rollback = volver al
+  symlink anterior. Script `scripts/deploy.ps1` (o `.sh` en el VPS) **sin
+  credenciales en el repo**.
+- Comprobaciones posteriores: HTTP 200 en rutas clave, digest del bundle servido =
+  local, cabeceras presentes, E2E de humo y privacidad con `E2E_BASE_URL`.
+- **No tocar** la configuración ni los procesos de edubecas.es en ese VPS: vhost
+  aparte, usuario y directorio aparte.
 
 ### 2.2 Prohibiciones
 
-- Usar el despliegue de la-ayuda (`pipeline:promote-release`) para la demo.
 - Desplegar sin autorización explícita de Daniel en esa sesión.
-- Liberar espacio en el VPS borrando cosas sin autorización (el disco al 93 % es
-  un riesgo que se **reporta**, no se resuelve por iniciativa propia).
-- Usar Cloudflare o Vercel (retirados en la-ayuda).
+- Modificar servicios, vhosts o datos de edubecas.es u otros proyectos del VPS.
+- Liberar espacio borrando cosas sin autorización (se **reporta**).
+- Secretos en el repo (el repo será público, ADR-025).
+- Cloudflare o Vercel.
 
 ## 3. Entornos
 
 | Entorno | Dónde | Para |
 |---|---|---|
-| Local de desarrollo | `npm run dev` en el worktree | Desarrollo |
-| Export local | `npm run build` + `npm run preview` (`serve-export.mjs`) | E2E, accesibilidad, rendimiento (lo que se prueba es lo que se sirve) |
-| Demo | VPS (opción A) | Jurado |
-| CI | GitHub Actions de la-ayuda | Solo si Daniel autoriza el push de la rama; no se deduce aceptación de CI a partir de pruebas locales |
+| Desarrollo | `npm run dev` en este repo | Desarrollo |
+| Export local | `npm run build` + `npm run preview` (`serve-export.mjs` portado) | E2E, a11y, rendimiento: se prueba lo que se sirve |
+| Demo | VPS, vhost propio (opción A) | Jurado |
+| CI | GitHub Actions del repo nuevo (`check`, `lint`, `test`, `build`, E2E Chromium) | Tras crear el repo remoto con autorización (D-4) |

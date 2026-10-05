@@ -1,5 +1,14 @@
 # Estrategia
 
+> **Actualización 2026-10-05 (ADR-022, ADR-026), que prevalece sobre lo de abajo:**
+> se presenta un **proyecto nuevo e independiente**, *Ayudas Madrid · con fuente*
+> (nombre provisional), **solo para la Comunidad de Madrid** y hecho para este
+> concurso. Reutiliza código y datos de la-ayuda y EduAyudas **sin modificarlos**
+> (docs/13). Candidato: Daniel, **persona física**. Las secciones «Qué se presenta
+> (plan A)» y «Riesgo principal» de abajo describían la opción anterior
+> (evolucionar la-ayuda) y quedan como contexto. La evaluación tras F0 y la
+> recomendación de categoría (Leader, salvo confirmación de Impact) siguen vigentes.
+
 ## Tesis
 
 El premio no valora una buena idea: Impact pondera **50% impacto demostrado**.
@@ -23,7 +32,7 @@ Piezas reutilizadas (donantes, no productos adicionales):
 | `renta-verificable` | Modelo claim → evidencia → fuente → límite de lo afirmable; huella de evidencia por contenido |
 | `official-sources` / radar | Vigencia de plazos: OPEN / UPCOMING / CLOSED / UNKNOWN; no mostrar cerradas por defecto |
 
-**Vertical único e impecable: Comunidad de Madrid** (ADR-020). Ayudas autonómicas y
+**Vertical único e impecable: Comunidad de Madrid** (ADR-021). Ayudas autonómicas y
 municipales de la CM más las estatales que puede pedir un residente en Madrid,
 priorizando familias y educación (donde EduAyudas ya tiene modelo) y
 completando con juventud, vivienda o empleo si hace falta para llegar a 8. Después se argumenta que el mismo esquema escala a vivienda,

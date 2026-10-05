@@ -11,7 +11,7 @@ redacta; **Daniel revisa, firma y presenta**
 |---|---|
 | F7-1 | Impacto (50 %): consolidar `inventario.json` (F0-3) + métricas del producto: ayudas cubiertas, fuentes oficiales, fichas con autoridad, locales, perfiles evaluados por el exhaustivo, personas golden y defectos detectados por los gates |
 | F7-2 | Ecosistema (30 %): licencia, datos abiertos `/datos/elegibilidad/`, motor reutilizable, alineación con Rules as Code, otros repos públicos de Daniel (solo con evidencia) |
-| F7-3 | Escalabilidad (20 %): tiempo medido por ayuda (F3), sin servidor, verticales siguientes, 5 locales, coste |
+| F7-3 | Escalabilidad (20 %): tiempo medido por ayuda (F3), sin servidor, otros territorios con el mismo esquema (el motor y las reglas son agnósticos al territorio), coste |
 | F7-4 | Plan B (si D-2 = Leader): tabla de trayectoria por proyecto con cifras verificables |
 | F7-5 | Redactar la memoria con el formato que exija la Orden (F0-1) |
 | F7-6 | **Revisión de veracidad:** script o checklist que extrae cada número y cada afirmación factual de la memoria y la casa con una entrada de `evidence/`. Cifras sin respaldo = 0 |

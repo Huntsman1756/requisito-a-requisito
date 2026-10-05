@@ -25,7 +25,7 @@ veredicto.
 | F2-10 | `deadline.ts` | OPEN, UPCOMING, CLOSED (ayer), ROLLING, UNKNOWN, urgente < 5 días, zona Europe/Madrid, último día completo |
 | F2-11 | `effort.ts` (fórmula v1, ADR-009) | entradas incompletas ⇒ sin estimación |
 | F2-12 | `invariants.ts` I1–I10 | un test por invariante con evaluación corrupta ⇒ detectada |
-| F2-13 | `explain.ts`: plantillas → claves `elig_*` en ES (más claves en los otros 4 locales, fallback ES listado) | I10: ningún número en el texto que no esté en el resultado |
+| F2-13 | `explain.ts`: plantillas → claves `elig_*` en `es` (ADR-024) | I10: ningún número en el texto que no esté en el resultado |
 | F2-14 | Generador exhaustivo (sin dependencias): dominio discretizado por campo (opciones + unknown + declined; para numéricos t−1, t, t+1 y bandas que cruzan) | sobre 3 RuleSets fixture: invariantes + **monotonía** + **determinismo**; tope de 200.000 perfiles y si se supera, pares + fronteras con informe |
 | F2-15 | Rendimiento: evaluar 25 RuleSets × 1 perfil | < 50 ms con CPU 4× (medido en E2E en F5; aquí microbenchmark Node < 5 ms) |
 

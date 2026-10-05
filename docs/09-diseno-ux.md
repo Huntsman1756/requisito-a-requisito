@@ -1,10 +1,11 @@
 # Diseño y experiencia — «La Ayuda · Tus derechos, con fuente»
 
 El diseño importa tanto como el motor: el jurado y el ciudadano juzgarán en
-segundos. Este documento **extiende** el sistema vigente de la-ayuda
-(`la-ayuda/DESIGN.md`, «Portal cívico 2026»): mismos tokens, tipografías,
-componentes y anti-patrones. **No se crea un sistema visual nuevo.** Todo color,
-radio, sombra y fuente sale de los tokens de `src/app/globals.css`.
+segundos. Este documento **parte del** sistema de la-ayuda, portado a este repo
+(`DESIGN.md` propio, copiado de `la-ayuda/DESIGN.md`, «Portal cívico 2026»): mismos
+tokens, tipografías, componentes y anti-patrones. **No se crea un sistema visual
+nuevo**: se porta. Se permite dar identidad propia al producto de Madrid con
+**un** acento y un logotipo, sin tocar la estructura de tokens.
 
 ## 1. Principios
 
@@ -43,7 +44,7 @@ radio, sombra y fuente sale de los tokens de `src/app/globals.css`.
    ├─ Tarjetas: Probables → Posibles → Insuficientes
    ├─ Conmutador «Mostrar cerradas» / «Próximas a abrir»
    ├─ Plegado: «No parece aplicarte (N) — ver por qué» (con «Si crees que sí cumples, consulta la fuente»)
-   ├─ Nivel 2: «También podrían interesarte — no hemos comprobado los requisitos» (ranking actual `rankBenefits`, ADR-016)
+   ├─ Nivel 2: «También podrían interesarte — no hemos comprobado los requisitos» (ranking portado de la-ayuda, ADR-016)
    └─ Acciones: Copiar resumen · Imprimir · Borrar mis respuestas · Empezar de nuevo
         ▼
    [Detalle «Por qué»] (desplegable en tarjeta; en escritorio, panel lateral)
@@ -90,7 +91,7 @@ radio, sombra y fuente sale de los tokens de `src/app/globals.css`.
 No hay tarjetas dentro de tarjetas (anti-patrón de DESIGN.md §6): los requisitos
 son una lista con filetes, no subtarjetas.
 
-## 5. Contenido y microcopy (ES; claves i18n en los 5 locales)
+## 5. Contenido y microcopy (solo `es`; ADR-024)
 
 | Situación | Texto |
 |---|---|

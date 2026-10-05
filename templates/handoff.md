@@ -1,6 +1,6 @@
 # Handoff — <fase> — <fecha>
 
-**HEAD:** `<sha>` en `feat/premio-gtl-elegibilidad` · **Recibo:** `evidence/<fecha>-Fx/receipt.json`
+**HEAD:** `<sha>` en `<rama>` de datawardsmadrid · **Recibo:** `evidence/<fecha>-Fx/receipt.json`
 
 ## Hecho en esta sesión
 - <tarea> — commit `<sha>` — validación: `<comando>` → <resultado>
