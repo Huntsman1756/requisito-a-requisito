@@ -14,9 +14,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-ayudas-formacion-agentes-sociales-2",
     "sede-ayudas-formacion-agentes-sociales-1"
@@ -36,10 +34,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo",
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-reducir-siniestralidad-laboral-3",
@@ -70,7 +65,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-autonomos-incendios-sierra-oeste",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": []
   },
@@ -88,7 +83,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -104,9 +99,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-cheque-formacion",
@@ -121,9 +114,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-movilidad-sostenible-accesible",
@@ -136,10 +127,10 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-movilidad-sostenible-accesible",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ]
   },
   {
@@ -155,9 +146,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-patologias-extrema-complejidad",
@@ -172,9 +161,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayuda-mujeres-victimas-violencia",
@@ -187,7 +174,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": []
   },
@@ -205,7 +192,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ]
   },
   {
@@ -235,7 +222,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -266,9 +253,7 @@
     "educacion",
     "transporte"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayuda-abono-cuotas-seguridad-social",
@@ -284,9 +269,7 @@
     "empleo",
     "transporte"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-economicas-natalidad",
@@ -302,8 +285,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo",
-    "familia"
+    "tener_hijo"
    ]
   },
   {
@@ -317,7 +299,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-salida-centros-violencia-genero",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": []
   },
@@ -335,9 +317,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-insercion-laboral-0",
@@ -352,9 +332,7 @@
    "themes": [
     "empleo"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-reduccion-renta-viviendas-publicas",
@@ -368,10 +346,11 @@
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reduccion-renta-viviendas-publicas",
    "themes": [
     "vivienda",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda",
+    "ingresos_bajos"
    ]
   },
   {
@@ -385,9 +364,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-gastos-extra-acogimiento-familiar",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-nacimiento-o-adopcion-multiple",
@@ -403,7 +380,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ]
   },
   {
@@ -431,11 +408,9 @@
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-orfandad-violencia-genero",
    "themes": [
     "familia_infancia",
-    "mujeres_violencia"
+    "violencia_genero"
    ],
-   "lifeEvents": [
-    "familia"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-bono-alquiler-joven-0",
@@ -452,7 +427,7 @@
     "cultura_juventud"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -466,10 +441,10 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2024",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "dedupedWith": [
     "sede-bono-social-termico-2025"
@@ -504,7 +479,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ]
   },
   {
@@ -521,7 +496,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ]
   },
   {
@@ -578,9 +553,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayuda-medios-materiales-policial-local",
@@ -614,9 +587,7 @@
     "educacion",
     "transporte"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-ayudas-transporte-escolar-2025-2026",
     "sede-ayudas-transporte-escolar-7"
@@ -635,9 +606,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-grupos-operativos-ejecucion-proyectos-0",
@@ -710,8 +679,8 @@
     "salud"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -757,8 +726,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ],
    "dedupedWith": [
     "sede-ayudas-prospeccion-intermediacion-apoyo"
@@ -816,7 +785,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-mercados-municipales-galerias-0",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": []
   },
@@ -833,9 +802,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-ayudas-entidades-formacion-certificados"
    ]
@@ -893,7 +860,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ]
   },
   {
@@ -936,7 +903,7 @@
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-apoyo-social-7",
    "themes": [],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ]
   },
   {
@@ -967,9 +934,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-infraestructuras-regadios-2026",
@@ -1028,9 +993,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-ayudas-desayuno-escolar"
    ]
@@ -1049,8 +1012,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -1079,9 +1042,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-ayudas-inversiones-pymes-productos-pesca-0",
     "sede-ayudas-inversiones-pymes-productos-pesca"
@@ -1117,9 +1078,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-beca-academica-deportiva-matriculados",
@@ -1135,9 +1094,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-produccion-comercializacion-miel",
@@ -1196,9 +1153,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-circuitos-cortos-comercio-proximidad-0",
@@ -1261,8 +1216,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -1326,7 +1281,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "dedupedWith": [
     "sede-ayudas-impulso-vivienda-0",
@@ -1347,8 +1302,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -1406,9 +1361,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-discapacidad-enfermedad-mental",
@@ -1424,7 +1377,7 @@
     "salud"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ]
   },
   {
@@ -1441,8 +1394,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -1518,8 +1471,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ],
    "dedupedWith": [
     "sede-subvenciones-coste-salarial-cee-2025-0"
@@ -1549,7 +1502,7 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/subvencion-mujeres-vulnerables-0",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "dedupedWith": [
@@ -1612,12 +1565,12 @@
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-deporte-mujeres-discapacidad",
    "themes": [
     "dependencia_discapacidad",
-    "mujeres_violencia",
+    "violencia_genero",
     "cultura_juventud"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ],
    "dedupedWith": [
     "sede-subvencion-deporte-mujeres-discapacidad"
@@ -1698,9 +1651,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "sede-programa-activacion-profesional-2"
    ]
@@ -1719,7 +1670,7 @@
     "salud"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ]
   },
   {
@@ -1796,9 +1747,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-aplicacion-indice-corrector-farmacias",
@@ -1878,9 +1827,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-beca-excelencia-universidad-2025-2026-0",
@@ -1895,9 +1842,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-control-rendimiento-lechero-0",
@@ -1985,7 +1930,7 @@
     "cultura_juventud"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "dedupedWith": [
     "sede-ayudas-alquiler-vivienda-jovenes"
@@ -2017,9 +1962,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-prevencion-riesgos-laborales",
@@ -2061,7 +2004,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -2131,9 +2074,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-subvenciones-vinculadas-cnecp",
@@ -2148,9 +2089,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-circuitos-cortos-comercio-proximidad",
@@ -2205,7 +2144,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -2232,10 +2171,10 @@
    },
    "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2022",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "dedupedWith": [
     "sede-bono-social-termico-2023"
@@ -2255,7 +2194,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -2271,9 +2210,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-ayudas-apicultura-biodiversidad-1",
@@ -2302,7 +2239,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ]
   },
   {
@@ -2333,9 +2270,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "me-he-quedado-sin-trabajo",
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ]
   },
   {
@@ -2391,9 +2327,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-programa-acompanamiento-apoyo-escolar",
@@ -2408,9 +2342,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-mejora-espacios-deportivos-red-pafer",
@@ -2645,9 +2577,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-subvenciones-programas-formativos-ia",
@@ -2755,9 +2685,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-competencias-digitales-infancia",
@@ -2772,9 +2700,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ]
+   "lifeEvents": []
   },
   {
    "id": "sede-bonos-digitales",
@@ -2979,9 +2905,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3014,9 +2938,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3032,9 +2954,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3050,9 +2970,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3068,9 +2986,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3086,9 +3002,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3104,9 +3018,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3122,9 +3034,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3140,9 +3050,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3158,9 +3066,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3176,9 +3082,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3222,9 +3126,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3240,9 +3142,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3258,9 +3158,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -3275,10 +3173,10 @@
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-34",
    "themes": [
     "mayores",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ],
    "provenance": null,
    "dedupedWith": [
@@ -3334,9 +3232,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260423-62"
@@ -3441,7 +3337,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ],
    "provenance": null,
    "dedupedWith": [
@@ -3461,9 +3357,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260424-81"
@@ -3517,7 +3411,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "provenance": null,
    "dedupedWith": [
@@ -3554,7 +3448,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-68",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "provenance": null,
@@ -3613,9 +3507,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260427-79"
@@ -3685,9 +3577,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260429-20"
@@ -3741,7 +3631,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ],
    "provenance": null,
    "dedupedWith": [
@@ -3816,9 +3706,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260505-58"
@@ -3908,10 +3796,7 @@
     "familia_infancia",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar",
-    "familia"
-   ],
+   "lifeEvents": [],
    "provenance": null,
    "dedupedWith": [
     "bocm-BOCM-20260618-79"
@@ -3960,9 +3845,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4006,9 +3889,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4111,10 +3992,10 @@
    },
    "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47918",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "provenance": null
   },
@@ -4129,10 +4010,10 @@
    },
    "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47919",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "provenance": null
   },
@@ -4149,9 +4030,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4238,9 +4117,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4342,9 +4219,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4390,9 +4265,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4409,9 +4282,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4427,9 +4298,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4445,9 +4314,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4634,9 +4501,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4666,9 +4531,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4684,9 +4547,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4820,9 +4681,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4909,7 +4768,7 @@
    },
    "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16524",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "provenance": null
@@ -4941,9 +4800,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4959,9 +4816,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -4992,9 +4847,7 @@
     "educacion",
     "transporte"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5066,9 +4919,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5134,9 +4985,7 @@
     "educacion",
     "salud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5194,9 +5043,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5268,9 +5115,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5316,9 +5161,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5335,9 +5178,7 @@
     "educacion",
     "cultura_juventud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5353,9 +5194,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5399,9 +5238,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5460,8 +5297,8 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "tengo-discapacidad"
+    "cuidar_familiar",
+    "discapacidad"
    ],
    "provenance": null
   },
@@ -5492,9 +5329,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5566,9 +5401,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5628,9 +5461,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5702,9 +5533,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5720,9 +5549,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5766,9 +5593,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5798,9 +5623,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5816,9 +5639,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5876,10 +5697,10 @@
    },
    "officialSourceUrl": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001/que-es.html",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "provenance": null
   },
@@ -5896,9 +5717,7 @@
    "themes": [
     "empleo"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5915,9 +5734,7 @@
     "familia_infancia",
     "transporte"
    ],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5933,9 +5750,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5952,7 +5767,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ],
    "provenance": null
   },
@@ -5969,9 +5784,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -5987,9 +5800,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -6005,9 +5816,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -6025,8 +5834,7 @@
     "salud"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar",
-    "familia"
+    "cuidar_familiar"
    ],
    "provenance": null
   },
@@ -6043,13 +5851,13 @@
    "themes": [
     "familia_infancia",
     "dependencia_discapacidad",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo",
-    "cuido-de-un-familiar",
-    "tengo-discapacidad",
-    "familia"
+    "cuidar_familiar",
+    "discapacidad",
+    "ingresos_bajos",
+    "tener_hijo"
    ],
    "provenance": null
   },
@@ -6067,7 +5875,7 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ],
    "provenance": null
   },
@@ -6083,10 +5891,10 @@
    "officialSourceUrl": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/si-tengo-subsidio-rai-antes-noviembre-2024",
    "themes": [
     "empleo",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
+    "ingresos_bajos"
    ],
    "provenance": null
   },
@@ -6104,7 +5912,7 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ],
    "provenance": null
   },
@@ -6121,9 +5929,7 @@
    "themes": [
     "empleo"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -6139,9 +5945,7 @@
    "themes": [
     "empleo"
    ],
-   "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
-   ],
+   "lifeEvents": [],
    "provenance": null
   },
   {
@@ -6159,8 +5963,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "me-he-quedado-sin-trabajo",
-    "tengo-65-o-mas"
+    "mayor_65"
    ],
    "provenance": null
   },
@@ -6177,7 +5980,7 @@
    },
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/1133433",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "dedupedWith": [
@@ -6238,9 +6041,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-931354",
     "bdns-931354",
@@ -6297,9 +6098,7 @@
    },
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/1131144",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-929583",
     "bdns-929583",
@@ -6359,7 +6158,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "dedupedWith": [
     "bdns-927720",
@@ -6479,9 +6278,7 @@
     "educacion",
     "transporte"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-926522",
     "bdns-926522",
@@ -6828,10 +6625,7 @@
     "familia_infancia",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar",
-    "familia"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-911073",
     "bdns-911073",
@@ -6890,9 +6684,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-911002",
     "bdns-911002",
@@ -6952,10 +6744,7 @@
     "familia_infancia",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar",
-    "familia"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-910960",
     "bdns-910960",
@@ -7012,7 +6801,7 @@
    },
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/1112203",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "dedupedWith": [
@@ -7073,12 +6862,9 @@
    "themes": [
     "familia_infancia",
     "educacion",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar",
-    "familia"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-910634",
     "bdns-910634",
@@ -7308,9 +7094,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-909494",
     "bdns-909494",
@@ -7370,9 +7154,7 @@
     "educacion",
     "salud"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "dedupedWith": [
     "bdns-909061",
     "bdns-909061",
@@ -7545,7 +7327,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -7604,9 +7386,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-31",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true,
    "dedupedWith": [
     "bocm-BOCM-20260422-31"
@@ -7625,9 +7405,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -7725,7 +7503,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -7744,7 +7522,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -7773,10 +7551,10 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-29",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "hint": true
   },
@@ -8417,7 +8195,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -8465,9 +8243,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -8548,9 +8324,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -8564,7 +8338,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-47",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [],
    "hint": true
@@ -8676,7 +8450,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -8791,7 +8565,7 @@
     "cultura_juventud"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -8838,9 +8612,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-15",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -8858,7 +8630,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true,
    "dedupedWith": [
@@ -9073,9 +8845,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-11",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -9089,9 +8859,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-12",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true,
    "dedupedWith": [
     "bocm-BOCM-20260428-13"
@@ -9108,9 +8876,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-14",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -9126,9 +8892,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -9144,9 +8908,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -9160,11 +8922,10 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-25",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia",
-    "familia"
+    "ingresos_bajos"
    ],
    "hint": true
   },
@@ -9212,7 +8973,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -9357,7 +9118,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -9503,7 +9264,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -9518,9 +9279,11 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-24",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
-   "lifeEvents": [],
+   "lifeEvents": [
+    "ingresos_bajos"
+   ],
    "hint": true
   },
   {
@@ -9549,9 +9312,11 @@
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-26",
    "themes": [
     "cultura_juventud",
-    "social_emergencia"
+    "ingresos_minimos"
    ],
-   "lifeEvents": [],
+   "lifeEvents": [
+    "ingresos_bajos"
+   ],
    "hint": true
   },
   {
@@ -9607,9 +9372,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-30",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -9671,9 +9434,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10011,9 +9772,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-45",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10027,9 +9786,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-46",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10045,9 +9802,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10227,9 +9982,7 @@
    "themes": [
     "familia_infancia"
    ],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10279,9 +10032,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true,
    "dedupedWith": [
     "bocm-BOCM-20260501-6",
@@ -10396,7 +10147,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -10472,9 +10223,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-44",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10523,9 +10272,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10586,9 +10333,7 @@
     "empleo",
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10730,9 +10475,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-26",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10765,7 +10508,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "hint": true
   },
@@ -10841,10 +10584,10 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-45",
    "themes": [
-    "energia"
+    "energia_suministros"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "hint": true
   },
@@ -10859,9 +10602,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-49",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10893,9 +10634,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -10989,9 +10728,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-11",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true,
    "dedupedWith": [
     "bocm-BOCM-20260618-12"
@@ -11052,9 +10789,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11068,9 +10803,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-24",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11114,9 +10847,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11194,7 +10925,7 @@
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-47",
    "themes": [],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ],
    "hint": true
   },
@@ -11223,9 +10954,7 @@
    },
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-50",
    "themes": [],
-   "lifeEvents": [
-    "familia"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11379,9 +11108,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11397,9 +11124,7 @@
    "themes": [
     "educacion"
    ],
-   "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
-   ],
+   "lifeEvents": [],
    "hint": true
   },
   {
@@ -11413,10 +11138,10 @@
    },
    "officialSourceUrl": "https://www.boe.es/eli/es/l/2020/12/29/20/con",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [
-    "pago-facturas-energia"
+    "ingresos_bajos"
    ],
    "seedNote": "Prestación del Sistema de la Seguridad Social para hogares en situación de vulnerabilidad económica"
   },
@@ -11434,7 +11159,7 @@
     "empleo"
    ],
    "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
+    "perder_empleo"
    ],
    "seedNote": "Protección por desempleo de quien ha perdido un trabajo con suficiente cotización (LGSS arts. 264–271)"
   },
@@ -11452,7 +11177,7 @@
     "empleo"
    ],
    "lifeEvents": [
-    "me-he-quedado-sin-trabajo"
+    "perder_empleo"
    ],
    "seedNote": "Para quien agota la contributiva o no ha cotizado lo bastante (LGSS arts. 274–282)"
   },
@@ -11470,7 +11195,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "familia"
+    "tener_hijo"
    ],
    "seedNote": "Complemento del IMV por cada menor a cargo en la unidad de convivencia"
   },
@@ -11485,7 +11210,7 @@
    },
    "officialSourceUrl": "https://www.comunidad.madrid/servicios/servicios-sociales-y-voluntariado/renta-minima",
    "themes": [
-    "social_emergencia"
+    "ingresos_minimos"
    ],
    "lifeEvents": [],
    "seedNote": "Ingreso garantizado de la Comunidad de Madrid para quien no alcanza los mínimos de renta"
@@ -11504,7 +11229,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ],
    "seedNote": "Permiso retribuido de 16 semanas por progenitor (LGSS arts. 331–345)"
   },
@@ -11522,7 +11247,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ],
    "seedNote": "Reducción de jornada retribuida para quien cuida menores con enfermedad grave"
   },
@@ -11540,7 +11265,7 @@
     "dependencia_discapacidad"
    ],
    "lifeEvents": [
-    "cuido-de-un-familiar"
+    "cuidar_familiar"
    ],
    "seedNote": "Evaluación oficial y acceso a servicios y prestaciones por dependencia"
   },
@@ -11558,7 +11283,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ],
    "seedNote": "Para quien no ha cotizado lo suficiente a una pensión contributiva (arts. 363 ss.)"
   },
@@ -11576,7 +11301,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "familia"
+    "tener_hijo"
    ],
    "seedNote": "Acredita la condición y abre descuentos y beneficios (Ley 40/2003)"
   },
@@ -11594,7 +11319,7 @@
     "educacion"
    ],
    "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
+    "estudiar"
    ],
    "seedNote": "Becas de estudio del Ministerio de Educación, FP y Deportes"
   },
@@ -11612,7 +11337,7 @@
     "transporte"
    ],
    "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
+    "estudiar"
    ],
    "seedNote": "Transporte gratuito/reducido para menores de 26 años en la CM"
   },
@@ -11630,7 +11355,7 @@
     "mayores"
    ],
    "lifeEvents": [
-    "tengo-65-o-mas"
+    "mayor_65"
    ],
    "seedNote": "Tarjeta de transporte a precio reducido para mayores de 65"
   },
@@ -11648,7 +11373,7 @@
     "vivienda"
    ],
    "lifeEvents": [
-    "busco-vivienda"
+    "independizarse_vivienda"
    ],
    "seedNote": "Ayuda mensual al alquiler para menores de 35 años"
   },
@@ -11667,7 +11392,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "voy-a-tener-un-hijo"
+    "tener_hijo"
    ],
    "seedNote": "Ayuda a los gastos del primer ciclo de educación infantil"
   },
@@ -11686,7 +11411,7 @@
     "familia_infancia"
    ],
    "lifeEvents": [
-    "estudio-o-voy-a-estudiar"
+    "estudiar"
    ],
    "seedNote": "Precio reducido o gratuito del comedor escolar según renta"
   },
@@ -11701,7 +11426,7 @@
    },
    "officialSourceUrl": "https://www.boe.es/eli/es/lo/2004/12/28/1/con",
    "themes": [
-    "mujeres_violencia"
+    "violencia_genero"
    ],
    "lifeEvents": [],
    "seedNote": "Prestaciones específicas de la Ley Integral (LO 1/2004)"

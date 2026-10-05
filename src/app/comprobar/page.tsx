@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { CheckFlow } from "../../components/check/CheckFlow";
 
@@ -18,7 +19,9 @@ export default function Comprobar() {
 					</p>
 				</div>
 			</noscript>
-			<CheckFlow />
+			<Suspense>
+				<CheckFlow />
+			</Suspense>
 		</>
 	);
 }

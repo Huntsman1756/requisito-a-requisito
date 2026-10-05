@@ -17,6 +17,17 @@ import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import { formatDateEs, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
+
+const EVENT_LABELS: Record<string, string> = {
+	tener_hijo: "Voy a tener un hijo",
+	perder_empleo: "Me he quedado sin trabajo",
+	estudiar: "Estudio o voy a estudiar",
+	independizarse_vivienda: "Busco vivienda",
+	cuidar_familiar: "Cuido de un familiar",
+	discapacidad: "Tengo una discapacidad",
+	mayor_65: "Tengo 65 años o más",
+	ingresos_bajos: "Me cuesta llegar a fin de mes",
+};
 import { clearAll } from "../../lib/profile-store";
 import type { Answer } from "./QuestionStep";
 import { QuestionStep } from "./QuestionStep";
@@ -34,6 +45,7 @@ interface Props {
 	profile: CitizenProfile;
 	evalCtx: EvaluateCtx;
 	questions: Question[];
+	lifeEvent?: string | null;
 	onSetAnswer: (field: string, a: Answer) => void;
 	onRestart: () => void;
 	onAnnounce: (s: string) => void;
@@ -44,6 +56,7 @@ export function ResultsView({
 	profile,
 	evalCtx,
 	questions,
+	lifeEvent,
 	onSetAnswer,
 	onRestart,
 	onAnnounce,
@@ -52,6 +65,7 @@ export function ResultsView({
 	const [showNoCumple, setShowNoCumple] = useState(false);
 	const [inlineField, setInlineField] = useState<string | null>(null);
 	const [showAllL2, setShowAllL2] = useState(false);
+	const [showMatrix, setShowMatrix] = useState(false);
 	const [copied, setCopied] = useState(false);
 	const [cleared, setCleared] = useState(false);
 
@@ -101,6 +115,68 @@ export function ResultsView({
 
 	const probables = byVerdict("probable").length;
 	const posibles = byVerdict("posible").length;
+
+	// Plan de acción (docs/15 D): valor, documentos agrupados, calendario.
+	const actionEvals = useMemo(
+		() =>
+			evaluations.filter(
+				({ ev }) => ev.verdict === "probable" || ev.verdict === "posible",
+			),
+		[evaluations],
+	);
+	const totalRange = useMemo(() => {
+		let min = 0, max = 0, n = 0;
+		for (const { ev: e } of actionEvals) {
+			const a = e.amount;
+			if (!a || a.type === "variable") continue;
+			if (a.minEur !== undefined && a.maxEur !== undefined) {
+				min += a.minEur;
+				max += a.maxEur;
+				n++;
+			}
+		}
+		return n ? { min, max, n } : null;
+	}, [actionEvals]);
+	const groupedDocs = useMemo(() => {
+		const byLabel = new Map<string, string[]>();
+		for (const { ev: e } of actionEvals) {
+			for (const label of e.documents ?? []) {
+				const arr = byLabel.get(label) ?? [];
+				arr.push(e.benefitSlug);
+				byLabel.set(label, arr);
+			}
+		}
+		return [...byLabel.entries()].map(([label, slugs]) => ({
+			label,
+			count: slugs.length,
+			slugs: [...new Set(slugs)],
+		}));
+	}, [actionEvals]);
+		const icsHref = useMemo(() => {
+		const events = actionEvals
+			.filter(({ ev }) => ev.deadline.closesAt)
+			.map(({ ev: e }) => {
+				const d = e.deadline.closesAt!.replaceAll("-", "");
+				return [
+					"BEGIN:VEVENT",
+					`UID:${e.benefitSlug}@requisito-a-requisito`,
+					`DTSTART;VALUE=DATE:${d}`,
+					`DTEND;VALUE=DATE:${d}`,
+					`SUMMARY:Ultimo dia - ${aidTitle(e.benefitSlug)}`,
+					`DESCRIPTION:Solicitar en ${e.channel.url}`,
+					"END:VEVENT",
+				].join("\r\n");
+			});
+		if (!events.length) return null;
+		const ics = [
+			"BEGIN:VCALENDAR",
+			"VERSION:2.0",
+			"PRODID:-//Requisito a Requisito//ES",
+			...events,
+			"END:VCALENDAR",
+		].join("\r\n");
+		return `data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`;
+	}, [actionEvals]);
 
 	const copySummary = () => {
 		const lines = [
@@ -242,6 +318,102 @@ export function ResultsView({
 				</ul>
 			)}
 
+			{evaluations.length > 1 && (
+				<div className="matrix-toggle">
+					<button
+						type="button"
+						className="btn-quiet"
+						aria-expanded={showMatrix}
+						onClick={() => setShowMatrix((v) => !v)}
+					>
+						{showMatrix ? "Ocultar" : "Ver"} la tabla requisito a requisito
+					</button>
+				</div>
+			)}
+			{showMatrix && (
+				<div className="matrix-wrap" role="region" aria-label="Tabla de requisitos por ayuda" tabIndex={0}>
+					<table className="matrix">
+						<thead>
+							<tr>
+								<th scope="col">Ayuda</th>
+								{[...new Set(evaluations.flatMap(({ rs }) => rs.requirements.map((r) => r.id)))].map((id) => {
+									const label = evaluations.flatMap(({ rs }) => rs.requirements).find((r) => r.id === id)?.label ?? id;
+									return <th key={id} scope="col" className="matrix-th">{label}</th>;
+								})}
+							</tr>
+						</thead>
+						<tbody>
+							{evaluations.map(({ rs, ev }) => (
+								<tr key={ev.benefitSlug}>
+									<th scope="row" className="matrix-aid">{aidTitle(ev.benefitSlug)}</th>
+									{[...new Set(evaluations.flatMap(({ rs: r }) => r.requirements.map((x) => x.id)))].map((rid) => {
+										const rq = ev.requirements.find((x) => x.id === rid);
+										const sym = !rq ? "—" : rq.status === "T" ? "✓" : rq.status === "F" ? "✗" : "?";
+										const txt = !rq ? "No aplica" : rq.status === "T" ? "Cumples" : rq.status === "F" ? "No cumples" : "No se puede saber";
+										return (
+											<td key={rid} className={`matrix-cell matrix--${rq?.status ?? "na"}`}>
+												<span aria-hidden="true">{sym}</span>
+												<span className="sr-only">{txt}</span>
+											</td>
+										);
+									})}
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			)}
+
+			{actionEvals.length > 0 && (
+				<section className="action-plan" aria-labelledby="plan-title">
+					<h2 id="plan-title">Tu plan de acción</h2>
+					{totalRange && (
+						<p className="plan-total">
+							{t("results.plan.total", {
+								min: totalRange.min.toLocaleString("es-ES"),
+								max: totalRange.max.toLocaleString("es-ES"),
+								n: totalRange.n,
+							})}
+						</p>
+					)}
+					{groupedDocs.length > 0 && (
+						<p className="plan-docs">
+							{t("results.plan.docs", { n: groupedDocs.length })}
+							{": "}
+							{groupedDocs.map((d) => d.label).join("; ")}
+						</p>
+					)}
+					{icsHref && (
+						<p>
+							<a className="btn-quiet" href={icsHref} download="plazos-ayudas.ics">
+								{t("results.plan.ics")}
+							</a>
+						</p>
+					)}
+				</section>
+			)}
+
+			{lifeEvent && (
+				<aside className="life-event-block" aria-labelledby="le-title">
+					<h2 id="le-title">Para tu situación</h2>
+					<p>
+						Elegiste «{EVENT_LABELS[lifeEvent] ?? lifeEvent}». De todo el
+						catálogo, estas responden más a ese momento:
+					</p>
+					<ul>
+						{level2
+							.filter(({ item }) => item.lifeEvents?.includes(lifeEvent))
+							.slice(0, 6)
+							.map(({ item }) => (
+								<li key={item.slug}>
+									<a href={item.officialSourceUrl} rel="noopener noreferrer">
+										{item.displayTitle}
+									</a>
+								</li>
+							))}
+					</ul>
+				</aside>
+			)}
 			{level2.length > 0 && (
 				<aside aria-labelledby="level2-title">
 					<h2 id="level2-title">{t("results.level2.title")}</h2>

@@ -98,30 +98,52 @@ function citizenTitle(raw: Ficha): string | null {
 }
 
 const skipped: { f: string; reason: string }[] = [];
-const level2 = readdirSync(benefitsDir)
-	.filter((f) => f.endsWith(".json"))
-	.map((f) => ({ f, raw: JSON.parse(readFileSync(join(benefitsDir, f), "utf8")) as Ficha }))
-	.map(({ f, raw }) => {
-		const slug = raw.slug ?? f.replace(/\.json$/, "");
-		const title = citizenTitle(raw);
-		if (!title || !raw.officialSourceUrl) {
-			skipped.push({
-				f,
-				reason: !title ? "sin título usable" : "sin officialSourceUrl",
-			});
-			return null;
+// L2-ALL: el nivel 2 es el universo clasificado de data/universe/programs.json,
+// más los campos del catálogo la-ayuda cuando existen.
+const universe = JSON.parse(
+	readFileSync(join(root, "data/universe/programs.json"), "utf8"),
+).programs as {
+	id: string;
+	title: string;
+	scope: string;
+	accessState: string;
+	officialSourceUrl?: string;
+	themes: string[];
+	lifeEvents: string[];
+	source: { kind: string; url?: string };
+}[];
+const fichasByUrl = new Map<string, Ficha>();
+for (const f of readdirSync(benefitsDir).filter((x) => x.endsWith(".json"))) {
+	const raw = JSON.parse(readFileSync(join(benefitsDir, f), "utf8")) as Ficha;
+	if (raw.officialSourceUrl) fichasByUrl.set(raw.officialSourceUrl, raw);
+}
+const level2 = universe
+	.filter((p) => {
+		if (!p.officialSourceUrl) {
+			skipped.push({ f: p.id, reason: "sin officialSourceUrl" });
+			return false;
 		}
-		return {
-			slug,
-			displayTitle: title,
-			managingBody: raw.managingBody,
-			officialSourceUrl: raw.officialSourceUrl,
-			applicationStatus: raw.applicationStatus,
-			estimatedValueText: raw.estimatedValueText,
-			eligibilityFactors: raw.eligibilityFactors ?? {},
-		};
+		if (p.accessState === "CLOSED") {
+			skipped.push({ f: p.id, reason: "CLOSED (convocatoria única o sin recurrente acreditado)" });
+			return false;
+		}
+		return true;
 	})
-	.filter((x): x is NonNullable<typeof x> => x !== null);
+	.map((p) => {
+		const ficha = p.officialSourceUrl ? fichasByUrl.get(p.officialSourceUrl) : undefined;
+		return {
+			slug: p.id,
+			displayTitle: citizenTitle(p as unknown as Ficha) ?? p.title,
+			managingBody: undefined,
+			officialSourceUrl: p.officialSourceUrl as string,
+			applicationStatus: undefined,
+			accessState: p.accessState,
+			scope: p.scope,
+			themes: p.themes,
+			lifeEvents: p.lifeEvents,
+			eligibilityFactors: ficha?.eligibilityFactors ?? {},
+		};
+	});
 writeFileSync(
 	join(OUT, "nivel-2.json"),
 	`${JSON.stringify({ items: level2 })}\n`,

@@ -109,11 +109,38 @@ export interface Level2Match {
  * Compatibilidad: si la ficha declara un factor poblado, el conjunto de
  * posibilidades del usuario debe tocarlo. Lo no respondido no excluye.
  */
+/** Temas inferidos de las respuestas (mapa determinista answer→theme). */
+function userThemes(answers: Answers): Set<string> {
+	const t = new Set<string>();
+	const fam = rawValue(answers.familyType);
+	if (fam === "familia-numerosa" || fam === "monoparental")
+		t.add("familia_infancia");
+	const emp = rawValue(answers.employmentStatus);
+	if (emp === "desempleado") t.add("empleo");
+	if (rawValue(answers.studentStatus) === "si") t.add("educacion");
+	const hou = rawValue(answers.housingStatus);
+	if (hou === "alquiler" || hou === "independizarse") t.add("vivienda");
+	const dis = rawValue(answers.disability);
+	if (dis === "gte33" || dis === "lt33") t.add("dependencia_discapacidad");
+	const dep = rawValue(answers.dependency);
+	if (dep === "reconocida" || dep === "en_tramite")
+		t.add("dependencia_discapacidad");
+	const age = rawValue(answers.age) as { min?: number } | undefined;
+	if ((age?.min ?? 0) >= 65) t.add("mayores");
+	const kids = rawValue(answers.dependents);
+	if (Array.isArray(kids) && kids.length > 0) t.add("familia_infancia");
+	const inc = rawValue(answers.incomeAnnual) as { min?: number } | undefined;
+	if (inc && (inc.min ?? Infinity) < 16800) t.add("ingresos_minimos");
+	return t;
+}
+
 export function matchLevel2(items: Level2Item[], answers: Answers): Level2Match[] {
 	const uf = userFactorSet(answers);
+	const ut = userThemes(answers);
 	const out: Level2Match[] = [];
 	for (const item of items) {
-		if (item.applicationStatus === "closed") continue;
+		if (item.applicationStatus === "closed" || item.accessState === "CLOSED")
+			continue;
 		const ef = item.eligibilityFactors ?? {};
 		let matched = 0;
 		let ok = true;
@@ -130,7 +157,9 @@ export function matchLevel2(items: Level2Item[], answers: Answers): Level2Match[
 			}
 			matched++;
 		}
-		if (ok) out.push({ item, matchedFactors: matched });
+		// L2-ALL: las afines por tema no excluyen; solo suman relevancia.
+		const themeHit = (item.themes ?? []).filter((x) => ut.has(x)).length;
+		if (ok) out.push({ item, matchedFactors: matched + themeHit });
 	}
 	return out.sort(
 		(a, b) =>

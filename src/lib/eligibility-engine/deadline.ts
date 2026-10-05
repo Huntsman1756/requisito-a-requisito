@@ -14,6 +14,7 @@ export interface DeadlineResult {
 	daysLeft?: number;
 	urgent?: boolean;
 	conflict?: boolean;
+	nextOpeningEstimate?: string;
 }
 
 export interface WindowLike {
@@ -22,6 +23,7 @@ export interface WindowLike {
 	rolling: boolean;
 	conflict?: boolean;
 	recurrence?: "none" | "annual";
+	previousCalls?: { opensAt: string; closesAt: string }[];
 }
 
 export const URGENT_DAYS = 5;
@@ -41,6 +43,25 @@ export function deadlineState(w: WindowLike, today: string): DeadlineResult {
 		};
 	}
 	if (w.closesAt && today > w.closesAt) {
+		// CLOSED_RECURRING: convocatoria cerrada pero anual con ≥2 ediciones
+		// anuales consecutivas citadas (ADR-038). Estimación: la última
+		// apertura + ~1 año. Nunca se muestra como fecha segura.
+		if (w.recurrence === "annual") {
+			const calls = (w.previousCalls ?? []).slice().sort();
+			const years = calls.map((c) => c.opensAt.slice(0, 4));
+			const consecutive =
+				calls.length >= 2 &&
+				years.every((y, i) => i === 0 || Number(y) === Number(years[i - 1]) + 1);
+			if (consecutive) {
+				const last = calls[calls.length - 1];
+				const [y, m, d] = last.opensAt.split("-").map(Number);
+				return {
+					state: "CLOSED_RECURRING",
+					closesAt: w.closesAt,
+					nextOpeningEstimate: `${y + 1}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+				};
+			}
+		}
 		return { state: "CLOSED", closesAt: w.closesAt };
 	}
 	// Abierta: el último día (today == closesAt) cuenta completo.

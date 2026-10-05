@@ -33,6 +33,11 @@ export interface Level2Item {
 	officialSourceUrl?: string;
 	applicationStatus?: string;
 	estimatedValueText?: string;
+	/** Estado de acceso (docs/14 §2): OPEN/ROLLING/UPCOMING/CLOSED_RECURRING/UNKNOWN. */
+	accessState?: string;
+	scope?: string;
+	themes?: string[];
+	lifeEvents?: string[];
 	eligibilityFactors: Record<string, unknown>;
 }
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { evaluateRuleSet } from "../../lib/eligibility-engine/evaluate";
 import { evalCondition } from "../../lib/eligibility-engine/operators";
 import type {
@@ -19,6 +20,7 @@ import {
 } from "../../lib/profile-store";
 import { usedFields } from "../../lib/used-fields";
 import type { Answer } from "./QuestionStep";
+import { EXAMPLES } from "../../lib/examples";
 import { QuestionStep } from "./QuestionStep";
 import { ResultsView } from "./ResultsView";
 
@@ -40,12 +42,25 @@ export function CheckFlow() {
 	const [step, setStep] = useState(0);
 	const [editReturn, setEditReturn] = useState<Phase | null>(null);
 	const [announce, setAnnounce] = useState("");
+	const [lifeEvent, setLifeEvent] = useState<string | null>(null);
+	const [example, setExample] = useState<string | null>(null);
+	const searchParams = useSearchParams();
 	const mainRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		loadCheckData()
 			.then((d) => {
 				setData(d);
+				const ex = searchParams.get("ejemplo");
+				if (ex) {
+					const p = EXAMPLES.find((x) => x.id === ex);
+					if (p) {
+						setExample(p.id);
+						setAnswers(p.answers);
+						setPhase("results");
+						return;
+					}
+				}
 				const saved = readHandoff();
 				if (saved) {
 					setAnswers(saved.answers);
@@ -169,6 +184,31 @@ export function CheckFlow() {
 							{t("check.intro.start")}
 						</button>
 					</p>
+					<fieldset className="life-events">
+						<legend>{t("check.intro.lifeEvents")}</legend>
+						{(
+							[
+								["tener_hijo", "Voy a tener un hijo"],
+								["perder_empleo", "Me he quedado sin trabajo"],
+								["estudiar", "Estudio o voy a estudiar"],
+								["independizarse_vivienda", "Busco vivienda"],
+								["cuidar_familiar", "Cuido de un familiar"],
+								["discapacidad", "Tengo una discapacidad"],
+								["mayor_65", "Tengo 65 años o más"],
+								["ingresos_bajos", "Me cuesta llegar a fin de mes"],
+							] as const
+						).map(([ev, label]) => (
+							<button
+								key={ev}
+								type="button"
+								className={`chip ${lifeEvent === ev ? "chip--on" : ""}`}
+								aria-pressed={lifeEvent === ev}
+								onClick={() => setLifeEvent(lifeEvent === ev ? null : ev)}
+							>
+								{label}
+							</button>
+						))}
+					</fieldset>
 					<p className="privacy-note">{t("check.intro.privacy")}</p>
 				</section>
 			)}
@@ -270,22 +310,36 @@ export function CheckFlow() {
 			)}
 
 			{phase === "results" && (
+				<>
+					{example && (
+						<p className="pilot-banner example-banner" role="status">
+							Esto es un ejemplo ({EXAMPLES.find((x) => x.id === example)?.label}). No son tus datos
+							y no se guardan.{" "}
+							<button type="button" className="btn-quiet" onClick={() => { setExample(null); setAnswers({}); goTo("intro"); }}>
+								Comprobar mi propia situación
+							</button>
+						</p>
+					)}
 				<ResultsView
 					data={data}
 					profile={profile}
 					evalCtx={evalCtx}
 					questions={questions}
+					lifeEvent={lifeEvent}
 					onSetAnswer={(field, a) =>
 						setAnswers((prev) => ({ ...prev, [field]: a }))
 					}
 					onRestart={() => {
 						clearAll();
+						setLifeEvent(null);
+						setExample(null);
 						setAnswers({});
 						setStep(0);
 						goTo("intro");
 					}}
 					onAnnounce={setAnnounce}
 				/>
+				</>
 			)}
 		</div>
 	);

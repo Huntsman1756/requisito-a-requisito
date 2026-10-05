@@ -62,10 +62,39 @@ export default function Home() {
 				</li>
 			</ol>
 
+			<section className="examples" aria-labelledby="examples-title">
+				<h2 id="examples-title">Ver un ejemplo</h2>
+				<p>
+					Mira qué sale sin rellenar nada — perfiles ficticios de Madrid:
+				</p>
+				<ul className="example-links">
+					<li>
+						<Link href="/comprobar?ejemplo=familia-getafe">
+							Familia monoparental en Getafe
+						</Link>
+						<span> — madre sola, dos hijos, ingresos modestos</span>
+					</li>
+					<li>
+						<Link href="/comprobar?ejemplo=estudiante-alcala">
+							Estudiante de 18 años en Alcalá
+						</Link>
+						<span> — primero de carrera, sin ingresos</span>
+					</li>
+					<li>
+						<Link href="/comprobar?ejemplo=mayor-55-vallecas">
+							Persona de 55 en paro en Vallecas
+						</Link>
+						<span> — empleo perdido, sin hijos a cargo</span>
+					</li>
+				</ul>
+			</section>
+
 			<section className="coverage" aria-labelledby="coverage-title">
 				<h2 id="coverage-title">Qué cubrimos hoy</h2>
 				<p>
-					{rules} ayudas con requisitos comprobados y {level2} más del catálogo
+					{rules} ayudas con requisitos comprobados y {level2} más del catálogo.
+					<Link href="/explorar">Explorar</Link> ·{" "}
+					<Link href="/observatorio">Observatorio</Link> ·
 					que pueden interesarte (sin comprobar). Última verificación:{" "}
 					{formatDateEs(verified)}.
 				</p>

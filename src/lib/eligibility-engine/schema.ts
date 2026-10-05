@@ -116,11 +116,18 @@ const uncoveredRequirementSchema = z.strictObject({
 	citation: citationSchema,
 });
 
+const previousCallSchema = z.strictObject({
+	opensAt: isoDate,
+	closesAt: isoDate,
+	citation: citationSchema,
+});
+
 const applicationWindowSchema = z.strictObject({
 	opensAt: isoDate.optional(),
 	closesAt: isoDate.optional(),
 	rolling: z.boolean(),
 	recurrence: z.enum(["none", "annual"]).optional(),
+	previousCalls: z.array(previousCallSchema).optional(),
 	businessDays: z.boolean().optional(),
 	conflict: z.boolean().optional(),
 	citation: citationSchema,
@@ -221,6 +228,40 @@ export const ruleSetSchema = z.strictObject({
 			formPages: z.number().int().min(0).optional(),
 		})
 		.optional(),
+	/** Temas para explorar/filtrar el catálogo (docs/15). */
+	themes: z
+		.array(
+			z.enum([
+				"familia_infancia",
+				"educacion",
+				"empleo",
+				"vivienda",
+				"dependencia_discapacidad",
+				"mayores",
+				"ingresos_minimos",
+				"energia_suministros",
+				"transporte",
+				"cultura_juventud",
+				"violencia_genero",
+				"salud",
+			]),
+		)
+		.optional(),
+	/** Eventos vitales a los que responde (docs/15 B). */
+	lifeEvents: z
+		.array(
+			z.enum([
+				"tener_hijo",
+				"perder_empleo",
+				"estudiar",
+				"independizarse_vivienda",
+				"cuidar_familiar",
+				"discapacidad",
+				"mayor_65",
+				"ingresos_bajos",
+			]),
+		)
+		.optional(),
 });
 export type RuleSet = z.infer<typeof ruleSetSchema>;
 
@@ -290,6 +331,7 @@ export const DEADLINE_STATES = [
 	"OPEN",
 	"UPCOMING",
 	"CLOSED",
+	"CLOSED_RECURRING",
 	"ROLLING",
 	"UNKNOWN",
 ] as const;
