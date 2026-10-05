@@ -30,6 +30,10 @@ export const AID_TITLES: Record<string, string> = {
 		"Ayuda económica por nacimiento (Comunidad de Madrid)",
 	"prestacion-nacimiento-cuidado-menor":
 		"Permiso y prestación por nacimiento y cuidado del menor",
+	"becas-generales-mefp-2026-2027": "Becas del Ministerio de Educación (universidad)",
+	"madrid-abono-transporte-infantil": "Transporte público gratuito infantil (menores de 7 años)",
+	"prestacion-cuidador-no-profesional":
+		"Prestación para cuidadoras no profesionales de personas dependientes",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

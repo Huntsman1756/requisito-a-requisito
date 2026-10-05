@@ -1,0 +1,269 @@
+{
+	"benefitSlug": "becas-generales-mefp-2026-2027",
+	"standalone": false,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-rd-1721-2007-becas",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2007/12/21/1721/con",
+			"title": "Real Decreto 1721/2007, de 21 de diciembre — régimen de las becas y ayudas al estudio personalizadas (texto consolidado, última actualización 12/03/2026)"
+		},
+		{
+			"id": "boe-rd-179-2026-umbrales-2627",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/11/179/con",
+			"title": "Real Decreto 179/2026, de 11 de marzo — umbrales de renta y patrimonio familiar y cuantías de las becas y ayudas al estudio para el curso 2026-2027 (BOE núm. 63, de 12/03/2026)"
+		},
+		{
+			"id": "boe-b-2026-9261-becas-generales-2627",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.boe.es/buscar/doc.php?id=BOE-B-2026-9261",
+			"title": "Extracto de la Resolución de 23 de marzo de 2026, de la Secretaría de Estado de Educación — convocatoria de becas de carácter general, curso 2026-2027 (BOE núm. 74, de 25/03/2026; BDNS 894743)"
+		},
+		{
+			"id": "boe-b-2025-10203-becas-generales-2526",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.boe.es/buscar/doc.php?id=BOE-B-2025-10203",
+			"title": "Extracto de la Resolución de 18 de marzo de 2025, de la Secretaría de Estado de Educación — convocatoria de becas de carácter general, curso 2025-2026 (BOE núm. 68, de 20/03/2025; BDNS 821187)"
+		},
+		{
+			"id": "boe-b-2024-9036-becas-generales-2425",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.boe.es/buscar/doc.php?id=BOE-B-2024-9036",
+			"title": "Extracto de la Resolución de 13 de marzo de 2024, de la Secretaría de Estado de Educación — convocatoria de becas de carácter general, curso 2024-2025 (BOE núm. 66, de 15/03/2024; BDNS 749075)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "estudiante-universitario",
+			"hard": false,
+			"label": "Cursar enseñanzas universitarias conducentes a título oficial de grado o de máster en el curso 2026-2027",
+			"citation": {
+				"sourceId": "boe-b-2026-9261-becas-generales-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios», 2.b)",
+				"excerpt": "Enseñanzas universitarias conducentes a títulos oficiales de grado y de máster, incluidos los estudios de grado y máster cursados en los centros universitarios de la defensa y de la guardia civil, así como los cursados en el Centro Universitario de Formación de la Policía Nacional, O.A.",
+				"excerptSha256": "130bc0c1f59956ae734cf75c0e298a5e4d2192a1d194b14f958176949db81e4a"
+			},
+			"condition": {
+				"field": "studentStatus",
+				"op": "eq",
+				"value": "si"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "umbral-renta-familiar",
+			"label": "La renta familiar no puede superar el umbral que corresponda según el número de miembros computables: en la convocatoria general 2026-2027 el umbral 1 va de 8.843 € (1 miembro) a 36.255 € (8), el umbral 2 de 13.898 € a 52.850 € y el umbral 3 de 14.818 € a 56.348 € (extremos inferiores de los intervalos 1 y 3, que son los que financia el MEFPD); el umbral que aplica depende del componente de la beca (matrícula: umbral 3; cuantías fijas de renta y residencia: umbral 1)",
+			"citation": {
+				"sourceId": "boe-rd-179-2026-umbrales-2627",
+				"locator": "Art. 8.1 (tabla de umbrales) y art. 3 (umbrales por componente)",
+				"excerpt": "Los umbrales de renta para el curso 2026-2027 en las convocatorias a las que se refiere el artículo 2 serán los contenidos en la tabla siguiente",
+				"excerptSha256": "d887f8502253f461b07cf99455d417891c50216385bb79d6ad79cc829554246e"
+			}
+		},
+		{
+			"id": "renta-familiar-irpf-2025",
+			"label": "La renta que se evalúa es la renta familiar del ejercicio 2025 (agregación de las rentas IRPF de los miembros computables, con deducciones), no los ingresos anuales del hogar que pregunta el orientador",
+			"citation": {
+				"sourceId": "boe-rd-179-2026-umbrales-2627",
+				"locator": "Art. 9.1",
+				"excerpt": "A efectos de las becas y ayudas al estudio del curso 2026-2027, se computará el ejercicio 2025.",
+				"excerptSha256": "d216e5ae06256a82e922a87ab76c078af19b2182eb846ed4fb06f0974e72b63b"
+			}
+		},
+		{
+			"id": "umbral-por-componente",
+			"label": "El umbral que aplica depende del componente: cuantía fija de renta exige no superar el umbral 1; entre umbral 1 y 2 quedan residencia, excelencia, variable y matrícula; entre umbral 2 y 3, solo excelencia y beca de matrícula (con matrícula parcial, solo matrícula y variable mínima)",
+			"citation": {
+				"sourceId": "boe-rd-179-2026-umbrales-2627",
+				"locator": "Art. 3 (umbrales aplicables, enseñanzas universitarias y artísticas superiores)",
+				"excerpt": "superen el umbral 2 y no superen el umbral 3 de renta familiar establecido en este real decreto podrán obtener la cuantía fija ligada a la excelencia en el rendimiento académico y la beca de matrícula.",
+				"excerptSha256": "9628a43954bd791f7fab9eaaf59ad15b1d05c332cfcb96aab9a6b681c2115f9d"
+			}
+		},
+		{
+			"id": "miembros-computables",
+			"label": "Los miembros computables para la renta familiar son los padres o sustentadores principales, el solicitante, los hermanos solteros menores de 25 años que convivan (o mayores con discapacidad) y los ascendientes residentes; hay reglas propias para divorcio, independencia familiar y unidades familiares propias que el orientador no pregunta",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 14.1",
+				"excerpt": "serán miembros computables los padres y, en su caso, el tutor o persona encargada de la guarda y protección del menor, quienes tendrán la consideración de sustentadores principales de la familia.",
+				"excerptSha256": "a808a6d83f70f87e2c52efe062fcbaefe44768ee26fb4826408db0aebe3d4ea0"
+			}
+		},
+		{
+			"id": "patrimonio-familiar",
+			"label": "Aunque la renta no supere el umbral, la beca se deniega si el patrimonio familiar supera los umbrales indicativos: p. ej. la suma de valores catastrales de fincas urbanas (sin contar la vivienda habitual) no puede superar 47.200 €",
+			"citation": {
+				"sourceId": "boe-rd-179-2026-umbrales-2627",
+				"locator": "Art. 11.1.a",
+				"excerpt": "La suma de los valores catastrales de las fincas urbanas que pertenezcan a los miembros computables de la familia, excluida la vivienda habitual, no podrá superar los 47.200 euros.",
+				"excerptSha256": "3d18f49e5316a66c2e7b62cd375113dd7fb3d0b02cbbdda7ec3c7c74b55b4472"
+			}
+		},
+		{
+			"id": "nota-y-aprobados-grado",
+			"label": "Requisito académico en grado: en primer curso se exige nota de 5,00 puntos en la PAU o en la prueba/enseñanza de acceso; en segundos y posteriores, haber superado un porcentaje de los créditos matriculados según la rama (90 % en Artes y Humanidades y en Ciencias Sociales y Jurídicas, 80 % en Ciencias de la Salud, 65 % en Ciencias y en Enseñanzas Técnicas); el orientador no pregunta la nota media ponderada ni los créditos aprobados",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 23.1 y 23.2 (tabla por rama de conocimiento)",
+				"excerpt": "se requerirá una nota de 5,00 puntos en la calificación de acceso a la universidad.",
+				"excerptSha256": "b89941a9d970939420eca2861e09977be6dab9932d808669c77c9a3213a59680"
+			}
+		},
+		{
+			"id": "nota-media-master",
+			"label": "En máster: para primer curso se exige una nota media ponderada de 5,00 puntos en los estudios que dan acceso (las de enseñanzas técnicas se multiplican por 1,17); para segundo, haber superado todo el primer curso con nota media de 5,00",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 27.1",
+				"excerpt": "El estudiantado de primer curso de Másteres Universitarios deberá acreditar una nota media de 5,00 puntos en los estudios previos que dan acceso al Máster.",
+				"excerptSha256": "1688cdb6c493e10cbbc67eb6b6332c7934997a5215a9e228b3da2e869ca1ce46"
+			}
+		},
+		{
+			"id": "matricula-minima-creditos",
+			"label": "Hay que estar matriculado de un mínimo de 60 créditos en el curso de la beca (30-59 es matrícula parcial: solo beca de matrícula y cuantía variable mínima, salvo límites impuestos por la universidad); el orientador no pregunta los créditos matriculados",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 22.1-2 (grado) y art. 26 (máster)",
+				"excerpt": "Para obtener beca los solicitantes deberán matricularse, en el curso para el que solicitan la beca, de un mínimo de 60 créditos.",
+				"excerptSha256": "59e8f031136b03e83382a272ea1bce2c79c1341ef193bf24baade87596ab93ff"
+			}
+		},
+		{
+			"id": "matricula-parcial-48-59",
+			"label": "Novedad 2026-2027: universitarios y de enseñanzas artísticas superiores matriculados de 48 a 59 créditos perciben 350 € por la cuantía de renta y 350 € por la de residencia, si cumplen el resto de requisitos de esos componentes",
+			"citation": {
+				"sourceId": "boe-b-2026-9261-becas-generales-2627",
+				"locator": "Extracto, «Cuarto. Componentes de las becas y cuantías», 1 (párrafo final)",
+				"excerpt": "La beca de renta y de residencia en estudiantes universitarios y de enseñanzas artísticas superiores que, reuniendo el resto de los requisitos para la percepción de estos componentes, estén matriculados de entre 48 y 59 créditos será de 350 euros para cada concepto.",
+				"excerptSha256": "866882384bb15fe86a8d8412765f203188498a7c8f0e71066d03083fadd6cefd"
+			}
+		},
+		{
+			"id": "no-titulo-mismo-nivel",
+			"label": "No se puede estar en posesión ni reunir los requisitos para obtener un título del mismo o superior nivel al de los estudios becados (quienes tienen un grado solo acceden a beca de máster; quienes tienen título universitario no obtienen beca para enseñanzas no universitarias)",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 4.1.a",
+				"excerpt": "No estar en posesión o no reunir los requisitos legales para la obtención de un título del mismo o superior nivel al correspondiente al de los estudios para los que se solicita la beca o ayuda.",
+				"excerptSha256": "08383186e93d5db002f83d187b643a2cc8d39f07fa973660348cecc301397ec3"
+			}
+		},
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Ser español o, en su caso, ciudadano de la UE residente permanente o trabajador (o extracomunitario con la residencia que exija la normativa de extranjería); para la beca de matrícula estos requisitos no se exigen — el orientador no pregunta la nacionalidad",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 4.1.d",
+				"excerpt": "Ser español. En el caso de ciudadanos de la Unión o de sus familiares, beneficiarios de los derechos de libre circulación y residencia, se requerirá que tengan la condición de residentes permanentes o que acrediten ser trabajadores por cuenta propia o ajena. Estos requisitos no serán exigibles para la obtención de la beca de matrícula.",
+				"excerptSha256": "1ce97d927eb55aa9374ab5d26c118bf14b5b260b53b11fe00ebd362eadb5cd85"
+			}
+		},
+		{
+			"id": "maximo-anos-becario",
+			"label": "La condición de becario dura como máximo un año más de los del plan de estudios (dos en enseñanzas técnicas; un año adicional con matrícula parcial o en universidades no presenciales), y cambiar de estudios con beca exige matricularse de al menos 30 créditos más de los cursados con beca en los abandonados",
+			"citation": {
+				"sourceId": "boe-rd-1721-2007-becas",
+				"locator": "Art. 24.1-2 y 24.4",
+				"excerpt": "Se podrá disfrutar de beca durante un año más de los establecidos en el plan de estudios. No obstante este plazo será de dos años para quienes cursen estudios de enseñanzas técnicas.",
+				"excerptSha256": "cdb5a927fbf972a9aa556b45196e4d749000d99f271fccc17123480a2590589b"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-04-07",
+			"closesAt": "2026-05-18",
+			"rolling": false,
+			"recurrence": "annual",
+			"businessDays": false,
+			"citation": {
+				"sourceId": "boe-b-2026-9261-becas-generales-2627",
+				"locator": "Extracto (BOE núm. 74, de 25 de marzo de 2026), «Tercero. Solicitudes»",
+				"excerpt": "El plazo para presentar la solicitud de beca tanto para estudios universitarios como no universitarios se extenderá desde el día 7 de abril de 2026, a las 8,00, hora peninsular, hasta el día 18 de mayo de 2026, a las 15,00, hora peninsular, ambos inclusive.",
+				"excerptSha256": "82c31aca85fd7d2a4bf43adcec6d3cf2aa10dc5e8c2ea824c90e8bda814e1363"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2025-03-24",
+					"closesAt": "2025-05-14",
+					"citation": {
+						"sourceId": "boe-b-2025-10203-becas-generales-2526",
+						"locator": "Extracto Resolución de 18/03/2025 (BOE núm. 68, de 20/03/2025), «Tercero. Solicitudes»",
+						"excerpt": "El plazo para presentar la solicitud de beca tanto para estudios universitarios como no universitarios se extenderá desde el día 24 de marzo de 2025, a las 8:00, hora peninsular, hasta el 14 de mayo de 2025, a las 15:00, hora peninsular, ambos inclusive.",
+						"excerptSha256": "4fadeaa9c94d2e2acf16119cfde02932058f0f18cb80872c3742076702918e37"
+					}
+				},
+				{
+					"opensAt": "2024-03-19",
+					"closesAt": "2024-05-10",
+					"citation": {
+						"sourceId": "boe-b-2024-9036-becas-generales-2425",
+						"locator": "Extracto Resolución de 13/03/2024 (BOE núm. 66, de 15/03/2024), «Tercero. Solicitudes»",
+						"excerpt": "El plazo para presentar la solicitud de beca tanto para estudios universitarios como no universitarios se extenderá desde el día 19 de marzo de 2024, a las 09:00, hora peninsular; hasta el 10 de mayo de 2024, a las 15:00, hora peninsular, ambos inclusive.",
+						"excerptSha256": "061758c8327ba8b2474c38d48384e47502685bf599d4ac007071a62928a3dcb7"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Ministerio de Educación, Formación Profesional y Deportes — Secretaría de Estado de Educación",
+			"url": "https://sede.educacion.gob.es",
+			"online": true,
+			"inPerson": false,
+			"citation": {
+				"sourceId": "boe-b-2026-9261-becas-generales-2627",
+				"locator": "Extracto, «Tercero. Solicitudes»",
+				"excerpt": "La solicitud se deberá cumplimentar mediante el formulario accesible por vía telemática a través de la sede electrónica del Departamento en la dirección https://sede.educacion.gob.es o en www.educacionyfp.gob.es.",
+				"excerptSha256": "7073da684950a5209f4552e63e8ba9636b6a7a6b4089d221c958ac9113b822c9"
+			}
+		},
+		"documents": [
+			{
+				"id": "resguardo-solicitud",
+				"label": "Conservar el resguardo de la solicitud telemática (acredita haberla presentado en plazo y forma si hace falta)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "boe-b-2026-9261-becas-generales-2627",
+					"locator": "Extracto, «Tercero. Solicitudes»",
+					"excerpt": "obteniendo el resguardo de solicitud que deberá ser conservado por el solicitante para acreditar, en caso de que resulte necesario, la presentación de su solicitud en el plazo y forma establecidos.",
+					"excerptSha256": "6c06ac2a46e7bf2cf0fb42ff38df23f356819c541703b51fae61599e410389ae"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "per_course",
+		"citation": {
+			"sourceId": "boe-b-2026-9261-becas-generales-2627",
+			"locator": "Extracto, «Cuarto. Componentes de las becas y cuantías», 1",
+			"excerpt": "a) Beca de matrícula para estudiantes universitarios y de enseñanzas artísticas superiores. La cuantía de la beca de matrícula cubrirá el importe de los créditos de que se haya matriculado el estudiante por primera vez en el curso 2026-2027. b) Cuantía fija ligada a la renta del estudiante: 1.700,00 euros tanto para estudiantes universitarios como no universitarios. c) Cuantía fija ligada a la residencia del estudiante durante el curso escolar: 2.700,00 euros tanto para estudiantes universitarios como no universitarios. d) Cuantía fija ligada a la excelencia académica: entre 50 y 125 euros tanto para estudiantes universitarios como no universitarios.",
+			"excerptSha256": "185d9725392c8906b90f602dfac950cf2370ea81f19d2754e0bb430690433a29"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 6
+	},
+	"themes": [
+		"educacion"
+	],
+	"lifeEvents": [
+		"estudiar"
+	]
+}

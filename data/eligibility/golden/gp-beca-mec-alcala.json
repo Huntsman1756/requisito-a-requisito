@@ -1,0 +1,106 @@
+{
+	"id": "gp-beca-mec-alcala",
+	"description": "Estudiante de 20 años empadronada en Alcalá de Henares (28005) desde el nacimiento, cursa segundo de grado en la universidad, unidad familiar con ingresos anuales del hogar en banda media (16.800–25.200 €). Caso «posible»: el único requisito comprobable con nuestras preguntas pasa (estudia ⇒ enseñanzas universitarias), pero la beca MEC exige no superar el umbral de renta familiar del ejercicio 2025 según los miembros computables, ni el umbral de patrimonio, estar matriculada de ≥60 créditos, cumplir el requisito académico (5,00 en acceso o porcentaje de créditos aprobados por rama), no tener título del mismo nivel y acreditar nacionalidad/residencia — todo ello no comprobable con el catálogo actual de preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28005"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2006,
+					"month": 9
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 20,
+					"max": 20,
+					"maxExclusive": false
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": 2006
+			},
+			"dependents": {
+				"state": "unasked"
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "general"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "si"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "general"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "becas-generales-mefp-2026-2027",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"deadlineState": "CLOSED_RECURRING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-b-2026-9261-becas-generales-2627",
+					"locator": "Extracto, «Segundo. Beneficiarios», 2.b)",
+					"reasoning": "Responde «si» a la pregunta de estudios ⇒ el único requisito comprobable (cursar enseñanzas universitarias de grado o máster en 2026-2027) evalúa T. Que sean enseñanzas conducentes a título oficial en un centro español con tasas a universidad española queda en uncoveredRequirements."
+				},
+				{
+					"sourceId": "boe-rd-179-2026-umbrales-2627",
+					"locator": "Arts. 8.1 (tabla) y 9.1",
+					"reasoning": "La banda de ingresos del hogar (16.800–25.200 €) no es la renta familiar a efectos de beca: esta agrega las rentas IRPF del ejercicio 2025 de los miembros computables y se compara con umbrales por número de miembros (p. ej. umbral 3 extremo inferior 40.773 € con 4 miembros). No comprobable con nuestras preguntas ⇒ U, nunca F (UNKNOWN ≠ NO)."
+				},
+				{
+					"sourceId": "boe-rd-1721-2007-becas",
+					"locator": "Arts. 22.1, 23.1-2, 26 y 27.1",
+					"reasoning": "Matrícula de ≥60 créditos, nota de 5,00 en el acceso (1.º de grado) o porcentaje de créditos superados por rama (65–90 %) en cursos posteriores y nota media ponderada de 5,00 en el grado para máster ⇒ U (no preguntamos nota media ni créditos)."
+				},
+				{
+					"sourceId": "boe-rd-1721-2007-becas",
+					"locator": "Art. 4.1.a y 4.1.d",
+					"reasoning": "hardF = 0 y hardU = 0 pero quedan condiciones no comprobables (no título del mismo nivel, nacionalidad/residencia, patrimonio ≤ umbrales, años máximos de becario) ⇒ veredicto «posible», nunca «probable»."
+				},
+				{
+					"sourceId": "boe-b-2026-9261-becas-generales-2627",
+					"locator": "Extracto, «Tercero. Solicitudes»",
+					"reasoning": "Ventana 2026-04-07 → 2026-05-18 cerrada a la fecha de evaluación 2026-10-05. Con ≥2 convocatorias anuales consecutivas citadas en previousCalls (2024-2025: 19/03→10/05/2024; 2025-2026: 24/03→14/05/2025) ⇒ deadlineState CLOSED_RECURRING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

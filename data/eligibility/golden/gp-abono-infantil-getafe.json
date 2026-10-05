@@ -1,0 +1,109 @@
+{
+	"id": "gp-abono-infantil-getafe",
+	"description": "Madre de 34 años, empadronada en Getafe (28065) desde 2015, asalariada, ingresos del hogar en banda media-baja, con dos menores a cargo de 5 y 9 años. Caso «posible» típico de la gratuidad del transporte infantil de la CM: el requisito duro (≥1 dependiente menor de 15) sale T —la hija de 5 corresponde a la tarjeta infantil y el hijo de 9 al abono 7-14, ambos gratuitos en 2026— y el aviso de residencia queda T (Getafe ⊂ CM), pero la acreditación de residencia con empadronamiento, la representación legal de los menores, el soporte TTP y la documentación no son comprobables con nuestras preguntas ⇒ «posible», nunca «probable».",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2015,
+					"month": 9
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 34,
+					"max": 34,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 5,
+							"max": 5,
+							"maxExclusive": false
+						}
+					},
+					{
+						"age": {
+							"min": 9,
+							"max": 9,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 20000
+				}
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-abono-transporte-infantil",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20251231-2-precios-transporte-2026",
+					"locator": "Acuerdo, exposición — descuentos del RDL 17/2025, pág. 65",
+					"reasoning": "dependents = [5, 9] ⇒ count_where_gte(age lt 15) ≥ 1 ⇒ T: ambos menores están dentro del colectivo infantil bonificado (nacidos 2012-2026 en 2026, es decir, 0-14 años). La hija de 5 corresponde a la tarjeta/abono infantil (gratuita por tarifa oficial) y el hijo de 9 al abono 7-14 (gratuito por bonificación 2026)."
+				},
+				{
+					"sourceId": "bocm-20260612-17-residencia-ttp",
+					"locator": "Anuncio, párrafo tercero, pág. 48",
+					"reasoning": "Getafe (28065) es municipio de la Comunidad de Madrid ⇒ el aviso de residencia queda T (es requisito soft porque la disyunción completa — CM ∪ zonas E1/E2 ∪ convenio CLM — no es modelable y no puede descartar a nadie)."
+				},
+				{
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Condiciones, apartados 1 y solicitud, págs. 61-62",
+					"reasoning": "hardF = 0 y hardU = 0, pero quedan requisitos no comprobables (certificado de empadronamiento del menor, fotografía, documento de identidad o Registro Civil, solicitud firmada por padre/madre/tutor, soporte TTP personal e intransferible) ⇒ veredicto «posible», no «probable»."
+				},
+				{
+					"sourceId": "bocm-20251231-2-precios-transporte-2026",
+					"locator": "Acuerdo, primer punto, pág. 65",
+					"reasoning": "Títulos permanentes sin plazo de solicitud: los precios de 2026 continúan los del segundo semestre de 2025 ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

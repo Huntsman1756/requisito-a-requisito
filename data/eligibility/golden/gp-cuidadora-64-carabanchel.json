@@ -1,0 +1,118 @@
+{
+	"id": "gp-cuidadora-64-carabanchel",
+	"description": "Mujer de 64 años empadronada en Carabanchel (Madrid capital, 28079) desde 1998, jubilada, que cuida en su domicilio a su madre de 88 años (a su cargo, con discapacidad y dependencia reconocida). Responde el cuestionario por sí misma: sin dependencia propia (la que la tiene reconocida es la madre — la prestación se solicita por la persona dependiente o su representante). Caso positivo: territorio CM + residencia larga ⇒ «posible» con muchos ⚠; el núcleo del programa (grado, PIA, convivencia y vínculo del cuidador, cuidados efectivos de 1 año, capacidad económica) no es comprobable con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 1998,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 64,
+					"max": 64,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 88,
+							"max": 88,
+							"maxExclusive": false
+						},
+						"disability": "yes"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "jubilado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 16800
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"dependency": {
+				"state": "unasked"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "prestacion-cuidador-no-profesional",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [
+				"dependency"
+			],
+			"justification": [
+				{
+					"sourceId": "bocm-20150526-1-dependencia",
+					"locator": "Art. 2 (Titulares de derechos)",
+					"reasoning": "Empadronada en Madrid capital (28079 ⊂ CM) ⇒ reside y está empadronada en la Comunidad de Madrid a fecha de solicitud (T, único hard del ruleset). El territorio computa el de la persona dependiente: madre e hija conviven empadronadas en el mismo domicilio (art. 42.1.b + certificado de empadronamiento conjunto, art. 43.b)."
+				},
+				{
+					"sourceId": "boe-ley-39-2006-dependencia",
+					"locator": "Art. 18.1-2",
+					"reasoning": "Responde disability = «no», así que q-dependency no se muestra (showIf) ⇒ dependency unasked ⇒ el requisito «dependencia-reconocida» queda U (soft: el campo describe a quien responde, pero el sujeto de la prestación es la persona dependiente — su madre, con dependencia reconocida). U en soft no altera el veredicto y alimenta «qué te falta» (missingFields: dependency)."
+				},
+				{
+					"sourceId": "boe-ley-39-2006-dependencia",
+					"locator": "Art. 5.1.c",
+					"reasoning": "Empadronada en su municipio desde 03/1998 ⇒ residenceMonths ≈342 ≥ 24 ⇒ el proxy de «2 años inmediatamente anteriores» da T (aviso soft; los 5 años totales y su acreditación quedan en uncovered «residencia-regla-completa»)."
+				},
+				{
+					"sourceId": "sede-reconocimiento-dependencia",
+					"locator": "Ficha del trámite S13, cabecera",
+					"reasoning": "La sede de la CM marca «En plazo: permanente» (procedimiento a instancia de parte, sin convocatoria) ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "bocm-20150526-1-dependencia",
+					"locator": "Arts. 8.1.e, 41, 42, 43, 44 y 47",
+					"reasoning": "Veredicto «posible» (no «probable»): 0 hard F y 0 hard U (la única condición hard es el territorio, T), pero la prestación es excepcional y el PIA decide la modalidad, el vínculo hasta 3er grado y la convivencia del cuidador, el año previo de cuidados efectivos, la capacidad económica y el alta de la cuidadora en la SS quedan todos en uncovered — lo esencial no es comprobable con ≤10 preguntas."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}
