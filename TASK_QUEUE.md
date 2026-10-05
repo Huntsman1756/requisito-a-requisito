@@ -31,9 +31,9 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F4-PLUS | **Funcionalidades Must de docs/15**: A ejemplos en portada · B eventos vitales · C matriz requisito a requisito · D plan de acción (valor, documentos agrupados, .ics, imprimir) · E Observatorio · I estado de acceso · J simulador oficial · K identidad visual · L explorar el catálogo. Después, las Should (F, G, H y paso a paso). Bucle de calidad visual + revisión independiente al final | agente | 11/10 | F4-POLISH, F0-U | TODO | ADR-041 |
 | F3-OLAS | **Oleadas de 5 programas en paralelo** (worktrees `ola-<n>`), verificador independiente por oleada y hoja para Daniel con muestreo (ADR-040). Objetivo de nivel 1: 30–40 (mínimo 20) | agentes | 12/10 | F0-U, F3-FIX | TODO | Sustituye a «F3 lote 2» |
 | L2-ALL | **Nivel 2 = todo el universo apto** de F0-U, con estado de acceso, temas y eventos vitales (sustituye y amplía F4-L2) | agente | 10/10 | F0-U | TODO | |
- HECHO (2026-10-05 · capturas-v2 + segunda revision independiente aplicada) | **Bloquea F8 (piloto)** |
- HECHO (2026-10-05 · 244 fichas incluidas, 0 excluidas; informe nivel-2-informe.json) | |
- HECHO (2026-10-05 · motor 95,5% lineas / 99,3% funciones) | Sigue sin medir |
+| F4-POLISH | Pulido del front antes del piloto (10 puntos de la revisión de Claude) | agente | 08/10 | F4 núcleo | HECHO (2026-10-05 · capturas-v2 + segunda revision independiente aplicada) | **Bloquea F8 (piloto)** |
+| F4-L2 | Nivel 2 con todas las fichas importadas (título oficial con limpieza determinista) | agente | 08/10 | — | HECHO (2026-10-05 · 244 fichas incluidas, 0 excluidas; informe nivel-2-informe.json) | |
+| F2-COV | Cobertura del motor con `@vitest/coverage-v8` (≥ 95 %) | agente | 08/10 | — | HECHO (2026-10-05 · motor 95,5% lineas / 99,3% funciones) | |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | EN CURSO (2026-10-05 · lote 1: 6/6 ayudas, 0 errores, 20 tests frontera, 340 perfiles exhaustivos 0 violaciones) | evidence/2026-10-05-F3/lote-1.md **pendiente revisión Daniel (G10)** |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
 | F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |
