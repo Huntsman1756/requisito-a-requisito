@@ -1,0 +1,128 @@
+{
+	"benefitSlug": "bono-cultural-joven",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-bono-cultural-2026",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21271",
+			"title": "Extracto de la Orden de 10 de junio de 2026 — convocatoria Bono Cultural Joven 2026 (BOE nº 151, 22/06/2026)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-17-18",
+			"hard": true,
+			"label": "Tener 17 o 18 años (cumplir 18 en 2026)",
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartado «Primero. Beneficiarios»",
+				"excerpt": "Podrán ser beneficiarias las personas jóvenes que cumplan 18 años en 2026",
+				"excerptSha256": "4d75ba5c59d386d84853d93d045b866e148d53831dc56aaac2085a10f686f59e"
+			},
+			"condition": {
+				"field": "age",
+				"op": "between",
+				"value": [
+					17,
+					18
+				],
+				"inclusive": [
+					true,
+					true
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "nacido-en-2008",
+			"label": "La regla exacta es haber nacido en 2008 (cumplir 18 durante 2026); con la edad sola no se puede distinguir de nacer en otro año con la misma edad",
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartado «Primero. Beneficiarios»",
+				"excerpt": "cumplan 18 años en 2026",
+				"excerptSha256": "3d5c9b6a7b1ad0c68a4c3c402f39e71ab4391b49f5e317f796d36c5fe47480c8"
+			}
+		},
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Nacionalidad española, residencia legal en España, solicitud de asilo o protección temporal, o ser extranjero extutelado en trámite de permiso",
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartado «Primero. Beneficiarios»",
+				"excerpt": "que posean la nacionalidad española o residencia legal en España en el momento de presentación de la solicitud",
+				"excerptSha256": "877a1bdba9d94aec6ecd5388bef0bb519cea4ba4bff28578727dfcec2ceb9160"
+			}
+		},
+		{
+			"id": "modalidad",
+			"label": "Elegir una modalidad al solicitar (1: hasta 200/100/100 € por categoría; 2: hasta 400 € en cursos/talleres e instrumentos); son incompatibles entre sí",
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartados «Segundo. Objeto» y «Sexto. Otros datos»",
+				"excerpt": "estas dos modalidades son incompatibles entre sí",
+				"excerptSha256": "4f437797839e4fb56f88cd04f1c07e78a94d9ac33c76347b4a8c5ef5e0210680"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-06-22",
+			"closesAt": "2026-10-31",
+			"rolling": false,
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartado «Quinto. Plazo de presentación de solicitudes»",
+				"excerpt": "El plazo se iniciará el mismo día de la publicación del presente Extracto en el Boletín Oficial del Estado y finalizará a las 23:59 horas (hora peninsular española) del 31 de octubre de 2026",
+				"excerptSha256": "036f8da361803ad73b6b052c5a826863c723cb9e7af076cda47427ef5b0ed6fd"
+			}
+		},
+		"channel": {
+			"managingBody": "Ministerio de Cultura — programa Bono Cultural Joven",
+			"url": "https://bonoculturajoven.gob.es",
+			"online": true,
+			"citation": {
+				"sourceId": "boe-bono-cultural-2026",
+				"locator": "Extracto, apartado «Sexto. Otros datos»",
+				"excerpt": "deberán presentar su solicitud obligatoriamente por medios electrónicos",
+				"excerptSha256": "b31c0e110fbc36f81ebe5bcb952842987ee66671e096ad7a478287a95f5d5363"
+			}
+		},
+		"documents": [
+			{
+				"id": "clave",
+				"label": "Identificación electrónica (Cl@ve; si no has cumplido 18, Cl@ve PIN avanzado o permanente obtenido en persona)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-bono-cultural-2026",
+					"locator": "Extracto, apartado «Sexto. Otros datos»",
+					"excerpt": "sólo podrá utilizar para su identificación únicamente Cl@ve PIN con registro avanzado o Cl@ve permanente",
+					"excerptSha256": "28302225d25b2f639a98e49f0c2126bb4a23b0cd6ead5fc3d0f27cab479457bc"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "per_applicant",
+		"minEur": 400,
+		"maxEur": 400,
+		"period": "one_off",
+		"citation": {
+			"sourceId": "boe-bono-cultural-2026",
+			"locator": "Extracto, apartado «Cuarto. Cuantía»",
+			"excerpt": "un importe de 400 euros por persona beneficiaria",
+			"excerptSha256": "ce12e06a904775de7a4015d5f6d85f5ee183c4a70f191ace3089aea31268a778"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 1
+	}
+}

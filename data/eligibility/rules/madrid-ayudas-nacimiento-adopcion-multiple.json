@@ -1,0 +1,243 @@
+{
+	"benefitSlug": "madrid-ayudas-nacimiento-adopcion-multiple",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20231228-18-nacimiento-multiple",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/12/28/BOCM-20231228-18.PDF",
+			"title": "Acuerdo de 27 de diciembre de 2023 — normas reguladoras ayudas pago único nacimiento/adopción múltiple (BOCM 28/12/2023)"
+		},
+		{
+			"id": "sede-nacimiento-multiple",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-nacimiento-o-adopcion-multiple",
+			"title": "Sede electrónica CM — Ayudas por nacimiento o adopción múltiple (A465)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "empadronado-madrid",
+			"hard": true,
+			"label": "Estar empadronado en la Comunidad de Madrid",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 6.b",
+				"excerpt": "Estar empadronado en la Comunidad de Madrid",
+				"excerptSha256": "dcff5aec869b59a0819ecc4830a5ff35eb1c50d68bb479193c7e5501bdd4bfa9"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "dos-o-mas-personas-cargo",
+			"hard": true,
+			"label": "Tener al menos dos hijas o hijos a cargo (el parto o adopción múltiple es de 2+ en un mismo acto — ver ⚠)",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 5.1",
+				"excerpt": "los progenitores que hayan tenido dos o más hijos de nacimiento o adopción múltiple",
+				"excerptSha256": "d58acc4d8a1effb7648f4774bfd46900e345a0b2c6e05bf6efb20837793f0c45"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 2
+			}
+		},
+		{
+			"id": "ingresos-referencia",
+			"hard": false,
+			"label": "Ingresos anuales por debajo de 30.000 € (el límite real es de renta per cápita — ver ⚠)",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 6.c",
+				"excerpt": "La renta per cápita de la unidad familiar no podrá ser igual o superior al límite de 30.000 euros",
+				"excerptSha256": "02a9fa508ac41dc00c37ffc038d92da7234ac8f2f67705b4eb8b37a94c1ccb3c"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 30000
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "parto-adopcion-multiple",
+			"label": "El nacimiento o adopción múltiple es de dos o más hijos en un mismo acto (parto múltiple o adopción simultánea)",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 5.1",
+				"excerpt": "dos o más hijos de nacimiento o adopción múltiple",
+				"excerptSha256": "bd9579559407029f1a38661611fba2a9467af500113b90119ad30f15e7940901"
+			}
+		},
+		{
+			"id": "nacidos-desde-2024",
+			"label": "Los hijos han nacido o sido adoptados a partir del 1 de enero de 2024",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 5.1 y art. sobre solicitudes",
+				"excerpt": "nacidos o adoptados a partir del 1 de enero de 2024",
+				"excerptSha256": "dae9a8474edec42f73ae90f530047ad29154c51df52bde93e687d5671b693374"
+			}
+		},
+		{
+			"id": "plazo-60-dias",
+			"label": "Presentar la solicitud en un plazo máximo de 60 días naturales desde el nacimiento o la adopción múltiple",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 12.1 (solicitudes)",
+				"excerpt": "Las soli- citudes deberán ser presentadas en el plazo máximo de 60 días naturales a partir del naci- miento o la adopción múltiple",
+				"excerptSha256": "8138bb00a6a98439d42068925e75c1e5a6bc4262fd4f5185b0969c91922f676e"
+			}
+		},
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Ser español o extranjero con residencia legal en España",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 6.a",
+				"excerpt": "Ser español o extranjero con residencia legal en España",
+				"excerptSha256": "dcb224ffc031d77b558e7a66cebd2b19f08c434bcc93f3cf1ba987025ca3f4ab"
+			}
+		},
+		{
+			"id": "prohibiciones-lgs",
+			"label": "No estar incurso en las prohibiciones del art. 13 de la Ley 38/2003 General de Subvenciones (las obligaciones tributarias y de Seguridad Social están exoneradas de acreditación en fase de pago)",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 6.d",
+				"excerpt": "No estar incurso en alguna de las prohibiciones establecidas en el artículo 13 de la Ley 38/2003",
+				"excerptSha256": "4bcae880d1ac729b8ea6cef5984a25c1d388a6c647ebaf915909eb78962a7d98"
+			}
+		},
+		{
+			"id": "patria-potestad",
+			"label": "No tener suspendida ni privada la patria potestad por resolución judicial firme ni los menores en situación de desamparo",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 5.2",
+				"excerpt": "que tengan suspendida o hayan sido pri- vadas del ejercicio de la patria potestad de sus hijos",
+				"excerptSha256": "8aa9416b6a1ac20b6f79fcd5786b3622aa7a3267d4909d0ac462d1b14d63ab3e"
+			}
+		},
+		{
+			"id": "renta-per-capita",
+			"label": "El límite real es renta PER CÁPITA de la unidad familiar < 30.000 € (ingresos del hogar ÷ personas del hogar)",
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 6.c",
+				"excerpt": "La renta per cápita de la unidad familiar no podrá ser igual o superior al límite de 30.000 euros",
+				"excerptSha256": "02a9fa508ac41dc00c37ffc038d92da7234ac8f2f67705b4eb8b37a94c1ccb3c"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-nacimiento-multiple",
+				"locator": "Ficha del trámite, estado",
+				"excerpt": "En plazo: permanente",
+				"excerptSha256": "f5acc1ab18d98800643987e7645327a5c56673d6ffcbdffa13c65f250e16ae12"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-nacimiento-o-adopcion-multiple",
+			"online": true,
+			"citation": {
+				"sourceId": "bocm-20231228-18-nacimiento-multiple",
+				"locator": "Art. 12.2 (solicitudes)",
+				"excerpt": "Las solicitudes se presentarán telemáticamente por registro electrónico a través de la sede electrónica de la Comunidad de Madrid",
+				"excerptSha256": "4ba8bd1b87b531cebd6fdcf8658663707e5aa928ba36d4e7648fe0f8e8f7b66a"
+			}
+		},
+		"documents": [
+			{
+				"id": "empadronamiento",
+				"label": "Empadronamiento actual de residencia",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-nacimiento-multiple",
+					"locator": "Sección «Documentación»",
+					"excerpt": "Empadronamiento actual de residencia",
+					"excerptSha256": "a9e9df96f5a89cb7381bc6a14c2e4baad0db4014960da14270fd63b9b29336ec"
+				}
+			},
+			{
+				"id": "certificacion-nacimiento",
+				"label": "Certificación registral individual o libro de familia (o certificados de nacimiento / certificado de inicio de convivencia adoptiva)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-nacimiento-multiple",
+					"locator": "Sección «Documentación»",
+					"excerpt": "Certificación registral individual o copia del libro de familia",
+					"excerptSha256": "83e22b0a0a5095c27f556b26ae21a68c9afc27e44b362243a33ac3dabc822b61"
+				}
+			},
+			{
+				"id": "declaracion-ingresos",
+				"label": "Declaración de ingresos de la unidad familiar",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-nacimiento-multiple",
+					"locator": "Sección «Documentación»",
+					"excerpt": "Declaración de ingresos de la unidad familiar",
+					"excerptSha256": "d07ce83aca2d8c679cde7c4f762d2bec20a1675ed2dc1e3052f54aed751f45ee"
+				}
+			},
+			{
+				"id": "declaracion-responsable",
+				"label": "Declaración responsable de no incurrir en prohibiciones del art. 13 de la Ley 38/2003 (Anexo 2)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-nacimiento-multiple",
+					"locator": "Sección «Documentación»",
+					"excerpt": "Declaración responsable firmada por el solicitante",
+					"excerptSha256": "0c6ab185ace6dd7b01ef17ae2e33c6cbe174ea5dcda5684597ef60a89823b24b"
+				}
+			},
+			{
+				"id": "tarjeta-residente",
+				"label": "Tarjeta de residente o solicitud de renovación, solo si no dispones de NIF/NIE",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-nacimiento-multiple",
+					"locator": "Sección «Documentación»",
+					"excerpt": "Tarjeta de residente o solicitud de renovación, en caso de no disponer de NIF/NIE",
+					"excerptSha256": "116ab117ab11d4407ace4ce889d243cb0d65fbf3fec8acd2f93427f9dcbbe8e6"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"minEur": 3600,
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-20231228-18-nacimiento-multiple",
+			"locator": "Art. 4",
+			"excerpt": "se abonará en un pago único de 1.800 euros por cada hijo nacido o adoptado",
+			"excerptSha256": "be7a7b435e49ba50a5e8af0fc585970c58ac445f9504d7b6cd806a071881e6da"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	}
+}

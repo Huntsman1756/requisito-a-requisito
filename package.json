@@ -1,50 +1,53 @@
 {
-  "name": "ayudas-madrid",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "license": "MIT",
-  "engines": {
-    "node": ">=22.6"
-  },
-  "description": "Orientador de ayudas públicas de la Comunidad de Madrid con fuente oficial verificable",
-  "scripts": {
-    "dev": "next dev",
-    "build": "npm run eligibility:build && next build",
-    "check": "tsc --noEmit",
-    "typecheck": "tsc --noEmit",
-    "lint": "biome lint .",
-    "lint:fix": "biome check --write .",
-    "format": "biome format --write .",
-    "test": "node ./node_modules/vitest/vitest.mjs run",
-    "test:e2e": "playwright test",
-    "preview": "node scripts/serve-export.mjs",
-    "catalog:import": "tsx ./scripts/import-donor-catalog.ts",
-    "validate:full": "npm run check && npm run lint && npm test && npm run build",
-    "eligibility:snapshot": "tsx ./scripts/eligibility-snapshot.ts",
-    "eligibility:validate": "tsx ./scripts/eligibility-validate.ts",
-    "eligibility:build": "tsx ./scripts/eligibility-build.ts --strict",
-    "eligibility:exhaustive": "tsx ./scripts/eligibility-exhaustive.ts"
-  },
-  "dependencies": {
-    "js-yaml": "^5.4.2",
-    "next": "^15.5.25",
-    "pdfjs-dist": "^6.3.289",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
-    "zod": "^4.6.5"
-  },
-  "devDependencies": {
-    "@axe-core/playwright": "^4.12.1",
-    "@biomejs/biome": "^2.4.13",
-    "@playwright/test": "^1.61.1",
-    "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.20.3",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "cross-env": "^7.0.3",
-    "tsx": "^4.23.0",
-    "typescript": "^5.6.0",
-    "vitest": "^4.1.11"
-  }
+	"name": "ayudas-madrid",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"engines": {
+		"node": ">=22.6"
+	},
+	"description": "Orientador de ayudas públicas de la Comunidad de Madrid con fuente oficial verificable",
+	"scripts": {
+		"dev": "next dev",
+		"build": "npm run eligibility:build && next build",
+		"check": "tsc --noEmit",
+		"typecheck": "tsc --noEmit",
+		"lint": "biome lint .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"test": "node ./node_modules/vitest/vitest.mjs run",
+		"test:e2e": "playwright test",
+		"preview": "node scripts/serve-export.mjs",
+		"catalog:import": "tsx ./scripts/import-donor-catalog.ts",
+		"validate:full": "npm run check && npm run lint && npm test && npm run build",
+		"eligibility:snapshot": "tsx ./scripts/eligibility-snapshot.ts",
+		"eligibility:validate": "tsx ./scripts/eligibility-validate.ts",
+		"eligibility:build": "tsx ./scripts/eligibility-build.ts",
+		"eligibility:exhaustive": "tsx ./scripts/eligibility-exhaustive.ts",
+		"eligibility:build:release": "tsx ./scripts/eligibility-build.ts --strict",
+		"review:sheet": "tsx ./scripts/review-sheet.ts",
+		"rules:fill-hashes": "tsx ./scripts/ruleset-fill-hashes.ts"
+	},
+	"dependencies": {
+		"js-yaml": "^5.4.2",
+		"next": "^15.5.25",
+		"pdfjs-dist": "^6.3.289",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
+		"zod": "^4.6.5"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "^4.12.1",
+		"@biomejs/biome": "^2.4.13",
+		"@playwright/test": "^1.61.1",
+		"@types/js-yaml": "^4.0.9",
+		"@types/node": "^22.20.3",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
+		"cross-env": "^7.0.3",
+		"tsx": "^4.23.0",
+		"typescript": "^5.6.0",
+		"vitest": "^4.1.11"
+	}
 }

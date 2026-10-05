@@ -1,0 +1,202 @@
+{
+	"benefitSlug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 357–361 (texto consolidado)"
+		},
+		{
+			"id": "segss-nacimiento-pago-unico",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/44999/265/106090",
+			"title": "Seguridad Social — Prestación económica por nacimiento o adopción (FN, monoparentales, discapacidad)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "colectivo-familiar",
+			"hard": true,
+			"label": "Pertenecer a una de estas situaciones: familia numerosa, monoparental, o madre/padre con discapacidad",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.1",
+				"excerpt": "en una familia numerosa o que, con tal motivo, adquiera dicha condición, en una familia monoparental o en los supuestos de madres o padres que tengan reconocido un grado de discapacidad igual o superior al 65 por ciento se tendrá derecho a una prestación económica",
+				"excerptSha256": "8d5dc6fc5e91b2fc3c3285b52ab29f157f34f41ee0a0023059d0d2b1d4fb72f1"
+			},
+			"condition": {
+				"any": [
+					{
+						"label": "Familia numerosa",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 357.1",
+							"excerpt": "en una familia numerosa",
+							"excerptSha256": "6fdc9ac656a2ccb1f81db7aa946a6973868192fc94f1c29d99289433674cae4c"
+						},
+						"field": "familyType",
+						"op": "eq",
+						"value": "familia-numerosa"
+					},
+					{
+						"label": "Familia monoparental (la definición legal exige un solo progenitor sustentador — ver ⚠)",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 357.2",
+							"excerpt": "Se entenderá por familia monoparental la constituida por un solo progenitor con el que convive el hijo nacido o adoptado",
+							"excerptSha256": "5e29ce70ffc7cdef5d00950afc026b32e36435ca88014bb15083a118d64f771d"
+						},
+						"field": "familyType",
+						"op": "eq",
+						"value": "monoparental"
+					},
+					{
+						"label": "Madre o padre con discapacidad reconocida (la norma exige ≥65 % — ver ⚠)",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 357.1",
+							"excerpt": "un grado de discapacidad igual o superior al 65 por ciento",
+							"excerptSha256": "2305a42173b82acb0c8187a59b5c4a746fa98b66375df5637a71f94ec26f2283"
+						},
+						"field": "disability",
+						"op": "eq",
+						"value": "gte33"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "nacimiento-en-espana",
+			"label": "El nacimiento se produjo en territorio español o la adopción se constituyó o reconoció por autoridad española",
+			"citation": {
+				"sourceId": "segss-nacimiento-pago-unico",
+				"locator": "Ficha «Objeto»",
+				"excerpt": "siempre que el nacimiento se haya producido en territorio español o que la adopción se haya constituido o reconocido por autoridad española",
+				"excerptSha256": "aace3c01df3f0bbbb43d647f543b9bf55c7cb52941c90518435b0afbe98ad63b"
+			}
+		},
+		{
+			"id": "grado-discapacidad-65",
+			"label": "Si la vía es discapacidad: el grado reconocido debe ser ≥65 % (nuestra pregunta solo distingue ≥33 %)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.1",
+				"excerpt": "un grado de discapacidad igual o superior al 65 por ciento",
+				"excerptSha256": "2305a42173b82acb0c8187a59b5c4a746fa98b66375df5637a71f94ec26f2283"
+			}
+		},
+		{
+			"id": "monoparental-sustentador",
+			"label": "Si la vía es monoparental: un solo progenitor que convive con el hijo y constituye el sustentador único de la familia",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.2",
+				"excerpt": "que constituye el sustentador único de la familia",
+				"excerptSha256": "4a7db6a96b028da1487041c0e94d5e4c5498534d1bcccb10799e57fdea580871"
+			}
+		},
+		{
+			"id": "limite-ingresos",
+			"label": "Ingresos anuales por debajo del límite que fija cada año la Ley de Presupuestos (+15 % por hijo a partir del segundo; si conviven ambos progenitores, cuentan los ingresos de ambos)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.3",
+				"excerpt": "no perciba ingresos anuales, de cualquier naturaleza, superiores a la cuantía que anualmente establezca la correspondiente Ley de Presupuestos Generales del Estado",
+				"excerptSha256": "44b19d7c7b114bbc1a76935bd4898c87a9189027f305e17e5deb227fe2ced5d2"
+			}
+		},
+		{
+			"id": "requisitos-ss",
+			"label": "Requisitos de afiliación y residencia del art. 352.1 a) y c) de la LGSS",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.3",
+				"excerpt": "reúna los requisitos establecidos en las letras a) y c) del artículo 352.1",
+				"excerptSha256": "6db771a67229b35b37d725c0085438f912246ed004e7d512f069a0c4e58d66fe"
+			}
+		},
+		{
+			"id": "incompatibilidad-progenitores",
+			"label": "Si ambos progenitores pueden ser beneficiarios, solo uno recibe la prestación",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 361.1",
+				"excerpt": "el derecho a percibirlas solo podrá ser reconocido en favor de uno de ellos",
+				"excerptSha256": "4c4c82a7d994ba0d9165656bd5b23895d2268f180a3f68a58decf9eedfce0647"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "segss-nacimiento-pago-unico",
+				"locator": "Ficha «Duración/Plazos»",
+				"excerpt": "El derecho al reconocimiento prescribe a los 5 años, contados desde el día siguiente al nacimiento o adopción del hijo",
+				"excerptSha256": "f1fd1cb08579b6aa575a48da7dd2b3e0eca8fbcb87b8d5905a9c048f6f49ed24"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS)",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"citation": {
+				"sourceId": "segss-nacimiento-pago-unico",
+				"locator": "Ficha «Dónde tramitarlo»",
+				"excerpt": "a través de la Sede Electrónica de la Seguridad Social",
+				"excerptSha256": "66750fde8e1141837722974fcfd60a914eb0df954e13a42388fd4a24e9f55375"
+			}
+		},
+		"documents": [
+			{
+				"id": "formulario",
+				"label": "Formulario de solicitud oficial",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-nacimiento-pago-unico",
+					"locator": "Ficha «Impresos»",
+					"excerpt": "Formulario de solicitud",
+					"excerptSha256": "483d54b76581a3d3c5521a7a08b5615f7be0e6196bb1913349b160602f23a83b"
+				}
+			},
+			{
+				"id": "documentacion-acreditativa",
+				"label": "Documentos de identidad y acreditación de las circunstancias del derecho (la SS consulta los que ya conoce)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-nacimiento-pago-unico",
+					"locator": "Ficha «Documentación»",
+					"excerpt": "los documentos necesarios para la acreditación de la identidad y de las circunstancias determinantes del derecho",
+					"excerptSha256": "3eeaffe6fbd4fdc8dd3aaa9ec3d852672d10d3bf575ef0d7cb6bc6ba9f5c1b25"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "per_applicant",
+		"minEur": 1000,
+		"maxEur": 1000,
+		"period": "one_off",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 358.1",
+			"excerpt": "consistirá en un pago único de 1.000 euros",
+			"excerptSha256": "ab7554c1039e64c9a88fc84643fc0842a18caaf96a7a7fdc2cdc8b94177fb74e"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	}
+}

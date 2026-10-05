@@ -1,0 +1,116 @@
+{
+	"benefitSlug": "descuento-transporte-familia-numerosa",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "renfe-familia-numerosa",
+			"rank": 3,
+			"documentType": "informational",
+			"url": "https://www.renfe.com/es/es/viajar/prepara-tu-viaje/descuentos/familia-numerosa",
+			"title": "Renfe — Descuento del 20% y 50% para familias numerosas"
+		}
+	],
+	"requirements": [
+		{
+			"id": "titulo-familia-numerosa",
+			"hard": true,
+			"label": "Ser titular de familia numerosa",
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento, condiciones",
+				"excerpt": "Si eres miembro de Familia Numerosa, tienes derecho a viajar con importantes descuentos",
+				"excerptSha256": "26884c19c6c7510689e1900aa138aed686c176d5482935fae769575040bb530e"
+			},
+			"condition": {
+				"field": "familyType",
+				"op": "eq",
+				"value": "familia-numerosa"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "categoria-fn",
+			"label": "El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial (nuestra pregunta no distingue la categoría)",
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento, condiciones",
+				"excerpt": "Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial",
+				"excerptSha256": "f188bb47d8005791ded5b54835ae6ab7f8aebe5adde1795c7bd1c7c1c41e0e75"
+			}
+		},
+		{
+			"id": "trenes-incluidos",
+			"label": "Aplica en trenes AVE (excepto AVE Internacional España-Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve",
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento, condiciones",
+				"excerpt": "en todos los trenes AVE (excepto AVE Internacional entre España y Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve",
+				"excerptSha256": "1e5b3e4d917e6f1cfa98f47492c8abf1545ad9919d2f86b6e549601092c1c1c5"
+			}
+		},
+		{
+			"id": "titulos-cataluna",
+			"label": "Los títulos FN monoparentales de la Generalitat de Catalunya solo se aceptan en trenes Rodalies",
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento, condiciones",
+				"excerpt": "Los títulos de familia numerosa emitidos por la Generalitat de Catalunya para familias monoparentales solo serán aceptados como tales en los trenes de Rodalies",
+				"excerptSha256": "95f659cf019aadb3dfd809c59154f4aad9f1169f88c98c4aed536788b68d9352"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento, condiciones",
+				"excerpt": "tienes derecho a viajar con importantes descuentos",
+				"excerptSha256": "616a302518ee62723c9d6019d2cf3fdb416ce84351f96dc0d690139ea7b37cd7"
+			}
+		},
+		"channel": {
+			"managingBody": "Renfe Viajeros",
+			"url": "https://www.renfe.com",
+			"online": true,
+			"citation": {
+				"sourceId": "renfe-familia-numerosa",
+				"locator": "Página del descuento",
+				"excerpt": "los billetes adquiridos podrán admitir cambios y anulaciones en función de la opción de viaje elegida",
+				"excerptSha256": "a8185bb9006893a6ec689864d0c20db4af3b5275223633071011980998d7c33b"
+			}
+		},
+		"documents": [
+			{
+				"id": "titulo-fn",
+				"label": "Título de familia numerosa vigente (se exige al comprar y a bordo)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "renfe-familia-numerosa",
+					"locator": "Página del descuento, condiciones",
+					"excerpt": "Los títulos de familia numerosa",
+					"excerptSha256": "01228609af4a913564e56f589ea349deadb658d44d55cd0caf329277911e1dd9"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"citation": {
+			"sourceId": "renfe-familia-numerosa",
+			"locator": "Página del descuento",
+			"excerpt": "Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial",
+			"excerptSha256": "f188bb47d8005791ded5b54835ae6ab7f8aebe5adde1795c7bd1c7c1c41e0e75"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 1
+	}
+}

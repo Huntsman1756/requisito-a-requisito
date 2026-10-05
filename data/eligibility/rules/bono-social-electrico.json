@@ -1,0 +1,163 @@
+{
+	"benefitSlug": "bono-social-electrico",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-rd-897-2017-bono-social",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2017/10/06/897/con",
+			"title": "Real Decreto 897/2017 — consumidor vulnerable y bono social (texto consolidado a 28/01/2026)"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "alguna-via-vulnerable",
+			"hard": false,
+			"label": "Cumplir alguna vía de «consumidor vulnerable» (hay más vías no comprobables abajo)",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2",
+				"excerpt": "deberá cumplir alguno de los requisitos siguientes",
+				"excerptSha256": "d709ed78d5bf8b41bd112874562ff2f548c730d0d4d6205bc5a2f821c373ed77"
+			},
+			"condition": {
+				"any": [
+					{
+						"label": "Tener título de familia numerosa",
+						"citation": {
+							"sourceId": "boe-rd-897-2017-bono-social",
+							"locator": "Art. 3.2.b",
+							"excerpt": "Estar en posesión del título de familia numerosa",
+							"excerptSha256": "2f095e398bec039032030692c250510c473a0819a3d35136d774ebaa3f196b72"
+						},
+						"field": "familyType",
+						"op": "eq",
+						"value": "familia-numerosa"
+					},
+					{
+						"label": "Renta conjunta anual ≤ 1,5 veces el IPREM de 14 pagas",
+						"citation": {
+							"sourceId": "boe-rd-897-2017-bono-social",
+							"locator": "Art. 3.2.a",
+							"excerpt": "sea igual o inferior a 1,5 veces el Indicador Público de Renta de Efectos Múltiples (IPREM) de 14 pagas",
+							"excerptSha256": "e1828ae66d7e3dc3280bc2c8ca30b219f1b775393f82bbf6c8d2dda37726370d"
+						},
+						"field": "incomeAnnual",
+						"op": "lte",
+						"param": "IPREM_ANUAL_14P",
+						"multiplier": 1.5
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "titular-pvpc",
+			"label": "Ser titular del punto de suministro de tu vivienda habitual y estar acogido al PVPC (solo lo pueden aplicar comercializadores de referencia)",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.1",
+				"excerpt": "la persona titular de un punto de suministro de electricidad en su vivienda habitual que, siendo persona física, esté acogida al precio voluntario para el pequeño consumidor (PVPC)",
+				"excerptSha256": "b707086af87d150c78f4e693443db385f2a0d71a3a81dc93ee98bf1153dc5999"
+			}
+		},
+		{
+			"id": "via-pensionistas",
+			"label": "Otra vía: pensionistas de la Seguridad Social por jubilación o incapacidad con cuantía mínima, sin otros ingresos >500 €/año",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.c",
+				"excerpt": "sean pensionistas del Sistema de la Seguridad Social por jubilación o incapacidad permanente, percibiendo la cuantía mínima vigente",
+				"excerptSha256": "831045585feb838ef9e85b89bbfbee3730697b66892f2d113e3c9d31a1159fe5"
+			}
+		},
+		{
+			"id": "via-imv",
+			"label": "Otra vía: beneficiario del Ingreso Mínimo Vital",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.d",
+				"excerpt": "beneficiario del Ingreso Mínimo Vital conforme a lo establecido en la Ley 19/2021",
+				"excerptSha256": "e363e0464ff283e87a3d9bc57f932730915209a9c8a2e8ebb03d07212ab415b1"
+			}
+		},
+		{
+			"id": "multiplicador-hogar",
+			"label": "El umbral de renta sube 0,3×IPREM por cada adulto adicional y 0,5×IPREM por cada menor de la unidad de convivencia; +1×IPREM en circunstancias especiales (discapacidad ≥33 %, violencia de género, víctima de terrorismo, dependencia grado II-III, monoparental con menor, electrodependencia)",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.a y 3.3",
+				"excerpt": "el multiplicador de renta respecto al índice IPREM de 14 pagas se incrementará en 0,3 por cada miembro adicional mayor de edad que conforme la unidad de convivencia y 0,5 por cada menor de edad",
+				"excerptSha256": "4348f4069108280fb504943d244493f6819e6986ba694a84042c51f6053ec422"
+			}
+		},
+		{
+			"id": "vulnerable-severo",
+			"label": "Con renta ≤ 50 % del umbral (o ≤1×IPREM en vía pensionista o ≤2×IPREM con familia numerosa) se es vulnerable severo: descuento del 50 %",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.4 y 6.3",
+				"excerpt": "En el caso del consumidor vulnerable severo, el descuento será del 50 por ciento",
+				"excerptSha256": "b8e9ca8e282bbfc48d7fdaed34ab584928368147a2acc6db0d6e8f110be601c9"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 6.1",
+				"excerpt": "El consumidor vulnerable podrá beneficiarse, en las condiciones establecidas en el presente real decreto, de un descuento en su factura denominado bono social",
+				"excerptSha256": "57d98a10c537f7dbc065c20102a7d206cb98d24858c3fc36567070522dbf1af3"
+			}
+		},
+		"channel": {
+			"managingBody": "Comercializador de referencia (compañía de PVPC)",
+			"url": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001/que-es.html",
+			"online": false,
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 6.4",
+				"excerpt": "El bono social será aplicado por el comercializador de referencia en la factura del consumidor vulnerable y vulnerable severo",
+				"excerptSha256": "ecc1daeb16342e6ce19635477ae6b4ee5d4f13928962d0aedecf692882ef002f"
+			}
+		},
+		"documents": [
+			{
+				"id": "modelo-solicitud",
+				"label": "Modelo oficial de solicitud y documentación acreditativa al comercializador de referencia",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-897-2017-bono-social",
+					"locator": "Preámbulo (modelo de solicitud y documentación)",
+					"excerpt": "la documentación acreditativa que, en su caso, deba aportar el consumidor al comercializador de referencia junto con la solicitud",
+					"excerptSha256": "b4e576d0a97a04b140081969f040b27134b1f3cb11a03658615b95967b20a4bf"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"citation": {
+			"sourceId": "boe-rd-897-2017-bono-social",
+			"locator": "Art. 6.3",
+			"excerpt": "descuento del 35 por ciento en todos los términos que componen el PVPC",
+			"excerptSha256": "010c9a4063b1b5d00d716f039e5193c6234fcd516073a58dfcfb429a42c8dc8e"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	}
+}

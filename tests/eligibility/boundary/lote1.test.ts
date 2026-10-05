@@ -1,0 +1,214 @@
+/**
+ * Tests de frontera F3-5: un caso por umbral, escritos desde la cita.
+ * «Con 17 cumple, con 16 no» — cada límite de cada regla del lote 1.
+ */
+
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
+import { describe, expect, it } from "vitest";
+import { evaluateRuleSet } from "../../../src/lib/eligibility-engine/evaluate";
+import {
+	catalogSchema,
+	parametersSchema,
+	questionCatalogSchema,
+	ruleSetSchema,
+	type RuleSet,
+} from "../../../src/lib/eligibility-engine/schema";
+
+const root = join(__dirname, "../../..");
+const CATALOG = questionCatalogSchema.parse(
+	JSON.parse(readFileSync(join(root, "data/eligibility/questions.json"), "utf8")),
+);
+const PARAMETERS = parametersSchema.parse(
+	JSON.parse(readFileSync(join(root, "data/eligibility/parameters.json"), "utf8")),
+);
+const TODAY = "2026-10-05";
+const CTX = { parameters: PARAMETERS, catalog: CATALOG, today: TODAY };
+
+const rules = new Map(
+	readdirSync(join(root, "data/eligibility/rules"))
+		.filter((f) => f.endsWith(".json"))
+		.map((f) => [
+			f.replace(/\.json$/, ""),
+			ruleSetSchema.parse(
+				JSON.parse(readFileSync(join(root, "data/eligibility/rules", f), "utf8")),
+			) as RuleSet,
+		]),
+);
+
+const rs = (slug: string): RuleSet => {
+	const r = rules.get(slug);
+	if (!r) throw new Error(`RuleSet ${slug} no encontrado`);
+	return r;
+};
+
+type AnswerValue = CitizenProfile["answers"][string];
+import type { CitizenProfile } from "../../../src/lib/eligibility-engine/schema";
+const val = (v: unknown): AnswerValue => ({ state: "value", value: v as CitizenProfile["answers"][string] extends { state: "value"; value: infer T } ? T : never }) as AnswerValue;
+const age = (n: number) => val({ min: n, max: n, maxExclusive: false });
+const band = (lo: number, hi: number) => val({ min: lo, max: hi, maxExclusive: false });
+const prof = (answers: CitizenProfile["answers"]): CitizenProfile => ({
+	catalogVersion: CATALOG.catalogVersion,
+	answers,
+});
+const statusOf = (slug: string, answers: CitizenProfile["answers"], reqId: string) =>
+	evaluateRuleSet(rs(slug), prof(answers), CTX).requirements.find(
+		(r) => r.id === reqId,
+	)?.status;
+const verdictOf = (slug: string, answers: CitizenProfile["answers"]) =>
+	evaluateRuleSet(rs(slug), prof(answers), CTX);
+
+describe("frontera: bono-cultural-joven", () => {
+	// Cita: «cumplan 18 años en 2026» ⇒ proxy edad ∈ [17,18] a fecha de solicitud.
+	it("17 y 18 cumplen la franja; 16 y 19 no", () => {
+		expect(statusOf("bono-cultural-joven", { age: age(17) }, "edad-17-18")).toBe("T");
+		expect(statusOf("bono-cultural-joven", { age: age(18) }, "edad-17-18")).toBe("T");
+		expect(statusOf("bono-cultural-joven", { age: age(16) }, "edad-17-18")).toBe("F");
+		expect(statusOf("bono-cultural-joven", { age: age(19) }, "edad-17-18")).toBe("F");
+	});
+	it("intervalo que cruza el borde ⇒ U", () => {
+		expect(statusOf("bono-cultural-joven", { age: band(17, 19) }, "edad-17-18")).toBe("U");
+	});
+	it("nacionalidad/nacido-2008 son ⚠: el veredicto máximo es posible", () => {
+		const ev = verdictOf("bono-cultural-joven", { age: age(18) });
+		expect(ev.verdict).toBe("posible");
+		expect(ev.uncovered.length).toBeGreaterThan(0);
+	});
+	it("plazo abierto hoy (cierre 31/10/2026)", () => {
+		const ev = verdictOf("bono-cultural-joven", {});
+		expect(ev.deadline.state).toBe("OPEN");
+	});
+});
+
+describe("frontera: madrid-ayudas-nacimiento-adopcion-multiple", () => {
+	const deps = (n: number) =>
+		val(
+			Array.from({ length: n }, () => ({ age: { min: 1, max: 1, maxExclusive: false } })),
+		);
+	it("≥2 personas a cargo necesario; 1 no vale", () => {
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ dependents: deps(2) }, "dos-o-mas-personas-cargo"),
+		).toBe("T");
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ dependents: deps(1) }, "dos-o-mas-personas-cargo"),
+		).toBe("F");
+	});
+	it("empadronado en CAM vs otra CCAA", () => {
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ territory: val({ ccaa: "13" }) }, "empadronado-madrid"),
+		).toBe("T");
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ territory: val({ ccaa: "09" }) }, "empadronado-madrid"),
+		).toBe("F");
+	});
+	it("ingresos <30k en requisito soft (per cápita queda ⚠)", () => {
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ incomeAnnual: band(25200, 35000) }, "ingresos-referencia"),
+		).toBe("U"); // cruza el umbral
+		expect(
+			statusOf("madrid-ayudas-nacimiento-adopcion-multiple",
+				{ incomeAnnual: val({ min: 0, max: 25200 }) }, "ingresos-referencia"),
+		).toBe("T");
+	});
+});
+
+describe("frontera: prestacion-nacimiento-fn-monoparental-discapacidad", () => {
+	const slug = "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad";
+	it("vía familia numerosa", () => {
+		expect(statusOf(slug, { familyType: val("familia-numerosa") }, "colectivo-familiar")).toBe("T");
+	});
+	it("vía monoparental", () => {
+		expect(statusOf(slug, { familyType: val("monoparental") }, "colectivo-familiar")).toBe("T");
+	});
+	it("vía discapacidad (≥33 en la pregunta; la norma exige ≥65 ⇒ ⚠ en uncovered)", () => {
+		const ev = verdictOf(slug, { disability: val("gte33"), familyType: val("general") });
+		expect(ev.requirements[0].status).toBe("T");
+		expect(ev.uncovered.some((u) => u.includes("≥65 %"))).toBe(true);
+	});
+	it("sin ninguna vía ⇒ F ⇒ no_cumple", () => {
+		const ev = verdictOf(slug, { familyType: val("general"), disability: val("no") });
+		expect(ev.requirements[0].status).toBe("F");
+		expect(ev.verdict).toBe("no_cumple");
+	});
+});
+
+describe("frontera: bono-social-electrico", () => {
+	// Cita: renta ≤ 1,5 × IPREM 14p = 12.600 € (IPREM_ANUAL_14P = 8.400)
+	it("0–8.400 ⇒ T; banda 8.400–16.800 cruza ⇒ U", () => {
+		expect(
+			statusOf("bono-social-electrico",
+				{ incomeAnnual: val({ min: 0, max: 8400 }) }, "alguna-via-vulnerable"),
+		).toBe("T");
+		expect(
+			statusOf("bono-social-electrico",
+				{ incomeAnnual: val({ min: 8400, max: 16800 }) }, "alguna-via-vulnerable"),
+		).toBe("U");
+	});
+	it("familia numerosa ⇒ T por esa vía", () => {
+		expect(
+			statusOf("bono-social-electrico",
+				{ familyType: val("familia-numerosa") }, "alguna-via-vulnerable"),
+		).toBe("T");
+	});
+	it("el veredicto nunca es no_cumple (todo soft + ⚠): siempre posible", () => {
+		const ev = verdictOf("bono-social-electrico", {
+			familyType: val("general"),
+			incomeAnnual: val({ min: 25200, max: 25200, maxExclusive: false }),
+		});
+		expect(ev.verdict).toBe("posible");
+	});
+});
+
+describe("frontera: subsidio-mayores-52", () => {
+	it("52 cumple; 51 no; frontera exacta incluida", () => {
+		expect(statusOf("subsidio-mayores-52", { age: age(52) }, "edad-52")).toBe("T");
+		expect(statusOf("subsidio-mayores-52", { age: age(51) }, "edad-52")).toBe("F");
+		expect(statusOf("subsidio-mayores-52", { age: band(51, 52) }, "edad-52")).toBe("U");
+	});
+	it("futuro: con 51 años y plazo rolling ⇒ futureEligibility a los 52", () => {
+		const ev = verdictOf("subsidio-mayores-52", { age: age(51) });
+		expect(ev.futureEligibility?.from).toBe("2027-10-05");
+	});
+	it("desempleado ⇒ T (soft); autónomo ⇒ F (soft, no cambia el veredicto)", () => {
+		expect(
+			statusOf("subsidio-mayores-52",
+				{ employmentStatus: val("desempleado") }, "desempleo"),
+		).toBe("T");
+		expect(
+			statusOf("subsidio-mayores-52",
+				{ employmentStatus: val("autonomo") }, "desempleo"),
+		).toBe("F");
+	});
+});
+
+describe("frontera: descuento-transporte-familia-numerosa", () => {
+	it("familia numerosa ⇒ T; no FN ⇒ F ⇒ no_cumple", () => {
+		expect(
+			statusOf("descuento-transporte-familia-numerosa",
+				{ familyType: val("familia-numerosa") }, "titulo-familia-numerosa"),
+		).toBe("T");
+		const ev = verdictOf("descuento-transporte-familia-numerosa", { familyType: val("general") });
+		expect(ev.requirements[0].status).toBe("F");
+		expect(ev.verdict).toBe("no_cumple");
+	});
+	it("categoría general/especial queda ⚠", () => {
+		const ev = verdictOf("descuento-transporte-familia-numerosa", { familyType: val("familia-numerosa") });
+		expect(ev.uncovered.length).toBeGreaterThan(0);
+	});
+});
+
+describe("self-check en cada evaluación del lote", () => {
+	it("todos los perfiles del borde pasan los invariantes", () => {
+		for (const slug of rules.keys()) {
+			for (const a of [{}, { age: age(18) }, { territory: val({ ccaa: "13" }) }]) {
+				const ev = verdictOf(slug, a);
+				expect(ev.selfCheck.failed, `${slug} ${JSON.stringify(a)}`).toEqual([]);
+			}
+		}
+	});
+});
