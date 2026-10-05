@@ -59,7 +59,7 @@
 				"state": "value",
 				"value": {
 					"min": 8400,
-					"max": 20000
+					"max": 16800
 				}
 			},
 			"housingStatus": {
@@ -75,7 +75,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "madrid-abono-transporte-infantil",
-			"rulesVersion": 1,
+			"rulesVersion": 4,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

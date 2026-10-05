@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "prestacion-desempleo-contributiva",
 	"standalone": true,
-	"rulesVersion": 2,
+	"rulesVersion": 3,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -105,7 +105,7 @@
 		},
 		{
 			"id": "plazo-solicitud-15-dias",
-			"label": "Presentar la solicitud en los 15 días hábiles siguientes al último día trabajado (o al retorno del extranjero o a la excarcelación); si la presentas fuera de plazo, la prestación nace desde la solicitud y pierdes los días intermedios",
+			"label": "Presentar la solicitud en los 15 días siguientes al último día trabajado (o al retorno del extranjero o a la excarcelación); si la presentas fuera de plazo, la prestación nace desde la solicitud y pierdes los días intermedios",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "LGSS art. 268.1",
@@ -118,9 +118,9 @@
 			"label": "No puedes trabajar a tiempo completo por cuenta ajena ni realizar actividad por cuenta propia (salvo compatibilidad por programa de fomento de empleo) ni cobrar una pensión de la Seguridad Social incompatible con el trabajo",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
-				"locator": "LGSS arts. 271-272",
-				"excerpt": "El derecho a la percepción de la prestación por desempleo se suspenderá por la entidad gestora en los siguientes casos: a) Durante el periodo que corresponda",
-				"excerptSha256": "37c0b407a1b4c71d0bc91fe4f891fefe6decc3904dacfe3c286b4e61afdd8b46"
+				"locator": "LGSS art. 271.1",
+				"excerpt": "El derecho a la percepción de la prestación por desempleo se suspenderá por la entidad gestora en los siguientes casos",
+				"excerptSha256": "0f1269da118c31b53e0d8679c62635a1d2f15c81fe4f207921a68f1a57269809"
 			}
 		},
 		{
@@ -128,9 +128,9 @@
 			"label": "Colectivos con reglas propias: la persona emigrante retornada que cotizó en España necesita 360 días en los 6 años anteriores a la emigración y no percibir desempleo de otro Estado del EEE o Suiza; la persona eventual agraria que venía de autónomos necesita 720 días",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
-				"locator": "LGSS art. 264.c",
-				"excerpt": "Los trabajadores emigrantes que retornen a España y los liberados de prisión, en las condiciones previstas en este título",
-				"excerptSha256": "ad80b8c060455af6a9d863d079eb14add89f80e9d7bd08a772a26d6666f67da5"
+				"locator": "LGSS art. 287.1",
+				"excerpt": "necesario para el acceso a la prestación por desempleo será de setecientos veinte días, aplicándose, a partir de ese período, la escala prevista en el artículo 269.1",
+				"excerptSha256": "c155aca010807d79d35b1f0c7ba468fb7ac75cb3d4ca29fce81063dcfff706a8"
 			}
 		}
 	],

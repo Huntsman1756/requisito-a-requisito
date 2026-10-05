@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "madrid-abono-transporte-infantil",
 	"standalone": true,
-	"rulesVersion": 3,
+	"rulesVersion": 4,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -108,28 +108,8 @@
 			}
 		},
 		{
-			"id": "menores-4-sin-titulo",
-			"label": "Los menores de 4 años viajan gratis sin necesidad de ningún título ni tarjeta — solo a partir de los 4 hace falta la Tarjeta Transporte Público Infantil",
-			"citation": {
-				"sourceId": "bocm-20251231-2-precios-transporte-2026",
-				"locator": "Resolución 31/12/2025 — descuentos",
-				"excerpt": "Gratuidad para abonos y títulos infantiles (niños nacidos entre 2012 y 2026).",
-				"excerptSha256": "79eff3db8fd3984b517d52ffc0532e6f7d888afd59c9c3f5cdb3be025518476a"
-			}
-		},
-		{
-			"id": "validez-infantil-hasta-7",
-			"label": "El abono infantil permite viajar por toda la Comunidad de Madrid desde los 4 años y hasta el día en que el menor cumple 7 — a partir de entonces corresponde el abono 7-14",
-			"citation": {
-				"sourceId": "bocm-20251231-2-precios-transporte-2026",
-				"locator": "Resolución 31/12/2025 — descuentos",
-				"excerpt": "Gratuidad para abonos y títulos infantiles (niños nacidos entre 2012 y 2026).",
-				"excerptSha256": "79eff3db8fd3984b517d52ffc0532e6f7d888afd59c9c3f5cdb3be025518476a"
-			}
-		},
-		{
 			"id": "soporte-ttp-personal",
-			"label": "El abono 7-14 se carga cada 30 días en una Tarjeta de Transporte Público Personal a nombre del menor (física o virtual), personal e intransferible; su emisión cuesta 4 € — la TTP Infantil, en cambio, se expide gratis",
+			"label": "El abono 7-14 se carga cada 30 días en una Tarjeta de Transporte Público Personal a nombre del menor (física o virtual), que es personal e intransferible",
 			"citation": {
 				"sourceId": "bocm-20260122-20-condiciones-ttp",
 				"locator": "Condiciones, apartado 1, pág. 61",
@@ -155,16 +135,6 @@
 				"locator": "Tabla «TARIFAS DESDE 01/01/2026 — TÍTULO 30 DÍAS», fila JOVEN, pág. 70",
 				"excerpt": "JOVEN 20,00 € 16,00 € 16,00 € 10,00 € 12,00 € 6,00 €",
 				"excerptSha256": "f1335ab9324cb934148d1217ee4032eb114400b2ab725c282796b5cf437293ed"
-			}
-		},
-		{
-			"id": "autorizacion-acompanante",
-			"label": "Documentación para menores sin DNI propio y recogida de datos por la Administración competente (solicitudes de menores sin documento)",
-			"citation": {
-				"sourceId": "bocm-20260122-20-condiciones-ttp",
-				"locator": "Condiciones TTP — documentación",
-				"excerpt": "caso solicitudes de menores que no dispongan de dicho documento; y para verificar la condición de personas con discapacidad o miembro de familia numerosa, se recabarán los datos de las Administraciones competentes",
-				"excerptSha256": "f0b6b06f9f2a32d34076e7745ee17649b6121ecd0ca461d9d95e35a6cd9d3b94"
 			}
 		}
 	],
@@ -203,7 +173,7 @@
 		"documents": [
 			{
 				"id": "ttp-infantil",
-				"label": "Tarjeta Transporte Público Infantil (se expide gratis) — el abono infantil se carga en ella una sola vez y vale hasta que el menor cumple 7 años",
+				"label": "Tarjeta Transporte Público Infantil (se expide gratis) para menores de 4 a 6 años: el abono infantil se carga en ella una sola vez, permite viajar por toda la CM y vale hasta que el menor cumple 7 — los de menos de 4 no necesitan ningún título",
 				"mandatory": true,
 				"condition": {
 					"field": "dependents",
@@ -218,13 +188,13 @@
 				"citation": {
 					"sourceId": "crtm-billetes-tarifas",
 					"locator": "Billetes y tarifas, bloque «Infantil» (abono infantil)",
-					"excerpt": "El abono infantil es gratuito y para utilizarlo es necesario cargarlo, una sola vez, en la Tarjeta Transporte Público Infantil",
-					"excerptSha256": "b3761596d0527ce0b3d7ed171b919d55e4be07911794f1faa341982f39ba9b28"
+					"excerpt": "El abono infantil es gratuito y para utilizarlo es necesario cargarlo, una sola vez, en la Tarjeta Transporte Público Infantil . Permite viajar por toda la Comunidad de Madrid desde los 4 años y hasta el día en que se cumplan 7. Para los menores de 4 años, el transporte público madrileño es gratuito y no requiere la adquisición de título alguno",
+					"excerptSha256": "450a30e77bb2e619e3e3c0c6649c465ec1801a986602b547c2f10406f297a3f4"
 				}
 			},
 			{
 				"id": "ttp-personal",
-				"label": "Tarjeta Transporte Público Personal a nombre del menor para el abono 7-14 (emisión 4 €; primera vez con cita previa en Oficina de Gestión o por la web)",
+				"label": "Tarjeta Transporte Público Personal a nombre del menor para el abono 7-14 (emisión 4 €)",
 				"mandatory": true,
 				"condition": {
 					"field": "dependents",
@@ -287,13 +257,13 @@
 			},
 			{
 				"id": "autorizacion-tutores",
-				"label": "Si el menor tiene menos de 14 años y no tiene DNI: impreso de autorización firmado por los padres o tutores + Libro de Familia o partida de nacimiento + DNI del padre, madre o tutor",
+				"label": "Solicitud firmada por el padre, la madre o el tutor; si el menor tiene menos de 14 años y no tiene DNI: impreso de autorización + Libro de Familia o partida de nacimiento + DNI del representante; y si un menor de 7 acude con alguien distinto de su representante legal: autorización firmada",
 				"mandatory": false,
 				"citation": {
 					"sourceId": "crtm-billetes-tarifas",
 					"locator": "Preguntas frecuentes TTP Personal — documentación",
-					"excerpt": "En caso de que el solicitante sea menor de 14 años sin DNI, se deberá presentar el impreso de autorización de padres/tutores; Libro de Familia o, en su defecto, la partida de nacimiento; y DNI del padre, madre o tutor",
-					"excerptSha256": "907c3eb9fa58d93ba6174e599c15ee1dc02f141b2941e6a2327f58ea2bfd9c60"
+					"excerpt": "En caso de que el solicitante sea menor de 14 años sin DNI, se deberá presentar el impreso de autorización de padres/tutores; Libro de Familia o, en su defecto, la partida de nacimiento; y DNI del padre, madre o tutor. En caso de que el solicitante sea menor de 7 años y acuda con una persona distinta a su representante legal, se deberá aportar una autorización firmada por el padre, madre o tutor del menor",
+					"excerptSha256": "4171927d5b87d81ac662e1ce8e64badab967282e5d51d5cf49008705f9fb4039"
 				}
 			}
 		]
