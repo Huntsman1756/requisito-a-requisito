@@ -1,0 +1,107 @@
+{
+	"id": "gp-pnc-carabanchel",
+	"description": "Mujer de 69 años empadronada en Carabanchel (Madrid capital, 28079) desde 1995, jubilada sin cotización suficiente para una pensión contributiva, sin discapacidad, ingresos muy bajos. Responde por sí misma. Caso positivo: territorio CM + 65 años + empadronamiento largo ⇒ «posible»; la carencia de rentas, la ausencia de pensión contributiva y la residencia total de 10 años quedan como ⚠ (no comprobables con ≤ 10 preguntas).",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 1995,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 69,
+					"max": 69,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "jubilado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"dependency": {
+				"state": "unasked"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-no-contributiva",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Ficha 020101, «Ámbito territorial de atención», pág. 127",
+					"reasoning": "Empadronada en Madrid capital (28079 ⊂ CM) ⇒ reside en la Comunidad de Madrid a fecha de solicitud (T, requisito hard). La gestión de la PNC es autonómica: para una residente en la CM, el trámite es el de la Comunidad de Madrid (refs. 34369/34370)."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 369.1",
+					"reasoning": "Edad [69,69] ≥ 65 ⇒ cumple por la vía de jubilación (primer hijo del any ⇒ T); no necesita discapacidad. El requisito hard «edad-65-o-discapacidad» queda T."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 369.1",
+					"reasoning": "Empadronada desde 06/1995 ⇒ residenceMonths ≈ 376 ≥ 24 ⇒ cumple el proxy de «2 años consecutivos e inmediatamente anteriores» (T). El total de 10 años de residencia en España entre los 16 y el devengo se queda en uncovered «residencia-total-modalidad» (se acredita con padrones históricos, no con nuestra pregunta)."
+				},
+				{
+					"sourceId": "sede-pnc-jubilacion",
+					"locator": "Ficha del trámite 34370, cabecera",
+					"reasoning": "La sede de la CM marca «En plazo: permanente» (prestación a instancia de parte, sin convocatoria) ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 363.1.d, 363.4, 367.1 y 369.1",
+					"reasoning": "Veredicto «posible» (no «probable»): 0 hard F y 0 hard U, pero lo esencial no es comprobable con nuestras preguntas — la carencia de rentas propias y de la unidad económica (la banda 0–8.400 € es coherente pero la norma computa rentas concretas de todos los convivientes), la ausencia de derecho a pensión contributiva (vida laboral) y la residencia legal/total quedan en uncovered (⚠)."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

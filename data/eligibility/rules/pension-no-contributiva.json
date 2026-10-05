@@ -1,0 +1,398 @@
+{
+	"benefitSlug": "pension-no-contributiva",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 363–372 (pensiones no contributivas de incapacidad e jubilación; texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026, de 25 de marzo — revalorización de pensiones 2026; art. 21 fija la cuantía de las PNC"
+		},
+		{
+			"id": "bocm-20230801-18-cartera-ss",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/08/01/BOCM-20230801-18.PDF",
+			"title": "Orden 2372/2023, de 25 de julio — Cartera de Servicios Sociales de la Comunidad de Madrid (BOCM n.º 181): ficha 020101 «Pensiones No Contributivas» (gestión y reconocimiento por la CM)"
+		},
+		{
+			"id": "sede-pnc-invalidez",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/prestacion-social/pension-no-contributiva-invalidez",
+			"title": "Sede electrónica CM — Pensión no contributiva por incapacidad, trámite 34369"
+		},
+		{
+			"id": "sede-pnc-jubilacion",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/prestacion-social/pension-no-contributiva-jubilacion",
+			"title": "Sede electrónica CM — Pensión no contributiva por jubilación, trámite 34370"
+		},
+		{
+			"id": "cm-pensiones-no-contributivas",
+			"rank": 4,
+			"documentType": "informational",
+			"url": "https://www.comunidad.madrid/servicios/asuntos-sociales/pensiones-no-contributivas",
+			"title": "Comunidad de Madrid — Pensiones no contributivas (página de aterrizaje que enlaza los dos trámites: incapacidad y jubilación)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "reside-cm",
+			"hard": true,
+			"label": "Vivir en la Comunidad de Madrid (la gestión es autonómica: en otra comunidad autónoma la solicitas ante tu administración — la pensión existe en todo el Estado)",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Ficha 020101 «Pensiones No Contributivas», «Ámbito territorial de atención», pág. 127",
+				"excerpt": "Comunidad de Madrid, para los beneficiarios residentes en la misma. La prestación PNC abarca todo el territorio español",
+				"excerptSha256": "1b8487db68cb56e9f285b26c6335dc1bcf428ffeff85ecfec703bba39c4a57b0"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "edad-65-o-discapacidad",
+			"hard": true,
+			"label": "Tener 65 años o más (modalidad de jubilación), o entre 18 y 64 años con discapacidad o enfermedad crónica reconocida (modalidad de incapacidad — la PNC exige el 65 %; nuestra pregunta solo distingue a partir del 33 %, el grado real se acredita con certificado, ver ⚠)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 369.1 (jubilación) y art. 363.1.a y c (incapacidad)",
+				"excerpt": "Tendrán derecho a la pensión de jubilación en su modalidad no contributiva las personas que, habiendo cumplido sesenta y cinco años de edad",
+				"excerptSha256": "29b034ff14faf2ba966ec2134eb83ee8b1e6f759714673ad68c72fa135f4b94e"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 65,
+						"label": "tienes 65 años o más — modalidad de jubilación",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 369.1",
+							"excerpt": "habiendo cumplido sesenta y cinco años de edad",
+							"excerptSha256": "cbe4765fed644c2c6b865a38d83dcc8f5d2e58dd69f2b84003808462743bb0f9"
+						}
+					},
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 18
+							},
+							{
+								"field": "age",
+								"op": "lt",
+								"value": 65
+							},
+							{
+								"field": "disability",
+								"op": "eq",
+								"value": "gte33"
+							}
+						],
+						"label": "tienes entre 18 y 64 años y declaras discapacidad — modalidad de incapacidad (exige grado ≥ 65 %, ver ⚠)",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 363.1.a y c",
+							"excerpt": "Estar afectadas por una discapacidad o por una enfermedad crónica, en un grado igual o superior al 65 por ciento",
+							"excerptSha256": "0972e2235c57db817bb25c062d76ad45947d8adaf87d8fd1208636e1afb0aa97"
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": "residencia-espana-2y",
+			"hard": true,
+			"label": "Residir legalmente en España y haberlo hecho durante los 2 años seguidos e inmediatamente anteriores a la solicitud — además hay un total de años exigido que varía por modalidad (10 desde los 16 en jubilación, 5 en incapacidad; ver ⚠)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 369.1 (jubilación; en incapacidad, art. 363.1.b, misma regla de 2 años)",
+				"excerpt": "dos deberán ser consecutivos e inmediatamente anteriores a la solicitud de la prestación",
+				"excerptSha256": "499018f4ad0531874190170001288d108a66c71b468daca665fb9297f64286ea"
+			},
+			"condition": {
+				"field": "residenceMonths",
+				"op": "gte",
+				"value": 24
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "carencia-rentas",
+			"label": "Carencia de rentas o ingresos suficientes: la suma de tus ingresos anuales debe ser inferior al importe anual de la pensión (8.803,20 € en 2026) y, si convives en unidad económica, la suma de los de todos los convivientes debe quedar por debajo del límite de acumulación de recursos (la pensión más el 70 % por conviviente; x2,5 si la convivencia es con ascendientes o descendientes de primer grado) — rentas computables: trabajo, capital y prestaciones; no se cuentan indemnizaciones por daños personales ni asignaciones por hijos a cargo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 363.1.d, 363.2-5 y 364.2-4",
+				"excerpt": "si convive con otras personas en una misma unidad económica, únicamente se entenderá cumplido el requisito de carencia de rentas o ingresos suficientes cuando la suma de los de todos los integrantes de aquella sea inferior al límite de acumulación de recursos",
+				"excerptSha256": "2d17834b9d8b2a736345d4ae83872f1cf8550fc8ab4ab2a736508e9095d7138b"
+			}
+		},
+		{
+			"id": "sin-pension-contributiva",
+			"label": "No tener derecho a una pensión contributiva: la PNC es para quien no ha cotizado nunca o no ha cotizado lo suficiente — se comprueba con el informe de vida laboral, no con nuestras preguntas",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Ficha 020101, «Descripción», pág. 126",
+				"excerpt": "aun cuando no hayan cotizado nunca o el tiempo suficiente para alcanzar las prestaciones contributivas del Sistema de Seguridad Social",
+				"excerptSha256": "1e654d62f4faa4e0b30a7e134e6aee1d754fcbba4abc90ea82899618370044d4"
+			}
+		},
+		{
+			"id": "grado-discapacidad-65",
+			"label": "Solo en la modalidad de incapacidad: el grado de discapacidad o enfermedad crónica tiene que ser ≥ 65 % según el baremo oficial — nuestra pregunta solo distingue si tienes el 33 % o más; el grado exacto lo certifica la Administración (y si necesitas a otra persona y llegas al 75 %, hay complemento del 50 %)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 367.1 y 364.6",
+				"excerpt": "El grado de discapacidad o de la enfermedad crónica padecida, a efectos del reconocimiento de la pensión de incapacidad no contributiva, se determinará mediante la aplicación de un baremo, aprobado por el Gobierno",
+				"excerptSha256": "723db38f09ee753e0d4b0f95beaa8e5c118755caa8c340f2d4aebaa39e71fe84"
+			}
+		},
+		{
+			"id": "residencia-total-modalidad",
+			"label": "El total de años de residencia en España que se exige: 10 años entre los 16 y el devengo de la pensión en jubilación, 5 años en incapacidad — cuenta la residencia en cualquier municipio español, no solo el actual; se acredita con certificaciones de los padrones municipales (padrón histórico)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 369.1 (jubilación; en incapacidad son 5 años, art. 363.1.b)",
+				"excerpt": "residan legalmente en territorio español y lo hayan hecho durante diez años entre la edad de dieciséis años y la edad de devengo de la pensión",
+				"excerptSha256": "fc077e305192111b1953c37e3ab53bc35df651346030fe36047de4f304b7c7ec"
+			}
+		},
+		{
+			"id": "residencia-legal-extranjeros",
+			"label": "La residencia tiene que ser legal: si eres extranjero o español nacionalizado de origen extranjero, la acreditas con certificado de la Dirección General de la Policía, certificado de movimientos migratorios o pasaportes, y certificado consular de que no percibes pensión en tu país",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 363.1.b (incapacidad; en jubilación, art. 369.1)",
+				"excerpt": "Residir legalmente en territorio español y haberlo hecho durante cinco años, de los cuales dos deberán ser inmediatamente anteriores a la fecha de solicitud de la pensión",
+				"excerptSha256": "868564bff2040d7b6b19a45a59ee8b9dd2b6b31c7405124ca3f8fdff8c484491"
+			}
+		},
+		{
+			"id": "unidad-economica",
+			"label": "La unidad económica de convivencia (cónyuge o parientes por consanguinidad hasta segundo grado que convivan contigo) se tiene en cuenta entera para el límite de recursos, con umbrales propios — se acredita con el padrón colectivo y una declaración responsable de parentesco",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 363.4",
+				"excerpt": "Existirá unidad económica en todos los casos de convivencia de un beneficiario con otras personas, sean o no beneficiarias, unidas con aquel por matrimonio o por lazos de parentesco de consanguinidad hasta el segundo grado",
+				"excerptSha256": "548f56f257d041955230ba27294d60db1a5212a2fc28c102dfb7d71f48a4443c"
+			}
+		},
+		{
+			"id": "declaracion-anual-ingresos",
+			"label": "Ya como pensionista: hay que presentar la declaración anual de ingresos antes del 1 de abril cada año y comunicar cualquier cambio de convivencia o ingresos en 30 días — si no, suspenden el pago de forma preventiva",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Ficha 020101, «Causas de suspensión», pág. 127",
+				"excerpt": "No cumplir con la obligación de presentar anualmente una declaración de renta o ingresos y de los de su unidad familiar de convivencia",
+				"excerptSha256": "08e9009d3b2bcc8f87cf4f1f0bdedb0121e1b7351378b539d7f3a710f15e4c2e"
+			}
+		},
+		{
+			"id": "plazo-resolucion-90d",
+			"label": "La Administración tiene un plazo de concesión de 90 días desde la entrada en registro de la solicitud",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Ficha 020101, «Plazo de concesión», pág. 127",
+				"excerpt": "Plazo de concesión 90 días",
+				"excerptSha256": "68e3a6f5a5716143c93014ddd093cf946b09c82b23c7060238cc916f9210ac65"
+			}
+		},
+		{
+			"id": "efectos-mes-siguiente",
+			"label": "Los efectos económicos empiezan el día 1 del mes siguiente a la solicitud; el cobro es mensual a mes vencido, con dos pagas extraordinarias (junio y noviembre)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 371 (jubilación; en incapacidad, art. 365)",
+				"excerpt": "se producirán a partir del día primero del mes siguiente a aquel en que se presente la solicitud",
+				"excerptSha256": "4784ab068c66c66dc26e262eba6f8c621639bb77e09f60731c4ab74b62879f99"
+			}
+		},
+		{
+			"id": "complemento-alquiler",
+			"label": "Las personas pensionistas de PNC sin vivienda en propiedad que residan en vivienda alquilada pueden pedir un complemento de pensión para el alquiler de 525 € al año (RD 1191/2012)",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Art. 21.2",
+				"excerpt": "tendrá un importe de 525,00 euros anuales el complemento de pensión establecido en favor de la persona pensionista que acredite fehacientemente carecer de vivienda en propiedad",
+				"excerptSha256": "98b9f5ae97005dc912e0eede4badba2dce85fd96c92681d345937cadeb548647"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-pnc-jubilacion",
+				"locator": "Ficha del trámite 34370, cabecera",
+				"excerpt": "En plazo: permanente Referencia: 34370",
+				"excerptSha256": "df4400b2c3287c69e2742c40146c1325b614fe2e659aeb8492efed2c88e6440c"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales, Dirección General de Servicios Sociales e Integración (gestión transferida; el pago lo hace la Tesorería General de la Seguridad Social). Dos trámites: incapacidad (ref. 34369) y jubilación (ref. 34370)",
+			"url": "https://www.comunidad.madrid/servicios/asuntos-sociales/pensiones-no-contributivas",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sede-pnc-invalidez",
+				"locator": "Tramitación › Presenta la solicitud › Pasos para presentar la solicitud",
+				"excerpt": "La tramitación de la solicitud puede realizarse por medios electrónicos o de forma presencial.",
+				"excerptSha256": "61106a331fab89f521dff819040aa04aacc0d6a05c98ec5b7e6ae12552541e2c"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el formulario oficial del trámite (online en la sede, o descargable en PDF para presentación presencial)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-pnc-jubilacion",
+					"locator": "Tramitación › Presenta la solicitud",
+					"excerpt": "Descargar formulario\" para obtener el formulario relleno en formato PDF",
+					"excerptSha256": "6b58880a0637559b7cdbf8c12465a50ff062b77f79b275da949a593549c04592"
+				}
+			},
+			{
+				"id": "doc-nif",
+				"label": "NIF o NIE en vigor del solicitante (y del representante legal, si lo hay) — la Comunidad de Madrid lo consulta por medios electrónicos salvo que te opongas",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-pnc-invalidez",
+					"locator": "Información y documentación › Documentación (consulta electrónica)",
+					"excerpt": "NIF/NIE en vigor del solicitante y del representante legal en su caso",
+					"excerptSha256": "61cb80204084eadcbe29b928b44466e3ed2ce7310462d956639cf72ff1ac7611"
+				}
+			},
+			{
+				"id": "doc-padron-colectivo",
+				"label": "Padrón colectivo junto con declaración responsable del parentesco o relación de cada conviviente, para acreditar la unidad económica (en Madrid capital no hace falta aportarlo: lo consultan ellos)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-pnc-jubilacion",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "padrón colectivo, junto con declaración responsable que aclare el parentesco o la relación con el solicitante de cada una de las personas que figuran en dicho padrón",
+					"excerptSha256": "1fd8e65421547b69abdcd560f82304ed3aa1d89ba6594c9b8c999502332d6f6f"
+				}
+			},
+			{
+				"id": "doc-padrones-historicos",
+				"label": "Certificaciones de los padrones municipales que acrediten la residencia en España exigida por ley (padrón histórico): 10 años en jubilación, 5 en incapacidad, con 2 inmediatamente anteriores a la solicitud",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-pnc-jubilacion",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "Certificación de los correspondientes padrones municipales que acrediten la residencia en España durante al menos los 10 años exigidos por la ley (padrón histórico), 2 inmediatamente anteriores",
+					"excerptSha256": "f21921ec2a83af8ad397461e9033d96ac3f40ed524b06677ddb82cb8fccecb6c"
+				}
+			},
+			{
+				"id": "doc-discapacidad",
+				"label": "Certificado del grado de discapacidad en vigor (lo consulta la CM por vía electrónica salvo oposición; si no lo tienes en vigor, sentencia de incapacitación judicial en grado absoluto)",
+				"mandatory": true,
+				"condition": {
+					"all": [
+						{
+							"field": "age",
+							"op": "lt",
+							"value": 65
+						},
+						{
+							"field": "disability",
+							"op": "eq",
+							"value": "gte33"
+						}
+					]
+				},
+				"citation": {
+					"sourceId": "sede-pnc-invalidez",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "Incapacitación Judicial en grado absoluto (Sólo en caso de no disponer del Certificado de grado de discapacidad en vigor)",
+					"excerptSha256": "078d34eea641acc8f9f357ed3d1272a2bf121e92e145452e207c36b54c5f0328"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Documentos que acrediten los recursos económicos propios y de la unidad económica de convivencia que la Administración no pueda consultar (nóminas, certificados de pensiones de organismos distintos a la Seguridad Social, becas u otros)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-pnc-jubilacion",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "Recursos económicos propios y de su unidad de convivencia: Nóminas, certificados de pensiones de organismos distintos a la Seguridad Social, becas o cualquier otro documento acreditativo de ingresos",
+					"excerptSha256": "590020b7c459d5b620297ba925af6249e679da9d7c3bbc6c444c266cadeb0865"
+				}
+			},
+			{
+				"id": "doc-extranjeros",
+				"label": "Solo si eres extranjero o español nacionalizado de origen extranjero: certificado de la Dirección General de la Policía del período de residencia legal, certificado de movimientos migratorios o copia de los pasaportes, y certificado consular de que no percibes pensión en tu país",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-pnc-invalidez",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "Certificado de movimientos migratorios emitido por Consulado u órgano competente del país de origen y referido a los 2 años anteriores a la solicitud",
+					"excerptSha256": "0c522e4fbca484f295de47452ab0b0c453492ad51ec01887210cd5fc39567027"
+				}
+			},
+			{
+				"id": "doc-representacion",
+				"label": "Acreditación de la representación legal (solo si la solicitud la firma otra persona)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-pnc-invalidez",
+					"locator": "Información y documentación › Documentación",
+					"excerpt": "Acreditación de la representación legal cuando la solicitud se suscriba por parte de persona distinta al posible beneficiario",
+					"excerptSha256": "a6509515073b0d76bce5d802b25495f0ead2b06e78c4e47c90d87f54a0a68e99"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-rd-241-2026-pensiones",
+			"locator": "Art. 21.1",
+			"excerpt": "la cuantía de las pensiones de jubilación e incapacidad, en su modalidad no contributiva, queda establecida en 8.803,20 euros anuales",
+			"excerptSha256": "1f4e73dcca6efc97485beb9ac25d5ca670eb22ea6533b6993304be6a6d1f3d87"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"mayores",
+		"dependencia_discapacidad",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"mayor_65",
+		"discapacidad",
+		"ingresos_bajos"
+	]
+}

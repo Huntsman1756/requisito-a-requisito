@@ -37,6 +37,7 @@ export const AID_TITLES: Record<string, string> = {
 	"prestacion-desempleo-contributiva": "Prestación contributiva por desempleo (SEPE)",
 	"madrid-ayudas-urgencia-social":
 		"Ayudas económicas de urgencia social (Comunidad de Madrid)",
+	"pension-no-contributiva": "Pensión no contributiva (jubilación o invalidez)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;
