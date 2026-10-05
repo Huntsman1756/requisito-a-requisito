@@ -14,3 +14,5 @@ Thumbs.db
 data/eligibility/bundle/
 # Exportes aportados por Daniel; la copia con hash vive en evidence/
 docs/*.xlsx
+public/datos/elegibilidad/
+src/generated/

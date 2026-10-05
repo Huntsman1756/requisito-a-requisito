@@ -11,8 +11,8 @@ export default function Home() {
 				no se pueden saber — con cada afirmación enlazada al texto oficial.
 			</p>
 			<p>
-				<Link className="cta" href="/ayudas">
-					Ver las ayudas del piloto
+				<Link className="cta" href="/comprobar">
+					Descubre qué ayudas puedes pedir
 				</Link>
 			</p>
 			<ul className="bullets">

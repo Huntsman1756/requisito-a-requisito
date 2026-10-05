@@ -4,7 +4,7 @@ test.describe("andamiaje", () => {
 	test("la home muestra título, landmarks y skip link", async ({ page }) => {
 		await page.goto("/");
 		await expect(
-			page.getByRole("heading", { level: 1, name: "Tus derechos, con fuente" }),
+			page.getByRole("heading", { level: 1, name: "Tus derechos, requisito a requisito" }),
 		).toBeVisible();
 		await expect(page.getByRole("banner")).toBeVisible();
 		await expect(page.getByRole("main")).toBeVisible();

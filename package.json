@@ -10,7 +10,7 @@
 	"description": "Orientador de ayudas públicas de la Comunidad de Madrid con fuente oficial verificable",
 	"scripts": {
 		"dev": "next dev",
-		"build": "npm run eligibility:build && next build",
+		"build": "npm run eligibility:build && npm run datos:public && next build",
 		"check": "tsc --noEmit",
 		"typecheck": "tsc --noEmit",
 		"lint": "biome lint .",
@@ -27,7 +27,8 @@
 		"eligibility:exhaustive": "tsx ./scripts/eligibility-exhaustive.ts",
 		"eligibility:build:release": "tsx ./scripts/eligibility-build.ts --strict",
 		"review:sheet": "tsx ./scripts/review-sheet.ts",
-		"rules:fill-hashes": "tsx ./scripts/ruleset-fill-hashes.ts"
+		"rules:fill-hashes": "tsx ./scripts/ruleset-fill-hashes.ts",
+		"datos:public": "tsx ./scripts/publish-public-data.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",
