@@ -1,0 +1,149 @@
+{
+	"benefitSlug": "ejemplo-ayuda-escuela-infantil",
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-08",
+	"humanReview": { "status": "pending" },
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "ejemplo-bocm-2026-convocatoria",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/EJEMPLO.PDF",
+			"title": "EJEMPLO — sustituir por convocatoria real"
+		},
+		{
+			"id": "ejemplo-sede-procedimiento",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/EJEMPLO"
+		}
+	],
+	"parametersUsed": ["IPREM_ANUAL_14P"],
+	"requirements": [
+		{
+			"id": "residencia-madrid",
+			"hard": true,
+			"label": "Vivir en la Comunidad de Madrid",
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 3.1.a, pág. 2",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": { "ccaa": "13" }
+			}
+		},
+		{
+			"id": "hijo-menor-3",
+			"hard": true,
+			"label": "Tener al menos un hijo o hija menor de 3 años",
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 3.1.b, pág. 2",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": { "field": "age", "op": "lt", "value": 3 }
+			}
+		},
+		{
+			"id": "renta-limite",
+			"hard": true,
+			"label": "Ingresos de la unidad familiar por debajo del límite",
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 4, pág. 3",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"param": "IPREM_ANUAL_14P",
+				"multiplier": 3
+			}
+		},
+		{
+			"id": "empadronamiento-6m",
+			"hard": true,
+			"label": "Llevar al menos 6 meses empadronado",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 3.1.c, pág. 2",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			},
+			"condition": { "field": "residenceMonths", "op": "gte", "value": 6 }
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "al-corriente",
+			"label": "Estar al corriente de obligaciones tributarias y con la Seguridad Social",
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 3.2, pág. 2",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-10-01",
+			"closesAt": "2026-10-30",
+			"rolling": false,
+			"citation": {
+				"sourceId": "ejemplo-bocm-2026-convocatoria",
+				"locator": "Art. 8, pág. 5",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			}
+		},
+		"channel": {
+			"managingBody": "Consejería de EJEMPLO",
+			"url": "https://sede.comunidad.madrid/EJEMPLO",
+			"online": true,
+			"citation": {
+				"sourceId": "ejemplo-sede-procedimiento",
+				"locator": "Apartado «Cómo realizar el trámite»",
+				"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+				"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+			}
+		},
+		"documents": [
+			{
+				"id": "dni",
+				"label": "DNI o NIE",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "ejemplo-sede-procedimiento",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+					"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "per_applicant",
+		"maxEur": 1500,
+		"period": "per_course",
+		"citation": {
+			"sourceId": "ejemplo-bocm-2026-convocatoria",
+			"locator": "Art. 6, pág. 4",
+			"excerpt": "EXTRACTO LITERAL DE EJEMPLO",
+			"excerptSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+		}
+	},
+	"effortInputs": { "requiresCertificate": true, "formPages": 3 }
+}

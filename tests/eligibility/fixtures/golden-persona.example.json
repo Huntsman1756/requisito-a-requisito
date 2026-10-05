@@ -1,0 +1,50 @@
+{
+	"id": "gp-monoparental-getafe",
+	"description": "Madre monoparental, un hijo de 1 año, Getafe, empadronada desde mayo de 2026, ingresos 18–22k €. Caso negativo de elegibilidad futura: cumplirá 6 meses de padrón DESPUÉS del cierre del plazo, así que no debe mostrarse «podrías a partir de…».",
+	"today": "2026-10-10",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": { "ccaa": "13", "province": "28", "municipality": "28065" }
+			},
+			"familyType": { "state": "value", "value": "monoparental" },
+			"dependents": {
+				"state": "value",
+				"value": [{ "age": { "min": 1, "max": 1, "maxExclusive": false } }]
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": { "min": 18000, "max": 22000 }
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": { "year": 2026, "month": 5 }
+			},
+			"disability": { "state": "declined" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "ejemplo-ayuda-escuela-infantil",
+			"rulesVersion": 1,
+			"verdict": "no_cumple",
+			"deadlineState": "OPEN",
+			"blockers": ["empadronamiento-6m"],
+			"justification": [
+				{
+					"sourceId": "ejemplo-bocm-2026-convocatoria",
+					"locator": "Art. 3.1.c, pág. 2",
+					"reasoning": "Alta en el padrón en 05/2026 ⇒ entre 4 y 5 meses de residencia a 10/10/2026 (< 6): requisito hard F. Los 6 meses se alcanzan entre el 01/11 y el 30/11/2026, después del cierre (30/10/2026) ⇒ sin futureEligibility."
+				},
+				{
+					"sourceId": "ejemplo-bocm-2026-convocatoria",
+					"locator": "Art. 8, pág. 5",
+					"reasoning": "Plazo del 01/10 al 30/10/2026 ⇒ OPEN el 10/10."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}
