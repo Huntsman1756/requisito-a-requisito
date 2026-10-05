@@ -16,3 +16,6 @@ data/eligibility/bundle/
 docs/*.xlsx
 public/datos/elegibilidad/
 src/generated/
+
+# nombre reservado de Windows (accidentes de redirección)
+nul
