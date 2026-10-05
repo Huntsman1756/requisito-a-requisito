@@ -2041,23 +2041,6 @@
    }
   },
   {
-   "id": "sede-cm-19869b8547",
-   "title": "Adjudicación por sorteo de viviendas públicas en alquiler en Majadahonda (2025)",
-   "scope": "comunidad-madrid",
-   "accessState": "CLOSED",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/adjudicacion-vivienda-publica-sorteo",
-   "themes": [
-    "vivienda"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/adjudicacion-vivienda-publica-sorteo"
-   }
-  },
-  {
    "id": "sede-cm-c69473f6dc",
    "title": "Ayudas para actividades de promoción de la salud en el ámbito municipal (2025)",
    "scope": "comunidad-madrid",
@@ -4425,19 +4408,6 @@
    }
   },
   {
-   "id": "la-ayuda-boe-b-2026-12558",
-   "title": "Extracto de la Orden de 14 de abril de 2026 por la que se convoca la concesión de subvenciones para la asistencia jurídica a ciudadaños españoles que afronten condenas de pena de muerte para el ejercicio 2026",
-   "scope": "estatal",
-   "accessState": "CLOSED",
-   "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12558",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "la-ayuda",
-    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12558"
-   }
-  },
-  {
    "id": "la-ayuda-boe-b-2026-12559",
    "title": "Convocatoria de subvenciones para Acciones de Cooperación al Desarrollo en innovación 2026",
    "scope": "estatal",
@@ -4662,19 +4632,6 @@
    "source": {
     "kind": "la-ayuda",
     "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15262"
-   }
-  },
-  {
-   "id": "la-ayuda-boe-b-2026-15332",
-   "title": "Convocatoria de subvenciones para convenios de cooperación al desarrollo 2026-2029",
-   "scope": "estatal",
-   "accessState": "CLOSED",
-   "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15332",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "la-ayuda",
-    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15332"
    }
   },
   {
@@ -5027,19 +4984,6 @@
    "source": {
     "kind": "la-ayuda",
     "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20133"
-   }
-  },
-  {
-   "id": "la-ayuda-boe-b-2026-20473",
-   "title": "Procedimiento de concesión directa de ayudas I+D Programa Corea España 2026",
-   "scope": "estatal",
-   "accessState": "CLOSED",
-   "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20473",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "la-ayuda",
-    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20473"
    }
   },
   {
@@ -6097,7 +6041,7 @@
    "id": "bdns-926809",
    "title": "CONVOCATORIA DE BECAS PARA LA ESCOLARIZACIÓN Y CONCILIACIÓN PARA EL CURSO 2026-2027 DEL AYUNTAMIENTO DE BOADILLA DEL MONTE.",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/926809",
    "themes": [
     "educacion"
@@ -6136,7 +6080,7 @@
    "id": "bdns-925409",
    "title": "CONVOCATORIA DE AYUDAS DEL AYUNTAMIENTO DE MAJADAHONDA A PERSONAS MAYORES EMPADRONADAS Y RESIDENTES EN LA LOCALIDAD PARA TRATAMIENTOS PODOLOGICOS",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/925409",
    "themes": [
     "mayores"
@@ -6155,7 +6099,7 @@
    "id": "bdns-923879",
    "title": "CONVOCATORIA SUBVENCIÓN PEÑAS ROMERAS",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/923879",
    "themes": [],
    "lifeEvents": [],
@@ -6185,7 +6129,7 @@
    "id": "bdns-921538",
    "title": "V EDICIÓN DEL PROGRAMA CAMPUS RURAL DE PRÁCTICAS UNIVERSITARIAS EN EL MEDIO RURAL",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/921538",
    "themes": [],
    "lifeEvents": [],
@@ -6200,7 +6144,7 @@
    "id": "bdns-920286",
    "title": "CONVOCATORIA REALIZACIÓN DE PRÁCTICAS EN LA DG COOP.ESTADO Y UE 2027-2028",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/920286",
    "themes": [],
    "lifeEvents": [],
@@ -6215,7 +6159,7 @@
    "id": "bdns-919022",
    "title": "Contratos Predoctorales de Formación de Profesorado Universitario 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/919022",
    "themes": [
     "educacion"
@@ -6234,7 +6178,7 @@
    "id": "bdns-917864",
    "title": "Contratos Predoctorales de Formación de Personal Investigador 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/917864",
    "themes": [
     "educacion"
@@ -6253,7 +6197,7 @@
    "id": "bdns-913432",
    "title": "Acuerdo de la Junta de Gobierno Local 05-06-2026, que aprueba las bases para la promoción del deporte y convocatoria de ayudas económicas a entidades deportiva. Edición 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/913432",
    "themes": [
     "cultura_juventud"
@@ -6270,7 +6214,7 @@
    "id": "bdns-911488",
    "title": "Convocatoria 2026 de Ayudas para la Participación en Plataformas u otras Redes de Colaboración Tecnológica-UAH",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911488",
    "themes": [],
    "lifeEvents": [],
@@ -6285,7 +6229,7 @@
    "id": "bdns-911470",
    "title": "Ayudas de Iniciación en la Actividad Investigadora 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911470",
    "themes": [],
    "lifeEvents": [],
@@ -6300,7 +6244,7 @@
    "id": "bdns-911460",
    "title": "Becas de Introducción a la Investigación 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911460",
    "themes": [
     "educacion"
@@ -6319,7 +6263,7 @@
    "id": "bdns-911178",
    "title": "CONVOCATORIA Y BASES REGULADORAS DE AYUDAS PARA LA REALIZACIÓN DE ACTIVIDADES SOCIOEDUCATIVAS EN DÍAS NO LECTIVOS DE VERANO 2026 (CURSO 2025- 2026).",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911178",
    "themes": [],
    "lifeEvents": [],
@@ -6337,7 +6281,7 @@
    "id": "bdns-911073",
    "title": "CONVOCATORIA DE SUBVENCIONES, A TRAVÉS DEL PROCEDIMIENTO DE CONCURRENCIA COMPETITIVA DE AYUDAS COMPLEMENTARIAS DE EDUCACIÓN A LAS FAMILIAS PARA LA ADQUISICIÓN DE RECURSOS DIDÁCTICOS Y MATERIAL ESCOLAR PARA EL CURSO ESCOLAR 2026/2027",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911073",
    "themes": [
     "familia_infancia",
@@ -6357,7 +6301,7 @@
    "id": "bdns-911002",
    "title": "Aprobación el 27.05.2026, por Junta Gobierno Local, de Convocatoria de subvenciones, mediante procedimiento de concurrencia competitiva, de ayudas A FAMILIAS PARA CAMPAMENTOS DE VERANO 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911002",
    "themes": [
     "familia_infancia"
@@ -6374,7 +6318,7 @@
    "id": "bdns-910960",
    "title": "BASES REGULADORAS DE AYUDAS DE COMEDOR PARA MENORES ESCOLARIZADOS EN CENTROS EDUCATIVOS PÚBLICOS DE CIEMPOZUELOS, QUE CURSEN SEGUNDO CICLO DE EDUCACIÓN INFANTIL O EDUCACIÓN PRIMARIA EN EL CURSO ESCOLAR 2026-2027.",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910960",
    "themes": [
     "familia_infancia",
@@ -6394,7 +6338,7 @@
    "id": "bdns-910642",
    "title": "Ayudas para víctimas de Violencia de Género",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910642",
    "themes": [
     "violencia_genero"
@@ -6411,7 +6355,7 @@
    "id": "bdns-910634",
    "title": "Ayudas para garantizar el derecho básico de alimentación, ocio y cultura de los menores durante las vacaciones escolares y la conciliación de la vida familiar y laboral",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910634",
    "themes": [
     "familia_infancia",
@@ -6432,7 +6376,7 @@
    "id": "bdns-910624",
    "title": "Ayudas contra la exclusión social y la pobreza infantil",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910624",
    "themes": [],
    "lifeEvents": [],
@@ -6447,7 +6391,7 @@
    "id": "bdns-910617",
    "title": "Ayudas de Apoyo a la Integración",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910617",
    "themes": [],
    "lifeEvents": [],
@@ -6462,7 +6406,7 @@
    "id": "bdns-909929",
    "title": "Ayudas vehículos adaptados personas movilidad reducida",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/909929",
    "themes": [],
    "lifeEvents": [],
@@ -6477,7 +6421,7 @@
    "id": "bdns-909494",
    "title": "SGBA- BECAS FP GRADO D MEDIO Y SUPERIOR CENTROS PRIVADOS 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/909494",
    "themes": [
     "educacion"
@@ -6496,7 +6440,7 @@
    "id": "bdns-909061",
    "title": "Resolución de 28 de mayo de 2026, de la Agencia Española de Medicamentos y Productos Sanitarios, por la que se convocan becas de formación de la Agencia.",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/909061",
    "themes": [
     "educacion",
@@ -6516,7 +6460,7 @@
    "id": "bdns-907466",
    "title": "CONVOCATORIA PARA 2026 DE AYUDAS INDIVIDUALES DE APOYO SOC.SALUD MENTAL",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/907466",
    "themes": [
     "salud"
@@ -6533,7 +6477,7 @@
    "id": "bdns-905440",
    "title": "SGBA - AYUDAS INDIVIDUALIZADAS DE DESAYUNO ESCOLAR 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/905440",
    "themes": [
     "educacion"
@@ -6552,7 +6496,7 @@
    "id": "bdns-905226",
    "title": "DGBCE/26 XXII COROS ESCOLARES. CURSO 25-26. MENCIONES-DIRECTORES",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/905226",
    "themes": [
     "educacion"
@@ -6571,7 +6515,7 @@
    "id": "bdns-904755",
    "title": "BASES REGULADORAS DE AYUDAS PARA LA REACTIVACIÓN COMERCIAL Y MEJORA DEL ENTORNO URBANO",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/904755",
    "themes": [],
    "lifeEvents": [],
@@ -6586,7 +6530,7 @@
    "id": "bdns-904286",
    "title": "Certificado sesión ordinaria del Consejo de Administración del EPE Alcalá Desarrollo de fecha 04/05/2026, por el que se aprueban las bases de la convocatoria de las ayudas de acción social 2025 ,para los trabajadores del EPE Alcalá Desarrollo.",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/904286",
    "themes": [],
    "lifeEvents": [],
@@ -6601,7 +6545,7 @@
    "id": "bdns-903433",
    "title": "SGBA - CONVOCATORIA BECAS SEGUNDA OPORTUNIDAD 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/903433",
    "themes": [
     "educacion"
@@ -6620,7 +6564,7 @@
    "id": "bdns-902503",
    "title": "CONVOCATORIA BECAS EDUCACIÓN INFANTIL CURSO 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/902503",
    "themes": [
     "educacion"
@@ -6639,7 +6583,7 @@
    "id": "bdns-902242",
    "title": "BASES PARA EL OTORGAMIENTO DE PRESTACIONES ECONOMICAS PUNTUALES DE PAGO UNICO (AYUDAS COMPLEMENTARIAS) PARA LA MEJORA DE LAS CONDICIONES DE HABITABILIDAD DE LA VIVIENDA DE PERSONAS MAYORES Y/O CON DISCAPACIDAD EJERCICIO 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/902242",
    "themes": [
     "vivienda",
@@ -6663,7 +6607,7 @@
    "id": "bdns-901929",
    "title": "CONVOCATORIA DE AYUDAS DEL AYUNTAMIENTO DE BOADILLA DEL MONTE PARA VÍCTIMAS DE VIOLENCIA DE GÉNERO CORRESPONDIENTE A 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901929",
    "themes": [
     "violencia_genero"
@@ -6680,7 +6624,7 @@
    "id": "bdns-901771",
    "title": "DGBCE/26 XVII TORNEO ESCOLAR DE DEBATE. CURSO 2025-26",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901771",
    "themes": [
     "educacion"
@@ -6699,7 +6643,7 @@
    "id": "bdns-901646",
    "title": "SGBA - CONVOCATORIA BECAS BACHILLERATO 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901646",
    "themes": [
     "educacion"
@@ -6718,7 +6662,7 @@
    "id": "bdns-901420",
    "title": "CONVOCATORIA BECAS COMEDOR ESCOLAR CURSO 2026/2027",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901420",
    "themes": [
     "educacion"
@@ -6737,7 +6681,7 @@
    "id": "bdns-901414",
    "title": "SGBA. BECAS DE COMEDOR ESCOLAR AYTO MADRID CURSO 26/27",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901414",
    "themes": [
     "educacion"
@@ -6756,7 +6700,7 @@
    "id": "bdns-899087",
    "title": "CONVOCATORIA DE PRESTACIONES SOCIALES DE CARÁCTER ECONÓMICO A PERSONAS EN SITUACIÓN DE EXCLUSIÓN SOCIAL/AYUDAS DE SUMINISTROS / AYUDAS DE HABITABILIDAD PARA EL AÑO 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/899087",
    "themes": [],
    "lifeEvents": [],
@@ -6771,7 +6715,7 @@
    "id": "bdns-898168",
    "title": "Convocatoria de ayudas extraordinarias #HubUAH_Comprometida – Curso 2025/26",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/898168",
    "themes": [],
    "lifeEvents": [],
@@ -6786,7 +6730,7 @@
    "id": "bdns-898155",
    "title": "Convocatoria de propuestas de actividades de los Grupos de trabajo #HubUAH_Comprometida relacionadas con el impulso de la Agenda 2030. Curso 2025/26",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/898155",
    "themes": [],
    "lifeEvents": [],
@@ -6801,7 +6745,7 @@
    "id": "bdns-895535",
    "title": "AYUDAS INCORPORACIÓN JÓVENES AGRICULTORES CONVOCATORIA 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/895535",
    "themes": [
     "cultura_juventud"
@@ -6818,7 +6762,7 @@
    "id": "bdns-894986",
    "title": "AYUDAS PARA LA INCORPORCIÓN DE NUEVOS AGRICULTORES. CONVOCATORIA 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894986",
    "themes": [],
    "lifeEvents": [],
@@ -6833,7 +6777,7 @@
    "id": "bdns-894618",
    "title": "AY. MOVILIDAD SOST.Y ACCESIBLE PARA TODOS-Personas físicas ZBE",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894618",
    "themes": [],
    "lifeEvents": [],
@@ -6848,7 +6792,7 @@
    "id": "bdns-894617",
    "title": "AY. MOVILIDAD SOST.Y ACCESIBLE PARA TODOS-Personas físicas fuera ZBE",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894617",
    "themes": [],
    "lifeEvents": [],
@@ -6860,25 +6804,10 @@
    "receivedAt": "2026-03-23"
   },
   {
-   "id": "bdns-894293",
-   "title": "FINANCIACION EST–TRAM.ANTIC.2026 CONCESION SINTEL 2026",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894293",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "bdns",
-    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894293"
-   },
-   "body": "COMUNIDAD DE MADRID — CONSEJERÍA ECONOMÍA, HACIENDA Y EMPLEO",
-   "receivedAt": "2026-03-20"
-  },
-  {
    "id": "bdns-894067",
    "title": "DGEA AYUDAS AMPLIACIÓN ESTUDIOS IDIOMAS Y ENSEÑ ART EXTRANJERO 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/894067",
    "themes": [
     "educacion"
@@ -6897,7 +6826,7 @@
    "id": "bdns-893791",
    "title": "Convocatoria de Becas AUIP (Asociación Universitaria Iberoamericana de Postgrado) para cursar estudios de Máster Universitario en la UAH, en el Curso Académico 2026-27",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/893791",
    "themes": [
     "educacion"
@@ -6919,7 +6848,7 @@
    "id": "bdns-893390",
    "title": "CONVOCATORIA PARA EL OTORGAMIENTO PARA PRESTACIONES ECONÓMICAS PUNTUALES DE PAGO UNICO (AYUDAS COMPLEMENTARIAS) PARA LA MEJORA DE LAS CONDICIONES DE HABITABILIDAD DE LA VIVIENDA DE PERSONAS MAYORES Y/O CON DISCAPACIDAD, EJERCICIO 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/893390",
    "themes": [
     "vivienda",
@@ -6943,7 +6872,7 @@
    "id": "bdns-892964",
    "title": "VIII Convocatoria de Ayudas para cursar el Máster Universitario en Literaturas Anglófonas e Hispánicas Contemporáneas. Convocatoria 2026-27.",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/892964",
    "themes": [],
    "lifeEvents": [],
@@ -6958,7 +6887,7 @@
    "id": "bdns-892958",
    "title": "IX Convocatoria de Ayudas para cursar el Máster Universitario en Investigación en Ciencias Sociosanitarias. Convocatoria 2026-27.",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/892958",
    "themes": [
     "salud"
@@ -6975,7 +6904,7 @@
    "id": "bdns-892553",
    "title": "AYUDA ADQUISICION MATERIAL ESCOLAR YLIBROS DE TEXTO 2026-2027",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/892553",
    "themes": [
     "educacion"
@@ -6994,7 +6923,7 @@
    "id": "bdns-891956",
    "title": "Convocatoria subvenciones tecnificación deportistas 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891956",
    "themes": [
     "cultura_juventud"
@@ -7011,7 +6940,7 @@
    "id": "bdns-891685",
    "title": "Convocatoria 2026 ayudas para la mejora de las condiciones de habitabilidad de la vivienda de personas mayores, personas en situación de dependencia y/o con discapacidad.",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891685",
    "themes": [
     "vivienda",
@@ -7035,7 +6964,7 @@
    "id": "bdns-891658",
    "title": "Ayudas para la Organización de Congresos 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891658",
    "themes": [],
    "lifeEvents": [],
@@ -7050,7 +6979,7 @@
    "id": "bdns-891227",
    "title": "AYUDAS FOMENTO AUTONOMÍA PERSONAL Y PROMOC ACCESIB. PERS CON DISC 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891227",
    "themes": [],
    "lifeEvents": [],
@@ -7065,7 +6994,7 @@
    "id": "bdns-891036",
    "title": "Ayudas para el mantenimiento y mejora de la Calidad Editorial de Revistas Científicas 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891036",
    "themes": [],
    "lifeEvents": [],
@@ -7080,7 +7009,7 @@
    "id": "bdns-890888",
    "title": "Acuerdo de la Junta de Gobierno Local 27-02-2026, por el que se aprueban las bases reguladoras de la convocatoria ayudas económicas destinadas a promover la autonomía personal en las personas mayores, dependientes y/o con discapacidad durante el año 2026.",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890888",
    "themes": [
     "dependencia_discapacidad",
@@ -7102,7 +7031,7 @@
    "id": "bdns-890596",
    "title": "Ayudas para la Preparación de Proyectos Europeos 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890596",
    "themes": [],
    "lifeEvents": [],
@@ -7117,7 +7046,7 @@
    "id": "bdns-890118",
    "title": "Bolsas de Viaje Postdoctorales 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890118",
    "themes": [],
    "lifeEvents": [],
@@ -7132,7 +7061,7 @@
    "id": "bdns-890115",
    "title": "Bolsas de Viaje Predoctorales 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890115",
    "themes": [],
    "lifeEvents": [],
@@ -7147,7 +7076,7 @@
    "id": "bdns-890114",
    "title": "Ayudas de Movilidad de Personal Docente y Personal Investigador 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890114",
    "themes": [],
    "lifeEvents": [],
@@ -7162,7 +7091,7 @@
    "id": "bdns-890113",
    "title": "Ayudas de Movilidad de Personal Investigador en Formación 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/890113",
    "themes": [
     "educacion"
@@ -7181,7 +7110,7 @@
    "id": "bdns-889321",
    "title": "Convocatoria de la Competición Capture-The Flag 2026 - Cátedra de Ciberseguridad Ada Byron (INCIBE-UAH)",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/889321",
    "themes": [],
    "lifeEvents": [],
@@ -7196,7 +7125,7 @@
    "id": "bdns-888325",
    "title": "AYUDAS PAGO ÚNICO HIJOS MENORES MUJERES ASESINADAS VÍCTIMAS VG. 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/888325",
    "themes": [
     "familia_infancia",
@@ -7214,7 +7143,7 @@
    "id": "bdns-888319",
    "title": "Convocatoria de Becas de Investigación del Programa IELAT-Santander. Año 2027",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/888319",
    "themes": [
     "educacion"
@@ -7233,7 +7162,7 @@
    "id": "bdns-888220",
    "title": "AYUDAS INDIVIDUALES MUJERES VICTIMAS VIOLENCIA DE GENERO 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/888220",
    "themes": [
     "violencia_genero"
@@ -7250,7 +7179,7 @@
    "id": "bdns-886276",
    "title": "Ayudas para la realización de Proyectos de Investigación UAH 2026",
    "scope": "estatal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/886276",
    "themes": [],
    "lifeEvents": [],
@@ -7265,7 +7194,7 @@
    "id": "bdns-882824",
    "title": "CONVOCATORIA AYUDAS POR NACIMIENTO, ADOPCIÓN Y ACOGIDA DE MENORES 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/882824",
    "themes": [
     "familia_infancia"
@@ -7284,7 +7213,7 @@
    "id": "bdns-882038",
    "title": "AYUDAS ECONÓMICAS A VÍCTIMAS DE VIOLENCIA DE GÉNERO 2026",
    "scope": "municipal",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/882038",
    "themes": [
     "violencia_genero"
@@ -7301,7 +7230,7 @@
    "id": "bdns-881959",
    "title": "Convocatoria Renta Mínima de Inserción - Ejercicio 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/881959",
    "themes": [
     "empleo",
@@ -7322,7 +7251,7 @@
    "id": "bocm-BOCM-20260421-15",
    "title": "Delegación competencias – Resolución de 31 de marzo de 2026, de la Dirección General de Función Pública, por la que se delega en la Gerencia de la Agencia Madrileña de Atención Social, la competencia para la constitución y la gestión de la bolsa abierta permanentemente para la selección de personal laboral temporal correspondiente a la categoría de Titulado Medio Educador, Grupo II, Área C, Nivel 7",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "ROLLING",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-15",
    "themes": [],
    "lifeEvents": [],
@@ -7336,7 +7265,7 @@
    "id": "bocm-BOCM-20260421-16",
    "title": "Ayudas de cooperación para la vertebración del territorio 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-16",
    "themes": [],
    "lifeEvents": [],
@@ -7350,7 +7279,7 @@
    "id": "bocm-BOCM-20260421-17",
    "title": "Ayudas extraordinarias #HubUAH_Comprometida - Curso 2025/26",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-17",
    "themes": [],
    "lifeEvents": [],
@@ -7364,7 +7293,7 @@
    "id": "bocm-BOCM-20260421-18",
    "title": "Convocatoria de propuestas de actividades #HubUAH_Comprometida (Agenda 2030)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-18",
    "themes": [],
    "lifeEvents": [],
@@ -7378,7 +7307,7 @@
    "id": "bocm-BOCM-20260421-20",
    "title": "Formalización contrato – Resolución 515/2026, de 10 de abril, del Director-Gerente de la Agencia de Vivienda Social de la Comunidad de Madrid, por la que se hace pública la formalización del contrato ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-20",
    "themes": [
     "vivienda"
@@ -7393,24 +7322,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260421-24",
-   "title": "Formalización contrato – Resolución de 9 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de prórroga del contrato de suministro de cánulas, dispositivo oxigenador para ECMO y dispositivos de asistencia ventricular para los servicios de cirugía cardiaca y cardiología para el Hospital Universitario “12 de Octubre”",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260421-24",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260421-24"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260421-29",
    "title": "Formalización contrato – Resolución de 9 de abril de 2026, de Canal de Isabel II, S. A., por la que se hace pública la formalización del contrato adjudicado por procedimiento mesa permanente-procedimiento abierto con pluralidad de criterios para 174/2025 “Servicios de mediación para la contratación de pólizas de seguro de responsabilidad civil de consejeros y directivos (D&O) por Canal de Isabel II, S. A., M. P., sus entidades filiales y participadas, y por el Ente Público Canal de Isabel II, y asistencia técnica y asesoramiento en la ejecución de dichos contratos”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-29",
    "themes": [],
    "lifeEvents": [],
@@ -7421,26 +7336,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260421-3",
-   "title": "Puesto libre designación – Orden de 11 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 5 de enero de 2026 (BOLETÍN OFICIA",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260421-3",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260421-3"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260421-31",
    "title": "Convocatoria contrato – Resolución de 13 de abril de 2026, de la Secretaría General Técnica de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se anuncia la licitación del contrato S",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-31",
    "themes": [],
    "lifeEvents": [],
@@ -7457,7 +7356,7 @@
    "id": "bocm-BOCM-20260421-32",
    "title": "Información previa contratación – Resolución de 13 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se hace público el anuncio de información previa del contrato",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-32",
    "themes": [
     "educacion"
@@ -7475,7 +7374,7 @@
    "id": "bocm-BOCM-20260421-4",
    "title": "Bolsa única personal laboral – Resolución de 31 de marzo de 2026, de la Dirección General de Función Pública, por la que se aprueba y publica la constitución del primer bloque de la bolsa única permanentemente abierta a efectos de contrataciones temporales de la categoría profesional de Titulado Medio Educador (Grupo II, Nivel 7, Área C) de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "ROLLING",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-4",
    "themes": [],
    "lifeEvents": [],
@@ -7489,7 +7388,7 @@
    "id": "bocm-BOCM-20260421-40",
    "title": "– Fuenlabrada. Ofertas de empleo. Proceso selectivo – Fuenlabrada. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-40",
    "themes": [
     "empleo"
@@ -7514,7 +7413,7 @@
    "id": "bocm-BOCM-20260421-43",
    "title": "– Loeches. Régimen económico. Extracto convocatoria subvenciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-43",
    "themes": [],
    "lifeEvents": [],
@@ -7528,7 +7427,7 @@
    "id": "bocm-BOCM-20260421-5",
    "title": "Resolución proceso selectivo – Resolución de 7 de abril de 2026, de la Dirección General de Función Pública, por la que se resuelve el proceso selectivo para el personal laboral fijo de la categoría profesional de Titulado Medio (Grupo II, Nivel 7, Área B), para la adquisición de la condición de personal funcionario de carrera del Cuerpo de Ingenieros y Arquitectos Técnicos, Escala de Ingeniería Técnica, Especialidad Ordenación Rural e Industrias Agroalimentarias, de Administración Especial, Grupo A, Subgrupo A2, de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-5",
    "themes": [],
    "lifeEvents": [],
@@ -7542,7 +7441,7 @@
    "id": "bocm-BOCM-20260421-6",
    "title": "Resolución proceso selectivo – Resolución de 8 de abril de 2026, de la Dirección General de Función Pública, por la que se resuelven los procesos selectivos para el acceso, por el sistema general de acceso libre y por el de promoción interna, a plazas de carácter laboral de la categoría profesional de Conductor (Grupo III, Nivel 5, Área B), de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-6",
    "themes": [],
    "lifeEvents": [],
@@ -7556,7 +7455,7 @@
    "id": "bocm-BOCM-20260421-8",
    "title": "Comisión prestaciones sociales – Resolución 1357/2026, de 7 de abril, del Director-Gerente de la Agencia de Vivienda Social, por la que se designan los miembros de la Comisión competente para formular",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260421-8",
    "themes": [
     "vivienda"
@@ -7571,29 +7470,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260422-10",
-   "title": "Puesto libre designación – Orden de 13 de abril de 2026, del Consejero de Vivienda, Transportes e Infraestructuras, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260422-10",
-   "themes": [
-    "vivienda",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260422-10"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260422-28",
    "title": "Plan general de urbanismo – Acuerdo de 15 de abril de 2026, del Consejo de Gobierno, por el que se aprueba definitivamente la modificación puntual del Plan General de Ordenación Urbana de Madrid para la protección del local derecho del edificio situado en la calle de Santa Cruz de Marcenado, número 9, distrito de Centro",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-28",
    "themes": [],
    "lifeEvents": [],
@@ -7604,28 +7484,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260422-29",
-   "title": "Concesión ayudas – Resolución de 8 de abril de 2026, de la Fundación de la Energía de la Comunidad de Madrid, por la que se da publicidad a la relación de ayudas y subvenciones concedidas en el proced",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260422-29",
-   "themes": [
-    "energia_suministros"
-   ],
-   "lifeEvents": [
-    "ingresos_bajos"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260422-29"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260422-3",
    "title": "Convocatoria proceso selectivo – Orden 988/2026, de 8 de abril, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan pruebas selectivas para el ingreso, por el sistema general de ac",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-3",
    "themes": [
     "empleo"
@@ -7641,7 +7503,7 @@
    "id": "bocm-BOCM-20260422-30",
    "title": "Formalización contrato – Resolución de 13 de abril de 2026, de la Secretaría General Técnica de la Consejería de Economía, Hacienda y Empleo, por la que se hace pública la formalización del contrato t",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-30",
    "themes": [
     "empleo"
@@ -7657,7 +7519,7 @@
    "id": "bocm-BOCM-20260422-34",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 13 de abril de 2026, relativo al contrato del servicio de mantenimiento integral del Sistema de Protección contra Incendios (SDPI) de las series de material móvil de Metro de Madrid 3000, 7000, 8000 y 9000",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-34",
    "themes": [
     "transporte"
@@ -7682,31 +7544,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260422-4",
-   "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260422-4",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260422-4"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260424-6",
-    "bocm-BOCM-20260428-3",
-    "bocm-BOCM-20260428-4"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260422-41",
    "title": "Formalización contrato – Anuncio de 14 de abril de 2026, de formalización del contrato titulado “Servicios de centro de pruebas y soporte operativo en instalaciones externas de ensayo ferroviario” (expediente 6012500388) - (contrato 7726000059)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-41",
    "themes": [],
    "lifeEvents": [],
@@ -7721,24 +7562,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260422-44",
-   "title": "Adjudicación contrato – Anuncio de 17 de abril de 2026, de adjudicación del contrato titulado “Servicio de rebobinado de motores de tracción de la serie 2000”. (Expediente 6012500335)",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260422-44",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260422-44"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260422-45",
    "title": "Convocatoria contrato – Anuncio de 20 de abril de 2026, por el que se convoca la licitación para la contratación de un suministro de nueve mil cincuenta barras de 18 metros de “Carril 54E1-R260-X-B” (Expediente 6012600111)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-45",
    "themes": [
     "transporte"
@@ -7754,7 +7581,7 @@
    "id": "bocm-BOCM-20260422-5",
    "title": "Resolución proceso selectivo – Resolución conjunta de 8 de abril de 2026, de la Dirección General de Recursos Humanos y de la Dirección General de Función Pública, mediante la que se hace pública una relación complementaria de personas aspirantes aprobadas en las pruebas selectivas del proceso selectivo de promoción interna para ingreso en el Cuerpo Superior de Gestión de Administración General, Grupo A, Subgrupo A1, de la Comunidad de Madrid, y se habilita plazo para la acreditación del cumplimiento de requisitos y la elección de destinos por las personas incluidas en esa relación",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-5",
    "themes": [],
    "lifeEvents": [],
@@ -7768,7 +7595,7 @@
    "id": "bocm-BOCM-20260422-56",
    "title": "Formalización contrato – Resolución de 13 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización del contrato titulado “Servicio de gestión y eliminación de residuos sanitarios específicos de los Centros de la Agencia Madrileña de Atención Social (3 lotes)”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-56",
    "themes": [
     "salud"
@@ -7784,7 +7611,7 @@
    "id": "bocm-BOCM-20260422-59",
    "title": "Resolución de subvenciones Cambia 360 (renovación vehículos) 2025",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-59",
    "themes": [],
    "lifeEvents": [],
@@ -7798,7 +7625,7 @@
    "id": "bocm-BOCM-20260422-6",
    "title": "Comisión permanente de selección – Resolución de 13 de abril de 2026, de la Dirección General de Función Pública, por la que se modifica la Resolución de 26 de mayo de 2025, de la Dirección General de Función Pública, por la que se encomienda a la Comisión Permanente de Selección, la realización de los procesos selectivos para el ingreso, por el sistema general de acceso libre, en el Cuerpo de Técnicos Superiores de Administración General, Grupo A, Subgrupo A1, de la Comunidad de Madrid, se procede a la creación de la Comisión Delegada como órgano colegiado encargado del desarrollo y calificación de dichos procesos selectivos, y se hace pública su composición",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-6",
    "themes": [],
    "lifeEvents": [],
@@ -7812,7 +7639,7 @@
    "id": "bocm-BOCM-20260422-63",
    "title": "Convocatoria de subvenciones a Entidades Urbanísticas de Conservación de Aldea del Fresno",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-63",
    "themes": [],
    "lifeEvents": [],
@@ -7826,7 +7653,7 @@
    "id": "bocm-BOCM-20260422-64",
    "title": "– Arroyomolinos. Ofertas de empleo. Proceso selectivo – Arroyomolinos. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-64",
    "themes": [
     "empleo"
@@ -7842,7 +7669,7 @@
    "id": "bocm-BOCM-20260422-65",
    "title": "– Ciempozuelos. Ofertas de empleo. Proceso selectivo – Ciempozuelos. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-65",
    "themes": [
     "empleo"
@@ -7862,7 +7689,7 @@
    "id": "bocm-BOCM-20260422-7",
    "title": "Aspirantes proceso selectivo – Resolución de 13 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones definitivas de personas aspirantes admitidas y excluidas en las pruebas selectivas para el acceso, por el sistema general de acceso libre y de promoción interna, a plazas de carácter laboral de la categoría profesional de Titulado Superior, Especialidad de Psicología General Sanitaria (Grupo I, Nivel 9, Área D) de la Comunidad de Madrid, se publica la relación definitiva de personas excluidas y se anuncia la celebración del primer ejercicio de la oposición",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-7",
    "themes": [
     "salud"
@@ -7878,7 +7705,7 @@
    "id": "bocm-BOCM-20260422-77",
    "title": "– Torres de la Alameda. Ofertas de empleo. Proceso selectivo – Torres de la Alameda. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260422-77",
    "themes": [
     "empleo"
@@ -7894,7 +7721,7 @@
    "id": "bocm-BOCM-20260423-104",
    "title": "Modificación Bases Reguladoras Subvenciones AMPAS Móstoles",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-104",
    "themes": [],
    "lifeEvents": [],
@@ -7908,7 +7735,7 @@
    "id": "bocm-BOCM-20260423-106",
    "title": "– Parla. Ofertas de empleo. Convocatoria proceso selectivo – Parla. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-106",
    "themes": [
     "empleo"
@@ -7924,7 +7751,7 @@
    "id": "bocm-BOCM-20260423-112",
    "title": "– Valdemanco. Ofertas de empleo. Convocatoria proceso selectivo – Valdemanco. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-112",
    "themes": [
     "empleo"
@@ -7940,7 +7767,7 @@
    "id": "bocm-BOCM-20260423-113",
    "title": "– Valdemoro. Ofertas de empleo. Proceso selectivo – Valdemoro. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-113",
    "themes": [
     "empleo"
@@ -7960,7 +7787,7 @@
    "id": "bocm-BOCM-20260423-114",
    "title": "– Villalbilla. Ofertas de empleo. Proceso selectivo – Villalbilla. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-114",
    "themes": [
     "empleo"
@@ -7977,77 +7804,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260423-2",
-   "title": "Puesto libre designación – Orden de 14 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 19 de febrero de 2026 (BOLETÍN OFI",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260423-2",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260423-2"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260423-3"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260423-4",
-   "title": "Tribunal proceso selectivo – Corrección de errores de la Resolución de 10 de marzo de 2026, de la Dirección General de Función Pública, por la que se modifica la composición del Tribunal Calificador d",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260423-4",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260423-4"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260505-12"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260423-5",
-   "title": "Lista espera interinos – Corrección de errores de la Resolución de 24 de marzo de 2026, de la Dirección General de Función Pública, por la que se requiere documentación acreditativa del cumplimiento d",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260423-5",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260423-5"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260423-58",
-   "title": "Concesión subvenciones – Resolución de 14 de abril de 2026, de la Secretaría General Técnica de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se publican las subvenciones concedi",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260423-58",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260423-58"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260423-59"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260423-6",
    "title": "Aspirantes proceso selectivo – Resolución de 8 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones provisionales de personas aspirantes admitidas y excluidas en las pruebas selectivas para el ingreso, por el sistema general de acceso libre, en el Cuerpo de Ingenieros y Arquitectos Superiores, Escala de Ingeniería Superior, Especialidad de Ordenación Rural e Industrias Agroalimentarias, de Administración Especial, Grupo A, Subgrupo A1, de la Comunidad de Madrid, y se publica la relación provisional de personas excluidas y la de aspirantes que han solicitado adaptación, con indicación de si deben aportar o no documentación acreditativa de la adaptación solicitada",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-6",
    "themes": [],
    "lifeEvents": [],
@@ -8058,26 +7818,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260423-60",
-   "title": "Concesión subvenciones – Orden 581/2026, de 7 de abril, de la Consejería de Cultura, Turismo y Deporte, por la que se modifica la Orden 1877/2025, de la Consejería de Cultura, Turismo y Deporte, por l",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260423-60",
-   "themes": [
-    "cultura_juventud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260423-60"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260423-63",
    "title": "Notificación – Resolución de 10 de abril de 2026, de la Dirección General de Trabajo, por la que se procede a la publicación de una sanción administrativa impuesta por infracciones muy graves en materia de prevención de riesgos laborales",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-63",
    "themes": [],
    "lifeEvents": [],
@@ -8091,7 +7835,7 @@
    "id": "bocm-BOCM-20260423-73",
    "title": "Formalización contrato – Resolución de 14 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se dispone la publicación en los boletines oficiales y en el “perfil d",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-73",
    "themes": [],
    "lifeEvents": [],
@@ -8105,7 +7849,7 @@
    "id": "bocm-BOCM-20260423-76",
    "title": "Convocatoria subvenciones prensa escrita hiperlocal Madrid 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-76",
    "themes": [],
    "lifeEvents": [],
@@ -8119,7 +7863,7 @@
    "id": "bocm-BOCM-20260423-80",
    "title": "– Alcobendas. Ofertas de empleo. Convocatoria proceso selectivo – Alcobendas. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-80",
    "themes": [
     "empleo"
@@ -8138,7 +7882,7 @@
    "id": "bocm-BOCM-20260423-82",
    "title": "– Bustarviejo. Ofertas de empleo. Convocatoria proceso selectivo – Bustarviejo. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-82",
    "themes": [
     "empleo"
@@ -8154,7 +7898,7 @@
    "id": "bocm-BOCM-20260423-84",
    "title": "– Cubas de la Sagra. Ofertas de empleo. Oferta empleo público – Cubas de la Sagra. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-84",
    "themes": [
     "empleo"
@@ -8170,7 +7914,7 @@
    "id": "bocm-BOCM-20260423-85",
    "title": "– El Escorial. Ofertas de empleo. Proceso selectivo – El Escorial. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-85",
    "themes": [
     "empleo"
@@ -8192,7 +7936,7 @@
    "id": "bocm-BOCM-20260423-93",
    "title": "– Getafe. Ofertas de empleo. Convocatoria proceso selectivo – Getafe. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-93",
    "themes": [
     "empleo"
@@ -8211,7 +7955,7 @@
    "id": "bocm-BOCM-20260423-95",
    "title": "– Leganés. Ofertas de empleo. Convocatoria proceso selectivo – Leganés. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-95",
    "themes": [
     "empleo"
@@ -8227,7 +7971,7 @@
    "id": "bocm-BOCM-20260423-96",
    "title": "– Majadahonda. Ofertas de empleo. Proceso selectivo – Majadahonda. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260423-96",
    "themes": [
     "empleo"
@@ -8240,43 +7984,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260424-13",
-   "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se resuelve la convocatoria aprobada por Orden de fecha 18 de febrero ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260424-13",
-   "themes": [
-    "vivienda",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260424-13"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260424-22",
-   "title": "Crédito presupuestario ayudas – Corrección de errores de la Orden 514/2026, de 19 de marzo, de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se hace pública la declaración del cr",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260424-22",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260424-22"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260424-29",
    "title": "Depósito estatutos – Resolución de 6 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre modificación de los estatutos de la asociación denomina",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-29",
    "themes": [
     "empleo"
@@ -8292,7 +8003,7 @@
    "id": "bocm-BOCM-20260424-30",
    "title": "Información previa contratación – Resolución de 14 de abril de 2026, de la Secretaría General Técnica de la Consejería de Economía, Hacienda y Empleo de la Comunidad de Madrid de 14 de abril de 2026, ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-30",
    "themes": [
     "educacion",
@@ -8311,7 +8022,7 @@
    "id": "bocm-BOCM-20260424-31",
    "title": "Formalización contrato – Resolución del 15 de abril de 2026, de la Secretaría General Técnica de la Consejería de Digitalización, por la que se dispone la publicación en “Diario Oficial de la Unión Eu",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-31",
    "themes": [],
    "lifeEvents": [],
@@ -8325,7 +8036,7 @@
    "id": "bocm-BOCM-20260424-32",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 15 de abril de 2026, relativo al contrato del suministro de un tren de reperfilado de carril y aparatos de vía, por tecnología de fresado",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-32",
    "themes": [],
    "lifeEvents": [],
@@ -8347,7 +8058,7 @@
    "id": "bocm-BOCM-20260424-38",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 16 de abril de 2026, relativo al contrato de mantenimiento de los sistemas de control de presencia y accesos",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-38",
    "themes": [],
    "lifeEvents": [],
@@ -8376,7 +8087,7 @@
    "id": "bocm-BOCM-20260424-45",
    "title": "Información previa contratación – Resolución de 16 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se hace público el anuncio de información previa del contrato",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-45",
    "themes": [
     "educacion"
@@ -8394,7 +8105,7 @@
    "id": "bocm-BOCM-20260424-47",
    "title": "– Madrid. Organización y funcionamiento. Área de Gobierno de Vicealcaldía, Portavoz, Seguridad y Emergencias. Plan estratégico subvenciones – Madrid. Organización y funcionamiento. Área de Gobierno de",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-47",
    "themes": [
     "ingresos_minimos"
@@ -8410,7 +8121,7 @@
    "id": "bocm-BOCM-20260424-63",
    "title": "– Griñón. Ofertas de empleo. Proceso selectivo – Griñón. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-63",
    "themes": [
     "empleo"
@@ -8429,7 +8140,7 @@
    "id": "bocm-BOCM-20260424-68",
    "title": "– Leganés. Régimen económico. Bases subvenciones – Leganés. Régimen económico. Bases subvenciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-68",
    "themes": [],
    "lifeEvents": [],
@@ -8443,7 +8154,7 @@
    "id": "bocm-BOCM-20260424-7",
    "title": "Tribunal proceso selectivo – Resolución de 7 de abril de 2026, de la Dirección General de Función Pública, por la que se modifica la composición del Tribunal Calificador de las pruebas selectivas para",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-7",
    "themes": [],
    "lifeEvents": [],
@@ -8457,7 +8168,7 @@
    "id": "bocm-BOCM-20260424-77",
    "title": "– Pozuelo de Alarcón. Ofertas de empleo. Convocatoria proceso selectivo – Pozuelo de Alarcón. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-77",
    "themes": [
     "empleo"
@@ -8473,7 +8184,7 @@
    "id": "bocm-BOCM-20260424-8",
    "title": "Resolución proceso selectivo – Resolución de 22 de abril de 2026, de la Dirección General de Función Pública, por la que se resuelve el proceso extraordinario de estabilización de empleo temporal para",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-8",
    "themes": [
     "empleo"
@@ -8489,7 +8200,7 @@
    "id": "bocm-BOCM-20260424-81",
    "title": "– San Sebastián de los Reyes. Régimen económico. Extracto convocatoria subvenciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-81",
    "themes": [],
    "lifeEvents": [],
@@ -8503,7 +8214,7 @@
    "id": "bocm-BOCM-20260424-90",
    "title": "– Viviendas Canencia de la Sierra 16, S. Coop. Mad. Liquidación cooperativa – Viviendas Canencia de la Sierra 16, S. Coop. Mad. Liquidación cooperativa",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260424-90",
    "themes": [
     "vivienda"
@@ -8518,102 +8229,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260425-1",
-   "title": "Convenio – Adenda de 10 de abril de 2026, por la que se modifica el convenio de reafianzamiento de 19 de diciembre de 2024, entre la Comunidad de Madrid y Avalmadrid, S. G. R., en operaciones de finan",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260425-1",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260425-1"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260425-2",
-   "title": "Convenio – Convenio de 19 de enero de 2026, entre la Comunidad de Madrid y la Junta de Comunidades de Castilla-La Mancha para la renovación de la utilización de los títulos de Abono Transportes del Consorcio Regional de Transportes de Madrid en los desplazamientos entre ambas Comunidades Autónomas en el periodo 2026-2029",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260425-2",
-   "themes": [
-    "transporte"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260425-2"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260425-3",
-   "title": "Convenio – Convenio de colaboración de 6 de abril de 2026, entre el Consorcio Regional de Transportes de Madrid y la Sociedad Anónima Estatal Correos y Telégrafos, S. A., S. M. E., por el que se establece el procedimiento y las condiciones en las que el Consorcio Regional de Transportes de Madrid facilitará a la Sociedad Anónima Estatal Correos y Telégrafos, S. A., S. M. E. la gestión de los títulos de transporte que sean demandados por esta",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260425-3",
-   "themes": [
-    "transporte"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260425-3"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260425-7",
-   "title": "Convenio – Adenda de prórroga de 31 de marzo de 2026, del convenio entre la Comunidad de Madrid (Consejería de Presidencia, Justicia e Interior) y el Ayuntamiento de Guadarrama, para establecer un protocolo de actuación de la agrupación municipal de voluntarios de protección civil en el ámbito de la extinción de incendios y salvamento",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260425-7",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260425-7"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260425-8",
-   "title": "Convenio – Convenio de colaboración de 26 de marzo de 2026, entre la Comunidad de Madrid, a través de la Consejería de Familia, Juventud y Asuntos Sociales, y el Ayuntamiento de Colmenar Viejo para la",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260425-8",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260425-8"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260427-10",
-   "title": "Puesto libre designación – Resolución de 15 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260427-10",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260427-10"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260427-8",
-    "bocm-BOCM-20260427-9"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260427-101",
    "title": "– Valdilecha. Ofertas de empleo. Proceso selectivo – Valdilecha. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-101",
    "themes": [
     "empleo"
@@ -8629,7 +8248,7 @@
    "id": "bocm-BOCM-20260427-103",
    "title": "– Villaviciosa de Odón. Ofertas de empleo. Proceso selectivo – Villaviciosa de Odón. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-103",
    "themes": [
     "empleo"
@@ -8645,7 +8264,7 @@
    "id": "bocm-BOCM-20260427-106",
    "title": "– Cooperativa de Viviendas para Jóvenes S. XXI, S. Coop. Mad. Disolución cooperativa – Cooperativa de Viviendas para Jóvenes S. XXI, S. Coop. Mad. Disolución cooperativa",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-106",
    "themes": [
     "vivienda",
@@ -8664,7 +8283,7 @@
    "id": "bocm-BOCM-20260427-11",
    "title": "Aspirantes proceso selectivo – Resolución de 21 de abril de 2026, de la Dirección General de Función Pública, mediante la que se procede a la exclusión de aspirantes de las pruebas selectivas para el ingreso, por el sistema de promoción interna, en el Cuerpo de Técnicos de Gestión de Administración General, Grupo A, Subgrupo A2, de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-11",
    "themes": [],
    "lifeEvents": [],
@@ -8682,7 +8301,7 @@
    "id": "bocm-BOCM-20260427-13",
    "title": "Convocatoria proceso selectivo – Resolución de 14 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se convoca procedimiento de acceso al Cuerpo de Catedráticos de Música y Artes Escénicas vinculado a las Enseñanzas de Arte Dramático en la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-13",
    "themes": [],
    "lifeEvents": [],
@@ -8693,24 +8312,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260427-15",
-   "title": "Puesto libre designación – Orden 866/2026, de 15 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de carrer",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260427-15",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260427-15"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260427-24",
    "title": "Formalización contrato – Resolución de 15 de abril de 2026, de la Secretaría General Técnica de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se dispone la publicación en los b",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-24",
    "themes": [
     "vivienda",
@@ -8733,7 +8338,7 @@
    "id": "bocm-BOCM-20260427-39",
    "title": "Convocatoria contrato – Anuncio de 22 de abril de 2026, por el que se convoca la licitación para la contratación del suministro de gasóleo clases A, B y C en recintos de Metro de Madrid (Expediente 6012600112)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-39",
    "themes": [
     "transporte"
@@ -8746,26 +8351,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260427-40",
-   "title": "Adjudicación contrato – Anuncio de 22 de abril de 2026, de adjudicación del contrato titulado “Suministro de material no matriculado específico para escaleras mecánicas Thyssen para Metro de Madrid” (Expediente 6012600062)",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260427-40",
-   "themes": [
-    "transporte"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260427-40"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260427-6",
    "title": "Bolsa única personal laboral – Resolución de 13 de abril de 2026, de la Dirección General de Función Pública, por la que se requiere la presentación de documentación acreditativa del cumplimiento de requisitos y la elección de zonas geográficas a efectos de constitución del primer bloque de la bolsa única permanentemente abierta de la categoría profesional de Titulado Medio, especialidad de Psicomotricista (Grupo II, Nivel 7, Área D) de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "ROLLING",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-6",
    "themes": [],
    "lifeEvents": [],
@@ -8779,7 +8368,7 @@
    "id": "bocm-BOCM-20260427-61",
    "title": "– Boadilla del Monte. Ofertas de empleo. Convocatoria proceso selectivo – Boadilla del Monte. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-61",
    "themes": [
     "empleo"
@@ -8795,7 +8384,7 @@
    "id": "bocm-BOCM-20260427-67",
    "title": "– Fresnedillas de la Oliva. Ofertas de empleo. Proceso selectivo – Fresnedillas de la Oliva. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-67",
    "themes": [
     "empleo"
@@ -8811,7 +8400,7 @@
    "id": "bocm-BOCM-20260427-68",
    "title": "– Fuenlabrada. Régimen económico. Extracto convocatoria subvenciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-68",
    "themes": [],
    "lifeEvents": [],
@@ -8825,7 +8414,7 @@
    "id": "bocm-BOCM-20260427-7",
    "title": "Aspirantes proceso selectivo – Resolución de 15 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones provisionales de personas aspirantes admitidas y excluidas en las pruebas selectivas para el ingreso, por el sistema general de acceso libre, en el Cuerpo de Técnicos Auxiliares, Escala de Auxiliares de Archivos, Bibliotecas y Museos, de Administración Especial, Grupo C, Subgrupo C1, de la Comunidad de Madrid, y se publica la relación provisional de personas excluidas y la de aspirantes que han solicitado adaptación, con indicación de si deben aportar o no documentación acreditativa de la adaptación solicitada",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-7",
    "themes": [],
    "lifeEvents": [],
@@ -8839,7 +8428,7 @@
    "id": "bocm-BOCM-20260427-85",
    "title": "– Pinto. Ofertas de empleo. Convocatoria proceso selectivo – Pinto. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-85",
    "themes": [
     "empleo"
@@ -8855,7 +8444,7 @@
    "id": "bocm-BOCM-20260427-87",
    "title": "– Rivas-Vaciamadrid. Ofertas de empleo. Convocatoria proceso selectivo – Rivas-Vaciamadrid. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-87",
    "themes": [
     "empleo"
@@ -8876,7 +8465,7 @@
    "id": "bocm-BOCM-20260427-93",
    "title": "– Santorcaz. Ofertas de empleo. Oferta empleo público – Santorcaz. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-93",
    "themes": [
     "empleo"
@@ -8892,7 +8481,7 @@
    "id": "bocm-BOCM-20260427-94",
    "title": "– Sevilla la Nueva. Ofertas de empleo. Convocatoria proceso selectivo – Sevilla la Nueva. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-94",
    "themes": [
     "empleo"
@@ -8908,7 +8497,7 @@
    "id": "bocm-BOCM-20260427-95",
    "title": "– Soto del Real. Régimen económico. Reglamento Subvención Transporte Urbano – Soto del Real. Régimen económico. Reglamento Subvención Transporte Urbano",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260427-95",
    "themes": [
     "transporte"
@@ -8921,73 +8510,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260428-11",
-   "title": "Puesto libre designación – Orden 910/2026, de 17 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de carrer",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-11",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-11"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260428-12",
-   "title": "Puesto libre designación – Orden de 17 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se resuelve la convocatoria aprobada por Orden de 26 de febrero de 2026, de",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-12",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-12"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260428-13"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260428-14",
-   "title": "Puesto libre designación – Orden de 20 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo v",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-14",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-14"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260428-19",
-   "title": "Concesión subvenciones – Resolución de 9 de abril de 2026, de la Directora General de Formación, por la que se hace pública la relación de subvenciones concedidas con cargo al Programa 241A “Formación",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-19",
-   "themes": [
-    "educacion"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-19"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260428-22",
    "title": "Ayudas individualizadas de desayuno escolar curso 2025-2026 (Madrid)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-22",
    "themes": [
     "educacion"
@@ -9002,28 +8528,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260428-25",
-   "title": "Concesión ayudas – Orden 1154/2026, de 24 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se concede ayudas del Bono Social Térmico 2025 a 50.000 beneficiarios (fase 3) ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-25",
-   "themes": [
-    "energia_suministros"
-   ],
-   "lifeEvents": [
-    "ingresos_bajos"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-25"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260428-30",
    "title": "Cesión de uso – Orden de 8 de abril de 2026, de corrección de error material de la Orden de 3 de marzo de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se acuerda la cesión de uso ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-30",
    "themes": [
     "empleo"
@@ -9039,7 +8547,7 @@
    "id": "bocm-BOCM-20260428-31",
    "title": "Formalización contrato – Resolución de 16 de abril de 2026, de la Dirección General de Patrimonio y Contratación, por la que se dispone la publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID y",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-31",
    "themes": [],
    "lifeEvents": [],
@@ -9053,7 +8561,7 @@
    "id": "bocm-BOCM-20260428-32",
    "title": "Formalización contrato – Resolución 939/2026, de 17 de abril, del Director-Gerente de la Agencia de Vivienda Social de la Comunidad de Madrid, por la que se hace pública la formalización del contrato ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-32",
    "themes": [
     "vivienda"
@@ -9071,7 +8579,7 @@
    "id": "bocm-BOCM-20260428-33",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 17 de abril de 2026, relativo al contrato del “Servicio de mantenimiento de la red de comunicaciones Capa Core y Data Centers”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-33",
    "themes": [],
    "lifeEvents": [],
@@ -9092,7 +8600,7 @@
    "id": "bocm-BOCM-20260428-39",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 23 de abril de 2026, relativo al contrato de consultoría y asistencia técnica para labores de soporte y gestión de los proyectos de sistemas",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-39",
    "themes": [],
    "lifeEvents": [],
@@ -9113,26 +8621,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260428-5",
-   "title": "Puesto libre designación – Orden de 17 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-5",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-5"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260428-7",
    "title": "Tribunal proceso selectivo – Resolución de 13 de abril de 2026, de la Dirección General de Función Pública, por la que se modifica la composición del tribunal calificador de las pruebas selectivas par",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-7",
    "themes": [],
    "lifeEvents": [],
@@ -9146,7 +8638,7 @@
    "id": "bocm-BOCM-20260428-72",
    "title": "– El Molar. Ofertas de empleo. Proceso selectivo – El Molar. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-72",
    "themes": [
     "empleo"
@@ -9162,7 +8654,7 @@
    "id": "bocm-BOCM-20260428-73",
    "title": "– Fuenlabrada. Ofertas de empleo. Convocatoria proceso selectivo – Fuenlabrada. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-73",
    "themes": [
     "empleo"
@@ -9181,7 +8673,7 @@
    "id": "bocm-BOCM-20260428-77",
    "title": "– Guadalix de la Sierra. Ofertas de empleo. Oferta empleo público – Guadalix de la Sierra. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-77",
    "themes": [
     "empleo"
@@ -9194,29 +8686,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260428-8",
-   "title": "Puesto libre designación – Orden de 20 de abril de 2026, del Consejero de Vivienda, Transportes e Infraestructuras, por la que se aprueba convocatoria pública para la provisión de varios puestos de tr",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260428-8",
-   "themes": [
-    "vivienda",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260428-8"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260428-82",
    "title": "– Majadahonda. Ofertas de empleo. Convocatoria proceso selectivo – Majadahonda. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-82",
    "themes": [
     "empleo"
@@ -9232,7 +8705,7 @@
    "id": "bocm-BOCM-20260428-92",
    "title": "– Sevilla la Nueva. Ofertas de empleo. Proceso selectivo – Sevilla la Nueva. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-92",
    "themes": [
     "empleo"
@@ -9248,7 +8721,7 @@
    "id": "bocm-BOCM-20260428-97",
    "title": "– Villanueva del Pardillo. Ofertas de empleo. Proceso selectivo – Villanueva del Pardillo. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-97",
    "themes": [
     "empleo"
@@ -9264,7 +8737,7 @@
    "id": "bocm-BOCM-20260428-98",
    "title": "– Villaviciosa de Odón. Ofertas de empleo. Convocatoria proceso selectivo – Villaviciosa de Odón. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-98",
    "themes": [
     "empleo"
@@ -9280,7 +8753,7 @@
    "id": "bocm-BOCM-20260428-99",
    "title": "– Villavieja del Lozoya. Ofertas de empleo. Convocatoria proceso selectivo – Villavieja del Lozoya. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260428-99",
    "themes": [
     "empleo"
@@ -9296,7 +8769,7 @@
    "id": "bocm-BOCM-20260429-1",
    "title": "Convocatoria proceso selectivo – Orden 1049/2026, de 13 de abril, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan pruebas selectivas para el ingreso, por el sistema general de ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-1",
    "themes": [
     "empleo"
@@ -9309,24 +8782,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260429-18",
-   "title": "Concesión subvenciones – Resolución de 16 de abril de 2026, del Director General de Autónomos y Emprendimiento, por la que se hace pública la relación de subvenciones concedidas con cargo al Programa ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260429-18",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260429-18"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260429-2",
    "title": "Aspirantes proceso selectivo – Resolución de 16 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones definitivas de personas aspirantes admitidas y excluidas en las pruebas selectivas para el acceso, por el sistema general de acceso libre, a plazas de la categoría profesional de Titulado Medio (Grupo II, Nivel 7, Área C) de la Comunidad de Madrid, se publica la relación definitiva de personas aspirantes excluidas y se anuncia la celebración del primer ejercicio de la fase de oposición",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-2",
    "themes": [],
    "lifeEvents": [],
@@ -9337,29 +8796,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260429-22",
-   "title": "Concesión subvenciones – Resolución de 20 de abril de 2026, la Secretaría General Técnica de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se hace público el listado de las sub",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260429-22",
-   "themes": [
-    "vivienda",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260429-22"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260429-24",
    "title": "Ampliación plazo Solicitud Única ayuda básica a la renta para la sostenibilidad 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-24",
    "themes": [
     "ingresos_minimos"
@@ -9377,7 +8817,7 @@
    "id": "bocm-BOCM-20260429-25",
    "title": "Ampliación plazo Solicitud Única 2026 (Ayuda redistributiva complementaria)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-25",
    "themes": [],
    "lifeEvents": [],
@@ -9391,7 +8831,7 @@
    "id": "bocm-BOCM-20260429-26",
    "title": "Ampliación plazo Solicitud Única y ayuda complementaria a la renta para jóvenes agricultores 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-26",
    "themes": [
     "cultura_juventud",
@@ -9410,7 +8850,7 @@
    "id": "bocm-BOCM-20260429-27",
    "title": "Ampliación plazo Solicitud Única 2026 (Clima y Medio Ambiente) en Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-27",
    "themes": [],
    "lifeEvents": [],
@@ -9424,7 +8864,7 @@
    "id": "bocm-BOCM-20260429-28",
    "title": "Ampliación plazo Solicitud Única ayuda agricultores dificultades 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-28",
    "themes": [],
    "lifeEvents": [],
@@ -9438,7 +8878,7 @@
    "id": "bocm-BOCM-20260429-3",
    "title": "Lista de espera interinos – Resolución de 20 de abril de 2026, de la Dirección General de Función Pública, por la que se requiere documentación acreditativa del cumplimiento de requisitos a efectos de",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-3",
    "themes": [],
    "lifeEvents": [],
@@ -9449,24 +8889,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260429-30",
-   "title": "Bases reguladoras – Orden 955/2026, de 15 de abril, de corrección de errores de la Orden 645/2026, de 16 de marzo, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueban las ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260429-30",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260429-30"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260429-32",
    "title": "Formalización contrato – Resolución de 17 de abril de 2026, de la Secretaria General Técnica de la Consejería de Economía, Hacienda y Empleo, por la que se hace pública la formalización de los dos lot",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-32",
    "themes": [
     "empleo"
@@ -9482,7 +8908,7 @@
    "id": "bocm-BOCM-20260429-33",
    "title": "Emplazamiento – Resolución de 17 de abril de 2026, del Director General de Recursos Humanos, por la que se emplaza a los posibles interesados para que puedan personarse en el recurso contencioso-administrativo interpuesto por doña María Asunción Agulló Iranzo en relación con el procedimiento selectivo convocado por Resolución de 20 de febrero de 2025",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-33",
    "themes": [],
    "lifeEvents": [],
@@ -9496,7 +8922,7 @@
    "id": "bocm-BOCM-20260429-34",
    "title": "Formalización contrato – Anuncio de 20 de abril de 2026, de formalización del contrato titulado “Servicio de mantenimiento integral de los sistemas embarcados en el material movil serie 3000 1.a de Metro de Madrid” (Expediente 6012500315) - (Contrato 7226000188)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-34",
    "themes": [
     "transporte"
@@ -9512,7 +8938,7 @@
    "id": "bocm-BOCM-20260429-35",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 24 de abril de 2026, relativo al contrato del plan de continuidad y transformación tecnológica Anuncio indicativo contratación – Anunc",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-35",
    "themes": [
     "educacion"
@@ -9530,7 +8956,7 @@
    "id": "bocm-BOCM-20260429-36",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 27 de abril de 2026, relativo al contrato del servicio de mantenimiento del software BMC instalado en el centro de operaciones y monitorización de mantenimiento de instalaciones y telecomunicaciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-36",
    "themes": [],
    "lifeEvents": [],
@@ -9552,7 +8978,7 @@
    "id": "bocm-BOCM-20260429-38",
    "title": "Convocatoria contrato – Anuncio de 27 de abril de 2026, por el que se convoca la licitación para la contratación del servicio de revisión y reparación de reductores Flender Akoa 565 coches 8000 1.o serie para Metro de Madrid (Expediente 6012600119)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-38",
    "themes": [
     "transporte"
@@ -9571,7 +8997,7 @@
    "id": "bocm-BOCM-20260429-4",
    "title": "Tribunal proceso selectivo – Resolución de 20 de abril de 2026, de la Dirección General de Función Pública, por la que se hace pública la composición del tribunal calificador de las pruebas selectivas",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-4",
    "themes": [],
    "lifeEvents": [],
@@ -9585,7 +9011,7 @@
    "id": "bocm-BOCM-20260429-45",
    "title": "Convocatoria contrato – Resolución de 27 de abril de 2026, del Consejero Delegado de la Agencia de Contratación Sanitaria de la Comunidad de Madrid, por la que se anuncia la licitación del contrato de",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-45",
    "themes": [
     "salud"
@@ -9601,7 +9027,7 @@
    "id": "bocm-BOCM-20260429-47",
    "title": "Convocatoria contrato – Resolución de 17 de abril de 2026, de la Dirección-Gerencia del Hospital General Universitario “Gregorio Marañón”, por la que se dispone la publicación en el boletín y en el “perfil del contratante” en Internet de la convocatoria del contrato de «Servicios de traslados del personal sanitario para prestar asistencia domiciliaria para el Hospital General Universitario “Gregorio Marañón”». A/SER-013660/2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-47",
    "themes": [
     "salud"
@@ -9617,7 +9043,7 @@
    "id": "bocm-BOCM-20260429-5",
    "title": "Aspirantes proceso selectivo – Resolución de 23 de abril de 2026, de la Dirección General de Función Pública, por la que se anuncia la apertura de un nuevo plazo de acreditación de los méritos alegado",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-5",
    "themes": [],
    "lifeEvents": [],
@@ -9631,7 +9057,7 @@
    "id": "bocm-BOCM-20260429-57",
    "title": "Convocatoria contrato – Anuncio de 21 de abril de 2026, de Canal de Isabel II, S. A., M. P., por el que se hace pública la convocatoria del contrato por procedimiento abierto para los servicios de man",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-57",
    "themes": [],
    "lifeEvents": [],
@@ -9645,7 +9071,7 @@
    "id": "bocm-BOCM-20260429-65",
    "title": "– Ciempozuelos. Ofertas de empleo. Oferta empleo público – Ciempozuelos. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-65",
    "themes": [
     "empleo"
@@ -9661,7 +9087,7 @@
    "id": "bocm-BOCM-20260429-77",
    "title": "– San Lorenzo de El Escorial. Ofertas de empleo. Convocatoria proceso selectivo – San Lorenzo de El Escorial. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-77",
    "themes": [
     "empleo"
@@ -9677,7 +9103,7 @@
    "id": "bocm-BOCM-20260429-8",
    "title": "Convocatoria proceso selectivo – Resolución de 23 de abril de 2026, de la Directora de la Fundación de Investigación Biomédica del Hospital Clínico “San Carlos”, por la que se anuncia la cobertura med",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-8",
    "themes": [],
    "lifeEvents": [],
@@ -9691,7 +9117,7 @@
    "id": "bocm-BOCM-20260429-80",
    "title": "– San Martín de Valdeiglesias. Ofertas de empleo. Convocatoria proceso selectivo – San Martín de Valdeiglesias. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260429-80",
    "themes": [
     "empleo"
@@ -9704,36 +9130,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260430-10",
-   "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260430-10",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260430-10"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260430-11",
-    "bocm-BOCM-20260430-12",
-    "bocm-BOCM-20260430-13",
-    "bocm-BOCM-20260430-14",
-    "bocm-BOCM-20260430-15",
-    "bocm-BOCM-20260430-4",
-    "bocm-BOCM-20260430-6",
-    "bocm-BOCM-20260430-9"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260430-16",
    "title": "Aspirantes proceso selectivo – Resolución de 20 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones definitivas de personas aspirantes admitidas y exclu",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-16",
    "themes": [],
    "lifeEvents": [],
@@ -9747,7 +9147,7 @@
    "id": "bocm-BOCM-20260430-17",
    "title": "Bolsa única personal laboral – Resolución de 21 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueba y publica la constitución del primer bloque de la bolsa única permanentemente abierta a efectos de contrataciones temporales de la categoría profesional de Conductor (Grupo III, Nivel 5, Área B) de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "ROLLING",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-17",
    "themes": [],
    "lifeEvents": [],
@@ -9758,27 +9158,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260430-18",
-   "title": "Puesto libre designación – Resolución de 22 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260430-18",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260430-18"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260504-9"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260430-19",
    "title": "Resolución proceso selectivo – Resolución conjunta de 24 de abril de 2026, de la Dirección General de Recursos Humanos y de la Dirección General de Función Pública, por la que se modifica la Resolución de 8 de abril de 2026 conjunta de la Dirección General de Recursos Humanos y de la Dirección General de Función Pública, mediante la que se hace pública una relación complementaria de personas aspirantes aprobadas en las pruebas selectivas del proceso selectivo de promoción interna para ingreso en el Cuerpo Superior de Gestión de Administración General, Grupo A, Subgrupo A1, de la Comunidad de Madrid, y se habilita plazo para la acreditación del cumplimiento de requisitos y la elección de destinos por las personas incluidas en esa relación",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-19",
    "themes": [],
    "lifeEvents": [],
@@ -9789,26 +9172,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260430-21",
-   "title": "Puesto libre designación – Resolución de 20 de abril de 2026, de la Dirección-Gerencia del Consorcio Regional de Transportes Públicos Regulares de Madrid, por la que se resuelve la convocatoria aprobada mediante Resolución de 16 de enero de 2026 (BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID de 28 de enero de 2026), para la provisión de un puesto de trabajo vacante en dicho organismo, por el procedimiento de Libre Designación",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260430-21",
-   "themes": [
-    "transporte"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260430-21"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260430-23",
    "title": "Convocatoria proceso selectivo – Anuncio de 22 de abril de 2026, de convocatorias de empleo para procesos de selección para la cobertura de 4 puestos en la Fundación para la Investigación e Innovación",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-23",
    "themes": [
     "empleo"
@@ -9821,26 +9188,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260430-28",
-   "title": "Concesión subvenciones – Orden 670/2026, de 19 de abril, de la Consejería de Cultura, Turismo y Deporte, por la que se revocan determinadas subvenciones concedidas mediante la Orden 2709/2025, de 19 d",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260430-28",
-   "themes": [
-    "cultura_juventud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260430-28"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260430-29",
    "title": "Formalización contrato – Anuncio de 21 de abril de 2026, de formalización del contrato titulado “Acuerdo marco para el suministro de hardware y software de la plataforma servidor” (Expediente 6012500324)-(Contrato I00079-001)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-29",
    "themes": [],
    "lifeEvents": [],
@@ -9854,7 +9205,7 @@
    "id": "bocm-BOCM-20260430-45",
    "title": "Convocatoria contrato – Resolución de 21 de abril de 2026, de la Secretaría General Técnica de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se anuncia la licitación del contrato “",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-45",
    "themes": [],
    "lifeEvents": [],
@@ -9868,7 +9219,7 @@
    "id": "bocm-BOCM-20260430-46",
    "title": "Formalización contrato – Resolución de 21 de abril de 2026, de la Secretaría General Técnica de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se anuncia la formalización del contra",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-46",
    "themes": [],
    "lifeEvents": [],
@@ -9882,7 +9233,7 @@
    "id": "bocm-BOCM-20260430-47",
    "title": "Información previa contratación – Resolución de 22 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se hace público el anuncio de información previa del contrato",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-47",
    "themes": [
     "educacion"
@@ -9897,26 +9248,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260430-5",
-   "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo de carrer",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260430-5",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260430-5"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260430-54",
    "title": "– Alcorcón. Ofertas de empleo. Convocatoria proceso selectivo – Alcorcón. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-54",
    "themes": [
     "empleo"
@@ -9936,7 +9271,7 @@
    "id": "bocm-BOCM-20260430-58",
    "title": "– Arroyomolinos. Ofertas de empleo. Convocatoria proceso selectivo – Arroyomolinos. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-58",
    "themes": [
     "empleo"
@@ -9952,7 +9287,7 @@
    "id": "bocm-BOCM-20260430-60",
    "title": "Subvenciones para Carrozas y Pasacalles Fiestas Virgen del Consuelo 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-60",
    "themes": [],
    "lifeEvents": [],
@@ -9966,7 +9301,7 @@
    "id": "bocm-BOCM-20260430-61",
    "title": "Subvenciones para cartel anunciador Fiestas Patronales Virgen del Consuelo 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-61",
    "themes": [],
    "lifeEvents": [],
@@ -9980,7 +9315,7 @@
    "id": "bocm-BOCM-20260430-64",
    "title": "– Corpa. Ofertas de empleo. Oferta empleo público – Corpa. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-64",
    "themes": [
     "empleo"
@@ -9996,7 +9331,7 @@
    "id": "bocm-BOCM-20260430-67",
    "title": "– Las Rozas de Madrid. Ofertas de empleo. Oferta empleo público – Las Rozas de Madrid. Ofertas de empleo. Oferta empleo público",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-67",
    "themes": [
     "empleo"
@@ -10012,7 +9347,7 @@
    "id": "bocm-BOCM-20260430-71",
    "title": "– Pozuelo de Alarcón. Régimen económico. Extracto convocatoria subvenciones",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260430-71",
    "themes": [],
    "lifeEvents": [],
@@ -10023,169 +9358,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260501-1",
-   "title": "Convenio colectivo – Resolución de 10 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación de la revisión salari",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-1",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-1"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260502-1"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260501-10",
-   "title": "Convenio – Adenda de 17 de abril de 2026, de prórroga del convenio entre la Comunidad de Madrid, a través de la Consejería de Sanidad, el Servicio Madrileño de Salud y el Consejo Evangélico de Madrid,",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-10",
-   "themes": [
-    "salud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-10"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260501-11"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260501-17",
-   "title": "Convenio – Convenio de 10 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Familia, Juventud y Asuntos Sociales, y la Asociación Familias para la Acogida Mater Hospitalaria",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-17",
-   "themes": [
-    "familia_infancia"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-17"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260501-2",
-   "title": "Convenio colectivo – Resolución de 17 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación de la revisión salari",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-2",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-2"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260501-3"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260501-4",
-   "title": "Convenio prestación servicio – Convenio de 13 de abril de 2026, para la prestación del Servicio de Alcantarillado en el municipio de Majadahonda, entre la Comunidad de Madrid, Canal de Isabel II, Cana",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-4",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-4"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260501-5",
-   "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Femxa Formación, S. L. U., para la información, orientación y apoyo ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260501-5",
-   "themes": [
-    "educacion",
-    "empleo"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260501-5"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260501-6",
-    "bocm-BOCM-20260502-10",
-    "bocm-BOCM-20260502-11",
-    "bocm-BOCM-20260502-12",
-    "bocm-BOCM-20260502-13",
-    "bocm-BOCM-20260502-2",
-    "bocm-BOCM-20260502-3",
-    "bocm-BOCM-20260502-4",
-    "bocm-BOCM-20260502-5",
-    "bocm-BOCM-20260502-6",
-    "bocm-BOCM-20260502-7",
-    "bocm-BOCM-20260502-8",
-    "bocm-BOCM-20260502-9"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260502-14",
-   "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y la Asociación de Empresarios del Henares - AEDHE para la informació",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260502-14",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260502-14"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260502-15",
-    "bocm-BOCM-20260502-16",
-    "bocm-BOCM-20260502-17",
-    "bocm-BOCM-20260502-18",
-    "bocm-BOCM-20260502-19",
-    "bocm-BOCM-20260502-20"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260502-21",
-   "title": "Convenio – Convenio de 16 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Medio Ambiente, Agricultura e Interior (Centro de Asuntos Taurinos) y la Fundación del Toro de Li",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260502-21",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260502-21"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260504-10",
    "title": "Convocatoria proceso selectivo – Anuncio de 21 de abril de 2026, por el que se convoca procedimiento de selección para cubrir dos plazas para Invest in Madrid de la Fundación Madrid por la Competitividad",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-10",
    "themes": [],
    "lifeEvents": [],
@@ -10199,7 +9375,7 @@
    "id": "bocm-BOCM-20260504-104",
    "title": "– San Sebastián de los Reyes. Ofertas de empleo. Convocatoria proceso selectivo – San Sebastián de los Reyes. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-104",
    "themes": [
     "empleo"
@@ -10215,7 +9391,7 @@
    "id": "bocm-BOCM-20260504-105",
    "title": "– San Sebastián de los Reyes. Ofertas de empleo. Proceso selectivo – San Sebastián de los Reyes. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-105",
    "themes": [
     "empleo"
@@ -10228,29 +9404,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260504-11",
-   "title": "Puesto libre designación – Orden de 22 de abril de 2026, de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se resuelve la convocatoria aprobada por Orden de 3 de marzo de 2026, ",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-11",
-   "themes": [
-    "vivienda",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-11"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260504-15",
    "title": "Aspirantes proceso selectivo – Resolución de 16 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “José Germain” del Servicio Madrileño de Salud, por la que se publica la relación definitiva de admitidos y excluidos al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Sección de Facultativo Especialista en Psicología Clínica en este centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-15",
    "themes": [
     "salud"
@@ -10266,7 +9423,7 @@
    "id": "bocm-BOCM-20260504-17",
    "title": "Aspirantes proceso selectivo – Resolución de 8 de abril de 2026, de la Dirección-Gerencia del Hospital General Universitario “Gregorio Marañón” del Servicio Madrileño de Salud, por la que se publica la relación provisional de admitidos/as y excluidos/as al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Sección de Anestesiología y Reanimación (Preoperatorio) en ese centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-17",
    "themes": [
     "salud"
@@ -10285,7 +9442,7 @@
    "id": "bocm-BOCM-20260504-19",
    "title": "Aspirantes proceso selectivo – Resolución de 6 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “La Paz”, del Servicio Madrileño de Salud, por la que se publica la relación provisional de admitidos/as y excluidos/as al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Sección de Oncología Radioterápica, Braquiterapia en ese centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-19",
    "themes": [
     "salud"
@@ -10305,7 +9462,7 @@
    "id": "bocm-BOCM-20260504-22",
    "title": "Aspirantes proceso selectivo – Resolución de 15 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “La Paz” del Servicio Madrileño de Salud, por la que se publica la relación provisional de admitidos/as y excluidos/as al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Servicio de Pediatría y sus Áreas Específicas, Cuidados Intensivos Pediátricos en ese centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-22",
    "themes": [
     "salud"
@@ -10327,7 +9484,7 @@
    "id": "bocm-BOCM-20260504-31",
    "title": "Aspirantes proceso selectivo – Resolución de 10 de abril de 2026, de la Dirección-Gerencia del Hospital Central de la Cruz Roja del Servicio Madrileño de Salud, por la que se publica la relación provisional de admitidos/as al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Sección de Geriatría en ese centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-31",
    "themes": [
     "salud"
@@ -10349,7 +9506,7 @@
    "id": "bocm-BOCM-20260504-34",
    "title": "Aspirantes proceso selectivo – Resolución de 7 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario de Getafe del Servicio Madrileño de Salud, por la que se publica la relación definitiva de admitidos y excluidos al proceso de provisión convocado para la cobertura de un puesto de Jefe/a de Sección de Obstetricia y Ginecología con perfil de gestión lista de espera quirúrgica de ginecología, en ese centro asistencial",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-34",
    "themes": [
     "salud"
@@ -10365,43 +9522,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260504-44",
-   "title": "Puesto libre designación – Orden 1104/2026, de 21 de abril, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se resuelve la convocatoria aprobada por Orden 3821/2025, de 12 de novie",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-44",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-44"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260504-5",
-   "title": "Puesto libre designación – Orden de 22 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 19 de febrero de 2026 (BOLETÍN OFI",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-5",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-5"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260504-6"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260504-50",
    "title": "Subvenciones para integración laboral de personas en riesgo de exclusión social (2026)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-50",
    "themes": [],
    "lifeEvents": [],
@@ -10415,7 +9539,7 @@
    "id": "bocm-BOCM-20260504-52",
    "title": "Becas Bachillerato 2026-2027 en centros privados de la Comunidad de Madrid",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-52",
    "themes": [
     "educacion"
@@ -10430,40 +9554,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260504-54",
-   "title": "Concesión subvenciones – Resolución 34/2026, de 21 de abril, del Director General de Deportes, por la que se publica en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID la relación de los beneficiarios de",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-54",
-   "themes": [
-    "cultura_juventud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-54"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260504-57",
-   "title": "Corrección de errores: Ayudas para personal investigador predoctoral URJC 2026",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-57",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-57"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260504-58",
    "title": "Formalización contrato – Resolución de 22 de abril de 2026, de la Dirección General de Patrimonio y Contratación, por la que se dispone la publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID y",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-58",
    "themes": [],
    "lifeEvents": [],
@@ -10474,29 +9568,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260504-59",
-   "title": "Convenio – Convenio de 17 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo, y la entidad Fundacion Carmen Pardo-Valcarce para la información, or",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-59",
-   "themes": [
-    "educacion",
-    "empleo"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-59"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260504-60",
    "title": "Formalización contrato – Anuncio de 22 de abril de 2026, de formalización del contrato titulado “Servicio de limpieza y mantenimiento de túneles de la red de Metro de Madrid” (Expediente 6012500216)-(Contrato 7226000179)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-60",
    "themes": [
     "transporte"
@@ -10517,7 +9592,7 @@
    "id": "bocm-BOCM-20260504-64",
    "title": "Desistimiento contrato – Anuncio de 28 de abril de 2026, de desistimiento de la licitación para la contratación del “Servicio de mantenimiento integral de sistemas de seguridad en sacos y recintos” (Expediente 6012600078)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-64",
    "themes": [],
    "lifeEvents": [],
@@ -10528,27 +9603,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260504-71",
-   "title": "Formalización contrato – Resolución de 15 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de la tercera prórroga del contrato de suministro de dispositivo intracorpóreo de asistencia ventricular izquierda para el del Hospital Universitario “12 de Octubre”",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260504-71",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260504-71"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260505-41"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260504-84",
    "title": "– Alcobendas. Ofertas de empleo. Proceso selectivo – Alcobendas. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-84",
    "themes": [
     "empleo"
@@ -10564,7 +9622,7 @@
    "id": "bocm-BOCM-20260504-98",
    "title": "– Meco. Ofertas de empleo. Convocatoria proceso selectivo – Meco. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260504-98",
    "themes": [
     "empleo"
@@ -10577,40 +9635,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260505-13",
-   "title": "Aspirantes proceso selectivo – Corrección de errores de la Resolución de 20 de marzo de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones definitivas de personas aspirantes admitidas y excluidas en las pruebas selectivas para el ingreso en el Cuerpo de Técnicos Auxiliares, de Administración Especial, Especialidad de Salud Pública, Grupo C, Subgrupo C1, de la Comunidad de Madrid, se publica la relación definitiva de personas aspirantes excluidas, y se anuncia la celebración del primer ejercicio de la fase de oposición",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-13",
-   "themes": [
-    "salud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-13"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260505-14",
-   "title": "Puesto libre designación – Resolución de 24 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-14",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-14"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260505-15",
    "title": "Aspirantes proceso selectivo – Resolución de 29 de abril de 2026, de la Dirección General de Función Pública, mediante la que se procede a la exclusión de una persona aspirante y se anuncia la apertur",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-15",
    "themes": [],
    "lifeEvents": [],
@@ -10621,24 +9649,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260505-26",
-   "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo v",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-26",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-26"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260505-33",
    "title": "Plan estratégico subvenciones – Orden 645/2026, de 20 de abril, del Consejero de Cultura, Turismo y Deporte, que modifica la Orden 1999/2023, de 13 de noviembre, del Consejero de Cultura, Turismo y De",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-33",
    "themes": [
     "cultura_juventud"
@@ -10654,7 +9668,7 @@
    "id": "bocm-BOCM-20260505-35",
    "title": "Convocatoria contrato – Resolución 1583/2026, de 21 de abril, del Director-Gerente de la Agencia de Vivienda Social de la Comunidad de Madrid, por la que se hace pública la licitación del contrato den",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-35",
    "themes": [
     "vivienda"
@@ -10672,7 +9686,7 @@
    "id": "bocm-BOCM-20260505-37",
    "title": "Anuncio indicativo contratación – Anuncio periódico indicativo de 30 de abril de 2026, relativo al contrato de soporte acompañamientos subestaciones y CTS",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-37",
    "themes": [],
    "lifeEvents": [],
@@ -10686,24 +9700,10 @@
    ]
   },
   {
-   "id": "bocm-BOCM-20260505-39",
-   "title": "Adjudicación contrato – Anuncio de 30 de abril de 2026, de adjudicación del contrato titulado “Servicio de soporte de reparaciones en escaleras mecánicas Thyssen” (expediente 6012500353)",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-39",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-39"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260505-4",
    "title": "Convocatoria proceso selectivo – Orden 1067/2026, de 14 de abril, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan pruebas selectivas para el ingreso, por el sistema general de ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-4",
    "themes": [
     "empleo"
@@ -10716,16 +9716,16 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260505-42",
-   "title": "Formalización contrato – Resolución de 24 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de la segunda prórroga del contrato de «Suministro de cánulas, dispositivo oxigenador para ECMO y dispositivos de asistencia ventricular para los servicios de cirugía cardiaca y cardiología para el Hospital Universitario “12 de Octubre”»",
+   "id": "bocm-BOCM-20260505-41",
+   "title": "Formalización contrato – Resolución de 15 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-42",
+   "accessState": "CLOSED",
+   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-41",
    "themes": [],
    "lifeEvents": [],
    "source": {
     "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-42"
+    "url": "https://www.bocm.es/bocm-20260505-41"
    },
    "hint": true
   },
@@ -10733,7 +9733,7 @@
    "id": "bocm-BOCM-20260505-45",
    "title": "Formalización contrato – Resolución de 14 de abril de 2026, de la Dirección-Gerencia del Ente Público Hospital Universitario de Fuenlabrada, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización del contrato para el “Suministro de diverso material de tejido no tejido, protección de equipos y cabezales de rasuradoras eléctricas para el Hospital Universitario de Fuenlabrada”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-45",
    "themes": [
     "energia_suministros"
@@ -10751,7 +9751,7 @@
    "id": "bocm-BOCM-20260505-49",
    "title": "Convocatoria contrato – Resolución de 22 de abril de 2026, de la Secretaría General Técnica de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se anuncia la licitación del contrato “",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-49",
    "themes": [],
    "lifeEvents": [],
@@ -10765,7 +9765,7 @@
    "id": "bocm-BOCM-20260505-5",
    "title": "Convocatoria proceso selectivo – Orden 1084/2026, de 16 de abril, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan pruebas selectivas para el ingreso, por el sistema general de ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-5",
    "themes": [
     "empleo"
@@ -10781,7 +9781,7 @@
    "id": "bocm-BOCM-20260505-50",
    "title": "Información previa contratación – Resolución de 23 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se hace público el anuncio de información previa del contrato",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-50",
    "themes": [
     "educacion"
@@ -10799,7 +9799,7 @@
    "id": "bocm-BOCM-20260505-51",
    "title": "Formalización contrato – Resolución de 23 de abril de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se dispone la publicación en los boletines oficiales y en el perfil de contratante en Internet la formalización de los lotes 1, 2 y 3 del expediente: Adquisición de productos de vestuario y complementos desechables para centros adscritos a la Agencia Madrileña de Atención Social (3 lotes)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-51",
    "themes": [],
    "lifeEvents": [],
@@ -10813,7 +9813,7 @@
    "id": "bocm-BOCM-20260505-6",
    "title": "Convocatoria proceso selectivo – Orden 1085/2026, de 16 de abril, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan pruebas selectivas para el ingreso, por el sistema general de ",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-6",
    "themes": [
     "empleo"
@@ -10826,30 +9826,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260505-7",
-   "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 5 de marzo de 2026 (BOLETÍN OFICIA",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260505-7",
-   "themes": [
-    "empleo"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260505-7"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260505-8",
-    "bocm-BOCM-20260505-9"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260505-71",
    "title": "– Pinto. Ofertas de empleo. Proceso selectivo – Pinto. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260505-71",
    "themes": [
     "empleo"
@@ -10862,41 +9842,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-1",
-   "title": "Aspirantes proceso selectivo – Corrección de errores de la Resolución de 7 de mayo de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones provisionales de personas aspirantes admitidas y excluidas en las pruebas selectivas para dos procesos, uno por el sistema general de acceso libre y otro de promoción interna, para el acceso a plazas de carácter laboral de la categoría profesional de Diplomado en Enfermería (Grupo II, Nivel 7, Área D), de la Comunidad de Madrid, y se publica la relación provisional de personas excluidas y la de aspirantes que han solicitado adaptación, con indicación de si deben aportar o no documentación acreditativa de la adaptación solicitada",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-1",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-1"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260618-11",
-   "title": "Puesto libre designación – Orden de 9 de junio de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo va",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-11",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-11"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260618-12"
-   ]
-  },
-  {
    "id": "bocm-BOCM-20260618-16",
    "title": "Estado ejecución presupuesto – Resolución de 9 de junio de 2026, de la Dirección General de Presupuestos, por la que se hace público el “Estado de ejecución del presupuesto de gastos” correspondiente al mes de abril de 2026",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-16",
    "themes": [],
    "lifeEvents": [],
@@ -10910,7 +9859,7 @@
    "id": "bocm-BOCM-20260618-17",
    "title": "Subvenciones para la reducción de la siniestralidad laboral (Línea 1)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-17",
    "themes": [],
    "lifeEvents": [],
@@ -10921,24 +9870,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-2",
-   "title": "Resolución proceso selectivo – Corrección de errores de la Resolución de 3 de junio de 2026, de la Dirección General de Función Pública, por la que se procede a la adjudicación de destinos correspondiente a los procesos selectivos para el acceso, por el sistema general de acceso libre y de promoción interna, a plazas de carácter laboral de la categoría profesional de Técnico de Mantenimiento (Grupo III, Nivel 5, Área B) de la Comunidad de Madrid",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-2",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-2"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260618-23",
    "title": "Becas Formación Profesional Grado D 2026-2027 (Comunidad de Madrid)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-23",
    "themes": [
     "educacion"
@@ -10956,7 +9891,7 @@
    "id": "bocm-BOCM-20260618-24",
    "title": "Crédito presupuestario ayudas – Orden 1594/2026, de 5 de junio, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se amplía el importe del crédito presupuestario disponible para la c",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-24",
    "themes": [],
    "lifeEvents": [],
@@ -10970,7 +9905,7 @@
    "id": "bocm-BOCM-20260618-29",
    "title": "Convocatoria contrato – Resolución de 21 de mayo de 2026, de la Agencia para la Administración Digital de la Comunidad de Madrid, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la convocatoria del contrato de “Asistencia técnica para la infraestructura necesaria en el desarrollo del proceso electoral y para la informatización del sistema de captura, procesamiento y difusión de los datos correspondientes a las elecciones a la Asamblea de Madrid año 2027”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-29",
    "themes": [],
    "lifeEvents": [],
@@ -10981,42 +9916,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-3",
-   "title": "Resolución proceso selectivo – Resolución de 8 de junio de 2026, de la Dirección General de Función Pública, por la que se procede a la adjudicacion de destinos correspondiente al proceso selectivo para acceso a plazas de carácter laboral de la categoría profesional de Técnico Especialista I, Especialidad de Autopsias (Grupo III, Nivel 6, Área D) de la Comunidad de Madrid, convocado por Orden 386/2022, de 2 de marzo (BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID de 10 de marzo)",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-3",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-3"
-   },
-   "hint": true
-  },
-  {
-   "id": "bocm-BOCM-20260618-33",
-   "title": "Convenio subvención formación profesorado Religión 2026",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-33",
-   "themes": [
-    "educacion"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-33"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260618-34",
    "title": "Formalización contrato – Anuncio de 9 de junio de 2026, de formalización del contrato titulado “Obras de adecuación de andenes de Línea 6-L. A. R. de Metro de Madrid” (expediente 6012500386) –-[Contratos 7726000096 (Lote 1); 7726000090 (Lote 2)]",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-34",
    "themes": [
     "transporte"
@@ -11029,43 +9932,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-35",
-   "title": "Adjudicación contrato – Anuncio de 15 de junio de 2026, de adjudicación del contrato titulado “Servicio para la renovación del Sistema Integrador de Audio (SIA) del Puesto de Control Central de Metro de Madrid” (Expediente 6012500382)",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-35",
-   "themes": [
-    "transporte"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-35"
-   },
-   "hint": true,
-   "dedupedWith": [
-    "bocm-BOCM-20260618-36"
-   ]
-  },
-  {
-   "id": "bocm-BOCM-20260618-4",
-   "title": "Tribunal proceso selectivo – Corrección de errores de la Resolución de 26 de mayo de 2026, de la Dirección General de Recursos Humanos, por la que se nombran los tribunales correspondientes al proceso selectivo para ingreso en el Cuerpo de Maestros y para adquisición de nuevas especialidades en el citado Cuerpo, convocado por Resolución de 2 de febrero de 2026, y se anuncia la fecha de realización de las pruebas",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-4",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-4"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260618-46",
    "title": "Formalización contrato – Resolución de 8 de junio de 2026, de la Dirección-Gerencia del Hospital Clínico “San Carlos” de Madrid, por la que se dispone la publicación en el BOLETÍN OFICIAL DE LA COMUNI",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-46",
    "themes": [],
    "lifeEvents": [],
@@ -11079,7 +9949,7 @@
    "id": "bocm-BOCM-20260618-47",
    "title": "Convocatoria contrato – Resolución de 25 de mayo de 2026, de la Dirección-Gerencia del Ente Público Hospital Universitario de Fuenlabrada, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” en Internet de la convocatoria del contrato para el “Suministro de diverso material fungible para cuidados intensivos, catéteres venosos centrales, de acceso periférico y líneas medias, con puesta a disposición de equipos del Hospital Universitario de Fuenlabrada”",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-47",
    "themes": [],
    "lifeEvents": [
@@ -11095,7 +9965,7 @@
    "id": "bocm-BOCM-20260618-5",
    "title": "Comisión permanente de selección – Resolución de 8 de junio de 2026, de la Dirección General de Función Pública, por la que se modifica la Resolución de 3 de febrero de 2026, de la Dirección General de Función Pública, por la que se encomienda a la Comisión Permanente de Selección, la realización de los procesos selectivos para el ingreso, por el sistema general de acceso libre, a plazas de carácter laboral de la de la categoría profesional de Personal Auxiliar de Servicios (Grupo V, Nivel 1, Área B) de la Comunidad de Madrid, se procede a la creación de la Comisión Delegada como órgano colegiado encargado del desarrollo y calificación de dichos procesos selectivos, y se hace pública su composición",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-5",
    "themes": [],
    "lifeEvents": [],
@@ -11106,24 +9976,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-50",
-   "title": "Convenio – Adenda de 3 de junio de 2026, de modificación del convenio de colaboración entre la Comunidad de Madrid, a través de la entonces Consejería de Familia, Juventud y Política Social, actual Co",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-50",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-50"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260618-51",
    "title": "Convocatoria contrato – Resolución de 10 de junio de 2026, de la Gerencia de la Agencia Madrileña de Atención Social, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” en Internet de la convocatoria del contrato titulado: Trabajos auxiliares de mantenimiento en 44 centros adscritos a la Agencia Madrileña de Atención Social (5 lotes)",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-51",
    "themes": [],
    "lifeEvents": [],
@@ -11134,24 +9990,10 @@
    "hint": true
   },
   {
-   "id": "bocm-BOCM-20260618-6",
-   "title": "Aspirantes proceso selectivo – Resolución de 10 de junio de 2026, de la Dirección General de Recursos Humanos, por la que se publica la lista complementaria y corrección de errores de las listas definitivas de aspirantes admitidos y excluidos, en el proceso selectivo para ingreso en el Cuerpo de Maestros y para adquisición de nuevas especialidades, aprobadas mediante Resolución de 4 de mayo de 2026",
-   "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
-   "officialSourceUrl": "https://www.bocm.es/bocm-20260618-6",
-   "themes": [],
-   "lifeEvents": [],
-   "source": {
-    "kind": "pipeline-bocm",
-    "url": "https://www.bocm.es/bocm-20260618-6"
-   },
-   "hint": true
-  },
-  {
    "id": "bocm-BOCM-20260618-65",
    "title": "– Ciempozuelos. Ofertas de empleo. Convocatoria proceso selectivo – Ciempozuelos. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-65",
    "themes": [
     "empleo"
@@ -11167,7 +10009,7 @@
    "id": "bocm-BOCM-20260618-7",
    "title": "Convocatoria proceso selectivo – Resolución de 16 de junio de 2026, de la Dirección General de Recursos Humanos, por la que se convoca procedimiento de acceso al Cuerpo de Catedráticos de Enseñanza Secundaria, al Cuerpo de Catedráticos de Escuelas Oficiales de Idiomas y al Cuerpo de Catedráticos de Artes Plásticas y Diseño",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-7",
    "themes": [],
    "lifeEvents": [],
@@ -11181,7 +10023,7 @@
    "id": "bocm-BOCM-20260618-78",
    "title": "– Moralzarzal. Ofertas de empleo. Convocatoria proceso selectivo – Moralzarzal. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-78",
    "themes": [
     "empleo"
@@ -11197,7 +10039,7 @@
    "id": "bocm-BOCM-20260618-80",
    "title": "– Móstoles. Ofertas de empleo. Proceso selectivo – Móstoles. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-80",
    "themes": [
     "empleo"
@@ -11213,7 +10055,7 @@
    "id": "bocm-BOCM-20260618-81",
    "title": "– Móstoles. Ofertas de empleo. Convocatoria proceso selectivo – Móstoles. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-81",
    "themes": [
     "empleo"
@@ -11229,7 +10071,7 @@
    "id": "bocm-BOCM-20260618-83",
    "title": "– Nuevo Baztán. Ofertas de empleo. Convocatoria proceso selectivo – Nuevo Baztán. Ofertas de empleo. Convocatoria proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-83",
    "themes": [
     "empleo"
@@ -11245,7 +10087,7 @@
    "id": "bocm-BOCM-20260618-93",
    "title": "– Torrelodones. Ofertas de empleo. Proceso selectivo – Torrelodones. Ofertas de empleo. Proceso selectivo",
    "scope": "comunidad-madrid",
-   "accessState": "UNKNOWN",
+   "accessState": "CLOSED",
    "officialSourceUrl": "https://www.bocm.es/bocm-20260618-93",
    "themes": [
     "empleo"

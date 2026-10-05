@@ -1,0 +1,273 @@
+{
+	"benefitSlug": "madrid-abono-transporte-joven",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20251231-2-precios-transporte-2026",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/12/31/BOCM-20251231-2.PDF",
+			"title": "Resolución de 29 de diciembre de 2025, de la Dirección-Gerencia del CRTM — publicación del acuerdo del Consejo de Administración por el que se determinan los precios del transporte público en el año 2026 (BOCM nº 311, 31/12/2025)"
+		},
+		{
+			"id": "bocm-20251231-3-tarifas-transporte-2026",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/12/31/BOCM-20251231-3.PDF",
+			"title": "Resolución de 29 de diciembre de 2025, de la Dirección-Gerencia del CRTM — publicación del acuerdo del Consejo de Administración por el que se actualizan las tarifas del transporte público en el año 2026 (BOCM nº 311, 31/12/2025)"
+		},
+		{
+			"id": "bocm-20260612-17-residencia-ttp",
+			"rank": 1,
+			"documentType": "informational",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/06/12/BOCM-20260612-17.PDF",
+			"title": "Anuncio de 5 de junio de 2026, del CRTM — instrucciones sobre requisitos de residencia para la expedición de la Tarjeta de Transporte Público Personal, aplicables desde el 15/06/2026 (BOCM nº 138, 12/06/2026)"
+		},
+		{
+			"id": "bocm-20260122-20-condiciones-ttp",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/01/22/BOCM-20260122-20.PDF",
+			"title": "Resolución de 19 de enero de 2026, del CRTM — Condiciones generales de contratación y utilización de las tarjetas de transporte público personales (Consejo de Administración del 28/10/2025; BOCM nº 18, 22/01/2026)"
+		},
+		{
+			"id": "crtm-abono-joven",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.crtm.es/billetes-y-tarifas/buscador/abono-joven",
+			"title": "CRTM — ficha del título «Abono Joven» (canal y forma de obtención)"
+		},
+		{
+			"id": "crtm-billetes-tarifas",
+			"rank": 3,
+			"documentType": "informational",
+			"url": "https://www.crtm.es/billetes-y-tarifas",
+			"title": "CRTM — página general «Billetes y tarifas» (buscador oficial de títulos)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-min-15",
+			"hard": true,
+			"label": "Tener al menos 15 años (el abono joven empieza a los 15; de 7 a 14 hay un título gratuito distinto)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "bocm-20251231-2-precios-transporte-2026",
+				"locator": "Acuerdo, exposición — descuentos del RDL 17/2025, pág. 65",
+				"excerpt": "Descuento del 50 % para abonos y títulos jóvenes (nacidos entre 2000 y 2011)",
+				"excerptSha256": "e8093ed665bbb08b7a0e254d01409ba3ea3ce9f1fd5cf32864c1e51a5f814c8b"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 15
+			}
+		},
+		{
+			"id": "edad-max-26",
+			"hard": true,
+			"label": "Ser menor de 26 años (el abono joven se puede usar hasta el día en que cumples 26)",
+			"timeDependent": "decreasing",
+			"citation": {
+				"sourceId": "bocm-20251231-2-precios-transporte-2026",
+				"locator": "Acuerdo, exposición — descuentos del RDL 17/2025, pág. 65",
+				"excerpt": "Descuento del 50 % para abonos y títulos jóvenes (nacidos entre 2000 y 2011)",
+				"excerptSha256": "e8093ed665bbb08b7a0e254d01409ba3ea3ce9f1fd5cf32864c1e51a5f814c8b"
+			},
+			"condition": {
+				"field": "age",
+				"op": "lt",
+				"value": 26
+			}
+		},
+		{
+			"id": "residencia-municipio-crtm",
+			"hard": false,
+			"label": "Vivir (empadronamiento) en un municipio de la Comunidad de Madrid — también sirven los municipios de las zonas tarifarias E1/E2 y los del convenio con Castilla-La Mancha, que aquí no podemos comprobar",
+			"citation": {
+				"sourceId": "bocm-20260612-17-residencia-ttp",
+				"locator": "Anuncio, párrafo tercero, pág. 48",
+				"excerpt": "la expedición de las TTP-personales, tanto las nuevas como sus du- plicados, quedará supeditada a la acreditación de la condición de residente en un municipio de la Comunidad de Madrid o en alguno de los municipios integrados en las zonas tarifa- rias E1 y E2, así como en aquellos municipios expresamente previstos en el convenio vi- gente suscrito con la Comunidad Autónoma de Castilla-La Mancha",
+				"excerptSha256": "1e65eaef20f98cb76f66a10d61f234d517fa480bfde14092aadfd2cabb1ab342"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "residencia-ttp-completa",
+			"label": "Para expedir la Tarjeta de Transporte Público Personal hay que acreditar residencia con certificado de empadronamiento vigente (o autorizar su consulta) en un municipio de la Comunidad de Madrid, de las zonas tarifarias E1/E2 o del convenio con Castilla-La Mancha — en Castilla y León, los títulos valen en los municipios de los convenios vigentes",
+			"citation": {
+				"sourceId": "bocm-20260612-17-residencia-ttp",
+				"locator": "Anuncio, párrafo cuarto, pág. 48",
+				"excerpt": "La condición de residente se acreditará mediante certificado de empadronamiento en vi- gor en la que refleje la residencia del solicitante en alguno de los municipios señalados en el apartado anterior",
+				"excerptSha256": "53331dded9af1ec8061056a0a9be8a82fd353b0c466794d155630fa51dba3ff2"
+			}
+		},
+		{
+			"id": "excepcion-familia-numerosa-ttp",
+			"label": "Los titulares de título de familia numerosa pueden obtener la TTP personal aunque su municipio de residencia no cumpla los requisitos anteriores",
+			"citation": {
+				"sourceId": "bocm-20260612-17-residencia-ttp",
+				"locator": "Anuncio, párrafo quinto, pág. 48",
+				"excerpt": "se mantendrá la posibilidad de expedición de la Tarjeta de Trans- porte Público Personal para los titulares de título acreditativo de familia numerosa, en los términos previstos en la normativa específica aplicable",
+				"excerptSha256": "dfbf6261a3e6e3e2cc6cb6224ddd8265b06e511e8139015a31d58bd80c1d746d"
+			}
+		},
+		{
+			"id": "soporte-ttp-personal",
+			"label": "El abono se carga en una Tarjeta de Transporte Público Personal (física o virtual), que es personal e intransferible y cuesta 4 € de emisión; para solicitarla hace falta fotografía tamaño pasaporte y documento de identidad",
+			"citation": {
+				"sourceId": "bocm-20260122-20-condiciones-ttp",
+				"locator": "Condiciones, apartado 1, pág. 61",
+				"excerpt": "El soporte físico es una tarjeta identificativa (Tarjeta de Transporte Público personal), propiedad del Consorcio Regional de Transportes de Madrid",
+				"excerptSha256": "6f90b86b7724b98a7b62e7159492ecd769063fd19fdeb50663f2f82c29c6f2da"
+			}
+		},
+		{
+			"id": "precio-bonificado-2026",
+			"label": "El precio de 10 € es una bonificación del 50 % sobre la tarifa oficial de 20 € garantizada hasta el 31/12/2026 — puede cambiar en años siguientes",
+			"citation": {
+				"sourceId": "bocm-20251231-3-tarifas-transporte-2026",
+				"locator": "Acuerdo, primer punto, pág. 69",
+				"excerpt": "Aprobar las tablas tarifarias actualizadas con un incremento de un 3 % sobre las vigen- tes, con excepción del abono joven y el título 10 viajes de Castilla-León",
+				"excerptSha256": "12127b37a1527d256d4fc33dad740a3e4bba606a3e2d7771eb43c7d68ae9a14e"
+			}
+		},
+		{
+			"id": "descuentos-adicionales",
+			"label": "Con familia numerosa o discapacidad ≥ 65 % el mismo abono cuesta menos: 8 € (FN general o discapacidad), 5 € (FN especial), 6 € (FN general + discapacidad) o 3 € (FN especial + discapacidad)",
+			"citation": {
+				"sourceId": "bocm-20251231-2-precios-transporte-2026",
+				"locator": "Tabla «Abono transporte: precios aplicables con descuento desde 1/1/2026», fila Joven, pág. 66",
+				"excerpt": "10,00 € 8,00 € 8,00 € 5,00 € 6,00 € 3,00 € 3,70 € (*) 365 días de validez",
+				"excerptSha256": "24abaf7bbdcaa81985265913efd77c8608f477f99efe3ef8962e90f860fb4a71"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20251231-2-precios-transporte-2026",
+				"locator": "Acuerdo, primer punto, pág. 65",
+				"excerpt": "Mantener los precios del transporte público en el año 2026 continuando con los mis- mos existentes en el segundo semestre de 2025",
+				"excerptSha256": "8b735236178bd28b105b3380792faae1fd186874cc6a188fd20eaad730048cfb"
+			}
+		},
+		"officialSimulator": {
+			"url": "https://www.crtm.es/billetes-y-tarifas/buscador",
+			"label": "Buscador oficial de títulos del CRTM (tarifa exacta según tu edad y descuentos)",
+			"citation": {
+				"sourceId": "crtm-billetes-tarifas",
+				"locator": "Billetes y tarifas, bloque «Descuentos»",
+				"excerpt": "Puedes encontrar el billete más conveniente para ti en nuestro buscador o, si lo prefieres, consultar todos los precios finales aquí",
+				"excerptSha256": "162125e0ae21f06eb67bceccf92f278dd4ca168baab26dcb37d99b401f31cdba"
+			}
+		},
+		"channel": {
+			"managingBody": "Consorcio Regional de Transportes Públicos Regulares de Madrid (CRTM)",
+			"url": "https://www.crtm.es/billetes-y-tarifas/buscador/abono-joven",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "crtm-abono-joven",
+				"locator": "Ficha del título, «¿Dónde lo adquiero?»",
+				"excerpt": "Para adquirir el Abono Joven, deberás disponer de la Tarjeta de Transporte Público Personal (TTP Personal). Si aún no la tienes, puedes adquirirla a través de los canales habituales",
+				"excerptSha256": "14941570d39944d6dd00febe3dcef9b45fd1bac95149ac67a7ded583fe9cf4f8"
+			}
+		},
+		"documents": [
+			{
+				"id": "ttp-personal",
+				"label": "Tarjeta de Transporte Público Personal (si aún no la tienes: se pide online en webttp.comunidad.madrid o con cita en las oficinas de gestión; emisión 4 €)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20251231-2-precios-transporte-2026",
+					"locator": "Tabla «Precio de las tarjetas», pág. 68",
+					"excerpt": "Tarjeta Transporte Público Personal 4,00 €",
+					"excerptSha256": "322b447b38962529ddb33143a2ef676cc3099409ef929bc5d279c2aa73de5d5f"
+				}
+			},
+			{
+				"id": "dni-nie",
+				"label": "DNI o NIE en vigor — la edad se comprueba con el documento de identidad (o con el Registro Civil en solicitudes de menores sin documento)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Condiciones, apartado de solicitud, pág. 62",
+					"excerpt": "Los datos concretos que serán objeto de consulta, para comprobar la edad, son los que figuran el documento acreditativo de identidad (DNI o NIE) o en el Registro Civil",
+					"excerptSha256": "63406f7d7af02c42a5959428c4db4b7e811eed19e331e045f3101c8c72f1368b"
+				}
+			},
+			{
+				"id": "empadronamiento",
+				"label": "Certificado de empadronamiento en vigor (o autorizar su consulta) — acredita la residencia para expedir la TTP",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20260612-17-residencia-ttp",
+					"locator": "Anuncio, párrafo cuarto, pág. 48",
+					"excerpt": "La condición de residente se acreditará mediante certificado de empadronamiento en vi- gor en la que refleje la residencia del solicitante en alguno de los municipios señalados en el apartado anterior",
+					"excerptSha256": "53331dded9af1ec8061056a0a9be8a82fd353b0c466794d155630fa51dba3ff2"
+				}
+			},
+			{
+				"id": "fotografia",
+				"label": "Fotografía tamaño pasaporte, reciente y en color (si pides la tarjeta en oficina te la pueden tomar allí)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Condiciones, apartado de solicitud, pág. 62",
+					"excerpt": "aportar una fotografía tamaño pasaporte, reciente y en color",
+					"excerptSha256": "a3a275351bec2f093276753eade7e64facf2c84c6fa3cc44b219112756e63ed6"
+				}
+			},
+			{
+				"id": "titulo-fn-discapacidad",
+				"label": "Título de familia numerosa o documento acreditativo de discapacidad (solo si pides el precio reducido por esos colectivos)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Condiciones, apartado de solicitud, pág. 62",
+					"excerpt": "acreditar las condiciones de edad, familia numerosa y/o discapacidad que le dan derecho a obtener descuentos en los títulos que vaya a cargar en dicha Tarjeta de Transporte Público",
+					"excerptSha256": "6b4e28d6ec2d17b0516f2398db20769c644a2dad7262bf622e8d6bdffb1e16c9"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "fixed",
+		"minEur": 10,
+		"maxEur": 10,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20251231-2-precios-transporte-2026",
+			"locator": "Tabla «Abono transporte: precios aplicables con descuento desde 1/1/2026», fila Joven, columna Ordinario, pág. 66",
+			"excerpt": "10,00 € 8,00 € 8,00 € 5,00 € 6,00 € 3,00 € 3,70 € (*) 365 días de validez",
+			"excerptSha256": "24abaf7bbdcaa81985265913efd77c8608f477f99efe3ef8962e90f860fb4a71"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 2
+	},
+	"themes": [
+		"transporte",
+		"cultura_juventud"
+	],
+	"lifeEvents": [
+		"estudiar"
+	]
+}

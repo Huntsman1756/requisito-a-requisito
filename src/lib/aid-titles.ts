@@ -17,6 +17,12 @@ export const AID_TITLES: Record<string, string> = {
 	"madrid-bono-alquiler-joven": "Bono alquiler joven (Comunidad de Madrid)",
 	"madrid-becas-bachillerato-centros-privados":
 		"Becas de Bachillerato en centros privados (Comunidad de Madrid)",
+	"madrid-renta-minima-insercion": "Renta Mínima de Inserción (Comunidad de Madrid)",
+	"prestaciones-dependencia-saad": "Reconocimiento de la dependencia (SAAD)",
+	"madrid-abono-transporte-joven": "Abono transporte joven (Comunidad de Madrid)",
+	"madrid-abono-transporte-65": "Tarjeta azul de transporte (+65, Madrid capital)",
+	"prestacion-cuidado-menor-enfermedad-grave":
+		"Prestación por cuidado de menores con enfermedad grave",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

@@ -64,14 +64,22 @@ export function Explorer() {
 	const filtered = useMemo(() => {
 		if (!items) return [];
 		const nq = norm(q);
-		return items.filter((i) => {
+		const order = { OPEN: 0, ROLLING: 1, UPCOMING: 2, UNKNOWN: 3 } as const;
+		return items
+			.filter((i) => {
 			if (theme && !(i.themes ?? []).includes(theme)) return false;
 			if (event && !(i.lifeEvents ?? []).includes(event)) return false;
 			if (scope && i.scope !== scope) return false;
 			if (state && (i.accessState ?? "UNKNOWN") !== state) return false;
 			if (nq && !norm(i.displayTitle).includes(nq)) return false;
 			return true;
-		});
+		})
+			// UNKNOWN al final (R3-UNK)
+			.sort(
+				(a, b) =>
+					(order[a.accessState as keyof typeof order] ?? 3) -
+					(order[b.accessState as keyof typeof order] ?? 3),
+			);
 	}, [items, theme, event, scope, state, q]);
 
 	return (

@@ -1,0 +1,311 @@
+{
+	"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
+	"standalone": false,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 190–192 (capítulo X: cuidado de menores afectados por cáncer u otra enfermedad grave; texto consolidado)"
+		},
+		{
+			"id": "boe-rd-1148-2011-cancer",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2011/07/29/1148/con",
+			"title": "Real Decreto 1148/2011, de 29 de julio — aplicación y desarrollo, en el sistema de la Seguridad Social, de la prestación económica por cuidado de menores afectados por cáncer u otra enfermedad grave (texto consolidado, modificado por RD 677/2023)"
+		},
+		{
+			"id": "segss-cuidado-menor-cancer",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Servicios/34887/40968/1951",
+			"title": "Seguridad Social — Solicitudes de prestaciones: Cuidado de menores afectados por cáncer u otra enfermedad grave (formularios y canales)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "persona-a-cargo",
+			"hard": true,
+			"label": "Tener a tu cargo un hijo, hija o menor en guarda con fines de adopción o acogimiento permanente, menor de 18 años (la prestación puede mantenerse hasta los 23 o 26 años si la enfermedad se diagnosticó siendo menor — ver ⚠)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 190.1",
+				"excerpt": "A efectos de la prestación económica por cuidado de hijos o personas sujetas a guarda con fines de adopción o acogida con carácter permanente, menores de 18 años, afectados por cáncer u otra enfermedad grave",
+				"excerptSha256": "76b8c86f9a2f393ae715ff5e817db04375242af3ec09ff7adfa392b166725bd5"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 1,
+						"where": {
+							"field": "age",
+							"op": "lt",
+							"value": 18
+						},
+						"label": "tienes a tu cargo un hijo o menor de 18 años"
+					},
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 1,
+						"where": {
+							"field": "age",
+							"op": "lt",
+							"value": 26
+						},
+						"label": "tienes a tu cargo una persona de 18 a 25 años (posible solo si la enfermedad grave se diagnosticó antes de los 18 — ver ⚠)"
+					}
+				]
+			}
+		},
+		{
+			"id": "trabajadora-afiliada-alta",
+			"hard": true,
+			"label": "Trabajar (por cuenta ajena o por cuenta propia), estando afiliada/o y en alta en un régimen de la Seguridad Social",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 4.1",
+				"excerpt": "las personas trabajadoras, por cuenta ajena y por cuenta propia y asimiladas cualquiera que sea su sexo, que reduzcan su jornada de trabajo en, al menos, un 50 por 100 de su duración, siempre que reúnan la condición general de estar afiliadas y en alta en algún régimen del sistema de la Seguridad Social",
+				"excerptSha256": "a653b7697866925504d78f5a55753f6d2aa7bb6d46ce1a8ee949f015d347cb8a"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "in",
+				"value": [
+					"asalariado",
+					"autonomo"
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "enfermedad-grave-acreditada",
+			"label": "El menor debe padecer cáncer (tumores malignos, melanomas y carcinomas) u otra enfermedad grave del listado del anexo del RD 1148/2011, que implique ingreso hospitalario de larga duración (también vale el tratamiento o cuidado en domicilio tras el diagnóstico y hospitalización) y requiera cuidado directo, continuo y permanente, acreditado por declaración del facultativo del servicio público de salud u órgano sanitario de tu comunidad autónoma",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Arts. 2.1 y 3",
+				"excerpt": "El cáncer o enfermedad grave que padezca el menor deberá implicar un ingreso hospitalario de larga duración que requiera su cuidado directo, continuo y permanente durante la hospitalización y tratamiento continuado de la enfermedad.",
+				"excerptSha256": "030a3910c407ed4ed457d5e09b4101d251da5f47a504953d9be2b9cd09cd328f"
+			}
+		},
+		{
+			"id": "reduccion-jornada-50",
+			"label": "Haber reducido tu jornada de trabajo al menos un 50 %, con la disminución proporcional del salario (el % se computa sobre una jornada a tiempo completo comparable; en autónomos, sobre 40 horas semanales; a tiempo parcial no da derecho si la jornada efectiva es ≤ 25 % de la completa)",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 4.1",
+				"excerpt": "El subsidio se reconocerá en proporción al porcentaje de reducción que experimente la jornada de trabajo que disfruten las personas trabajadoras.",
+				"excerptSha256": "a3919a1c69d36ccdda78ad362ff27de6952a963e8bcb0c899488d9e71f650a3b"
+			}
+		},
+		{
+			"id": "ambos-progenitores-en-alta",
+			"label": "En la unidad familiar, ambas personas progenitoras, guardadoras o acogedoras deben estar afiliadas y en alta en un régimen público de Seguridad Social (o una sola si la otra está obligatoriamente en una mutualidad de previsión social de colegio profesional, o tiene Convenio Especial por trabajar en un país sin instrumento internacional de Seguridad Social); en familias monoparentales basta la afiliación y alta de quien cuida",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 4.2",
+				"excerpt": "Dentro de cada unidad familiar, ambas personas progenitoras, guardadoras o acogedoras deben acreditar que se encuentran afiliadas y en situación de alta en algún régimen público de Seguridad Social",
+				"excerptSha256": "2dbe9cfce84fff92e0f4d851233d84e24a1631596e3b895535d6939626cbf60c"
+			}
+		},
+		{
+			"id": "excepciones-separacion-violencia",
+			"label": "En casos de nulidad, separación, divorcio o extinción de la pareja de hecho, y también si se acredita ser víctima de violencia de género, el derecho se reconoce a quien conviva con la persona enferma aunque el otro progenitor no trabaje",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 4.4",
+				"excerpt": "así como cuando se acredite ser víctima de violencia de género, el derecho será reconocido a la persona progenitora, guardadora o acogedora que conviva con la persona enferma, aunque el otro no trabaje, siempre que se cumplan el resto de los requisitos exigidos",
+				"excerptSha256": "c6e7690ab40c55afffc5a6459b324fbc36855ff5da55ee1742957963183f0c7d"
+			}
+		},
+		{
+			"id": "un-solo-beneficiario",
+			"label": "Si ambos progenitores, guardadores o acogedores tienen derecho, el subsidio solo se reconoce a uno de ellos (de común acuerdo; a falta de acuerdo, a quien lo solicite primero), con independencia del número de menores afectados; pueden alternarse el percibo por periodos no inferiores a un mes",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 4.3",
+				"excerpt": "Cuando ambas personas progenitoras, guardadoras o acogedoras tuvieran derecho al subsidio, solamente podrá reconocerse a una de ellas, determinada de común acuerdo",
+				"excerptSha256": "ada5dcd54258dab89e61fe67d7724a449bb0e4cb952113d6197533bad3709e44"
+			}
+		},
+		{
+			"id": "periodos-minimos-cotizacion",
+			"label": "Periodos mínimos de cotización según la edad al iniciar la reducción: ninguno si tienes menos de 21 años; 90 días en los últimos 7 años (o 180 en toda tu vida laboral) si tienes de 21 a 25; 180 días en los últimos 7 años (o 360 en tu vida laboral) si tienes 26 o más",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 5.1 y 5.2.b",
+				"excerpt": "Si la persona trabajadora tiene cumplidos 26 años de edad en la fecha en que inicie la reducción de jornada, el periodo mínimo de cotización exigido será de 180 días dentro de los siete años inmediatamente anteriores a dicha fecha.",
+				"excerptSha256": "f962b122c99bedea05386ea1874b8ce0396d499090a54b1fdfc6c697cb34f49d"
+			}
+		},
+		{
+			"id": "funcionarios-regimen-propio",
+			"label": "Los funcionarios públicos quedan fuera de esta prestación: su protección por cuidado de menores con cáncer u otra enfermedad grave se regula por el art. 49.e) del Estatuto Básico del Empleado Público y su normativa de desarrollo (mutualidades: MUFACE, ISFAS, MUGEJU)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 191.4",
+				"excerpt": "Las previsiones contenidas en este capítulo no serán aplicables a los funcionarios públicos, que se regirán por lo establecido en el artículo 49.e) del texto refundido de la Ley del Estatuto Básico del Empleado Público",
+				"excerptSha256": "c6d03ed8e0fb6f49d359969f03260cab8f3179d107f8947633eb7b5df28d8e3b"
+			}
+		},
+		{
+			"id": "extension-23-26-anos",
+			"label": "El subsidio se reconoce por 1 mes, prorrogable por 2 meses y después por periodos de 4 meses mientras persista la necesidad de cuidado (acreditada con nueva declaración médica), como máximo hasta los 23 años del causante, o los 26 si acredita un grado de discapacidad igual o superior al 65 %",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 7.1",
+				"excerpt": "como máximo, hasta que este cumpla los 23 años o los 26 años si acredita un grado de discapacidad igual o superior al 65 por ciento",
+				"excerptSha256": "1bdf0a8ec287adb06d09caa7148420854d75fdec8570bd1595ab1ec4a62fc5ba"
+			}
+		},
+		{
+			"id": "plazo-solicitud-3m",
+			"label": "Para cobrar desde el primer día de la reducción, solicita dentro de los 3 meses desde que se inició; después, los efectos económicos tienen una retroactividad máxima de 3 meses",
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 7.1",
+				"excerpt": "Se tendrá derecho al subsidio por cuidado de menores afectados por cáncer u otra enfermedad grave a partir del mismo día en que dé comienzo la reducción de jornada correspondiente, siempre que la solicitud se formule en el plazo de tres meses desde la fecha en que se produjo dicha reducción. Transcurrido dicho plazo, los efectos económicos del subsidio tendrán una retroactividad máxima de tres meses.",
+				"excerptSha256": "b7f4ff7465bbe2a44318efd68de50396b8eedd5beababd3801573e5979848a19"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-rd-1148-2011-cancer",
+				"locator": "Art. 7.1",
+				"excerpt": "Se tendrá derecho al subsidio por cuidado de menores afectados por cáncer u otra enfermedad grave a partir del mismo día en que dé comienzo la reducción de jornada correspondiente, siempre que la solicitud se formule en el plazo de tres meses desde la fecha en que se produjo dicha reducción. Transcurrido dicho plazo, los efectos económicos del subsidio tendrán una retroactividad máxima de tres meses.",
+				"excerptSha256": "b7f4ff7465bbe2a44318efd68de50396b8eedd5beababd3801573e5979848a19"
+			}
+		},
+		"channel": {
+			"managingBody": "Mutua colaboradora con la Seguridad Social o Instituto Nacional de la Seguridad Social (INSS)",
+			"url": "https://prestaciones.seg-social.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-cuidado-menor-cancer",
+				"locator": "Página «Cuidado de menores afectados por cáncer u otra enfermedad grave»",
+				"excerpt": "Para solicitar la prestación, se puede acceder al servicio en el Portal de Prestaciones de la Seguridad Social , o bien descargar e imprimir el formulario correspondiente y, una vez cumplimentado y acompañado de la documentación requerida, presentarlo en el Centro de Atención e Información de la Seguridad Social (CAISS), puedes solicitar cita aquí , o enviarlo por correo ordinario a la Dirección Provincial más cercana a su domicilio.",
+				"excerptSha256": "d4a5cfbb83fe7d54466cdb700807a21845e5c336cf436575111e9c3568241e4d"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial aprobado por la entidad gestora o la mutua (modelo 143115; hay uno específico para el Régimen Especial del Mar)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.1",
+					"excerpt": "Las solicitudes se formularán en los modelos aprobados a tal efecto por la correspondiente entidad gestora o mutua",
+					"excerptSha256": "ac61fba3087640e6ec03c031d953f037b3f37c43aa33871f89ca497aebd31d60"
+				}
+			},
+			{
+				"id": "doc-certificado-empresa-reduccion",
+				"label": "Certificado de la empresa con la fecha de inicio y el porcentaje de la reducción de jornada",
+				"mandatory": true,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "neq",
+					"value": "autonomo"
+				},
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.2.a",
+					"excerpt": "Certificado de la empresa sobre la fecha de inicio de la reducción de jornada de la persona trabajadora prevista en el párrafo tercero del artículo 37.6 del texto refundido de la Ley del Estatuto de los Trabajadores, con indicación del porcentaje en que ha quedado fijada dicha reducción de jornada.",
+					"excerptSha256": "b64dc7cf0c9fa5639693bf5adc80909a1b7e94a48087f2e13fd0e8f63328fd5b"
+				}
+			},
+			{
+				"id": "doc-declaracion-reduccion-autonomo",
+				"label": "Si eres autónomo/a: declaración propia del porcentaje de reducción de tu actividad respecto a una jornada semanal de 40 horas",
+				"mandatory": true,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "eq",
+					"value": "autonomo"
+				},
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.2.a",
+					"excerpt": "Las personas trabajadoras por cuenta propia o autónomos y asimilados deberán presentar una declaración indicando expresamente el porcentaje de reducción de su actividad profesional en relación con una jornada semanal de cuarenta horas.",
+					"excerptSha256": "14a11229149d2e7c654c6ddf0f1520d66c57e2bbfd80f536a184bfb3ba63fb32"
+				}
+			},
+			{
+				"id": "doc-declaracion-medica",
+				"label": "Declaración del facultativo del servicio público de salud u órgano sanitario de tu comunidad autónoma (y del facultativo privado, en su caso) que acredite la enfermedad grave y la necesidad de cuidado del menor",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.2.b",
+					"excerpt": "Declaración del facultativo del servicio público de salud u órgano administrativo sanitario de la comunidad autónoma correspondiente responsable de la asistencia médica del causante y, en su caso, del facultativo de los servicios médicos privados donde el causante hubiera sido atendido que exprese la necesidad del cuidado del mismo por encontrarse afectado por cáncer u otra enfermedad grave que requiera ingreso hospitalario de larga duración y tratamiento médico continuado de la enfermedad.",
+					"excerptSha256": "0625277bd98c65b9ce2859ada9d718690af8a452c2477523de66e3c201ca9ebf"
+				}
+			},
+			{
+				"id": "doc-filiacion",
+				"label": "Libro de familia, certificación registral del nacimiento o, en su caso, resolución judicial de adopción / decisión administrativa de guarda o acogimiento / resolución judicial de tutela",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.2.c",
+					"excerpt": "Libro de familia o certificación registral individual o certificación de la inscripción del hijo o hijos en el Registro Civil o, en su caso, resolución judicial por la que se haya constituido la adopción, o decisión administrativa de guarda con fines de adopción o acogimiento o, en su caso, resolución judicial de la tutela del menor.",
+					"excerptSha256": "f201ade3d47e61e4b549dd52e7f572dc70203861287ba9ee6a2dadb3a1e170a0"
+				}
+			},
+			{
+				"id": "doc-certificado-base-cotizacion",
+				"label": "Certificado de la empresa con la base de cotización por contingencias profesionales (o comunes) del mes previo a la reducción — si eres a tiempo parcial, de los tres meses anteriores",
+				"mandatory": true,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "neq",
+					"value": "autonomo"
+				},
+				"citation": {
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 9.2.d",
+					"excerpt": "Certificado de la empresa en el que conste la cuantía de la base de cotización de la persona trabajadora por contingencias profesionales o, en su caso, por contingencias comunes, correspondiente al mes previo a la fecha de inicio de la reducción de jornada",
+					"excerptSha256": "d71f6c11b4ac4640ac87b377363c7ff3b1ec9c2b58372feb8565bdfc08668112"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-rd-1148-2011-cancer",
+			"locator": "Art. 6.1",
+			"excerpt": "consistirá en un subsidio, de devengo diario, equivalente al 100 por 100 de la base reguladora establecida para la prestación por incapacidad temporal, derivada de contingencias profesionales o, en su caso, la derivada de contingencias comunes, cuando no se haya optado por la cobertura de las contingencias profesionales, aplicando el porcentaje de reducción que experimente la jornada de trabajo.",
+			"excerptSha256": "b06f13a6cc9fbe44ac3a5cdd93a871c0eba03fbc8d3d06db4ba95b2b176b95ac"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	},
+	"themes": [
+		"familia_infancia",
+		"dependencia_discapacidad"
+	],
+	"lifeEvents": [
+		"cuidar_familiar",
+		"discapacidad"
+	]
+}

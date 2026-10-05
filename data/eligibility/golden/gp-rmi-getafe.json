@@ -1,0 +1,51 @@
+{
+	"id": "gp-rmi-getafe",
+	"description": "Madre monoparental de 38 años en Getafe, empadronada desde 04/2020 (>1 año), una hija de 6 años, desempleada, ingresos anuales en la banda más baja. Caso positivo con advertencias: cumple los tres requisitos duros (residencia CM, año de residencia efectiva, edad 25-65); los ingresos quedan en U porque la banda 0-8.400 € cruza el umbral de 5.639,16 €/año de la persona sola (aviso, no excluye); el resto de requisitos (unidad de convivencia de 6 meses, subsidiariedad, patrimonio, escolarización, compromiso de inserción…) son no comprobables ⇒ veredicto posible.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28065" } },
+			"residenceSince": { "state": "value", "value": { "year": 2020, "month": 4 } },
+			"age": { "state": "value", "value": { "min": 38, "max": 38, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [ { "age": { "min": 6, "max": 6, "maxExclusive": false }, "disability": "no" } ] },
+			"familyType": { "state": "value", "value": "monoparental" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-renta-minima-insercion",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "boe-ley-15-2001-rmi",
+					"locator": "Art. 6.1.a",
+					"reasoning": "Getafe (28065) es municipio de la Comunidad de Madrid ⇒ residencia permanente + empadronamiento en T. Empadronada desde 04/2020 ⇒ ~78 meses a 05/10/2026 ≥ 12 ⇒ el año de residencia efectiva e ininterrumpida en T (proxy por antigüedad de empadronamiento; las salidas <30 días/año no se preguntan)."
+				},
+				{
+					"sourceId": "boe-ley-15-2001-rmi",
+					"locator": "Art. 6.1.b",
+					"reasoning": "38 años ⇒ vía general (≥25 y <65) en T; ni siquiera necesita la vía de excepción por menores a cargo."
+				},
+				{
+					"sourceId": "bocm-20141121-1-reglamento-rmi",
+					"locator": "Art. 12.2",
+					"reasoning": "Ingresos en banda 0–8.400 €/año: el intervalo cruza el umbral orientativo de 5.639,16 €/año (469,93 €/mes × 12, art. 58.a Ley 6/2025) ⇒ U. Requisito no excluyente (hard:false): la cuantía real se mide en mensual y por unidad de convivencia —con dos miembros el límite sube a 587,41 €/mes (469,93+117,48)—, así que solo se muestra como aviso."
+				},
+				{
+					"sourceId": "bocm-20141121-1-reglamento-rmi",
+					"locator": "Art. 31.1",
+					"reasoning": "Prestación permanente: el procedimiento se inicia por solicitud del interesado en cualquier momento (la sede indica «En plazo: permanente») ⇒ deadlineState ROLLING. Veredicto posible porque hay requisitos no comprobables (unidad de convivencia de 6 meses, solicitud previa de otras prestaciones, patrimonio, escolarización, compromiso de inserción…)."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

@@ -43,8 +43,11 @@ describe("ejemplos de portada (R2-EJ)", () => {
 			const evs = evalAll(ex.answers);
 			// familia-getafe demuestra «falta un dato» a propósito (hijos <3
 			// sin señalar): lo demás no puede quedar sin responder
+			// U en requisito duro ⇒ el ejemplo no responde una pregunta
+			// que sus reglas usan. U en avisos (soft) es honesto: la banda de
+			// ingresos puede ser imprecisa a propósito.
 			const u = evs.flatMap((e) =>
-				e.requirements.filter((r) => r.status === "U"),
+				e.requirements.filter((r) => r.status === "U" && r.hard),
 			);
 			if (ex.id !== "familia-getafe") {
 				expect(u.map((r) => r.id)).toEqual([]);

@@ -1,114 +1,124 @@
 {
-  "domains": [
-    {
-      "host": "www.boe.es",
-      "maxRank": 1,
-      "label": "BOE — Boletín Oficial del Estado"
-    },
-    {
-      "host": "boe.es",
-      "maxRank": 1,
-      "label": "BOE — Boletín Oficial del Estado"
-    },
-    {
-      "host": "www.bocm.es",
-      "maxRank": 1,
-      "label": "BOCM — Boletín Oficial de la Comunidad de Madrid"
-    },
-    {
-      "host": "bocm.es",
-      "maxRank": 1,
-      "label": "BOCM — Boletín Oficial de la Comunidad de Madrid"
-    },
-    {
-      "host": "www.pap.hacienda.gob.es",
-      "maxRank": 2,
-      "label": "BDNS — Base de Datos Nacional de Subvenciones"
-    },
-    {
-      "host": "www.infosubvenciones.es",
-      "maxRank": 2,
-      "label": "BDNS — Base de Datos Nacional de Subvenciones"
-    },
-    {
-      "host": "sede.comunidad.madrid",
-      "maxRank": 3,
-      "label": "Sede electrónica de la Comunidad de Madrid"
-    },
-    {
-      "host": "sede.seg-social.gob.es",
-      "maxRank": 3,
-      "label": "Sede electrónica de la Seguridad Social"
-    },
-    {
-      "host": "sede.sepe.gob.es",
-      "maxRank": 3,
-      "label": "Sede electrónica del SEPE"
-    },
-    {
-      "host": "sede.mitramiss.gob.es",
-      "maxRank": 3,
-      "label": "Sede electrónica del MITRAMISS"
-    },
-    {
-      "host": "sede.imserso.gob.es",
-      "maxRank": 3,
-      "label": "Sede electrónica del IMSERSO"
-    },
-    {
-      "host": "bonoculturaljoven.gob.es",
-      "maxRank": 3,
-      "label": "Bono Cultural Joven — sede oficial"
-    },
-    {
-      "host": "www.ine.es",
-      "maxRank": 3,
-      "label": "INE — Instituto Nacional de Estadística (datos de referencia)"
-    },
-    {
-      "host": "www.renfe.com",
-      "maxRank": 3,
-      "label": "Renfe Viajeros — operador público (condiciones propias de descuento)"
-    },
-    {
-      "host": "renfe.com",
-      "maxRank": 3,
-      "label": "Renfe Viajeros — operador público"
-    },
-    {
-      "host": "www.comunidad.madrid",
-      "maxRank": 4,
-      "label": "Portal informativo de la Comunidad de Madrid"
-    },
-    {
-      "host": "comunidad.madrid",
-      "maxRank": 4,
-      "label": "Portal informativo de la Comunidad de Madrid"
-    },
-    {
-      "host": ".comunidad.madrid",
-      "maxRank": 4,
-      "label": "Subdominios informativos de la Comunidad de Madrid"
-    },
-    {
-      "host": ".madrid.es",
-      "maxRank": 4,
-      "label": "Ayuntamiento de Madrid (portal informativo)"
-    },
-    {
-      "host": "www.seg-social.es",
-      "maxRank": 3,
-      "label": "Seguridad Social — portal informativo (seg-social.es)"
-    },
-    {
-      "host": "www.sepe.es",
-      "maxRank": 3,
-      "label": "SEPE — portal informativo del Servicio Público de Empleo Estatal"
-    },
-    {
-      "host": ".gob.es",
-      "maxRank": 4,
-      "label": "Dominio .gob.es — páginas informativas oficiales"
-    }
-  ]
+	"domains": [
+		{
+			"host": "www.boe.es",
+			"maxRank": 1,
+			"label": "BOE — Boletín Oficial del Estado"
+		},
+		{
+			"host": "boe.es",
+			"maxRank": 1,
+			"label": "BOE — Boletín Oficial del Estado"
+		},
+		{
+			"host": "www.bocm.es",
+			"maxRank": 1,
+			"label": "BOCM — Boletín Oficial de la Comunidad de Madrid"
+		},
+		{
+			"host": "bocm.es",
+			"maxRank": 1,
+			"label": "BOCM — Boletín Oficial de la Comunidad de Madrid"
+		},
+		{
+			"host": "www.pap.hacienda.gob.es",
+			"maxRank": 2,
+			"label": "BDNS — Base de Datos Nacional de Subvenciones"
+		},
+		{
+			"host": "www.infosubvenciones.es",
+			"maxRank": 2,
+			"label": "BDNS — Base de Datos Nacional de Subvenciones"
+		},
+		{
+			"host": "sede.comunidad.madrid",
+			"maxRank": 3,
+			"label": "Sede electrónica de la Comunidad de Madrid"
+		},
+		{
+			"host": "sede.seg-social.gob.es",
+			"maxRank": 3,
+			"label": "Sede electrónica de la Seguridad Social"
+		},
+		{
+			"host": "sede.sepe.gob.es",
+			"maxRank": 3,
+			"label": "Sede electrónica del SEPE"
+		},
+		{
+			"host": "sede.mitramiss.gob.es",
+			"maxRank": 3,
+			"label": "Sede electrónica del MITRAMISS"
+		},
+		{
+			"host": "sede.imserso.gob.es",
+			"maxRank": 3,
+			"label": "Sede electrónica del IMSERSO"
+		},
+		{
+			"host": "bonoculturaljoven.gob.es",
+			"maxRank": 3,
+			"label": "Bono Cultural Joven — sede oficial"
+		},
+		{
+			"host": "www.ine.es",
+			"maxRank": 3,
+			"label": "INE — Instituto Nacional de Estadística (datos de referencia)"
+		},
+		{
+			"host": "www.renfe.com",
+			"maxRank": 3,
+			"label": "Renfe Viajeros — operador público (condiciones propias de descuento)"
+		},
+		{
+			"host": "renfe.com",
+			"maxRank": 3,
+			"label": "Renfe Viajeros — operador público"
+		},
+		{
+			"host": "www.comunidad.madrid",
+			"maxRank": 4,
+			"label": "Portal informativo de la Comunidad de Madrid"
+		},
+		{
+			"host": "comunidad.madrid",
+			"maxRank": 4,
+			"label": "Portal informativo de la Comunidad de Madrid"
+		},
+		{
+			"host": ".comunidad.madrid",
+			"maxRank": 4,
+			"label": "Subdominios informativos de la Comunidad de Madrid"
+		},
+		{
+			"host": ".madrid.es",
+			"maxRank": 4,
+			"label": "Ayuntamiento de Madrid (portal informativo)"
+		},
+		{
+			"host": "www.seg-social.es",
+			"maxRank": 3,
+			"label": "Seguridad Social — portal informativo (seg-social.es)"
+		},
+		{
+			"host": "www.sepe.es",
+			"maxRank": 3,
+			"label": "SEPE — portal informativo del Servicio Público de Empleo Estatal"
+		},
+		{
+			"host": ".gob.es",
+			"maxRank": 4,
+			"label": "Dominio .gob.es — páginas informativas oficiales"
+		},
+		{
+			"host": "www.crtm.es",
+			"maxRank": 3,
+			"label": "CRTM — Consorcio Regional de Transportes de Madrid (órgano gestor)"
+		},
+		{
+			"host": "crtm.es",
+			"maxRank": 3,
+			"label": "CRTM — Consorcio Regional de Transportes de Madrid (órgano gestor)"
+		}
+	]
 }

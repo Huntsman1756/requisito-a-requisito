@@ -580,6 +580,11 @@
   "source": "sede-cm"
  },
  {
+  "title": "Adjudicación por sorteo de viviendas públicas en alquiler en Majadahonda (2025)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "sede-cm"
+ },
+ {
   "title": "Subvenciones a entidades sin ánimo de lucro para campos de voluntariado juvenil (2026)",
   "reason": "destinada a entidades",
   "source": "sede-cm"
@@ -910,6 +915,11 @@
   "source": "la-ayuda"
  },
  {
+  "title": "Extracto de la Orden de 14 de abril de 2026 por la que se convoca la concesión de subvenciones para la asistencia jurídica a ciudadaños españoles que afronten condenas de pena de muerte para el ejercicio 2026",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "la-ayuda"
+ },
+ {
   "title": "Subvenciones a Federaciones Deportivas Españolas para Campeonatos del Mundo Universitarios 2026",
   "reason": "actividad agraria/económica",
   "source": "la-ayuda"
@@ -940,6 +950,11 @@
   "source": "la-ayuda"
  },
  {
+  "title": "Convocatoria de subvenciones para convenios de cooperación al desarrollo 2026-2029",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "la-ayuda"
+ },
+ {
   "title": "Premios Injuve de Periodismo y Comunicación 2026",
   "reason": "premio/certamen, no prestación",
   "source": "la-ayuda"
@@ -962,6 +977,11 @@
  {
   "title": "Premios Aulas por la Igualdad: Premios Alianza STEAM 2026",
   "reason": "premio/certamen, no prestación",
+  "source": "la-ayuda"
+ },
+ {
+  "title": "Procedimiento de concesión directa de ayudas I+D Programa Corea España 2026",
+  "reason": "resolución de concesión, no una convocatoria",
   "source": "la-ayuda"
  },
  {
@@ -1140,6 +1160,11 @@
   "source": "bdns"
  },
  {
+  "title": "FINANCIACION EST–TRAM.ANTIC.2026 CONCESION SINTEL 2026",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "bdns"
+ },
+ {
   "title": "CONVENIO DE COLABORACIÓN ENTRE FUNDACIÓN CAROLINA Y UNIVERSIDAD DE ALCALÁ PARA ESTUDIOS DE MÁSTER UNIVERSITARIO, CURSO 2026-27",
   "reason": "destinada a entidades",
   "source": "bdns"
@@ -1195,6 +1220,16 @@
   "source": "bdns"
  },
  {
+  "title": "Formalización contrato – Resolución de 9 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de prórroga del contrato de suministro de cánulas, dispositivo oxigenador para ECMO y dispositivos de asistencia ventricular para los servicios de cirugía cardiaca y cardiología para el Hospital Universitario “12 de Octubre”",
+  "reason": "prórroga, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 11 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 5 de enero de 2026 (BOLETÍN OFICIA",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "– Mancomunidad de Servicios Sociales de la Sierra Norte. Régimen económico. Ordenanza",
   "reason": "destinada a entidades locales",
   "source": "pipeline-bocm"
@@ -1212,6 +1247,11 @@
  {
   "title": "Bolsa única personal laboral – Resolución de 8 de abril de 2026, de la Dirección General de Función Pública, por la que se aprueba y publica la constitución del primer bloque de la bolsa única permanentemente abierta a efectos de contrataciones temporales de la categoría profesional de Conductor, Especialidad Apoyo a la Extinción Incendios Forestales (Grupo III, Nivel 5, Área B), de la Comunidad de Madrid",
   "reason": "actividad agraria/económica",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 13 de abril de 2026, del Consejero de Vivienda, Transportes e Infraestructuras, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1235,8 +1275,23 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Concesión ayudas – Resolución de 8 de abril de 2026, de la Fundación de la Energía de la Comunidad de Madrid, por la que se da publicidad a la relación de ayudas y subvenciones concedidas en el proced",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convocatoria contrato – Resolución de 9 de abril de 2026, de la Dirección General de Infraestructuras y Servicios de la Consejería de Educación, Ciencia y Universidades, por la que se dispone la publi",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Adjudicación contrato – Anuncio de 17 de abril de 2026, de adjudicación del contrato titulado “Servicio de rebobinado de motores de tracción de la serie 2000”. (Expediente 6012500335)",
+  "reason": "resolución de concesión, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1275,8 +1330,43 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 14 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 19 de febrero de 2026 (BOLETÍN OFI",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 14 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo por la que se aprueba convocatoria pública para la provisión de varios puestos de trabajo vacant",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Tribunal proceso selectivo – Corrección de errores de la Resolución de 10 de marzo de 2026, de la Dirección General de Función Pública, por la que se modifica la composición del Tribunal Calificador d",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Lista espera interinos – Corrección de errores de la Resolución de 24 de marzo de 2026, de la Dirección General de Función Pública, por la que se requiere documentación acreditativa del cumplimiento d",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Programa zonas vulnerables contaminación por nitratos – Resolución de 10 de abril de 2026, del Director General de Agricultura, Ganadería y Alimentación, mediante la que se da publicidad a la aprobación del Programa de actuación sobre las zonas vulnerables a la contaminación producida por nitratos procedentes de fuentes agrarias en la Comunidad de Madrid, conforme a lo establecido en el apartado segundo del artículo 26 de la Ley 21/2013, de 9 de diciembre, de Evaluación Ambiental",
   "reason": "actividad agraria/económica",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Concesión subvenciones – Resolución de 14 de abril de 2026, de la Secretaría General Técnica de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se publican las subvenciones concedi",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Concesión subvenciones – Resolución de 14 de abril de 2026, de la Secretaría General Técnica de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se publican las subvenciones concedi",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Concesión subvenciones – Orden 581/2026, de 7 de abril, de la Consejería de Cultura, Turismo y Deporte, por la que se modifica la Orden 1877/2025, de la Consejería de Cultura, Turismo y Deporte, por l",
+  "reason": "resolución de concesión, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1320,6 +1410,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se resuelve la convocatoria aprobada por Orden de fecha 18 de febrero ",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Aspirantes proceso selectivo – Resolución de 22 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario de Getafe del Servicio Madrileño de Salud, por la que se modifica la composición de la comisión de selección para el proceso de provisión convocado para la cobertura de un puesto de Coordinador/a de Urgencias en ese centro asistencial mediante nombramiento provisional",
   "reason": "no es una ayuda",
   "source": "pipeline-bocm"
@@ -1327,6 +1422,11 @@
  {
   "title": "Bases reguladoras becas – Orden 1451/2026, de 14 de abril, de la Consejería de Educación, Ciencia y Universidades, por la que se modifican los requisitos deportivos que se recogen en la Orden 1890/202",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Crédito presupuestario ayudas – Corrección de errores de la Orden 514/2026, de 19 de marzo, de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se hace pública la declaración del cr",
+  "reason": "rectificación, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1365,6 +1465,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 12 de febrero de 2026 (BOLETÍN OFI",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convocatoria del II Concurso Fotográfico “Luz sobre el Patrimonio de Leganés: Tesoros escondidos”",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
@@ -1390,6 +1495,36 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Convenio – Adenda de 10 de abril de 2026, por la que se modifica el convenio de reafianzamiento de 19 de diciembre de 2024, entre la Comunidad de Madrid y Avalmadrid, S. G. R., en operaciones de finan",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 19 de enero de 2026, entre la Comunidad de Madrid y la Junta de Comunidades de Castilla-La Mancha para la renovación de la utilización de los títulos de Abono Transportes del Consorcio Regional de Transportes de Madrid en los desplazamientos entre ambas Comunidades Autónomas en el periodo 2026-2029",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de colaboración de 6 de abril de 2026, entre el Consorcio Regional de Transportes de Madrid y la Sociedad Anónima Estatal Correos y Telégrafos, S. A., S. M. E., por el que se establece el procedimiento y las condiciones en las que el Consorcio Regional de Transportes de Madrid facilitará a la Sociedad Anónima Estatal Correos y Telégrafos, S. A., S. M. E. la gestión de los títulos de transporte que sean demandados por esta",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Adenda de prórroga de 31 de marzo de 2026, del convenio entre la Comunidad de Madrid (Consejería de Presidencia, Justicia e Interior) y el Ayuntamiento de Guadarrama, para establecer un protocolo de actuación de la agrupación municipal de voluntarios de protección civil en el ámbito de la extinción de incendios y salvamento",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de colaboración de 26 de marzo de 2026, entre la Comunidad de Madrid, a través de la Consejería de Familia, Juventud y Asuntos Sociales, y el Ayuntamiento de Colmenar Viejo para la",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Resolución de 15 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "– Mancomunidad de Servicios Sociales Pantueña. Régimen económico. Modificación presupuestaria",
   "reason": "destinada a entidades locales",
   "source": "pipeline-bocm"
@@ -1397,6 +1532,11 @@
  {
   "title": "Profesores de religión – Resolución de 14 de abril de 2026, de la Dirección General de Recursos Humanos de la Consejería de Educación, Ciencia y Universidades, por la que se convoca procedimiento de a",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden 866/2026, de 15 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de carrer",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1425,13 +1565,53 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Adjudicación contrato – Anuncio de 22 de abril de 2026, de adjudicación del contrato titulado “Suministro de material no matriculado específico para escaleras mecánicas Thyssen para Metro de Madrid” (Expediente 6012600062)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Concurso de microrrelatos '300 de los Viajes de Gulliver' (Feria del Libro 2026)",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Resolución de 15 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Resolución de 15 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "– Mancomunidad Intermunicipal de Servicios Sociales Vega del Guadalix. Régimen económico. Cuenta general",
   "reason": "destinada a entidades locales",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden 910/2026, de 17 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de carrer",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 17 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se resuelve la convocatoria aprobada por Orden de 26 de febrero de 2026, de",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 17 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo v",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 20 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo v",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Concesión subvenciones – Resolución de 9 de abril de 2026, de la Directora General de Formación, por la que se hace pública la relación de subvenciones concedidas con cargo al Programa 241A “Formación",
+  "reason": "resolución de concesión, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1455,6 +1635,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Concesión ayudas – Orden 1154/2026, de 24 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se concede ayudas del Bono Social Térmico 2025 a 50.000 beneficiarios (fase 3) ",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Ayudas a empresas audiovisuales para proyectos en Madrid 2026",
   "reason": "destinada a empresas/autónomos",
   "source": "pipeline-bocm"
@@ -1467,6 +1652,21 @@
  {
   "title": "Ayudas bienales para el fomento de estructuras de empresas de teatro y de danza (2026-2027)",
   "reason": "destinada a empresas/autónomos",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 15 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 17 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1485,6 +1685,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 20 de abril de 2026, del Consejero de Vivienda, Transportes e Infraestructuras, por la que se aprueba convocatoria pública para la provisión de varios puestos de tr",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convocatoria proceso selectivo – Resolución de 20 de abril de 2026, de la Universidad Autónoma de Madrid, por la que se convocan pruebas selectivas para el ingreso en la Escala Especial Básica de Servicios de la Universidad Autónoma de Madrid, por el sistema general de oposición libre",
   "reason": "destinada a entidades",
   "source": "pipeline-bocm"
@@ -1500,6 +1705,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Concesión subvenciones – Resolución de 16 de abril de 2026, del Director General de Autónomos y Emprendimiento, por la que se hace pública la relación de subvenciones concedidas con cargo al Programa ",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Centros de Educación Infantil – Orden 1635/2026, de 20 de abril, de la Consejera de Educación, Ciencia y Universidades, por la que se aprueba la ampliación de una unidad de primer ciclo de Educación I",
   "reason": "destinada a entidades",
   "source": "pipeline-bocm"
@@ -1510,8 +1720,18 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Concesión subvenciones – Resolución de 20 de abril de 2026, la Secretaría General Técnica de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se hace público el listado de las sub",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Ampliación plazo Solicitud Única ayuda ganaderos 2026",
   "reason": "actividad agraria/económica",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Bases reguladoras – Orden 955/2026, de 15 de abril, de corrección de errores de la Orden 645/2026, de 16 de marzo, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueban las ",
+  "reason": "rectificación, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1535,6 +1755,46 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de dos puestos de trabajo vacantes",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Resolución de 22 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Resolución de 20 de abril de 2026, de la Dirección-Gerencia del Consorcio Regional de Transportes Públicos Regulares de Madrid, por la que se resuelve la convocatoria aprobada mediante Resolución de 16 de enero de 2026 (BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID de 28 de enero de 2026), para la provisión de un puesto de trabajo vacante en dicho organismo, por el procedimiento de Libre Designación",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Cese y nombramiento – Orden 917/2026, de 10 de abril, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se dispone el cese y nombramiento de cuatro Vocales del Consejo de Cooperació",
   "reason": "no es una ayuda",
   "source": "pipeline-bocm"
@@ -1542,6 +1802,26 @@
  {
   "title": "Nombramiento – Resolución de 21 de abril de 2026, de la Universidad Politécnica de Madrid, por la que se nombra personal funcionario de carrera en la Escala de Ayudantes de Archivos, Bibliotecas y Mus",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Concesión subvenciones – Orden 670/2026, de 19 de abril, de la Consejería de Cultura, Turismo y Deporte, por la que se revocan determinadas subvenciones concedidas mediante la Orden 2709/2025, de 19 d",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo de carrer",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 26 de febrero de 2026 (BOLETÍN OFI",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1555,8 +1835,58 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 21 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio colectivo – Resolución de 10 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación de la revisión salari",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Adenda de 17 de abril de 2026, de prórroga del convenio entre la Comunidad de Madrid, a través de la Consejería de Sanidad, el Servicio Madrileño de Salud y el Consejo Evangélico de Madrid,",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Adenda de 17 de abril de 2026, de prórroga del convenio entre la Comunidad de Madrid, a través de la Consejería de Sanidad, el Servicio Madrileño de Salud y la Fundación de Educación para l",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convenio – Convenio de 21 de abril de 2026, entre el Instituto Madrileño de Investigación y Desarrollo Rural, Agrario y Alimentario y la Asociación Nacional de Criadores de Ganado Ovino de la Raza Ass",
   "reason": "actividad agraria/económica",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 10 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Familia, Juventud y Asuntos Sociales, y la Asociación Familias para la Acogida Mater Hospitalaria",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio colectivo – Resolución de 17 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación de la revisión salari",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio colectivo – Resolución de 17 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación del convenio colectiv",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio prestación servicio – Convenio de 13 de abril de 2026, para la prestación del Servicio de Alcantarillado en el municipio de Majadahonda, entre la Comunidad de Madrid, Canal de Isabel II, Cana",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Femxa Formación, S. L. U., para la información, orientación y apoyo ",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Knowledge Innovation Works, S. L. para la información, orientación y",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
   "source": "pipeline-bocm"
  },
  {
@@ -1575,6 +1905,111 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Convenio colectivo – Resolución de 10 de abril de 2026, de la Dirección General de Trabajo de la Consejería de Economía, Hacienda y Empleo, sobre registro, depósito y publicación del convenio colectiv",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Tendencies London, S. L., para la información, orientación y apoyo e",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y la Asociación YMCA para la información, orientación y apoyo en la in",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo, y NRED soluciones formativas, S. L., para la información, orientación",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y la Confederación Empresarial de Madrid-CEOE (CEIM) para la informaci",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y la Asociación de Empresarios del Henares - AEDHE para la informació",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Asociación Norte Joven para la información, orientación y apoyo en ",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Formación Internacional, Vocacional y Emprendimiento, S. L., para l",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y el centro de formación Fundación Raíles para la información, orient",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Are Formación Profesional, S. L., para la información, orientación ",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo, y Aula 3 Informática Servicios de Formación, S. L., para la informac",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y FORMAJOBS, S.L.U., para la información, orientación y apoyo en la in",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 13 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y la Confederación Española de Personas con Discapacidad Física y Org",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 16 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Medio Ambiente, Agricultura e Interior (Centro de Asuntos Taurinos) y la Fundación del Toro de Li",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Formación y Educación Integral, S. L., para la información, orientac",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Agencia Local de Empleo y Formación del Ayuntamiento de Getafe, para",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo, y Taller Cefora, S. L., para la información, orientación y apoyo en l",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Grupo Victoria Investinyou, S.L., para la información, orientación y",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo e Innovación y Desarrollo Local, S. L., para la información, orientaci",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y el Ayuntamiento de San Sebastián de los Reyes para la información, o",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 9 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo y Cars Marobe, S. L., para la información, orientación y apoyo en la i",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "V Concurso Fotográfico “Parla, mi ciudad” 2026",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
@@ -1582,6 +2017,11 @@
  {
   "title": "Convocatoria de subvenciones a asociaciones de mujeres de San Fernando de Henares",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 22 de abril de 2026, de la Consejería de Vivienda, Transportes e Infraestructuras, por la que se resuelve la convocatoria aprobada por Orden de 3 de marzo de 2026, ",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1610,6 +2050,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden 1104/2026, de 21 de abril, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se resuelve la convocatoria aprobada por Orden 3821/2025, de 12 de novie",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Concurso de méritos – Orden 1105/2026, de 21 de abril, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se resuelve la convocatoria aprobada por Orden 2808/2025, de 3 de septiembre ",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
@@ -1625,13 +2070,43 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 22 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 19 de febrero de 2026 (BOLETÍN OFI",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Servicios mínimos – Orden 1811/2026, de 29 de abril, de la Consejera de Educación, Ciencia y Universidades, por la que se establecen los servicios mínimos esenciales en los centros educativos que impa",
   "reason": "destinada a entidades",
   "source": "pipeline-bocm"
  },
  {
+  "title": "Concesión subvenciones – Resolución 34/2026, de 21 de abril, del Director General de Deportes, por la que se publica en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID la relación de los beneficiarios de",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Concurso Tesis en 3 Minutos UCM 2026",
   "reason": "premio/certamen, no prestación",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Corrección de errores: Ayudas para personal investigador predoctoral URJC 2026",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Convenio de 17 de abril de 2026, entre la Comunidad de Madrid, a través de la Consejería de Economía, Hacienda y Empleo, y la entidad Fundacion Carmen Pardo-Valcarce para la información, or",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 22 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Formalización contrato – Resolución de 15 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de la tercera prórroga del contrato de suministro de dispositivo intracorpóreo de asistencia ventricular izquierda para el del Hospital Universitario “12 de Octubre”",
+  "reason": "prórroga, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1645,6 +2120,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Resolución de 22 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Concurso de méritos – Orden de 23 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada mediante Orden de 24 de noviembre 2025 (BOLETÍN OFIC",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
@@ -1652,6 +2132,21 @@
  {
   "title": "Nombramiento – Orden de 24 de abril de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se nombra personal funcionario de carrera del Cuerpo de Ingenieros y Arquitectos Superiores, Es",
   "reason": "no es una ayuda",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Tribunal proceso selectivo – Corrección de errores de la Resolución de 10 de marzo de 2026, de la Dirección General de Función Pública, por la que se hace pública la composición del Tribunal Calificad",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Aspirantes proceso selectivo – Corrección de errores de la Resolución de 20 de marzo de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones definitivas de personas aspirantes admitidas y excluidas en las pruebas selectivas para el ingreso en el Cuerpo de Técnicos Auxiliares, de Administración Especial, Especialidad de Salud Pública, Grupo C, Subgrupo C1, de la Comunidad de Madrid, se publica la relación definitiva de personas aspirantes excluidas, y se anuncia la celebración del primer ejercicio de la fase de oposición",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Resolución de 24 de abril de 2026, de la Dirección General de Recursos Humanos, por la que se resuelve la convocatoria aprobada por Orden de la Consejera de Economía, Hacien",
+  "reason": "designación/nombramiento",
   "source": "pipeline-bocm"
  },
  {
@@ -1700,6 +2195,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo v",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Concurso de méritos – Orden de 23 de abril de 2026, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de puestos de trabajo vacante",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
@@ -1715,13 +2215,58 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Adjudicación contrato – Anuncio de 30 de abril de 2026, de adjudicación del contrato titulado “Servicio de soporte de reparaciones en escaleras mecánicas Thyssen” (expediente 6012500353)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Formalización contrato – Resolución de 24 de abril de 2026, de la Dirección-Gerencia del Hospital Universitario “12 de Octubre”, por la que se dispone la publicación en los boletines oficiales y en el “perfil del contratante” de la formalización de la segunda prórroga del contrato de «Suministro de cánulas, dispositivo oxigenador para ECMO y dispositivos de asistencia ventricular para los servicios de cirugía cardiaca y cardiología para el Hospital Universitario “12 de Octubre”»",
+  "reason": "prórroga, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convocatoria certamen diseño cartel Fiestas del Carmen 2026 (Chamberí)",
   "reason": "premio/certamen, no prestación",
   "source": "pipeline-bocm"
  },
  {
+  "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 5 de marzo de 2026 (BOLETÍN OFICIA",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo vacante en",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 23 de abril de 2026, de la Consejera de Economía, Hacienda y Empleo, por la que se resuelve la convocatoria aprobada por Orden de 16 de febrero de 2026 (BOLETÍN OFI",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Aspirantes proceso selectivo – Corrección de errores de la Resolución de 7 de mayo de 2026, de la Dirección General de Función Pública, por la que se aprueban las relaciones provisionales de personas aspirantes admitidas y excluidas en las pruebas selectivas para dos procesos, uno por el sistema general de acceso libre y otro de promoción interna, para el acceso a plazas de carácter laboral de la categoría profesional de Diplomado en Enfermería (Grupo II, Nivel 7, Área D), de la Comunidad de Madrid, y se publica la relación provisional de personas excluidas y la de aspirantes que han solicitado adaptación, con indicación de si deben aportar o no documentación acreditativa de la adaptación solicitada",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Cese y nombramiento – Acuerdo de 17 de junio de 2026, del Consejo de Gobierno, por el que se dispone el cese y el nombramiento de un miembro del Consejo de Administración de la Agencia Madrileña de Atención Social",
   "reason": "no es una ayuda",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 9 de junio de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo va",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Puesto libre designación – Orden de 9 de junio de 2026, de la Consejera de Familia, Juventud y Asuntos Sociales, por la que se aprueba convocatoria pública para la provisión de un puesto de trabajo va",
+  "reason": "designación/nombramiento",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Resolución proceso selectivo – Corrección de errores de la Resolución de 3 de junio de 2026, de la Dirección General de Función Pública, por la que se procede a la adjudicación de destinos correspondiente a los procesos selectivos para el acceso, por el sistema general de acceso libre y de promoción interna, a plazas de carácter laboral de la categoría profesional de Técnico de Mantenimiento (Grupo III, Nivel 5, Área B) de la Comunidad de Madrid",
+  "reason": "rectificación, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {
@@ -1750,6 +2295,11 @@
   "source": "pipeline-bocm"
  },
  {
+  "title": "Resolución proceso selectivo – Resolución de 8 de junio de 2026, de la Dirección General de Función Pública, por la que se procede a la adjudicacion de destinos correspondiente al proceso selectivo para acceso a plazas de carácter laboral de la categoría profesional de Técnico Especialista I, Especialidad de Autopsias (Grupo III, Nivel 6, Área D) de la Comunidad de Madrid, convocado por Orden 386/2022, de 2 de marzo (BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID de 10 de marzo)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
   "title": "Convenio – Adenda de 4 de mayo de 2026, al convenio de colaboración en materia de Educación Infantil suscrito entre la Comunidad de Madrid (Consejería de Educación, Ciencia y Universidades) y el Ayunt",
   "reason": "destinada a entidades",
   "source": "pipeline-bocm"
@@ -1762,6 +2312,36 @@
  {
   "title": "Convenio – Adenda de 29 de mayo de 2026, al convenio de colaboración en materia de Educación Infantil suscrito entre la Comunidad de Madrid (Consejería de Educación, Ciencia y Universidades) y el Ayun",
   "reason": "destinada a entidades",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio subvención formación profesorado Religión 2026",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Adjudicación contrato – Anuncio de 15 de junio de 2026, de adjudicación del contrato titulado “Servicio para la renovación del Sistema Integrador de Audio (SIA) del Puesto de Control Central de Metro de Madrid” (Expediente 6012500382)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Adjudicación contrato – Anuncio de 15 de junio de 2026, de adjudicación del contrato titulado “Suministro de dos equipos remolcados de inspección dual de carril mediante ultrasonidos y corrientes inducidas, para Metro de Madrid” (Expediente 6012600050)",
+  "reason": "resolución de concesión, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Tribunal proceso selectivo – Corrección de errores de la Resolución de 26 de mayo de 2026, de la Dirección General de Recursos Humanos, por la que se nombran los tribunales correspondientes al proceso selectivo para ingreso en el Cuerpo de Maestros y para adquisición de nuevas especialidades en el citado Cuerpo, convocado por Resolución de 2 de febrero de 2026, y se anuncia la fecha de realización de las pruebas",
+  "reason": "rectificación, no una convocatoria",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Convenio – Adenda de 3 de junio de 2026, de modificación del convenio de colaboración entre la Comunidad de Madrid, a través de la entonces Consejería de Familia, Juventud y Política Social, actual Co",
+  "reason": "convenio entre administraciones, no una ayuda a personas",
+  "source": "pipeline-bocm"
+ },
+ {
+  "title": "Aspirantes proceso selectivo – Resolución de 10 de junio de 2026, de la Dirección General de Recursos Humanos, por la que se publica la lista complementaria y corrección de errores de las listas definitivas de aspirantes admitidos y excluidos, en el proceso selectivo para ingreso en el Cuerpo de Maestros y para adquisición de nuevas especialidades, aprobadas mediante Resolución de 4 de mayo de 2026",
+  "reason": "rectificación, no una convocatoria",
   "source": "pipeline-bocm"
  },
  {

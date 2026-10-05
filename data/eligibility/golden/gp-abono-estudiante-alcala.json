@@ -1,0 +1,102 @@
+{
+	"id": "gp-abono-estudiante-alcala",
+	"description": "Estudiante de 19 años, empadronada en Alcalá de Henares (28005) desde 2016, sin ingresos propios relevantes y sin personas a cargo. Caso «posible»: los dos requisitos duros de edad pasan (15–25, hasta cumplir 26) y la residencia en la CM queda comprobada como aviso, pero la expedición de la TTP exige acreditar residencia con certificado de empadronamiento y aportar foto/documento de identidad — extremos no verificables con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28005"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2016,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 19,
+					"max": 19,
+					"maxExclusive": false
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": 2007
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "general"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "si"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "general"
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-abono-transporte-joven",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20251231-2-precios-transporte-2026",
+					"locator": "Acuerdo, exposición — descuentos del RDL 17/2025, pág. 65",
+					"reasoning": "Edad 19 ⇒ dentro del colectivo joven (nacidos 2000–2011 en 2026): hard T tanto para el mínimo de 15 (gte 15) como para el máximo (lt 26, hasta cumplir 26)."
+				},
+				{
+					"sourceId": "bocm-20260612-17-residencia-ttp",
+					"locator": "Anuncio, párrafo tercero, pág. 48",
+					"reasoning": "Alcalá de Henares (28005) es municipio de la Comunidad de Madrid ⇒ el aviso de residencia queda T (es requisito soft porque la disyunción completa — CM ∪ zonas E1/E2 ∪ convenio CLM — no es modelable y no puede descartar a nadie)."
+				},
+				{
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Condiciones, apartados 1 y solicitud, págs. 61-62",
+					"reasoning": "hardF = 0 y hardU = 0, pero quedan requisitos no comprobables (certificado de empadronamiento para expedir la TTP, foto y documento de identidad, soporte personal e intransferible) ⇒ veredicto «posible», no «probable»."
+				},
+				{
+					"sourceId": "bocm-20251231-2-precios-transporte-2026",
+					"locator": "Acuerdo, primer punto, pág. 65",
+					"reasoning": "El abono joven es un título permanente sin plazo de solicitud (los precios se mantienen en 2026 continuando los del segundo semestre de 2025) ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

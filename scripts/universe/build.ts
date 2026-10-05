@@ -184,17 +184,32 @@ async function main() {
 	console.log("[universe] BDNS…");
 	const bdns = await bdnsAll();
 	console.log("[universe] bdns:", bdns.length);
+	// R3-UNK: detalle de cada convocatoria → abierto/fechaFinSolicitud real
+	for (const it of bdns) {
+		if (it.accessState !== "UNKNOWN") continue;
+		const num = (it.id ?? "").replace("bdns-", "");
+		try {
+			const d = JSON.parse(
+				await get(`https://www.infosubvenciones.es/bdnstrans/api/convocatorias?page=0&pageSize=1&vpd=GE&numConv=${num}`),
+			);
+			if (d.abierto === true) it.accessState = "OPEN";
+			else if (d.fechaFinSolicitud && d.fechaFinSolicitud < TODAY)
+				it.accessState = "CLOSED";
+			else if (d.fechaInicioSolicitud && d.fechaInicioSolicitud > TODAY)
+				it.accessState = "UPCOMING";
+		} catch {
+			/* el detalle falla: se queda UNKNOWN */
+		}
+		await sleep(220);
+	}
 	const fichas = fichasItems();
 	const bocm = bocmItems();
 	console.log(`[universe] la-ayuda:${fichas.length} bocm:${bocm.length} seed:${SEED.length}`);
 
-	const { programs, rejected } = mergePrograms([
-		...sede,
-		...bdns,
-		...fichas,
-		...bocm,
-		...SEED,
-	]);
+	const { programs, rejected } = mergePrograms(
+		[...sede, ...bdns, ...fichas, ...bocm, ...SEED],
+		TODAY,
+	);
 	mkdirSync(join(ROOT, "data/universe"), { recursive: true });
 	writeFileSync(
 		OUT,

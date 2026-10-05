@@ -1,0 +1,541 @@
+{
+	"benefitSlug": "madrid-renta-minima-insercion",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-ley-15-2001-rmi",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es-md/l/2001/12/27/15/con",
+			"title": "Ley 15/2001, de 27 de diciembre, de Renta Mínima de Inserción en la Comunidad de Madrid (BOE texto consolidado, última actualización 22/12/2022)"
+		},
+		{
+			"id": "bocm-20141121-1-reglamento-rmi",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2014/11/21/BOCM-20141121-1.PDF",
+			"title": "Decreto 126/2014, de 20 de noviembre — Reglamento de la Renta Mínima de Inserción en la Comunidad de Madrid (BOCM n.º 277)"
+		},
+		{
+			"id": "boe-ley-6-2025-presupuestos-madrid",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-3218",
+			"title": "Ley 6/2025, de 23 de diciembre, de Presupuestos Generales de la Comunidad de Madrid para 2026 — art. 58 fija las cuantías de la RMI"
+		},
+		{
+			"id": "sede-rmi",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/prestacion-social/renta-minima-insercion",
+			"title": "Sede electrónica CM — Renta Mínima de Inserción (trámite «Prestación social»)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "residencia-permanente-cm",
+			"hard": true,
+			"label": "Residir de forma permanente en la Comunidad de Madrid y estar empadronado/a en uno de sus municipios",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.a",
+				"excerpt": "Residir de manera permanente en la Comunidad de Madrid y estar empadronadas en alguno de sus Municipios",
+				"excerptSha256": "085a4f7ca51ae05b473445847192dc1977bfda994d5d914a622a972dcff29f87"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "residencia-un-ano",
+			"hard": true,
+			"label": "Llevar residiendo de forma efectiva e ininterrumpida en la Comunidad de Madrid al menos el año inmediatamente anterior a la solicitud (proxy: antigüedad en el empadronamiento)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.a (desarrollado en el art. 7.2 del Reglamento, Decreto 126/2014)",
+				"excerpt": "será necesario tener una residencia efectiva y continuada en la Comunidad de Madrid durante el tiempo que se determine reglamentariamente, que no podrá ser inferior al año inmediatamente anterior a la formulación de la solicitud",
+				"excerptSha256": "a3acc85b2ded7b709facb225e815cddafbd85da9d60798faba9661246e08e797"
+			},
+			"condition": {
+				"field": "residenceMonths",
+				"op": "gte",
+				"value": 12
+			}
+		},
+		{
+			"id": "edad-25-65",
+			"hard": true,
+			"label": "Ser mayor de 25 años y menor de 65 — salvo si tienes menores o personas con discapacidad a cargo (válido a cualquier edad adulta) u otras vías de 18–25 y +65 años (ver ⚠)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.b",
+				"excerpt": "Ser mayor de veinticinco años y menor de sesenta y cinco en la fecha de formulación de la solicitud",
+				"excerptSha256": "1a3bbfd367b3e1a3563307a8a28c75c70b20bcc3f8a04ad778d0384b5c5e0543"
+			},
+			"condition": {
+				"any": [
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 25
+							},
+							{
+								"field": "age",
+								"op": "lt",
+								"value": 65
+							}
+						],
+						"label": "tienes entre 25 y 64 años"
+					},
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 18
+							},
+							{
+								"any": [
+									{
+										"field": "age",
+										"op": "lt",
+										"value": 25
+									},
+									{
+										"field": "age",
+										"op": "gt",
+										"value": 65
+									}
+								]
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"any": [
+										{
+											"field": "age",
+											"op": "lt",
+											"value": 18
+										},
+										{
+											"field": "disability",
+											"op": "eq",
+											"value": "yes"
+										}
+									]
+								}
+							}
+						],
+						"label": "eres menor de 25 o mayor de 65 con menores o personas con discapacidad a tu cargo",
+						"citation": {
+							"sourceId": "boe-ley-15-2001-rmi",
+							"locator": "Art. 6.1.b, circunstancia 1.ª",
+							"excerpt": "Ser menor de veinticinco años o mayor de sesenta y cinco, y tener menores o personas con discapacidad a su cargo",
+							"excerptSha256": "392e06fe8611eb6f9670421f42bfb0b394e7ad40c670a1b8e916c127782f5f90"
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": "ingresos-inferiores-rmi",
+			"hard": false,
+			"label": "Los ingresos mensuales de la unidad de convivencia deben ser inferiores a la cuantía de RMI que corresponda (469,93 €/mes para una persona sola en 2026; sube por cada miembro — ver ⚠ cómo se computa)",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 12.2",
+				"excerpt": "sean iguales o superiores a la cuantía de Renta Mínima de Inserción que les correspondería en función del número de miembros que la integran",
+				"excerptSha256": "01069a4a83148b630ce13453ea7d06e0cdf400134894ebcd433ba0058cee5938"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 5639.16,
+				"citation": {
+					"sourceId": "boe-ley-6-2025-presupuestos-madrid",
+					"locator": "Art. 58.a",
+					"excerpt": "a) Importe de la prestación mensual básica: 469,93 euros",
+					"excerptSha256": "2c5354d1cea754ffb7cfc1e0720341380fcd1e96c53353f799f18644ccf049e9"
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "unidad-convivencia-6-meses",
+			"label": "La unidad de convivencia debe llevar constituida al menos 6 meses antes de la solicitud (se acredita con certificación/volante de empadronamiento con fecha de alta); hay excepciones — ver la siguiente advertencia",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 9.4",
+				"excerpt": "la unidad de convivencia deberá estar constituida con una antelación mínima de seis meses a la fecha de la solicitud",
+				"excerptSha256": "2832a4b74cb2e892299ea389572c6171701bdaf9ad334a0dd635a82ce51a66ee"
+			}
+		},
+		{
+			"id": "unidad-convivencia-excepciones",
+			"label": "El plazo de 6 meses de la unidad de convivencia puede exceptuarse en supuestos tasados (menores o personas con discapacidad a cargo, fallecimiento de progenitores/tutores, desarraigo social, violencia familiar o de género, separación o divorcio)",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 14.3",
+				"excerpt": "Podrá exceptuarse el plazo de seis meses previos de constitución de la unidad de convivencia para el reconocimiento de la prestación",
+				"excerptSha256": "6b6a26254e9035d53e4c622870a35b47d0c52bff778b6bcc0ecdf95ac1563663"
+			}
+		},
+		{
+			"id": "residencia-legal",
+			"label": "La residencia en la Comunidad de Madrid debe ser legal: si eres extranjero necesitas autorización o tarjeta de residencia vigente (la sede pide NIE/TIE, certificado de registro de ciudadano de la UE o pasaporte)",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 2.1",
+				"excerpt": "podrá ser percibida por aquellas personas que acrediten tener residencia legal en la Comunidad de Madrid",
+				"excerptSha256": "eababc12f8281c80ca3737e5f6be9ef4df4be4bb4606bac4f896736b7b9bac38"
+			}
+		},
+		{
+			"id": "solicitud-previa-prestaciones",
+			"label": "La RMI es subsidiaria: antes debes haber solicitado (y que te hayan denegado) las pensiones o prestaciones a que puedas tener derecho — IMV, pensiones no contributivas, prestaciones de desempleo…",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.e y Art. 4.2",
+				"excerpt": "Haber solicitado previamente de los organismos correspondientes las pensiones o prestaciones a que se refiere el artículo 4.1",
+				"excerptSha256": "6bbd53b598b0e0dc3643db140cc8c9c73d1cebc2412b87848ee88cae1a9e35f4"
+			}
+		},
+		{
+			"id": "escolarizacion-menores",
+			"label": "Los menores de la unidad de convivencia en edad de escolarización obligatoria deben estar escolarizados",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.f",
+				"excerpt": "Tener escolarizados a los menores que formen parte de la unidad de convivencia en edad de escolarización obligatoria",
+				"excerptSha256": "75fe49b83ae67447a1d28a8a737909bf1a8441ea4cb16686c590881db98a9b67"
+			}
+		},
+		{
+			"id": "compromiso-insercion",
+			"label": "Debes suscribir el compromiso de formalizar el programa individual de inserción y participar en sus medidas",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.g",
+				"excerpt": "Haber suscrito el compromiso de formalizar el preceptivo programa individual de inserción y de participar activamente en las medidas que se contengan en el mismo",
+				"excerptSha256": "94afae4052e483d3d4e67bc2b801defa9109b4c43ee2ae034aeb55991c7a21c4"
+			}
+		},
+		{
+			"id": "patrimonio",
+			"label": "El patrimonio conjunto de la unidad de convivencia no puede llegar a tres veces la cuantía anual de la RMI que correspondería (la vivienda habitual no computa en la valoración)",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 12.6",
+				"excerpt": "sea igual o superior a tres veces la cuantía anual de la Renta Mínima de Inserción que pudiera corresponder",
+				"excerptSha256": "46af07fe41a426d4a2448ca139d1f4f9368c2c6b4a6b0a653ce19387896d86d0"
+			}
+		},
+		{
+			"id": "baja-voluntaria-empleo",
+			"label": "Se entiende que hay recursos suficientes si alguien de la unidad causó baja voluntaria, redujo su jornada o rechazó una oferta de empleo adecuada en los 6 meses anteriores a la solicitud",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 8.5",
+				"excerpt": "ha causado baja voluntaria en un trabajo o rechazado una oferta de empleo adecuada a sus capacidades y habilidades, en los seis meses inmediatamente anteriores a la formulación de la solicitud",
+				"excerptSha256": "753a785c87053d0272bae4cdc13dcf47ff5f7090c1530f6f1aea62bbcc372ee6"
+			}
+		},
+		{
+			"id": "vias-18-25",
+			"label": "Si tienes entre 18 y 24 años sin menores a cargo, también puedes acceder si: estuviste tutelado/a por la CM hasta la mayoría de edad, eres huérfano/a absoluto, estás en grave exclusión social (informe social), eres víctima de violencia familiar o de género, o participas en un Programa de Inclusión Social reconocido",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 8.2",
+				"excerpt": "Podrá reconocerse la prestación de la Renta Mínima de Inserción a personas con una edad comprendida entre dieciocho y veinticinco años",
+				"excerptSha256": "6da530c2af1636f6970c1113ba31a3364a852bfceaedbc00ec12fa5a878f1b94"
+			}
+		},
+		{
+			"id": "mayores-65-sin-pension",
+			"label": "Si tienes más de 65 años sin menores a cargo, hace falta además vivir solo/a (o que nadie de la unidad pueda ser titular) y haber recibido resolución expresa de denegación de la pensión no contributiva de jubilación",
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 8.3",
+				"excerpt": "a personas con una edad superior a sesenta y cinco años que carezcan de ingresos",
+				"excerptSha256": "15a6ede70a15d4cc8aabf744d1b14dae412b7d85f134e36116dd67f0fe65a9b5"
+			}
+		},
+		{
+			"id": "menores-emancipados",
+			"label": "Las personas menores de edad no pueden ser titulares, salvo emancipadas o con beneficio de mayor edad (nuestra comprobación de edad no lo distingue)",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.1.b, in fine",
+				"excerpt": "En ningún caso podrán ser titulares de renta mínima de inserción las personas menores de edad, salvo que se encuentren emancipadas",
+				"excerptSha256": "95a8872c62f3660a88561d839e9b2dd92bbc0a62f7062a9a26b045343a5b6c2f"
+			}
+		},
+		{
+			"id": "centros-colectivos",
+			"label": "No constituye unidad de convivencia residir en establecimientos colectivos públicos de estancia permanente (residencias de mayores o de personas con discapacidad, centros penitenciarios — con excepción en tercer grado para cuidado de hijos)",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 7.1, in fine",
+				"excerpt": "En ningún caso podrán constituir una unidad de convivencia las personas que residan en centros colectivos de titularidad pública de estancia permanente",
+				"excerptSha256": "14087e900fb04d07f1601a7f4ba3365d6262093e2571f26f74ce4235daa82e5a"
+			}
+		},
+		{
+			"id": "concesion-excepcional",
+			"label": "Existe una vía de reconocimiento excepcional para unidades en extrema necesidad que no cumplan todos los requisitos (nunca se exceptúa la residencia permanente en la CM ni se concede a menores no emancipados)",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 6.2",
+				"excerpt": "En ningún caso podrá excepcionarse el requisito de residir de manera permanente en la Comunidad de Madrid",
+				"excerptSha256": "cd43b4542e0862bd6e1fef167b1524357136a5cff0758ac62958d939c6edf92d"
+			}
+		},
+		{
+			"id": "computo-ingresos-unidad",
+			"label": "El límite de ingresos se mide sobre los rendimientos mensuales de TODA la unidad de convivencia (con reglas de valoración y recursos no computables del Reglamento); nuestra comprobación usa tus ingresos anuales en banda — solo es orientativa",
+			"citation": {
+				"sourceId": "boe-ley-15-2001-rmi",
+				"locator": "Art. 8.2",
+				"excerpt": "cuando los rendimientos mensuales que obtenga sean inferiores a la cuantía vigente de la pensión no contributiva de la Seguridad Social en cómputo anual prorrateado a doce meses",
+				"excerptSha256": "a92cff226a7a4b77845a3e88c0529a2458514156640f5979eb275bb2a84c8668"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20141121-1-reglamento-rmi",
+				"locator": "Art. 31.1 (prestación permanente; la sede indica «En plazo: permanente»)",
+				"excerpt": "se iniciará mediante solicitud de la persona interesada",
+				"excerptSha256": "7c938be0a136e968cc4d474b6722c909912257ce3402a3a8af48657780644bbd"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales (solicitud preferente en el centro municipal de servicios sociales del domicilio)",
+			"url": "https://sede.comunidad.madrid/prestacion-social/renta-minima-insercion",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sede-rmi",
+				"locator": "Tramitación › Presenta la solicitud",
+				"excerpt": "La tramitación de la solicitud puede realizarse por medios electrónicos o de forma presencial",
+				"excerptSha256": "6aee34ef52693343e21e497b4ad87fb816f69488ae4ddd31bcf3b1bbb9ec0619"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-empadronamiento",
+				"label": "Certificación de empadronamiento histórico y colectivo con todas las personas empadronadas en el domicilio y fecha de antigüedad",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Certificación de empadronamiento histórico y colectivo donde consten todas las personas empadronadas en el domicilio",
+					"excerptSha256": "59d1115769c0d88828cda34ac96f021f40414a7cdf4492859eb1ff128a41b434"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad del solicitante y de cada miembro de la unidad (DNI, NIE/TIE, pasaporte o certificado de registro de ciudadano de la UE)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "NIE o TIE del solicitante y de los miembros de la unidad de convivencia",
+					"excerptSha256": "0442e2c385187af848f0c1ba950ae7005a381c1d135842c96dec746ff0ee9ddc"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Libro de Familia completo (o certificados de nacimiento / acuerdos de adopción, acogimiento, tutela o curatela)",
+				"mandatory": true,
+				"condition": {
+					"any": [
+						{
+							"field": "dependents",
+							"op": "count_where_gte",
+							"count": 1,
+							"where": {
+								"field": "age",
+								"op": "lt",
+								"value": 18
+							}
+						},
+						{
+							"field": "familyType",
+							"op": "in",
+							"value": [
+								"familia-numerosa",
+								"monoparental"
+							]
+						}
+					]
+				},
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Libro de Familia completo",
+					"excerptSha256": "6a44063545205a523ab251322ddfa31628f6d598d8c63b7e3f25056a43174f3f"
+				}
+			},
+			{
+				"id": "doc-escolaridad",
+				"label": "Certificado de escolaridad y de asistencia regular al centro escolar de los menores en edad obligatoria",
+				"mandatory": true,
+				"condition": {
+					"field": "dependents",
+					"op": "count_where_gte",
+					"count": 1,
+					"where": {
+						"field": "age",
+						"op": "lt",
+						"value": 18
+					}
+				},
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Certificado de escolaridad de los menores y de asistencia regular al centro escolar",
+					"excerptSha256": "572a71ebd352419801e7435df63a5a0c783b94cc1930588ec195b6426d816e91"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Justificantes de ingresos de todos los miembros de la unidad de convivencia (nóminas, declaraciones fiscales, declaración jurada de actividades no regladas…)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Justificantes de ingresos de todos los miembros que componen la unidad de convivencia",
+					"excerptSha256": "66a5ca2d1c626de914db94ffc95d39a9edd278f9c977e33add5589a62d702031"
+				}
+			},
+			{
+				"id": "doc-patrimonio",
+				"label": "Documentación del patrimonio mobiliario e inmobiliario y de los rendimientos que genera (todos los miembros)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Documentación acreditativa del patrimonio mobiliario e inmobiliario, de los rendimientos efectivos que dicho patrimonio genere",
+					"excerptSha256": "b77c4e3d1c28c4ffde6fca60bec5413a80df4bcea7a2d1661fffd420c96fcf57"
+				}
+			},
+			{
+				"id": "doc-vivienda",
+				"label": "Documentación de la titularidad de la vivienda (escritura de compraventa o contrato de arrendamiento)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Documentación acreditativa de la titularidad de la vivienda (compraventa, arrendamiento)",
+					"excerptSha256": "13da65b170ef13f66c01820be049bfd3eb2e042558c28b78d83afd38194d4332"
+				}
+			},
+			{
+				"id": "doc-bancario",
+				"label": "Datos bancarios del solicitante (apartado 12 de la solicitud)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Datos bancarios del solicitante de renta mínima de inserción",
+					"excerptSha256": "31cef718cc2edf1af57bf871489c164239630b587d2b0cf99c5411de6daf9ad7"
+				}
+			},
+			{
+				"id": "doc-prestaciones",
+				"label": "Certificado o resolución del SEPE (prestación/subsidio por desempleo o RAI) y del organismo de la Seguridad Social sobre prestaciones o pensiones, si las percibes o las has solicitado",
+				"mandatory": false,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "in",
+					"value": [
+						"desempleado",
+						"jubilado"
+					]
+				},
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Certificado o resolución del SEPE relativo a la percepción de prestación o subsidio por desempleo",
+					"excerptSha256": "dbd537dc6d43cb40940765695dafc35c0ed7e9963d2fe061f5c7501d3714de49"
+				}
+			},
+			{
+				"id": "doc-discapacidad",
+				"label": "Certificado de discapacidad expedido por la Comunidad Autónoma (si tú o alguien a tu cargo la tiene reconocida)",
+				"mandatory": false,
+				"condition": {
+					"any": [
+						{
+							"field": "disability",
+							"op": "in",
+							"value": [
+								"gte33",
+								"lt33"
+							]
+						},
+						{
+							"field": "dependents",
+							"op": "count_where_gte",
+							"count": 1,
+							"where": {
+								"field": "disability",
+								"op": "eq",
+								"value": "yes"
+							}
+						}
+					]
+				},
+				"citation": {
+					"sourceId": "sede-rmi",
+					"locator": "Documentación",
+					"excerpt": "Certificado de discapacidad expedido por la Comunidad Autónoma correspondiente",
+					"excerptSha256": "7c9bc08de49c53fe99f66c2f1fa1e5e16432df9a6c487ee520c318916c745891"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 469.93,
+		"maxEur": 1221,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-ley-6-2025-presupuestos-madrid",
+			"locator": "Art. 58",
+			"excerpt": "el importe de la Renta Mínima de Inserción se fija en las siguientes cuantías: a) Importe de la prestación mensual básica: 469,93 euros",
+			"excerptSha256": "aac7ccc3816f6ce0983fabaa3637e6e82f5523b6178ad7971eff0dbd41ca50ed"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

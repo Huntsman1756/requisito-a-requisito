@@ -82,6 +82,12 @@ const EXCLUDE: [RegExp, string][] = [
 	[/federaciones|establecimientos|montes|bovino|ovino|caprino|explotacion|agricola|ganader|vinedo|forestal/, "actividad agraria/económica"],
 	[/leader\b|desarrollo local participativo|plan de cooperacion|obras y servicios municipales|obras publicas de infraestructuras|areas industriales/, "desarrollo local o entidades"],
 	[/funcionarios|personal de administracion|personal publico|personal militar|cuerpos docentes/, "interno del empleado público"],
+	[/convenio/, "convenio entre administraciones, no una ayuda a personas"],
+	[/puesto libre|designaci[oó]n|nombramiento/, "designación/nombramiento"],
+	[/correcci[oó]n de errores|rectificaci[oó]n/, "rectificación, no una convocatoria"],
+	[/concesi[oó]n|adjudicaci[oó]n/, "resolución de concesión, no una convocatoria"],
+	[/pr[oó]rroga/, "prórroga, no una convocatoria"],
+	[/modificaci[oó]n de (las |la )?(bases|convocatoria|orden)/, "modificación de bases"],
 ];
 
 const THEME_RX: [string, RegExp][] = [
@@ -142,7 +148,42 @@ const SRC_ORDER: Record<string, number> = {
 	seed: 4,
 };
 
-export function mergePrograms(items: RawItem[]): {
+/** Resolución determinista de UNKNOWN (R3-UNK):
+ *  - fecha de publicación/recepción < año en curso → CLOSED (la convocatoria
+ *    de una edición pasada ya no admite solicitudes; verificado por fecha,
+ *    no por inferencia del texto)
+ *  - título con «permanentemente|indefinidamente|plazo abierto|carácter
+ *    permanente» → ROLLING
+ *  Si no, se queda UNKNOWN (y va al final de /explorar).
+ */
+export function resolveAccessState(r: RawItem, today: string): string {
+	const t = norm(r.title);
+	if (/permanentemente|indefinidamente|plazo abierto|caracter permanente|sin plazo|inscripcion abierta/.test(t)) {
+		return "ROLLING";
+	}
+	const year = Number(today.slice(0, 4));
+	// BOCM embebido: bocm-BOCM-YYYYMMDD-N
+	const bocmDate = /bocm-BOCM-(\d{4})(\d{2})(\d{2})-/i.exec(r.id ?? "");
+	const bocmYear = /bocm-(\d{4})/i.exec(r.id ?? "")?.[1];
+	const dateStr =
+		(typeof r.extra?.receivedAt === "string" ? r.extra.receivedAt : undefined) ??
+		(bocmDate
+			? `${bocmDate[1]}-${bocmDate[2]}-${bocmDate[3]}`
+			: bocmYear
+				? `${bocmYear}-12-31`
+				: undefined);
+	if (dateStr) {
+		// plazo ordinario de una convocatoria BOCM: ~15-30 días naturales;
+		// publicada hace >90 días y sin señal de permanencia → CLOSED
+		// (inferido; la ficha indica «consulta la sede»)
+		const diffDays =
+			(Date.parse(today) - Date.parse(dateStr)) / 86_400_000;
+		if (Number(dateStr.slice(0, 4)) < year || diffDays > 90) return "CLOSED";
+	}
+	return r.accessState ?? "UNKNOWN";
+}
+
+export function mergePrograms(items: RawItem[], today = "9999-12-31"): {
 	programs: Program[];
 	rejected: { title: string; reason: string; source: string }[];
 } {
@@ -163,7 +204,10 @@ export function mergePrograms(items: RawItem[]): {
 			id,
 			title: r.title,
 			scope: r.scope,
-			accessState: r.accessState ?? "UNKNOWN",
+			accessState:
+				r.accessState && r.accessState !== "UNKNOWN"
+					? r.accessState
+					: resolveAccessState(r, today),
 			officialSourceUrl: r.url,
 			themes,
 			lifeEvents,

@@ -1,0 +1,108 @@
+{
+	"id": "gp-cancer-padre-vallecas",
+	"description": "Padre de 38 años, empadronado en Madrid-Villa de Vallecas (28079) desde 2016, con un hijo de 6 años a cargo enfermo de cáncer (leucemia) que exige cuidado directo y permanente. Trabaja como asalariado y va a reducir su jornada un 50 % para cuidarlo. Caso positivo típico: los dos requisitos comprobables salen T, pero el veredicto no puede pasar de «posible» porque la enfermedad grave acreditada, la reducción de jornada ≥ 50 %, el alta de la otra progenitora y los periodos mínimos de cotización no son comprobables con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2016,
+					"month": 4
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 38,
+					"max": 38,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 6,
+							"max": 6,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "prestacion-cuidado-menores-cancer",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 190.1",
+					"reasoning": "Un dependiente de 6 años ⇒ count_where_gte(age < 18) = T: cumple el requisito comprobable de tener un hijo o menor a cargo menor de 18 años (también se cubre la extensión hasta 23/26 años si la enfermedad se diagnosticó siendo menor, vía la segunda rama del any)."
+				},
+				{
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 4.1",
+					"reasoning": "employmentStatus = asalariado ⇒ requisito T: es persona trabajadora por cuenta ajena, que el RD presupone afiliada y en alta en la Seguridad Social. Los funcionarios quedan fuera (art. 191.4 LGSS) y quedan cubiertos por el EBEP — documentado en uncoveredRequirements."
+				},
+				{
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Arts. 2, 4.2, 5, 7.1 y 9",
+					"reasoning": "El resto de condiciones decisivas no son comprobables con ≤ 10 preguntas: enfermedad grave del listado acreditada por declaración del SPS, reducción de jornada ≥ 50 %, afiliación y alta de ambos progenitores (salvo monoparentales y excepciones), periodos mínimos de cotización según la edad, y solicitud dentro de los 3 meses del inicio de la reducción para cobrar desde el primer día. Todo queda en uncoveredRequirements como ⚠ ⇒ veredicto «posible», no «probable»."
+				},
+				{
+					"sourceId": "boe-rd-1148-2011-cancer",
+					"locator": "Art. 7.1",
+					"reasoning": "La prestación es permanente y el derecho nace el mismo día del inicio de la reducción si la solicitud se presenta en 3 meses ⇒ deadline ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	},
+	"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
+	"rulesVersion": 2
+}

@@ -15,7 +15,7 @@ describe("andamiaje (F0-7)", () => {
 	});
 
 	it("las fuentes portadas existen", () => {
-		for (const f of ["fonts.css", "inter-latin-wght-normal.woff2", "ibm-plex-mono-400.woff2"]) {
+		for (const f of ["ahn-r.woff2", "ibm-plex-mono-400.woff2"]) {
 			expect(existsSync(join(ROOT, "public/fonts", f)), f).toBe(true);
 		}
 	});

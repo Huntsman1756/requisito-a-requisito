@@ -1,0 +1,120 @@
+{
+	"id": "gp-dependencia-cuidadora",
+	"description": "Mujer de 52 años empadronada en Madrid capital (28079) desde 2015, asalariada, que cuida a su madre de 81 años (a su cargo, con discapacidad, a la espera de la valoración de dependencia). Responde el cuestionario por sí misma: sin dependencia propia reconocida (la que la necesita es la madre — el trámite puede iniciarlo un representante). Caso positivo: territorio CM + residencia larga ⇒ «posible» con muchos ⚠; el grueso del programa (grado, valoración, PIA, capacidad económica) no es comprobable con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2015,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 52,
+					"max": 52,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 81,
+							"max": 81,
+							"maxExclusive": false
+						},
+						"disability": "yes"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"dependency": {
+				"state": "unasked"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-dependencia-saad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [
+				"dependency"
+			],
+			"justification": [
+				{
+					"sourceId": "bocm-20150526-1-dependencia",
+					"locator": "Art. 2 (Titulares de derechos)",
+					"reasoning": "Empadronada en Madrid capital (28079) ⇒ reside y está empadronada en la Comunidad de Madrid a fecha de solicitud (T, único hard del ruleset)."
+				},
+				{
+					"sourceId": "boe-ley-39-2006-dependencia",
+					"locator": "Art. 5.1.c",
+					"reasoning": "Empadronada en su municipio desde 06/2015 ⇒ residenceMonths ≈135 ≥ 24 ⇒ el proxy de «2 años inmediatamente anteriores» da T (aviso soft; los 5 años totales y su acreditación quedan en uncovered «residencia-regla-completa»)."
+				},
+				{
+					"sourceId": "boe-ley-39-2006-dependencia",
+					"locator": "Art. 28.1",
+					"reasoning": "Responde disability = «no», así que q-dependency no se muestra (showIf) ⇒ dependency unasked ⇒ el aviso «sin-reconocimiento-previo» queda U sin cambiar el veredicto. La persona que necesita el reconocimiento es la madre; el trámite puede iniciarlo la hija como representante (art. 28.1 Ley 39/2006, art. 12.1 Dto. 54/2015)."
+				},
+				{
+					"sourceId": "sede-reconocimiento-dependencia",
+					"locator": "Ficha del trámite S13, cabecera",
+					"reasoning": "La sede de la CM marca «En plazo: permanente» (procedimiento a instancia de parte, sin convocatoria) ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "boe-ley-39-2006-dependencia",
+					"locator": "Art. 5.1.a, 26, 27.2, 29.1 y DF 1.ª.2",
+					"reasoning": "Veredicto «posible» (no «probable»): la situación de dependencia solo la declara la valoración oficial con el baremo, el grado es desconocido, el PIA decide el servicio/prestación y la capacidad económica se determina en el expediente — todo queda en uncovered. Dependencia reconocida por la madre ≠ reconocida por la solicitante: nuestro perfil no pregunta por la dependencia de las personas a cargo."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	},
+	"benefitSlug": "prestaciones-dependencia-saad",
+	"rulesVersion": 2
+}
