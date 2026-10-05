@@ -1,0 +1,550 @@
+{
+	"benefitSlug": "madrid-ayudas-alquiler-plan-estatal",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-rd-42-2022-plan-estatal",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2022/01/18/42/con",
+			"title": "Real Decreto 42/2022, de 18 de enero — Bono Alquiler Joven y Plan Estatal para el acceso a la vivienda 2022-2025 (texto consolidado; Título II, Capítulo III: programa de ayuda al alquiler de vivienda)"
+		},
+		{
+			"id": "bocm-20221011-19-orden-3479-2022",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/10/11/BOCM-20221011-19.PDF",
+			"title": "Orden 3479/2022, de 7 de octubre, de la Consejería de Medio Ambiente, Vivienda y Agricultura — bases reguladoras de las ayudas al alquiler en la Comunidad de Madrid (BOCM n.º 242, 11/10/2022)"
+		},
+		{
+			"id": "bocm-20251028-25-alquiler-2025",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/10/28/BOCM-20251028-25.PDF",
+			"title": "Extracto de la Orden de 22 de octubre de 2025 — convocatoria 2025 de las ayudas al alquiler y a personas jóvenes (BOCM n.º 257, 28/10/2025; BDNS 864405 y 864406)"
+		},
+		{
+			"id": "bocm-20241029-11-alquiler-2024",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/10/29/BOCM-20241029-11.PDF",
+			"title": "Extracto de la Orden de 24 de octubre de 2024 — convocatoria 2024 de las ayudas al alquiler y a personas jóvenes (BOCM n.º 258, 29/10/2024; BDNS 793423 y 793421)"
+		},
+		{
+			"id": "bocm-20231016-8-alquiler-2023",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/10/16/BOCM-20231016-8.PDF",
+			"title": "Extracto de la Orden de 11 de octubre de 2023 — convocatoria 2023 de las ayudas al alquiler y a personas jóvenes (BOCM n.º 245, 16/10/2023; BDNS 721190)"
+		},
+		{
+			"id": "sede-ayudas-alquiler-2025",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-alquiler-jovenes-0",
+			"title": "Sede electrónica CM — Ayudas al alquiler de vivienda para jóvenes y sectores de escasos recursos (2025), referencia A858"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "mayoria-edad",
+			"hard": true,
+			"label": "Ser mayor de edad en la fecha de la solicitud",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.1",
+				"excerpt": "las personas físicas mayores de edad que reúnan todos y cada uno de los requisitos siguientes",
+				"excerptSha256": "9a477b051cf62eddcab673808d9421d0bd7d8179b1e6a553df99e689e159b479"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 18
+			}
+		},
+		{
+			"id": "vivienda-en-madrid",
+			"hard": true,
+			"label": "La vivienda alquilada (tu residencia habitual) debe estar en la Comunidad de Madrid, que gestiona estas ayudas con fondos estatales",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 2",
+				"excerpt": "correspondiendo su gestión a la Comunidad de Madrid",
+				"excerptSha256": "9cdeaaf89b0101ded1b0ae72ad3810c91c959a932f8396027d34f5bac525c397"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "ingresos-max-5iprem",
+			"hard": true,
+			"label": "Los ingresos anuales de toda la unidad de convivencia deben ser iguales o inferiores a 3 veces el IPREM (25.200 €/año en 2026); el tope sube a 4×IPREM en familia numerosa general, unidades con discapacidad o víctimas de terrorismo, y a 5×IPREM (42.000 €/año) en familia numerosa especial o discapacidad ≥33 % — aquí comprobamos solo que tus propios ingresos no superan el tope más alto",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.1.c",
+				"excerpt": "de 5 veces el IPREM cuando se trate de familias numerosas de categoría especial o de personas con discapacidad con un grado reconocido igual o superior al 33 %",
+				"excerptSha256": "8e5a3e2cfe732667acee836dc5136ada4e689051a42d4e20f329e9c9fb8dc932"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_14P",
+				"multiplier": 5
+			}
+		},
+		{
+			"id": "sector-preferente",
+			"hard": false,
+			"label": "Pertenecer a alguno de los colectivos a los que va dirigida: familia numerosa, familia monoparental con cargas, unidad con alguna víctima acreditada de violencia de género o de terrorismo, unidad con algún miembro con discapacidad, unidad con todos los miembros en desempleo que han agotado las prestaciones, o unidad con todos los miembros de 65 o más años",
+			"citation": {
+				"sourceId": "bocm-20251028-25-alquiler-2025",
+				"locator": "Extracto, Primero (Beneficiarios, I)",
+				"excerpt": "que se encuentren en alguno de los supuestos siguientes establecidos en la Orden de convocatoria para cada uno de los programas",
+				"excerptSha256": "3a29c746abb9f115a206b6fcb9ee37705de24e66c2c171c1942f3f709e431d91"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "familyType",
+						"op": "eq",
+						"value": "familia-numerosa",
+						"label": "familia numerosa",
+						"citation": {
+							"sourceId": "bocm-20221011-19-orden-3479-2022",
+							"locator": "Art. 6.1.a",
+							"excerpt": "Las familias numerosas",
+							"excerptSha256": "5c07f0f5f93360e3a655e184eac02a15e32c511706e42dfa409b0916a52ad240"
+						}
+					},
+					{
+						"all": [
+							{
+								"field": "familyType",
+								"op": "eq",
+								"value": "monoparental"
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"field": "age",
+									"op": "lt",
+									"value": 99
+								}
+							}
+						],
+						"label": "familia monoparental con cargas familiares",
+						"citation": {
+							"sourceId": "bocm-20221011-19-orden-3479-2022",
+							"locator": "Art. 6.1.b",
+							"excerpt": "Unidades familiares monoparentales con cargas familiares",
+							"excerptSha256": "72426a25580235d4877ab49fd6a0fb4f96d2d64152ee91805ad3aeb3f5849354"
+						}
+					},
+					{
+						"any": [
+							{
+								"field": "disability",
+								"op": "eq",
+								"value": "gte33"
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"field": "disability",
+									"op": "eq",
+									"value": "yes"
+								}
+							}
+						],
+						"label": "unidad de convivencia con algún miembro con discapacidad (reconocida igual o superior al 33 % en tu caso)",
+						"citation": {
+							"sourceId": "bocm-20221011-19-orden-3479-2022",
+							"locator": "Art. 6.1.e",
+							"excerpt": "Unidades de convivencia que cuenten con algún miembro con discapacidad",
+							"excerptSha256": "346df07ef86cceae736c526123c18550925a08e60732d1c2bdd109db487ee807"
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": "contrato-alquiler",
+			"hard": false,
+			"label": "Ser titular de un contrato de arrendamiento de vivienda (LAU), de cesión de uso o de habitación ya firmado — en este programa no vale «estar en condiciones de suscribirlo»",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.1.a",
+				"excerpt": "Ser titular, en calidad de arrendatario, de un contrato de arrendamiento de vivienda formalizado en los términos de la Ley 29/1994, de 24 de noviembre, de Arrendamientos Urbanos",
+				"excerptSha256": "ede8da98910fc5d165832b9a8b4cd9f1d96f803543bb5fae4796bd21a59b9354"
+			},
+			"condition": {
+				"field": "housingStatus",
+				"op": "in",
+				"value": [
+					"alquiler",
+					"general"
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Ser español, de un Estado de la UE/EEE o Suiza, o extranjero con estancia o residencia regular en España",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.2.a",
+				"excerpt": "Poseer la nacionalidad española, o la de alguno de los Estados miembros de la Unión Europea o del Espacio Económico Europeo, Suiza",
+				"excerptSha256": "2cb53675c586c25093532339cad718ed09015f8114255d72ca1b67b143176fef"
+			}
+		},
+		{
+			"id": "sectores-restantes",
+			"label": "No podemos comprobar los otros colectivos con derecho: víctimas acreditadas de violencia de género o de terrorismo en la unidad, unidades con todos los miembros desempleados que han agotado las prestaciones, o unidades con todos los miembros de 65 o más años — si es tu caso, sí puedes solicitarla",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.1.c-d, f-g",
+				"excerpt": "Unidades de convivencia en la que todos sus miembros tienen edades iguales o su",
+				"excerptSha256": "5f5ecc705a858f1953fb22701d8b0cb245820ceff01158b88b7d0ff51ffac90c"
+			}
+		},
+		{
+			"id": "contrato-titularidad",
+			"label": "El contrato debe estar a tu nombre como arrendatario/a o cesionario/a (vivienda, habitación o cesión de uso); en el programa de alquiler general no sirve «estar en condiciones de firmarlo», opción reservada a la línea de jóvenes",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.2.b",
+				"excerpt": "o de un contrato de cesión de uso o de arrendamiento o cesión de uso de una habitación",
+				"excerptSha256": "73c7507fde7c5c54bb6156062d8ce42ed01873d17acdba081d29418df99ab4b2"
+			}
+		},
+		{
+			"id": "residencia-habitual",
+			"label": "La vivienda o habitación debe ser tu residencia habitual y permanente, acreditada con volante o certificado de empadronamiento colectivo a fecha de solicitud, durante todo el período subvencionado",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.2.c",
+				"excerpt": "constituya la residencia habitual y permanente de la persona arrendataria",
+				"excerptSha256": "7bb40cf4f0e2c7817260a93eea4a43c57ffaa20ce9ecc3149f691ca8dd35a20a"
+			}
+		},
+		{
+			"id": "ingresos-unidad-convivencia",
+			"label": "El límite se mide sobre la suma de las rentas anuales de TODAS las personas con domicilio habitual en la vivienda (consten o no en el contrato): ≤3×IPREM en general, ≤4×IPREM si familia numerosa general, discapacidad o terrorismo, ≤5×IPREM si familia numerosa especial o discapacidad ≥33 %; en alquiler de habitación solo cuentan tus rentas",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.1.c",
+				"excerpt": "la suma total de las rentas anuales de las personas que tengan su domicilio habitual y permanente en la vivienda arrendada, consten o no como titulares del contrato de arrendamiento sean iguales o inferiores a 3 veces el Indicador Público de Renta de Efectos Múltiples (IPREM)",
+				"excerptSha256": "4059c716292137edf1d4941291c87151c3c5c7443ac68fdd3fd9e8884e9120a2"
+			}
+		},
+		{
+			"id": "ingresos-minimos",
+			"label": "Algunos colectivos deben además acreditar un ingreso mínimo de la unidad de convivencia: más de 0,5×IPREM/año (4.200 € en 2026) para familias numerosas, víctimas de terrorismo, unidades con discapacidad o con todos los miembros ≥65 años; para el resto basta con ≥0 €",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.2.e",
+				"excerpt": "sean iguales o superiores a 0,50 veces el IPREM",
+				"excerptSha256": "604d9e88289980f629bf845b96f567229eb9fb9febf355ca37ad8f99f7fd7976"
+			}
+		},
+		{
+			"id": "renta-maxima",
+			"label": "La renta mensual no puede superar 600 €/mes (300 €/mes si es habitación); sube hasta 900 €/450 € en los 55 municipios que fija la convocatoria y, para familias numerosas, en todos los municipios de la CM — no comprobamos la renta que pagas",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.1.d",
+				"excerpt": "por una renta arrendaticia o precio de cesión, igual o inferior a 600 euros mensuales",
+				"excerptSha256": "69af3a73dd5fb6fbd925809b7a449ddd1fe045a2f90a8afccd0c477579e40a40"
+			}
+		},
+		{
+			"id": "no-propietario",
+			"label": "Ni tú ni quienes residan habitualmente contigo podéis ser propietarios o usufructuarios de una vivienda en España (excepciones: parte alícuota por herencia, no disponibilidad por separación o divorcio, inaccesibilidad por discapacidad u otra causa ajena a la voluntad)",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.2.a",
+				"excerpt": "Ser propietaria o usufructuaria de alguna vivienda en España",
+				"excerptSha256": "0153a707a15376de08460bcd62dded2894b539517cafcc7f02d245a46e1b048a"
+			}
+		},
+		{
+			"id": "sin-vinculo-arrendador",
+			"label": "Nadie empadronado en la vivienda puede tener parentesco en primer o segundo grado con el arrendador ni ser socio o partícipe de la persona arrendadora (salvo cooperativas de vivienda en cesión de uso sin ánimo de lucro)",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-plan-estatal",
+				"locator": "Art. 27.2.b-c",
+				"excerpt": "tenga parentesco en primer o segundo grado de consanguinidad o de afinidad con la persona arrendadora o cedente",
+				"excerptSha256": "27d0457edfe12967f2630d8528ff6ad6aede9d4747aa782cf5a3ef226a560bd9"
+			}
+		},
+		{
+			"id": "prohibiciones-revocacion",
+			"label": "No estar incurso en las circunstancias del art. 13 de la Ley 38/2003 General de Subvenciones ni haber sufrido la revocación de ayudas de planes estatales de vivienda por causas imputables al solicitante",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 6.2.g.iv",
+				"excerpt": "Que esté incursa en alguna de las circunstancias previstas el artículo 13 de la Ley 38/2003",
+				"excerptSha256": "ae2f8a14928920a6ca5db76e6ab466c65b87f5d382eaed16404de8a4181ba8ba"
+			}
+		},
+		{
+			"id": "incompatible-otras-ayudas",
+			"label": "No es compatible con otras ayudas públicas al pago del alquiler (salvo Renta Básica… no: ni siquiera; solo se exceptúan ayudas de especial vulnerabilidad, prestaciones no contributivas de la Seguridad Social y el Ingreso Mínimo Vital)",
+			"citation": {
+				"sourceId": "bocm-20221011-19-orden-3479-2022",
+				"locator": "Art. 7",
+				"excerpt": "no podrán compatibilizarse con percepciones de la Renta Básica de Eman",
+				"excerptSha256": "f823fe4e1f81c0ffde6b89139c557de752ea0622b027b31b73952116e9b49c3c"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2025-11-04",
+			"closesAt": "2025-12-15",
+			"rolling": false,
+			"recurrence": "annual",
+			"citation": {
+				"sourceId": "bocm-20251028-25-alquiler-2025",
+				"locator": "Extracto, Quinto (plazo de presentación)",
+				"excerpt": "El plazo para la presentación de solicitudes comenzará el 4 de noviembre de 2025 y terminará el 15 de diciembre de 2025, ambos días incluidos",
+				"excerptSha256": "60b1b0ad82bb1de665636b9bc22d61a2cc00cc7a07feca782a41d08bc1e936e0"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2023-11-01",
+					"closesAt": "2023-12-15",
+					"citation": {
+						"sourceId": "bocm-20231016-8-alquiler-2023",
+						"locator": "Extracto, Quinto (plazo de presentación)",
+						"excerpt": "El plazo para la presentación de solicitudes comenzará el 1 de noviembre de 2023 y terminará el 15 de diciembre de 2023, ambos días incluidos",
+						"excerptSha256": "d346896465435ef0db838c95155c3963fd6052850965c93fc231c628105cd374"
+					}
+				},
+				{
+					"opensAt": "2024-11-01",
+					"closesAt": "2024-12-15",
+					"citation": {
+						"sourceId": "bocm-20241029-11-alquiler-2024",
+						"locator": "Extracto, Quinto (plazo de presentación)",
+						"excerpt": "El plazo para la presentación de solicitudes comenzará el 1 de noviembre de 2024 y terminará el 15 de diciembre de 2024, ambos días incluidos",
+						"excerptSha256": "57466db2c5905508d817d59b7a86f6f3cb2bcc9b59e2c2da98f51f2e04c66db3"
+					}
+				},
+				{
+					"opensAt": "2025-11-04",
+					"closesAt": "2025-12-15",
+					"citation": {
+						"sourceId": "bocm-20251028-25-alquiler-2025",
+						"locator": "Extracto, Quinto (plazo de presentación)",
+						"excerpt": "El plazo para la presentación de solicitudes comenzará el 4 de noviembre de 2025 y terminará el 15 de diciembre de 2025, ambos días incluidos",
+						"excerptSha256": "60b1b0ad82bb1de665636b9bc22d61a2cc00cc7a07feca782a41d08bc1e936e0"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Vivienda, Transportes e Infraestructuras (Dirección General de Vivienda y Rehabilitación)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-alquiler-jovenes-0",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sede-ayudas-alquiler-2025",
+				"locator": "Tramitación › Presenta la solicitud › Presentación digital",
+				"excerpt": "Para realizar este trámite por medios electrónicos necesitas uno de los sistemas de firma electrónica reconocidos por la Comunidad de Madrid",
+				"excerptSha256": "33fafc64b78200b25088043cd0671b008c1bbc7b081dac506e757da48bc130e0"
+			}
+		},
+		"documents": [
+			{
+				"id": "contrato",
+				"label": "Copia del contrato o contratos de arrendamiento o cesión de vivienda o habitación vigentes en el periodo subvencionable (en 2025: del 1 de enero al 31 de diciembre)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 2",
+					"excerpt": "Copia del contrato o contratos de arrendamiento o cesión de vivienda o habitación vigentes entre el 1 de enero a 31 de diciembre de 2025",
+					"excerptSha256": "429bb274b109fa54a4bd95eff35eef003d3ff97f84b853806db70530296bf8c0"
+				}
+			},
+			{
+				"id": "empadronamiento",
+				"label": "Volante o certificado de empadronamiento colectivo/familiar de cada una de las viviendas",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 3",
+					"excerpt": "Volante o certificado de empadronamiento colectivo/familiar de cada una de las viviendas",
+					"excerptSha256": "0ee82c1d0dc8b49f0098c174a6f782644fdfa4ac4377e310f16f703b5bf4e78f"
+				}
+			},
+			{
+				"id": "vida-laboral",
+				"label": "Certificado de vida laboral de todos los mayores de edad empadronados en la vivienda",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 12",
+					"excerpt": "Certificado de vida laboral de todos los mayores de edad empadronados en la vivienda",
+					"excerptSha256": "2a98029aae9bd27b1c1c90af7e8483c5eed9a0a30580dfd7f0f05c3de51c0e92"
+				}
+			},
+			{
+				"id": "anexos-i-ii",
+				"label": "Anexo I (autorización de los arrendatarios para presentar la solicitud) y Anexo II (declaración responsable de los convivientes mayores de edad)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, puntos 6-7",
+					"excerpt": "Declaración responsable de los convivientes mayores de edad (Anexo II)",
+					"excerptSha256": "bdfe236268f05d75b7342fb6a786e20f07d4a3e8237f97b07378b31a7a52f1cc"
+				}
+			},
+			{
+				"id": "irpf",
+				"label": "Declaración del IRPF del arrendatario y de los demás miembros de la unidad de convivencia, o certificado de imputaciones de la AEAT si no estabas obligado a declarar (solo si no autorizas la consulta de tus datos fiscales)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › consultas autorizadas",
+					"excerpt": "Copia completa de la Declaración del IRPF del arrendatario y demás miembros de la unidad de convivencia del arrendatario correspondiente al periodo impositivo 2024",
+					"excerptSha256": "b54b585d3ec98c99d50208e186cf9c3e08adbd0860c514f49fd7dffda3db7f3f"
+				}
+			},
+			{
+				"id": "certificado-pagador",
+				"label": "Si percibes Renta Mínima de Inserción, ayudas de emergencia social o prestaciones de la Seguridad Social exentas de IRPF: certificado del organismo pagador con la cuantía anual de 2024",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 4",
+					"excerpt": "certificado emitido por el organismo pagador correspondiente de la cuantía anual percibida en el ejercicio fiscal 2024",
+					"excerptSha256": "51db6e99e3f7a33b261811e6fc322ce8a7d145a204b501bd0a6197cd4bef5410"
+				}
+			},
+			{
+				"id": "empleados-hogar",
+				"label": "Si trabajas en el Sistema Especial para Empleados de Hogar: certificado de bases de cotización del ejercicio fiscal 2024",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 5",
+					"excerpt": "En caso de trabajadores incluidos en el Sistema Especial para Empleados de Hogar, certificado de bases de cotización del ejercicio fiscal 2024",
+					"excerptSha256": "f10d6763943f65b7cf90df9060bd30b64af5c53c7d593a6ee7aca2a515dc8f99"
+				}
+			},
+			{
+				"id": "doc-monoparental",
+				"label": "Documentación acreditativa como unidad monoparental con cargas familiares (si es tu supuesto)",
+				"mandatory": false,
+				"condition": {
+					"field": "familyType",
+					"op": "eq",
+					"value": "monoparental"
+				},
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 8",
+					"excerpt": "Documentación acreditativa como unidad monoparental con cargas familiares",
+					"excerptSha256": "c9e0967d6a053174c1dc5e6c90d0a61a2118e4063b2541f35e5aaee25c64cf16"
+				}
+			},
+			{
+				"id": "doc-violencia-genero",
+				"label": "Documentación acreditativa como víctima de violencia de género (si es tu supuesto)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 9",
+					"excerpt": "Documentación acreditativa como víctima de violencia de género",
+					"excerptSha256": "0de330eadfa3a43cb243e848a64a95582bfed3dcd75506efb9853a32bc679e40"
+				}
+			},
+			{
+				"id": "doc-terrorismo",
+				"label": "Certificado de víctima de terrorismo de la Dirección General de Apoyo a Víctimas de Terrorismo del Ministerio del Interior (si es tu supuesto)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 10",
+					"excerpt": "Certificado de víctima de terrorismo de la Dirección General de Apoyo a Víctimas de Terrorismo del Ministerio del Interior",
+					"excerptSha256": "16d0e57a1574dcace39501e115e545737fccf4bab34a4f02da4b70fb00ec7aa9"
+				}
+			},
+			{
+				"id": "doc-sepe-agotadas",
+				"label": "Certificado o Resolución del Servicio Público de Empleo que acredite que todos los miembros mayores de edad de la unidad han agotado las prestaciones (si es tu supuesto)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 11",
+					"excerpt": "Certificado o Resolución del Servicio Público de Empleo que acredite que todos los miembros de la unidad de convivencia mayores de edad han agotado las prestaciones",
+					"excerptSha256": "79b418768b9601476706a8e0a59df1c8778d1861829bfefade3499568abab915"
+				}
+			},
+			{
+				"id": "permiso-residencia",
+				"label": "Copia del permiso de residencia legal en España (solo si eres extranjero no comunitario)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › Ayuda para sectores de población con escasos recursos, punto 1",
+					"excerpt": "Copia del permiso de residencia legal en España, si se trata de extranjeros no comunitarios",
+					"excerptSha256": "55f0a70dc04db2d0743992988aa0181b0591f1d1d48cc62c8066616a2a93ae5a"
+				}
+			},
+			{
+				"id": "consultas-automaticas",
+				"label": "La CM consulta por vía electrónica el NIF/NIE, el título de familia numerosa, la discapacidad y la situación de desempleo del SEPE — salvo que te opongas de forma motivada, en cuyo caso los aportas tú",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayudas-alquiler-2025",
+					"locator": "Documentación › consultas por medios electrónicos",
+					"excerpt": "Título acreditativo de la condición de miembro de familia numerosa. Comunidad Autónoma",
+					"excerptSha256": "4fbe77b38d0c274fc43ed05f784475ed8489c50a47712530df64c95fb867e31d"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-rd-42-2022-plan-estatal",
+			"locator": "Art. 30",
+			"excerpt": "una ayuda de hasta el 50 % de la renta o precio mensual que deban satisfacer por el alquiler o cesión en uso de su vivienda o habitación habitual y permanente",
+			"excerptSha256": "bed40f4710895bc228d28c33a9b73a9a7a9ff7ccc4fd049ad82b9773d540eebe"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"vivienda"
+	],
+	"lifeEvents": [
+		"independizarse_vivienda",
+		"ingresos_bajos"
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"id": "gp-alquiler-vallecas",
+	"description": "Madre de 42 años con familia numerosa, 3 hijos a cargo, empadronada desde 2015 en Puente de Vallecas (Madrid, 28079), contrato de alquiler de vivienda, ingresos propios en banda 8.400–16.800 €/año, asalariada. Caso positivo acotado: los requisitos comprobables pasan (mayor de edad, CM, ingresos propios ≤5×IPREM, familia numerosa como sector preferente, contrato) y el resto queda como no comprobable ⇒ posible; la convocatoria 2025 está cerrada pero es anual ⇒ CLOSED_RECURRING.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": { "ccaa": "13", "province": "28", "municipality": "28079" }
+			},
+			"residenceSince": { "state": "value", "value": { "year": 2015, "month": 6 } },
+			"age": { "state": "value", "value": { "min": 42, "max": 42, "maxExclusive": false } },
+			"dependents": {
+				"state": "value",
+				"value": [
+					{ "age": { "min": 3, "max": 5, "maxExclusive": false }, "disability": "no" },
+					{ "age": { "min": 6, "max": 11, "maxExclusive": false }, "disability": "no" },
+					{ "age": { "min": 12, "max": 15, "maxExclusive": false }, "disability": "no" }
+				]
+			},
+			"familyType": { "state": "value", "value": "familia-numerosa" },
+			"employmentStatus": { "state": "value", "value": "asalariado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": {
+				"state": "value",
+				"value": { "min": 8400, "max": 16800 }
+			},
+			"housingStatus": { "state": "value", "value": "alquiler" },
+			"disability": { "state": "declined" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-ayudas-alquiler-plan-estatal",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "CLOSED_RECURRING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-rd-42-2022-plan-estatal",
+					"locator": "Art. 27.1",
+					"reasoning": "Edad 42 ⇒ mayor de edad (T). No hay edad máxima en el programa de ayuda al alquiler (el límite de 35 años es de la línea de personas jóvenes, no de esta)."
+				},
+				{
+					"sourceId": "bocm-20221011-19-orden-3479-2022",
+					"locator": "Art. 2",
+					"reasoning": "Madrid (28079) está en la Comunidad de Madrid, que gestiona estas ayudas por convenio con el Ministerio ⇒ territorio T."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-plan-estatal",
+					"locator": "Art. 27.1.c",
+					"reasoning": "Ingresos propios [8.400, 16.800) €/año ≤ 5×IPREM_14P (5×8.400 = 42.000 €) ⇒ T en el techo absoluto. La medición real es sobre toda la unidad de convivencia con umbral 3/4/5×IPREM según supuesto y un suelo de 0,5×IPREM para familia numerosa — queda en uncovered (ingresos-unidad-convivencia e ingresos-minimos)."
+				},
+				{
+					"sourceId": "bocm-20221011-19-orden-3479-2022",
+					"locator": "Art. 6.1.a",
+					"reasoning": "familyType = «familia-numerosa» ⇒ sector preferente del art. 6.1.a (T, requisito no-hard). Los supuestos no preguntables (violencia de género, terrorismo, desempleo agotado de todos los miembros, todos ≥65) quedan en uncovered."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-plan-estatal",
+					"locator": "Art. 27.1.a",
+					"reasoning": "housingStatus = «alquiler» ⇒ compatible con ser titular del contrato LAU (T, requisito no-hard; la titularidad exacta queda en uncovered)."
+				},
+				{
+					"sourceId": "bocm-20251028-25-alquiler-2025",
+					"locator": "Extracto, Quinto",
+					"reasoning": "Última convocatoria 04/11/2025–15/12/2025, ya cerrada; con convocatorias anuales consecutivas citadas 2023, 2024 y 2025 (BOCM-20231016-8, BOCM-20241029-11, BOCM-20251028-25) ⇒ deadlineState CLOSED_RECURRING."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-plan-estatal",
+					"locator": "Art. 27.1-2 y 30",
+					"reasoning": "Veredicto «posible» (no «probable»): quedan sin comprobar nacionalidad/residencia legal, titularidad exacta del contrato, residencia habitual y permanente acreditada, renta mensual ≤600 €/300 € (o 900 €/450 € según municipio/familia numerosa), no propiedad, vínculo con el arrendador, art. 13 LGS/revocación e incompatibilidad con otras ayudas al alquiler."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}
