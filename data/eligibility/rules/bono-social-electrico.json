@@ -29,7 +29,7 @@
 		{
 			"id": "alguna-via-vulnerable",
 			"hard": false,
-			"label": "Cumplir alguna vía de «consumidor vulnerable» (hay más vías no comprobables abajo)",
+			"label": "Cumplir alguna vía de «consumidor vulnerable»",
 			"citation": {
 				"sourceId": "boe-rd-897-2017-bono-social",
 				"locator": "Art. 3.2",

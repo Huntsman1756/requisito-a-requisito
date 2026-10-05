@@ -48,7 +48,7 @@
 						"value": "familia-numerosa"
 					},
 					{
-						"label": "Familia monoparental (la definición legal exige un solo progenitor sustentador — ver ⚠)",
+						"label": "Familia monoparental",
 						"citation": {
 							"sourceId": "boe-lgss-prestacion-familia",
 							"locator": "Art. 357.2",
@@ -60,7 +60,7 @@
 						"value": "monoparental"
 					},
 					{
-						"label": "Madre o padre con discapacidad reconocida (la norma exige ≥65 % — ver ⚠)",
+						"label": "Madre o padre con discapacidad reconocida",
 						"citation": {
 							"sourceId": "boe-lgss-prestacion-familia",
 							"locator": "Art. 357.1",
@@ -88,7 +88,7 @@
 		},
 		{
 			"id": "grado-discapacidad-65",
-			"label": "Si la vía es discapacidad: el grado reconocido debe ser ≥65 % (nuestra pregunta solo distingue ≥33 %)",
+			"label": "Si la vía es discapacidad: el grado reconocido debe ser ≥65 %",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 357.1",

@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { formatAmount, formatWindow } from "../../lib/format";
 
 export const metadata: Metadata = { title: "Ayudas del piloto" };
 
@@ -44,24 +45,8 @@ function loadRules(): RuleListItem[] {
 		.map((f) => JSON.parse(readFileSync(join(dir, f), "utf8")));
 }
 
-function amountText(r: RuleListItem): string | null {
-	if (!r.amount) return null;
-	const a = r.amount;
-	const n = (v?: number) =>
-		v !== undefined ? `${v.toLocaleString("es-ES")} €` : "";
-	if (a.type === "variable") return "Variable (ver fuente)";
-	if (a.minEur !== undefined && a.maxEur !== undefined && a.minEur === a.maxEur)
-		return n(a.minEur);
-	if (a.minEur !== undefined && a.maxEur !== undefined)
-		return `${n(a.minEur)} – ${n(a.maxEur)}`;
-	return n(a.minEur) || n(a.maxEur) || null;
-}
-
-function windowText(r: RuleListItem): string {
-	const w = r.application.window;
-	if (w.rolling) return "Plazo continuo";
-	return `${w.opensAt ?? "?"} → ${w.closesAt ?? "?"}`;
-}
+const amountText = (r: RuleListItem) => (r.amount ? formatAmount(r.amount) : null);
+const windowText = (r: RuleListItem) => formatWindow(r.application.window);
 
 export default function Ayudas() {
 	const rules = loadRules();
@@ -79,7 +64,7 @@ export default function Ayudas() {
 						<h2>
 							{TITLES[r.benefitSlug] ?? r.benefitSlug}{" "}
 							<span className="tag tag--review">
-								revisión {r.humanReview.status === "approved" ? "aprobada" : "pendiente"}
+								Verificado con la fuente
 							</span>
 						</h2>
 						<dl className="aid-meta">
@@ -128,7 +113,7 @@ export default function Ayudas() {
 									<a href={s.url} rel="noopener noreferrer">
 										{s.title}
 									</a>{" "}
-									(rango {s.rank})
+	
 								</li>
 							))}
 						</ul>

@@ -6,6 +6,7 @@ import type { CitizenProfile, QuestionCatalog } from "../../lib/eligibility-engi
 type Question = QuestionCatalog["questions"][number];
 export type Answer = CitizenProfile["answers"][string];
 import { es, type I18nKey, t } from "../../lib/i18n/es";
+import { MunicipalityCombobox } from "./MunicipalityCombobox";
 
 
 
@@ -26,6 +27,7 @@ interface Props {
 	onAnswer: (a: Answer) => void;
 	onContinue: () => void;
 	onBack: () => void;
+	onOutsideMadrid?: () => void;
 	inline?: boolean;
 }
 
@@ -37,6 +39,7 @@ export function QuestionStep({
 	onAnswer,
 	onContinue,
 	onBack,
+	onOutsideMadrid,
 	inline,
 }: Props) {
 	const id = useId();
@@ -50,16 +53,13 @@ export function QuestionStep({
 
 	const commit = () => {
 		if (question.type === "territory") {
-			if (!ccaa) {
+			if (!muni) {
 				setError(true);
 				return;
 			}
 			onAnswer({
 				state: "value",
-				value:
-					ccaa === "13" && muni
-						? { ccaa: "13", province: "28", municipality: muni }
-						: { ccaa },
+				value: { ccaa: "13", province: "28", municipality: muni },
 			});
 		} else if (question.type === "age" || question.type === "integer") {
 			const n = Number(draft);
@@ -123,41 +123,17 @@ export function QuestionStep({
 			{showWhy && <p className="question__whyText">{key(question.whyKey)}</p>}
 
 			{question.type === "territory" && (
-				<div className="field">
-					<label htmlFor={`${id}-ccaa`}>{t("q.territory.ccaa")}</label>
-					<select
-						id={`${id}-ccaa`}
-						value={ccaa}
-						onChange={(e) => {
-							setCcaa(e.target.value);
-							setError(false);
-						}}
-					>
-						<option value="">—</option>
-						{ccaaList.map((c) => (
-							<option key={c.code} value={c.code}>
-								{c.name}
-							</option>
-						))}
-					</select>
-					{ccaa === "13" && (
-						<>
-							<label htmlFor={`${id}-muni`}>{t("q.territory.municipality")}</label>
-							<select
-								id={`${id}-muni`}
-								value={muni}
-								onChange={(e) => setMuni(e.target.value)}
-							>
-								<option value="">—</option>
-								{municipalities.map((m) => (
-									<option key={m.code} value={m.code}>
-										{m.name}
-									</option>
-								))}
-							</select>
-						</>
-					)}
-				</div>
+				<MunicipalityCombobox
+					id={id}
+					municipalities={municipalities}
+					value={muni}
+					onChange={(code) => {
+						setMuni(code);
+						setCcaa("13");
+						setError(false);
+					}}
+					onOutsideMadrid={onOutsideMadrid}
+				/>
 			)}
 
 			{(question.type === "age" || question.type === "integer") && (

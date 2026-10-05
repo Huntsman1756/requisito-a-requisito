@@ -43,7 +43,7 @@
 	"uncoveredRequirements": [
 		{
 			"id": "categoria-fn",
-			"label": "El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial (nuestra pregunta no distingue la categoría)",
+			"label": "El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial",
 			"citation": {
 				"sourceId": "boe-rd-1621-2005-reglamento-fn",
 				"locator": "Art. 11.1",

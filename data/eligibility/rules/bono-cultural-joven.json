@@ -42,16 +42,6 @@
 	],
 	"uncoveredRequirements": [
 		{
-			"id": "edad-vs-nacimiento",
-			"label": "Responder solo «18 años» no basta: la regla es haber nacido en 2008, así que se pregunta el año de nacimiento",
-			"citation": {
-				"sourceId": "boe-bono-cultural-2026",
-				"locator": "Extracto, apartado «Primero. Beneficiarios»",
-				"excerpt": "cumplan 18 años en 2026",
-				"excerptSha256": "3d5c9b6a7b1ad0c68a4c3c402f39e71ab4391b49f5e317f796d36c5fe47480c8"
-			}
-		},
-		{
 			"id": "nacionalidad-residencia",
 			"label": "Nacionalidad española, residencia legal en España, solicitud de asilo o protección temporal, o ser extranjero extutelado en trámite de permiso",
 			"citation": {

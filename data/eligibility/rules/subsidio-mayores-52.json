@@ -26,7 +26,7 @@
 		{
 			"id": "edad-52",
 			"hard": true,
-			"label": "Tener 52 años (la norma cuenta la edad en la fecha del hecho causante — ver ⚠)",
+			"label": "Tener 52 años cumplidos en el momento del hecho que da lugar al subsidio",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
@@ -43,7 +43,7 @@
 		{
 			"id": "desempleo",
 			"hard": false,
-			"label": "Estar en desempleo total o trabajando a tiempo parcial (nuestra pregunta no distingue jornada — ver ⚠)",
+			"label": "Estar en desempleo total o trabajando a tiempo parcial",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 274.1.b",
@@ -70,7 +70,7 @@
 		},
 		{
 			"id": "jornada-parcial",
-			"label": "Quien trabaja a tiempo parcial también puede acceder si la suma de jornadas es inferior a una jornada completa (nuestra pregunta no distingue la jornada)",
+			"label": "Quien trabaja a tiempo parcial también puede acceder si la suma de jornadas es inferior a una jornada completa",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 274.1.b",
@@ -110,7 +110,7 @@
 		},
 		{
 			"id": "carencia-rentas",
-			"label": "Carencia de rentas propias: rentas del mes anterior ≤ 75 % del SMI sin pagas extra (nuestra pregunta recoge ingresos anuales, no mensuales)",
+			"label": "Carencia de rentas propias: rentas del mes anterior ≤ 75 % del SMI sin pagas extra",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 275.1",

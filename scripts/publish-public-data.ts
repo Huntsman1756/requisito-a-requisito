@@ -20,6 +20,11 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const OUT = join(root, "public/datos/elegibilidad");
+
+// Nombres ciudadanos: el INE lista «Madrid, Comunidad de» → «Comunidad de Madrid».
+const citizenName = (n: string) =>
+	n.includes(", ") ? `${n.split(", ")[1]} ${n.split(", ")[0]}` : n;
+
 const BUNDLE = join(root, "data/eligibility/bundle/eligibility-bundle.json");
 
 if (!existsSync(BUNDLE)) {
@@ -43,13 +48,13 @@ const territory = JSON.parse(
 );
 const madridMunis = territory.municipalities
 	.filter((m: { province: string }) => m.province === "28")
-	.map((m: { code: string; name: string }) => ({ code: m.code, name: m.name }))
+	.map((m: { code: string; name: string }) => ({
+		code: m.code,
+		name: citizenName(m.name),
+	}))
 	.sort((a: { name: string }, b: { name: string }) =>
 		a.name.localeCompare(b.name, "es"),
 	);
-// Nombres ciudadanos: el INE lista «Madrid, Comunidad de» → «Comunidad de Madrid».
-const citizenName = (n: string) =>
-	n.includes(", ") ? `${n.split(", ")[1]} ${n.split(", ")[0]}` : n;
 const ccaa = territory.ccaa
 	.map((c: { code: string; name: string }) => ({
 		code: c.code,
@@ -67,7 +72,8 @@ writeFileSync(
 const benefitsDir = join(root, "data/catalog/benefits");
 interface Ficha {
 	slug?: string;
-	displayTitle: string;
+	displayTitle?: string;
+	title?: string;
 	managingBody?: string;
 	officialSourceUrl?: string;
 	applicationStatus?: string;
@@ -75,25 +81,59 @@ interface Ficha {
 	residencyRegion?: string[];
 	eligibilityFactors?: Record<string, unknown>;
 }
+
+/** Limpieza determinista del título oficial para uso ciudadano (F4-L2). */
+function citizenTitle(raw: Ficha): string | null {
+	let t = raw.displayTitle ?? raw.title ?? "";
+	t = t.replace(/\s+/g, " ").trim();
+	// Quitar envoltura formal («Extracto de la Orden … por la que…»)
+	t = t
+		.replace(/^(extracto|anuncio|corrección de errores)\s+de(l|\s+la|\s+los|\s+las)?\s+/i, "")
+		.replace(/^(la\s+)?(orden|resolución|acuerdo|convocatoria|instrucción|decreto)\s+(\S+\s+)?(por\s+(la|el)\s+que\s+se|que)?\s*/i, "")
+		.trim();
+	if (!t) return null;
+	t = t[0].toUpperCase() + t.slice(1);
+	if (t.length > 160) t = `${t.slice(0, 157).replace(/\s+\S*$/, "")}…`;
+	return t;
+}
+
+const skipped: { f: string; reason: string }[] = [];
 const level2 = readdirSync(benefitsDir)
 	.filter((f) => f.endsWith(".json"))
 	.map((f) => ({ f, raw: JSON.parse(readFileSync(join(benefitsDir, f), "utf8")) as Ficha }))
-	// Sin título ciudadano la ficha no se puede presentar → fuera de nivel 2.
-	.filter(({ raw }) => !!raw.displayTitle)
 	.map(({ f, raw }) => {
+		const slug = raw.slug ?? f.replace(/\.json$/, "");
+		const title = citizenTitle(raw);
+		if (!title || !raw.officialSourceUrl) {
+			skipped.push({
+				f,
+				reason: !title ? "sin título usable" : "sin officialSourceUrl",
+			});
+			return null;
+		}
 		return {
-			slug: raw.slug ?? f.replace(/\.json$/, ""),
-			displayTitle: raw.displayTitle ?? raw.slug ?? f.replace(/\.json$/, ""),
+			slug,
+			displayTitle: title,
 			managingBody: raw.managingBody,
 			officialSourceUrl: raw.officialSourceUrl,
 			applicationStatus: raw.applicationStatus,
 			estimatedValueText: raw.estimatedValueText,
 			eligibilityFactors: raw.eligibilityFactors ?? {},
 		};
-	});
+	})
+	.filter((x): x is NonNullable<typeof x> => x !== null);
 writeFileSync(
 	join(OUT, "nivel-2.json"),
 	`${JSON.stringify({ items: level2 })}\n`,
+);
+// F4-L2: informe de incluidas/excluidas con motivo.
+writeFileSync(
+	join(OUT, "nivel-2-informe.json"),
+	`${JSON.stringify(
+		{ incluidas: level2.length, excluidas: skipped },
+		null,
+		2,
+	)}\n`,
 );
 
 const manifest = JSON.parse(

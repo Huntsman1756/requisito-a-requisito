@@ -132,11 +132,12 @@ export function matchLevel2(items: Level2Item[], answers: Answers): Level2Match[
 		}
 		if (ok) out.push({ item, matchedFactors: matched });
 	}
-	return out
-		.sort(
-			(a, b) =>
-				b.matchedFactors - a.matchedFactors ||
-				(a.item.displayTitle ?? a.item.slug).localeCompare(b.item.displayTitle ?? b.item.slug, "es"),
-		)
-		.slice(0, 8);
+	return out.sort(
+		(a, b) =>
+			b.matchedFactors - a.matchedFactors ||
+			(a.item.displayTitle ?? a.item.slug).localeCompare(
+				b.item.displayTitle ?? b.item.slug,
+				"es",
+			),
+	);
 }

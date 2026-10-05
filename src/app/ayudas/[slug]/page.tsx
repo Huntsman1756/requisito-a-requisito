@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { aidTitle } from "../../../lib/aid-titles";
+import { formatAmount, formatWindow } from "../../../lib/format";
 
 const RULES_DIR = join(process.cwd(), "data/eligibility/rules");
 
@@ -68,11 +69,12 @@ export default async function Ficha({
 		<article className="shell" aria-labelledby="titulo">
 			<h1 id="titulo">{aidTitle(slug)}</h1>
 			<p className="lede">
-				{w.rolling
-					? "Plazo continuo"
-					: `Plazo: ${w.opensAt ?? "?"} → ${w.closesAt ?? "?"}`}{" "}
-				· Revisión {rs.humanReview.status === "approved" ? "aprobada" : "pendiente"} ·
-				Verificado el {rs.verifiedAt}
+				{formatWindow(w)} · Verificado con la fuente el{" "}
+				{new Date(rs.verifiedAt).toLocaleDateString("es-ES", {
+					day: "numeric",
+					month: "long",
+					year: "numeric",
+				})}
 			</p>
 
 			<h2>Requisitos</h2>
@@ -125,12 +127,7 @@ export default async function Ficha({
 				<>
 					<h2>Cuantía</h2>
 					<p>
-						{rs.amount.type === "variable"
-							? "Variable"
-							: rs.amount.minEur === rs.amount.maxEur
-								? `${rs.amount.minEur?.toLocaleString("es-ES")} €`
-								: `${rs.amount.minEur ?? ""}–${rs.amount.maxEur ?? ""} €`}{" "}
-						— «{rs.amount.citation.excerpt}» (
+						{formatAmount(rs.amount)} — «{rs.amount.citation.excerpt}» (
 						{rs.amount.citation.locator})
 					</p>
 				</>
@@ -165,7 +162,7 @@ export default async function Ficha({
 						<a href={s.url} rel="noopener noreferrer">
 							{s.title}
 						</a>{" "}
-						(rango {s.rank})
+
 					</li>
 				))}
 			</ul>
@@ -174,7 +171,7 @@ export default async function Ficha({
 				Esto no determina tu derecho a la ayuda. La decisión corresponde al
 				organismo competente. Datos abiertos:{" "}
 				<a href="/datos/elegibilidad/manifest.json" rel="noopener noreferrer">
-					manifiesto del bundle
+					datos abiertos del sitio
 				</a>
 				.
 			</p>

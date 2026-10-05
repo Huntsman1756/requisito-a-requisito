@@ -15,6 +15,7 @@ type Question = QuestionCatalog["questions"][number];
 import { aidTitle } from "../../lib/aid-titles";
 import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
+import { formatDateEs, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
 import { clearAll } from "../../lib/profile-store";
 import type { Answer } from "./QuestionStep";
@@ -50,6 +51,7 @@ export function ResultsView({
 	const [showClosed, setShowClosed] = useState(false);
 	const [showNoCumple, setShowNoCumple] = useState(false);
 	const [inlineField, setInlineField] = useState<string | null>(null);
+	const [showAllL2, setShowAllL2] = useState(false);
 	const [copied, setCopied] = useState(false);
 	const [cleared, setCleared] = useState(false);
 
@@ -245,7 +247,7 @@ export function ResultsView({
 					<h2 id="level2-title">{t("results.level2.title")}</h2>
 					<p className="level2-note">{t("results.level2.note")}</p>
 					<ul className="level2-list">
-						{level2.map(({ item }) => (
+						{level2.slice(0, showAllL2 ? level2.length : 10).map(({ item }) => (
 							<li key={item.slug}>
 								<a href={item.officialSourceUrl} rel="noopener noreferrer">
 									{item.displayTitle}
@@ -254,6 +256,15 @@ export function ResultsView({
 							</li>
 						))}
 					</ul>
+					{level2.length > 10 && !showAllL2 && (
+						<button
+							type="button"
+							className="btn-quiet"
+							onClick={() => setShowAllL2(true)}
+						>
+							Ver las {level2.length - 10} restantes
+						</button>
+					)}
 				</aside>
 			)}
 
@@ -304,16 +315,28 @@ function ResultCard({
 
 	return (
 		<article className="aid-card">
+			<p className="card-badges">
+				{rs.sources.slice(0, 1).map((s) => (
+					<span key={s.id} className="badge">
+						{domainBadge(s.url)}
+					</span>
+				))}
+				{rs.benefitSlug.startsWith("madrid-") ? (
+					<span className="badge badge--scope">Comunidad de Madrid</span>
+				) : (
+					<span className="badge badge--scope">Ámbito estatal</span>
+				)}
+				<DeadlinePill ev={ev} />
+			</p>
 			<h2>
 				{aidTitle(ev.benefitSlug)}{" "}
-				<span className={pill}>{key(`verdict.${ev.verdict}`)}</span>{" "}
-				<DeadlinePill ev={ev} />
+				<span className={pill}>{key(`verdict.${ev.verdict}`)}</span>
 			</h2>
 			<p className="verdict-line">{key(`verdict.line.${ev.verdict}`)}</p>
 
 			{ev.futureEligibility && (
 				<p className="future">
-					{t("results.future", { date: ev.futureEligibility.from })}
+					{t("results.future", { date: formatDateEs(ev.futureEligibility.from) })}
 				</p>
 			)}
 
@@ -340,15 +363,16 @@ function ResultCard({
 									<span className="req-status">
 										{r.status === "T"
 											? `✓ ${t("req.t")}`
-											: r.status === "F"
-												? `✗ ${t("req.f")}`
-												: `? ${t("req.u")}`}
-										{!r.hard && " (no bloqueante)"}
+											: !r.hard
+												? `⚠ ${t("req.warn")}`
+												: r.status === "F"
+													? `✗ ${t("req.f")}`
+													: `? ${t("req.u")}`}
 									</span>{" "}
 									{req?.label}
 									{req && (
 										<details className="cite">
-											<summary>{t("req.source")}</summary>
+											<summary aria-label={`${t("req.source")}: ${req.label}`}>{t("req.source")}</summary>
 											<blockquote lang="es">
 												«{r.citation.excerpt}»
 											</blockquote>
@@ -382,11 +406,7 @@ function ResultCard({
 							<div>
 								<dt>{t("card.youGet")}</dt>
 								<dd>
-									{ev.amount.type === "variable"
-										? "Variable (ver fuente)"
-										: ev.amount.minEur === ev.amount.maxEur
-											? `${ev.amount.minEur?.toLocaleString("es-ES")} €`
-											: `${ev.amount.minEur?.toLocaleString("es-ES")}–${ev.amount.maxEur?.toLocaleString("es-ES")} €`}
+									{formatAmount(ev.amount)}
 								</dd>
 							</div>
 						)}
@@ -396,7 +416,7 @@ function ResultCard({
 								{ev.deadline.state === "ROLLING"
 									? t("deadline.ROLLING")
 									: ev.deadline.closesAt
-										? t("deadline.closesAt", { date: ev.deadline.closesAt })
+										? t("deadline.closesAt", { date: formatDateEs(ev.deadline.closesAt) })
 										: key(`deadline.${ev.deadline.state}`)}
 							</dd>
 						</div>
@@ -410,8 +430,8 @@ function ResultCard({
 							<div>
 								<dt>{t("card.effort")}</dt>
 								<dd>
-									{ev.effort.minMinutes}–{ev.effort.maxMinutes} min (estimación
-									propia)
+									{ev.effort.minMinutes}–{ev.effort.maxMinutes} min{" "}
+									<Link href="/como-funciona">(estimación propia)</Link>
 								</dd>
 							</div>
 						)}
@@ -447,7 +467,7 @@ function ResultCard({
 					</button>
 					{open && (
 						<p className="why">
-							{t("card.verifiedAt", { date: ev.verifiedAt })} ·{" "}
+							{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })} ·{" "}
 							{rs.sources
 								.filter((s) => s.rank <= 2)
 								.map((s) => domainBadge(s.url))
@@ -459,7 +479,7 @@ function ResultCard({
 
 			<p className="card-foot">
 				{rs.sources[0] ? domainBadge(rs.sources[0].url) : ""} ·{" "}
-				{t("card.verifiedAt", { date: ev.verifiedAt })}
+				{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })}
 			</p>
 			<p className="legal">{t("legal.notice")}</p>
 		</article>

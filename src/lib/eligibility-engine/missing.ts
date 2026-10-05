@@ -69,9 +69,6 @@ export function futureEligibilityOf(
 	const othersHard = reqs.filter((r) => r.hard && r.status !== "F");
 	if (hardF.length === 0) return undefined;
 	if (!hardF.every((r) => r.timeDependent === "increasing")) return undefined;
-	if (!othersHard.every((r) => r.status === "T" || r.status === "U")) {
-		return undefined;
-	}
 	// Solo con requisitos hard restantes T (los U bloquearían igualmente en el futuro
 	// salvo que se respondan — la fecha se refiere a que el campo temporal madure).
 	if (!othersHard.every((r) => r.status === "T")) return undefined;

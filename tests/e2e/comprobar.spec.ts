@@ -10,10 +10,10 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 	).toBeVisible({ timeout: 15000 });
 
 	await page.getByRole("button", { name: "Empezar" }).click();
-	// Pregunta 1: territorio
-	await page.selectOption("select", { label: "Comunidad de Madrid" });
-	const muni = page.locator("select").nth(1);
-	await muni.selectOption({ label: "Madrid" });
+	// Pregunta 1: municipio (combobox)
+	const box = page.getByRole("combobox");
+	await box.fill("Madrid");
+	await page.getByRole("option", { name: "Madrid" }).first().click();
 	await page.getByRole("button", { name: "Siguiente" }).click();
 	// Edad
 	await page.getByRole("spinbutton").fill("35");
@@ -50,6 +50,22 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 	await expect(page.getByText("No evaluable")).toHaveCount(0);
 	await expect(page.getByText(/Posible|Probable/).first()).toBeVisible();
 	expect(failedRequests).toEqual([]);
+});
+
+test("comprobar: quien vive fuera de la CM recibe salida honesta", async ({
+	page,
+}) => {
+	await page.goto("/comprobar/");
+	await page.getByRole("button", { name: "Empezar" }).click();
+	await page
+		.getByRole("button", { name: /Vivo fuera de la Comunidad de Madrid/ })
+		.click();
+	await expect(
+		page.getByRole("heading", {
+			name: /solo para la Comunidad de Madrid/,
+		}),
+	).toBeVisible();
+	await expect(page.getByText(/ayudas estatales/)).toBeVisible();
 });
 
 test("comprobar: sin JS el enlace al catálogo está", async ({ page, context }) => {

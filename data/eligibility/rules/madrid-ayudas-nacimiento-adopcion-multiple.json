@@ -44,7 +44,7 @@
 		{
 			"id": "dos-o-mas-personas-cargo",
 			"hard": true,
-			"label": "Tener al menos dos hijas o hijos a cargo (el parto o adopción múltiple es de 2+ en un mismo acto — ver ⚠)",
+			"label": "Tener al menos dos hijas o hijos a cargo",
 			"citation": {
 				"sourceId": "bocm-20231228-18-nacimiento-multiple",
 				"locator": "Art. 5.1",
@@ -60,7 +60,7 @@
 		{
 			"id": "ingresos-referencia",
 			"hard": false,
-			"label": "Ingresos anuales por debajo de 30.000 € (el límite real es de renta per cápita — ver ⚠)",
+			"label": "Ingresos anuales por debajo de 30.000 €",
 			"citation": {
 				"sourceId": "bocm-20231228-18-nacimiento-multiple",
 				"locator": "Art. 6.c",

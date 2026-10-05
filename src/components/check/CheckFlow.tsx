@@ -22,7 +22,14 @@ import type { Answer } from "./QuestionStep";
 import { QuestionStep } from "./QuestionStep";
 import { ResultsView } from "./ResultsView";
 
-type Phase = "loading" | "error" | "intro" | "questions" | "review" | "results";
+type Phase =
+	| "loading"
+	| "error"
+	| "intro"
+	| "questions"
+	| "review"
+	| "results"
+	| "outside";
 
 const key = (k: string): string => (k in es ? es[k as I18nKey] : k);
 
@@ -89,6 +96,7 @@ export function CheckFlow() {
 	const goTo = (p: Phase, nextStep?: number) => {
 		if (nextStep !== undefined) setStep(nextStep);
 		setPhase(p);
+		if (typeof window !== "undefined") window.scrollTo(0, 0);
 		if (data) {
 			writeHandoff({
 				step: nextStep ?? step,
@@ -196,6 +204,7 @@ export function CheckFlow() {
 						onAnswer={(a) => onAnswer(visibleQuestions[step].field, a)}
 						onContinue={continueFromStep}
 						onBack={backFromStep}
+						onOutsideMadrid={() => setPhase("outside")}
 					/>
 				</>
 			)}
@@ -235,6 +244,27 @@ export function CheckFlow() {
 						<button type="button" className="cta" onClick={() => goTo("results")}>
 							{t("check.review.submit")}
 						</button>
+					</p>
+				</section>
+			)}
+
+			{phase === "outside" && (
+				<section aria-labelledby="outside-title">
+					<h1 id="outside-title">{t("outside.title")}</h1>
+					<p>{t("outside.body")}</p>
+					<p>
+						<button type="button" className="cta" onClick={() => goTo("intro")}>
+							{t("outside.back")}
+						</button>
+					</p>
+					<p>
+						<a href="https://www.seg-social.es" rel="noopener noreferrer">
+							Sede de la Seguridad Social ↗
+						</a>{" "}
+						·{" "}
+						<a href="https://www.sepe.es" rel="noopener noreferrer">
+							Sede del SEPE ↗
+						</a>
 					</p>
 				</section>
 			)}

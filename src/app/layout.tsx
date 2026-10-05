@@ -36,9 +36,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<div className="site-header__inner shell">
 						<Link className="brand" href="/">
 							<span aria-hidden="true" className="brand-mark">
-								R
+								✓
 							</span>
-							Requisito a Requisito
+							<span className="brand-name">
+								Requisito&nbsp;a&nbsp;Requisito
+							</span>
 						</Link>
 						<nav className="site-nav" aria-label="Principal">
 							<Link href="/ayudas">Ayudas</Link>

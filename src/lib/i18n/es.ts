@@ -26,9 +26,11 @@ export const es = {
 	"check.error.required": "Elige una opción para continuar.",
 	"check.error.range": "Introduce un valor válido.",
 
-	"q.territory.label": "¿Dónde estás empadronado?",
-	"q.territory.help": "Elige la comunidad autónoma y, si es Madrid, el municipio.",
+	"q.territory.label": "¿En qué municipio de la Comunidad de Madrid estás empadronado?",
+	"q.territory.help": "Escribe el nombre del municipio y elígelo de la lista.",
 	"q.territory.why": "Muchas ayudas exigen estar empadronado en un lugar concreto.",
+	"q.territory.placeholder": "Escribe el municipio…",
+	"q.territory.outside": "Vivo fuera de la Comunidad de Madrid",
 	"q.territory.ccaa": "Comunidad autónoma",
 	"q.territory.municipality": "Municipio",
 	"q.residenceSince.label": "¿Desde cuándo estás empadronado ahí?",
@@ -97,7 +99,7 @@ export const es = {
 
 	"results.title": "Tus resultados",
 	"results.summary":
-		"{probables} {probables, plural, one {# ayuda probable} other {# ayudas probables}} · {posibles} {posibles, plural, one {# posible} other {# posibles}} · te faltan {missing} {missing, plural, one {# dato} other {# datos}} para {missingAids} más",
+		"{probables, plural, one {# ayuda probable} other {# ayudas probables}} · {posibles, plural, one {# posible} other {# posibles}} · {missing, plural, one {# dato por responder, que desbloquearía {missingAids} ayuda más} other {# datos por responder, que desbloquearían {missingAids} ayudas más}}",
 	"results.summary.none":
 		"Con tus respuestas no hemos encontrado ayudas de este grupo. Esto no significa que no existan: revisa el catálogo completo.",
 	"results.missing.title": "Te faltan datos",
@@ -169,6 +171,11 @@ export const es = {
 		"No hemos podido cargar las reglas de esta ayuda. Prueba de nuevo más tarde o consulta el catálogo.",
 	"error.title": "Algo no ha salido bien",
 
+	"outside.title": "Este orientador es solo para la Comunidad de Madrid",
+	"outside.body":
+		"De momento solo comprobamos ayudas para personas empadronadas en la Comunidad de Madrid. Las ayudas estatales (como las de empleo o educación) pueden aplicarte igualmente — consulta la sede oficial de cada una.",
+	"outside.back": "Volver al inicio",
+
 	"noscript.body":
 		"Esta herramienta necesita JavaScript para evaluar tus respuestas en tu navegador. Mientras tanto, puedes ver las ayudas y sus fuentes.",
 } as const;
@@ -184,11 +191,10 @@ export function t(key: I18nKey, params?: Record<string, string | number>): strin
 	}
 	// Plural mínimo: {n, plural, one {# a} other {# s}}
 	return s.replace(
-		/\{(\w+), plural, one \{# ([^}]*)\} other \{# ([^}]*)\}\}/g,
+		/\{(\w+), plural, one \{#\s*([^}]*)\} other \{#\s*([^}]*)\}\}/g,
 		(_, varName: string, one: string, other: string) => {
 			const n = Number(params?.[varName] ?? 0);
-			const body = n === 1 ? one : other;
-			return body.replace("#", String(n));
+			return `${n} ${n === 1 ? one : other}`;
 		},
 	);
 }

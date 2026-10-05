@@ -28,7 +28,8 @@
 		"eligibility:build:release": "tsx ./scripts/eligibility-build.ts --strict",
 		"review:sheet": "tsx ./scripts/review-sheet.ts",
 		"rules:fill-hashes": "tsx ./scripts/ruleset-fill-hashes.ts",
-		"datos:public": "tsx ./scripts/publish-public-data.ts"
+		"datos:public": "tsx ./scripts/publish-public-data.ts",
+		"coverage:engine": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/lib/eligibility-engine/**' --coverage.reporter=text"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",
@@ -46,6 +47,7 @@
 		"@types/node": "^22.20.3",
 		"@types/react": "^19.3.0",
 		"@types/react-dom": "^19.3.0",
+		"@vitest/coverage-v8": "^4.1.11",
 		"cross-env": "^7.0.3",
 		"tsx": "^4.23.0",
 		"typescript": "^5.6.0",
