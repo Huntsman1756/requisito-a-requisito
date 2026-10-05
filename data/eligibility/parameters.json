@@ -1,1 +1,123 @@
-{"parameters":[]}
+{
+  "parameters": [
+    {
+      "id": "IPREM_DIA",
+      "label": "IPREM diario",
+      "unit": "EUR_DAY",
+      "periods": [
+        {
+          "from": "2023-01-01",
+          "value": 20,
+          "citation": {
+            "sourceId": "boe-ley-31-2022-iprem",
+            "locator": "DA 90.ª, a)",
+            "excerpt": "El IPREM diario, 20 euros.",
+            "excerptSha256": "85e2aef50a287a70984f05380b45d48076a8d12ffaab6d0335c29b32dd99bdef"
+          }
+        }
+      ]
+    },
+    {
+      "id": "IPREM_MENSUAL",
+      "label": "IPREM mensual",
+      "unit": "EUR_MONTH",
+      "periods": [
+        {
+          "from": "2023-01-01",
+          "value": 600,
+          "citation": {
+            "sourceId": "boe-ley-31-2022-iprem",
+            "locator": "DA 90.ª, b)",
+            "excerpt": "El IPREM mensual, 600 euros.",
+            "excerptSha256": "0b4f061dd08b0223a2bc104c73a19e0939ed756ee16f7c93c40050631d0b6c3a"
+          }
+        }
+      ]
+    },
+    {
+      "id": "IPREM_ANUAL_12P",
+      "label": "IPREM anual (12 pagas)",
+      "unit": "EUR_YEAR",
+      "periods": [
+        {
+          "from": "2023-01-01",
+          "value": 7200,
+          "citation": {
+            "sourceId": "boe-ley-31-2022-iprem",
+            "locator": "DA 90.ª, c)",
+            "excerpt": "El IPREM anual, 7.200 euros.",
+            "excerptSha256": "b9917602969adad7ecb1c94012c81f4973c8546badeb786480cfb2682a585079"
+          }
+        }
+      ]
+    },
+    {
+      "id": "IPREM_ANUAL_14P",
+      "label": "IPREM anual con pagas extraordinarias (14 pagas)",
+      "unit": "EUR_YEAR",
+      "periods": [
+        {
+          "from": "2023-01-01",
+          "value": 8400,
+          "citation": {
+            "sourceId": "boe-ley-31-2022-iprem",
+            "locator": "DA 90.ª, d)",
+            "excerpt": "la cuantía anual del IPREM será de 8.400 euros cuando las correspondientes normas se refieran al salario mínimo interprofesional en cómputo anual",
+            "excerptSha256": "5c8e8512a6239cafdd5f7c3847231b1fd72322bb6c2ea62e158f849cb764ac96"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SMI_DIA",
+      "label": "SMI diario",
+      "unit": "EUR_DAY",
+      "periods": [
+        {
+          "from": "2026-01-01",
+          "value": 40.7,
+          "citation": {
+            "sourceId": "boe-rd-126-2026-smi",
+            "locator": "Art. 1",
+            "excerpt": "queda fijado en 40,70 euros/día o 1 221 euros/mes",
+            "excerptSha256": "382aa522802cb31b29fe0b88c74ebe9204f6f90d5f6568b8d5a985f920b04493"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SMI_MENSUAL",
+      "label": "SMI mensual (14 pagas)",
+      "unit": "EUR_MONTH",
+      "periods": [
+        {
+          "from": "2026-01-01",
+          "value": 1221,
+          "citation": {
+            "sourceId": "boe-rd-126-2026-smi",
+            "locator": "Art. 1",
+            "excerpt": "queda fijado en 40,70 euros/día o 1 221 euros/mes",
+            "excerptSha256": "382aa522802cb31b29fe0b88c74ebe9204f6f90d5f6568b8d5a985f920b04493"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SMI_ANUAL",
+      "label": "SMI anual",
+      "unit": "EUR_YEAR",
+      "periods": [
+        {
+          "from": "2026-01-01",
+          "value": 17094,
+          "citation": {
+            "sourceId": "boe-rd-126-2026-smi",
+            "locator": "Art. 3",
+            "excerpt": "en ningún caso pueda considerarse una cuantía anual inferior a 17 094 euros",
+            "excerptSha256": "9ac5bbe3bfbd2079b5a6fe4694d78e7fffa1bebfa1a5ab4060f9ac88e82d05d3"
+          }
+        }
+      ]
+    }
+  ]
+}
