@@ -306,3 +306,20 @@ tarjetas, sin fotos de stock; las imágenes son miniaturas de los documentos
 oficiales citados. Fuente de verdad visual: `design/prototipo/requisito-a-requisito.html`.
 Especificación: docs/16. Se conserva de la-ayuda solo la estructura técnica de los
 tokens. Lucide (ISC) se admite si hace falta (ADR-042).
+
+## ADR-044 — Qué reglas pueden ser públicas en el nivel 1 (gate G12)
+2026-10-05 · aceptada · Hallazgo de la 4.ª revisión de Claude: las 21 reglas tienen
+`humanReview: pending` y **todas se publican en el nivel 1** de la web, porque el
+deploy de Pages usa el build no estricto (G10 solo bloquea con `--strict`). Además,
+la ola 3 se integró y desplegó **antes** de su verificación independiente (no hay
+`verificacion-ola-3.md`). Regla nueva:
+- **G12 (bloquea siempre, también en Pages):** una regla solo entra en el bundle
+  público si tiene `verification: { status: "ok", by, at, report }` con un informe
+  existente en `evidence/`. Si no lo tiene ⇒ fuera del bundle (sigue en el repo).
+- **Etiqueta honesta mientras falte G10:** las reglas verificadas pero sin
+  aprobación de Daniel se muestran con «Comprobada con la fuente · revisión final
+  pendiente». Con `approved` desaparece la segunda parte.
+- **Release para el jurado (14/10):** build `--strict`; solo reglas `approved`.
+  Lo que Daniel no apruebe a tiempo no aparece en la versión de la memoria.
+- **Orden de integración:** autor ⇒ verificador ⇒ merge a main ⇒ deploy. Nunca se
+  integra en main una ola sin su informe de verificación.

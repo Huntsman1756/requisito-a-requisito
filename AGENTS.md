@@ -78,7 +78,8 @@ Para leer un donante sin depender de su working tree:
    documento y canal lleva cita (fuente de rango 1–4, localizador, extracto
    literal presente en el texto de la fuente y su huella). Si falta ⇒ el build falla.
 3. **UNKNOWN ≠ NO.** Un dato que falta o es impreciso da `U`, nunca `F`.
-4. **Comprobación antes de responder.** Cada evaluación pasa los invariantes
+4. **Solo reglas verificadas en público (ADR-044, G12):** autor ⇒ verificador independiente ⇒ merge ⇒ deploy; la release del jurado solo con `approved`.
+4b. **Comprobación antes de responder.** Cada evaluación pasa los invariantes
    I1–I10 en el navegador; si alguno falla, no se muestra veredicto (docs/07 §5).
 5. **Los donantes no se modifican.** Ni commits, ni ramas, ni builds en su
    checkout. Lo importado lleva procedencia (commit + sha256) y **solo** alimenta el
