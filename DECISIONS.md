@@ -170,3 +170,11 @@ el repo remoto, hacer push y desplegar (D-4, D-3).
 2026-10-05 · aceptada (Daniel) · Daniel se presenta como persona física, titular y
 responsable directo del proyecto (art. 5.1 y 6 de la Orden). No se constituirá
 ninguna entidad. La categoría sigue pendiente de la consulta (F0-2) y de D-5.
+
+## ADR-027 — Orden de preferencia de categoría y regla por defecto
+2026-10-05 · aceptada (Daniel) · Preferencia: **Impact** (mejor encaje temático:
+acceso a ayudas, non take-up) si la Subdirección confirma que una persona física
+puede concurrir. AI & Emerging se descarta como primera opción: el producto evita
+la IA a propósito (ADR-003) y su criterio principal es la innovación tecnológica.
+**Si el 12/10 no hay respuesta, o es negativa ⇒ Leader.** El producto es el mismo
+en los tres casos; solo cambia la memoria (docs/05 tiene los esqueletos A y B).

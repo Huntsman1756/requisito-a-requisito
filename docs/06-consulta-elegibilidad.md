@@ -14,30 +14,37 @@ aquí; **no** enviarlo.
 
 ---
 
-**Asunto:** Consulta sobre categorías — Premios Global Tech Leaders Awards (Orden 566/2026)
+**Para:** sociedadyeconomia.digital@madrid.org
+**Asunto:** Consulta sobre categorías para persona física — Premios Global Tech Leaders Awards (Orden 566/2026)
 
 Buenos días:
 
 Tengo intención de presentar candidatura a los Premios Global Tech Leaders
-Awards convocados por la Orden 566/2026, de 24 de septiembre (BOCM de 1 de
+Awards, convocados por la Orden 566/2026, de 24 de septiembre (BOCM de 1 de
 octubre de 2026).
 
-Soy persona física, titular y responsable directo de una iniciativa tecnológica
-de impacto social sin forma societaria (una plataforma abierta de orientación
-sobre ayudas públicas con fuentes oficiales verificables).
+Soy persona física, titular y responsable directo de un proyecto tecnológico de
+impacto social sin forma societaria: una herramienta web abierta que orienta a
+los residentes de la Comunidad de Madrid sobre las ayudas públicas que pueden
+solicitar. Indica qué requisitos cumplen y cuáles les faltan, y enlaza cada dato
+a su fuente oficial.
 
-La sede electrónica indica que pueden concurrir personas físicas o jurídicas,
-pero el artículo 8 describe la categoría Global Tech Impact como dirigida a
-«empresas, fundaciones o entidades». Les agradecería que me confirmasen:
+El artículo 5.1 permite concurrir a personas físicas, pero el artículo 8 describe
+la categoría Global Tech Impact como dirigida a «empresas, fundaciones o
+entidades», y la categoría Global AI & Emerging Technologies a «empresas,
+instituciones o equipos». Les agradecería que me confirmasen:
 
-1. Si una persona física titular de una iniciativa puede concurrir a la
-   categoría **Global Tech Impact**.
-2. En caso negativo, si podría hacerlo a **Global Tech Leader** como «otro líder
-   tecnológico».
+1. Si una persona física titular de un proyecto puede concurrir a la categoría
+   Global Tech Impact.
+2. Si podría concurrir, en su caso, a Global AI & Emerging Technologies.
+3. En caso negativo, si la categoría adecuada sería Global Tech Leader, como
+   «otro líder tecnológico».
 
-Dado que el plazo finaliza el 16 de octubre, agradecería respuesta en la medida
-de lo posible antes del 13 de octubre.
+Dado que el plazo de presentación finaliza el 16 de octubre, les agradecería
+una respuesta, si es posible, antes del 12 de octubre.
 
+Muchas gracias.
 Un saludo,
+
 Daniel [apellidos]
-[contacto]
+[DNI opcional] · [teléfono] · [correo]
