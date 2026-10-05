@@ -1,0 +1,13 @@
+{
+  "source": "Google Search Console, export aportado por Daniel (2026-10-05), tipo de búsqueda Web, filtro 'Últimos 12 meses'",
+  "file": "edubecas-search-console-2026-10-05.xlsx",
+  "sha256": "89c6c6a16a6ef6aa66c2319daa371ca222d46addc263335a5d34a4f01fcb5d1f",
+  "dataRange": { "from": "2026-07-20", "to": "2026-10-02", "days": 75 },
+  "totals": { "clicks": 1, "impressions": 1128 },
+  "last30days": { "clicks": 1, "impressions": 62 },
+  "byCountry": { "España": { "clicks": 1, "impressions": 780 } },
+  "byDevice": { "mobile": { "clicks": 1, "impressions": 335 }, "desktop": { "clicks": 0, "impressions": 788 }, "tablet": { "clicks": 0, "impressions": 5 } },
+  "queries": { "distinct": 372, "containingMadrid": 2, "topByImpressions": ["becas mec (55)", "beca personalizada (45)", "becas colegio concertado (28)"] },
+  "pages": { "home": { "impressions": 1059, "avgPosition": 73.19 }, "/comunidad/madrid": { "impressions": 13, "avgPosition": 6.15 } },
+  "conclusion": "Visibilidad orgánica incipiente: 1 clic en 75 días, posición media ~71. NO es evidencia de impacto en usuarios; no citar como tracción. Útil solo como dato honesto de punto de partida y de demanda de búsqueda (372 consultas distintas sobre becas)."
+}

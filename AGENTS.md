@@ -10,6 +10,9 @@ Producto: **La Ayuda · Tus derechos, con fuente**. Orientador que, a partir de
 cumples, cuáles no y cuáles no se pueden saber, **qué te falta**, plazo,
 documentos y dónde solicitar, con cada afirmación enlazada a la fuente oficial.
 Las reglas deterministas deciden y nada se envía fuera del navegador.
+**Ámbito: Comunidad de Madrid** (ayudas autonómicas y municipales de la CM, más las
+estatales que puede solicitar un residente en Madrid). El premio es de la
+Comunidad de Madrid (ADR-020).
 
 Aplica además `F:\_Proyectos\AGENTS.md` (unidades, worktrees, temporales y caché).
 

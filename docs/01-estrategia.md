@@ -23,8 +23,10 @@ Piezas reutilizadas (donantes, no productos adicionales):
 | `renta-verificable` | Modelo claim → evidencia → fuente → límite de lo afirmable; huella de evidencia por contenido |
 | `official-sources` / radar | Vigencia de plazos: OPEN / UPCOMING / CLOSED / UNKNOWN; no mostrar cerradas por defecto |
 
-**Vertical único e impecable:** familias con hijos / educación (donde EduAyudas
-ya tiene modelo). Después se argumenta que el mismo esquema escala a vivienda,
+**Vertical único e impecable: Comunidad de Madrid** (ADR-020). Ayudas autonómicas y
+municipales de la CM más las estatales que puede pedir un residente en Madrid,
+priorizando familias y educación (donde EduAyudas ya tiene modelo) y
+completando con juventud, vivienda o empleo si hace falta para llegar a 8. Después se argumenta que el mismo esquema escala a vivienda,
 empleo, dependencia (criterio escalabilidad 20%).
 
 **Diferenciador:** «¿Qué me falta para poder solicitarla?» — en lugar de «no
@@ -80,3 +82,23 @@ La demo de elegibilidad sigue siendo útil como pieza estrella.
 Este trabajo **no debe quitar horas a Bizkaia** (donde hay opciones reales). Si
 hay conflicto, se recorta el vertical (menos fichas) o se pasa a plan B, que
 requiere sobre todo redacción y recopilación de métricas.
+
+## Evaluación tras F0 (2026-10-05)
+
+Datos medidos (`evidence/2026-10-05-F0/`):
+- **Uso:** la telemetría de la-ayuda es local-only (sin agregados). Search Console de
+  edubecas.es: **1 clic y 1.128 impresiones en 75 días** (posición media ~71).
+  Menciones externas: 0.
+- **Ecosistema:** los tres repos son **privados** (0 stars; los clones son propios).
+- **Técnica:** línea base verde (750/750 tests, build, a11y 12/12).
+
+Consecuencias:
+1. El **producto** es viable para el 14/10 con alcance Must (docs/03).
+2. **Impacto demostrado ≈ 0**: la memoria no puede citar tracción. Las cifras de
+   Search Console son un punto de partida honesto, no un argumento.
+3. El **ecosistema** depende de publicar el código y los datos (D-4).
+4. Por eso la recomendación de categoría pasa a **Global Tech Leader** (Ejecución
+   40 / Resultados 35 / Ecosistema 25), con la trayectoria de proyectos entregados
+   y el orientador de Madrid como pieza destacada, **salvo** que la Subdirección
+   confirme que una persona física puede concurrir a Impact y Daniel prefiera
+   asumir el 50 % de impacto sin usuarios. Decisión: D-5 / D-2.

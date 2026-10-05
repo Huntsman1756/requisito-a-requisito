@@ -115,3 +115,17 @@ editorial vigente es `status=active && reviewStatus=revisada`, reforzado por
 `revisada`). Se usa ese gate para F0-5/F3 y se documenta como desviación D3
 (condición de contorno, no rebaja de rigor). Si Daniel prefiere basar el
 worktree en `integrate/autonomous-pipeline`, la rama se recrea.
+
+## ADR-020 — Ámbito: Comunidad de Madrid
+2026-10-05 · aceptada (Daniel) · El premio es de la Comunidad de Madrid. El
+orientador cubre ayudas autonómicas y municipales de la CM y las estatales que
+puede solicitar un residente en Madrid. Sustituye en parte al ADR-004: «familias
+y educación» pasa a ser prioridad dentro del ámbito Madrid, no el criterio de
+ámbito. El inventario de F0-5 (16 candidatas, solo 1 de Madrid) se rehace (F0-5b).
+La pregunta de territorio se simplifica: municipio de la CM, sin selector de CCAA,
+y las ayudas de otras comunidades quedan fuera del bundle y del nivel 2.
+
+## ADR-006 (propuesta actualizada) — Vehículo
+2026-10-05 · propuesta · Search Console de edubecas.es muestra 1 clic en 75 días:
+no aporta tracción. Propuesta: presentar la-ayuda sola; EduBecas se menciona como
+trabajo previo propio. Pendiente de que Daniel confirme (D-1).

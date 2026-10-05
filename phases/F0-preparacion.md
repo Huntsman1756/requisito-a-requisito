@@ -17,6 +17,7 @@ fases no trabaje sobre supuestos.
 | F0-4 | Crear el worktree de la-ayuda (AGENTS.md §3), `npm ci`, línea base `npm run check`, `npm test`, `npm run build` y `npm run test:a11y` | `evidence/<fecha>-F0/baseline.json` (exit codes y recuentos). Si la base ya falla: documentarlo como rojo preexistente |
 | F0-5 | Inventario de ayudas candidatas al vertical familias/educación: `type ∈ {child_support, education_support, scholarship}` o `category ∈ {familia, educacion, beca}`; cruzar con autoridad vigente; excluir `tax_deduction` y las fichas de la auditoría del 27/09; anotar el estado del plazo | `evidence/<fecha>-F0/vertical/candidatas.json` ordenado por plazo abierto/próximo |
 | F0-6 | Instalar los navegadores de Playwright en la caché de F: (docs/10 §1) | Versiones anotadas en baseline.json |
+| F0-5b | Rehacer el inventario con **ámbito Comunidad de Madrid** (ADR-020): autonómicas y municipales de la CM más estatales que puede pedir un residente; familia, educación/becas, juventud, vivienda, empleo, discapacidad/dependencia; sin `tax_deduction` | `evidence/<fecha>-F0/vertical/candidatas-madrid.json`; si < 8, opciones a Daniel |
 | D-1 | **Daniel**: vehículo (la-ayuda sola o ecosistema La Ayuda + EduBecas), a la vista de F0-3 | ADR-006 aceptado |
 
 ## Verificación (comandos)
