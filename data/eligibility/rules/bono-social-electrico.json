@@ -1,6 +1,6 @@
 {
 	"benefitSlug": "bono-social-electrico",
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -13,6 +13,13 @@
 			"documentType": "regulatory_base",
 			"url": "https://www.boe.es/eli/es/rd/2017/10/06/897/con",
 			"title": "Real Decreto 897/2017 — consumidor vulnerable y bono social (texto consolidado a 28/01/2026)"
+		},
+		{
+			"id": "boe-rdl-7-2026-bono-social",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.boe.es/eli/es/rdl/2026/03/20/7",
+			"title": "RDL 7/2026 — Plan Integral de Respuesta; art. 1 prorroga descuentos bono social para 2026"
 		}
 	],
 	"parametersUsed": [
@@ -103,12 +110,22 @@
 		},
 		{
 			"id": "vulnerable-severo",
-			"label": "Con renta ≤ 50 % del umbral (o ≤1×IPREM en vía pensionista o ≤2×IPREM con familia numerosa) se es vulnerable severo: descuento del 50 %",
+			"label": "Con renta ≤ 50 % del umbral (o ≤1×IPREM en vía pensionista o ≤2×IPREM con familia numerosa) se es vulnerable severo: descuento 57,5 % en 2026 (ordinario 50 %)",
 			"citation": {
 				"sourceId": "boe-rd-897-2017-bono-social",
 				"locator": "Art. 3.4 y 6.3",
 				"excerpt": "En el caso del consumidor vulnerable severo, el descuento será del 50 por ciento",
 				"excerptSha256": "b8e9ca8e282bbfc48d7fdaed34ab584928368147a2acc6db0d6e8f110be601c9"
+			}
+		},
+		{
+			"id": "descuento-a-partir-2027",
+			"label": "Los descuentos 42,5 %/57,5 % son excepcionales y solo para 2026; a partir del 1/1/2027 salvo nueva prórroga vuelven 35 %/50 %",
+			"citation": {
+				"sourceId": "boe-rdl-7-2026-bono-social",
+				"locator": "Art. 1.1",
+				"excerpt": "con carácter excepcional, en el período comprendido entre el 1 de enero y el 31 de diciembre de 2026",
+				"excerptSha256": "c087491bfbf50c1a3df6e648bb9dd6da5bdd35967bbab36d3eec5fc7430671be"
 			}
 		}
 	],
@@ -150,10 +167,10 @@
 	"amount": {
 		"type": "variable",
 		"citation": {
-			"sourceId": "boe-rd-897-2017-bono-social",
-			"locator": "Art. 6.3",
-			"excerpt": "descuento del 35 por ciento en todos los términos que componen el PVPC",
-			"excerptSha256": "010c9a4063b1b5d00d716f039e5193c6234fcd516073a58dfcfb429a42c8dc8e"
+			"sourceId": "boe-rdl-7-2026-bono-social",
+			"locator": "Art. 1.1",
+			"excerpt": "El descuento correspondiente al consumidor vulnerable será del 42,5 por ciento. En el caso del consumidor vulnerable severo, el descuento será del 57,5 por ciento",
+			"excerptSha256": "47d17396703374babfd790d18d6318b591ff5eebeecf32eb72fcc0f971e5c3ca"
 		}
 	},
 	"effortInputs": {

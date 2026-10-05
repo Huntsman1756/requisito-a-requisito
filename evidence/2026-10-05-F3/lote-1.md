@@ -4,15 +4,15 @@ Revisar cada requisito: label comprensible, condición fiel a la norma,
 extracto literal presente en la fuente, localizador correcto, enlace oficial.
 Marcar KO con motivo; con todo OK ⇒ `humanReview.status = approved`.
 
-## bono-cultural-joven (rulesVersion 1, verificado 2026-10-05)
+## bono-cultural-joven (rulesVersion 2, verificado 2026-10-05)
 
 | Requisito | Condición | Extracto oficial | Localizador | Enlace |
 |---|---|---|---|---|
-| **OBLIGATORIO**: Tener 17 o 18 años (cumplir 18 en 2026) | edad between [17,18] | «Podrán ser beneficiarias las personas jóvenes que cumplan 18 años en 2026» | Extracto, apartado «Primero. Beneficiarios» | https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21271 |
+| **OBLIGATORIO**: Haber nacido en 2008 (cumplir 18 años durante 2026) | birthYear between [2008,2008] | «Podrán ser beneficiarias las personas jóvenes que cumplan 18 años en 2026» | Extracto, apartado «Primero. Beneficiarios» | https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21271 |
 
 **No comprobables con nuestras preguntas (⚠):**
 
-- **La regla exacta es haber nacido en 2008 (cumplir 18 durante 2026); con la edad sola no se puede distinguir de nacer en otro año con la misma edad** — «cumplan 18 años en 2026» (Extracto, apartado «Primero. Beneficiarios»)
+- **Responder solo «18 años» no basta: la regla es haber nacido en 2008, así que se pregunta el año de nacimiento** — «cumplan 18 años en 2026» (Extracto, apartado «Primero. Beneficiarios»)
 - **Nacionalidad española, residencia legal en España, solicitud de asilo o protección temporal, o ser extranjero extutelado en trámite de permiso** — «que posean la nacionalidad española o residencia legal en España en el momento de presentación de la solicitud» (Extracto, apartado «Primero. Beneficiarios»)
 - **Elegir una modalidad al solicitar (1: hasta 200/100/100 € por categoría; 2: hasta 400 € en cursos/talleres e instrumentos); son incompatibles entre sí** — «estas dos modalidades son incompatibles entre sí» (Extracto, apartados «Segundo. Objeto» y «Sexto. Otros datos»)
 
@@ -23,7 +23,7 @@ Marcar KO con motivo; con todo OK ⇒ `humanReview.status = approved`.
 
 OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 
-## bono-social-electrico (rulesVersion 1, verificado 2026-10-05)
+## bono-social-electrico (rulesVersion 2, verificado 2026-10-05)
 
 | Requisito | Condición | Extracto oficial | Localizador | Enlace |
 |---|---|---|---|---|
@@ -35,30 +35,29 @@ OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 - **Otra vía: pensionistas de la Seguridad Social por jubilación o incapacidad con cuantía mínima, sin otros ingresos >500 €/año** — «sean pensionistas del Sistema de la Seguridad Social por jubilación o incapacidad permanente, percibiendo la cuantía mínima vigente» (Art. 3.2.c)
 - **Otra vía: beneficiario del Ingreso Mínimo Vital** — «beneficiario del Ingreso Mínimo Vital conforme a lo establecido en la Ley 19/2021» (Art. 3.2.d)
 - **El umbral de renta sube 0,3×IPREM por cada adulto adicional y 0,5×IPREM por cada menor de la unidad de convivencia; +1×IPREM en circunstancias especiales (discapacidad ≥33 %, violencia de género, víctima de terrorismo, dependencia grado II-III, monoparental con menor, electrodependencia)** — «el multiplicador de renta respecto al índice IPREM de 14 pagas se incrementará en 0,3 por cada miembro adicional mayor de edad que conforme la unidad de convivencia y 0,5 por cada menor de edad» (Art. 3.2.a y 3.3)
-- **Con renta ≤ 50 % del umbral (o ≤1×IPREM en vía pensionista o ≤2×IPREM con familia numerosa) se es vulnerable severo: descuento del 50 %** — «En el caso del consumidor vulnerable severo, el descuento será del 50 por ciento» (Art. 3.4 y 6.3)
+- **Con renta ≤ 50 % del umbral (o ≤1×IPREM en vía pensionista o ≤2×IPREM con familia numerosa) se es vulnerable severo: descuento 57,5 % en 2026 (ordinario 50 %)** — «En el caso del consumidor vulnerable severo, el descuento será del 50 por ciento» (Art. 3.4 y 6.3)
+- **Los descuentos 42,5 %/57,5 % son excepcionales y solo para 2026; a partir del 1/1/2027 salvo nueva prórroga vuelven 35 %/50 %** — «con carácter excepcional, en el período comprendido entre el 1 de enero y el 31 de diciembre de 2026» (Art. 1.1)
 
 - **Plazo**: permanente/continuo
 - **Canal**: Comercializador de referencia (compañía de PVPC) — https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001/que-es.html (presencial/otro)
-- **Importe**: variable – €  («descuento del 35 por ciento en todos los términos que componen el PVPC»)
+- **Importe**: variable – €  («El descuento correspondiente al consumidor vulnerable será del 42,5 por ciento. En el caso del consumidor vulnerable severo, el descuento será del 57,5 por ciento»)
 - **Doc**: Modelo oficial de solicitud y documentación acreditativa al comercializador de referencia (obligatorio)
 
 OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 
-## descuento-transporte-familia-numerosa (rulesVersion 1, verificado 2026-10-05)
+## descuento-transporte-familia-numerosa (rulesVersion 2, verificado 2026-10-05)
 
 | Requisito | Condición | Extracto oficial | Localizador | Enlace |
 |---|---|---|---|---|
-| **OBLIGATORIO**: Ser titular de familia numerosa | tipo de familia eq "familia-numerosa" | «Si eres miembro de Familia Numerosa, tienes derecho a viajar con importantes descuentos» | Página del descuento, condiciones | https://www.renfe.com/es/es/viajar/prepara-tu-viaje/descuentos/familia-numerosa |
+| **OBLIGATORIO**: Ser titular de familia numerosa | tipo de familia eq "familia-numerosa" | «los interesados deberán presentar, cuando se les solicite, el correspondiente título oficial de familia numerosa o documento que acredite fehacientemente tal condición» | Art. 11.4 | https://www.boe.es/eli/es/rd/2005/12/30/1621/con |
 
 **No comprobables con nuestras preguntas (⚠):**
 
-- **El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial (nuestra pregunta no distingue la categoría)** — «Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial» (Página del descuento, condiciones)
-- **Aplica en trenes AVE (excepto AVE Internacional España-Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve** — «en todos los trenes AVE (excepto AVE Internacional entre España y Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve» (Página del descuento, condiciones)
-- **Los títulos FN monoparentales de la Generalitat de Catalunya solo se aceptan en trenes Rodalies** — «Los títulos de familia numerosa emitidos por la Generalitat de Catalunya para familias monoparentales solo serán aceptados como tales en los trenes de Rodalies» (Página del descuento, condiciones)
+- **El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial (nuestra pregunta no distingue la categoría)** — «Las reducciones serán del 20 y 50 por ciento, según se trate de familias de las categorías general o especial» (Art. 11.1)
 
 - **Plazo**: permanente/continuo
 - **Canal**: Renfe Viajeros — https://www.renfe.com (online)
-- **Importe**: variable – €  («Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial»)
+- **Importe**: variable – €  («tendrán derecho a reducciones en las tarifas de transporte ferroviario de viajeros. Las reducciones serán del 20 y 50 por ciento, según se trate de familias de las categorías general o especial»)
 - **Doc**: Título de familia numerosa vigente (se exige al comprar y a bordo) (obligatorio)
 
 OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
@@ -100,7 +99,7 @@ OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 
 **No comprobables con nuestras preguntas (⚠):**
 
-- **El nacimiento se produjo en territorio español o la adopción se constituyó o reconoció por autoridad española** — «siempre que el nacimiento se haya producido en territorio español o que la adopción se haya constituido o reconocido por autoridad española» (Ficha «Objeto»)
+- **El nacimiento se produjo en territorio español o la adopción se constituyó o reconoció por autoridad española** — «nacimiento o adopción de hijo en España» (Art. 357.1)
 - **Si la vía es discapacidad: el grado reconocido debe ser ≥65 % (nuestra pregunta solo distingue ≥33 %)** — «un grado de discapacidad igual o superior al 65 por ciento» (Art. 357.1)
 - **Si la vía es monoparental: un solo progenitor que convive con el hijo y constituye el sustentador único de la familia** — «que constituye el sustentador único de la familia» (Art. 357.2)
 - **Ingresos anuales por debajo del límite que fija cada año la Ley de Presupuestos (+15 % por hijo a partir del segundo; si conviven ambos progenitores, cuentan los ingresos de ambos)** — «no perciba ingresos anuales, de cualquier naturaleza, superiores a la cuantía que anualmente establezca la correspondiente Ley de Presupuestos Generales del Estado» (Art. 357.3)
@@ -115,26 +114,26 @@ OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 
 OK / KO por requisito: ☐ ☐ ☐ ☐ ☐
 
-## subsidio-mayores-52 (rulesVersion 1, verificado 2026-10-05)
+## subsidio-mayores-52 (rulesVersion 2, verificado 2026-10-05)
 
 | Requisito | Condición | Extracto oficial | Localizador | Enlace |
 |---|---|---|---|---|
-| **OBLIGATORIO**: Tener 52 años (la norma cuenta la edad en la fecha del hecho causante — ver ⚠) | edad gte 52 | «Tener 52 años en la fecha en la que se encuentre en una de las situaciones indicadas en el apartado anterior» | Página «Requisitos», apartado 2 | https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/tengo-mas-de-52.html |
-| aviso: Estar en desempleo total o trabajando a tiempo parcial (nuestra pregunta no distingue jornada — ver ⚠) | situación laboral eq "desempleado" | «Estar en desempleo total o trabajando a tiempo parcial» | Página «Requisitos», apartado 3 | https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/tengo-mas-de-52.html |
+| **OBLIGATORIO**: Tener 52 años (la norma cuenta la edad en la fecha del hecho causante — ver ⚠) | edad gte 52 | «Podrán acceder al subsidio para mayores de cincuenta y dos años los trabajadores que, en la fecha en que se encuentren en el supuesto previsto en el artículo 274.1 tengan cumplida dicha edad» | Art. 280.1 | https://www.boe.es/eli/es/rdlg/2015/10/30/8/con |
+| aviso: Estar en desempleo total o trabajando a tiempo parcial (nuestra pregunta no distingue jornada — ver ⚠) | situación laboral eq "desempleado" | «Podrán acceder a estos subsidios quienes mantengan uno o varios contratos a tiempo parcial, siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa» | Art. 274.1.b | https://www.boe.es/eli/es/rdlg/2015/10/30/8/con |
 
 **No comprobables con nuestras preguntas (⚠):**
 
-- **Quien trabaja a tiempo parcial también puede acceder (nuestra pregunta no distingue la jornada)** — «o trabajando a tiempo parcial» (Página «Requisitos», apartado 3)
-- **Haber agotado una prestación contributiva por desempleo a partir del 1/11/2024, o acreditar situación legal de desempleo con al menos 90 días cotizados** — «Acreditar situación legal de desempleo el día 1 de noviembre de 2024 o con posterioridad, habiendo cotizado al menos noventa días» (Página «Requisitos», apartado 1)
-- **Estar inscrito como demandante de empleo en la fecha del reconocimiento y haber suscrito el acuerdo de actividad** — «estar inscrito o inscrita como demandante de empleo, y haber suscrito el acuerdo de actividad» (Página «Requisitos», apartado 4)
-- **Cumplir todos los requisitos, salvo la edad, para acceder a una pensión contributiva de jubilación** — «Cumplir todos los requisitos, salvo la edad, para acceder a cualquier tipo de pensión contributiva de jubilación en el sistema de la Seguridad Social» (Página «Requisitos», apartado 5)
-- **Haber cotizado por desempleo al menos seis años a lo largo de la vida laboral** — «Haber cotizado efectivamente en España por la contingencia de desempleo durante, al menos, seis años a lo largo de tu vida laboral» (Página «Requisitos», apartado 5)
-- **Carencia de rentas propias en la solicitud y durante la percepción** — «que cumples el requisito de carencia de rentas propias. El cumplimiento de este requisito deberás mantenerlo durante todo el tiempo de percepción del subsidio» (Página «Requisitos», apartado 5)
-- **No haber percibido ni agotado la Renta Activa de Inserción, la prestación por cese de actividad ni el subsidio extraordinario** — «la prestación por cese de actividad o el subsidio extraordinario por desempleo, no puedes acceder al subsidio de mayor de 52 años» (Página «Requisitos», final)
+- **Haber agotado la prestación por desempleo, o estar en situación legal de desempleo con al menos 90 días cotizados** — «Encontrarse en situación legal de desempleo sin tener cubierto el periodo mínimo de cotización para tener derecho a la prestación contributiva, siempre que hayan cotizado al menos noventa días» (Art. 274.1.a y b)
+- **Quien trabaja a tiempo parcial también puede acceder si la suma de jornadas es inferior a una jornada completa (nuestra pregunta no distingue la jornada)** — «siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa» (Art. 274.1.b)
+- **Estar inscrito como demandante de empleo y haber suscrito el acuerdo de actividad** — «el reconocimiento del derecho al subsidio exigirá la inscripción como demandante de empleo, así como la suscripción del acuerdo de actividad» (Art. 274.4)
+- **Cumplir todos los requisitos, salvo la edad, para acceder a una pensión contributiva de jubilación** — «acrediten todos los requisitos, salvo la edad, para acceder a cualquier tipo de pensión contributiva de jubilación en el sistema de la Seguridad Social» (Art. 280.1)
+- **Haber cotizado por desempleo al menos seis años a lo largo de la vida laboral** — «hayan cotizado efectivamente en España por desempleo durante al menos seis años a lo largo de su vida laboral» (Art. 280.1)
+- **Carencia de rentas propias: rentas del mes anterior ≤ 75 % del SMI sin pagas extra (nuestra pregunta recoge ingresos anuales, no mensuales)** — «cuando las rentas de cualquier naturaleza de la persona solicitante o beneficiaria durante el mes natural anterior a dichas fechas no superen el 75 por ciento del salario mínimo interprofesional» (Art. 275.1)
+- **No haber percibido ni agotado la Renta Activa de Inserción, la prestación por cese de actividad ni el subsidio extraordinario** — «las personas que hayan percibido o agotado la Renta Activa de Inserción regulada en el Real Decreto 1369/2006» (Art. 280.1)
 
 - **Plazo**: permanente/continuo
 - **Canal**: SEPE — Servicio Público de Empleo Estatal — https://sede.sepe.gob.es/ (online)
-- **Importe**: per_applicant – € monthly («La cuantía mensual del subsidio por desempleo es igual al 80 % del indicador público de renta de efectos múltiples (IPREM)»)
+- **Importe**: per_applicant – € monthly («igual al 80 por ciento del indicador público de rentas de efectos múltiples mensual vigente en cada momento»)
 - **Doc**: Solicitud de subsidio (incluye la suscripción del acuerdo de actividad) (obligatorio)
 
 OK / KO por requisito: ☐ ☐ ☐ ☐ ☐

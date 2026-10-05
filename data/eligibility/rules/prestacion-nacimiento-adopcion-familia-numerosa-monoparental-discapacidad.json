@@ -80,10 +80,10 @@
 			"id": "nacimiento-en-espana",
 			"label": "El nacimiento se produjo en territorio español o la adopción se constituyó o reconoció por autoridad española",
 			"citation": {
-				"sourceId": "segss-nacimiento-pago-unico",
-				"locator": "Ficha «Objeto»",
-				"excerpt": "siempre que el nacimiento se haya producido en territorio español o que la adopción se haya constituido o reconocido por autoridad española",
-				"excerptSha256": "aace3c01df3f0bbbb43d647f543b9bf55c7cb52941c90518435b0afbe98ad63b"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 357.1",
+				"excerpt": "nacimiento o adopción de hijo en España",
+				"excerptSha256": "71cc1020ce37c405cc9994a91b6f805680b0645afa0a795992c741d6e337557b"
 			}
 		},
 		{

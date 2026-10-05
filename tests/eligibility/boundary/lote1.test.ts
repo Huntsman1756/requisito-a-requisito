@@ -8,7 +8,6 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { evaluateRuleSet } from "../../../src/lib/eligibility-engine/evaluate";
 import {
-	catalogSchema,
 	parametersSchema,
 	questionCatalogSchema,
 	ruleSetSchema,
@@ -59,18 +58,28 @@ const verdictOf = (slug: string, answers: CitizenProfile["answers"]) =>
 	evaluateRuleSet(rs(slug), prof(answers), CTX);
 
 describe("frontera: bono-cultural-joven", () => {
-	// Cita: «cumplan 18 años en 2026» ⇒ proxy edad ∈ [17,18] a fecha de solicitud.
-	it("17 y 18 cumplen la franja; 16 y 19 no", () => {
-		expect(statusOf("bono-cultural-joven", { age: age(17) }, "edad-17-18")).toBe("T");
-		expect(statusOf("bono-cultural-joven", { age: age(18) }, "edad-17-18")).toBe("T");
-		expect(statusOf("bono-cultural-joven", { age: age(16) }, "edad-17-18")).toBe("F");
-		expect(statusOf("bono-cultural-joven", { age: age(19) }, "edad-17-18")).toBe("F");
+	// Cita: «cumplan 18 años en 2026» = haber nacido en 2008 (F3-FIX: se pregunta el año).
+	const year = (y: number) => val({ min: y, max: y, maxExclusive: false });
+	it("nacido en 2008 ⇒ T; 2007 o 2009 ⇒ F", () => {
+		expect(statusOf("bono-cultural-joven", { birthYear: year(2008) }, "nacido-en-2008")).toBe("T");
+		expect(statusOf("bono-cultural-joven", { birthYear: year(2007) }, "nacido-en-2008")).toBe("F");
+		expect(statusOf("bono-cultural-joven", { birthYear: year(2009) }, "nacido-en-2008")).toBe("F");
 	});
-	it("intervalo que cruza el borde ⇒ U", () => {
-		expect(statusOf("bono-cultural-joven", { age: band(17, 19) }, "edad-17-18")).toBe("U");
+	it("intervalo que cruza 2008 ⇒ U", () => {
+		expect(statusOf("bono-cultural-joven", { birthYear: band(2007, 2009) }, "nacido-en-2008")).toBe("U");
 	});
-	it("nacionalidad/nacido-2008 son ⚠: el veredicto máximo es posible", () => {
+	it("«18 años» sin año de nacimiento ⇒ U, nunca probable", () => {
 		const ev = verdictOf("bono-cultural-joven", { age: age(18) });
+		expect(ev.requirements[0].status).toBe("U");
+		expect(ev.verdict).not.toBe("probable");
+		expect(ev.verdict).toBe("insuficiente");
+	});
+	it("nacido en nov-2007 ⇒ no_cumple (golden F3-FIX)", () => {
+		const ev = verdictOf("bono-cultural-joven", { birthYear: year(2007) });
+		expect(ev.verdict).toBe("no_cumple");
+	});
+	it("nacionalidad ⚠: con 2008 el veredicto máximo es posible", () => {
+		const ev = verdictOf("bono-cultural-joven", { birthYear: year(2008) });
 		expect(ev.verdict).toBe("posible");
 		expect(ev.uncovered.length).toBeGreaterThan(0);
 	});
@@ -204,8 +213,13 @@ describe("frontera: descuento-transporte-familia-numerosa", () => {
 
 describe("self-check en cada evaluación del lote", () => {
 	it("todos los perfiles del borde pasan los invariantes", () => {
+		const perfiles: CitizenProfile["answers"][] = [
+			{},
+			{ age: age(18) },
+			{ territory: val({ ccaa: "13" }) },
+		];
 		for (const slug of rules.keys()) {
-			for (const a of [{}, { age: age(18) }, { territory: val({ ccaa: "13" }) }]) {
+			for (const a of perfiles) {
 				const ev = verdictOf(slug, a);
 				expect(ev.selfCheck.failed, `${slug} ${JSON.stringify(a)}`).toEqual([]);
 			}

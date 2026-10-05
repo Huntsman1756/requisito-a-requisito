@@ -1,12 +1,19 @@
 {
 	"benefitSlug": "descuento-transporte-familia-numerosa",
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
 	},
 	"referenceDate": "application",
 	"sources": [
+		{
+			"id": "boe-rd-1621-2005-reglamento-fn",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2005/12/30/1621/con",
+			"title": "RD 1621/2005 — Reglamento de desarrollo de la Ley 40/2003, art. 11 (bonificaciones en transporte ferroviario)"
+		},
 		{
 			"id": "renfe-familia-numerosa",
 			"rank": 3,
@@ -21,10 +28,10 @@
 			"hard": true,
 			"label": "Ser titular de familia numerosa",
 			"citation": {
-				"sourceId": "renfe-familia-numerosa",
-				"locator": "Página del descuento, condiciones",
-				"excerpt": "Si eres miembro de Familia Numerosa, tienes derecho a viajar con importantes descuentos",
-				"excerptSha256": "26884c19c6c7510689e1900aa138aed686c176d5482935fae769575040bb530e"
+				"sourceId": "boe-rd-1621-2005-reglamento-fn",
+				"locator": "Art. 11.4",
+				"excerpt": "los interesados deberán presentar, cuando se les solicite, el correspondiente título oficial de familia numerosa o documento que acredite fehacientemente tal condición",
+				"excerptSha256": "fa0b08fb1737c3369a0039774adc2ecea1a2a331565c41277af125e7929afb9f"
 			},
 			"condition": {
 				"field": "familyType",
@@ -38,30 +45,10 @@
 			"id": "categoria-fn",
 			"label": "El descuento es 20 % para familia numerosa de categoría general y 50 % para la de categoría especial (nuestra pregunta no distingue la categoría)",
 			"citation": {
-				"sourceId": "renfe-familia-numerosa",
-				"locator": "Página del descuento, condiciones",
-				"excerpt": "Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial",
-				"excerptSha256": "f188bb47d8005791ded5b54835ae6ab7f8aebe5adde1795c7bd1c7c1c41e0e75"
-			}
-		},
-		{
-			"id": "trenes-incluidos",
-			"label": "Aplica en trenes AVE (excepto AVE Internacional España-Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve",
-			"citation": {
-				"sourceId": "renfe-familia-numerosa",
-				"locator": "Página del descuento, condiciones",
-				"excerpt": "en todos los trenes AVE (excepto AVE Internacional entre España y Francia), Larga Distancia, Avant, Media Distancia, Cercanías y Feve",
-				"excerptSha256": "1e5b3e4d917e6f1cfa98f47492c8abf1545ad9919d2f86b6e549601092c1c1c5"
-			}
-		},
-		{
-			"id": "titulos-cataluna",
-			"label": "Los títulos FN monoparentales de la Generalitat de Catalunya solo se aceptan en trenes Rodalies",
-			"citation": {
-				"sourceId": "renfe-familia-numerosa",
-				"locator": "Página del descuento, condiciones",
-				"excerpt": "Los títulos de familia numerosa emitidos por la Generalitat de Catalunya para familias monoparentales solo serán aceptados como tales en los trenes de Rodalies",
-				"excerptSha256": "95f659cf019aadb3dfd809c59154f4aad9f1169f88c98c4aed536788b68d9352"
+				"sourceId": "boe-rd-1621-2005-reglamento-fn",
+				"locator": "Art. 11.1",
+				"excerpt": "Las reducciones serán del 20 y 50 por ciento, según se trate de familias de las categorías general o especial",
+				"excerptSha256": "44793473923c8c2d655fede3cf38c6fdb179228277630238c6e90f02daf494d8"
 			}
 		}
 	],
@@ -92,10 +79,10 @@
 				"label": "Título de familia numerosa vigente (se exige al comprar y a bordo)",
 				"mandatory": true,
 				"citation": {
-					"sourceId": "renfe-familia-numerosa",
-					"locator": "Página del descuento, condiciones",
-					"excerpt": "Los títulos de familia numerosa",
-					"excerptSha256": "01228609af4a913564e56f589ea349deadb658d44d55cd0caf329277911e1dd9"
+					"sourceId": "boe-rd-1621-2005-reglamento-fn",
+					"locator": "Art. 11.4",
+					"excerpt": "el correspondiente título oficial de familia numerosa o documento que acredite fehacientemente tal condición y la categoría en que la misma se clasifica",
+					"excerptSha256": "181516dbef15b7a8b6209526c788ff46fee651f0dc3afb7014ae577b401a0fa1"
 				}
 			}
 		]
@@ -103,10 +90,10 @@
 	"amount": {
 		"type": "variable",
 		"citation": {
-			"sourceId": "renfe-familia-numerosa",
-			"locator": "Página del descuento",
-			"excerpt": "Los descuentos alcanzan el 20% en los casos de familia numerosa de categoría general y el 50% para integrantes de familia numerosa de categoría especial",
-			"excerptSha256": "f188bb47d8005791ded5b54835ae6ab7f8aebe5adde1795c7bd1c7c1c41e0e75"
+			"sourceId": "boe-rd-1621-2005-reglamento-fn",
+			"locator": "Art. 11.1",
+			"excerpt": "tendrán derecho a reducciones en las tarifas de transporte ferroviario de viajeros. Las reducciones serán del 20 y 50 por ciento, según se trate de familias de las categorías general o especial",
+			"excerptSha256": "427ad8da6a479c8e3751e0cf80e7fecb08329cfc7f0546b514bd7377d4cf3d3d"
 		}
 	},
 	"effortInputs": {

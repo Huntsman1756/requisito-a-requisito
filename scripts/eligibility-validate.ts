@@ -17,6 +17,7 @@ import {
 	ruleSetSchema,
 	sourceSnapshotSchema,
 	type Citation,
+	type Condition,
 	type RuleSet,
 	type SourceRegistry,
 } from "../src/lib/eligibility-engine/schema";
@@ -56,7 +57,28 @@ interface Cit {
 
 function citationsOf(rs: RuleSet): Cit[] {
 	const out: Cit[] = [];
-	for (const r of rs.requirements) out.push({ where: `requirements.${r.id}`, c: r.citation });
+	const conditionCitations = (
+		c: Condition,
+		where: string,
+	): void => {
+		if ("all" in c) {
+			if (c.citation) out.push({ where: `${where}.all`, c: c.citation });
+			c.all.forEach((x, i) => conditionCitations(x, `${where}.all.${i}`));
+		} else if ("any" in c) {
+			if (c.citation) out.push({ where: `${where}.any`, c: c.citation });
+			c.any.forEach((x, i) => conditionCitations(x, `${where}.any.${i}`));
+		} else if ("not" in c) {
+			if (c.citation) out.push({ where: `${where}.not`, c: c.citation });
+			conditionCitations(c.not, `${where}.not`);
+		} else {
+			if (c.citation) out.push({ where, c: c.citation });
+			if (c.where) conditionCitations(c.where, `${where}.where`);
+		}
+	};
+	for (const r of rs.requirements) {
+		out.push({ where: `requirements.${r.id}`, c: r.citation });
+		conditionCitations(r.condition, `requirements.${r.id}.condition`);
+	}
 	for (const r of rs.uncoveredRequirements)
 		out.push({ where: `uncoveredRequirements.${r.id}`, c: r.citation });
 	out.push({ where: "application.window", c: rs.application.window.citation });
@@ -66,6 +88,11 @@ function citationsOf(rs: RuleSet): Cit[] {
 	if (rs.amount) out.push({ where: "amount", c: rs.amount.citation });
 	if (rs.referenceDateCitation)
 		out.push({ where: "referenceDateCitation", c: rs.referenceDateCitation });
+	if (rs.application.officialSimulator)
+		out.push({
+			where: "application.officialSimulator",
+			c: rs.application.officialSimulator.citation,
+		});
 	return out;
 }
 
@@ -236,6 +263,26 @@ export function validateEligibility(opts: ValidateOptions): ValidateResult {
 					"ELIG_G9_PARAM",
 					slug,
 					`parámetro ${p} sin vigencia que cubra ${refDate}`,
+				);
+			}
+		}
+
+		// G11 (ADR-034): requisitos, umbrales e importes solo de rango 1–2.
+		// El rango 3 queda reservado a channel, documents, officialSimulator
+		// y el estado operativo del plazo.
+		for (const { where, c } of citationsOf(rs)) {
+			const rank = sourceById.get(c.sourceId)?.rank;
+			if (rank === undefined) continue;
+			const isNormative =
+				where.startsWith("requirements.") ||
+				where.startsWith("uncoveredRequirements.") ||
+				where === "amount" ||
+				where === "referenceDateCitation";
+			if (isNormative && rank > 2) {
+				err(
+					"ELIG_G11_RANK",
+					slug,
+					`${where}: cita de rango ${rank} (requisitos e importes exigen rango ≤ 2)`,
 				);
 			}
 		}

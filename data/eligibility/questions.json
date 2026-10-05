@@ -24,7 +24,9 @@
 			"allowUnknown": true,
 			"allowDecline": false,
 			"sensitivity": "normal",
-			"derives": ["residenceMonths"]
+			"derives": [
+				"residenceMonths"
+			]
 		},
 		{
 			"id": "q-age",
@@ -39,10 +41,36 @@
 			"sensitivity": "normal"
 		},
 		{
+			"id": "q-birth-year",
+			"field": "birthYear",
+			"type": "integer",
+			"order": 4,
+			"labelKey": "q.birthYear.label",
+			"helpKey": "q.birthYear.help",
+			"whyKey": "q.birthYear.why",
+			"min": 1900,
+			"max": 2026,
+			"allowUnknown": true,
+			"allowDecline": true,
+			"sensitivity": "normal",
+			"showIf": {
+				"field": "age",
+				"op": "between",
+				"value": [
+					15,
+					20
+				],
+				"inclusive": [
+					true,
+					true
+				]
+			}
+		},
+		{
 			"id": "q-dependents",
 			"field": "dependents",
 			"type": "dependents",
-			"order": 4,
+			"order": 5,
 			"labelKey": "q.dependents.label",
 			"helpKey": "q.dependents.help",
 			"whyKey": "q.dependents.why",
@@ -54,14 +82,23 @@
 			"id": "q-family-type",
 			"field": "familyType",
 			"type": "single",
-			"order": 5,
+			"order": 6,
 			"labelKey": "q.familyType.label",
 			"helpKey": "q.familyType.help",
 			"whyKey": "q.familyType.why",
 			"options": [
-				{ "value": "general", "labelKey": "q.familyType.o.general" },
-				{ "value": "familia-numerosa", "labelKey": "q.familyType.o.fn" },
-				{ "value": "monoparental", "labelKey": "q.familyType.o.mono" }
+				{
+					"value": "general",
+					"labelKey": "q.familyType.o.general"
+				},
+				{
+					"value": "familia-numerosa",
+					"labelKey": "q.familyType.o.fn"
+				},
+				{
+					"value": "monoparental",
+					"labelKey": "q.familyType.o.mono"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": false,
@@ -71,20 +108,47 @@
 			"id": "q-employment",
 			"field": "employmentStatus",
 			"type": "single",
-			"order": 6,
+			"order": 7,
 			"labelKey": "q.employment.label",
 			"helpKey": "q.employment.help",
 			"whyKey": "q.employment.why",
 			"options": [
-				{ "value": "asalariado", "labelKey": "q.employment.o.asalariado" },
-				{ "value": "autonomo", "labelKey": "q.employment.o.autonomo" },
-				{ "value": "empleado-publico", "labelKey": "q.employment.o.publico" },
-				{ "value": "docente", "labelKey": "q.employment.o.docente" },
-				{ "value": "investigador", "labelKey": "q.employment.o.investigador" },
-				{ "value": "militar", "labelKey": "q.employment.o.militar" },
-				{ "value": "desempleado", "labelKey": "q.employment.o.desempleado" },
-				{ "value": "jubilado", "labelKey": "q.employment.o.jubilado" },
-				{ "value": "general", "labelKey": "q.employment.otro" }
+				{
+					"value": "asalariado",
+					"labelKey": "q.employment.o.asalariado"
+				},
+				{
+					"value": "autonomo",
+					"labelKey": "q.employment.o.autonomo"
+				},
+				{
+					"value": "empleado-publico",
+					"labelKey": "q.employment.o.publico"
+				},
+				{
+					"value": "docente",
+					"labelKey": "q.employment.o.docente"
+				},
+				{
+					"value": "investigador",
+					"labelKey": "q.employment.o.investigador"
+				},
+				{
+					"value": "militar",
+					"labelKey": "q.employment.o.militar"
+				},
+				{
+					"value": "desempleado",
+					"labelKey": "q.employment.o.desempleado"
+				},
+				{
+					"value": "jubilado",
+					"labelKey": "q.employment.o.jubilado"
+				},
+				{
+					"value": "general",
+					"labelKey": "q.employment.otro"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": true,
@@ -94,13 +158,19 @@
 			"id": "q-student",
 			"field": "studentStatus",
 			"type": "single",
-			"order": 7,
+			"order": 8,
 			"labelKey": "q.student.label",
 			"helpKey": "q.student.help",
 			"whyKey": "q.student.why",
 			"options": [
-				{ "value": "si", "labelKey": "q.student.o.si" },
-				{ "value": "no", "labelKey": "q.student.o.no" }
+				{
+					"value": "si",
+					"labelKey": "q.student.o.si"
+				},
+				{
+					"value": "no",
+					"labelKey": "q.student.o.no"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": false,
@@ -110,15 +180,43 @@
 			"id": "q-income",
 			"field": "incomeAnnual",
 			"type": "money_band",
-			"order": 8,
+			"order": 9,
 			"labelKey": "q.income.label",
 			"helpKey": "q.income.help",
 			"whyKey": "q.income.why",
 			"options": [
-				{ "value": "banda-0-8400", "labelKey": "q.income.o.b0", "interval": [0, 8400] },
-				{ "value": "banda-8400-16800", "labelKey": "q.income.o.b1", "interval": [8400, 16800] },
-				{ "value": "banda-16800-25200", "labelKey": "q.income.o.b2", "interval": [16800, 25200] },
-				{ "value": "banda-25200-inf", "labelKey": "q.income.o.b3", "interval": [25200, null] }
+				{
+					"value": "banda-0-8400",
+					"labelKey": "q.income.o.b0",
+					"interval": [
+						0,
+						8400
+					]
+				},
+				{
+					"value": "banda-8400-16800",
+					"labelKey": "q.income.o.b1",
+					"interval": [
+						8400,
+						16800
+					]
+				},
+				{
+					"value": "banda-16800-25200",
+					"labelKey": "q.income.o.b2",
+					"interval": [
+						16800,
+						25200
+					]
+				},
+				{
+					"value": "banda-25200-inf",
+					"labelKey": "q.income.o.b3",
+					"interval": [
+						25200,
+						null
+					]
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": true,
@@ -128,14 +226,23 @@
 			"id": "q-disability",
 			"field": "disability",
 			"type": "single",
-			"order": 9,
+			"order": 10,
 			"labelKey": "q.disability.label",
 			"helpKey": "q.disability.help",
 			"whyKey": "q.disability.why",
 			"options": [
-				{ "value": "gte33", "labelKey": "q.disability.o.gte33" },
-				{ "value": "lt33", "labelKey": "q.disability.o.lt33" },
-				{ "value": "no", "labelKey": "q.disability.o.no" }
+				{
+					"value": "gte33",
+					"labelKey": "q.disability.o.gte33"
+				},
+				{
+					"value": "lt33",
+					"labelKey": "q.disability.o.lt33"
+				},
+				{
+					"value": "no",
+					"labelKey": "q.disability.o.no"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": true,
@@ -145,32 +252,54 @@
 			"id": "q-dependency",
 			"field": "dependency",
 			"type": "single",
-			"order": 10,
+			"order": 11,
 			"labelKey": "q.dependency.label",
 			"helpKey": "q.dependency.help",
 			"whyKey": "q.dependency.why",
 			"options": [
-				{ "value": "reconocida", "labelKey": "q.dependency.o.reconocida" },
-				{ "value": "en_tramite", "labelKey": "q.dependency.o.tramite" },
-				{ "value": "no", "labelKey": "q.dependency.o.no" }
+				{
+					"value": "reconocida",
+					"labelKey": "q.dependency.o.reconocida"
+				},
+				{
+					"value": "en_tramite",
+					"labelKey": "q.dependency.o.tramite"
+				},
+				{
+					"value": "no",
+					"labelKey": "q.dependency.o.no"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": true,
 			"sensitivity": "special",
-			"showIf": { "field": "disability", "op": "neq", "value": "no" }
+			"showIf": {
+				"field": "disability",
+				"op": "neq",
+				"value": "no"
+			}
 		},
 		{
 			"id": "q-housing",
 			"field": "housingStatus",
 			"type": "single",
-			"order": 11,
+			"order": 12,
 			"labelKey": "q.housing.label",
 			"helpKey": "q.housing.help",
 			"whyKey": "q.housing.why",
 			"options": [
-				{ "value": "alquiler", "labelKey": "q.housing.o.alquiler" },
-				{ "value": "propiedad", "labelKey": "q.housing.o.propiedad" },
-				{ "value": "general", "labelKey": "q.housing.o.otra" }
+				{
+					"value": "alquiler",
+					"labelKey": "q.housing.o.alquiler"
+				},
+				{
+					"value": "propiedad",
+					"labelKey": "q.housing.o.propiedad"
+				},
+				{
+					"value": "general",
+					"labelKey": "q.housing.o.otra"
+				}
 			],
 			"allowUnknown": true,
 			"allowDecline": true,
@@ -182,8 +311,16 @@
 			"id": "cc-edad-jubilado",
 			"when": {
 				"all": [
-					{ "field": "age", "op": "lt", "value": 50 },
-					{ "field": "employmentStatus", "op": "eq", "value": "jubilado" }
+					{
+						"field": "age",
+						"op": "lt",
+						"value": 50
+					},
+					{
+						"field": "employmentStatus",
+						"op": "eq",
+						"value": "jubilado"
+					}
 				]
 			},
 			"messageKey": "cc.edadJubilado"
@@ -192,8 +329,26 @@
 			"id": "cc-familia-sin-personas",
 			"when": {
 				"all": [
-					{ "field": "familyType", "op": "in", "value": ["familia-numerosa", "monoparental"] },
-					{ "not": { "field": "dependents", "op": "count_where_gte", "count": 1, "where": { "field": "age", "op": "lt", "value": 99 } } }
+					{
+						"field": "familyType",
+						"op": "in",
+						"value": [
+							"familia-numerosa",
+							"monoparental"
+						]
+					},
+					{
+						"not": {
+							"field": "dependents",
+							"op": "count_where_gte",
+							"count": 1,
+							"where": {
+								"field": "age",
+								"op": "lt",
+								"value": 99
+							}
+						}
+					}
 				]
 			},
 			"messageKey": "cc.familiaSinPersonas"

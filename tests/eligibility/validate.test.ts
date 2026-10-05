@@ -260,6 +260,40 @@ describe("eligibility-validate gates", () => {
 		expect(codes(r)).toContain("ELIG_G9_PARAM");
 	});
 
+	it("G11: requisito citado a fuente de rango 3 → ELIG_G11", () => {
+		const r = run((rs) => {
+			(rs.sources as unknown[]).push({
+				id: "sede-x",
+				rank: 3,
+				documentType: "procedure_page",
+				url: "https://sede.comunidad.madrid/x",
+				title: "Sede X",
+			});
+			(rs.requirements as { citation: { sourceId: string } }[])[0].citation.sourceId =
+				"sede-x";
+		});
+		expect(codes(r)).toContain("ELIG_G11_RANK");
+	});
+
+	it("G11: canal/documentos sí pueden citar rango 3", () => {
+		const r = run((rs) => {
+			(rs.sources as unknown[]).push({
+				id: "sede-x",
+				rank: 3,
+				documentType: "procedure_page",
+				url: "https://sede.comunidad.madrid/x",
+				title: "Sede X",
+			});
+			const app = rs.application as {
+				channel: { citation: { sourceId: string } };
+				window: { citation: { sourceId: string } };
+			};
+			app.channel.citation.sourceId = "sede-x";
+			app.window.citation.sourceId = "sede-x";
+		});
+		expect(r.errors.filter((e) => e.code === "ELIG_G11_RANK")).toEqual([]);
+	});
+
 	it("G10: humanReview pending en build estricto → ELIG_G10", () => {
 		const r = run((rs) => {
 			rs.humanReview = { status: "pending" };

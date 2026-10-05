@@ -1,6 +1,6 @@
 {
 	"benefitSlug": "subsidio-mayores-52",
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -8,11 +8,18 @@
 	"referenceDate": "application",
 	"sources": [
 		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 274–280 (texto consolidado)"
+		},
+		{
 			"id": "sepe-subsidio-52",
 			"rank": 3,
 			"documentType": "procedure_page",
 			"url": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/tengo-mas-de-52.html",
-			"title": "SEPE — Subsidio por desempleo de mayor de 52 años (requisitos)"
+			"title": "SEPE — Subsidio por desempleo de mayor de 52 años"
 		}
 	],
 	"requirements": [
@@ -22,10 +29,10 @@
 			"label": "Tener 52 años (la norma cuenta la edad en la fecha del hecho causante — ver ⚠)",
 			"timeDependent": "increasing",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 2",
-				"excerpt": "Tener 52 años en la fecha en la que se encuentre en una de las situaciones indicadas en el apartado anterior",
-				"excerptSha256": "7efadadcc5f0b0896dd16e13195644690fcfc6d263fc402e154ef1c33fa86ea6"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 280.1",
+				"excerpt": "Podrán acceder al subsidio para mayores de cincuenta y dos años los trabajadores que, en la fecha en que se encuentren en el supuesto previsto en el artículo 274.1 tengan cumplida dicha edad",
+				"excerptSha256": "02dd3af48ba4f223974c310048b1d280e6e5ffb281c0cd268cb9f4c77168c781"
 			},
 			"condition": {
 				"field": "age",
@@ -38,10 +45,10 @@
 			"hard": false,
 			"label": "Estar en desempleo total o trabajando a tiempo parcial (nuestra pregunta no distingue jornada — ver ⚠)",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 3",
-				"excerpt": "Estar en desempleo total o trabajando a tiempo parcial",
-				"excerptSha256": "b5c97ea0c55e6d752b2db5f2b5c6f69cb2a0a1dce9da3a7264922c5f52f297a2"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1.b",
+				"excerpt": "Podrán acceder a estos subsidios quienes mantengan uno o varios contratos a tiempo parcial, siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa",
+				"excerptSha256": "bf45ee22b42fba1c76cd1d25dcf2120259ef0391b11571adc36fb13d509cc800"
 			},
 			"condition": {
 				"field": "employmentStatus",
@@ -52,73 +59,73 @@
 	],
 	"uncoveredRequirements": [
 		{
-			"id": "jornada-parcial",
-			"label": "Quien trabaja a tiempo parcial también puede acceder (nuestra pregunta no distingue la jornada)",
+			"id": "hecho-causante",
+			"label": "Haber agotado la prestación por desempleo, o estar en situación legal de desempleo con al menos 90 días cotizados",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 3",
-				"excerpt": "o trabajando a tiempo parcial",
-				"excerptSha256": "fcab6d86cf5224ef99d8e01c6474dce9d39986dcbfeccb743913c46733f919ec"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1.a y b",
+				"excerpt": "Encontrarse en situación legal de desempleo sin tener cubierto el periodo mínimo de cotización para tener derecho a la prestación contributiva, siempre que hayan cotizado al menos noventa días",
+				"excerptSha256": "536a88a2a4c0a5c25de497f6e30d42cfad814f53ff72d630bc70aa7295bc3c79"
 			}
 		},
 		{
-			"id": "hecho-causante",
-			"label": "Haber agotado una prestación contributiva por desempleo a partir del 1/11/2024, o acreditar situación legal de desempleo con al menos 90 días cotizados",
+			"id": "jornada-parcial",
+			"label": "Quien trabaja a tiempo parcial también puede acceder si la suma de jornadas es inferior a una jornada completa (nuestra pregunta no distingue la jornada)",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 1",
-				"excerpt": "Acreditar situación legal de desempleo el día 1 de noviembre de 2024 o con posterioridad, habiendo cotizado al menos noventa días",
-				"excerptSha256": "cc4bad77dc1a22946d08a3bc3f7e79f0ce978a0e70f4c769003bc52930deec1e"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1.b",
+				"excerpt": "siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa",
+				"excerptSha256": "3763f115c817f2d42f5c5a3cf37bdeff269719c5078b677fef68fbb1c8591303"
 			}
 		},
 		{
 			"id": "inscripcion-acuerdo",
-			"label": "Estar inscrito como demandante de empleo en la fecha del reconocimiento y haber suscrito el acuerdo de actividad",
+			"label": "Estar inscrito como demandante de empleo y haber suscrito el acuerdo de actividad",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 4",
-				"excerpt": "estar inscrito o inscrita como demandante de empleo, y haber suscrito el acuerdo de actividad",
-				"excerptSha256": "b354d6c2f73e2bde0e759094173ef86e36ff06eb7b1a822697b23964aaf2a259"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.4",
+				"excerpt": "el reconocimiento del derecho al subsidio exigirá la inscripción como demandante de empleo, así como la suscripción del acuerdo de actividad",
+				"excerptSha256": "cd554e67faefa39d33416069cf3d4a464f10b05d07cfaf3f2558e21b098a2bdd"
 			}
 		},
 		{
 			"id": "requisitos-jubilacion-salvo-edad",
 			"label": "Cumplir todos los requisitos, salvo la edad, para acceder a una pensión contributiva de jubilación",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 5",
-				"excerpt": "Cumplir todos los requisitos, salvo la edad, para acceder a cualquier tipo de pensión contributiva de jubilación en el sistema de la Seguridad Social",
-				"excerptSha256": "cb061cbe318d9ad53b99b975844b0e5e0774575de2d9fae86f2650a76b66315b"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 280.1",
+				"excerpt": "acrediten todos los requisitos, salvo la edad, para acceder a cualquier tipo de pensión contributiva de jubilación en el sistema de la Seguridad Social",
+				"excerptSha256": "f488664445e267f01662a3173a9bfc2aca1163501c3040d2a88e047620bf68c6"
 			}
 		},
 		{
 			"id": "seis-anos-cotizados",
 			"label": "Haber cotizado por desempleo al menos seis años a lo largo de la vida laboral",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 5",
-				"excerpt": "Haber cotizado efectivamente en España por la contingencia de desempleo durante, al menos, seis años a lo largo de tu vida laboral",
-				"excerptSha256": "5d22985f0597e0dd2e1511bc2b90627bf361d52a1576ce3ce9d03bb1a8123b17"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 280.1",
+				"excerpt": "hayan cotizado efectivamente en España por desempleo durante al menos seis años a lo largo de su vida laboral",
+				"excerptSha256": "7b2d8ad1c92a55510f4a76170b96e0588f4cc07e8ee2163c97960d39e5dbf688"
 			}
 		},
 		{
 			"id": "carencia-rentas",
-			"label": "Carencia de rentas propias en la solicitud y durante la percepción",
+			"label": "Carencia de rentas propias: rentas del mes anterior ≤ 75 % del SMI sin pagas extra (nuestra pregunta recoge ingresos anuales, no mensuales)",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», apartado 5",
-				"excerpt": "que cumples el requisito de carencia de rentas propias. El cumplimiento de este requisito deberás mantenerlo durante todo el tiempo de percepción del subsidio",
-				"excerptSha256": "debff1bf264dd3da0b0f2a447fa575e1b3c3cf4cb3acdce76f557f79f4211d34"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 275.1",
+				"excerpt": "cuando las rentas de cualquier naturaleza de la persona solicitante o beneficiaria durante el mes natural anterior a dichas fechas no superen el 75 por ciento del salario mínimo interprofesional",
+				"excerptSha256": "213918facd99d395f7231600cd78df71930282f09ac72177430984a7729fe22a"
 			}
 		},
 		{
 			"id": "exclusiones",
 			"label": "No haber percibido ni agotado la Renta Activa de Inserción, la prestación por cese de actividad ni el subsidio extraordinario",
 			"citation": {
-				"sourceId": "sepe-subsidio-52",
-				"locator": "Página «Requisitos», final",
-				"excerpt": "la prestación por cese de actividad o el subsidio extraordinario por desempleo, no puedes acceder al subsidio de mayor de 52 años",
-				"excerptSha256": "79b8971ceef64f8303d57b37d5e98698e223b649e42d85dbb6f6344351f6b13d"
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 280.1",
+				"excerpt": "las personas que hayan percibido o agotado la Renta Activa de Inserción regulada en el Real Decreto 1369/2006",
+				"excerptSha256": "5527e9370c1a6b16afbffae3acb8e2e70301ba05ac1d8ab37dd0e09bc7dd0ef0"
 			}
 		}
 	],
@@ -149,10 +156,10 @@
 				"label": "Solicitud de subsidio (incluye la suscripción del acuerdo de actividad)",
 				"mandatory": true,
 				"citation": {
-					"sourceId": "sepe-subsidio-52",
-					"locator": "Página «Documentación necesaria»",
-					"excerpt": "estar inscrito o inscrita como demandante de empleo, y haber suscrito el acuerdo de actividad",
-					"excerptSha256": "b354d6c2f73e2bde0e759094173ef86e36ff06eb7b1a822697b23964aaf2a259"
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 274.4",
+					"excerpt": "la suscripción del acuerdo de actividad regulado en el artículo 3 de la Ley 3/2023",
+					"excerptSha256": "ac3f00baff902099bfd2e319cd374f3b7bc503cbe99f2eaf3bb489e2cd560c2a"
 				}
 			}
 		]
@@ -161,10 +168,10 @@
 		"type": "per_applicant",
 		"period": "monthly",
 		"citation": {
-			"sourceId": "sepe-subsidio-52",
-			"locator": "Página «Duración y cuantía»",
-			"excerpt": "La cuantía mensual del subsidio por desempleo es igual al 80 % del indicador público de renta de efectos múltiples (IPREM)",
-			"excerptSha256": "7589a6b7ecb9489b9bc1fb85a03f273ecbd8db13328c149862418f89dd4b595a"
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 280.4",
+			"excerpt": "igual al 80 por ciento del indicador público de rentas de efectos múltiples mensual vigente en cada momento",
+			"excerptSha256": "4078c2437f6c4e8c59621c0af875ccf4e5fe10741646792358a7ad9c73740130"
 		}
 	},
 	"effortInputs": {

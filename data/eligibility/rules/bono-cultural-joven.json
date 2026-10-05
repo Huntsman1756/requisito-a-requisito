@@ -1,6 +1,6 @@
 {
 	"benefitSlug": "bono-cultural-joven",
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -17,9 +17,9 @@
 	],
 	"requirements": [
 		{
-			"id": "edad-17-18",
+			"id": "nacido-en-2008",
 			"hard": true,
-			"label": "Tener 17 o 18 años (cumplir 18 en 2026)",
+			"label": "Haber nacido en 2008 (cumplir 18 años durante 2026)",
 			"citation": {
 				"sourceId": "boe-bono-cultural-2026",
 				"locator": "Extracto, apartado «Primero. Beneficiarios»",
@@ -27,11 +27,11 @@
 				"excerptSha256": "4d75ba5c59d386d84853d93d045b866e148d53831dc56aaac2085a10f686f59e"
 			},
 			"condition": {
-				"field": "age",
+				"field": "birthYear",
 				"op": "between",
 				"value": [
-					17,
-					18
+					2008,
+					2008
 				],
 				"inclusive": [
 					true,
@@ -42,8 +42,8 @@
 	],
 	"uncoveredRequirements": [
 		{
-			"id": "nacido-en-2008",
-			"label": "La regla exacta es haber nacido en 2008 (cumplir 18 durante 2026); con la edad sola no se puede distinguir de nacer en otro año con la misma edad",
+			"id": "edad-vs-nacimiento",
+			"label": "Responder solo «18 años» no basta: la regla es haber nacido en 2008, así que se pregunta el año de nacimiento",
 			"citation": {
 				"sourceId": "boe-bono-cultural-2026",
 				"locator": "Extracto, apartado «Primero. Beneficiarios»",
