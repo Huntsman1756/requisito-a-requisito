@@ -29,8 +29,8 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
 | F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |
 | F3-M | Mutación: 0 supervivientes | agente | 10/10 | F3-G | TODO | |
-| F4-1..12 | Diseño y frontend | agente | 11/10 | F2 | TODO | |
-| F4-W | Vistazo a las capturas de diseño (no bloqueante: el agente sigue; Daniel puede pedir cambios) | **Daniel** | 09/10 | F4-2 | TODO | |
+| F4-1..12 | Diseño y frontend | agente | 11/10 | F2 | EN CURSO — núcleo HECHO (2026-10-05): /comprobar completo + resultados + nivel 2 + /ayudas/[slug] + datos abiertos + revisión visual independiente aplicada (2 commits) | Pendiente: wireframes formales, matriz de proyectos, opt-in profile, en |
+| F4-W | Vistazo a las capturas de diseño (no bloqueante) | **Daniel** | 09/10 | F4-2 | LISTO PARA VER — `evidence/2026-10-05-F4/capturas/` (16 PNG, 375/1366) | |
 | F5-1..11 | QA transversal (10 proyectos, a11y, visual, rendimiento, privacidad, full) | agente | 12/10 | F4 | TODO | |
 | F5-M | Checklist manual en dispositivos reales | **Daniel** | 12/10 | F5-2 | TODO | |
 | D-3 | Demo desplegada | Claude (delegado) | — | — | HECHO (ADR-030) | GitHub Pages; dominio propio más adelante |
