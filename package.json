@@ -7,10 +7,10 @@
 	"engines": {
 		"node": ">=22.6"
 	},
-	"description": "Orientador de ayudas públicas de la Comunidad de Madrid con fuente oficial verificable",
+	"description": "Orientador de ayudas p\u00fablicas de la Comunidad de Madrid con fuente oficial verificable",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "npm run eligibility:build && next build",
 		"check": "tsc --noEmit",
 		"typecheck": "tsc --noEmit",
 		"lint": "biome lint .",
@@ -20,7 +20,10 @@
 		"test:e2e": "playwright test",
 		"preview": "node scripts/serve-export.mjs",
 		"catalog:import": "tsx ./scripts/import-donor-catalog.ts",
-		"validate:full": "npm run check && npm run lint && npm test && npm run build"
+		"validate:full": "npm run check && npm run lint && npm test && npm run build",
+		"eligibility:snapshot": "tsx ./scripts/eligibility-snapshot.ts",
+		"eligibility:validate": "tsx ./scripts/eligibility-validate.ts",
+		"eligibility:build": "tsx ./scripts/eligibility-build.ts --strict"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",
