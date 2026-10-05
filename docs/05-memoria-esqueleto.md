@@ -14,8 +14,12 @@ esqueleto se reordena. Cada cifra lleva nota al pie con su entrada en `evidence/
    Diferenciación frente a otras herramientas: sin cuenta, sin datos fuera del
    dispositivo, gratuita, con fuente en cada afirmación, y enlaza a los simuladores
    oficiales en lugar de competir con ellos.
-3. **La iniciativa** — La Ayuda (y EduBecas si F0-3 lo decide): qué hace hoy,
-   desde cuándo, para quién. Capturas.
+3. **La iniciativa** — Requisito a Requisito: qué hace, para quién y en qué se
+   diferencia de lo existente, usando la tabla «Web oficial vs Requisito a Requisito»
+   de `docs/01` («Propuesta de valor…») con tono de **complemento** que lleva a la
+   sede oficial. Capturas de la matriz requisito a requisito y del plan de acción.
+   Cerrar con el argumento de reglas como datos abiertos reutilizables por la
+   propia Comunidad, los ayuntamientos y las entidades sociales.
 4. **Impacto y resultados (50%)**
    - Medido: uso real, ayudas cubiertas, fuentes oficiales, idiomas, correcciones
      detectadas por el propio sistema (el sistema detectó y retiró afirmaciones

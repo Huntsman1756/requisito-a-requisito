@@ -110,3 +110,48 @@ Consecuencias:
    y el orientador de Madrid como pieza destacada, **salvo** que la Subdirección
    confirme que una persona física puede concurrir a Impact y Daniel prefiera
    asumir el 50 % de impacto sin usuarios. Decisión: D-5 / D-2.
+
+## Propuesta de valor frente a lo que ya existe (2026-10-05)
+
+Pregunta que hará el jurado: *si ya existe la sede de la Comunidad de Madrid, ¿qué
+aporta esto?* Observado el 2026-10-05 (verificar de nuevo antes de citar cifras):
+
+**La sede oficial** (`sede.comunidad.madrid`, «Ayudas, becas y subvenciones») es un
+**catálogo administrativo**: 848 procedimientos mezclados (ayudas a familias junto a
+inversiones forestales o ayudas a autónomos por incendios), **solo de la Comunidad
+de Madrid** (sin estatales ni municipales), sin preguntar la situación de la persona
+ni evaluar nada, y con los requisitos dentro de cada ficha y de la norma, en
+lenguaje administrativo. Hay simuladores sueltos para una ayuda concreta (p. ej.
+el de ayudas al alquiler). Fuera de la CM: el simulador del IMV (Seguridad Social),
+también para una sola prestación.
+
+| Web oficial | Requisito a Requisito |
+|---|---|
+| Tienes que saber qué buscar | Pregunta tu situación (≤ 10 preguntas o un evento vital) y dice qué te puede corresponder |
+| Una administración por web | **Estado + Comunidad + Ayuntamiento en una sola respuesta** |
+| Lees los requisitos y los interpretas | **Requisito a requisito:** cumples / no cumples / no se puede saber, con cita literal |
+| «No cumples» o nada | **Qué te falta:** el dato que falta, el único requisito que falla o la fecha a partir de la que podrías cumplirlo |
+| Una ficha por procedimiento | **Plan de acción:** importe total posible, documentos comunes, calendario |
+| Convocatoria cerrada = desaparece | «Se convoca cada año; la última fue del X al Y» |
+| Lenguaje administrativo | Lenguaje claro sin perder el texto oficial |
+
+**Posicionamiento: complemento, no competidor.** Cada ayuda termina en su ficha de
+la sede oficial, donde se solicita. El argumento principal ante este jurado:
+
+> Requisito a Requisito demuestra un modelo reutilizable («rules as code»): las
+> reglas de cada ayuda como **datos abiertos, verificables y citados**, que la propia
+> Comunidad de Madrid, los ayuntamientos o las entidades sociales pueden reutilizar
+> en sus servicios.
+
+Encaja con **ecosistema (30 %)** y **escalabilidad (20 %)**, y con las líneas de
+Rules as Code de la OCDE y de gobiernos como Nueva Zelanda, Australia (NSW) y
+Francia (OpenFisca) (docs/04).
+
+**Límites que se asumen en la memoria:** si la Administración lanzara un
+orientador oficial, este perdería sentido como servicio, pero el modelo de reglas
+abiertas seguiría siendo reutilizable. Dependemos de la corrección de las fuentes
+oficiales (de ahí la revisión diaria, F9). El resultado es siempre orientativo.
+
+**Tono obligatorio:** nunca criticar a la Administración ni a su web; describir los
+hechos («catálogo de 848 procedimientos») y presentar el proyecto como un
+complemento que lleva a la ciudadanía hasta la sede.
