@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://datawardsmadrid.local/schemas/rule-set.schema.json",
   "title": "RuleSet — reglas de elegibilidad de una ayuda",
-  "description": "Un fichero por ayuda en la-ayuda/data/eligibility/rules/<benefitSlug>.json. Ver docs/07-motor-evaluacion.md.",
+  "description": "Un fichero por ayuda en data/eligibility/rules/<benefitSlug>.json. Ver docs/07-motor-evaluacion.md.",
   "type": "object",
   "additionalProperties": false,
   "required": ["benefitSlug", "rulesVersion", "verifiedAt", "humanReview", "referenceDate", "sources", "requirements", "uncoveredRequirements", "application", "amount"],
   "properties": {
-    "benefitSlug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Debe existir en src/content/benefits/ con autoridad vigente." },
+    "benefitSlug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Debe existir en data/catalog/benefits/ (catalogo importado con procedencia) o declarar standalone=true con una fuente de rango 1 propia (G2)." },
+    "standalone": { "type": "boolean", "description": "true => el RuleSet no necesita ficha en el catalogo importado; exige una fuente de rango 1 propia (pistas BOCM, docs/13 §2.5). G2." },
     "rulesVersion": { "type": "integer", "minimum": 1, "description": "Incrementar en cualquier cambio semántico. Los golden lo exigen." },
     "verifiedAt": { "type": "string", "format": "date" },
     "humanReview": {

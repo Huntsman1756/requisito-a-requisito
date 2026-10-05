@@ -174,6 +174,7 @@ const amountSchema = z.union([
 
 export const ruleSetSchema = z.strictObject({
 	benefitSlug: z.string().regex(/^[a-z0-9][a-z0-9-]*$/),
+	standalone: z.boolean().optional(),
 	rulesVersion: z.number().int().min(1),
 	verifiedAt: isoDate,
 	humanReview: z.strictObject({
