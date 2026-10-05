@@ -27,6 +27,9 @@ export const EXAMPLES: ExampleProfile[] = [
 			incomeAnnual: v({ min: 0, max: 8400 }),
 			disability: v("no"),
 			studentStatus: v("no"),
+			housingStatus: v("alquiler"),
+			residenceSince: v({ year: 2020, month: 1 }),
+			dependency: v("no"),
 		},
 	},
 	{
@@ -43,6 +46,9 @@ export const EXAMPLES: ExampleProfile[] = [
 			studentStatus: v("si"),
 			incomeAnnual: v({ min: 0, max: 8400 }),
 			disability: v("no"),
+			housingStatus: v("general"),
+			residenceSince: v({ year: 2008, month: 6 }),
+			dependency: v("no"),
 		},
 	},
 	{
@@ -59,6 +65,9 @@ export const EXAMPLES: ExampleProfile[] = [
 			studentStatus: v("no"),
 			incomeAnnual: v({ min: 0, max: 8400 }),
 			disability: v("no"),
+			housingStatus: v("propiedad"),
+			residenceSince: v({ year: 1995, month: 3 }),
+			dependency: v("no"),
 		},
 	},
 ];

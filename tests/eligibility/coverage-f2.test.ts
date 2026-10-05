@@ -338,6 +338,21 @@ describe("CLOSED_RECURRING (ADR-038)", () => {
 		expect(r.state).toBe("CLOSED_RECURRING");
 		expect(r.nextOpeningEstimate).toBe("2026-05-06");
 	});
+	it("ordena previousCalls aunque vengan descendientes (regresión sort no-op)", () => {
+		const w = {
+			opensAt: "2025-05-06",
+			closesAt: "2025-06-06",
+			rolling: false,
+			recurrence: "annual" as const,
+			previousCalls: [
+				{ opensAt: "2025-05-06", closesAt: "2025-06-06" },
+				{ opensAt: "2024-05-02", closesAt: "2024-06-03" },
+			],
+		};
+		const r = deadlineState(w, "2026-10-05");
+		expect(r.state).toBe("CLOSED_RECURRING");
+		expect(r.nextOpeningEstimate).toBe("2026-05-06");
+	});
 	it("sin ≥2 anuales consecutivas sigue CLOSED", () => {
 		const w = {
 			closesAt: "2025-06-06",

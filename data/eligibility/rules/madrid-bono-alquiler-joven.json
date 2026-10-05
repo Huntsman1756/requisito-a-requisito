@@ -1,0 +1,353 @@
+{
+	"benefitSlug": "madrid-bono-alquiler-joven",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-rd-42-2022-bono-alquiler",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2022/01/18/42/con",
+			"title": "Real Decreto 42/2022, de 18 de enero — Bono Alquiler Joven y Plan Estatal para el acceso a la vivienda 2022-2025 (texto consolidado)"
+		},
+		{
+			"id": "bocm-20250110-20-bono-alquiler",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/01/10/BOCM-20250110-20.PDF",
+			"title": "Extracto del Acuerdo de 26 de diciembre de 2024, del Consejo de Gobierno — concesión directa del Bono Alquiler Joven en la Comunidad de Madrid (BOCM n.º 8, 10/01/2025)"
+		},
+		{
+			"id": "sede-bono-alquiler-joven",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-alquiler-joven-0",
+			"title": "Sede electrónica CM — Bono Alquiler Joven (2024), referencia A688"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "mayoria-edad",
+			"hard": true,
+			"label": "Ser mayor de edad en la fecha de la solicitud",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1",
+				"excerpt": "Podrán ser beneficiarias de las ayudas del Bono Alquiler Joven las personas físicas mayores de edad",
+				"excerptSha256": "a39090d05766308645afdb6458a041a1d7d60c60900c50b781809d0522214b61"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 18
+			}
+		},
+		{
+			"id": "edad-max-35",
+			"hard": true,
+			"label": "Tener 35 años o menos en la fecha de la solicitud",
+			"timeDependent": "decreasing",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.a",
+				"excerpt": "Ser persona física y tener hasta treinta y cinco años, incluida la edad de treinta y cinco años, en el momento de solicitar la ayuda",
+				"excerptSha256": "b039a09d863ad31c48a800843d306a0e56faddbc8fee52d00d4cfb6839d4efdc"
+			},
+			"condition": {
+				"field": "age",
+				"op": "lte",
+				"value": 35
+			}
+		},
+		{
+			"id": "vivienda-en-madrid",
+			"hard": true,
+			"label": "Vivir en la Comunidad de Madrid (la vivienda alquilada debe ser tu residencia habitual en la región)",
+			"citation": {
+				"sourceId": "bocm-20250110-20-bono-alquiler",
+				"locator": "Extracto, título del Acuerdo",
+				"excerpt": "la tramitación y resolución de los procedimientos de su concesión y pago en la Comunidad de Madrid",
+				"excerptSha256": "6db432fc7f41fd30669c210aa38b1df0d31cee1d7ec9fe6d5dce99920d828306"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "ingresos-3iprem",
+			"hard": true,
+			"label": "Rentas anuales iguales o inferiores a 3 veces el IPREM (25.200 € en 2026); en alquiler de vivienda cuentan las de toda la unidad de convivencia",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.d",
+				"excerpt": "iguales o inferiores a 3 veces el Indicador Público de Renta de Efectos Múltiples (IPREM)",
+				"excerptSha256": "89bdc8daf06435930664ae865b825b0f6b124b4b6c205b02588068545ec17b14"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_14P",
+				"multiplier": 3
+			}
+		},
+		{
+			"id": "alquiler-o-condiciones",
+			"hard": false,
+			"label": "Ser titular de un contrato de arrendamiento o cesión de uso de vivienda o habitación — o estar en condiciones de firmarlo",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.c",
+				"excerpt": "Ser titular o estar en condiciones de suscribir, en calidad de persona arrendataria, un contrato de arrendamiento de vivienda formalizado en los términos de la Ley 29/1994",
+				"excerptSha256": "1f96884abc72afeb1e636e17ac82d9e2eb943bc67b3350fe5d4edaba0ba9cb27"
+			},
+			"condition": {
+				"field": "housingStatus",
+				"op": "in",
+				"value": [
+					"alquiler",
+					"general"
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Ser español, de un Estado de la UE/EEE o Suiza, o extranjero con estancia o residencia regular en España",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.b",
+				"excerpt": "Poseer la nacionalidad española, o la de alguno de los Estados miembros de la Unión Europea o del Espacio Económico Europeo, Suiza",
+				"excerptSha256": "2cb53675c586c25093532339cad718ed09015f8114255d72ca1b67b143176fef"
+			}
+		},
+		{
+			"id": "vivienda-habitual",
+			"label": "La vivienda o habitación alquilada debe ser tu residencia habitual y permanente, acreditada con certificado o volante de empadronamiento (si aún no has firmado, el contrato y el volante se aportan tras la concesión)",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 7, primer párrafo",
+				"excerpt": "La vivienda o habitación arrendada o cedida deberá constituir la residencia habitual y permanente de la persona arrendataria o cesionaria",
+				"excerptSha256": "5d93dc8cf28d934c2c618315d5fb6f287c3390ec5db8ee7afafdd62ec7fc63d5"
+			}
+		},
+		{
+			"id": "no-propietario",
+			"label": "Ni tú ni quienes conviven contigo podéis ser propietarios o usufructuarios de una vivienda en España (excepciones: parte alícuota por herencia, no disponibilidad por separación o divorcio, inaccesibilidad por discapacidad u otra causa ajena a la voluntad)",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.2.a",
+				"excerpt": "Ser persona propietaria o usufructuaria de alguna vivienda en España",
+				"excerptSha256": "39d569947b77fed11862b1003cb3ec422e40a962ff5056a1c3482eb1ad77c47d"
+			}
+		},
+		{
+			"id": "sin-vinculo-arrendador",
+			"label": "No puedes tener parentesco en primer o segundo grado de consanguinidad o afinidad con el arrendador, ni ser socio o partícipe de la persona arrendadora",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.2.b-c",
+				"excerpt": "tenga parentesco en primer o segundo grado de consanguinidad o de afinidad con la persona arrendadora o cedente",
+				"excerptSha256": "27d0457edfe12967f2630d8528ff6ad6aede9d4747aa782cf5a3ef226a560bd9"
+			}
+		},
+		{
+			"id": "fuente-regular-ingresos",
+			"label": "Acreditar una fuente regular de ingresos: trabajo por cuenta propia o ajena, personal investigador en formación o prestación social pública periódica — con al menos 3 meses de vida laboral en los 6 anteriores o una duración prevista de 6 meses",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.d, segundo párrafo",
+				"excerpt": "se entenderá que tienen una fuente regular de ingresos quienes estén trabajando por cuenta propia o ajena, el personal investigador en formación y las personas perceptoras de una prestación social pública de carácter periódico",
+				"excerptSha256": "1aeb295a31415c390d6249961447ca255182a205dff97155b1f3d884987bb58a"
+			}
+		},
+		{
+			"id": "renta-maxima",
+			"label": "El alquiler no puede superar 600 €/mes (300 € si es habitación); la CM lo eleva hasta 900 €/450 € en los municipios del Anexo II del Acuerdo (Madrid, Móstoles, Getafe, Alcorcón…) — no comprobamos la renta mensual que pagas",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 8, párrafos 1-2",
+				"excerpt": "deberá ser igual o inferior a 600 euros mensuales",
+				"excerptSha256": "354fcd1db519aa2767c1f9136eece9ac3792ca67200449dbb18a15e38b421b30"
+			}
+		},
+		{
+			"id": "ingresos-unidad-convivencia",
+			"label": "En alquiler de vivienda, el límite de 3×IPREM se mide sobre las rentas de TODAS las personas con domicilio habitual en la vivienda (consten o no en el contrato); en alquiler de habitación solo cuentan las tuyas",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.1.d",
+				"excerpt": "incluidos los de las personas que tengan su domicilio habitual y permanente en la vivienda arrendada o cedida o a arrendar o ceder, consten o no como titulares del contrato de arrendamiento o cesión",
+				"excerptSha256": "f9dac5c8683fc67640c83b26fcc66ad06f8205a950e952e69d31d4192787b413"
+			}
+		},
+		{
+			"id": "prohibiciones-lgs",
+			"label": "No estar incurso en las circunstancias del art. 13 de la Ley 38/2003 General de Subvenciones",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 6.7",
+				"excerpt": "No podrán obtener la condición de persona beneficiaria de estas ayudas quienes incurran en alguna de las circunstancias previstas el artículo 13 de la Ley 38/2003",
+				"excerptSha256": "7ada07c1515a5ca7c652d6839d3db96e225c2aceb4f03dfd4ec36385fafad7ca"
+			}
+		},
+		{
+			"id": "incompatible-otras-ayudas",
+			"label": "No es compatible con otras ayudas públicas al pago del alquiler o cesión (salvo excepciones: IMV, prestaciones no contributivas, ayudas a personas especialmente vulnerables)",
+			"citation": {
+				"sourceId": "boe-rd-42-2022-bono-alquiler",
+				"locator": "Art. 10, primer párrafo",
+				"excerpt": "no se podrá compatibilizar con ninguna otra ayuda que para el pago del alquiler o cesión puedan conceder las comunidades autónomas",
+				"excerptSha256": "ebaba0908da7c2f11e9037a4fcb7c813b63740c61e7109a76952c2222dedc717"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2025-02-03",
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20250110-20-bono-alquiler",
+				"locator": "Quinto",
+				"excerpt": "Se podrán presentar solicitudes desde el día 3 de febrero de 2025",
+				"excerptSha256": "c35e1a5e9d35a0e4699183d9d04dbb9c5b29abd9d946f6f3e32d69a75913dd4a"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Vivienda, Transportes e Infraestructuras (Dirección General de Ayudas y Acceso a la Vivienda)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-alquiler-joven-0",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sede-bono-alquiler-joven",
+				"locator": "Tramitación › Presenta la solicitud › Presentación digital",
+				"excerpt": "Para realizar este trámite por medios electrónicos necesitas uno de los sistemas de firma electrónica reconocidos por la Comunidad de Madrid",
+				"excerptSha256": "33fafc64b78200b25088043cd0671b008c1bbc7b081dac506e757da48bc130e0"
+			}
+		},
+		"documents": [
+			{
+				"id": "contrato",
+				"label": "Copia del contrato de arrendamiento o cesión de vivienda o habitación",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 2",
+					"excerpt": "Copia del contrato de arrendamiento o contratos de arrendamientos o cesión de vivienda o habitación",
+					"excerptSha256": "3a4a507eef64bfecd315bfd73ceb5fef1bc93d8bd6387ae24c1c3219e0af5558"
+				}
+			},
+			{
+				"id": "empadronamiento",
+				"label": "Volante o certificado de empadronamiento colectivo o familiar con la fecha de alta en el domicilio",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 3",
+					"excerpt": "Volante o certificado de empadronamiento colectivo o familiar con indicación de la fecha de alta en dicho domicilio de cada una de las viviendas",
+					"excerptSha256": "47ccc718eebcdbec91c757ea04eaf586ce963d47a32f7ec4417c078cd499cba8"
+				}
+			},
+			{
+				"id": "justificantes-alquiler",
+				"label": "Justificantes de los pagos del alquiler de las mensualidades vencidas desde enero de 2024",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 4",
+					"excerpt": "Justificantes de los pagos del alquiler de las mensualidades vencidas desde enero de 2024",
+					"excerptSha256": "fe0c513bef6d4326ec1c221652227414913ede5b995659b594b48d1de40a7b16"
+				}
+			},
+			{
+				"id": "vida-laboral",
+				"label": "Certificado de vida laboral (o de alta en mutualidad alternativa) con las cuotas del último ejercicio",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 5",
+					"excerpt": "Certificado de vida laboral o certificado de alta en la Mutualidad alternativa a la Seguridad Social con indicación de las cuotas satisfechas referidas al último ejercicio fiscal con plazo de presentación vencido",
+					"excerptSha256": "0f4aec39ed7d33f48bff708a24a74d1970ff617563429cf5f89e243e03d680bd"
+				}
+			},
+			{
+				"id": "notas-registro",
+				"label": "Notas del Registro de la Propiedad (localización y titularidad) de todos los empadronados mayores de 18 años",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, puntos 8-9",
+					"excerpt": "Nota de Localización del Servicio de Índices del Registro de la Propiedad de todos los empadronados mayores de 18 años",
+					"excerptSha256": "201d5e318e67d830cc41fad4ac01d63b3c0fb7c1ed042c9979689b8a9bee8708"
+				}
+			},
+			{
+				"id": "irpf",
+				"label": "Declaración del IRPF o certificado de imputaciones de la AEAT (solo si no autorizas la consulta de tus datos fiscales)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación › consultas autorizadas",
+					"excerpt": "Copia completa de la Declaración del IRPF correspondiente al periodo impositivo",
+					"excerptSha256": "5ef6d5dd7d3fccd8c5d013bbb86f0441d5ea2fd0540e25ae184f6f30bf4423e8"
+				}
+			},
+			{
+				"id": "anexos",
+				"label": "Anexos I y II (autorización de consulta de datos de convivientes y autorización de presentación)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 12",
+					"excerpt": "Anexo II \"Autorización para presentación de solicitud de subvención bono de alquiler joven\"",
+					"excerptSha256": "7caa09ec62505b00568ad1be0ed2f3b18473251cd88517b2a70bf228366e7d41"
+				}
+			},
+			{
+				"id": "permiso-residencia",
+				"label": "Permiso de residencia legal en España (solo si eres extranjero no comunitario)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-bono-alquiler-joven",
+					"locator": "Documentación, punto 1",
+					"excerpt": "Copia del permiso de residencia legal en España, si se trata de extranjeros no comunitarios",
+					"excerptSha256": "55f0a70dc04db2d0743992988aa0181b0591f1d1d48cc62c8066616a2a93ae5a"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "per_applicant",
+		"maxEur": 250,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-rd-42-2022-bono-alquiler",
+			"locator": "Art. 11",
+			"excerpt": "Se concederá a las personas beneficiarias una ayuda de 250 euros mensuales con el límite del importe mensual de la renta arrendaticia o del precio de la cesión",
+			"excerptSha256": "d0f4f7d6c000827421d289f52040cda739899ac317b768a8662372417410a133"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"vivienda"
+	],
+	"lifeEvents": [
+		"independizarse_vivienda"
+	]
+}

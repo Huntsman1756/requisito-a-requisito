@@ -1,0 +1,42 @@
+{
+	"id": "gp-cheque-madre-torrejon",
+	"description": "Madre con un hijo de 2 años, Torrejón de Ardoz (28148), unidad familiar biparental, madre asalariada, ingresos del hogar en banda media (16.800–25.200 €/año). Caso positivo típico del cheque escuela infantil: cumple los requisitos comprobables pero el veredicto no puede pasar de «posible» porque la matriculación en centro privado autorizado no se puede comprobar con nuestras preguntas. La convocatoria 2026-2027 ya cerró, pero es anual recurrente.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28148" } },
+			"familyType": { "state": "value", "value": "general" },
+			"dependents": { "state": "value", "value": [ { "age": { "min": 2, "max": 2, "maxExclusive": false } } ] },
+			"employmentStatus": { "state": "value", "value": "asalariado" },
+			"incomeAnnual": { "state": "value", "value": { "min": 16800, "max": 25200 } }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-cheque-escuela-infantil",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "CLOSED_RECURRING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20260518-39-infantil-2026-2027",
+					"locator": "Extracto, Segundo (Beneficiarios)",
+					"reasoning": "Un dependiente de 2 años ⇒ count_where_gte(age < 3) = T: cumple el requisito comprobable de edad (menor de 3 años escolarizable en primer ciclo). La matriculación efectiva en un centro privado autorizado sin plaza pública no es comprobable con nuestras preguntas ⇒ queda como ⚠ y, al existir requisitos no comprobables, el veredicto es «posible» y no «probable»."
+				},
+				{
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Apartado «Requisitos», punto 3",
+					"reasoning": "Ingresos anuales del hogar 16.800–25.200 € < 35.913 € ⇒ requisito de aviso T (garantiza que la renta per cápita también queda por debajo del límite; ver ⚠ renta-per-capita-calculo)."
+				},
+				{
+					"sourceId": "bocm-20260518-39-infantil-2026-2027",
+					"locator": "Extracto, Quinto (Plazo de presentación de solicitudes)",
+					"reasoning": "Convocatoria 2026-2027: extracto publicado 18/05/2026, plazo de 15 días hábiles ⇒ ventana 19/05–08/06/2026, cerrada a 05/10/2026. Es convocatoria anual con dos convocatorias anteriores consecutivas citadas (2024 y 2025) ⇒ CLOSED_RECURRING, no CLOSED."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

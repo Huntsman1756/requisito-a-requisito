@@ -1,0 +1,356 @@
+{
+	"benefitSlug": "madrid-beca-comedor-escolar",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20240425-37-comedor-normas",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/04/25/BOCM-20240425-37.PDF",
+			"title": "Acuerdo de 24 de abril de 2024, del Consejo de Gobierno — normas reguladoras del procedimiento de concesión directa de becas de comedor escolar (BOCM 25/04/2024)"
+		},
+		{
+			"id": "bocm-20250508-28-comedor-modif",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/05/08/BOCM-20250508-28.PDF",
+			"title": "Acuerdo de 30 de abril de 2025, del Consejo de Gobierno — modificación de las normas reguladoras (BOCM 08/05/2025)"
+		},
+		{
+			"id": "bocm-20260428-24-comedor-2627",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/04/28/BOCM-20260428-24.PDF",
+			"title": "Extracto acumulado de la Orden 1696/2026 — créditos disponibles becas de comedor escolar, curso 2026-2027 (BOCM 28/04/2026)"
+		},
+		{
+			"id": "bocm-20250617-34-comedor-2526",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/06/17/BOCM-20250617-34.PDF",
+			"title": "Extracto acumulado de la Orden 2170/2025 — créditos disponibles becas de comedor escolar, curso 2025-2026 (BOCM 17/06/2025)"
+		},
+		{
+			"id": "bocm-20240520-22-comedor-2425",
+			"rank": 1,
+			"documentType": "extract",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/05/20/BOCM-20240520-22.PDF",
+			"title": "Extracto de la Orden 2232/2024 — créditos disponibles becas de comedor escolar, curso 2024-2025 (BOCM 20/05/2024)"
+		},
+		{
+			"id": "sede-comedor-2026-2027",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-comedor-escolar-2026-2027",
+			"title": "Sede electrónica CM — Becas para comedor escolar (2026-2027), trámite A958"
+		}
+	],
+	"requirements": [
+		{
+			"id": "hijo-en-edad-escolar",
+			"hard": true,
+			"timeDependent": "decreasing",
+			"label": "Tener al menos un hijo o hija de 18 años o menos a tu cargo (la beca es para alumnado de Infantil, Primaria o ESO)",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 4.1",
+				"excerpt": "vayan a cursar estudios en las etapas educativas de Educación Infantil, Educación Primaria y Educación Secundaria Obligatoria en los siguientes tipos de centros",
+				"excerptSha256": "9e2cbeccbfc17663c3b99801132059a801463de0b0014ff8dbd0e0310370bf9c"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"field": "age",
+					"op": "lte",
+					"value": 18
+				}
+			}
+		},
+		{
+			"id": "centro-en-comunidad-madrid",
+			"hard": false,
+			"label": "El colegio debe estar en la Comunidad de Madrid (lo aproximamos por tu municipio; si el colegio está en la CM aunque viváis fuera, también vale)",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 4.2",
+				"excerpt": "ubicados en el territorio de la Comunidad de Madrid y contar con servicio de comedor debidamente autorizado",
+				"excerptSha256": "2c127835493cb502f8807288b4bc2d8a52ee64afed408ed1921f40534015de4b"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "via-economica-o-colectivo",
+			"hard": false,
+			"label": "Encajar en alguna vía que podemos comprobar: ingresos del hogar bajo 8.400 € al año o familia numerosa (hay más vías en los avisos)",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 5.2",
+				"excerpt": "deberán pertenecer a familias que se encuentren en alguna de las si- guientes circunstancias",
+				"excerptSha256": "c67900e251310e0d02223f64fb0cda4fe3b7aa002eceab9f0de4932e1c977f83"
+			},
+			"condition": {
+				"any": [
+					{
+						"label": "Ingresos anuales del hogar inferiores a 8.400 € (con eso la renta por persona seguro que cumple)",
+						"citation": {
+							"sourceId": "bocm-20240425-37-comedor-normas",
+							"locator": "Anexo, art. 5.2.c",
+							"excerpt": "Familia con una renta per cápita inferior a 8.400 euros, del ejercicio económico que se determine en la orden de declaración de créditos presupuestarios disponibles",
+							"excerptSha256": "901d73ac919ebf65696c2262b77114b19a1900747a6f14cec55d9b0c4fd2da30"
+						},
+						"field": "incomeAnnual",
+						"op": "lt",
+						"value": 8400
+					},
+					{
+						"label": "Familia numerosa (vía propia si además la renta por persona está entre 8.400 y 10.000 €)",
+						"citation": {
+							"sourceId": "bocm-20250508-28-comedor-modif",
+							"locator": "Art. único, punto Dos (nuevo art. 5.2.k)",
+							"excerpt": "Familia numerosa con una renta per cápita a partir de 8.400 euros e inferior a 10.000 euros",
+							"excerptSha256": "7788ff73edadb8169c9dc8d820a2b9c5b6503d18a6709c2c4823518b6555006b"
+						},
+						"field": "familyType",
+						"op": "eq",
+						"value": "familia-numerosa"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "etapa-y-centro",
+			"label": "El hijo o hija cursa Infantil, Primaria o ESO en un centro sostenido con fondos públicos (público o concertado) de la Comunidad de Madrid — no vale Bachillerato ni FP",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 4.1",
+				"excerpt": "vayan a cursar estudios en las etapas educativas de Educación Infantil, Educación Primaria y Educación Secundaria Obligatoria en los siguientes tipos de centros",
+				"excerptSha256": "9e2cbeccbfc17663c3b99801132059a801463de0b0014ff8dbd0e0310370bf9c"
+			}
+		},
+		{
+			"id": "plaza-comedor",
+			"label": "El niño o niña tiene (o tendrá) plaza en el servicio de comedor del centro; la Administración lo comprueba de oficio",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 5.1",
+				"excerpt": "Tener plaza de comedor escolar en centro debidamente autorizado",
+				"excerptSha256": "f58fd847f64ac8e57e8a18f003efacbfbbdcd038957c22ceba1a0b23dd37e30b"
+			}
+		},
+		{
+			"id": "renta-per-capita-exacta",
+			"label": "El límite real es de renta POR PERSONA: ingresos de la unidad familiar del ejercicio 2024 ÷ miembros computables < 8.400 €; familia numerosa: entre 8.400 y 10.000 €",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 8.1",
+				"excerpt": "divididos entre el número de miembros computables de la unidad familiar",
+				"excerptSha256": "678ef0f52648a2534c1392b4ab39c4fb69c51dabb5634a0d7cba3debd2547486"
+			}
+		},
+		{
+			"id": "discapacidad-cuenta-doble",
+			"label": "Cada miembro de la unidad familiar con discapacidad ≥ 33 % cuenta por dos al dividir los ingresos (baja la renta por persona)",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 8.2",
+				"excerpt": "computará por dos todo miembro de la unidad familiar con una discapacidad, debidamente acreditada, igual o superior al 33 por 100",
+				"excerptSha256": "09ec68f3a8231eca0da001cbbfb81e74624c06f5b131b126c5dd729d6e4aa68d"
+			}
+		},
+		{
+			"id": "otras-vias-sin-renta",
+			"label": "Otras vías sin límite de renta: familia con RMI o con IMV, víctima de violencia de género o del terrorismo, miembro de FCSE o Fuerzas Armadas destinado en la CM, acogimiento familiar o residencial, escolarizado de oficio en concertado con transporte, protección internacional o protección temporal por Ucrania",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 5.2, letras a–j (y letra k añadida en 2025)",
+				"excerpt": "Familia beneficiaria de la Renta Mínima de Inserción o beneficiaria del Ingreso Mínimo Vital a la que se le ha extinguido la Renta Mínima de Inserción",
+				"excerptSha256": "92feb9b04383e0c64d06f0602d8fd167f864e572babcb5bdd6863210767e8970"
+			}
+		},
+		{
+			"id": "requisitos-a-fin-de-plazo",
+			"label": "Los requisitos se comprueban a la fecha de fin del plazo de solicitudes, no a la de hoy",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 5, párrafo inicial",
+				"excerpt": "deberán reunir los siguientes requisitos a la fecha de finalización del pla- zo de presentación de solicitudes",
+				"excerptSha256": "a3bea3d4d0eb71ae28bf58a2ad45a563ca55fb1f27ee654df53ee9cd1bfddca7"
+			}
+		},
+		{
+			"id": "uso-comedor-50",
+			"label": "Para mantener la beca hay que usar el comedor al menos el 50 % de los días lectivos de cada mes del curso",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 16.5",
+				"excerpt": "al menos el 50% de los días lectivos de cada uno de los meses del curso",
+				"excerptSha256": "76993193c544ed4549eb8a990af8fa683319e0c5c07ecb62f6698377a003c4bc"
+			}
+		},
+		{
+			"id": "empadronamiento-solo-prueba",
+			"label": "No se exige estar empadronado en la CM; el volante de empadronamiento solo se pide para acreditar la convivencia si te opones a que la Administración consulte los datos",
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 10.h",
+				"excerpt": "certificado o volante de empadronamiento en el que consten to- dos los residentes que figuran en el domicilio",
+				"excerptSha256": "baad7c380552bc0a9a408cf7a6cef3c84a598a5a6764ee7cc99cd57f029127a0"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-04-29",
+			"closesAt": "2026-05-28",
+			"rolling": false,
+			"recurrence": "annual",
+			"businessDays": true,
+			"citation": {
+				"sourceId": "bocm-20260428-24-comedor-2627",
+				"locator": "Apdo. Quinto (extracto publicado en BOCM nº 99, 28/04/2026; fechas confirmadas en la ficha del trámite A958)",
+				"excerpt": "El plazo de presentación de solicitudes será de 20 días hábiles a contar desde el día si- guiente a la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+				"excerptSha256": "2114c8985ce48fc986ebe1c8464dd3ee47a626916f1f2a6a3a2fac16c643e035"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2025-06-18",
+					"closesAt": "2025-07-15",
+					"citation": {
+						"sourceId": "bocm-20250617-34-comedor-2526",
+						"locator": "Apdo. Quinto (extracto publicado en BOCM nº 143, 17/06/2025; curso 2025-2026)",
+						"excerpt": "El plazo de presentación de solicitudes será de 20 días hábiles a contar desde el día si- guiente a la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+						"excerptSha256": "2114c8985ce48fc986ebe1c8464dd3ee47a626916f1f2a6a3a2fac16c643e035"
+					}
+				},
+				{
+					"opensAt": "2024-05-21",
+					"closesAt": "2024-06-17",
+					"citation": {
+						"sourceId": "bocm-20240520-22-comedor-2425",
+						"locator": "Apdo. Quinto (extracto publicado en BOCM nº 121, 20/05/2024; curso 2024-2025)",
+						"excerpt": "El plazo de presentación de solicitudes será de veinte días hábiles a contar desde el día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+						"excerptSha256": "ac20b18d21d2f14f6e025d059545bfef07894f1ad11736187bbb7aff9c3a951a"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades (Dirección General de Educación Concertada, Becas y Ayudas al Estudio)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-comedor-escolar-2026-2027",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20240425-37-comedor-normas",
+				"locator": "Anexo, art. 12.2",
+				"excerpt": "presentarse en el Registro Electrónico General de la Comunidad de Madrid a través del acce- so habilitado en el portal de internet de la Comunidad de Madrid",
+				"excerptSha256": "dc22cb8d587e28039c297d894443b32c6a55a0ba18ae8d27598fc6311ee74c23"
+			}
+		},
+		"documents": [
+			{
+				"id": "solicitud-firmada",
+				"label": "Solicitud oficial (formulario web de la sede), firmada por progenitores o tutores y por todos los mayores de 18 años incluidos",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-comedor-2026-2027",
+					"locator": "Requisitos → Consideraciones de la solicitud",
+					"excerpt": "Todas las personas progenitoras o tutoras y todas las personas mayores de 18 años incluidas en la solicitud deben firmarla",
+					"excerptSha256": "6f1ac736890042477c159945d12a98aa651d669b1ba8ee5e376c8ec1087946d8"
+				}
+			},
+			{
+				"id": "libro-familia",
+				"label": "Libro de familia completo, certificado del Registro Civil o partida de nacimiento de los menores (sustituible por declaración responsable en la solicitud)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-comedor-2026-2027",
+					"locator": "Documentación → Nueva solicitud",
+					"excerpt": "Libro de familia completo, certificado del Registro Civil o Partida de Nacimiento de todos los menores incluidos en la solicitud",
+					"excerptSha256": "4986e838c504a031c31208ecf6fdd8012d1540e59d17a87dcc6edac3f6a0e2e9"
+				}
+			},
+			{
+				"id": "certificado-renta-aeat",
+				"label": "Certificado de la Agencia Tributaria con la renta de 2024 (solo si te opones a que la Administración consulte la renta)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-comedor-2026-2027",
+					"locator": "Documentación → Nueva solicitud → documentos si no autorizas la consulta",
+					"excerpt": "Certificado expedido por la Agencia Tributaria con código seguro de verificación con los datos de la renta correspondiente al ejercicio económico 2024",
+					"excerptSha256": "192197824194cf98c5e6037032763bafd882e8efd82b80d560098d2ccb44f838"
+				}
+			},
+			{
+				"id": "dni-nie",
+				"label": "DNI o NIE en vigor del firmante y de los mayores de edad incluidos (solo si te opones a la consulta de datos)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20240425-37-comedor-normas",
+					"locator": "Anexo, art. 10.c",
+					"excerpt": "copia del DNI o NIE en vigor del progenitor que firma la solicitud y de todos los miembros mayores de edad que figuren en la solicitud",
+					"excerptSha256": "ac6cf3f7ed63f4a7a517bb33e97b638acf210f081d2df48f77be8f7604c6099a"
+				}
+			},
+			{
+				"id": "justificante-via",
+				"label": "Documento que acredita la vía por la que solicitas (p. ej. título de familia numerosa en vigor, justificante del IMV, certificado de FCSE/FAS)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20250508-28-comedor-modif",
+					"locator": "Art. único, punto Seis (nuevo art. 11.15)",
+					"excerpt": "la presentación del título de familia numerosa en vigor, que deberá aportarse por el solicitante",
+					"excerptSha256": "87b28e65553df22cabde4c083c9634f9c080dbc7dd1d57bc32e9f4d14f5fb85a"
+				}
+			},
+			{
+				"id": "empadronamiento-familiar",
+				"label": "Volante de empadronamiento familiar del municipio si no es Madrid capital (solo si los datos de convivientes no coinciden con el libro de familia y no marcas la declaración responsable)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-comedor-2026-2027",
+					"locator": "Documentación → Nueva solicitud",
+					"excerpt": "Empadronamiento familiar del municipio si es distinto al de Madrid en el que figuren todos los residentes en el mismo",
+					"excerptSha256": "df01b3be4a4f3e9327085abd8d5f049fefabdc05d5480d39b7858b566c115dc4"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"minEur": 295,
+		"period": "per_course",
+		"citation": {
+			"sourceId": "bocm-20250508-28-comedor-modif",
+			"locator": "Art. único, punto Siete (nuevo art. 16.1); cuantías 2026-2027 en Orden 1696/2026, apdo. Cuarto: 979 €, 445 € y 295 €",
+			"excerpt": "de 295 euros para todo el curso, hasta una cuantía que cubra la totalidad del coste del servicio de comedor",
+			"excerptSha256": "00bf4412f0d60d010bb6acaf8caf4fef5286b22927c5f290cacf77ba6f24d4c8"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia",
+		"educacion"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	]
+}

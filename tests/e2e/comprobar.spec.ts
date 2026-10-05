@@ -33,6 +33,16 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 	// Discapacidad
 	await page.getByLabel("No", { exact: true }).check();
 	await page.getByRole("button", { name: "Siguiente" }).click();
+	// Preguntas nuevas del catálogo ampliado: avanza respondiendo «No»/«Otra situación»
+	for (let i = 0; i < 6; i++) {
+		if (await page.getByRole("heading", { name: "Revisa tus respuestas" }).isVisible().catch(() => false)) break;
+		const otra = page.getByLabel(/Otra situación|Otra vía|otra/i).first();
+		const no = page.getByLabel("No", { exact: true }).first();
+		if (await otra.isVisible().catch(() => false)) await otra.check();
+		else if (await no.isVisible().catch(() => false)) await no.check();
+		else break;
+		await page.getByRole("button", { name: "Siguiente" }).click();
+	}
 
 	// Revisión
 	await expect(

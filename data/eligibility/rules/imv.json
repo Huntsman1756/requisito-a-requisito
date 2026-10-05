@@ -1,0 +1,368 @@
+{
+	"benefitSlug": "imv",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-ley-19-2021-imv",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/l/2021/12/20/19/con",
+			"title": "Ley 19/2021, de 20 de diciembre, por la que se establece el ingreso mínimo vital (texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026, de 25 de marzo — revalorización de pensiones 2026; fija la PNC anual en 8.803,20 € (base de la renta garantizada del IMV)"
+		},
+		{
+			"id": "segss-imv",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/65850d68-8d06-4645-bde7-05374ee42ac7/serviciossobreimv",
+			"title": "Seguridad Social — Ingreso Mínimo Vital: servicios, requisitos, cuantías 2026 y simulador"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-minima",
+			"hard": true,
+			"label": "Tener al menos 23 años, o ser mayor de edad con hijos o menores a cargo",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 5.2 (y Art. 4.1.b para quien solicita solo)",
+				"excerpt": "deberán tener una edad mínima de 23 años, o ser mayores de edad o menores emancipados en caso de tener hijos o menores en régimen de guarda con fines de adopción o acogimiento familiar permanente",
+				"excerptSha256": "7c8aca2f66e5e15831d33737af72fc88a0c8a7d4edd8bd58ed002de6c2c61f7f"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 23,
+						"label": "tienes 23 años o más"
+					},
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 18
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"field": "age",
+									"op": "lt",
+									"value": 18
+								}
+							}
+						],
+						"label": "eres mayor de edad con hijos o menores a cargo"
+					}
+				]
+			}
+		},
+		{
+			"id": "residencia-espana-1a",
+			"hard": true,
+			"label": "Residir legal y efectivamente en España, de forma continuada, durante al menos el año anterior a la solicitud",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.1.a",
+				"excerpt": "Tener residencia legal y efectiva en España y haberla tenido de forma continuada e ininterrumpida durante al menos el año inmediatamente anterior a la fecha de presentación de la solicitud",
+				"excerptSha256": "eae205edf130bef349da592d9d552e9fcf1b9c6c5b970805efc13e5dafbde5fb"
+			},
+			"condition": {
+				"field": "residenceMonths",
+				"op": "gte",
+				"value": 12
+			}
+		},
+		{
+			"id": "ingresos-inferiores-renta-garantizada",
+			"hard": false,
+			"label": "Ingresos anuales por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola; sube según los miembros de la unidad de convivencia — ver ⚠)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.2",
+				"excerpt": "sea inferior, al menos en 10 euros, a la cuantía mensual de la renta garantizada con esta prestación que corresponda en función de la modalidad y del número de miembros de la unidad de convivencia",
+				"excerptSha256": "905b542a306b10694657300effd939bd95c2ccf9abbd2dc6c60a1c8fc06231f4"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 8803.2,
+				"citation": {
+					"sourceId": "boe-rd-241-2026-pensiones",
+					"locator": "Art. 21.1",
+					"excerpt": "queda establecida en 8.803,20 euros anuales",
+					"excerptSha256": "a90851990353b1601e407edc6ce1e9b17b2b9b6c08695786a9e1b294661c5cca"
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "unidad-constituida-6m",
+			"label": "Si solicitas como unidad de convivencia, esta debe llevar constituida al menos 6 meses de forma continuada (salvo nacimiento, adopción, guarda o acogimiento, reagrupación familiar, violencia de género o trata)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.3",
+				"excerpt": "se exigirá que la misma esté constituida, en los términos de los artículos 6, 7 y 8, durante al menos los seis meses anteriores a la presentación de la solicitud, de forma continuada",
+				"excerptSha256": "d352a674b40cf30b60ed56ce79b4949b384c76b60d668503f4d33bea4f73c9e9"
+			}
+		},
+		{
+			"id": "vida-independiente-menores-30",
+			"label": "Si vives solo/a: con menos de 30 años debes acreditar vida independiente (domicilio distinto al de tus progenitores durante los 2 años anteriores y al menos 12 meses de alta en la Seguridad Social o mutualidad); con 30 o más, domicilio distinto al de tus progenitores durante el último año",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.2",
+				"excerpt": "deberán acreditar haber vivido de forma independiente en España, durante al menos los dos años inmediatamente anteriores a la indicada fecha",
+				"excerptSha256": "3ad84d0eb8f47e281f647fa8b318275f1cd3f6d401ab01e009910d8e37d6515f"
+			}
+		},
+		{
+			"id": "persona-sola-sin-pareja",
+			"label": "Quien solicita como persona individual (sin unidad de convivencia) no puede estar casada ni unida como pareja de hecho, salvo trámites de separación o divorcio u otros supuestos",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 4.1.b",
+				"excerpt": "siempre que no estén unidas a otra por vínculo matrimonial o como pareja de hecho, salvo las que hayan iniciado los trámites de separación o divorcio",
+				"excerptSha256": "9d11d572804a9abb799507b7a88670d17ac40ac25b541af22f022042f4b4a3ef"
+			}
+		},
+		{
+			"id": "patrimonio-neto",
+			"label": "Patrimonio neto por debajo del límite: tres veces la renta garantizada de una persona sola (26.409,60 € en 2026), con escala mayor según la unidad; la vivienda habitual no computa",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.3",
+				"excerpt": "en un importe igual o superior a tres veces la cuantía correspondiente de renta garantizada por el ingreso mínimo vital para una persona beneficiaria individual",
+				"excerptSha256": "8cfe4aaff4502cda4f0cca98c93498a28cc0255a676a845cd50fc3c6e5844fa7"
+			}
+		},
+		{
+			"id": "activos-no-societarios",
+			"label": "Sin activos no societarios (además de la vivienda habitual) por encima del límite del anexo III de la ley",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.3, in fine",
+				"excerpt": "activos no societarios sin vivienda habitual por un valor superior al establecido en el anexo III",
+				"excerptSha256": "06df931c5f49b9e07cc692e1e1439de0d39a6258b7ca86340aa69c807f8f3c88"
+			}
+		},
+		{
+			"id": "administrador-sociedad",
+			"label": "Ningún miembro de la unidad puede ser administrador de derecho de una sociedad mercantil que no haya cesado su actividad",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.3, in fine",
+				"excerpt": "sea administrador de derecho de una sociedad mercantil que no haya cesado en su actividad",
+				"excerptSha256": "30149a3036a9680751503c1b818ba70bbfb696693eb453503252aac3d5a7826c"
+			}
+		},
+		{
+			"id": "excepciones-edad-18-22",
+			"label": "Excepciones a la edad mínima para personas de 18 a 22 años que viven solas: extuteladas de centros de protección de menores (tutela dentro de los 3 años anteriores a la mayoría), huérfanos absolutos, liberadas de prisión tras más de 6 meses, y víctimas de violencia de género o de trata (basta la mayoría de edad)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 5.2, in fine (y Art. 4.1)",
+				"excerpt": "salvo en los supuestos de mujeres víctimas de violencia de género, víctimas de trata de seres humanos y explotación sexual en los que se exigirá que la persona titular sea mayor de edad o menor emancipada",
+				"excerptSha256": "1a1a17232b3433dc603d3f3babf838a76f764a2e3bd9230b09d3ed3c40c6b4f1"
+			}
+		},
+		{
+			"id": "excepciones-residencia",
+			"label": "El año de residencia continuada no se exige a los menores que se incorporan a la unidad de convivencia (nacimiento, adopción, reagrupación familiar, guarda o acogimiento), a las víctimas de trata ni a las mujeres víctimas de violencia de género",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.1.a, in fine",
+				"excerpt": "No se exigirá este plazo respecto de: 1.º Los menores incorporados a la unidad de convivencia por nacimiento, adopción, reagrupación familiar de hijos e hijas, guarda con fines de adopción o acogimiento familiar permanente",
+				"excerptSha256": "548823cee1a7d4c581e4b8219b89e67f6fad4366c773632f6213e7b74005f45b"
+			}
+		},
+		{
+			"id": "residencia-legal-extranjeros",
+			"label": "La residencia debe ser legal: si eres extranjero necesitas inscripción en el registro central de extranjeros, tarjeta de familiar de ciudadano de la Unión o autorización de residencia vigente",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 21.2",
+				"excerpt": "La residencia legal en España se acreditará mediante la inscripción en el registro central de extranjeros, en el caso de nacionales de los Estados miembros de la Unión Europea, Espacio Económico Europeo o la Confederación Suiza, o con tarjeta de familiar de ciudadano de la Unión o autorización de residencia",
+				"excerptSha256": "84a14140ce2820ecb390e0a0632435703fb4a1d6f1497f856ca466ba9d28a445"
+			}
+		},
+		{
+			"id": "servicio-residencial",
+			"label": "No da derecho ser usuario permanente de una prestación de servicio residencial de carácter social, sanitario o socio-sanitario (salvo víctimas de violencia de género o de trata)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 4.2",
+				"excerpt": "Podrán ser beneficiarias de la prestación del ingreso mínimo vital las personas que temporalmente sean usuarias de una prestación de servicio residencial, de carácter social, sanitario o socio-sanitario",
+				"excerptSha256": "e1096bf4fd9e24a63ce02185309dc450daa7a566ee1e1adae40bab7ab8ceaaa9"
+			}
+		},
+		{
+			"id": "vulnerabilidad-sobrevenida",
+			"label": "Si la vulnerabilidad económica ha sobrevenido durante el año en curso (aunque en el ejercicio anterior no cumplieras el límite), puedes solicitar entre el 1 de abril y el 31 de diciembre acreditando los ingresos del año en curso",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.5",
+				"excerpt": "se podrá solicitar desde el 1 de abril hasta el 31 de diciembre del año en curso el reconocimiento del derecho a la prestación de ingreso mínimo vital en aquellos supuestos en los que la situación de vulnerabilidad económica haya sobrevenido durante el año en curso",
+				"excerptSha256": "2e2cc4e85d33a0dfa340ab87a5f427761d78c3eed15d2729ea92c30e113dc880"
+			}
+		},
+		{
+			"id": "compatible-con-trabajo",
+			"label": "El IMV es compatible con rentas del trabajo o de actividad por cuenta propia dentro de los límites reglamentarios (no hace falta estar en desempleo)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.4",
+				"excerpt": "la percepción del ingreso mínimo vital será compatible con las rentas del trabajo o la actividad económica por cuenta propia de la persona beneficiaria individual o, en su caso, de uno o varios miembros de la unidad de convivencia",
+				"excerptSha256": "97caf485dd4a6d988166a0e21194bc4654fa40d9444877d0959ef10db287a5da"
+			}
+		},
+		{
+			"id": "complemento-ayuda-infancia",
+			"label": "Las unidades de convivencia con menores suman un complemento mensual de ayuda para la infancia por cada menor (se estudia con la misma solicitud)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.6",
+				"excerpt": "Se establece un complemento de ayuda para la infancia para aquellas unidades de convivencia que incluyan menores de edad entre sus miembros",
+				"excerptSha256": "b8a684d60e25c3709455938b74e5ffbc86189bf55833c426ef8f05e9a0df01f4"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 14.1",
+				"excerpt": "El derecho a la prestación del ingreso mínimo vital nacerá a partir del primer día del mes siguiente al de la fecha de presentación de la solicitud",
+				"excerptSha256": "5beb3294d6390cd450f25cd7153d4a7c04ad5ff96aaedb4be8562e1aef20a145"
+			}
+		},
+		"officialSimulator": {
+			"url": "https://imv.seg-social.es/",
+			"label": "Simulador oficial del IMV (Seguridad Social)",
+			"citation": {
+				"sourceId": "segss-imv",
+				"locator": "Apartado «Servicios sobre IMV»",
+				"excerpt": "Tiene a su disposición un Simulador del ingreso mínimo vital con el que podrá comprobar si cumple los requisitos para recibir la prestación del Ingreso Mínimo Vital y conocer el importe aproximado que podría corresponderle",
+				"excerptSha256": "13a6ec86734370e270c7f365b0660168e639d54054bec7edc835def382d0819a"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS)",
+			"url": "https://imv.seg-social.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 27.1",
+				"excerpt": "Dicha solicitud se presentará, preferentemente, en la sede electrónica de la Seguridad Social o a través de aquellos otros canales de comunicación telemática que el Instituto Nacional de la Seguridad Social tenga habilitados al efecto",
+				"excerptSha256": "3343c8dc2a881d5a717692cd5df9a7291ec461fe67988ae316af272ea55f5a59"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad: DNI (españoles) o documento del país de origen, TIE o pasaporte + NIE (extranjeros)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.1",
+					"excerpt": "se acreditará mediante el documento nacional de identidad en el caso de los españoles y mediante el documento nacional de identidad de su país de origen o procedencia, o de la tarjeta de identificación de extranjero, o el pasaporte, en el caso de ciudadanos extranjeros",
+					"excerptSha256": "b6a8110ced98c8f752555ffcc2468b950cced3b726f4694bd5ad4758f0970fd0"
+				}
+			},
+			{
+				"id": "doc-empadronamiento",
+				"label": "Certificado de empadronamiento",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.3",
+					"excerpt": "El domicilio en España se acreditará con el certificado de empadronamiento",
+					"excerptSha256": "20db45a58b34948b5e7af1b5ae3697b094e3ccd3491ac46abdd1cf00e766854c"
+				}
+			},
+			{
+				"id": "doc-unidad-convivencia",
+				"label": "Si solicitas como unidad de convivencia: libro de familia o certificado del registro civil",
+				"mandatory": true,
+				"condition": {
+					"any": [
+						{
+							"field": "dependents",
+							"op": "count_where_gte",
+							"count": 1
+						},
+						{
+							"field": "familyType",
+							"op": "in",
+							"value": [
+								"familia-numerosa",
+								"monoparental"
+							]
+						}
+					]
+				},
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.4",
+					"excerpt": "La existencia de la unidad de convivencia se acreditará con el libro de familia, certificado del registro civil",
+					"excerptSha256": "b57aa7f07f4bfbcb51bace060947f1424ff533e2110d67c210c5ad01110b43e1"
+				}
+			},
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo normalizado, con declaración responsable de patrimonio, rentas e ingresos y gastos de alquiler de la unidad",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 27.1 y 27.3",
+					"excerpt": "La solicitud se realizará en el modelo normalizado establecido al efecto, acompañada de la documentación necesaria para justificar el cumplimiento de los requisitos establecidos en esta Ley",
+					"excerptSha256": "ff31ba0ebfdc02c37ae52432c56f8cc398b1899d2dc9bf7a255aafa77561bea2"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 10,
+		"maxEur": 1613.92,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-ley-19-2021-imv",
+			"locator": "Art. 13.1 y 13.2.b",
+			"excerpt": "siempre que la cuantía resultante sea igual o superior a 10 euros mensuales",
+			"excerptSha256": "d193ab955b7b2fa4b200e8f0744f5dc28eefdc4f6bd378f57ddf9bd090195402"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 4
+	},
+	"themes": [
+		"ingresos_minimos",
+		"empleo"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

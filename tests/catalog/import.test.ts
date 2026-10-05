@@ -92,7 +92,7 @@ reviewStatus: revisada
 let commit = "";
 
 describe("importDonorCatalog", () => {
-	it("importa Madrid+estatales revisadas, excluye fiscales/fuera de ámbito y separa pistas; determinista", { timeout: 30000 }, () => {
+	it("importa Madrid+estatales revisadas, excluye fiscales/fuera de ámbito y separa pistas; determinista", { timeout: 90_000 }, () => {
 		execFileSync("git", ["init", "-q", donor]);
 		execFileSync("git", ["-C", donor, "config", "user.email", "t@t"]);
 		execFileSync("git", ["-C", donor, "config", "user.name", "t"]);

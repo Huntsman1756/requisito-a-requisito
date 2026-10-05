@@ -17,37 +17,22 @@ import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import { formatDateEs, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
-import type { Condition } from "../../lib/eligibility-engine/schema";
-
-function fieldsIn(c: Condition, out: Set<string>): void {
-	if ("all" in c) for (const x of c.all) fieldsIn(x, out);
-	else if ("any" in c) for (const x of c.any) fieldsIn(x, out);
-	else if ("not" in c) fieldsIn(c.not, out);
-	else {
-		out.add(c.field);
-		if (c.where) fieldsIn(c.where, out);
-	}
-}
-
-/** R2-MAT: dimensiones del perfil (máx. 7 columnas, como en el prototipo). */
-const DIMENSIONS: { id: string; label: string; fields: string[] }[] = [
-	{ id: "emp", label: "Empadronamiento", fields: ["territory"] },
-	{ id: "edad", label: "Edad", fields: ["age", "birthYear"] },
-	{ id: "hijos", label: "Hijos", fields: ["dependents"] },
-	{ id: "ing", label: "Ingresos", fields: ["incomeAnnual"] },
-	{ id: "fam", label: "Situación familiar", fields: ["familyType"] },
-	{ id: "emp2", label: "Empleo", fields: ["employmentStatus", "studentStatus"] },
-	{ id: "otros", label: "Otros", fields: [] }, // resto (discapacidad, dependencia…)
-];
-const OTHERS_FIELDS = new Set(["disability", "dependency", "housingStatus", "residenceSince"]);
-
-function dimOf(field: string): string {
-	for (const d of DIMENSIONS) if (d.fields.includes(field)) return d.id;
-	return "otros";
-}
-function worstOf(statuses: string[]): string {
-	for (const s of ["F", "U", "W", "T"]) if (statuses.includes(s)) return s;
-	return "na";
+import {
+	cellReqs,
+	DIMENSIONS,
+	dimOf,
+	uncoveredCount,
+	worstOf,
+} from "../../lib/matrix";
+/** «Encaja»: veredicto probable, o posible con todos los requisitos duros
+ *  comprobables en T (el resto son condiciones del trámite, mostradas ⚠). */
+function isEncaja({ ev }: { ev: EvaluationResult }): boolean {
+	return (
+		ev.verdict === "probable" ||
+		(ev.verdict === "posible" &&
+			ev.requirements.every((r) => !r.hard || r.status === "T") &&
+			ev.requirements.some((r) => r.hard && r.status === "T"))
+	);
 }
 
 const EVENT_LABELS: Record<string, string> = {
@@ -147,8 +132,10 @@ export function ResultsView({
 		[data, profile],
 	);
 
-	const probables = byVerdict("probable").length;
-	const posibles = byVerdict("posible").length;
+	const probables = evaluations.filter(isEncaja).length;
+	const posibles = evaluations.filter(
+		({ ev }) => ev.verdict === "posible" && !isEncaja({ ev }),
+	).length + evaluations.filter(({ ev }) => ev.verdict === "insuficiente").length;
 
 	// Plan de acción (docs/15 D): valor, documentos agrupados, calendario.
 	const actionEvals = useMemo(
@@ -218,7 +205,7 @@ export function ResultsView({
 			"",
 			...visible.map(
 				({ ev }) =>
-					`• ${aidTitle(ev.benefitSlug)}: ${key(`verdict.${ev.verdict}`)}`,
+					`• ${aidTitle(ev.benefitSlug)}: ${isEncaja({ ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}`,
 			),
 			"",
 			t("legal.notice"),
@@ -369,18 +356,23 @@ export function ResultsView({
 					{totalRange && (
 						<p className="plan-total">
 							{t("results.plan.total", {
-								min: totalRange.min.toLocaleString("es-ES"),
 								max: totalRange.max.toLocaleString("es-ES"),
 								n: totalRange.n,
 							})}
 						</p>
 					)}
 					{groupedDocs.length > 0 && (
-						<p className="plan-docs">
-							{t("results.plan.docs", { n: groupedDocs.length })}
-							{": "}
-							{groupedDocs.map((d) => d.label).join("; ")}
-						</p>
+						<div className="plan-docs">
+							<p>{t("results.plan.docs", { n: groupedDocs.length })}</p>
+							<ul>
+								{groupedDocs.map((d) => (
+									<li key={d.label}>
+										{d.label}
+										<span className="mono"> · {d.count} {d.count === 1 ? "ayuda" : "ayudas"}</span>
+									</li>
+								))}
+							</ul>
+						</div>
 					)}
 					{icsHref && (
 						<p>
@@ -501,9 +493,13 @@ function ResultCard({
 			</p>
 			<h2>
 				{aidTitle(ev.benefitSlug)}{" "}
-				<span className={pill}>{key(`verdict.${ev.verdict}`)}</span>
+				<span className={pill}>{isEncaja({ ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
 			</h2>
-			<p className="verdict-line">{key(`verdict.line.${ev.verdict}`)}</p>
+			<p className="verdict-line">
+						{isEncaja({ ev }) && ev.verdict !== "probable"
+							? "Cumples todo lo comprobable; quedan condiciones del trámite por verificar"
+							: key(`verdict.line.${ev.verdict}`)}
+					</p>
 
 			{ev.futureEligibility && (
 				<p className="future">
@@ -617,13 +613,15 @@ function ResultCard({
 					</dl>
 
 					<p className="card-actions">
-						<a
-							className="cta"
-							href={ev.channel.url}
-							rel="noopener noreferrer"
-						>
-							{t("card.gotoChannel")} ↗
-						</a>{" "}
+						{rs.application.officialSimulator ? (
+							<a className="cta" href={rs.application.officialSimulator.url} rel="noopener noreferrer">
+								{t("card.gotoSimulator")} ↗
+							</a>
+						) : (
+							<a className="cta" href={ev.channel.url} rel="noopener noreferrer">
+								{t("card.gotoChannel")} ↗
+							</a>
+						)}{" "}
 						<Link className="btn-quiet" href={`/ayudas/${ev.benefitSlug}`}>
 							{t("card.fullDetail")}
 						</Link>
@@ -691,26 +689,19 @@ function RequirementMatrix({
 	const [cell, setCell] = useState<{ aid: string; dim: string } | null>(null);
 	const shown = evaluations.filter(({ ev }) => ev.verdict !== "no_cumple");
 
-	const cellReqs = (rs: RuleSet, ev: EvaluationResult, dimId: string) =>
-		ev.requirements.filter((r) => {
-			const src = rs.requirements.find((x) => x.id === r.id);
-			const fs = new Set<string>();
-			if (src) fieldsIn(src.condition, fs);
-			const dims = [...fs].map(dimOf);
-			if (dimId === "otros") return fs.size === 0 || dims.every((d) => d === "otros");
-			return dims.includes(dimId);
-		});
+
 
 	const tickFor = (st: string) =>
 		st === "T" ? { cls: "ok", sym: "✓", txt: "Cumples" }
 		: st === "F" ? { cls: "no", sym: "✕", txt: "No cumples" }
 		: st === "U" ? { cls: "doubt", sym: "?", txt: "Falta un dato" }
+		: st === "W" ? { cls: "na", sym: "⚠", txt: "No comprobable aquí" }
 		: { cls: "na", sym: "–", txt: "No aplica" };
 
-	const verdictLabel = (v: string) =>
-		v === "probable" ? "Encaja" : v === "posible" ? "Falta un dato" : v === "insuficiente" ? "Le falta" : "No te aplica";
-	const verdictCls = (v: string) =>
-		v === "probable" ? "v-ok" : v === "posible" || v === "insuficiente" ? "v-doubt" : "v-no";
+	const verdictLabel = (ev: EvaluationResult) =>
+		isEncaja({ ev }) ? "Encaja" : ev.verdict === "posible" ? "Falta un dato" : ev.verdict === "insuficiente" ? "Le faltan datos" : "No te aplica";
+	const verdictCls = (ev: EvaluationResult) =>
+		isEncaja({ ev }) ? "v-ok" : ev.verdict === "posible" || ev.verdict === "insuficiente" ? "v-doubt" : "v-no";
 
 	return (
 		<>
@@ -730,7 +721,7 @@ function RequirementMatrix({
 						<div className="matrix-mobile" aria-hidden="true">
 							{shown.map(({ rs, ev }) => (
 								<details key={ev.benefitSlug}>
-									<summary>{aidTitle(ev.benefitSlug)} — {verdictLabel(ev.verdict)}</summary>
+									<summary>{aidTitle(ev.benefitSlug)} — {verdictLabel(ev)}</summary>
 									<ul>
 										{ev.requirements.map((r) => {
 											const t = tickFor(r.status);
@@ -764,10 +755,12 @@ function RequirementMatrix({
 										{DIMENSIONS.map((d) => {
 											const reqs = cellReqs(rs, ev, d.id);
 											const st = worstOf(reqs.map((r) => r.status));
-											const tick = tickFor(st);
+											// dim "otros" sin requisitos: ⚠ si hay no comprobables
+											const hasUnc = d.id === "otros" && !reqs.length && uncoveredCount(rs) > 0;
+											const tick = hasUnc ? tickFor("W") : tickFor(st);
 											return (
 												<td key={d.id} className="c">
-													{reqs.length ? (
+													{reqs.length || hasUnc ? (
 														<button
 															type="button"
 															aria-label={`${aidTitle(ev.benefitSlug)} · ${d.label}: ${tick.txt}`}
@@ -793,8 +786,8 @@ function RequirementMatrix({
 											)}
 										</td>
 										<td>
-											<span className={`verdict ${verdictCls(ev.verdict)}`}>
-												{verdictLabel(ev.verdict)}
+											<span className={`verdict ${verdictCls(ev)}`}>
+												{verdictLabel(ev)}
 											</span>
 										</td>
 									</tr>
@@ -806,7 +799,8 @@ function RequirementMatrix({
 						<span><i className="tick ok">✓</i>Cumples</span>
 						<span><i className="tick doubt">?</i>Falta un dato</span>
 						<span><i className="tick no">✕</i>No cumples</span>
-						<span><i className="tick na">–</i>No aplica o no comprobable</span>
+						<span><i className="tick na">–</i>No aplica</span>
+						<span><i className="tick na">⚠</i>No comprobable aquí</span>
 						<span><i className="tick doubt">↻</i>Se convoca cada año</span>
 					</div>
 					{cell && (

@@ -9,6 +9,14 @@ export const AID_TITLES: Record<string, string> = {
 	"subsidio-mayores-52": "Subsidio por desempleo de mayores de 52 años",
 	"descuento-transporte-familia-numerosa":
 		"Descuento de tren para familias numerosas",
+	imv: "Ingreso Mínimo Vital",
+	"madrid-cheque-escuela-infantil":
+		"Cheque escuela infantil (Comunidad de Madrid)",
+	"madrid-beca-comedor-escolar":
+		"Beca de comedor escolar (Comunidad de Madrid)",
+	"madrid-bono-alquiler-joven": "Bono alquiler joven (Comunidad de Madrid)",
+	"madrid-becas-bachillerato-centros-privados":
+		"Becas de Bachillerato en centros privados (Comunidad de Madrid)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

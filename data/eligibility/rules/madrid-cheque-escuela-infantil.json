@@ -1,0 +1,308 @@
+{
+	"benefitSlug": "madrid-cheque-escuela-infantil",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20250331-39-bases-infantil",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/03/31/BOCM-20250331-39.PDF",
+			"title": "Orden 763/2025, de 18 de marzo — bases reguladoras becas escolarización Primer Ciclo de Educación Infantil en centros privados (BOCM nº 76, 31/03/2025)"
+		},
+		{
+			"id": "bocm-20260518-39-infantil-2026-2027",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/05/18/BOCM-20260518-39.PDF",
+			"title": "Extracto de la Orden 1644/2026, de 27 de abril — convocatoria becas primer ciclo Educación Infantil curso 2026-2027 (BOCM nº 116, 18/05/2026; BDNS 902503)"
+		},
+		{
+			"id": "bocm-20250603-39-infantil-2025-2026",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/06/03/BOCM-20250603-39.PDF",
+			"title": "Extracto de la Orden 1980/2025, de 29 de mayo — convocatoria becas primer ciclo Educación Infantil curso 2025-2026 (BOCM nº 131, 03/06/2025; BDNS 836192)"
+		},
+		{
+			"id": "bocm-20240429-20-infantil-2024-2025",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/04/29/BOCM-20240429-20.PDF",
+			"title": "Extracto de la Orden conjunta 1945/2024, de 25 de abril — convocatoria becas primer ciclo Educación Infantil curso 2024-2025 (BOCM nº 101, 29/04/2024; BDNS 757460)"
+		},
+		{
+			"id": "sede-infantil-2026-2027",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-educacion-infantil-2026-2027",
+			"title": "Sede electrónica CM — Becas para el primer ciclo de Educación Infantil en centros privados autorizados 2026-2027 (A976)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "hijo-menor-3",
+			"hard": true,
+			"label": "Tener un hijo o hija menor de 3 años (el primer ciclo es de 0 a 3 años; la convocatoria 2026-2027 exige nacido o previsto antes del 1 de enero de 2027 — ver ⚠)",
+			"citation": {
+				"sourceId": "bocm-20260518-39-infantil-2026-2027",
+				"locator": "Extracto, Segundo (Beneficiarios)",
+				"excerpt": "Niños menores de tres años matriculados en centros de titularidad privada autorizados",
+				"excerptSha256": "f97614ff6ed9eec2c650ba54931ee1c75d4bf68702a19142f92540f0a9683d91"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"field": "age",
+					"op": "lt",
+					"value": 3
+				}
+			}
+		},
+		{
+			"id": "renta-limite",
+			"hard": false,
+			"label": "Ingresos anuales de la unidad familiar por debajo de 35.913 € (el límite real es de renta PER CÁPITA — ver ⚠)",
+			"citation": {
+				"sourceId": "bocm-20260518-39-infantil-2026-2027",
+				"locator": "Extracto, pág. 4",
+				"excerpt": "la renta per cápita familiar no podrá superar el lí- mite de 35.913 euros, cualquiera que sea la puntuación total obtenida",
+				"excerptSha256": "65cc60945c905b433543f5bbb4cf7ac2a0df800c22317d9b9e4015effe076857"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 35913
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "matriculado-centro-privado",
+			"label": "Estar matriculado o tener reserva de plaza para el curso 2026-2027 en un centro de titularidad privada autorizado por la Administración educativa para el primer ciclo, sin ocupar plaza sostenida con fondos públicos",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 4.1.b",
+				"excerpt": "en un centro de titularidad privada autorizado por la Administración educativa para impartir dicho ciclo, siempre que no ocupe plaza sostenida con fondos públicos.",
+				"excerptSha256": "5ca208ac0ca80ad2c24795fa64afce969418f0fd87ea20ef3468b8599d2b1e05"
+			}
+		},
+		{
+			"id": "nacido-antes-2027",
+			"label": "El menor debe haber nacido —o estar previsto que nazca— antes del 1 de enero de 2027; nuestra pregunta solo recoge hijos ya nacidos, no embarazos en curso",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 4.1.a",
+				"excerpt": "Haber nacido o estar previsto el nacimiento con anterioridad a la fecha que se de- termine en cada orden de convocatoria",
+				"excerptSha256": "590ba91832fed006dc92af59b2a106f90fd954438e98dd829f7e4e54b21c6eda"
+			}
+		},
+		{
+			"id": "renta-per-capita-calculo",
+			"label": "El límite de 35.913 € se aplica a la renta PER CÁPITA: ingresos de la unidad familiar ÷ miembros computables (quien tenga discapacidad ≥33 % o sea víctima de violencia de género computa por dos); la renta consultada es el IRPF 2024",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 6.1",
+				"excerpt": "los ingresos de la unidad familiar, tal y como se define en el artículo 5 anterior, divididos",
+				"excerptSha256": "d662cd91fbf979cb848b8663a87778c7125dc68f136461ff9bdc3e7de7a3caa3"
+			}
+		},
+		{
+			"id": "mayores-3-nee",
+			"label": "También son destinatarios los mayores de 3 años que repitan primer ciclo por necesidades educativas especiales acreditadas por el Equipo de Atención Temprana",
+			"citation": {
+				"sourceId": "bocm-20260518-39-infantil-2026-2027",
+				"locator": "Extracto, Segundo (Beneficiarios)",
+				"excerpt": "los niños mayores de tres años que deban permanecer escolarizados un año más en el primer ciclo de Educación",
+				"excerptSha256": "1bbb4b3c98f9d336aef64a179a5452c9b94be160eb0780991219741b9c4ca59c"
+			}
+		},
+		{
+			"id": "mantener-requisitos-curso",
+			"label": "Los requisitos deben reunirse al cierre del plazo de solicitud y mantenerse durante todo el curso escolar",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 4.1",
+				"excerpt": "Estos requisitos deberán mantenerse a lo largo de todo el curso",
+				"excerptSha256": "bc5afaa4197c9346a23fb9b3a68cffa579e000c7e704442d86799010d43b5cbf"
+			}
+		},
+		{
+			"id": "concurrencia-competitiva",
+			"label": "Concesión por concurrencia competitiva: si no hay crédito para todas, se ordena por puntuación (ingresos, composición familiar y situación laboral de los progenitores), así que cumplir los requisitos no garantiza la beca",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 2.2",
+				"excerpt": "Las becas se concederán en régimen de concurrencia competitiva.",
+				"excerptSha256": "57709b5b1dd72daa8fb8068e8aa94f51fa3decedcd76d8aec81134cef919d596"
+			}
+		},
+		{
+			"id": "firma-todos-mayores",
+			"label": "La solicitud la firma al menos un progenitor/tutor/acogedor, pero todos los mayores de 18 de la unidad familiar deben firmar la autorización de consulta de datos (AEAT, TGSS, padrón…)",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 7.2",
+				"excerpt": "La solicitud deberá ser firmada al menos por uno de los progenitores",
+				"excerptSha256": "d43bb52f59394b4b52be02d446e2a38fec92c9f6876b7ebd1fb1bdb53d788511"
+			}
+		},
+		{
+			"id": "tope-coste-escolarizacion",
+			"label": "La beca nunca supera el coste del servicio de escolarización ni, sumada a otras ayudas para la misma finalidad, la cuota del centro",
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 16.5",
+				"excerpt": "en ningún caso la cuantía de la beca superará el coste del servicio de escolarización.",
+				"excerptSha256": "f39741033f54aa31d44896c2463259a74301241447a7f37a57406afed05f66c2"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-05-19",
+			"closesAt": "2026-06-08",
+			"rolling": false,
+			"recurrence": "annual",
+			"businessDays": true,
+			"citation": {
+				"sourceId": "bocm-20260518-39-infantil-2026-2027",
+				"locator": "Extracto, Quinto (Plazo de presentación de solicitudes)",
+				"excerpt": "Quince días hábiles a partir del día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+				"excerptSha256": "779482ff9314b53123ca3df997c3c398f8c7bd0a5ca2405d9d96fe4a999d944f"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2024-04-30",
+					"closesAt": "2024-05-23",
+					"citation": {
+						"sourceId": "bocm-20240429-20-infantil-2024-2025",
+						"locator": "Extracto, Quinto (Plazo de presentación de solicitudes)",
+						"excerpt": "Quince días hábiles a partir del día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+						"excerptSha256": "779482ff9314b53123ca3df997c3c398f8c7bd0a5ca2405d9d96fe4a999d944f"
+					}
+				},
+				{
+					"opensAt": "2025-06-04",
+					"closesAt": "2025-06-24",
+					"citation": {
+						"sourceId": "bocm-20250603-39-infantil-2025-2026",
+						"locator": "Extracto, Quinto (Plazo de presentación de solicitudes)",
+						"excerpt": "Quince días hábiles a partir del día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+						"excerptSha256": "779482ff9314b53123ca3df997c3c398f8c7bd0a5ca2405d9d96fe4a999d944f"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-educacion-infantil-2026-2027",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20250331-39-bases-infantil",
+				"locator": "Art. 9.1 y 9.3",
+				"excerpt": "Electrónico General de la Comunidad de Madrid a través del acceso habilitado en el portal de internet de la Comunidad de Madrid",
+				"excerptSha256": "95900da6a44b41a4c37144889e749572eff7bf6a4c5ec1ffd30d8a8de0183d80"
+			}
+		},
+		"documents": [
+			{
+				"id": "certificado-filiacion",
+				"label": "Certificado de nacimiento del Registro Civil, Libro de Familia o documento oficial equivalente de los menores de la unidad familiar",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación — Nueva solicitud», punto 2",
+					"excerpt": "Certificado de nacimiento expedido por el Registro Civil de los menores de la unidad familiar y sus fechas de nacimiento, Libro de Familia o documento oficial equivalente (presentación obligatoria)",
+					"excerptSha256": "0a65211a0047db91e708fea49e37cf72d4c2f6400b5d047147594d58044eea8e"
+				}
+			},
+			{
+				"id": "certificado-medico-parto",
+				"label": "Certificado médico de la fecha probable del parto (obligatorio si el hijo aún no ha nacido)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación — Nueva solicitud», punto 3",
+					"excerpt": "Certificado médico de la fecha probable del parto (presentación obligatoria si hijo no nacido)",
+					"excerptSha256": "3a8fccc10ec30a9ba0da2e6b42d710d5234f6e0a0a5e9f16b396f735c3573e11"
+				}
+			},
+			{
+				"id": "pasaporte-extranjeros",
+				"label": "Pasaporte (solo personas extranjeras sin NIE; el DNI/NIE se consulta de oficio salvo oposición)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación — Nueva solicitud», punto 1",
+					"excerpt": "Pasaporte (sólo personas extranjeras sin NIE)",
+					"excerptSha256": "994fdac1d6681607041fa24eb06d324316a0f17eaf949c7d1aee83a555cba7d9"
+				}
+			},
+			{
+				"id": "empadronamiento-otra-ccaa",
+				"label": "Certificado o volante de empadronamiento colectivo expedido por otra Comunidad Autónoma (familias monoparentales u otros miembros familiares empadronados fuera de la CM)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación — Nueva solicitud», punto 4",
+					"excerpt": "Certificado o volante de empadronamiento colectivo (para familias monoparentales u otros miembros familiares) expedido por otra Comunidad Autónoma distinta a la Comunidad de Madrid",
+					"excerptSha256": "7ca1ef5eb901de3b714f4f4f70ea6ffbc9c6eb7f5445b9dbafc58c28afd61dc1"
+				}
+			},
+			{
+				"id": "dictamen-nee",
+				"label": "Dictamen de un Equipo de Orientación Educativa y Psicopedagógica de Atención Temprana (solo si el menor tiene más de 3 años o necesidades educativas especiales)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación — Nueva solicitud», punto 13",
+					"excerpt": "dictamen emitido por un Equipo de Orientación Educativa y Psicopedagógica de Atención Temprana",
+					"excerptSha256": "0475b6ae4a656e8fb28d7fd4fe008b55c7dea3bf1c7791b2be411fedd10a2655"
+				}
+			},
+			{
+				"id": "certificado-renta-aeat",
+				"label": "Certificado de renta de la AEAT del ejercicio 2024 (solo si no autorizas la consulta de datos tributarios)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-infantil-2026-2027",
+					"locator": "Sección «Documentación», consulta autorizada de renta",
+					"excerpt": "Información de renta de la Agencia Estatal de Administración Tributaria 2024",
+					"excerptSha256": "297c9a30e6a53578ec06fa20818aea93b36eb10110bc382cf2bab45a190798cf"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 177,
+		"maxEur": 283,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20250331-39-bases-infantil",
+			"locator": "Art. 16.4",
+			"excerpt": "de 177 euros mensuales hasta un límite máximo de 283 euros mensuales.",
+			"excerptSha256": "39bd63762b41f30f45a059dc147c726bb0fd0abdf68f0813e7e032978b693a12"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia",
+		"educacion"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	]
+}

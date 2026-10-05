@@ -47,7 +47,9 @@ export function deadlineState(w: WindowLike, today: string): DeadlineResult {
 		// anuales consecutivas citadas (ADR-038). Estimación: la última
 		// apertura + ~1 año. Nunca se muestra como fecha segura.
 		if (w.recurrence === "annual") {
-			const calls = (w.previousCalls ?? []).slice().sort();
+			const calls = [...(w.previousCalls ?? [])].sort((a, b) =>
+				a.opensAt.localeCompare(b.opensAt),
+			);
 			const years = calls.map((c) => c.opensAt.slice(0, 4));
 			const consecutive =
 				calls.length >= 2 &&

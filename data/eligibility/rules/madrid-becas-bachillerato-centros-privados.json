@@ -1,0 +1,317 @@
+{
+	"benefitSlug": "madrid-becas-bachillerato-centros-privados",
+	"standalone": false,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "2026-05-26",
+	"referenceDateCitation": {
+		"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+		"locator": "Extracto, «Segundo. Beneficiarios»",
+		"excerpt": "los alumnos que a la fecha de finalización del plazo de presentación de solicitudes reúnan los requisitos previstos en el artículo 4 de las bases reguladoras",
+		"excerptSha256": "8c0273bca76e8b6eab653fb3d291559aba21f2b6e51caa1ae675f1a15b9333df"
+	},
+	"sources": [
+		{
+			"id": "bocm-20250428-19-bases-becas-bachillerato",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/04/28/BOCM-20250428-19.PDF",
+			"title": "Orden 1435/2025, de 24 de abril — bases reguladoras de las becas para el estudio de Bachillerato en centros docentes privados autorizados de la Comunidad de Madrid (BOCM nº 100, de 28/04/2025)"
+		},
+		{
+			"id": "bocm-20260504-52-becas-bachillerato-2627",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/05/04/BOCM-20260504-52.PDF",
+			"title": "Extracto de la Orden 1534/2026, de 20 de abril — convocatoria de becas para el estudio de Bachillerato en centros privados autorizados, curso 2026-2027 (BOCM nº 104, de 04/05/2026; BDNS 901646)"
+		},
+		{
+			"id": "bocm-20250616-26-becas-bachillerato-2526",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/06/16/BOCM-20250616-26.PDF",
+			"title": "Extracto de la Orden 2176/2025, de 13 de junio — convocatoria de becas para el estudio de Bachillerato, curso 2025-2026 (BOCM nº 142, de 16/06/2025; BDNS 840021)"
+		},
+		{
+			"id": "bocm-20240423-27-becas-bachillerato-2425",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/04/23/BOCM-20240423-27.PDF",
+			"title": "Extracto de la Orden 1837/2024, de 18 de abril — convocatoria de becas para el estudio de Bachillerato, curso 2024-2025 (BOCM nº 96, de 23/04/2024; BDNS 755920)"
+		},
+		{
+			"id": "sede-becas-bachillerato-2026-2027",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-bachillerato-2026-2027",
+			"title": "Ficha del trámite A967 «Becas para el estudio de Bachillerato (2026-2027)» — sede electrónica de la Comunidad de Madrid"
+		}
+	],
+	"requirements": [
+		{
+			"id": "estudiante-bachillerato",
+			"hard": false,
+			"label": "Estar matriculado o tener reserva de plaza para un curso completo de Bachillerato",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios», a)",
+				"excerpt": "Estar matriculado o tener reserva de plaza para el curso completo del año esco- lar 2026-2027, en cualquiera de los dos cursos de Bachillerato del sistema educa- tivo español, en régimen privado, en un centro privado autorizado por la Conseje- ría de Educación, Ciencia y Universidades, ubicado en el ámbito territorial de la Comunidad de Madrid.",
+				"excerptSha256": "6b23cfc1820cd9b92c2990c957a8cd56b0a899bd4bd00e8d1ca645ef5bf00626"
+			},
+			"condition": {
+				"field": "studentStatus",
+				"op": "eq",
+				"value": "si"
+			}
+		},
+		{
+			"id": "renta-familiar-baja",
+			"hard": false,
+			"label": "Renta per cápita de la unidad familiar por debajo de 35.913 €",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios», c)",
+				"excerpt": "No superar el límite de renta per cápita familiar de 35.913 euros.",
+				"excerptSha256": "218bca9557177043344fe07709c785622c2e3b5f5f3f7ca259d64a639574291d"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 35913
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "bachillerato-regimen-privado-centro-autorizado-cm",
+			"label": "La beca solo cubre Bachillerato del sistema educativo español en régimen privado, en un centro docente privado autorizado por la Consejería y ubicado en territorio de la Comunidad de Madrid (no vale para centros públicos ni para otras enseñanzas como FP); el orientador no pregunta la modalidad de estudios ni el tipo de centro",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Primero. Objeto»",
+				"excerpt": "Becas para el estudio de Bachillerato del sistema educativo español para alumnos es- colarizados en centros autorizados por la Consejería de Educación, Ciencia y Universida- des, con el nivel de Bachillerato establecido en la Ley Orgánica 2/2006, de 3 de mayo, de Educación, en régimen privado para el curso 2026-2027, ubicados en el territorio de la Co- munidad de Madrid.",
+				"excerptSha256": "feec96ec28cf85d93eb297317933402688e88b1e6cfa19b63c646ffe13a853c5"
+			}
+		},
+		{
+			"id": "curso-completo-no-repetidor",
+			"label": "La matrícula o reserva debe ser del curso completo y el alumno no puede ser repetidor del curso para el que pide la beca; ambos extremos se acreditan con certificado del centro",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios», b)",
+				"excerpt": "No ser alumno repetidor del curso para el que se solicita la beca.",
+				"excerptSha256": "46dfe097436cb388df50b2552567f1e0505d5c264dbb0391a31096157c098d8e"
+			}
+		},
+		{
+			"id": "renta-es-per-capita",
+			"label": "El límite es de renta per cápita de la unidad familiar (ingresos de la unidad familiar divididos entre los miembros computables), no los ingresos anuales totales del hogar que pregunta el orientador",
+			"citation": {
+				"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+				"locator": "Orden 1435/2025, art. 6.1",
+				"excerpt": "se entiende por renta per cápita fami- liar los ingresos de la unidad familiar, tal y como se definen en el artículo 5 anterior, divi- didos entre el número de miembros computables de la unidad familiar",
+				"excerptSha256": "29ce994c6ff83e5764bab3dfc2abb3446081fca5291a417f8231127535df84c7"
+			}
+		},
+		{
+			"id": "renta-ejercicio-2024",
+			"label": "La renta que se evalúa es la del ejercicio económico 2024 (casillas IRPF 420+432-433+424+429-446-436-595), no la del año en curso",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Cuarto. Criterios de baremación», punto 1",
+				"excerpt": "Se considerará la renta anual del ejercicio económico del 2024.",
+				"excerptSha256": "0a63af6f4594a3f3fd3e582828666324b867c98c37910e774027dd731971c771"
+			}
+		},
+		{
+			"id": "miembro-especial-computa-doble",
+			"label": "Cada miembro de la unidad familiar con discapacidad igual o superior al 33 %, víctima de violencia de género o de terrorismo, con protección internacional o en acogimiento familiar computa por dos en el cálculo de la renta per cápita",
+			"citation": {
+				"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+				"locator": "Orden 1435/2025, art. 6.2",
+				"excerpt": "se computará por dos todo miembro de la unidad familiar con una discapacidad, debidamente acreditada, igual o superior al 33 por 100",
+				"excerptSha256": "49878414825755ec1a066c966aa512a241bf54aa1f075832350a25dab8332f63"
+			}
+		},
+		{
+			"id": "concurrencia-competitiva",
+			"label": "Aun cumpliendo todos los requisitos no hay derecho automático: la convocatoria es de concurrencia competitiva y las becas se conceden por orden de puntuación hasta agotar el crédito (43.497.750 € en 2026-2027)",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Cuarto. Criterios de baremación»",
+				"excerpt": "las becas se concederán en función de la puntuación obtenida hasta agotar la totalidad del crédito.",
+				"excerptSha256": "57ad8bfa79573d95ffa461b76b33b73b4aed6a3fad1de9a5b307095c30f14d3c"
+			}
+		},
+		{
+			"id": "nota-final-puntua",
+			"label": "La nota final del último curso académico finalizado suma de 0 a 2 puntos en la baremación (la renta per cápita puntúa de 0 a 8)",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Cuarto. Criterios de baremación», punto 2",
+				"excerpt": "La puntuación será de 0 a 2 puntos en función de la califica- ción final obtenida en el último curso académico finalizado a la fecha de finaliza- ción del plazo de presentación de solicitudes.",
+				"excerptSha256": "b1f5a2976add66a292d797dae074b26ec93eb319073fd55401fbf8d97d44b874"
+			}
+		},
+		{
+			"id": "mantener-requisitos-todo-el-curso",
+			"label": "Los requisitos deben mantenerse a lo largo de todo el curso escolar 2026-2027",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios»",
+				"excerpt": "Estos requisitos deberán mantenerse a lo largo de todo el curso escolar 2026-2027.",
+				"excerptSha256": "bda53478e47790b28b29e1db007cc00a5ce3cc923f74ebb336832426e84bfa60"
+			}
+		},
+		{
+			"id": "cuantia-tope-coste-curso",
+			"label": "La beca nunca supera el coste total del curso (tarifas de matrícula, reserva de plaza y escolaridad); si el curso cuesta menos, el importe se reduce a ese coste",
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto, «Quinto. Cuantía de la beca»",
+				"excerpt": "el importe de la beca se reducirá hasta el límite de dicho coste.",
+				"excerptSha256": "3de97acc8d1b0b40535a8ad6afdd4e0f00f15089f8d2b10dff33ad74845519e5"
+			}
+		},
+		{
+			"id": "firma-solicitud",
+			"label": "La solicitud debe estar firmada al menos por un progenitor, tutor o acogedor del alumno; además, para las consultas de datos deben firmar la autorización todos los miembros de la unidad familiar mayores de 18 años incluidos en ella",
+			"citation": {
+				"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+				"locator": "Orden 1435/2025, art. 7.2",
+				"excerpt": "La solicitud deberá ser firmada al menos por uno de los progenitores, tutores o acogedores del alumno.",
+				"excerptSha256": "7143f2bb28e1ea85d0c82ba1c5d67055b77fde57a43e778e21c0b37524efaaae"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2026-05-05",
+			"closesAt": "2026-05-26",
+			"rolling": false,
+			"recurrence": "annual",
+			"businessDays": true,
+			"citation": {
+				"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+				"locator": "Extracto (BOCM nº 104, de 4 de mayo de 2026), «Sexto. Plazo de presentación de solicitudes»",
+				"excerpt": "El plazo de presentación de solicitudes será de quince días hábiles a contar desde el día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+				"excerptSha256": "3d05099061fea58a35b1873592524f495b53b826cf42d4d76d22de5c28ff6740"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2025-06-17",
+					"closesAt": "2025-07-07",
+					"citation": {
+						"sourceId": "bocm-20250616-26-becas-bachillerato-2526",
+						"locator": "Extracto Orden 2176/2025 (BOCM nº 142, de 16 de junio de 2025), «Sexto. Plazo de presentación de solicitudes»",
+						"excerpt": "El plazo de presentación de solicitudes será de quince días hábiles a contar desde el día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+						"excerptSha256": "3d05099061fea58a35b1873592524f495b53b826cf42d4d76d22de5c28ff6740"
+					}
+				},
+				{
+					"opensAt": "2024-04-24",
+					"closesAt": "2024-05-17",
+					"citation": {
+						"sourceId": "bocm-20240423-27-becas-bachillerato-2425",
+						"locator": "Extracto Orden 1837/2024 (BOCM nº 96, de 23 de abril de 2024), «Sexto. Plazo de presentación de solicitudes»",
+						"excerpt": "El plazo de presentación de solicitudes será de quince días hábiles a contar desde el día siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.",
+						"excerptSha256": "3d05099061fea58a35b1873592524f495b53b826cf42d4d76d22de5c28ff6740"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-bachillerato-2026-2027",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+				"locator": "Orden 1435/2025, art. 9 (lugar de presentación de las solicitudes)",
+				"excerpt": "Las solicitudes y la documentación que proceda podrán presentarse en el Registro Electrónico General de la Comunidad de Madrid a través del acceso habilitado en el portal de internet de la Comunidad de Madrid ( www.comunidad.madrid ), en la dirección elec- trónica: sede.comunidad.madrid 2. Para la presentación de la solicitud por medios electrónicos, es necesario disponer de uno de los certificados electrónicos reconocidos o cualificados de firma electrónica, que sean operativos en la Comunidad de Madrid y expedidos por prestadores incluidos en la \"Lista de confianza de prestadores de servicios de certificación\" o cualquier otro sistema de firma electrónica que la Comunidad de Madrid considere válido en los términos y condi- ciones que establezcan específicamente para cada tipo de firma. 3. También se podrá hacer presencialmente en cualquiera de las oficinas de asistencia en materia de registros, de conformidad con lo establecido en el apartado 4 del artículo 16 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Adminis- traciones Públicas.",
+				"excerptSha256": "74993071297e2b61000b5fd32f4c60688379d26fb8343003932e413541c3e602"
+			}
+		},
+		"documents": [
+			{
+				"id": "certificado-centro",
+				"label": "Certificado del centro docente de matrícula o reserva de plaza (acredita el curso completo, la no repetición y el importe total del curso)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, art. 8.1.k)",
+					"excerpt": "Certificado de matriculación o reserva de plaza en cualquiera de los dos cursos de Bachillerato del sistema educativo español en un centro privado autorizado, ubi- cado en el territorio de la Comunidad de Madrid.",
+					"excerptSha256": "98607646f8b901d2259067b5fdcbfbf7cc5224f89afb04b4b7964fd9d8d07a12"
+				}
+			},
+			{
+				"id": "nota-final",
+				"label": "Documento acreditativo de la nota final del último curso académico finalizado",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, art. 8.1.l)",
+					"excerpt": "Documento acreditativo de la nota final del último curso finalizado a la fecha de finalización del plazo de presentación de solicitudes.",
+					"excerptSha256": "82ebd387a01b5d23224faee69fbebe4e06afdd25667654d98313067f6b94d146"
+				}
+			},
+			{
+				"id": "filiacion-unidad-familiar",
+				"label": "Certificado del Registro Civil de la filiación del alumno y de los miembros de la unidad familiar con sus fechas de nacimiento (o Libro de Familia completo)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, art. 8.1.b)",
+					"excerpt": "Certificado expedido por el Registro Civil acreditativo de la filiación del alumno soli- citante y de los miembros de la unidad familiar y sus fechas de nacimiento, o docu- mento oficial equivalente.",
+					"excerptSha256": "ba7d422018834f7e064acddb64c65972f963fdc8da2945b448fb48b038df1b17"
+				}
+			},
+			{
+				"id": "dni-nie-oposicion",
+				"label": "DNI o NIE en vigor (o pasaporte si no hay NIE), solo si se manifiesta oposición expresa a la consulta de datos",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, art. 8.1.a)",
+					"excerpt": "Si se manifiesta oposición expresa a la consulta de datos será necesario aportar DNI o NIE en vigor y consignar su número en la solicitud.",
+					"excerptSha256": "73d571852cb7cefa5bb4333f6ba876081e73c586a03cafe6973fbda4aa2fcbf1"
+				}
+			},
+			{
+				"id": "certificado-renta-aeat",
+				"label": "Certificado de la renta de la AEAT con código seguro de verificación, solo si algún miembro mayor de edad no autoriza la consulta tributaria",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, art. 8.1.d)",
+					"excerpt": "deberá aportar copia del certificado acreditativo de la renta del ejercicio que se determine en la orden de convocatoria, expedido por la misma agencia tributaria con código seguro de verificación",
+					"excerptSha256": "658577c18c7da7118b148bf398ee5a6cd506d422c52e016fe347db6b8b0ebd50"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 2000,
+		"maxEur": 3750,
+		"period": "per_course",
+		"citation": {
+			"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+			"locator": "Extracto, «Quinto. Cuantía de la beca»",
+			"excerpt": "La cuantía total de la beca será de 3.750 euros anuales, a razón de 375 euros por cada uno de los meses comprendidos en el período de septiembre de 2026 a junio de 2027, am- bos inclusive, en los supuestos de renta per cápita familiar hasta 10.000 euros y de 2.000 euros anuales, a razón de 200 euros por cada uno de los meses comprendidos en el período de septiembre de 2026 a junio de 2027, en los supuestos de renta per cápita familiar com- prendida entre 10.000,01 y 35.913 euros.",
+			"excerptSha256": "14adf2399acbf1206fed8eb41ce3cb979cc312da8dc316ba1aa0b26deddba08b"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"educacion"
+	],
+	"lifeEvents": [
+		"estudiar"
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"id": "gp-alquiler-joven-mostoles",
+	"description": "Joven de 30 años, empadronada en Móstoles (28092), contrato de alquiler de vivienda, ingresos en banda media (16.800–25.200 €/año, justo en el límite de 3×IPREM), asalariada, sin personas a cargo. Caso positivo: todos los requisitos comprobables pasan y el resto queda como no comprobable ⇒ posible.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": { "ccaa": "13", "province": "28", "municipality": "28092" }
+			},
+			"residenceSince": { "state": "value", "value": { "year": 2023, "month": 1 } },
+			"age": { "state": "value", "value": { "min": 30, "max": 30, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "asalariado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": {
+				"state": "value",
+				"value": { "min": 16800, "max": 25200 }
+			},
+			"housingStatus": { "state": "value", "value": "alquiler" },
+			"disability": { "state": "declined" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-bono-alquiler-joven",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-rd-42-2022-bono-alquiler",
+					"locator": "Art. 6.1",
+					"reasoning": "Edad 30 ⇒ mayor de edad (T); y 30 ≤ 35 años incluido a la fecha de la solicitud (art. 6.1.a) (T)."
+				},
+				{
+					"sourceId": "bocm-20250110-20-bono-alquiler",
+					"locator": "Extracto, título del Acuerdo",
+					"reasoning": "Móstoles (28092) está en la Comunidad de Madrid y la gestión del Bono corresponde a la CM ⇒ territorio T."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-bono-alquiler",
+					"locator": "Art. 6.1.d",
+					"reasoning": "Banda de ingresos [16.800, 25.200) €/año: todo el intervalo ≤ 3×IPREM_14P (3×8.400 = 25.200 €) ⇒ T justo en el borde («iguales o inferiores»). Si la persona convive con familiares de 1.º grado mayores de 35, sus rentas también sumarían — queda en uncovered (ingresos-unidad-convivencia)."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-bono-alquiler",
+					"locator": "Art. 6.1.c",
+					"reasoning": "housingStatus = «alquiler» ⇒ vive de alquiler, compatible con ser titular del contrato LAU (T, requisito no-hard)."
+				},
+				{
+					"sourceId": "bocm-20250110-20-bono-alquiler",
+					"locator": "Quinto",
+					"reasoning": "Solicitudes abiertas desde el 03/02/2025 sin fecha de cierre y la sede marca «En plazo: permanente» ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "boe-rd-42-2022-bono-alquiler",
+					"locator": "Art. 6.1.b, 6.2, 6.7, 7, 8 y 10",
+					"reasoning": "Veredicto «posible» (no «probable») porque quedan requisitos no comprobables con nuestras preguntas: nacionalidad/residencia legal, no propiedad, ausencia de vínculo con el arrendador, fuente regular de ingresos acreditable, renta mensual ≤600 € y no incurso en el art. 13 LGS."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

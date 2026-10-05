@@ -1,0 +1,254 @@
+{
+	"benefitSlug": "madrid-teleasistencia-domiciliaria",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20230801-18-cartera-ss",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/08/01/BOCM-20230801-18.PDF",
+			"title": "Orden 2372/2023, de 25 de julio — Cartera de Servicios Sociales de la Comunidad de Madrid (BOCM nº 181, 01/08/2023; anexo II, fichas 040601 y 050204)"
+		},
+		{
+			"id": "transparencia-carta-teleasistencia-2026",
+			"rank": 4,
+			"documentType": "informational",
+			"url": "https://transparencia.madrid.es/UnidadesDescentralizadas/Calidad/CARTAS%20SERVICIOS/SistemaCartasServicio/19%20CS_Teleasistencia/Definitiva/CS-Teleasistencia-26.pdf",
+			"title": "Carta de Servicios de Teleasistencia del Ayuntamiento de Madrid — texto íntegro 2026 (aprobada 10/07/2008, evaluada 02/03/2026)"
+		},
+		{
+			"id": "sede-madrid-teleasistencia",
+			"rank": 4,
+			"documentType": "procedure_page",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextchannel=61eba38813180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default&vgnextoid=91316cf6eed2f310VgnVCM1000000b205a0aRCRD",
+			"title": "Sede electrónica Ayuntamiento de Madrid — trámite «Teleasistencia»"
+		}
+	],
+	"requirements": [
+		{
+			"id": "empadronado-madrid-capital",
+			"hard": true,
+			"label": "Estar empadronada en la ciudad de Madrid",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Requisitos de la persona interesada»",
+				"excerpt": "Estar empadronado/a en la ciudad de Madrid.",
+				"excerptSha256": "3fab1af0613ffa955004186ddae7528c84d20465282af47fa8936ac6dcbefcf1"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			}
+		},
+		{
+			"id": "poblacion-destinataria",
+			"hard": false,
+			"label": "Ser mayor de 65 años, o tener entre 18 y 64 años con dependencia reconocida (hay una tercera vía — riesgo de aislamiento severo o enfermedad grave incapacitante — que no se puede comprobar aquí; ver ⚠)",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Personas destinatarias»",
+				"excerpt": "Personas mayores de 65 años, priorizando a las mayores de 80 años que vivan solas.",
+				"excerptSha256": "4226bcd23319a2377b25090935c18a1e83f39d65e6f8fef625d1d77be17f2dd6"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 65,
+						"citation": {
+							"sourceId": "transparencia-carta-teleasistencia-2026",
+							"locator": "Sección 2, «Personas destinatarias»",
+							"excerpt": "Personas mayores de 65 años, priorizando a las mayores de 80 años que vivan solas.",
+							"excerptSha256": "4226bcd23319a2377b25090935c18a1e83f39d65e6f8fef625d1d77be17f2dd6"
+						}
+					},
+					{
+						"field": "dependency",
+						"op": "eq",
+						"value": "reconocida",
+						"citation": {
+							"sourceId": "bocm-20230801-18-cartera-ss",
+							"locator": "Anexo II, ficha 050204, «Requisitos para el acceso»",
+							"excerpt": "Persona en situación de dependencia cuyo Programa Individual de Atención reconozca este servicio como modalidad de intervención más adecuada.",
+							"excerptSha256": "1072c4da5f3132fa514aa0fe0018987e0c9bfe4a4ae87f5ae76ddc55c422b023"
+						}
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "capacidad-uso-adecuado",
+			"label": "Tener capacidad — la persona interesada o quien conviva con ella — para hacer un uso adecuado del servicio",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Requisitos de la persona interesada»",
+				"excerpt": "Tener capacidad para realizar un uso adecuado del Servicio de Teleasistencia tanto la persona interesada, como la persona con la que conviva, en su caso.",
+				"excerptSha256": "e5777b6693b3b6ce87069c735a94212a5f3d6bf2d5cfd8fbed51e480c162a460"
+			}
+		},
+		{
+			"id": "via-aislamiento-enfermedad",
+			"label": "Tercera vía no comprobable: personas de entre 18 y 64 años en situación de riesgo de aislamiento severo (salvo situaciones atendidas por servicios especializados) o con enfermedad grave e incapacitante; el acceso exige informe de los Servicios Sociales que justifique la necesidad",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Personas destinatarias»",
+				"excerpt": "Personas de entre 18 y 64 años, en situación de riesgo de aislamiento severo (excepto situaciones que se atienden desde servicios especializados) o con enfermedad grave e incapacitante. El acceso al Servicio de estas personas deberá venir acompañado de informe de los Servicios Sociales que justifique tal necesidad.",
+				"excerptSha256": "68ef58f8efb3b3de025ac4088b31af253de2b7e27538145b596c57250277a89a"
+			}
+		},
+		{
+			"id": "prioridad-80-solas",
+			"label": "Se prioriza a las personas mayores de 80 años que vivan solas",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Personas destinatarias»",
+				"excerpt": "Personas mayores de 65 años, priorizando a las mayores de 80 años que vivan solas.",
+				"excerptSha256": "4226bcd23319a2377b25090935c18a1e83f39d65e6f8fef625d1d77be17f2dd6"
+			}
+		},
+		{
+			"id": "via-010-solo-65-solas",
+			"label": "El alta telefónica por el 010 solo vale si tienes 65 años o más y vives sola según el Padrón; en cualquier otro caso el trámite es por el Centro de Servicios Sociales (y exige autorizar la consulta de ingresos a la Agencia Tributaria)",
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2 y sección 7 («Acceso a la información del Servicio…»)",
+				"excerpt": "Las personas mayores de 65 años que según los datos de Padrón viven solas, pueden tramitar la solicitud de Teleasistencia a través del teléfono 010.",
+				"excerptSha256": "8fe7b56852b6d39b3581fcfc32356dbf8ae0916e88ef5c504a6fac05146550cb"
+			}
+		},
+		{
+			"id": "valoracion-servicios-sociales",
+			"label": "El acceso pasa por la valoración técnica de los Servicios Sociales (necesidad de apoyo para la autonomía / situación de necesidad o vulnerabilidad social)",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 040601, «Perfil de persona beneficiaria»",
+				"excerpt": "Personas no dependientes que requieren apoyo para la vida autónoma, en situación de necesidad o vulnerabilidad social.",
+				"excerptSha256": "1ee5ba081d2765409ced37137f1d9e3c2414ecfe4d7a3823d843902bc833062c"
+			}
+		},
+		{
+			"id": "pia-dependencia",
+			"label": "Si la vía es la dependencia: la resolución de dependencia y el Programa Individual de Atención (PIA) deben reconocer la teleasistencia como modalidad de intervención adecuada",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 050204, «Procedimiento de prestación»",
+				"excerpt": "Resolución de reconocimiento de la situación de dependencia y de aprobación del Programa Individual de Atención reconociendo el servicio como modalidad de intervención más adecuada.",
+				"excerptSha256": "997a84f56f7135190ef2c63bbcb8bab62a234e0accca5838d80a096f02ffe2d3"
+			}
+		},
+		{
+			"id": "cuota-segun-ordenanza",
+			"label": "En Madrid capital la teleasistencia no es siempre gratuita: la aportación se ajusta a la ordenanza municipal en vigor (cuota única por domicilio según la Renta Mensual Per Cápita: 0, 6, 9 o 12 €/mes; gratuita a partir de 87 años)",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 050204, «Aportación de la persona usuaria»",
+				"excerpt": "Los servicios de teleasistencia son gratuitos, excepto en el caso de los prestados en Madrid Capital por parte del Ayuntamiento de Madrid. En este caso, la aportación de la persona usuaria se ajustará a la tabla de precios establecida por la ordenanza municipal en vigor.",
+				"excerptSha256": "c0325b5318e3bb9f52a36a6af681018ba8931ee2523428ad56a09aa05cc21198"
+			}
+		},
+		{
+			"id": "incompatible-residencial",
+			"label": "La teleasistencia es compatible con otras prestaciones excepto con el servicio de atención residencial",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 050204, «Régimen de compatibilidad con otras prestaciones»",
+				"excerpt": "Compatible, excepto con el Servicio de Atención Residencial.",
+				"excerptSha256": "52d3a61659e1cc6a867e5b836c4c9629909f46c2eb495ec2dba49db3a94d5b60"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 2, «Horario»",
+				"excerpt": "las 24 horas del día, todos los días del año",
+				"excerptSha256": "7621bbd007f26b44e3aa6b888eac60c07271c57377b7c080936e98b0e74d53f2"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Madrid — Área de Gobierno de Políticas Sociales, Familia e Igualdad (Dirección General de Mayores y Prevención de la Soledad no deseada; Centros Municipales de Servicios Sociales y teléfono 010)",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextchannel=61eba38813180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default&vgnextoid=91316cf6eed2f310VgnVCM1000000b205a0aRCRD",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "transparencia-carta-teleasistencia-2026",
+				"locator": "Sección 7, «Acceso a la información del Servicio de Teleasistencia…»",
+				"excerpt": "El servicio puede solicitarse de forma presencial en los Centros Municipales de Servicios Sociales de cada uno de los distritos de la Ciudad de Madrid. También puede solicitarse en línea en la página web www.madrid.es, a través del enlace al Registro Electrónico disponible en el apartado Tramitar - En línea, o en cualquier registro.",
+				"excerptSha256": "3149fc68dd18b9d4dd30135757f5904b10c48714b2385781ee4845c86e3455c8"
+			}
+		},
+		"documents": [
+			{
+				"id": "solicitud-normalizada",
+				"label": "Solicitud de los servicios o prestaciones sociales para mayores o personas con discapacidad (formulario normalizado; sede electrónica, apartado «Trámites / Teleasistencia»)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "transparencia-carta-teleasistencia-2026",
+					"locator": "Sección 6, «Gestiones y trámites»",
+					"excerpt": "Solicitud de los servicios o prestaciones sociales para mayores o personas con discapacidad.",
+					"excerptSha256": "17e47e9312a251de85a739913b8cd721d77b795cbf019a2d7fe43ad79cf50bcc"
+				}
+			},
+			{
+				"id": "autorizacion-consulta-ingresos",
+				"label": "Autorización de consulta de los datos de ingresos a la Agencia Tributaria (imprescindible en la vía 010; se usa para fijar la cuota por RMPC)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "transparencia-carta-teleasistencia-2026",
+					"locator": "Sección 7, «Acceso a la información del Servicio…»",
+					"excerpt": "Las personas mayores de 65 años que vivan solas pueden solicitarlo a través del Teléfono 010, siempre que autoricen la consulta de sus ingresos a la Agencia Tributaria",
+					"excerptSha256": "cb2bcf806eaf4865ea29b919658e819d1f85026e220296ea70abc4140c036fe1"
+				}
+			},
+			{
+				"id": "informe-servicios-sociales",
+				"label": "Informe de los Servicios Sociales que justifique la necesidad (solo si la vía es aislamiento severo o enfermedad grave incapacitante, 18–64 años)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "transparencia-carta-teleasistencia-2026",
+					"locator": "Sección 2, «Personas destinatarias»",
+					"excerpt": "El acceso al Servicio de estas personas deberá venir acompañado de informe de los Servicios Sociales que justifique tal necesidad.",
+					"excerptSha256": "766a3905cb33a88baca0d7a225c006414f2ce29e1e48dbd882b53933109014f4"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20230801-18-cartera-ss",
+			"locator": "Anexo II, ficha 050204, «Aportación de la persona usuaria»",
+			"excerpt": "Los servicios de teleasistencia son gratuitos, excepto en el caso de los prestados en Madrid Capital por parte del Ayuntamiento de Madrid. En este caso, la aportación de la persona usuaria se ajustará a la tabla de precios establecida por la ordenanza municipal en vigor.",
+			"excerptSha256": "c0325b5318e3bb9f52a36a6af681018ba8931ee2523428ad56a09aa05cc21198"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	},
+	"themes": [
+		"mayores",
+		"dependencia_discapacidad"
+	],
+	"lifeEvents": [
+		"mayor_65",
+		"discapacidad"
+	]
+}

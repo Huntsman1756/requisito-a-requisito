@@ -1,0 +1,45 @@
+{
+	"id": "gp-teleasistencia-vallecas",
+	"description": "Persona de 78 años, jubilada, empadronada en Madrid capital (28079, Puente de Vallecas) desde hace años, sin personas a cargo, sin discapacidad ni dependencia reconocidas, ingresos en banda media. Vive sola (dato no comprobable con nuestras preguntas). Caso positivo típico del servicio municipal de Teleasistencia: cumple los requisitos comprobables y el veredicto es «posible» porque quedan requisitos no comprobables (capacidad de uso, valoración de Servicios Sociales, prioridad efectiva). Servicio permanente: ROLLING.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
+			"residenceSince": { "state": "value", "value": { "year": 1995, "month": 3 } },
+			"age": { "state": "value", "value": 78 },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "jubilado" },
+			"incomeAnnual": { "state": "value", "value": { "min": 8400, "max": 16800 } },
+			"disability": { "state": "value", "value": "no" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-teleasistencia-domiciliaria",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "transparencia-carta-teleasistencia-2026",
+					"locator": "Sección 2, «Requisitos de la persona interesada»",
+					"reasoning": "Municipio 28079 = ciudad de Madrid ⇒ el requisito duro de empadronamiento en la ciudad de Madrid es T («Estar empadronado/a en la ciudad de Madrid.»)."
+				},
+				{
+					"sourceId": "transparencia-carta-teleasistencia-2026",
+					"locator": "Sección 2, «Personas destinatarias»",
+					"reasoning": "78 años ≥ 65 ⇒ la rama de edad del requisito (aviso) de población destinataria es T («Personas mayores de 65 años, priorizando a las mayores de 80 años que vivan solas.»); la vía 010 para mayores de 65 que viven solas según el Padrón encaja con el perfil, aunque «vive sola» no se puede comprobar con nuestras preguntas."
+				},
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Anexo II, ficha 050204",
+					"reasoning": "Veredicto «posible» y no «probable»: quedan requisitos no comprobables (capacidad de uso adecuado, valoración de Servicios Sociales y, en su caso, la ordenanza municipal de precios que fija la cuota 0/6/9/12 € según RMPC — gratuita a partir de 87 años). El servicio es permanente ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

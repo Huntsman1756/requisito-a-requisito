@@ -1,0 +1,102 @@
+{
+	"id": "gp-beca-6000-parla",
+	"description": "Alumna de 16–17 años, graduada de ESO en 2026, empadronada en Parla (28106) desde el nacimiento, vive con su madre (unidad familiar de dos miembros) e ingresos anuales bajos del hogar (banda 0–8.400 €). Caso «posible»: cumple lo comprobable con nuestras preguntas (estudia; ingresos del hogar por debajo del umbral), pero la beca exige matrícula o reserva de un curso completo de Bachillerato en un centro privado autorizado de la CM, no repetición y renta PER CÁPITA ≤ 35.913 € — requisitos no comprobables con el catálogo actual de preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28106"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2009,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 16,
+					"max": 17,
+					"maxExclusive": false
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": 2009
+			},
+			"dependents": {
+				"state": "unasked"
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "general"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "si"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-beca-6000",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "CLOSED_RECURRING",
+			"justification": [
+				{
+					"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+					"locator": "Extracto, «Segundo. Beneficiarios», a)",
+					"reasoning": "Responde «si» a la pregunta de estudios ⇒ requisito hard T (estar matriculada o con reserva de plaza para un curso completo de Bachillerato). El detalle (régimen privado, centro autorizado en la CM, curso completo, no repetición) es no comprobable con nuestras preguntas y queda en uncoveredRequirements."
+				},
+				{
+					"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+					"locator": "Extracto, «Segundo. Beneficiarios», c)",
+					"reasoning": "Banda de ingresos anuales 0–8.400 € ⇒ intervalo [0, 8400) < 35.913 ⇒ requisito soft T (aviso). El límite real es de renta PER CÁPITA de la unidad familiar (IRPF 2024 ÷ miembros computables), no de ingresos del hogar: queda documentado en uncoveredRequirements."
+				},
+				{
+					"sourceId": "bocm-20250428-19-bases-becas-bachillerato",
+					"locator": "Orden 1435/2025, arts. 4 y 6",
+					"reasoning": "hardF = 0 y hardU = 0 pero existen requisitos no comprobables (tipo de centro, curso completo, no repetición, per cápita real, mantenimiento durante el curso, concurrencia competitiva) ⇒ veredicto «posible», nunca «probable»."
+				},
+				{
+					"sourceId": "bocm-20260504-52-becas-bachillerato-2627",
+					"locator": "Extracto, «Sexto. Plazo de presentación de solicitudes»",
+					"reasoning": "Ventana 2026-05-05 → 2026-05-26 (15 días hábiles desde la publicación del extracto el 04/05/2026), cerrada a la fecha de evaluación 2026-10-05. Con ≥2 convocatorias anuales consecutivas citadas en previousCalls (2024-2025 y 2025-2026) ⇒ deadlineState CLOSED_RECURRING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	},
+	"benefitSlug": "madrid-becas-bachillerato-centros-privados",
+	"rulesVersion": 2
+}

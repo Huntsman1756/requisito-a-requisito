@@ -45,13 +45,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							</svg>
 							<span className="brand-name">Requisito a Requisito</span>
 						</Link>
-						<nav className="site-nav" aria-label="Principal">
-							<Link href="/comprobar">Comprobar</Link>
-							<Link href="/ayudas">Ayudas</Link>
-							<Link href="/explorar">Explorar</Link>
-							<Link href="/observatorio">Observatorio</Link>
-							<Link href="/como-funciona">Cómo funciona</Link>
-						</nav>
+						<details className="nav-menu">
+							<summary>Menú</summary>
+							<nav className="site-nav" aria-label="Principal">
+								<Link href="/comprobar">Comprobar</Link>
+								<Link href="/ayudas">Ayudas</Link>
+								<Link href="/explorar">Explorar</Link>
+								<Link href="/observatorio">Observatorio</Link>
+								<Link href="/como-funciona">Cómo funciona</Link>
+							</nav>
+						</details>
 					</div>
 					<p className="pilot-banner" role="status">
 						Versión piloto — catálogo en crecimiento. Tus respuestas no salen

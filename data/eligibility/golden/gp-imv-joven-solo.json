@@ -1,0 +1,47 @@
+{
+	"id": "gp-imv-joven-solo",
+	"description": "Joven de 21 años que vive solo en Madrid (empadronado desde 03/2023, > 1 año), sin personas a cargo, desempleado y con ingresos anuales en la banda más baja. Caso negativo claro: no llega a los 23 años exigidos al titular individual ni tiene hijos o menores a cargo, así que el requisito de edad queda en F y excluye. Las excepciones de 18–22 años (extutelados, huérfanos absolutos, liberados de prisión, víctimas de violencia de género o trata) no son comprobables con nuestras preguntas y quedan como aviso en uncoveredRequirements.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
+			"residenceSince": { "state": "value", "value": { "year": 2023, "month": 3 } },
+			"age": { "state": "value", "value": { "min": 21, "max": 21, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "imv",
+			"rulesVersion": 1,
+			"verdict": "no_cumple",
+			"deadlineState": "ROLLING",
+			"blockers": ["edad-minima"],
+			"justification": [
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 5.2 y Art. 4.1.b",
+					"reasoning": "21 años y sin menores a cargo: no alcanza los 23 años exigidos a la persona titular individual ni encaja en la vía de mayor de edad con hijos o menores a cargo (dependents = [] ⇒ count_where_gte F). Las excepciones de 18–22 años (extutela, huérfanos absolutos, prisión >6 meses, violencia de género o trata) no son comprobables con nuestras preguntas: quedan en uncoveredRequirements como ⚠, así que la persona debe revisarlas antes de descartar la solicitud."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 10.1.a",
+					"reasoning": "Empadronado en Madrid desde 03/2023 ⇒ ~43 meses de residencia a 05/10/2026 (≥ 12): el requisito de residencia queda en T (proxy por empadronamiento; la legalidad de la residencia es uncovered)."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 14.1",
+					"reasoning": "La prestación se solicita en cualquier momento (el derecho nace el mes siguiente a la solicitud) ⇒ deadline ROLLING."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}
