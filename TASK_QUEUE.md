@@ -1,6 +1,6 @@
 # Cola de tareas
 
-**Fase activa: F0** — reorientada el 2026-10-05 a **proyecto nuevo e independiente en este repo** (ADR-022). Próximo: F0-7 → F0-8 → F0-9 → F0-5b; después F1/F2.
+**Fase activa: F3** — F0/F1/F2 cerradas el 2026-10-05. Próximo: F3 lotes (reglas Madrid citadas) → F3-R/G/M; después F4.
 Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit · evidencia)` · `BLOQUEADO: motivo — quién`.
 
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
@@ -20,8 +20,8 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | D-1 | Vehículo | **Daniel** | — | — | HECHO (2026-10-05 · ADR-022) | Proyecto nuevo, solo Madrid; la-ayuda y EduAyudas como donantes de solo lectura |
 | D-4 | **Crear el repo GitHub público** de este proyecto (ADR-025) y autorizar el push. Al ser nuevo, no hay historial heredado que auditar; el agente comprueba que no haya secretos antes del primer push | **Daniel** (decisión) + agente (escaneo) | 08/10 | — | TODO | Sin esto, el ecosistema queda en promesa |
 | D-5 | Categoría: con los datos de F0, **recomendación: Leader** si no hay respuesta afirmativa sobre Impact antes del 12/10 | **Daniel** | ≤ 12/10 | F0-2 | TODO | Ver docs/01 «Evaluación tras F0» |
-| F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | TODO (F1-1 se porta en F0-8) | |
-| F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | TODO | |
+| F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | HECHO (2026-10-05 · commits be24d10…61002d0) | registry, snapshot+normalize, G1–G10 con negativos, build con digest, IPREM/SMI BOE, INE 2026 (19 CCAA/52 prov/8132 mun), preguntas ≤10 visibles. 101 tests |
+| F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | HECHO (2026-10-05 · commits 9f3a43c, 7521a82, 2849e17) | Motor puro completo; 151 tests; exhaustivo 0 violaciones en 3 fixtures; pureza verificada; microbench 25 evals <5ms. Pendiente: exhaustivo sobre reglas reales (F3) |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | TODO | |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
 | F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |

@@ -1,0 +1,63 @@
+{
+  "phase": "F1+F2",
+  "date": "2026-10-05",
+  "agent": "SWE-2 High (Devin CLI)",
+  "repo": "datawardsmadrid",
+  "branch": "main",
+  "headCommit": "2849e17",
+  "baseCommit": "7f61ea5",
+  "commands": [
+    { "cmd": "npm run check", "exitCode": 0, "summary": "tsc --noEmit sin errores" },
+    { "cmd": "npm run lint", "exitCode": 0, "summary": "0 warnings de código (2 infos de config schema, preexistentes)" },
+    { "cmd": "npm test", "exitCode": 0, "summary": "151 passed / 0 failed (17 ficheros)" },
+    { "cmd": "npm run build", "exitCode": 0, "summary": "eligibility:build --strict + next build export OK" },
+    { "cmd": "npm run eligibility:exhaustive", "exitCode": 0, "summary": "0 violaciones (0 RuleSets reales aún; F3)" }
+  ],
+  "gateChecklist": [
+    { "item": "F1-1 Zod equivalente a los 7 schemas (portado F0-8, 36 tests)", "status": "PASS", "evidence": "tests/eligibility/schema.test.ts" },
+    { "item": "F1-2 registro de dominios con autoridad máxima", "status": "PASS", "evidence": "data/eligibility/sources/registry.json" },
+    { "item": "F1-3 snapshot: descarga+sha256+texto normalizado (NFC, espacios, guionados, comillas)", "status": "PASS", "evidence": "scripts/eligibility-snapshot.ts" },
+    { "item": "F1-4 validate con G1–G10 y test negativo por gate", "status": "PASS", "evidence": "tests/eligibility/validate.test.ts" },
+    { "item": "F1-5 bundle + manifiesto con digest estable + integración en build", "status": "PASS", "evidence": "tests/eligibility/build.test.ts" },
+    { "item": "F1-6 IPREM y SMI citados a norma BOE con extracto+sha256", "status": "PASS", "evidence": "data/eligibility/parameters.json" },
+    { "item": "F1-7 tabla INE CCAA/provincia/municipio con snapshot y lookup", "status": "PASS", "evidence": "data/eligibility/territory.json (19/52/8132)" },
+    { "item": "F1-8 catálogo de preguntas ≤10 visibles, tokens reusados, whyKey, sensitivity", "status": "PASS", "evidence": "data/eligibility/questions.json" },
+    { "item": "F2: el motor no importa Next/React/fs/Date.now (test de pureza)", "status": "PASS", "evidence": "tests/eligibility/purity.test.ts" },
+    { "item": "F2: exhaustivo 0 violaciones de invariantes/monotonía/determinismo", "status": "PASS", "evidence": "tests/eligibility/exhaustive.test.ts (3 RuleSets fixture; falta corrida sobre reglas reales en F3)" },
+    { "item": "F2: oráculo independiente = veredicto en el 100% del espacio (tabla literal 16 filas)", "status": "PASS", "evidence": "verdict-oracle.ts + exhaustive.test.ts" },
+    { "item": "F2: cobertura ≥95% del motor", "status": "N/A", "evidence": "sin coverage configurado en el repo; 52 tests unitarios cubren cada operador/veredicto/invariante por tabla" },
+    { "item": "recibo y handoff", "status": "PASS", "evidence": "este fichero + handoffs/2026-10-05-F2.md" }
+  ],
+  "metrics": {
+    "tests": 151,
+    "territory": { "ccaa": 19, "provinces": 52, "municipalities": 8132 },
+    "parameters": 7,
+    "exhaustiveProfilesFixtures": "cartesian completo en 3 RuleSets de test",
+    "perf": "25 evaluaciones <5ms en Node"
+  },
+  "evidence": [
+    "data/eligibility/territory.json",
+    "data/eligibility/parameters.json",
+    "data/eligibility/questions.json",
+    "data/eligibility/sources/ine-cod-provincia.json",
+    "data/eligibility/sources/boe-ley-31-2022-iprem.json",
+    "data/eligibility/sources/boe-rd-126-2026-smi.json"
+  ],
+  "deviations": [
+    { "class": "D1", "description": "G2 admite standalone:true además de slug de catálogo importado", "reason": "el proyecto es independiente del ledger de la-ayuda tras ADR-022" },
+    { "class": "D1", "description": "El exhaustivo solo corre sobre fixtures hasta que existan RuleSets reales (F3)", "reason": "no hay reglas aprobadas aún; la corrida real es parte de la puerta de F3" },
+    { "class": "D0", "description": "declined no se vuelve a pedir en missing (docs/07 §1)", "reason": "implementado: missingFields vacío para declined" }
+  ],
+  "knownLimits": [
+    "El generador exhaustivo se probó sobre 3 fixtures; la corrida de la puerta sobre ≥8 RuleSets reales es parte de F3.",
+    "Cobertura de líneas no medida (Vitest coverage no configurado en el repo).",
+    "futureEligibility solo calcula fechas para hojas gte/gt sobre age/residenceMonths (intervalos → rango)."
+  ],
+  "openBlockers": [
+    "D-4: crear repo GitHub público y autorizar push — Daniel",
+    "D-6: nombre del producto y dominio de la demo — Daniel",
+    "D-3: demo desplegada o solo vídeo — Daniel",
+    "F3-R: revisión humana de cada lote de reglas — Daniel (G10 la exige para incluir en bundle release)"
+  ],
+  "nextTask": "F3 lote 1: RuleSets citados de las 12 candidatas priorizadas"
+}
