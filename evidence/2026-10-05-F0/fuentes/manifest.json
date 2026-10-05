@@ -1,0 +1,33 @@
+{
+  "measuredAt": "2026-10-05",
+  "sources": [
+    {
+      "id": "orden-566-2026",
+      "title": "ORDEN 566/2026, de 24 de septiembre, de la Consejería de Digitalización, por la que se crean los premios Global Tech Leaders Awards, se aprueban sus bases reguladoras y se realiza la convocatoria del año 2026",
+      "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/10/01/BOCM-20261001-20.PDF",
+      "file": "BOCM-20261001-20.PDF",
+      "sha256": "d57acba2ed1a247a23e3bdc6f8bd0addb07efb4a103e0c66882792e2fd9a4f6f",
+      "bytes": 222888,
+      "publication": "BOCM núm. 234, jueves 1 de octubre de 2026, págs. 76-88",
+      "rank": 1
+    },
+    {
+      "id": "extracto-bocm-566-2026",
+      "title": "EXTRACTO de la Orden 566/2026 (BDNS 932105)",
+      "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/10/01/BOCM-20261001-21.PDF",
+      "file": "BOCM-20261001-21.PDF",
+      "sha256": "6dcde2c9e5cd9c8314932d56aa7764621d55d59699c447c559576bfb25b0eccd",
+      "bytes": 87546,
+      "publication": "BOCM núm. 234, jueves 1 de octubre de 2026, págs. 89-90",
+      "rank": 1
+    },
+    {
+      "id": "sede-p105",
+      "title": "Sede electrónica CM — trámite P105 «Premios Global Tech Leaders Awards»",
+      "url": "https://sede.comunidad.madrid/premios/premios-global-tech-leaders-awards",
+      "fetchedAt": "2026-10-05",
+      "rank": 2,
+      "notes": "Ficha del trámite: plazo 02/10-16/10/2026, sin tasas, contacto Subdirección de Sociedad y Economía Digital <sociedadyeconomia.digital@madrid.org>. Contenido orientativo no vinculante (aviso propio de la sede)."
+    }
+  ]
+}

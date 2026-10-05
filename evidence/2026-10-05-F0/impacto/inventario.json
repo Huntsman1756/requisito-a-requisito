@@ -1,0 +1,61 @@
+{
+  "measuredAt": "2026-10-05",
+  "scope": "F0-3 — inventario de impacto real, solo lectura",
+  "metrics": {
+    "la_ayuda.telemetry": {
+      "value": null,
+      "source": "src/lib/analytics.ts (worktree premio-gtl)",
+      "command_or_url": "lectura de src/lib/analytics.ts",
+      "reason": "La analítica es localStorage-only; AGGREGATE_ENDPOINT vacío => modo local sin envío. No existe dato agregado de uso."
+    },
+    "edubecas.es.analytics": {
+      "value": null,
+      "source": "GA4 G-9BTGRCDPR6 (components/AnalyticsConsent.tsx, app/(public)/privacidad en G:/_Proyectos/eduayudas)",
+      "command_or_url": "grep en G:/_Proyectos/eduayudas (solo lectura)",
+      "reason": "GA4 instalado y consent-gated, pero el panel de GA4 no es accesible desde esta máquina. BLOQUEADO: cifras de tráfico de edubecas.es — Daniel."
+    },
+    "edubecas.es.logs_servidor": {
+      "value": null,
+      "source": "VPS de edubecas.es",
+      "command_or_url": "—",
+      "reason": "Sin acceso SSH autorizado desde esta sesión. BLOQUEADO — Daniel."
+    },
+    "github.mapa-de-beneficios": {
+      "value": {"stars": 0, "forks": 0, "watchers": 0, "open_issues": 24, "visibility": "private", "created": "2026-03-22", "pushed": "2026-10-04", "clones_14d": 189, "clones_uniques_14d": 5, "views_14d": 0},
+      "source": "GitHub API",
+      "command_or_url": "gh api repos/Huntsman1756/mapa-de-beneficios + /traffic/clones + /traffic/views",
+      "note": "Repo privado: stars/forks = 0 esperado. Los clones de 14d corresponden a máquinas propias/orquestación, no a usuarios externos. open_issues son internos."
+    },
+    "github.edubecas": {
+      "value": {"stars": 0, "forks": 0, "watchers": 0, "open_issues": 5, "visibility": "private", "created": "2026-05-12", "pushed": "2026-10-04", "clones_14d": 13, "clones_uniques_14d": 2, "views_14d": 0},
+      "source": "GitHub API",
+      "command_or_url": "gh api repos/Huntsman1756/edubecas + /traffic/clones + /traffic/views",
+      "note": "Repo privado; sin señal externa."
+    },
+    "github.renta-verificable": {
+      "value": {"stars": 0, "forks": 0, "watchers": 0, "open_issues": 13, "visibility": "private", "created": "2026-06-28", "pushed": "2026-10-04", "clones_14d": 344, "clones_uniques_14d": 4, "views_14d": 0},
+      "source": "GitHub API",
+      "command_or_url": "gh api repos/Huntsman1756/renta-verificable + /traffic/clones + /traffic/views",
+      "note": "Repo privado; clones propios."
+    },
+    "datasets_publicados": {
+      "value": null,
+      "source": "—",
+      "command_or_url": "revisión manual",
+      "reason": "No se han publicado datasets propios en portales de datos abiertos."
+    },
+    "menciones_externas": {
+      "value": 0,
+      "source": "búsqueda web \"edubecas.es\"",
+      "command_or_url": "web_search \"edubecas.es\" (2026-10-05)",
+      "note": "Los resultados corresponden a proyectos homónimos ajenos (FEPADE El Salvador, EcuRed Cuba). Ninguna mención a edubecas.es ni a La Ayuda."
+    },
+    "sitios_en_produccion": {
+      "value": {"edubecas.es": "en producción (según AGENTS.md de eduayudas)", "la-ayuda": "desplegable; URL pública no verificada en esta sesión"},
+      "source": "AGENTS.md de cada repo",
+      "command_or_url": "lectura local",
+      "note": "No se ha hecho fetch de edubecas.es en esta sesión; si hace falta para la memoria, medir en F7."
+    }
+  },
+  "conclusion_for_D1": "Sin métricas de uso externas recuperables desde esta máquina: repos privados (0 stars), sin menciones, sin datasets, GA4 de edubecas sin acceso. El impacto demostrable deberá apoyarse en métricas de producto verificables (nº de ayudas con fuente, cobertura, pipeline de verificación) y, si Daniel aporta, cifras de GA4/edubecas.es."
+}

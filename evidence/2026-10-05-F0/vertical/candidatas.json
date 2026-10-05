@@ -1,0 +1,203 @@
+{
+  "measuredAt": "2026-10-05",
+  "criterio": {
+    "vertical": "type in {child_support, education_support, scholarship} OR category in {familia, educacion, beca}",
+    "excluido": "type=tax_deduction; fichas de la auditoría 2026-09-27 (madrid/baleares deducción alquiler — ambas tax_deduction, ya excluidas)",
+    "autoridad_vigente_nota": "En la rama main (63ad635b) no existe data/pipeline/authority/publication-ledger.jsonl (ese sistema vive en integrate/autonomous-pipeline). Se aplica el gate vigente en main: status=active && reviewStatus=revisada. DESVIACIÓN respecto a AGENTS.md §4.5, documentada.",
+    "fuente_datos": "src/content/benefits/*.md frontmatter (js-yaml), script F:/Temp/datawardsmadrid-f0/inventory.mjs"
+  },
+  "recuentos": {
+    "fichas_total": 5981,
+    "vertical_total": 1906,
+    "vertical_vigentes": 123,
+    "vigentes_por_plazo": {
+      "open": 8,
+      "rolling": 6,
+      "unknown": 2,
+      "closed": 107
+    }
+  },
+  "candidatas": [
+    {
+      "slug": "bocyl_bocyl-d-06052026-84-10",
+      "title": "Ayudas a la movilidad Erasmus+ para PDI y PTGAS de la Universidad de León",
+      "type": "education_support",
+      "category": "ayuda",
+      "scope": "castilla-leon",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Universidad de León",
+      "officialSourceUrl": "http://bocyl.jcyl.es/html/2026/05/06/html/BOCYL-D-06052026-84-10.do"
+    },
+    {
+      "slug": "bocyl_bocyl-d-21042026-75-8",
+      "title": "Becas Santander/Ayuda Económica 2026 para estudiantes de la Universidad de Burgos",
+      "type": "scholarship",
+      "category": "beca",
+      "scope": "castilla-leon",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Rectorado de la Universidad de Burgos",
+      "officialSourceUrl": "http://bocyl.jcyl.es/html/2026/04/21/html/BOCYL-D-21042026-75-8.do"
+    },
+    {
+      "slug": "boe-b-2026-10999",
+      "title": "Ayudas económicas para formación de idiomas para personal militar del Ejército de Tierra 2026",
+      "type": "education_support",
+      "category": "ayuda",
+      "scope": "state",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Mando de Adiestramiento y Doctrina del Ejército de Tierra",
+      "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10999"
+    },
+    {
+      "slug": "boe-b-2026-20704",
+      "title": "Concurso Nacional Una Constitución para todos. España en Democracia y Libertad 2026",
+      "type": "education_support",
+      "category": "educacion",
+      "scope": "state",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Secretaría de Estado de Educación",
+      "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20704"
+    },
+    {
+      "slug": "bon_2026_109_22",
+      "title": "Premio al mejor Trabajo Fin de Estudios de la UPNA en empresa familiar",
+      "type": "general_benefit",
+      "category": "familia",
+      "scope": "navarra",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Universidad Pública de Navarra",
+      "officialSourceUrl": "https://bon.navarra.es/es/anuncio/-/texto/2026/109/22"
+    },
+    {
+      "slug": "bon_2026_109_23",
+      "title": "Becas UPNA para estudiantes seleccionados en Olimpiadas Académicas Nacionales 2026-2027",
+      "type": "scholarship",
+      "category": "beca",
+      "scope": "navarra",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-18",
+      "managingBody": "Universidad Pública de Navarra",
+      "officialSourceUrl": "https://bon.navarra.es/es/anuncio/-/texto/2026/109/23"
+    },
+    {
+      "slug": "borm_a-080526-2009",
+      "title": "Ayudas para prácticas de enseñanza de idiomas en la Universidad de Murcia, 2026-2027",
+      "type": "scholarship",
+      "category": "educacion",
+      "scope": "murcia",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Universidad de Murcia",
+      "officialSourceUrl": "https://www.borm.es/services/boletin/ano/2026/numero/104/pdf"
+    },
+    {
+      "slug": "galicia-bono-concilia-familia",
+      "title": "Bono Concilia Familia de Galicia: hasta 500 € por unidad familiar",
+      "type": "aid_or_benefit",
+      "category": "familia",
+      "scope": "galicia",
+      "applicationStatus": "open",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Xunta de Galicia — Consellería de Política Social e Igualdade",
+      "officialSourceUrl": "https://www.xunta.gal/dog/Publicados/2026/20260901/AnuncioG0762-180826-0001_es.html"
+    },
+    {
+      "slug": "aragon-ayudas-jovenes-actividades-tiempo-libre",
+      "title": "Aragón: ayudas de tiempo libre para menores (hasta 1.000 €)",
+      "type": "aid_or_benefit",
+      "category": "familia",
+      "scope": "aragon",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Gobierno de Aragón — Departamento responsable de Juventud",
+      "officialSourceUrl": "https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1451052340707"
+    },
+    {
+      "slug": "bocyl_bocyl-d-07052026-85-22",
+      "title": "Servicio de atención y cuidado del alumnado tras el horario lectivo, curso 2026-2027 (Castilla y León)",
+      "type": "education_support",
+      "category": "educacion",
+      "scope": "castilla-leon",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Consejería de Educación, Junta de Castilla y León",
+      "officialSourceUrl": "http://bocyl.jcyl.es/html/2026/05/07/html/BOCYL-D-07052026-85-22.do"
+    },
+    {
+      "slug": "bor_40908805-2-html-578058-x",
+      "title": "Ayudas para Programas Intensivos Combinados (BIP) Erasmus+ de la Universidad de La Rioja",
+      "type": "scholarship",
+      "category": "educacion",
+      "scope": "la-rioja",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Universidad de La Rioja",
+      "officialSourceUrl": "https://ias1.larioja.org/boletin/ExportarBoletinServlet?tipo=2&fecha=2026%2F06%2F18&referencia=40908805-2-HTML-578058-X"
+    },
+    {
+      "slug": "castilla-la-mancha-ayudas-familias-numerosas",
+      "title": "CLM: ayuda mensual a familias numerosas según nº de hijos",
+      "type": "aid_or_benefit",
+      "category": "familia",
+      "scope": "castilla-la-mancha",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Junta de Comunidades de Castilla-La Mancha — Bienestar Social",
+      "officialSourceUrl": "https://bienestarsocial.castillalamancha.es/actuaciones/ayuda-economica-familias-numerosas"
+    },
+    {
+      "slug": "descuento-transporte-familia-numerosa",
+      "title": "Renfe para familias numerosas: 20 % y 50 % de descuento",
+      "type": "aid_or_benefit",
+      "category": "familia",
+      "scope": "state",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Renfe Viajeros",
+      "officialSourceUrl": "https://www.renfe.com/es/es/viajar/prepara-tu-viaje/descuentos/familia-numerosa"
+    },
+    {
+      "slug": "madrid-beneficios-familias-numerosas",
+      "title": "Madrid: beneficios fiscales y sociales para familias numerosas",
+      "type": "aid_or_benefit",
+      "category": "familia",
+      "scope": "madrid",
+      "applicationStatus": "rolling",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Comunidad de Madrid",
+      "officialSourceUrl": "https://www.comunidad.madrid/servicios/asuntos-sociales/beneficios-familias-numerosas"
+    },
+    {
+      "slug": "boe-b-2026-2874",
+      "title": "Programa de 10 Ayudas para Estudios en Economía y Finanzas del Banco de España, curso 2026-2027",
+      "type": "education_support",
+      "category": "educacion",
+      "scope": "state",
+      "applicationStatus": "unknown",
+      "lastReviewedAt": "2026-09-20",
+      "managingBody": "Banco de España",
+      "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-2874"
+    },
+    {
+      "slug": "boja_disposition_2026_117_64",
+      "title": "Becas y ayudas de Formación de Excelencia e Innovación de los Servicios de Farmacia Hospitalaria 2026",
+      "type": "scholarship",
+      "category": "core",
+      "scope": "andalucia",
+      "applicationStatus": "unknown",
+      "lastReviewedAt": "2026-07-09",
+      "managingBody": "Fundación Andaluza de Farmacia Hospitalaria (FAFH)",
+      "officialSourceUrl": "https://www.juntadeandalucia.es/eboja/2026/117/64"
+    }
+  ],
+  "observaciones": [
+    "bon_2026_109_22 es un premio TFE (no una ayuda recurrente); boe-b-2026-20704 es un concurso escolar; boe-b-2026-10999 es para personal militar: útiles como candidatas pero conviene priorizar las de perfil ciudadano general en F3.",
+    "madrid-beneficios-familias-numerosas y descuento-transporte-familia-numerosa son rolling sin convocatoria: buenos casos para deadline tipo permanente/rolling.",
+    "Si F3 necesita más volumen hay 107 vigentes con applicationStatus=closed, muchas de convocatoria anual (recurrencia), reutilizables como demostración de plazo cerrado."
+  ]
+}

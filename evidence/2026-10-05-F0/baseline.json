@@ -1,0 +1,47 @@
+{
+  "measuredAt": "2026-10-05",
+  "worktree": "F:/AgentState/worktrees/la-ayuda/premio-gtl",
+  "branch": "feat/premio-gtl-elegibilidad",
+  "base": "main @ 63ad635b2458d50ba99bc26e78ba3bba99789c03",
+  "node": "v24.19.0",
+  "npm": "12.2.0",
+  "commands": {
+    "npm_ci": {
+      "exit": 0,
+      "notes": "136 paquetes. postinstall bloqueados por allowScripts (core-js, esbuild) pero @esbuild/win32-x64 llega por optionalDependencies: sin impacto."
+    },
+    "npm_run_check": {"exit": 0, "notes": "tsc --noEmit limpio"},
+    "npm_test": {
+      "exit": 0,
+      "test_files": "61 passed (61)",
+      "tests": "750 passed (750)",
+      "notes": "Primera pasada antes del build: 4 suites fallaron por 'out/ not found' (tests que consumen out/: e2e-cookie-i18n, performance-budget, integration/jsonld, integration/pages) y 5 tests por timeout de 5s bajo caché frío + npm ci concurrente (assertion-bindings p0b1/p1a, product-state CTA, secret-scan, frontier-nan worktree 124s). Re-ejecutados individualmente y en pasada completa tras el build: todos verdes. No son rojos reales: orden build→test documentado en docs/12 §2.5."
+    },
+    "npm_run_build": {
+      "exit": 0,
+      "notes": "Next.js 15.5.25, 2550 páginas generadas, publication build contract PASS, link check PASS (106188 enlaces). EV1: 481 entradas (419 verified, 23 invalidated, 8 review_due, 31 incomplete). Catalogo: 554 fichas públicas. WARNINGS preexistentes: presupuesto /explorar excedido (exploreCore 147>100, htmlBytes 1713925>819200, domNodes 5985>5000). Build genera ficheros runtime (data/product-state.json, ev1-state.json, docs/audits/product-state/product-state.json) quedan modificados sin commitear."
+    },
+    "npm_run_test_a11y": {
+      "exit": 0,
+      "tests": "12 passed (12)",
+      "notes": "axe en 12 rutas, 0 violaciones critical. PLAYWRIGHT_BROWSERS_PATH=F:\\Caches\\ms-playwright"
+    },
+    "npm_run_pipeline_authority_strict": {
+      "exit": null,
+      "notes": "NO EXISTE en main (63ad635b): ni script pipeline:authority ni data/pipeline/authority/. Ese sistema vive en integrate/autonomous-pipeline. Gate vigente en main: status=active && reviewStatus=revisada + tests content-governance. DESVIACIÓN documentada (D1-menor): F0-5 y F3 usan el gate de main."
+    }
+  },
+  "playwright_browsers": {
+    "path": "F:\\Caches\\ms-playwright",
+    "version": "1.61.1",
+    "required_revisions": {"chromium": "1228", "chromium-headless-shell": "1228", "firefox": "1532", "webkit": "2311", "ffmpeg": "1011"},
+    "all_present": true,
+    "notes": "npx playwright install chromium firefox webkit = no-op; todo estaba en caché."
+  },
+  "preexisting_red": "ninguno real tras re-ejecución; ver npm_test.notes",
+  "dirty_files_after_build": [
+    "data/product-state.json",
+    "docs/audits/evidence-verified-v1/ev1-state.json",
+    "docs/audits/product-state/product-state.json"
+  ]
+}

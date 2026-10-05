@@ -5,7 +5,11 @@ Subdirección competente de la Consejería de Digitalización). Un agente debe
 localizar en la Orden o la sede el órgano y la vía exacta (F0-1) y rellenarlo
 aquí; **no** enviarlo.
 
-- Órgano / vía: _pendiente F0-1_
+- Órgano / vía: **Subdirección de Sociedad y Economía Digital** (Dirección
+  General de Estrategia Digital, Consejería de Digitalización — órgano
+  instructor según art. 14), C/ Embajadores 181, 28045 Madrid.
+  Correo: **sociedadyeconomia.digital@madrid.org** (bloque «Contacto» de la
+  sede P105, verificado 2026-10-05).
 - Enviado: _fecha_ — Respuesta: _fecha / texto_ (copiar a `DECISIONS.md`)
 
 ---

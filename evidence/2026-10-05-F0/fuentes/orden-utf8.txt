@@ -1,0 +1,917 @@
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 76  JUEVES 1 DE OCTUBRE DE 2026                             B.O.C.M. Núm. 234
+
+         I. COMUNIDAD DE MADRID
+
+         C) Otras Disposiciones
+
+         Consejería de Digitalización
+
+20       ORDEN 566/2026, de 24 de septiembre, de la Consejería de Digitalización, por
+
+         la que se crean los premios Global Tech Leaders Awards, se aprueban sus bases
+
+         reguladoras y se realiza la convocatoria del año 2026.
+
+     De conformidad con el artículo 26.1.17 de la Ley Orgánica 3/1983, de 25 de febrero,         BOCM-20261001-20
+del Estatuto de Autonomía de la Comunidad de Madrid, la Comunidad de Madrid ostenta
+la competencia para el fomento del desarrollo económico, dentro de los objetivos marcados
+por la política económica nacional.
+
+     La transformación tecnológica y la innovación digital se han consolidado como vecto-
+res de progreso económico y social, en la medida en que inciden de forma directa en la pro-
+ductividad, en la competitividad del tejido empresarial, en la prestación de servicios más
+eficientes y accesibles y en la generación de nuevas oportunidades de desarrollo. La incor-
+poración intensiva de tecnologías avanzadas ha alterado de manera profunda los modelos
+productivos, la organización del trabajo y las formas de interacción social, configurando un
+nuevo paradigma en el que la capacidad de innovación y adaptación constituye un factor
+determinante de competitividad y prosperidad a largo plazo.
+
+     En este contexto, la Consejería de Digitalización considera oportuno reconocer y visi-
+bilizar las actuaciones, trayectorias e iniciativas cuya contribución resulte especialmente re-
+levante en el ámbito de la transformación tecnológica y la innovación digital, mediante el
+otorgamiento de un reconocimiento institucional como medida de fomento, dirigido a des-
+tacar a empresas, instituciones y profesionales que, por su actividad, favorezcan el desarro-
+llo económico y social asociado al proceso de digitalización.
+
+     De conformidad con el artículo 6 del Decreto 261/2023, de 29 de noviembre, del Con-
+sejo de Gobierno, por el que se establece la estructura orgánica de la Consejería de Digita-
+lización, corresponde a la consejería a través de la Dirección General de Estrategia Digital,
+entre otras funciones, la planificación y dirección de las acciones de impulso de la econo-
+mía digital de las empresas en la Comunidad de Madrid; el impulso y apoyo a las empresas
+y el desarrollo de programas para facilitar su transformación digital; la promoción del de-
+sarrollo de la sociedad digital para los ciudadanos; el establecimiento de políticas de fomen-
+to del desarrollo y atracción del talento digital; y el fomento del conocimiento y utilización
+de tecnologías informáticas disruptivas para la mejora de la competitividad, sin perjuicio de
+las competencias de otras consejerías.
+
+     La institución de premios sin compensación económica directa sino en especie, como
+se hace en esta orden, constituye una manifestación de la actividad administrativa de fo-
+mento, y por tanto se trata de subvenciones tal y como se definen en el artículo 2.1 de la
+Ley 38/2003, de 17 de noviembre, General de Subvenciones, así como en el artículo 1 de
+la Ley 2/1995, de 8 de marzo, de Subvenciones de la Comunidad de Madrid. Por esta ra-
+zón, su establecimiento y concesión han de someterse a los principios de igualdad y no dis-
+criminación, publicidad, objetividad y transparencia, así como al procedimiento estableci-
+do en las citadas leyes, lo que justifica la aprobación previa de unas bases reguladoras de
+los premios y la articulación del correspondiente procedimiento de concesión previa con-
+vocatoria pública.
+
+     La presente orden se adecua a los principios de buena regulación recogidos en el ar-
+tículo 129 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de
+las Administraciones Públicas.
+
+     Se adecúa a los principios de necesidad y eficacia, dado que se ha manifestado el im-
+pulso a la economía digital como objetivo prioritario de interés general de las medidas pro-
+yectadas, así como la definición de los objetivos y el establecimiento del instrumento de fo-
+mento contenido en esta disposición, consistente en la regulación de premios.
+
+     Se adecúa al principio de proporcionalidad, dado que contiene la regulación impres-
+cindible para establecer las bases reguladoras de estos premios, basados en el principio de
+igualdad, así como su convocatoria.
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                  Pág. 77
+
+     En aplicación del principio de seguridad jurídica, se dicta en coherencia con el resto el
+ordenamiento jurídico de la Comunidad de Madrid, nacional y de la Unión Europea, gene-
+rando un marco estable y claro, que facilita su conocimiento y comprensión.
+
+     En aplicación del principio de transparencia, se ha posibilitado un acceso sencillo, uni-
+versal y actualizado a este texto normativo, así como a los documentos propios de su pro-
+ceso de elaboración. Una vez aprobada la orden, se puede consultar en la base de legisla-
+ción de la Comunidad de Madrid contenida en el Portal de Transparencia de la Comunidad
+de Madrid.
+
+     Esta orden se adecua al principio de eficiencia, ya que no conlleva cargas administra-
+tivas innecesarias o accesorias.
+
+     Para la elaboración de esta orden se han emitido los informes preceptivos de la Direc-
+ción General de Transparencia y Atención al Ciudadano, el informe de impacto por razón
+de género de la Dirección General de la Mujer, el informe de impacto en materia de infan-
+cia, familia y adolescencia de la Dirección General de Familia, Infancia y Fomento de la
+Natalidad, así como los informes de la Secretaría General Técnica, y de la Abogacía Gene-
+ral de la Comunidad de Madrid.
+
+     En virtud de lo expuesto, a propuesta de la Dirección General de Estrategia Digital, y
+de acuerdo con las competencias atribuidas en el artículo 41.d) de la Ley 1/1983, de 13 de
+diciembre, de Gobierno y Administración de la Comunidad de Madrid,
+
+                                               DISPONGO                                                  BOCM-20261001-20
+
+                                                TÍTULO I
+
+             Bases reguladoras de los premios Global Tech Leaders Awards
+
+                                                Capítulo I
+
+                                      Disposiciones generales
+
+Artículo 1
+
+Objeto
+
+     La presente orden tiene por objeto la creación de los Premios Global Tech Leaders
+Awards (en adelante, los premios), y el establecimiento de sus bases reguladoras.
+
+Artículo 2
+
+Finalidad de los premios
+
+     Los premios tienen por finalidad reconocer y visibilizar las actuaciones, trayectorias e
+iniciativas de empresas, instituciones y profesionales que destaquen por su contribución a
+la transformación tecnológica, la innovación digital y el desarrollo económico y social.
+
+     Asimismo, los premios persiguen fomentar la adopción de tecnologías avanzadas, im-
+pulsar la colaboración entre agentes del ecosistema y promover soluciones alineadas con
+los retos estratégicos de la economía digital.
+
+Artículo 3
+
+Régimen jurídico
+
+     1. Los premios regulados en la presente orden tendrán la naturaleza jurídica de sub-
+venciones y se regirán por lo dispuesto en la Ley 38/2003, de 17 de noviembre, General de
+Subvenciones; por su Reglamento, aprobado por Real Decreto 887/2006, de 21 de julio; por
+la Ley 2/1995, de 8 de marzo, de Subvenciones de la Comunidad de Madrid; por el Decre-
+to 76/1993, de 26 de agosto, por el que se aprueba el Reglamento de Procedimiento para la
+concesión de ayudas y subvenciones públicas; por el Decreto 222/1998, de 23 de diciem-
+bre, de desarrollo parcial de la Ley 2/1995; por la presente orden; y por las restantes nor-
+mas que resulten de aplicación.
+
+     2. Los premios se concederán en régimen de concurrencia competitiva y serán com-
+patibles con otros premios, subvenciones, ayudas, ingresos o recursos que tengan por obje-
+to la misma finalidad.
+
+     3. Los premios regulados en la presente orden se encuentran previstos en el Plan Es-
+tratégico de Subvenciones de la Consejería de Digitalización para el ejercicio 2026, apro-
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 78  JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+bado por la Orden 275/2026, de 20 de mayo, y modificado por la Orden 524/2026, de 10 de
+agosto, ambas de la Consejería de Digitalización, de conformidad con lo previsto en el ar-
+tículo 8 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones.
+
+Artículo 4
+
+Naturaleza de los premios
+
+     1. Los premios se materializarán mediante subvenciones en especie, consistentes en
+la entrega de bienes de carácter no dinerario.
+
+     Dichos premios podrán consistir en la entrega de una estatuilla, una placa conmemo-
+rativa u otro objeto similar.
+
+     2. El valor estimado máximo de la subvención por iniciativa beneficiaria será de cien
+(100) euros y corresponderá al precio de adquisición de los bienes entregados.
+
+     3. En ningún caso la subvención podrá ser sustituida por su equivalente en metálico
+ni generar derecho a compensación económica alguna.
+
+                                               Capítulo II                                    BOCM-20261001-20
+
+                                             Participantes
+
+Artículo 5
+
+Personas o entidades participantes
+
+     1. La convocatoria tendrá carácter internacional pudiendo presentar su candidatura
+cualesquiera personas físicas o jurídicas, públicas o privadas, nacionales o extranjeras.
+
+     2. Las candidaturas podrán ser presentadas por personas jurídicas distintas de la per-
+sona candidata, siempre que esta última reúna los requisitos exigidos en las presentes ba-
+ses. En tales supuestos, la persona proponente deberá recabar, con carácter previo a la tra-
+mitación de la candidatura, el consentimiento expreso de la persona propuesta, debiendo
+adjuntar dicho consentimiento a la solicitud.
+
+     En dicho consentimiento, la persona propuesta deberá manifestar formalmente su vo-
+luntad de participar en el proceso de selección, así como su plena conformidad con las con-
+diciones establecidas en las presentes bases. La falta de aportación de este consentimiento
+determinará la inadmisión de la candidatura.
+
+     Asimismo, una vez comunicada la propuesta a la Administración, la persona propo-
+nente quedará exonerada de cualquier responsabilidad ulterior, correspondiendo exclusiva-
+mente a la persona candidata la aportación de la documentación exigida y el cumplimiento
+de los plazos y demás obligaciones derivadas del procedimiento.
+
+     El consentimiento expreso del beneficiario contenido en la candidatura equivaldrá a la
+solicitud de participación en la convocatoria y a la aceptación de sus bases reguladoras.
+
+     3. Además de las candidaturas presentadas en el marco de la convocatoria abierta, la
+Administración se reserva la facultad de proponer, invitar o incorporar candidaturas adicio-
+nales que, en atención a su relevancia, trayectoria o impacto, resulten adecuadas al objeto
+y a las categorías definidas en las presentes bases. Dichas candidaturas serán sometidas al
+correspondiente procedimiento de valoración en condiciones de plena igualdad con el res-
+to de las presentadas, con sujeción a los mismos criterios y conforme al procedimiento es-
+tablecido en las presentes bases.
+
+     En este caso, la persona propuesta por la Administración deberá manifestar formal-
+mente su voluntad de participar en el proceso de selección, así como su plena conformidad
+con las condiciones establecidas en las presentes bases, la falta de aportación de este con-
+sentimiento determinará el decaimiento de la propuesta de la Administración.
+
+     El consentimiento expreso del beneficiario incorporado a la candidatura propuesta por
+la Administración equivaldrá a la solicitud de participación en la convocatoria y a la acep-
+tación de sus bases reguladoras.
+
+     La propuesta de candidaturas prevista en este punto podrá ser realizada por cualquier
+consejería o entidad pública de la Comunidad de Madrid, deberá ser asumida por la Conse-
+jería de Digitalización, y ser objeto de admisión junto con las demás candidaturas presen-
+tadas con anterioridad a la valoración por el jurado. Asimismo, tales candidaturas deberán
+cumplir el resto de requisitos establecidos en este artículo y en el siguiente.
+
+     4. La aceptación por parte del beneficiario propuesto se presentará cumplimentando
+el modelo que figura como Anexo I de esta orden.
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                 Pág. 79
+
+Artículo 6
+
+Requisitos
+
+     Las personas participantes deberán cumplir, en la fecha de presentación de la candida-
+tura y durante la tramitación de la convocatoria, los siguientes requisitos:
+
+     a) Tener capacidad legal para participar, conforme a la normativa que les resulte
+           aplicable en su país de origen.
+
+     b) Presentar una candidatura veraz, completa y actualizada.
+     c) Ser titulares, responsables directos o representantes legítimos del proyecto, inicia-
+
+           tiva o trayectoria que se presenta.
+           No podrán participar las candidaturas que incumplan los requisitos anteriores o
+           que se encuentren en una situación de conflicto legal o de interés que pueda com-
+           prometer la integridad, objetividad o reputación de los premios. La inadmisión por
+           este motivo será motivada y se notificará a la persona o entidad candidatas.
+
+     Los requisitos establecidos en este artículo deberán cumplirse en el momento de presen-
+tación o incorporación de la candidatura y mantenerse hasta la resolución del procedimiento.
+
+     Su cumplimiento se acreditará mediante la documentación aportada con la candidatu-
+ra y, cuando proceda, mediante declaración responsable, sin perjuicio de las facultades de
+comprobación del órgano instructor.
+
+Artículo 7
+
+Obligaciones
+
+     Las personas o entidades participantes estarán obligadas a:
+
+     a) Aportar la documentación e información que resulte necesaria para la tramitación,
+           admisión y valoración de la candidatura.
+
+     b) Atender los requerimientos de subsanación o aclaración que formule el órgano
+           instructor.
+
+     c) Mantener la veracidad de los datos y documentos facilitados.
+     d) Respetar las condiciones establecidas en las presentes bases.
+     e) Facilitar cuanta información les sea requerida por la Intervención General de la
+
+           Comunidad de Madrid, el Tribunal de Cuentas y los demás órganos de control
+           competentes, en los términos establecidos en la normativa aplicable.
+
+     La presentación de la candidatura implicará la aceptación íntegra del contenido de la
+presente orden.
+
+                                               Capítulo III                                             BOCM-20261001-20
+
+                                  Características de los premios
+
+Artículo 8
+
+Categorías
+
+     Los premios se estructuran en las siguientes categorías:
+
+     a) Global Tech Leader Award.
+     b) Global AI & Emerging Technologies Award.
+     c) Global Tech Company Award.
+     d) Global Tech Impact Award.
+     e) Global Public International Innovation Award.
+
+     En la categoría Global Tech Leader Award se reconocerá a CEOs, CIOs, CTOs y otros
+líderes tecnológicos que destaquen por su visión estratégica y capacidad de ejecución.
+
+     En la categoría Global AI & Emerging Technologies Award se reconocerá a empre-
+sas, instituciones o equipos que desarrollen o apliquen soluciones basadas en inteligencia
+artificial y tecnologías emergentes.
+
+     En la categoría Global Tech Company Award se reconocerá a empresas que hayan in-
+tegrado la tecnología de forma transversal en su modelo de negocio.
+
+     En la categoría Global Tech Impact Award se reconocerá a empresas, fundaciones o
+entidades con iniciativas tecnológicas orientadas al impacto social, medioambiental o al de-
+sarrollo del talento.
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 80  JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+     En la categoría Global Public International Innovation Award se reconocerá a las Ad-
+ministraciones públicas y entidades públicas que utilicen la tecnología para mejorar los
+servicios públicos.
+
+Artículo 9
+
+Subcategorías
+
+     En las respectivas convocatorias podrá preverse la creación de nuevas subcategorías, cuya
+eficacia quedará limitada, en todo caso, a la concreta convocatoria en que se establezcan.
+
+Artículo 10
+
+Finalistas y ganador
+
+     En cada categoría podrá seleccionarse hasta un máximo de tres finalistas y un ganador.
+Excepcionalmente, el jurado podrá proponer la concesión de un premio ex aequo cuando
+las circunstancias lo justifiquen.
+
+     Asimismo, podrán otorgarse menciones especiales de carácter honorífico a aquellas
+entidades, instituciones o personas que, sin resultar premiadas, destaquen por su relevan-
+cia, impacto o contribución al ecosistema tecnológico.
+
+                                               Capítulo IV                                       BOCM-20261001-20
+
+                                            Procedimiento
+
+Artículo 11
+
+Solicitudes
+
+     1. El plazo de presentación de solicitudes de candidaturas será de quince días natu-
+rales contados a partir del día siguiente al de la publicación de la convocatoria en el BOLE-
+TÍN OFICIAL DE LA COMUNIDAD DE MADRID.
+
+     Toda solicitud cuya presentación se produzca fuera del plazo establecido será inadmi-
+tida a trámite, mediante resolución motivada dictada por el titular de la Dirección General
+de Estrategia Digital.
+
+     2. Las solicitudes para participar en la convocatoria se cumplimentarán en el modelo
+normalizado que se encuentra disponible en la sede electrónica de la Comunidad de Madrid,
+en la dirección electrónica: https://sede.comunidad.madrid/ desde el día siguiente al de la pu-
+blicación de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.
+
+     Las solicitudes se presentarán por medios electrónicos a través del canal que habilite
+la Consejería de Digitalización, que será objeto de publicación en la página web institucio-
+nal o en el sitio web específico de la convocatoria.
+
+     Los solicitantes deberán relacionarse de forma electrónica con la Comunidad de Madrid
+conforme a lo dispuesto en el artículo 14.2 de la Ley 39/2015, de 1 de octubre, del Proce-
+dimiento Administrativo Común de las Administraciones Públicas, en cualquiera de los si-
+guientes lugares para presentar la solicitud y la documentación que debe acompañarla:
+
+     Las solicitudes y la documentación que proceda deberán presentarse en el Registro
+Electrónico General de la Comunidad de Madrid a través del acceso habilitado para ello en
+el portal de internet de la Comunidad de Madrid ( https://www.comunidad.madrid ), en la
+dirección electrónica: https://sede.comunidad.madrid/ o de cualquiera de las Administra-
+ciones u organismos previstos en el artículo 2.1 de la Ley 39/2015, de 1 de octubre, según
+lo previsto en los artículos 14.2, 14.3 y 16.4.a) de dicha ley, no siendo válida la presenta-
+ción de documentación en papel.
+
+     3. Para la presentación de la solicitud por medios electrónicos, será necesario dispo-
+ner de uno de los certificados electrónicos reconocidos o cualificados de firma electrónica
+o sello electrónico, que sean operativos en la Comunidad de Madrid y expedidos por pres-
+tadores incluidos en la "Lista de confianza de prestadores de servicios de certificación" o
+cualquier otro sistema de firma electrónica que la Comunidad de Madrid considere válido
+en los términos y condiciones que se establezcan específicamente para cada tipo de firma.
+
+     Igualmente, podrán aportarse documentos durante la tramitación del expediente y
+siempre dentro de los plazos establecidos a través del portal corporativo de la Comunidad
+de Madrid. Las notificaciones que tenga que hacer la Administración de la Comunidad de
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                    Pág. 81
+
+Madrid, referidas a este procedimiento, se realizarán a través del Sistema de Notificaciones               BOCM-20261001-20
+Telemáticas.
+
+     4. No obstante lo dispuesto en los apartados 2 y 3, y sin perjuicio de lo dispuesto en
+el artículo 12.2 de la Ley 39/2015, de 1 de octubre, las personas físicas podrán presentar sus
+solicitudes por cualquiera de los medios previstos en el artículo 16.4 de la misma ley.
+
+     5. Cada persona podrá presentar una única candidatura, ya sea en nombre propio o
+en favor de otra persona, sin perjuicio de las candidaturas adicionales que, en su caso, in-
+corpore la Administración al amparo de lo previsto en estas bases.
+
+Artículo 12
+
+Documentación
+
+     1. La candidatura deberá acompañarse de la siguiente documentación, que se anexa-
+rá a la solicitud:
+
+     a) Formulario de solicitud debidamente cumplimentado.
+     b) Memoria descriptiva del proyecto, iniciativa o trayectoria presentada.
+     c) Documentación acreditativa de la personalidad y, en su caso, de la representación.
+     d) Consentimiento expreso de la entidad o persona propuesta, cuando la candidatura
+
+           sea presentada por un tercero o por la Administración.
+     e) Cualesquiera otros documentos que la convocatoria determine.
+
+     2. La presentación de las candidaturas se formalizará por medios electrónicos, me-
+diante la cumplimentación del formulario normalizado de solicitud que se establezca a tal
+efecto en la correspondiente convocatoria, al que deberá adjuntarse la documentación pre-
+vista en este artículo y en la propia convocatoria.
+
+     3. Las candidaturas se presentarán conforme a lo establecido en los artículos 14 y 16.4 de
+la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administra-
+ciones Públicas, que en concreto establecen lo siguiente:
+
+     a) Si el solicitante es una persona física podrá, a su elección, realizar la solicitud y
+           presentación de documentos presencialmente o por medios electrónicos.
+
+     b) Si el solicitante es alguno de los sujetos relacionados en el artículo 14.2 estará
+           obligado a realizar la solicitud y presentación de documentos exclusivamente por
+           medios electrónicos.
+
+     4. Lugares de presentación de las solicitudes y documentación:
+
+     a) Para las personas físicas en el Registro Electrónico General de la Comunidad de
+           Madrid, a través de los servicios de tramitación electrónicos, a los que se puede ac-
+           ceder en la dirección electrónica sede.comunidad.madrid, o en cualquier otro de los
+           establecidos en el artículo 16.4 de la Ley 39/2015, de 1 de octubre.
+
+     b) Para los sujetos relacionados en el artículo 14.2, exclusivamente, en el Registro
+           General Electrónico de la Comunidad de Madrid, a los que se puede acceder en la
+           dirección electrónica "sede.comunidad.madrid".
+
+     En el caso de tramitación electrónica es necesario disponer de uno de los certificados
+electrónicos reconocidos o cualificados de firma electrónica, que sean operativos en la Co-
+munidad de Madrid y expedidos por prestadores incluidos en la "Lista de confianza de pres-
+tadores de servicios de certificación" o cualquier otro sistema de firma electrónica que la
+Comunidad de Madrid considere valido en los términos y condiciones que se establezcan
+específicamente para cada tipo de firma.
+
+     En el caso de los sujetos obligados a relacionarse a través de medios electrónicos con
+la Administración, de conformidad con lo previsto en el artículo 14.2, la notificación se rea-
+lizará a través de medios electrónicos de acuerdo con lo establecido en el artículo 43 de la
+Ley 39/2015, de 1 de octubre. A tal efecto, el solicitante está obligado a estar dado de alta en
+el servicio de Notificaciones Electrónicas de la Comunidad de Madrid, disponible en la di-
+rección electrónica https://sede.comunidad.madrid
+
+Artículo 13
+
+Subsanación
+
+     Si la solicitud no reuniera los requisitos exigidos o no acompañara la documentación
+preceptiva, se requerirá a la persona interesada para que, en el plazo de diez días hábiles,
+subsane la falta o acompañe los documentos preceptivos, con indicación de que, si así no
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 82  JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+lo hiciera, se le tendrá por desistida de su candidatura, previa resolución dictada al efecto,  BOCM-20261001-20
+de conformidad con lo dispuesto en el artículo 68 de la Ley 39/2015, de 1 de octubre.
+
+Artículo 14
+
+Instrucción
+
+     La instrucción del procedimiento corresponderá a la Dirección General de Estrategia
+Digital, que realizará de oficio cuantas actuaciones estime necesarias para la determinación,
+conocimiento y comprobación de los datos en virtud de los cuales deba formularse la pro-
+puesta de resolución.
+
+     En particular, corresponderá al órgano instructor verificar la elegibilidad de las candi-
+daturas, solicitar la documentación acreditativa, requerir aclaraciones o información adicio-
+nal y acordar la inadmisión o exclusión de aquellas candidaturas que incumplan los requi-
+sitos establecidos o presenten información incompleta, inexacta o susceptible de generar
+conflicto legal, reputacional o ético.
+
+Artículo 15
+
+Jurado
+
+     El jurado estará integrado por un número impar de personas, no inferior a cinco, de re-
+conocido prestigio y acreditada experiencia en el ámbito tecnológico, empresarial, acadé-
+mico o institucional, designados por el Consejero de Digitalización.
+
+     Formarán también parte del jurado el titular de la Consejería de Digitalización y el ti-
+tular de la Dirección General de Estrategia Digital, si así lo estimasen oportuno.
+
+     La pertenencia al jurado no llevará aparejado derecho económico alguno.
+     El jurado, como órgano colegiado de valoración, se regirá por lo dispuesto en la sec-
+ción 3.a del Capítulo II del Título Preliminar de la Ley 40/2015, de 1 de octubre, de Régi-
+men Jurídico del Sector Público.
+
+Artículo 16
+
+Criterios de valoración
+
+     1. Las candidaturas serán evaluadas con arreglo a criterios objetivos, entre los que se
+tendrán en cuenta, según la naturaleza de cada categoría, los siguientes:
+
+     a) Grado de innovación tecnológica.
+     b) Impacto y resultados.
+     c) Escalabilidad.
+     d) Viabilidad.
+     e) Capacidad de ejecución.
+     f) Contribución al ecosistema.
+
+     En particular, se valorarán iniciativas o trayectorias tecnológicas que generen un im-
+pacto real, medible y escalable, atendiendo a su capacidad de innovación, ejecución y con-
+tribución al posicionamiento competitivo del ecosistema tecnológico.
+
+     2. La ponderación específica por categorías será la siguiente:
+
+           1.o Global Tech Leader Award: capacidad de ejecución, 40 por 100; impacto y
+                resultados, 35 por 100; contribución al ecosistema, 25 por 100.
+
+           2.o Global AI & Emerging Technologies Award: grado de innovación tecnológi-
+                ca, 40 por 100; impacto y resultados, 35 por 100; escalabilidad, 25 por 100.
+
+           3.o Global Tech Company Award: impacto y resultados, 40 por 100; capacidad
+                de ejecución, 35 por 100; escalabilidad, 25 por 100.
+
+           4.o Global Tech Impact Award: impacto y resultados, 50 por 100; contribución al
+                ecosistema, 30 por 100; escalabilidad, 20 por 100.
+
+           5.o Global Public International Innovation Award: impacto y resultados, 40 por
+                100; viabilidad, 35 por 100; grado de innovación tecnológica, 25 por 100.
+
+     3. La evaluación se realizará mediante puntuación individual por cada miembro del
+jurado, en una escala de uno a diez por cada criterio, y la puntuación final de cada candida-
+tura resultará de la media aritmética de las puntuaciones otorgadas, aplicando la pondera-
+ción correspondiente.
+
+     En caso de empate, el jurado podrá deliberar para proponer una candidatura vencedo-
+ra o, motivadamente, proponer la concesión del premio ex aequo.
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                      Pág. 83
+
+Artículo 17                                                                                                  BOCM-20261001-20
+
+Propuesta de resolución
+
+     Concluida la fase de valoración, el jurado elevará al órgano instructor un acta de pro-
+puesta motivada con la relación de candidaturas finalistas y la propuesta de concesión de
+los premios y, en su caso, de las menciones especiales y de las categorías que deban decla-
+rarse desiertas.
+
+     De igual manera, el acta contendrá la puntuación ordenada de aquellas candidaturas
+que no alcancen la condición de finalistas, con sucinta motivación de la puntuación obteni-
+da, y ordenadas por categoría y puntuación, en orden descendente.
+
+Artículo 18
+
+Resolución
+
+     La resolución finalizadora del procedimiento corresponderá al titular de la Consejería
+de Digitalización o al órgano en quien delegue.
+
+     La resolución determinará las candidaturas premiadas, las finalistas y, en su caso, las
+menciones especiales, así como las categorías que se declaren desiertas.
+
+     La resolución estará motivada de conformidad con los criterios de valoración estable-
+cidos y con la propuesta del jurado, que se incorporará al expediente y se publicará en el
+BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.
+
+     Contra la resolución finalizadora del procedimiento, que pone fin a la vía administra-
+tiva, podrá interponerse recurso de reposición ante el Consejero de Digitalización en el pla-
+zo de un mes desde su notificación o publicación, o directamente recurso contencioso-
+administrativo ante la Sala de lo Contencioso-Administrativo del Tribunal Superior de
+Justicia de Madrid, en el plazo de dos meses.
+
+     El plazo máximo para resolver y publicar la resolución del procedimiento será de quince
+días contados desde la finalización del plazo de presentación de candidaturas. Transcurrido di-
+cho plazo sin haberse publicado resolución expresa, las solicitudes se entenderán desestimadas.
+
+Artículo 19
+
+Obligaciones de las personas y entidades premiadas
+
+     Las personas o entidades beneficiarias de los premios estarán sujetas a las obligaciones pre-
+vistas en la normativa aplicable en materia de subvenciones y, en particular, a las siguientes:
+
+     a) No incurrir en ninguna de las prohibiciones para obtener la condición de benefi-
+           ciaria previstas en el artículo 13 de la Ley 38/2003, de 17 de noviembre, General
+           de Subvenciones, debiendo acreditar dicho extremo mediante la correspondiente
+           declaración responsable cuando así se exija.
+
+     b) Cumplir las obligaciones establecidas en el artículo 14 de la Ley 38/2003, de 17 de
+           noviembre, y en el artículo 8 de la Ley 2/1995, de 8 de marzo, de Subvenciones
+           de la Comunidad de Madrid.
+
+     c) Someterse a las actuaciones de comprobación, seguimiento y control que puedan
+           realizar los órganos competentes, incluyendo la Intervención General de la Comu-
+           nidad de Madrid, el Tribunal de Cuentas u otros órganos de control.
+
+     d) Autorizar la difusión pública de la identidad de la persona o entidad premiada, así
+           como de la iniciativa reconocida, en los canales institucionales de la Comunidad
+           de Madrid, con fines de información, promoción y difusión de buenas prácticas.
+
+     e) Facilitar cuanta información adicional resulte necesaria para las actuaciones de
+           comunicación, evaluación o promoción del premio.
+
+     f) Asistir, personalmente o mediante representante, al acto institucional de entrega
+           del premio, salvo causa debidamente justificada.
+
+Artículo 20
+
+Desistimiento y renuncia
+
+     1. De conformidad con lo establecido en el artículo 94 de la Ley 39/2015, de 1 de oc-
+tubre, del Procedimiento Administrativo Común de las Administraciones Públicas, todo par-
+ticipante podrá desistir de su solicitud o podrá renunciar a su derecho al premio concedido.
+
+     2. Tanto el desistimiento como la renuncia podrán hacerse por cualquier medio que
+permita su constancia, siempre que incorpore las firmas que correspondan de acuerdo con
+lo previsto en la normativa aplicable.
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 84  JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+Artículo 21                                                                                      BOCM-20261001-20
+
+Control, seguimiento, incumplimiento y modificación de la resolución
+
+     1. Los premios concedidos en especie o mediante otro tipo de prestación no dinera-
+ria, en el supuesto que se declare la procedencia del reintegro, se considerarán como canti-
+dad recibida a reintegrar, el importe del precio del bien, derecho o servicio en el momento
+de su adquisición. En todo caso, será exigible el interés de demora correspondiente, de con-
+formidad con lo dispuesto en el artículo 37 de la Ley General de Subvenciones, que deven-
+gará desde el momento de la entrega efectiva del premio.
+
+     2. Los premios obtenidos por los beneficiarios quedarán sometidos al control de la
+Intervención General de la Comunidad de Madrid, así como a la fiscalización del Tribunal
+de Cuentas, la Cámara de Cuentas y demás órganos competentes, de acuerdo con lo esta-
+blecido en la Ley 2/1995, de 8 de marzo, y en la Ley 38/2003, de 17 de noviembre.
+
+     3. El tipo de interés de demora aplicable será el que establezca la Ley de Presupues-
+tos Generales del Estado correspondiente al ejercicio de la convocatoria.
+
+     4. La aportación de datos o documentos falsos, inexactos o manipulados, así como
+el incumplimiento de los requisitos esenciales establecidos en estas bases, podrá dar lugar
+a la inadmisión o exclusión de la candidatura y, si se apreciase con posterioridad a la con-
+cesión, a la pérdida del derecho al premio y, en su caso, a la devolución de la distinción re-
+cibida, sin perjuicio de las demás responsabilidades que procedan.
+
+     5. Las irregularidades de carácter formal que no afecten al cumplimiento de los re-
+quisitos, a la valoración de la candidatura o al resultado del procedimiento podrán ser ob-
+jeto de subsanación y no determinarán por sí mismas la pérdida del derecho al premio.
+
+     6. Toda alteración de las condiciones tenidas en cuenta para la concesión que resul-
+te relevante para el cumplimiento de los requisitos o para la valoración de la candidatura
+podrá dar lugar a la modificación de la resolución.
+
+Artículo 22
+
+Justificación, entrega y garantías
+
+     Atendida la naturaleza de los premios, la justificación del cumplimiento de la finali-
+dad de la subvención vendrá constituida por la acreditación y valoración de los méritos, ac-
+tuaciones, trayectorias o iniciativas que fundamenten su concesión, sin que resulte exigible
+la realización de actuaciones posteriores por las personas o entidades beneficiarias.
+
+     Los premios se harán efectivos mediante la entrega de la distinción prevista en el ar-
+tículo 4. No se realizarán pagos anticipados ni abonos a cuenta, ni se exigirá la constitución
+de garantías.
+
+                                               Capítulo V
+
+                               Publicidad y derechos de imagen
+
+Artículo 23
+
+Publicidad
+
+     La relación de iniciativas premiadas será publicada en el BOLETÍN OFICIAL DE LA CO-
+MUNIDAD DE MADRID y en la Base de Datos Nacional de Subvenciones, en los términos
+previstos en la normativa aplicable.
+
+     Los nombres de las personas finalistas y premiadas podrán publicarse en la página web
+de la convocatoria que a tal efecto pueda establecerse, en la página web institucional de la
+Comunidad de Madrid y en los demás canales oficiales de comunicación que se determi-
+nen.
+
+     La participación en los premios implicará la aceptación de dicha publicidad, en los tér-
+minos previstos en las presentes bases y en la normativa aplicable.
+
+Artículo 24
+
+Derechos de imagen y difusión
+
+     Las personas participantes conservarán los derechos de propiedad intelectual o indus-
+trial que pudieran corresponderles sobre los proyectos, iniciativas o trayectorias presentadas.
+
+     No obstante, la presentación de la candidatura implicará la autorización a la Comunidad
+de Madrid para utilizar, con fines exclusivamente informativos, promocionales o de difusión
+vinculados a los premios, el nombre, marca, imagen y elementos descriptivos de la candidatu-
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                    Pág. 85
+
+ra, en cualquier soporte de comunicación relacionado con los premios, siempre con respeto a                BOCM-20261001-20
+la normativa aplicable en materia de propiedad intelectual, industrial y derechos de imagen.
+
+                                               Capítulo VI
+
+                                     Responsabilidad y control
+
+Artículo 25
+
+Comprobación
+
+     La Administración podrá realizar las comprobaciones que resulten necesarias respec-
+to de la veracidad de la documentación y de la información aportada en las candidaturas,
+así como respecto del cumplimiento de los requisitos establecidos en las presentes bases.
+
+Artículo 26
+
+Régimen de responsabilidades
+
+     La aportación de datos o documentos falsos, inexactos o manipulados podrá dar lugar
+a la inadmisión o exclusión de la candidatura y, en su caso, a la revisión de la resolución
+adoptada, sin perjuicio de las demás responsabilidades administrativas, civiles o penales a
+que hubiera lugar.
+
+     La Administración no será responsable de los errores imputables a las personas parti-
+cipantes en la cumplimentación de las candidaturas ni de las incidencias técnicas no impu-
+tables a aquella que impidan su correcta presentación.
+
+Artículo 27
+
+Protección de datos
+
+     1. Los datos personales recogidos en el procedimiento serán tratados conforme al
+Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016,
+relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos per-
+sonales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE
+(Reglamento General de Protección de Datos), así como en la Ley Orgánica 3/2018, de 5 de
+diciembre, de Protección de Datos Personales y garantía de los derechos digitales, y demás
+normativa que resulte de aplicación.
+
+     2. Asimismo, el deber de secreto y las limitaciones en su uso a que obligue la legis-
+lación vigente, serán aplicables a cualquier información a la que se pudiera tener acceso en la
+realización de actividades objeto de esta orden, salvo aquella información que deba ser pú-
+blica según lo establecido en la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a
+la información pública y buen gobierno, en los artículos 23 y 24 de esta orden, y demás nor-
+mativa aplicable.
+
+     3. El responsable del tratamiento de los datos es la Comunidad de Madrid, a través
+de la Dirección General de Estrategia Digital, ante quien se podrán ejercer los derechos de
+acceso, rectificación, supresión, oposición y limitación de tratamiento, de conformidad con
+el Reglamento (UE) 2016/679 y con la Ley Orgánica 3/2018, de 5 de diciembre.
+
+     4. De conformidad con la Ley Orgánica 3/2018, de 5 de diciembre, los solicitantes
+quedarán expresamente obligados a mantener estricta confidencialidad sobre cualquier dato
+de carácter personal que pudieran obtener con ocasión de la presente convocatoria, por lo que
+no podrán copiarlos o utilizarlos con fines distintos a los que figuran en la presente orden ni
+tampoco cederlos a otros terceros distintos de la Consejería de Digitalización, ni siquiera a
+efectos de conservación.
+
+                                               TÍTULO II
+
+                                             Convocatoria
+
+Artículo 28
+
+Convocatoria
+
+     Se convoca la edición 2026 de los Premios Global Tech Leaders Awards, con arreglo
+a las bases reguladoras contenidas en el título I.
+
+     La concesión de los premios se realizará mediante el procedimiento de concurrencia
+competitiva.
+  BOCM   BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 86  JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+     El crédito destinado a la presente convocatoria será de hasta 500 euros y se financiará    BOCM-20261001-20
+con cargo al subconcepto económico 28001 del Programa 928M del Presupuesto de Gastos
+de la Consejería.
+
+Artículo 29
+
+Participantes
+
+     Podrán concurrir a la presente convocatoria las personas y entidades previstas en el ar-
+tículo 5, siempre que cumplan los requisitos establecidos en el artículo 6.
+
+Artículo 30
+
+Presentación de candidaturas
+
+     La presentación de candidaturas se realizará de conformidad con lo dispuesto en el ar-
+tículo 11 de esta orden.
+
+     La documentación y las condiciones de presentación se ajustarán a lo dispuesto en los
+artículos 11 y 12 de esta orden.
+
+Artículo 31
+
+Plazo de presentación
+
+     El plazo de presentación de solicitudes de candidaturas será de quince días naturales
+contados a partir del día siguiente al de la publicación de la convocatoria en el BOLETÍN
+OFICIAL DE LA COMUNIDAD DE MADRID.
+
+Artículo 32
+
+Procedimiento de evaluación
+
+     La convocatoria se regirá, en todo lo no previsto expresamente en este título, por las
+bases contenidas en el título I, incluyendo las previsiones en materia de publicidad, dere-
+chos de imagen, renuncia, control y protección de datos.
+
+     La admisión y valoración de las candidaturas se ajustará a los artículos 13 a 18.
+     En cada categoría podrán seleccionarse hasta tres finalistas, entre los cuales se propon-
+drá un ganador.
+     Las categorías podrán declararse desiertas cuando así se proponga motivadamente
+por el jurado.
+
+Artículo 33
+
+Resolución y notificación
+
+     La resolución del procedimiento se dictará por el Consejero de Digitalización o perso-
+na en quien delegue, y será objeto de publicación en la página web que a tal efecto pueda
+establecerse, en la página web institucional de la Comunidad de Madrid y en el BOLETÍN
+OFICIAL DE LA COMUNIDAD DE MADRID.
+
+Artículo 34
+
+Recursos
+
+     Contra la convocatoria, que pone fin a la vía administrativa, podrá interponerse recur-
+so de reposición ante el Consejero de Digitalización en el plazo de un mes desde la publica-
+ción de esta orden en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID, o directamente
+recurso contencioso-administrativo ante la Sala correspondiente de lo Contencioso-Admi-
+nistrativo del Tribunal Superior de Justicia de Madrid, en el plazo de dos meses.
+
+Artículo 35
+
+Publicidad de la convocatoria
+
+     De conformidad con lo previsto en los artículos 17.3.b) y 20.8.a) de la Ley 38/2003,
+de 17 de noviembre, General de Subvenciones, el extracto de la convocatoria se publicará
+en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID por conducto de la Base de Datos
+Nacional de Subvenciones.
+  BOCM             BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+B.O.C.M. Núm. 234  JUEVES 1 DE OCTUBRE DE 2026                                                                                      Pág. 87
+
+                                 DISPOSICIÓN FINAL PRIMERA
+
+Habilitación
+     Se faculta al titular de la Dirección General de Estrategia Digital para dictar cuantas
+
+instrucciones y resoluciones resulten necesarias para ejecución de la presente orden.
+
+                                DISPOSICIÓN FINAL SEGUNDA
+
+Entrada en vigor y eficacia
+     1. Las bases reguladoras contenidas en el Título I de la presente orden, entrarán en vigor
+
+el día siguiente al de su publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.
+     2. La convocatoria incluida en el Título II de esta orden, producirá efectos desde el
+
+día siguiente al de su publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID.
+     En Madrid, a 24 de septiembre de 2026.
+
+                                                                                                   El Consejero de Digitalización,
+                                                                                           MIGUEL LÓPEZ-VALVERDE ARGÜESO
+
+                                                                                                                                             BOCM-20261001-20
+  BOCM              BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID
+
+Pág. 88             JUEVES 1 DE OCTUBRE DE 2026  B.O.C.M. Núm. 234
+
+                                                               ANEXO I
+
+DECLARACIÓN RESPONSABLE Y CONSENTIMIENTO EXPRESO PARA LA PRESENTACIÓN DE
+CANDIDATURA A LOS PREMIOS GLOBAL TECH LEADERS AWARDS
+
+D./D.ª [NOMBRE Y APELLIDOS], con documento de identidad n.º [DNI/NIE/PASAPORTE], actuando en
+nombre propio / en representación de [ENTIDAD], con NIF [NIF], y domicilio a efectos de notificaciones
+en [DIRECCIÓN],
+
+                                                      DECLARA Y OTORGA
+
+Primero. Consentimiento para la presentación de candidatura
+
+Que presta su consentimiento expreso, libre e inequívoco para la presentación de su candidatura a los
+Premios Global Tech Leaders Awards, convocados por la Consejería de Digitalización de la Comunidad
+de Madrid, aceptando su participación en el procedimiento de selección y manifestando su conformidad
+con las bases reguladoras y con las condiciones establecidas en la convocatoria correspondiente.
+
+Asimismo, declara conocer y aceptar las obligaciones derivadas de dicha participación, así como la
+posible publicación de la condición de finalista o persona/entidad premiada en los términos previstos en
+las bases reguladoras.
+
+Segundo. Declaración responsable
+
+Que, a la fecha de firma de la presente declaración, no concurre en su persona ni, en su caso, en la
+entidad a la que representa ninguna de las circunstancias previstas en los artículos 13.2 y 13.3 de la Ley
+38/2003, de 17 de noviembre, General de Subvenciones, que impiden obtener la condición de
+beneficiario de subvenciones públicas.
+
+                                                                                    (03/15.786/26)
+
+                                                                                                            BOCM-20261001-20
+
+http://www.bocm.es  BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID D. L.: M. 19.462-1983 ISSN 1989-4791
+

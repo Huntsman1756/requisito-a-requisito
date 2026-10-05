@@ -104,3 +104,14 @@ visible (plegado), con el motivo y la invitación a consultar la fuente.
 `citation`. El resultado indica la vía por la que se cumple; `missing` propone la
 vía con menos datos pendientes. La revisión humana se hace sobre una tabla de
 decisión legible generada desde el exhaustivo (patrón CUTECat).
+
+## ADR-020 — «Autoridad vigente» en main = `status=active && reviewStatus=revisada`
+2026-10-05 · propuesta · El AGENTS.md de `F:\_Proyectos\la-ayuda` describe el
+ledger `data/pipeline/authority/publication-ledger.jsonl` y `pipeline:authority
+--strict`, pero **no existen en `main` (63ad635b)**; viven en la rama
+`integrate/autonomous-pipeline`, que no es la base indicada. En `main` el gate
+editorial vigente es `status=active && reviewStatus=revisada`, reforzado por
+`tests/content-governance.test.ts` (citación documental obligatoria en fichas
+`revisada`). Se usa ese gate para F0-5/F3 y se documenta como desviación D3
+(condición de contorno, no rebaja de rigor). Si Daniel prefiere basar el
+worktree en `integrate/autonomous-pipeline`, la rama se recrea.
