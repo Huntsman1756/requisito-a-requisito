@@ -1,0 +1,92 @@
+{
+	"id": "gp-paro-alcala",
+	"description": "Persona de 39 años en Alcalá de Henares, desempleada tras un despido, empadronada desde 2018, sin personas a cargo e ingresos en la banda más baja. Caso positivo con advertencias: el único requisito comprobable (situación legal de desempleo, proxy por employmentStatus) queda en T, pero los requisitos decisivos —360 días cotizados en los últimos 6 años, causa involuntaria del cese, alta/asimilada e inscripción como demandante de empleo— no son comprobables con nuestras preguntas ⇒ veredicto posible, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28005"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2018,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 39,
+					"max": 39,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "prestacion-desempleo-contributiva",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 266.c",
+					"reasoning": "employmentStatus = «desempleado» ⇒ la situación legal de desempleo queda en T por proxy (la condición es soft porque el paro también cubre desempleo parcial: suspensión o reducción de jornada del 10 % al 70 %, art. 267.1.b-c, que una persona «asalariada» puede cumplir)."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 266.b y 269.1",
+					"reasoning": "El requisito decisivo —360 días cotizados por desempleo en los 6 años anteriores— no se pregunta (es un dato de vida laboral) ⇒ queda en uncovered; como no hay hard en F ni U pero uncoveredCount > 0, el veredicto es posible y no probable."
+				},
+				{
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+					"reasoning": "La prestación es permanente: se solicita en los 15 días hábiles tras el último día trabajado (fuera de plazo se pierden días, no el derecho) ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

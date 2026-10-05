@@ -1,0 +1,243 @@
+{
+	"benefitSlug": "prestacion-desempleo-contributiva",
+	"standalone": true,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 264–273 (nivel contributivo por desempleo) — texto consolidado"
+		},
+		{
+			"id": "sepe-contributiva-mas-de-un-anyo",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/prestacion-contributiva/prestacion-contributiva-mas-de-un-anyo.html",
+			"title": "SEPE — Prestación contributiva por desempleo: «He trabajado más de un año» (requisitos, documentación y tramitación)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "situacion-legal-desempleo",
+			"hard": false,
+			"label": "Estar en situación legal de desempleo: haber perdido el empleo o ver suspendido el contrato o reducida la jornada entre un 10 % y un 70 % (el paro también cubre el desempleo parcial, p. ej. un ERTE)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 266.c (supuestos en el art. 267)",
+				"excerpt": "Encontrarse en situación legal de desempleo, acreditar disponibilidad para buscar activamente empleo y para aceptar colocación adecuada a través de la suscripción del acuerdo de actividad al que se refiere el artículo 3 de la Ley 3/2023, de 28 de febrero, de Empleo",
+				"excerptSha256": "6b9fb35b8061624690e43c0bed940bb2e7e75b96a591e815ff7fd971831dd591"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "desempleado",
+				"label": "estás en desempleo"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "cotizacion-minima-360",
+			"label": "Haber cotizado por desempleo al menos 360 días dentro de los 6 años anteriores a la situación legal de desempleo (o al cese de la obligación de cotizar); no computan las cotizaciones ya usadas para un derecho anterior",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 266.b y 269.1",
+				"excerpt": "Tener cubierto el período mínimo de cotización a que se refiere el artículo 269.1, dentro de los seis años anteriores a la situación legal de desempleo o al momento en que cesó la obligación de cotizar",
+				"excerptSha256": "3c3fea4c01c99d9169c9d75c8bed5eae15a1472740fd76e93184219fba7199a6"
+			}
+		},
+		{
+			"id": "escala-360-720",
+			"label": "La duración depende de los días cotizados: 360 días dan 120 días de prestación y la escala sube hasta 720 días de prestación con 2.160 o más días cotizados",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 269.1",
+				"excerpt": "con arreglo a la siguiente escala: Periodo de cotización (en días) Periodo de prestación (en días) Desde 360 hasta 539 120",
+				"excerptSha256": "30e26203d7e511539653731b63a150ce52bdc35d76a5250bad1df8bda1abc825"
+			}
+		},
+		{
+			"id": "causa-involuntaria",
+			"label": "La causa del desempleo tiene que encajar en la lista legal: despido, extinción por causas objetivas, fin de contrato temporal o formativo, resolución por causas del Estatuto de los Trabajadores (arts. 40, 41.3, 49.1.m y 50), suspensión o reducción de jornada (ERE/ERTE, art. 47 ET), períodos de inactividad del fijo-discontinuo, retorno de emigrante, excarcelación o suspensión por violencia de género/sexual; una baja voluntaria ordinaria no da derecho",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 267.1",
+				"excerpt": "Se encontrarán en situación legal de desempleo los trabajadores que estén incluidos en alguno de los siguientes supuestos",
+				"excerptSha256": "9d216681b99e2bb2a3ef68203ad8e1159e9fc7f1f0fb6238d455754978325769"
+			}
+		},
+		{
+			"id": "alta-o-asimilada",
+			"label": "Estar afiliado/a a la Seguridad Social y en alta o en situación asimilada al alta en un régimen que cotice por desempleo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 266.a",
+				"excerpt": "Estar afiliadas a la Seguridad Social y en situación de alta o asimilada al alta en los casos que legal o reglamentariamente se determinen",
+				"excerptSha256": "6e71ae184ec8a3a38bb0e73b32b26d6b9d39d0f751c2d37431f37726c5c8479f"
+			}
+		},
+		{
+			"id": "inscripcion-demandante",
+			"label": "Estar inscrito/a como demandante de empleo en el servicio público de empleo competente (en la Comunidad de Madrid, la oficina de empleo) y mantener la inscripción durante toda la prestación, además de suscribir el acuerdo de actividad",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 266.e y 268.1",
+				"excerpt": "Estar inscrito como demandante de empleo en el servicio público de empleo competente",
+				"excerptSha256": "6adc9a09b0ca6ee90c8d6cf2fe97a124e14de31dbfe7ed7f800e00d9d7bd6734"
+			}
+		},
+		{
+			"id": "no-edad-ordinaria-jubilacion",
+			"label": "No haber cumplido la edad ordinaria de jubilación contributiva, salvo que falte el período de cotización para jubilarte o sea un caso de suspensión de contrato o reducción de jornada",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 266.d",
+				"excerpt": "No haber cumplido la edad ordinaria que se exija en cada caso para causar derecho a la pensión contributiva de jubilación, salvo que el trabajador no tuviera acreditado el período de cotización requerido para ello o se trate de supuestos de suspensión de contrato o reducción de jornada",
+				"excerptSha256": "7f2a1ede21e23581bab5e3b427bb54c09041a35ee788c5bce265a7583ba0a74d"
+			}
+		},
+		{
+			"id": "plazo-solicitud-15-dias",
+			"label": "Presentar la solicitud en los 15 días hábiles siguientes al último día trabajado (o al retorno del extranjero o a la excarcelación); si la presentas fuera de plazo, la prestación nace desde la solicitud y pierdes los días intermedios",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS art. 268.1",
+				"excerpt": "deberán solicitar a la entidad gestora competente el reconocimiento del derecho a las prestaciones que nacerá a partir de que se produzca la situación legal de desempleo, siempre que se solicite dentro del plazo de los quince días siguientes",
+				"excerptSha256": "a4fb8f7f932dfc0ef6b9a7a1d332a122738c30438dc9c811f5cc10cf34e475e0"
+			}
+		},
+		{
+			"id": "incompatibilidades",
+			"label": "No puedes trabajar a tiempo completo por cuenta ajena ni realizar actividad por cuenta propia (salvo compatibilidad por programa de fomento de empleo) ni cobrar una pensión de la Seguridad Social incompatible con el trabajo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS arts. 271-272",
+				"excerpt": "El derecho a la percepción de la prestación por desempleo se suspenderá por la entidad gestora en los siguientes casos: a) Durante el periodo que corresponda",
+				"excerptSha256": "37c0b407a1b4c71d0bc91fe4f891fefe6decc3904dacfe3c286b4e61afdd8b46"
+			}
+		},
+		{
+			"id": "casos-especiales-cotizacion",
+			"label": "Colectivos con reglas propias: la persona emigrante retornada que cotizó en España necesita 360 días en los 6 años anteriores a la emigración y no percibir desempleo de otro Estado del EEE o Suiza; la persona eventual agraria que venía de autónomos necesita 720 días",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS art. 264.c",
+				"excerpt": "Los trabajadores emigrantes que retornen a España y los liberados de prisión, en las condiciones previstas en este título",
+				"excerptSha256": "ad80b8c060455af6a9d863d079eb14add89f80e9d7bd08a772a26d6666f67da5"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"businessDays": true,
+			"citation": {
+				"sourceId": "sepe-contributiva-mas-de-un-anyo",
+				"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+				"excerpt": "La solicitud deberás presentarla en el plazo de los quince días hábiles siguientes al último día trabajado, al retorno del extranjero o a la excarcelación",
+				"excerptSha256": "6440c0b2186185928c2af92b2aafe5b38bb7ad3ded30984714a4d57411074914"
+			}
+		},
+		"channel": {
+			"managingBody": "Servicio Público de Empleo Estatal (SEPE)",
+			"url": "https://sede.sepe.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sepe-contributiva-mas-de-un-anyo",
+				"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+				"excerpt": "La solicitud se presentará a través de: La sede electrónica del SEPE . En la oficina de prestaciones",
+				"excerptSha256": "08c3fb206f0ba5c42d908cead327e7e6c039afde0bca65a40162750c9b6d9b2c"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial (incluye la suscripción del acuerdo de actividad)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "Modelo oficial de solicitud , que incluye el acuerdo de actividad",
+					"excerptSha256": "bc5fac2a2b0133f58887a7f8959a4826dc6fd97a9adb5a4a66e7378b8fda6ff9"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Identificación en vigor: DNI o pasaporte (españoles/as); documento del país + certificado de registro UE con NIE o tarjeta de familiar UE (nacionales UE); TIE con fotografía (no UE), sin perjuicio del pasaporte",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "Españoles y españolas: Documento Nacional de Identidad (DNI) o pasaporte",
+					"excerptSha256": "74283c382db64ffb1aa19d6762b34a1bd40ce83a23d824c7e9d8da67f712bd3f"
+				}
+			},
+			{
+				"id": "doc-cuenta-bancaria",
+				"label": "Cualquier documento bancario donde figure el número de cuenta del que seas titular para cobrar la prestación",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "Cualquier documento bancario en el que figure el número de cuenta de la que seas titular, y donde desees percibir la prestación",
+					"excerptSha256": "8c41beed53701aaee2ace1ef86982b69e7b56a0b8df9b3fb7ec67718c6bde363"
+				}
+			},
+			{
+				"id": "doc-certificado-empresa",
+				"label": "Certificado(s) de empresa de los últimos 6 meses, solo si la empresa no los ha enviado ya al SEPE; si el certificado no basta para acreditar la situación legal de desempleo, otro documento que la justifique",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "Certificado o certificados de empresa en las que hayas trabajado en los últimos 6 meses (si no se han enviado por las empresas al Servicio Público de Empleo Estatal)",
+					"excerptSha256": "724f2ba0dab93875f09494edd6a16b3737a88121085b96372a08cd1c5c1a355e"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Si figuran hijos/as a tu cargo en la solicitud: Libro de Familia o certificación del Registro Civil de nacimiento o de familia (extranjeros: documento equivalente con traducción oficial)",
+				"mandatory": true,
+				"condition": {
+					"field": "dependents",
+					"op": "count_where_gte",
+					"count": 1
+				},
+				"citation": {
+					"sourceId": "sepe-contributiva-mas-de-un-anyo",
+					"locator": "Apartado «Documentación»",
+					"excerpt": "Libro de Familia o certificación del Registro Civil de nacimiento o de familia",
+					"excerptSha256": "410f9dd7b5117145ae17c5f4d659c7ab10a813dfa5ca6a19784b92835d784d64"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 270.2",
+			"excerpt": "el 70 por ciento durante los ciento ochenta primeros días y el 60 por ciento a partir del día ciento ochenta y uno",
+			"excerptSha256": "75d416400e00c0af3a46f103405bb8329db8d60619968f91d82a6edc21d9c45b"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"empleo"
+	],
+	"lifeEvents": [
+		"perder_empleo"
+	]
+}

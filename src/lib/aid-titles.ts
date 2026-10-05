@@ -34,6 +34,9 @@ export const AID_TITLES: Record<string, string> = {
 	"madrid-abono-transporte-infantil": "Transporte público gratuito infantil (menores de 7 años)",
 	"prestacion-cuidador-no-profesional":
 		"Prestación para cuidadoras no profesionales de personas dependientes",
+	"prestacion-desempleo-contributiva": "Prestación contributiva por desempleo (SEPE)",
+	"madrid-ayudas-urgencia-social":
+		"Ayudas económicas de urgencia social (Comunidad de Madrid)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

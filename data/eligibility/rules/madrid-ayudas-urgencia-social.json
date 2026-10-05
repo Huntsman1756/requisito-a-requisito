@@ -1,0 +1,210 @@
+{
+	"benefitSlug": "madrid-ayudas-urgencia-social",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20230801-18-cartera-ss",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/08/01/BOCM-20230801-18.PDF",
+			"title": "Orden 2372/2023, de 25 de julio, de la Consejería de Familia, Juventud y Asuntos Sociales — Cartera de Servicios Sociales de la Comunidad de Madrid (BOCM n.º 181): ficha 060502 «Ayudas Económicas de urgencia/emergencia para la cobertura de necesidades básicas»"
+		},
+		{
+			"id": "boe-ley-12-2022-ss",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es-md/l/2022/12/21/12/con",
+			"title": "Ley 12/2022, de 21 de diciembre, de Servicios Sociales de la Comunidad de Madrid (BOE texto consolidado, última actualización 22/12/2022)"
+		},
+		{
+			"id": "comunidad-emergencia-social",
+			"rank": 4,
+			"documentType": "procedure_page",
+			"url": "https://www.comunidad.madrid/asuntos-sociales/servicio-emergencia-social",
+			"title": "Comunidad de Madrid — Servicio de Emergencia Social (página oficial del servicio, última actualización 29/06/2026)"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "ambito-territorial-cm",
+			"hard": true,
+			"label": "La prestación cubre el territorio de la Comunidad de Madrid: debes vivir (o encontrarte) en un municipio de la CM",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Ámbito territorial de atención",
+				"excerpt": "Ámbito territorial de atención Comunidad de Madrid",
+				"excerptSha256": "b5e895ab9aed12113a85770c458730ec88f49613a70ff6c0534d11aae6d5418f"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "fuera-madrid-capital",
+			"hard": true,
+			"label": "Esta prestación autonómica no cubre la ciudad de Madrid, que cuenta con un dispositivo propio de emergencia social (SAMUR Social): allí la ayuda equivalente se pide a los servicios sociales del Ayuntamiento",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Ámbito territorial y proveedor",
+				"excerpt": "Proveedor del servicio Comunidad de Madrid (excepto Madrid capital)",
+				"excerptSha256": "c4b82ebf16cc0887346f8e490fa7d374759d81262a1bdd75f28c2e968ebeac6d"
+			},
+			"condition": {
+				"not": {
+					"field": "territory",
+					"op": "within_territory",
+					"value": {
+						"municipality": "28079"
+					},
+					"label": "no estás empadronado/a en la ciudad de Madrid (28079)"
+				}
+			}
+		},
+		{
+			"id": "sin-recursos-basicos",
+			"hard": false,
+			"label": "Carecer de recursos económicos para cubrir necesidades básicas en el momento de la intervención — la Cartera no publica umbral; como referencia orientativa usamos ingresos anuales por debajo de 1 × IPREM (8.400 €/año)",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Requisitos para el acceso",
+				"excerpt": "Carecer de recursos económicos para cubrir necesidades básicas en el momento de la intervención",
+				"excerptSha256": "c783e7f88b14f136c7c8c0e70cf531e3cc274a361ac7f28430dde7ca61e95e5f"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_14P"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "situacion-urgencia-emergencia",
+			"label": "Debe concurrir una situación de urgencia o emergencia social: circunstancia excepcional o sobrevenida (o agravamiento de tu situación) con incidencia en la vulnerabilidad, que exige respuesta inmediata — lo valora un trabajador social, no lo podemos comprobar aquí",
+			"citation": {
+				"sourceId": "boe-ley-12-2022-ss",
+				"locator": "Art. 10.3",
+				"excerpt": "Se considera urgencia social la situación de carácter excepcional o extraordinario, o de agravamiento de las circunstancias personales o familiares, con incidencia en las condiciones de vulnerabilidad, que requiera una respuesta inmediata por parte del Sistema Público de Servicios Sociales",
+				"excerptSha256": "a29fab15f582ba9b2b3502a7cc8813c5aac2b542695784b34ef1938283323835"
+			}
+		},
+		{
+			"id": "valoracion-profesional",
+			"label": "No hay solicitud con plazo: la ayuda se gestiona tras la valoración de la situación como emergencia social y conforme al plan de intervención elaborado con el Servicio de Emergencia Social o los servicios sociales municipales",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Procedimiento de prestación",
+				"excerpt": "Una vez valorada la situación como emergencia social, se gestionan las ayudas económicas necesarias para cumplir con el plan de intervención elaborado",
+				"excerptSha256": "2591d14265ba576972852997a2114d84a2d52b935ad9b49ba0f4680db80f3370"
+			}
+		},
+		{
+			"id": "perfil-beneficiaria",
+			"label": "Va dirigida a personas en intervención en el Servicio de Emergencia Social o en situación de vulnerabilidad severa y urgencia o emergencia social",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Perfil de persona beneficiaria",
+				"excerpt": "Persona en intervención en el Servicio de Emergencia Social. Personas en situación de vulnerabilidad severa y urgencia o emergencia social",
+				"excerptSha256": "f32d751d5ad8ce53ba605ad12c6ae00a956fd9f975573ac8d9c2c0e64d9bf3f0"
+			}
+		},
+		{
+			"id": "prestacion-condicionada",
+			"label": "Es una prestación condicionada, no garantizada: su concesión depende de la valoración profesional y de la disponibilidad del servicio",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Garantizada/condicionada",
+				"excerpt": "Garantizada/condicionada Condicionada",
+				"excerptSha256": "52544231c643e80c3ca7875c61fac24fcbb31b9f6ad2b669142f58a31dc049b0"
+			}
+		},
+		{
+			"id": "madrid-capital-municipal",
+			"label": "Si estás empadronado/a en la ciudad de Madrid: la concesión de prestaciones económicas individuales de urgencia y emergencia social es competencia municipal (Ordenanza de prestaciones económicas del Ayuntamiento de Madrid; canal: centros de servicios sociales del distrito o SAMUR Social, teléfono 112)",
+			"citation": {
+				"sourceId": "boe-ley-12-2022-ss",
+				"locator": "Art. 11.1.e",
+				"excerpt": "La concesión de prestaciones económicas individuales de urgencia y emergencia social y de ayudas económicas temporales que tengan por objeto la integración personal",
+				"excerptSha256": "e071d1f4981e429ad921994fced5db2d21870c2f49b951a989dece9aea62c45b"
+			}
+		},
+		{
+			"id": "compatibilidad",
+			"label": "Compatible con otras prestaciones (RMI, IMV, ayudas municipales…): puede complementarlas en situaciones sobrevenidas",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Régimen de compatibilidad",
+				"excerpt": "Régimen de compatibilidad con otras prestaciones Compatible",
+				"excerptSha256": "9e91b0983f13ff3de1a0cbe44ddcd12118dd97c14bcdb33e6a2f87ca9ea90317"
+			}
+		},
+		{
+			"id": "documentacion-a-determinar",
+			"label": "No hay lista pública de documentos exigibles ni impreso de solicitud: la documentación que acredite la necesidad la determina el profesional que valora la intervención",
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Procedimiento de prestación",
+				"excerpt": "Una vez valorada la situación como emergencia social, se gestionan las ayudas económicas necesarias para cumplir con el plan de intervención elaborado",
+				"excerptSha256": "2591d14265ba576972852997a2114d84a2d52b935ad9b49ba0f4680db80f3370"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20230801-18-cartera-ss",
+				"locator": "Anexo II, ficha 060502 — Plazo de concesión",
+				"excerpt": "Plazo de concesión Inmediato",
+				"excerptSha256": "b7aebfd4e1ec60f1aa90747ca5f313f0087f065fb6c2df93444f89ab6571c4f1"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales (Servicio de Emergencia Social, atención 24 horas integrada en Emergencias Madrid 112; en la ciudad de Madrid, el dispositivo propio es SAMUR Social del Ayuntamiento)",
+			"url": "https://www.comunidad.madrid/asuntos-sociales/servicio-emergencia-social",
+			"online": false,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "comunidad-emergencia-social",
+				"locator": "Presentación del servicio",
+				"excerpt": "Es un servicio social dirigido a atender situaciones de emergencia y urgencia social en el ámbito territorial de la Comunidad de Madrid, integrado en la red de respuesta de Emergencias Madrid 112",
+				"excerptSha256": "5ceecc255b5a9aed917d3dfbdd672ec037676ad488022bb28fa60ea33b13502b"
+			}
+		},
+		"documents": []
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-20230801-18-cartera-ss",
+			"locator": "Anexo II, ficha 060502 — Descripción y duración",
+			"excerpt": "Conjunto de prestaciones económicas y/o en especie, de pago único, destinadas a facilitar la cobertura de necesidades originadas por circunstancias excepcionales, sobrevenidas e imprevistas en el contexto de una situación de urgencia o emergencia social",
+			"excerptSha256": "bc2813fdd1f46a3922c3e2a270385f5cde54afb3b13346d24c1ae56d5703a489"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 0
+	},
+	"themes": [
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

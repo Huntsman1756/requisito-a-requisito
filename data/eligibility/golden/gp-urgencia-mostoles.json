@@ -1,0 +1,51 @@
+{
+	"id": "gp-urgencia-mostoles",
+	"description": "Persona de 34 años en Móstoles (28092), empadronada desde 2019, desempleada, ingresos anuales en la banda más baja (0–8.400 €). Caso «posible»: cumple los dos requisitos duros (ámbito territorial CM — Móstoles no es Madrid capital — y fuera del dispositivo propio de la capital) y el aviso de recursos queda en T (banda 0–8.400 ≤ 1×IPREM orientativo); la situación de urgencia/emergencia, la valoración profesional y la concesión condicionada son no comprobables ⇒ veredicto posible con plazo ROLLING (servicio 24 h/365 días, concesión inmediata).",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28092" } },
+			"residenceSince": { "state": "value", "value": { "year": 2019, "month": 6 } },
+			"age": { "state": "value", "value": { "min": 34, "max": 34, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-ayudas-urgencia-social",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Anexo II, ficha 060502 — Ámbito territorial de atención",
+					"reasoning": "Móstoles (28092) es municipio de la Comunidad de Madrid ⇒ ámbito territorial en T."
+				},
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Anexo II, ficha 060502 — Proveedor del servicio",
+					"reasoning": "Proveedor: «Comunidad de Madrid (excepto Madrid capital)». Municipio 28092 ≠ 28079 ⇒ la prestación autonómica cubre Móstoles ⇒ T."
+				},
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Anexo II, ficha 060502 — Requisitos para el acceso",
+					"reasoning": "«Carecer de recursos económicos para cubrir necesidades básicas en el momento de la intervención»: no hay umbral oficial publicado. Con la referencia orientativa de 1×IPREM (8.400 €/año), la banda 0–8.400 € queda en T; el aviso no excluye (hard:false) y la valoración real la hace el trabajador social."
+				},
+				{
+					"sourceId": "bocm-20230801-18-cartera-ss",
+					"locator": "Anexo II, ficha 060502 — Plazo de concesión y procedimiento",
+					"reasoning": "«Plazo de concesión Inmediato» y gestión tras valoración («Una vez valorada la situación como emergencia social…») ⇒ deadlineState ROLLING. Veredicto posible porque los requisitos decisivos no son comprobables con preguntas: la propia situación de urgencia/emergencia (art. 10.3 Ley 12/2022), la valoración profesional y el carácter condicionado de la prestación."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}
