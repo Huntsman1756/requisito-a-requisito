@@ -178,3 +178,13 @@ puede concurrir. AI & Emerging se descarta como primera opción: el producto evi
 la IA a propósito (ADR-003) y su criterio principal es la innovación tecnológica.
 **Si el 12/10 no hay respuesta, o es negativa ⇒ Leader.** El producto es el mismo
 en los tres casos; solo cambia la memoria (docs/05 tiene los esqueletos A y B).
+
+## ADR-028 — Categoría: Global Tech Impact
+2026-10-05 · aceptada (Daniel) · La Subdirección de Sociedad y Economía Digital
+confirma por correo que una persona física puede concurrir a Impact si lidera o
+impulsa una iniciativa tecnológica con impacto social
+(`evidence/2026-10-05-consulta/`). Por ADR-027 ⇒ **Impact**. Cierra D-5 y D-2.
+Consecuencias: memoria con el esqueleto A (docs/05); nueva fase **F8 Piloto real**
+para conseguir evidencia de impacto honesta; la demo desplegada y el repo público
+pasan de Should a **Must** (sin ellos no hay piloto); suben de prioridad D-3, D-4
+y D-6.

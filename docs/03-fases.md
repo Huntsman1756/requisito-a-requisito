@@ -13,6 +13,7 @@ abre **solo** el fichero de la fase activa.
 | F4 Diseño y frontend | `phases/F4-diseno-frontend.md` | 07–11/10 | F2 (datos reales) | **Daniel: wireframes** |
 | F5 QA transversal | `phases/F5-qa-transversal.md` | 10–12/10 | F4 | **Daniel: checklist manual** |
 | F6 Infraestructura y demo | `phases/F6-infra-demo.md` | 11–13/10 | F5 | **Daniel: D-3 y autorización de despliegue** |
+| F8 Piloto real (evidencia de impacto) | `phases/F8-piloto-impacto.md` | 10–14/10 | F3 lote 1, F4 mínimo, demo | **Daniel: contactos y sesiones** |
 | F7 Impacto, memoria y entrega | `phases/F7-impacto-memoria-entrega.md` | 06–14/10 | F0-3; cifras de F3–F6 | **Daniel: memoria, D-2, firma y presentación** |
 
 ```
@@ -32,6 +33,6 @@ Presentación                                         ███  ⚑ límite
 
 | Must | Should | Could | Won't (ahora) |
 |---|---|---|---|
-| Motor con Kleene sobre intervalos e invariantes I1–I10 · gates de citas · ≥ 8 ayudas aprobadas · ≥ 12 personas golden · cuestionario + resultados + «qué te falta» · privacidad · axe AA en verde · Chromium, Firefox y WebKit + 2 móviles emulados · catálogo importado con procedencia (nivel 2) · repo público · vídeo · memoria verificada | Elegibilidad futura · interfaz en inglés · regresión visual · estimación de esfuerzo · demo desplegada · datos abiertos publicados · 15–25 ayudas | Telemetría desplegada · traducción del contenido de reglas · impresión pulida | LLM explicativo · otros verticales · API dinámica · cuentas o alertas |
+| Motor con Kleene sobre intervalos e invariantes I1–I10 · gates de citas · ≥ 8 ayudas aprobadas · ≥ 12 personas golden · cuestionario + resultados + «qué te falta» · privacidad · axe AA en verde · Chromium, Firefox y WebKit + 2 móviles emulados · catálogo importado con procedencia (nivel 2) · repo público · **demo desplegada** · **piloto con 3–10 sesiones reales** · vídeo · memoria verificada | Elegibilidad futura · interfaz en inglés · regresión visual · estimación de esfuerzo · datos abiertos publicados · 15–25 ayudas | Telemetría desplegada · traducción del contenido de reglas · impresión pulida | LLM explicativo · otros verticales · API dinámica · cuentas o alertas |
 
 Recortes, en el orden de `docs/12-forma-de-trabajo.md` §5.

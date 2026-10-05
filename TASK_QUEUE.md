@@ -1,6 +1,6 @@
 # Cola de tareas
 
-**Fase activa: F3** — F0/F1/F2 cerradas el 2026-10-05. Próximo: F3 lotes (reglas Madrid citadas) → F3-R/G/M; después F4.
+**Categoría: Global Tech Impact (ADR-028).** **Fase activa: F3** — F0/F1/F2 cerradas el 2026-10-05. Próximo: F3 lotes (reglas Madrid citadas) → F3-R/G/M; después F4.
 Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit · evidencia)` · `BLOQUEADO: motivo — quién`.
 
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
@@ -19,7 +19,7 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F0-5b | **Inventario de candidatas al nivel 1, ámbito Comunidad de Madrid (ADR-021)**, sobre el catálogo importado en F0-9 + pistas BOCM | agente | 06/10 | F0-4 | HECHO (2026-10-05 · evidence/2026-10-05-F0/vertical/candidatas-madrid.json) | 24 candidatas en plazo/rolling; 12 priorizadas nivel 1 ≥ 8 ✓ |
 | D-1 | Vehículo | **Daniel** | — | — | HECHO (2026-10-05 · ADR-022) | Proyecto nuevo, solo Madrid; la-ayuda y EduAyudas como donantes de solo lectura |
 | D-4 | **Crear el repo GitHub público** de este proyecto (ADR-025) y autorizar el push. Al ser nuevo, no hay historial heredado que auditar; el agente comprueba que no haya secretos antes del primer push | **Daniel** (decisión) + agente (escaneo) | 08/10 | — | TODO | Sin esto, el ecosistema queda en promesa |
-| D-5 | Categoría: con los datos de F0, **recomendación: Leader** si no hay respuesta afirmativa sobre Impact antes del 12/10 | **Daniel** | ≤ 12/10 | F0-2 | TODO | Ver docs/01 «Evaluación tras F0» |
+| D-5 | Categoría | **Daniel** | — | — | HECHO (ADR-028) | **Global Tech Impact**: confirmada la admisión de persona física por la Subdirección (`evidence/2026-10-05-consulta/`) |
 | F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | HECHO (2026-10-05 · commits be24d10…61002d0) | registry, snapshot+normalize, G1–G10 con negativos, build con digest, IPREM/SMI BOE, INE 2026 (19 CCAA/52 prov/8132 mun), preguntas ≤10 visibles. 101 tests |
 | F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | HECHO (2026-10-05 · commits 9f3a43c, 7521a82, 2849e17) | Motor puro completo; 151 tests; exhaustivo 0 violaciones en 3 fixtures; pureza verificada; microbench 25 evals <5ms. Pendiente: exhaustivo sobre reglas reales (F3) |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | TODO | |
@@ -30,8 +30,11 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F4-W | Aprobación de wireframes | **Daniel** | 08/10 | F4-2 | TODO | |
 | F5-1..11 | QA transversal (10 proyectos, a11y, visual, rendimiento, privacidad, full) | agente | 12/10 | F4 | TODO | |
 | F5-M | Checklist manual en dispositivos reales | **Daniel** | 12/10 | F5-2 | TODO | |
-| D-3 | Demo: despliegue autorizado o solo vídeo | **Daniel** | 11/10 | — | TODO | |
+| D-3 | Demo: **despliegue autorizado** (Must por el piloto) | **Daniel** | **08/10** | — | TODO | |
 | F6-1..5 | Vídeo, capturas, (demo), comprobaciones posteriores | agente | 13/10 | F5 | TODO | |
-| D-2 | Categoría definitiva (ADR-005) — se cierra con D-5 | **Daniel** | ≤ 13/10 | F0-2 | TODO | |
+| D-2 | Categoría definitiva | **Daniel** | — | — | HECHO (ADR-028) | Impact |
+| D-7 | ¿Contador anónimo de uso (sin perfil) en la demo para medir el piloto? Si no, el impacto se mide solo con sesiones y testimonios | **Daniel** | 08/10 | — | TODO | Ver phases/F8 §evidencia 4 |
+| D-8 | ¿Autorizar la dependencia de desarrollo `@vitest/coverage-v8` (misma versión que vitest) para medir la cobertura del motor (puerta F2 ≥ 95 %)? | **Daniel** | 07/10 | — | TODO | Alternativa: informe de ramas por tabla (ya cubierto por exhaustivo y oráculo) |
+| F8-1..6 | **Piloto real** (phases/F8): demo piloto, kit de sesión, 3–10 sesiones, testimonios con permiso, consolidación | agente + **Daniel** | 13/10 | F3 lote 1, F4 mínimo, D-3/D-4/D-6 | TODO | Clave para el 50 % de impacto |
 | F7-1..8 | Evidencia, memoria, veracidad y paquete | agente | 14/10 | F0-3 … F6 | TODO | |
 | P-1 | Firmar y presentar en la sede | **Daniel** | 15/10 | F7 | TODO | Límite absoluto 16/10 |

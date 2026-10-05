@@ -53,7 +53,7 @@ Recortar **en este orden**:
 2. Inglés (Should, ADR-024).
 3. Estimación de esfuerzo (se oculta).
 4. Pulido visual secundario (impresión, animaciones).
-5. Demo desplegada (se usa vídeo).
+5. (Ya no se recorta: con Impact, la demo desplegada y el piloto son Must, ADR-028.)
 
 **Nunca se recortan:** gates de citas, invariantes, privacidad, accesibilidad
 AA automática, personas golden revisadas, ni la honestidad de las cifras de la

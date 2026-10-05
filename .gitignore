@@ -12,3 +12,5 @@ Thumbs.db
 *.pdf
 !evidence/**/fuentes/*.pdf
 data/eligibility/bundle/
+# Exportes aportados por Daniel; la copia con hash vive en evidence/
+docs/*.xlsx
