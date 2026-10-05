@@ -22,7 +22,7 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | D-5 | Categoría | **Daniel** | — | — | HECHO (ADR-028) | **Global Tech Impact**: confirmada la admisión de persona física por la Subdirección (`evidence/2026-10-05-consulta/`) |
 | F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | HECHO (2026-10-05 · commits be24d10…61002d0) | registry, snapshot+normalize, G1–G10 con negativos, build con digest, IPREM/SMI BOE, INE 2026 (19 CCAA/52 prov/8132 mun), preguntas ≤10 visibles. 101 tests |
 | F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | HECHO (2026-10-05 · commits 9f3a43c, 7521a82, 2849e17) | Motor puro completo; 151 tests; exhaustivo 0 violaciones en 3 fixtures; pureza verificada; microbench 25 evals <5ms. Pendiente: exhaustivo sobre reglas reales (F3) |
-| F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | TODO | |
+| F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | EN CURSO (2026-10-05 · lote 1: 6/6 ayudas, 0 errores, 20 tests frontera, 340 perfiles exhaustivos 0 violaciones) | evidence/2026-10-05-F3/lote-1.md **pendiente revisión Daniel (G10)** |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
 | F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |
 | F3-M | Mutación: 0 supervivientes | agente | 10/10 | F3-G | TODO | |
