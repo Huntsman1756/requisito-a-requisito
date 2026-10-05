@@ -1,0 +1,294 @@
+{
+	"benefitSlug": "complemento-ayuda-infancia",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-ley-19-2021-imv",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/l/2021/12/20/19/con",
+			"title": "Ley 19/2021, de 20 de diciembre, por la que se establece el ingreso mínimo vital (texto consolidado)"
+		},
+		{
+			"id": "segss-imv",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/65850d68-8d06-4645-bde7-05374ee42ac7/serviciossobreimv",
+			"title": "Seguridad Social — Ingreso Mínimo Vital: servicios, requisitos, cuantías 2026 y simulador"
+		}
+	],
+	"requirements": [
+		{
+			"id": "menor-en-unidad",
+			"hard": true,
+			"label": "Al menos un menor de 18 años miembro de la unidad de convivencia (en la fecha de la solicitud)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.6",
+				"excerpt": "Se establece un complemento de ayuda para la infancia para aquellas unidades de convivencia que incluyan menores de edad entre sus miembros",
+				"excerptSha256": "b8a684d60e25c3709455938b74e5ffbc86189bf55833c426ef8f05e9a0df01f4"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"field": "age",
+					"op": "lt",
+					"value": 18
+				},
+				"label": "tienes al menos un hijo o menor de 18 años a cargo"
+			}
+		},
+		{
+			"id": "residencia-espana-1a",
+			"hard": true,
+			"label": "Residir legal y efectivamente en España, de forma continuada, durante al menos el año anterior a la solicitud",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.1.a",
+				"excerpt": "Tener residencia legal y efectiva en España y haberla tenido de forma continuada e ininterrumpida durante al menos el año inmediatamente anterior a la fecha de presentación de la solicitud",
+				"excerptSha256": "eae205edf130bef349da592d9d552e9fcf1b9c6c5b970805efc13e5dafbde5fb"
+			},
+			"condition": {
+				"field": "residenceMonths",
+				"op": "gte",
+				"value": 12
+			}
+		},
+		{
+			"id": "edad-titular",
+			"hard": true,
+			"label": "La persona titular debe tener al menos 23 años, o ser mayor de edad (o menor emancipada) con hijos o menores a cargo",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 5.2",
+				"excerpt": "deberán tener una edad mínima de 23 años, o ser mayores de edad o menores emancipados en caso de tener hijos o menores en régimen de guarda con fines de adopción o acogimiento familiar permanente",
+				"excerptSha256": "7c8aca2f66e5e15831d33737af72fc88a0c8a7d4edd8bd58ed002de6c2c61f7f"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 23,
+						"label": "tienes 23 años o más"
+					},
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 18
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"field": "age",
+									"op": "lt",
+									"value": 18
+								}
+							}
+						],
+						"label": "eres mayor de edad con hijos o menores a cargo"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "requisitos-imv-salvo-umbrales",
+			"label": "Hay que reunir todos los requisitos del IMV salvo los límites económicos, que son más amplios: puede reconocerse solo el complemento aunque no salga el IMV (se estudia con la misma solicitud); también lo reconoce de oficio el INSS a perceptores de la asignación por hijo a cargo",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.6 y Disposición adicional décima.1",
+				"excerpt": "reconocerá de oficio el complemento de ayuda para la infancia en los supuestos de unidades de convivencia de los actuales beneficiarios de la asignación económica por hijo o menor a cargo sin discapacidad o con discapacidad inferior al 33 por ciento",
+				"excerptSha256": "4c580a817f5fbeb8f00f874ab6578429ad77cdaa39d388c1622d9e7a8dd6ce05"
+			}
+		},
+		{
+			"id": "umbrales-economicos-ampliados",
+			"label": "Ingresos computables del ejercicio anterior por debajo del 300 % de los umbrales de la renta garantizada (según composición de la unidad) y patrimonio neto por debajo del 150 % de los límites del anexo II, con el test de activos del anexo III",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 11.6",
+				"excerpt": "siempre que en el ejercicio inmediatamente anterior al de la solicitud los ingresos computables, de acuerdo con lo dispuesto en el artículo 20 de la presente Ley, sean inferiores al 300% de los umbrales del anexo I y el patrimonio neto sea inferior al 150% de los límites fijados en el anexo II, cumpliendo el test de activos definido en el anexo III",
+				"excerptSha256": "2b084a5841618131d49891029fedfcc2e10cb9f20aed1aad4cfcb4c624a59a0c"
+			}
+		},
+		{
+			"id": "unidad-constituida-6m",
+			"label": "La unidad de convivencia debe llevar constituida al menos 6 meses de forma continuada (salvo nacimiento, adopción, guarda o acogimiento, reagrupación familiar, violencia de género o trata)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 10.3",
+				"excerpt": "se exigirá que la misma esté constituida, en los términos de los artículos 6, 7 y 8, durante al menos los seis meses anteriores a la presentación de la solicitud, de forma continuada",
+				"excerptSha256": "d352a674b40cf30b60ed56ce79b4949b384c76b60d668503f4d33bea4f73c9e9"
+			}
+		},
+		{
+			"id": "residencia-legal-extranjeros",
+			"label": "La residencia debe ser legal: si eres extranjero necesitas inscripción en el registro central de extranjeros, tarjeta de familiar de ciudadano de la Unión o autorización de residencia vigente",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 21.2",
+				"excerpt": "La residencia legal en España se acreditará mediante la inscripción en el registro central de extranjeros, en el caso de nacionales de los Estados miembros de la Unión Europea, Espacio Económico Europeo o la Confederación Suiza, o con tarjeta de familiar de ciudadano de la Unión o autorización de residencia",
+				"excerptSha256": "84a14140ce2820ecb390e0a0632435703fb4a1d6f1497f856ca466ba9d28a445"
+			}
+		},
+		{
+			"id": "excepciones-edad-titular",
+			"label": "Excepciones a la edad de la persona titular: menores emancipadas con hijos a cargo, extuteladas de centros de protección (tutela dentro de los 3 años anteriores a la mayoría), huérfanos absolutos, liberadas de prisión tras más de 6 meses, y víctimas de violencia de género o de trata",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 5.2, in fine (y Art. 4.1)",
+				"excerpt": "salvo en los supuestos de mujeres víctimas de violencia de género, víctimas de trata de seres humanos y explotación sexual en los que se exigirá que la persona titular sea mayor de edad o menor emancipada",
+				"excerptSha256": "1a1a17232b3433dc603d3f3babf838a76f764a2e3bd9230b09d3ed3c40c6b4f1"
+			}
+		},
+		{
+			"id": "servicio-residencial",
+			"label": "No da derecho ser usuario permanente de una prestación de servicio residencial de carácter social, sanitario o socio-sanitario (salvo víctimas de violencia de género o de trata)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 4.2",
+				"excerpt": "Podrán ser beneficiarias de la prestación del ingreso mínimo vital las personas que temporalmente sean usuarias de una prestación de servicio residencial, de carácter social, sanitario o socio-sanitario",
+				"excerptSha256": "e1096bf4fd9e24a63ce02185309dc450daa7a566ee1e1adae40bab7ab8ceaaa9"
+			}
+		},
+		{
+			"id": "incompatible-asignacion-hijo",
+			"label": "El complemento es incompatible con la asignación económica por hijo o menor a cargo sin discapacidad o con discapacidad inferior al 33 %: si cumples requisitos para ambas, hay que optar por una",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Disposición adicional décima.7",
+				"excerpt": "El complemento de ayuda para la infancia será incompatible con la asignación económica por hijo o menor a cargo sin discapacidad o con discapacidad inferior al 33 por ciento",
+				"excerptSha256": "f93befa612db4e1755b4ecc6371deb132837d442181c8f17257dc1bd0d5455ac"
+			}
+		},
+		{
+			"id": "custodia-compartida",
+			"label": "En custodia compartida judicial, el menor cuenta en la unidad donde está domiciliado (a efectos de la cuantía)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 13.4",
+				"excerpt": "en supuestos de custodia compartida establecida judicialmente, se considerará, a efectos de la determinación de la cuantía de la prestación, que forman parte de la unidad donde se encuentren domiciliados",
+				"excerptSha256": "70cfb1f962bc5eef6dafcdad5cab907bd15241e41e8ff540ea8a543b66591065"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Art. 14.1",
+				"excerpt": "El derecho a la prestación del ingreso mínimo vital nacerá a partir del primer día del mes siguiente al de la fecha de presentación de la solicitud",
+				"excerptSha256": "5beb3294d6390cd450f25cd7153d4a7c04ad5ff96aaedb4be8562e1aef20a145"
+			}
+		},
+		"officialSimulator": {
+			"url": "https://imv.seg-social.es/",
+			"label": "Simulador oficial del IMV (Seguridad Social): comprueba también el complemento de ayuda para la infancia",
+			"citation": {
+				"sourceId": "segss-imv",
+				"locator": "Apartado «Servicios sobre IMV»",
+				"excerpt": "Tiene a su disposición un Simulador del ingreso mínimo vital con el que podrá comprobar si cumple los requisitos para recibir la prestación del Ingreso Mínimo Vital y conocer el importe aproximado que podría corresponderle",
+				"excerptSha256": "13a6ec86734370e270c7f365b0660168e639d54054bec7edc835def382d0819a"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS)",
+			"url": "https://imv.seg-social.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-imv",
+				"locator": "Apartado «Servicios sobre IMV»",
+				"excerpt": "Para solicitar el ingreso mínimo vital y/o el complemento de ayuda para la infancia acceda al Servicio Ingreso Mínimo Vital en nuestra sede electrónica",
+				"excerptSha256": "2cd50a351a640d8856aae1871aab360ead09e4ad29bcd6b816a3a498f7ebda62"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad: DNI (españoles) o documento del país de origen, TIE o pasaporte + NIE (extranjeros)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.1",
+					"excerpt": "se acreditará mediante el documento nacional de identidad en el caso de los españoles y mediante el documento nacional de identidad de su país de origen o procedencia, o de la tarjeta de identificación de extranjero, o el pasaporte, en el caso de ciudadanos extranjeros",
+					"excerptSha256": "b6a8110ced98c8f752555ffcc2468b950cced3b726f4694bd5ad4758f0970fd0"
+				}
+			},
+			{
+				"id": "doc-empadronamiento",
+				"label": "Certificado de empadronamiento (acredita la unidad de convivencia y la residencia)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.3",
+					"excerpt": "El domicilio en España se acreditará con el certificado de empadronamiento",
+					"excerptSha256": "20db45a58b34948b5e7af1b5ae3697b094e3ccd3491ac46abdd1cf00e766854c"
+				}
+			},
+			{
+				"id": "doc-unidad-convivencia",
+				"label": "Libro de familia o certificado del registro civil (acredita la unidad de convivencia y los menores)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 21.4",
+					"excerpt": "La existencia de la unidad de convivencia se acreditará con el libro de familia, certificado del registro civil",
+					"excerptSha256": "b57aa7f07f4bfbcb51bace060947f1424ff533e2110d67c210c5ad01110b43e1"
+				}
+			},
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud del IMV en el modelo normalizado (el complemento se estudia con la misma solicitud)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 27.1 y 27.3",
+					"excerpt": "La solicitud se realizará en el modelo normalizado establecido al efecto, acompañada de la documentación necesaria para justificar el cumplimiento de los requisitos establecidos en esta Ley",
+					"excerptSha256": "ff31ba0ebfdc02c37ae52432c56f8cc398b1899d2dc9bf7a255aafa77561bea2"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 57.5,
+		"maxEur": 115,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-ley-19-2021-imv",
+			"locator": "Art. 13.2.e",
+			"excerpt": "La cuantía del complemento de ayuda para la infancia contemplada en el artículo 11, apartado 6, será una cantidad mensual por cada menor de edad miembro de la unidad de convivencia, en función de la edad cumplida el día 1 de enero del correspondiente ejercicio",
+			"excerptSha256": "be746b0713b7f2be9793f986cbf34f125725fda8350e72b004cb69b3488163d6"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 4
+	},
+	"themes": [
+		"familia_infancia",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"tener_hijo",
+		"ingresos_bajos"
+	]
+}

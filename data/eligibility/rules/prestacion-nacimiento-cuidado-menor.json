@@ -1,0 +1,311 @@
+{
+	"benefitSlug": "prestacion-nacimiento-cuidado-menor",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 165, 177–182 y 318 (texto consolidado)"
+		},
+		{
+			"id": "boe-et-estatuto-trabajadores",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/23/2/con",
+			"title": "Estatuto de los Trabajadores (RDL 2/2015), art. 48.4–6 — suspensión del contrato por nacimiento y cuidado de menor (texto consolidado, con la ampliación del RDL 9/2025)"
+		},
+		{
+			"id": "segss-nacimiento-cuidado-menor",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/6b96a085-4dc0-47af-b2cb-97e00716791e/requisitos+19-c021?changeLanguage=es",
+			"title": "Seguridad Social — Nacimiento y cuidado de menor: situaciones protegidas, beneficiarias, requisitos, duración y cuantía"
+		},
+		{
+			"id": "segss-nacimiento-cuidado-menor-info",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/43384/75775a96-c87a-4b2d-a34c-f802097357a6?changeLanguage=es",
+			"title": "Seguridad Social — Procedimiento de la prestación de nacimiento y cuidado de menor (trámites, documentos, dónde se tramita)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "menor-a-cargo",
+			"hard": true,
+			"label": "Tener a tu cargo un hijo o una persona menor: recién nacido/a, adoptado/a, en guarda con fines de adopción o en acogimiento familiar",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 177",
+				"excerpt": "se consideran situaciones protegidas el nacimiento, la adopción, la guarda con fines de adopción y el acogimiento familiar",
+				"excerptSha256": "f8987bfc46d6740cf1955c112d0297317827578fbf8ffb16a965915f4787bb4c"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"field": "age",
+					"op": "lt",
+					"value": 18
+				}
+			}
+		},
+		{
+			"id": "persona-trabajadora",
+			"hard": true,
+			"label": "Ser persona trabajadora por cuenta ajena o propia (la afiliación y el alta o asimilada en la Seguridad Social se comprueban en la solicitud — ver ⚠)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS arts. 165.1/177/180/181",
+				"excerpt": "estar afiliadas y en alta en dicho Régimen o en situación asimilada a la de alta al sobrevenir la contingencia o situación protegida",
+				"excerptSha256": "cdb909f12d71a51a5d0e30a1cde929f637906f7f57fb960fcf82bc1738c89c65"
+			},
+			"condition": {
+				"any": [
+					{
+						"label": "Trabajadora o trabajador por cuenta ajena (Régimen General)",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 178.1",
+							"excerpt": "las personas incluidas en este Régimen General, cualquiera que sea su sexo, que disfruten de los descansos referidos en el artículo anterior",
+							"excerptSha256": "2745aa934aabe79473b628fff4052b3e6be4717dca76038b4c164d03dd061973"
+						},
+						"field": "employmentStatus",
+						"op": "in",
+						"value": [
+							"asalariado"
+						]
+					},
+					{
+						"label": "Trabajadora o trabajador por cuenta propia (RETA y otros regímenes especiales)",
+						"citation": {
+							"sourceId": "boe-lgss-prestacion-familia",
+							"locator": "Art. 318.a",
+							"excerpt": "En materia de protección por nacimiento y cuidado de menor, lo dispuesto en el capítulo VI del título II",
+							"excerptSha256": "c170b86723ed076e0378cf7556661607532cbc92dc4b204e80a19c4686b26acb"
+						},
+						"field": "employmentStatus",
+						"op": "eq",
+						"value": "autonomo"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "afiliacion-y-alta",
+			"label": "Estar afiliada/o y en alta en un régimen de la Seguridad Social, o en situación asimilada al alta, al inicio de cada período de descanso",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 178.4 (y Art. 165.1)",
+				"excerpt": "la persona trabajadora deberá encontrarse en situación de alta o asimilada a la de alta",
+				"excerptSha256": "b6af6379c8095f082447d78edc39a0d4fcff6310ac0379104053750d93a3f8a0"
+			}
+		},
+		{
+			"id": "cotizacion-minima-edad",
+			"label": "Período mínimo de cotización según tu edad en la fecha del nacimiento (o de la resolución/decisión): menos de 21 años → ninguno; de 21 a 25 → 90 días en los últimos 7 años o 180 en tu vida laboral; 26 o más → 180 días en los últimos 7 años o 360 en tu vida laboral",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 178.1.c",
+				"excerpt": "ciento ochenta días cotizados dentro de los siete años inmediatamente anteriores al momento de inicio del descanso",
+				"excerptSha256": "f380d0d399daeee5f9f0a6ee77011aaa2eeb63fe222178a2d15b6150620669f8"
+			}
+		},
+		{
+			"id": "supuesto-especial-no-contributivo",
+			"label": "Si no acreditas la cotización mínima pero cumples el resto de requisitos, puedes acceder al subsidio no contributivo: 100 % del IPREM durante el período de descanso obligatorio (se amplía 14 días en familia numerosa, monoparentalidad, nacimiento/adopción múltiple o discapacidad ≥ 65 %)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Arts. 181–182",
+				"excerpt": "igual al 100 por ciento del indicador público de renta de efectos múltiples (IPREM) vigente en cada momento",
+				"excerptSha256": "84ed24cbc1f5b7ba88c2856e5cad7fa83e3cfb1ad0bcf31e0f3b126dfd604bb7"
+			}
+		},
+		{
+			"id": "duracion-y-disfrute-permiso",
+			"label": "Disfrutar efectivamente del permiso o suspensión por nacimiento: 19 semanas por progenitor — 6 obligatorias a jornada completa inmediatamente tras el parto, 11 distribuibles hasta que el menor cumpla 12 meses y 2 de cuidado hasta los 8 años (32 semanas si monoparentalidad)",
+			"citation": {
+				"sourceId": "boe-et-estatuto-trabajadores",
+				"locator": "Art. 48.4",
+				"excerpt": "suspenderá el contrato de trabajo de la madre biológica y el del progenitor distinto de la madre biológica durante diecinueve semanas",
+				"excerptSha256": "2a2d04102a16b58aee90441eb6212b02697e1a0b7db749e28af5c999cbc3a5f9"
+			}
+		},
+		{
+			"id": "derecho-individual",
+			"label": "El permiso es un derecho individual e intransferible de cada progenitor: cada uno solicita y disfruta el suyo (el subsidio especial por parto múltiple solo lo percibe uno)",
+			"citation": {
+				"sourceId": "boe-et-estatuto-trabajadores",
+				"locator": "Art. 48.4",
+				"excerpt": "Este derecho es individual de la persona trabajadora sin que pueda transferirse su ejercicio al otro progenitor",
+				"excerptSha256": "a1f1ec1e62912da71d32e400b7cbb4b921e41e9bd4bdb6adb805d5a041a210b2"
+			}
+		},
+		{
+			"id": "limites-adopcion-acogimiento",
+			"label": "En adopción, guarda o acogimiento (ámbito del Estatuto de los Trabajadores): el menor debe tener menos de 6 años, o ser menor de edad mayor de 6 años con discapacidad o con especiales dificultades de inserción acreditadas por los servicios sociales; en el ámbito del EBEP el acogimiento debe tener una duración no inferior a un año",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS arts. 165.1/177/180/181",
+				"excerpt": "se consideran situaciones protegidas el nacimiento, la adopción, la guarda con fines de adopción y el acogimiento familiar",
+				"excerptSha256": "f8987bfc46d6740cf1955c112d0297317827578fbf8ffb16a965915f4787bb4c"
+			}
+		},
+		{
+			"id": "funcionarios-mutualidad",
+			"label": "Personal funcionario: el permiso se regula en el art. 49 a)–c) del EBEP y la prestación la gestiona tu mutualidad (MUFACE, ISFAS, MUGEJU), no el INSS — este veredicto se refiere al régimen de la Seguridad Social de las personas asalariadas y autónomas",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 177, in fine",
+				"excerpt": "y en el artículo 49.a), b) y c) del texto refundido de la Ley del Estatuto Básico del Empleado Público",
+				"excerptSha256": "3d4fedde86615527060dae72f14501a3c40fac2544ec8659e457dc3815dba7b7"
+			}
+		},
+		{
+			"id": "no-trabajar-durante-descanso",
+			"label": "No trabajar por cuenta propia ni ajena durante los períodos de descanso (salvo percepción a jornada parcial y los supuestos de pluriempleo y pluriactividad); hacerlo puede denegar, anular o suspender el subsidio",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 180",
+				"excerpt": "trabajara por cuenta propia o ajena durante los correspondientes períodos de descanso",
+				"excerptSha256": "65d04f01a0177ff74acdf7cff048bdae31ce744a27f78cb98cf057e0d7cf81a9"
+			}
+		},
+		{
+			"id": "corriente-de-cuotas",
+			"label": "Estar al corriente en el pago de las cuotas de las que seas responsable directa (sobre todo autónomos), con el mecanismo de invitación al pago si falta alguna",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS arts. 165.1/177/180/181",
+				"excerpt": "la empresa deberá de encontrarse al corriente de pago en las cuotas de la Seguridad Social",
+				"excerptSha256": "b987f7a89dbe715b96c408f94914c439c74a672cae6ee3b1c83a98be5194f4d4"
+			}
+		},
+		{
+			"id": "subsidio-parto-multiple",
+			"label": "En parto múltiple o adopción/guarda/acogimiento simultáneo de más de un menor hay un subsidio especial por cada menor a partir del segundo (un solo pago al terminar las 6 semanas), que solo puede percibir uno de los progenitores",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS arts. 165.1/177/180/181",
+				"excerpt": "Serán personas beneficiarias del subsidio por nacimiento y cuidado de menor previsto en esta sección las personas trabajadoras incluidas en el Régimen General",
+				"excerptSha256": "7595befc8beff8582ffa1fb6dc70219fe5ba9d6a592665e36a3e3c8cd0d14ba9"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "segss-nacimiento-cuidado-menor",
+				"locator": "Apartado «Nacimiento»",
+				"excerpt": "Se tendrá derecho al subsidio a partir del mismo día en que dé comienzo el período de descanso correspondiente",
+				"excerptSha256": "46be9c3adc476f65668780c9d93164db8d0cce01a43a5471cc86ca8ff66b7f81"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) en el Régimen Especial del Mar",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-nacimiento-cuidado-menor-info",
+				"locator": "Apartado «¿Dónde se tramita?»",
+				"excerpt": "El procedimiento para el reconocimiento del derecho se iniciará a instancia del interesado, mediante solicitud, a través de nuestra Sede Electrónica",
+				"excerptSha256": "aff998269fa154bce8cdd31d08aff53064552764836aebcb06b33f7824614a9a"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud según el modelo oficial",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-nacimiento-cuidado-menor-info",
+					"locator": "Apartado «¿Qué trámites se deben realizar?»",
+					"excerpt": "según modelo oficial",
+					"excerptSha256": "5c37c275e0174e49e426c9203dc7027559d5f55f231180139b34e92c5c494fdf"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad, original y en vigor",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-nacimiento-cuidado-menor-info",
+					"locator": "Apartado «¿Qué trámites se deben realizar?»",
+					"excerpt": "Documento de identidad , original y en vigor",
+					"excerptSha256": "65ec0647ad9cd12372c15860ff0517cbc4f678df973feb3004f1d4c2cbee3b92"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Libro de familia o certificado de inscripción del hijo/a (solo si los datos no constan automatizados en el Registro Civil)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-nacimiento-cuidado-menor-info",
+					"locator": "Apartado «¿Qué trámites se deben realizar?»",
+					"excerpt": "Libro de familia o certificado de inscripción del hijo/a cuando estos datos no consten automatizados en el Registro Civil",
+					"excerptSha256": "22afa5d6904e69bdab290391f58c0533cdea8dea7517dea9815c57dc0ec47a52"
+				}
+			},
+			{
+				"id": "doc-certificado-empresa",
+				"label": "Certificado de empresa (si la empresa no lo ha transmitido por medios electrónicos)",
+				"mandatory": true,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "eq",
+					"value": "asalariado"
+				},
+				"citation": {
+					"sourceId": "segss-nacimiento-cuidado-menor-info",
+					"locator": "Apartado «¿Qué trámites se deben realizar?»",
+					"excerpt": "Certificado de empresa , si no ha sido transmitido por la empresa por medios electrónicos",
+					"excerptSha256": "6744b73b5b9a98593db843d9c19e6a0239c1de2f11c7e17fde80d032423a8693"
+				}
+			},
+			{
+				"id": "doc-informe-maternidad",
+				"label": "Informe de maternidad del Servicio Público de Salud (solo si la madre biológica anticipa el descanso al parto o en los supuestos de fallecimiento señalados)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-nacimiento-cuidado-menor-info",
+					"locator": "Apartado «¿Qué trámites se deben realizar?»",
+					"excerpt": "Informe de maternidad expedido por el Servicio Público de Salud en los supuestos de inicio del descanso con antelación al parto",
+					"excerptSha256": "6dad44c010deb25c389b65afd0086c33c3198670f0898a2198b526b1fc990ce8"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 179.1",
+			"excerpt": "consistirá en un subsidio equivalente al 100 por ciento de la base reguladora correspondiente",
+			"excerptSha256": "4acf9ba69af4680a12a033eb864cd7ec8c8aca58749b092a80a39e90cdecf28c"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	},
+	"themes": [
+		"familia_infancia"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	]
+}

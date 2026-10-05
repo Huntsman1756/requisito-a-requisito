@@ -1,0 +1,94 @@
+{
+	"id": "gp-nacimiento-getafe",
+	"description": "Madre de 27 años, empadronada en Getafe (28065) desde 2014 (más de 5 años dentro de los últimos 10), con un hijo de 1 año a cargo nacido en 2025, asalariada, ingresos del hogar en la banda más baja (0–8.400 €/año). Caso positivo típico de la ayuda de pago mensual por nacimiento de la CM (500 €/mes hasta los 24 meses del menor): los requisitos comprobables salen T, pero el veredicto no puede pasar de «posible» porque la condición de madre/gestante/adoptante desde el 1/1/2022, la residencia legal, la renta IRPF exacta (individual ≤30.000 / conjunta ≤36.200), las prohibiciones del art. 13 LGS y la disponibilidad de crédito no son comprobables con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2014,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 27,
+					"max": 27,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 1,
+							"max": 1,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-ayudas-nacimiento-general",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20221229-28-natalidad-modif",
+					"locator": "Art. 6.c (redacción Acuerdo 21/12/2022)",
+					"reasoning": "territory = Getafe (28065) ⊂ CM ⇒ within_territory = T: reside y está empadronada en un municipio de la CM. Además residenceSince 06/2014 ⇒ residenceMonths ≈ 136 ≥ 60 ⇒ T en el requisito de aviso «5 años dentro de los 10 anteriores» (proxy conservador: la norma admite periodos no continuados, documentado en uncoveredRequirements)."
+				},
+				{
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Art. 6.b y 6.d",
+					"reasoning": "age = 27 ⇒ lte 30 = T (límite de «treinta años o menos» a la fecha de solicitud). incomeAnnual 0–8.400 € ⇒ lt 30.000 = T: queda por debajo tanto del límite individual como del conjunto, aunque la renta exacta sobre el IRPF del último período vencido no es comprobable (⚠ renta-irpf-exacta)."
+				},
+				{
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Arts. 5.1, 5.5 y 6.a/e",
+					"reasoning": "No son comprobables con ≤10 preguntas: la situación beneficiaria (madre de hijo nacido desde el 1/1/2022 —el hijo de 1 año lo hace plausible pero no verificable—, gestante ≥ semana 21 o adoptante desde 1/1/2022), la residencia legal en España, las prohibiciones del art. 13 LGS y la patria potestad ⇒ quedan como ⚠ y el veredicto es «posible», no «probable»."
+				},
+				{
+					"sourceId": "bocm-20251010-19-natalidad-credito-2026",
+					"locator": "Orden 3017/2025 — declaración de crédito 2026",
+					"reasoning": "Concesión directa permanente: art. 9.1 mantiene el plazo abierto de forma continuada cada ejercicio (sede A76: «En plazo: permanente») y la Orden 3017/2025 declaró el crédito para 2026 ⇒ deadlineState ROLLING, sujeto a disponibilidad presupuestaria (⚠ credito-presupuestario)."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

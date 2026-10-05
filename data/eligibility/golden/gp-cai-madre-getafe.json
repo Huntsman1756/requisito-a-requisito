@@ -1,0 +1,51 @@
+{
+	"id": "gp-cai-madre-getafe",
+	"description": "Madre monoparental de 33 años en Getafe, empadronada desde 05/2021 (>1 año), un hijo de 4 años, desempleada, ingresos anuales en la banda más baja. Caso positivo con advertencias: cumple los tres requisitos duros (menor en la unidad, año de residencia, edad de la titular); el resto (umbrales económicos ampliados 300 %/150 %, unidad constituida 6 meses, incompatibilidad con la asignación por hijo a cargo…) son no comprobables con nuestras preguntas ⇒ veredicto posible. Al ser monoparental con un menor, el complemento presumiblemente se estudiaría de oficio junto a la solicitud del IMV.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28065" } },
+			"residenceSince": { "state": "value", "value": { "year": 2021, "month": 5 } },
+			"age": { "state": "value", "value": { "min": 33, "max": 33, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [ { "age": { "min": 4, "max": 4, "maxExclusive": false }, "disability": "no" } ] },
+			"familyType": { "state": "value", "value": "monoparental" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "complemento-ayuda-infancia",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 11.6",
+					"reasoning": "Un hijo de 4 años a cargo ⇒ dependents.count_where_gte(age<18) = 1 ⇒ T. La edad del menor se mide a 1 de enero del ejercicio (art. 13.2.e): con 4 años encuadra en el tramo 3–5 años (80,50 €/mes según la tabla vigente de la Seguridad Social)."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 10.1.a",
+					"reasoning": "Empadronada en Getafe desde 05/2021 ⇒ ~65 meses de residencia a 05/10/2026 (≥ 12): el requisito de residencia queda en T (proxy por empadronamiento; la «legal» queda en ⚠)."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 5.2",
+					"reasoning": "33 años ⇒ la titular supera los 23 años (y además cumpliría la vía de mayor de edad con menor a cargo): T."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Art. 11.6 y 14.1",
+					"reasoning": "El complemento exige reunir los requisitos del IMV salvo los umbrales económicos ampliados (ingresos <300 % del anexo I, patrimonio <150 % del anexo II): no comprobables con nuestras preguntas ⇒ ⚠. Sin requisitos duros en F ni U ⇒ veredicto posible. Se solicita en cualquier momento junto al IMV (o solo, por el mismo servicio) ⇒ deadline ROLLING."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

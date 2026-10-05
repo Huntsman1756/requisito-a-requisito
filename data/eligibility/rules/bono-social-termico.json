@@ -1,0 +1,259 @@
+{
+	"benefitSlug": "bono-social-termico",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-rdl-15-2018-bono-termico",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdl/2018/10/05/15/con",
+			"title": "Real Decreto-ley 15/2018, de 5 de octubre — crea el Bono Social Térmico (arts. 5-10; texto consolidado)"
+		},
+		{
+			"id": "boe-rd-897-2017-bono-social",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2017/10/06/897/con",
+			"title": "Real Decreto 897/2017 — consumidor vulnerable y bono social (texto consolidado a 28/01/2026)"
+		},
+		{
+			"id": "bocm-20220629-29-bono-termico",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://bocm.es/boletin/CM_Orden_BOCM/2022/06/29/BOCM-20220629-29.PDF",
+			"title": "Orden 1478/2022, de 27 de junio — procedimiento de gestión, concesión y pago del Bono Social Térmico en la Comunidad de Madrid (BOCM 29/06/2022)"
+		},
+		{
+			"id": "bocm-20251229-22-bono-termico-2025",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://bocm.es/boletin/CM_Orden_BOCM/2025/12/29/BOCM-20251229-22.PDF",
+			"title": "Orden 4379/2025, de 18 de diciembre — crédito e inicio del procedimiento del Bono Social Térmico 2025 en la CM (BOCM 29/12/2025)"
+		},
+		{
+			"id": "sede-bono-social-termico",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2025",
+			"title": "Sede electrónica CM — Bono Social Térmico 2025 (ref. A874)"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "suministro-cm",
+			"hard": true,
+			"label": "Tener el punto de suministro de electricidad de tu vivienda habitual en la Comunidad de Madrid (proxy: empadronamiento en un municipio de la CM)",
+			"citation": {
+				"sourceId": "bocm-20220629-29-bono-termico",
+				"locator": "Art. 1",
+				"excerpt": "consumidores domésticos con punto de suministro de energía eléctrica dentro del ámbito territorial de la Comunidad de Madrid que sean beneficiarios del bono social de electricidad",
+				"excerptSha256": "f502c42e49919ab1d209ac513cdd79ef2be66a8e723e1dd6a7a9723ec797e03d"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "alguna-via-vulnerable",
+			"hard": false,
+			"label": "Cumplir alguna vía de «consumidor vulnerable» del bono social de electricidad",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2",
+				"excerpt": "deberá cumplir alguno de los requisitos siguientes",
+				"excerptSha256": "d709ed78d5bf8b41bd112874562ff2f548c730d0d4d6205bc5a2f821c373ed77"
+			},
+			"condition": {
+				"any": [
+					{
+						"label": "Tener título de familia numerosa",
+						"citation": {
+							"sourceId": "boe-rd-897-2017-bono-social",
+							"locator": "Art. 3.2.b",
+							"excerpt": "Estar en posesión del título de familia numerosa",
+							"excerptSha256": "2f095e398bec039032030692c250510c473a0819a3d35136d774ebaa3f196b72"
+						},
+						"field": "familyType",
+						"op": "eq",
+						"value": "familia-numerosa"
+					},
+					{
+						"label": "Renta conjunta anual ≤ 1,5 veces el IPREM de 14 pagas",
+						"citation": {
+							"sourceId": "boe-rd-897-2017-bono-social",
+							"locator": "Art. 3.2.a",
+							"excerpt": "sea igual o inferior a 1,5 veces el Indicador Público de Renta de Efectos Múltiples (IPREM) de 14 pagas",
+							"excerptSha256": "e1828ae66d7e3dc3280bc2c8ca30b219f1b775393f82bbf6c8d2dda37726370d"
+						},
+						"field": "incomeAnnual",
+						"op": "lte",
+						"param": "IPREM_ANUAL_14P",
+						"multiplier": 1.5
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "perceptor-bse-31-12",
+			"label": "Ser perceptor del bono social de electricidad a 31 de diciembre del año anterior (no se solicita: las comercializadoras de referencia remiten el listado a la Comunidad de Madrid)",
+			"citation": {
+				"sourceId": "bocm-20220629-29-bono-termico",
+				"locator": "Art. 5",
+				"excerpt": "las personas físicas que perciban el bono social de electricidad previsto en el artículo 45 de la Ley 24/2013, de 26 de diciembre, del Sector Eléctrico, a 31 de diciembre del año anterior",
+				"excerptSha256": "dd10c6db3216c1af6cddbe91923905fe4ba5db9099f5c5a23791e508ffd8767b"
+			}
+		},
+		{
+			"id": "titular-pvpc",
+			"label": "Para ser perceptor del bono social de electricidad hay que ser titular del punto de suministro de la vivienda habitual y estar acogido al PVPC (solo comercializadores de referencia)",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.1",
+				"excerpt": "la persona titular de un punto de suministro de electricidad en su vivienda habitual que, siendo persona física, esté acogida al precio voluntario para el pequeño consumidor (PVPC)",
+				"excerptSha256": "b707086af87d150c78f4e693443db385f2a0d71a3a81dc93ee98bf1153dc5999"
+			}
+		},
+		{
+			"id": "via-pensionistas",
+			"label": "Otra vía de consumidor vulnerable: pensionistas de la Seguridad Social por jubilación o incapacidad con cuantía mínima, sin otros ingresos >500 €/año",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.c",
+				"excerpt": "sean pensionistas del Sistema de la Seguridad Social por jubilación o incapacidad permanente, percibiendo la cuantía mínima vigente",
+				"excerptSha256": "831045585feb838ef9e85b89bbfbee3730697b66892f2d113e3c9d31a1159fe5"
+			}
+		},
+		{
+			"id": "via-imv",
+			"label": "Otra vía de consumidor vulnerable: beneficiario del Ingreso Mínimo Vital",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.d",
+				"excerpt": "beneficiario del Ingreso Mínimo Vital conforme a lo establecido en la Ley 19/2021",
+				"excerptSha256": "e363e0464ff283e87a3d9bc57f932730915209a9c8a2e8ebb03d07212ab415b1"
+			}
+		},
+		{
+			"id": "multiplicador-hogar",
+			"label": "El umbral de renta de la vía general sube 0,3×IPREM por cada adulto adicional y 0,5×IPREM por cada menor de la unidad de convivencia; +1×IPREM en circunstancias especiales (discapacidad ≥33 %, violencia de género, víctima de terrorismo, dependencia grado II-III, monoparental con menor, electrodependencia)",
+			"citation": {
+				"sourceId": "boe-rd-897-2017-bono-social",
+				"locator": "Art. 3.2.a y 3.3",
+				"excerpt": "el multiplicador de renta respecto al índice IPREM de 14 pagas se incrementará en 0,3 por cada miembro adicional mayor de edad que conforme la unidad de convivencia y 0,5 por cada menor de edad",
+				"excerptSha256": "4348f4069108280fb504943d244493f6819e6986ba694a84042c51f6053ec422"
+			}
+		},
+		{
+			"id": "grado-y-zona-climatica",
+			"label": "La cuantía depende del grado de vulnerabilidad (vulnerable / vulnerable severo o en riesgo de exclusión) y de la zona climática de la vivienda empadronada; los importes unitarios se fijan cada año por resolución de la Secretaría de Estado de Energía",
+			"citation": {
+				"sourceId": "bocm-20220629-29-bono-termico",
+				"locator": "Art. 4",
+				"excerpt": "La cuantía anual a asignar a cada uno de los beneficiarios del bono social térmico vendrá determinada según la categoría de consumidor vulnerable, así como, la zona climática en la que se ubique la vivienda en la que se encuentre empadronado",
+				"excerptSha256": "5970e40a08bc29458e4e13d5e37784d0d5414a5fa5a37021f5bba5de6bb12d4c"
+			}
+		},
+		{
+			"id": "datos-bancarios",
+			"label": "Si los datos bancarios remitidos por la comercializadora están incompletos o son incorrectos, la Administración requerirá su aportación en 10 días hábiles; si no se responde, se tiene por desistido",
+			"citation": {
+				"sourceId": "bocm-20220629-29-bono-termico",
+				"locator": "Art. 6.5",
+				"excerpt": "otorgando un plazo máximo de 10 días hábiles, con advertencia de que si no lo hiciesen se les tendrá por desistidos",
+				"excerptSha256": "966159453b25a3103f5732be1cf8cdda5a13792e06b0321571471bcc7fd93905"
+			}
+		},
+		{
+			"id": "renuncia-10-dias",
+			"label": "Se puede renunciar al pago en los 10 días hábiles siguientes a la publicación de la resolución de concesión en el BOCM (la renuncia de un año no afecta a años posteriores ni al bono social eléctrico)",
+			"citation": {
+				"sourceId": "bocm-20220629-29-bono-termico",
+				"locator": "Art. 8",
+				"excerpt": "El beneficiario podrá renunciar al pago de la ayuda en el plazo de 10 días hábiles contados a partir del siguiente a la publicación de la resolución de concesión",
+				"excerptSha256": "9ca1ef25d4a08b070518f9c58791f3894d8ca26c23f5529b9d9f9dd6b11a8efe"
+			}
+		},
+		{
+			"id": "condicionado-fondos",
+			"label": "La concesión queda condicionada a la efectiva transferencia de fondos del Estado a la Comunidad de Madrid",
+			"citation": {
+				"sourceId": "boe-rdl-15-2018-bono-termico",
+				"locator": "Art. 7.2",
+				"excerpt": "El otorgamiento de ayudas en concepto de Bono Social Térmico estará condicionado a la existencia de disponibilidad presupuestaria",
+				"excerptSha256": "2d82ba61ace0c4a26b84eec8799980c7354edc24fe5ac07c6e7a65177324fd94"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"recurrence": "annual",
+			"citation": {
+				"sourceId": "bocm-20251229-22-bono-termico-2025",
+				"locator": "Segundo",
+				"excerpt": "Acordar el inicio del procedimiento para reconocer el derecho al pago de las ayudas del bono social térmico de los beneficiarios del bono social eléctrico a 31 de diciembre de 2024 con punto de suministro en la Comunidad de Madrid",
+				"excerptSha256": "9b7013664a5263cd1430454a6a0b52370ff5f671e4ffe03c35fb39b5044d33cc"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales (concesión directa de oficio; sin solicitud)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2025",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "boe-rdl-15-2018-bono-termico",
+				"locator": "Art. 10.2",
+				"excerpt": "La gestión y el pago de las ayudas corresponderá a las Comunidades Autónomas y a las Ciudades con Estatuto de Autonomía",
+				"excerptSha256": "b49d4b434e3f73f6ced55452c208c40ef54b14d5f6d578bb5dabdf2e54b03324"
+			}
+		},
+		"documents": [
+			{
+				"id": "datos-cuenta-bancaria",
+				"label": "Comunicación de datos bancarios para la ayuda (solo si la Comunidad de Madrid requiere completar o corregir los datos remitidos por la comercializadora; con la concesión no hay que aportar documentación)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-bono-social-termico",
+					"locator": "Documentación",
+					"excerpt": "No es necesario aportar documentación junto a la solicitud",
+					"excerptSha256": "e93f1c6f49f692f21fcb1ae539628d13b850bb94e4118bf138a703487c48559d"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "annual",
+		"citation": {
+			"sourceId": "bocm-20220629-29-bono-termico",
+			"locator": "Art. 4",
+			"excerpt": "La cuantía anual a asignar a cada uno de los beneficiarios del bono social térmico vendrá determinada según la categoría de consumidor vulnerable, así como, la zona climática en la que se ubique la vivienda en la que se encuentre empadronado",
+			"excerptSha256": "5970e40a08bc29458e4e13d5e37784d0d5414a5fa5a37021f5bba5de6bb12d4c"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": false,
+		"formPages": 0
+	},
+	"themes": [
+		"energia_suministros"
+	],
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

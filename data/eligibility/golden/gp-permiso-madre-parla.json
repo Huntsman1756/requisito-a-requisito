@@ -1,0 +1,106 @@
+{
+	"id": "gp-permiso-madre-parla",
+	"description": "Madre de 30 años, empadronada en Parla (28106) desde 2019, con un recién nacido a cargo. Trabaja como asalariada e inicia la suspensión del contrato por nacimiento y cuidado de menor. Caso positivo típico: los dos requisitos comprobables salen T, pero el veredicto no puede pasar de «posible» porque la afiliación y el alta, el período mínimo de cotización según la edad y el disfrute efectivo del permiso no son comprobables con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28106"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2019,
+					"month": 2
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 30,
+					"max": 30,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 0,
+							"max": 0,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "prestacion-nacimiento-cuidado-menor",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 177",
+					"reasoning": "Una persona a cargo de 0 años ⇒ count_where_gte(age < 18) = T: cumple el requisito comprobable de tener un hijo o menor a cargo (nacimiento es la situación protegida típica del art. 177)."
+				},
+				{
+					"sourceId": "segss-nacimiento-cuidado-menor",
+					"locator": "Apartado «Personas beneficiarias»",
+					"reasoning": "employmentStatus = asalariado ⇒ rama por cuenta ajena del any = T (art. 178.1 LGSS, Régimen General): es persona trabajadora, que la norma presupone afiliada y en alta."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 165.1, 178.4 y 178.1",
+					"reasoning": "Las condiciones decisivas no son comprobables con ≤ 10 preguntas: estar afiliada y en alta o asimilada al inicio de cada período de descanso, y acreditar 180 días cotizados en los últimos 7 años (o 360 en la vida laboral) por tener 26 años o más. Con 30 años le corresponde el tercer tramo del art. 178.1.c. Quedan en uncoveredRequirements como ⚠ ⇒ veredicto «posible», no «probable»."
+				},
+				{
+					"sourceId": "boe-et-estatuto-trabajadores",
+					"locator": "Art. 48.4",
+					"reasoning": "La suspensión es de 19 semanas por progenitor tras la ampliación del RDL 9/2025 (6 obligatorias + 11 hasta los 12 meses + 2 hasta los 8 años), y el subsidio se devenga desde el día de inicio del descanso ⇒ la prestación es permanente/rolling: deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

@@ -1,0 +1,111 @@
+{
+	"id": "gp-termico-getafe",
+	"description": "Padre de 44 años en Getafe con título de familia numerosa (tres hijos), empleado, ingresos en banda media-alta. Caso positivo con advertencias: el punto de suministro está en la CM (territorio hard = T) y cumple la vía de consumidor vulnerable por familia numerosa (any = T, la renta ni se necesita); pero el requisito decisivo —haber sido perceptor del bono social de electricidad a 31/12 del año anterior— no es comprobable con nuestras preguntas, como tampoco la titularidad PVPC ni el grado de vulnerabilidad que fija la cuantía ⇒ veredicto posible, no positivo.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 44,
+					"max": 44,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 15,
+							"max": 15,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 12,
+							"max": 12,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 9,
+							"max": 9,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "empleado"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 28000,
+					"max": 42000
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "bono-social-termico",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20220629-29-bono-termico",
+					"locator": "Art. 1",
+					"reasoning": "Getafe (28065) es municipio de la Comunidad de Madrid ⇒ el punto de suministro de la vivienda habitual queda dentro del ámbito territorial de la CM (proxy por empadronamiento) ⇒ requisito hard en T."
+				},
+				{
+					"sourceId": "boe-rd-897-2017-bono-social",
+					"locator": "Art. 3.2.b",
+					"reasoning": "Título de familia numerosa ⇒ vía de consumidor vulnerable en T aunque la renta (28.000–42.000 €/año) supere con creces 1,5×IPREM; la condición es un «any» y basta una vía."
+				},
+				{
+					"sourceId": "bocm-20220629-29-bono-termico",
+					"locator": "Art. 5",
+					"reasoning": "El requisito decisivo —ser persona física perceptrice del bono social de electricidad a 31/12 del año anterior— queda en U: no hay pregunta sobre si ya se percibe el bono eléctrico. Como es no comprobable (uncovered), no excluye: veredicto posible."
+				},
+				{
+					"sourceId": "bocm-20251229-22-bono-termico-2025",
+					"locator": "Segundo",
+					"reasoning": "Ciclo anual de oficio: la Orden 4379/2025 inicia el procedimiento del BSTE 2025 sobre perceptores del bono eléctrico a 31/12/2024 ⇒ deadlineState ROLLING con recurrencia anual; no hay solicitud ni ventana de cierre para el beneficiario."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

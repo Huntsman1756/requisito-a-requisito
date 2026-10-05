@@ -1,0 +1,340 @@
+{
+	"benefitSlug": "madrid-ayudas-nacimiento-general",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20211227-25-nacimiento-general",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/12/27/BOCM-20211227-25.PDF",
+			"title": "Acuerdo de 9 de diciembre de 2021, del Consejo de Gobierno — normas reguladoras y concesión directa de ayudas económicas de pago mensual por gestación, nacimiento de hijo o adopción de menores en la Comunidad de Madrid (BOCM n.º 308, 27/12/2021)"
+		},
+		{
+			"id": "bocm-20221229-28-natalidad-modif",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/12/29/BOCM-20221229-28.PDF",
+			"title": "Acuerdo de 21 de diciembre de 2022 — modifica el Acuerdo de 9/12/2021 (redacción vigente de arts. 6.c, 7.4 y 8.2.b/f; BOCM n.º 310)"
+		},
+		{
+			"id": "bocm-20220223-13-natalidad-modif",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/02/23/BOCM-20220223-13.PDF",
+			"title": "Acuerdo de 16 de febrero de 2022 — modifica el Acuerdo de 9/12/2021 (arts. 6.c y 8.2.b/c; BOCM n.º 46)"
+		},
+		{
+			"id": "bocm-20251010-19-natalidad-credito-2026",
+			"rank": 2,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/10/10/BOCM-20251010-19.PDF",
+			"title": "Orden 3017/2025, de 25 de septiembre — declara el crédito presupuestario disponible para estas ayudas en el ejercicio 2026 (BOCM 10/10/2025)"
+		},
+		{
+			"id": "bocm-20260406-14-natalidad-ampliacion-2026",
+			"rank": 2,
+			"documentType": "extension",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/04/06/BOCM-20260406-14.PDF",
+			"title": "Orden 741/2026, de 23 de marzo — amplía el crédito presupuestario de estas ayudas en el ejercicio 2026 (BOCM 06/04/2026)"
+		},
+		{
+			"id": "sede-natalidad-mensual",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad",
+			"title": "Sede electrónica CM — Ayudas económicas de pago mensual por gestación, nacimiento de hijo o adopción de menores (trámite A76)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "empadronado-municipio-cm",
+			"hard": true,
+			"label": "Residir y estar empadronado/a en un municipio de la Comunidad de Madrid en el momento de la solicitud",
+			"citation": {
+				"sourceId": "bocm-20221229-28-natalidad-modif",
+				"locator": "Art. 6.c (redacción Acuerdo 21/12/2022)",
+				"excerpt": "Residir y estar empadronada/o en algún municipio de la Comunidad de Madrid, en el momento de la solicitud",
+				"excerptSha256": "6f06b96557140d5741e6a1d2bcfd4f9cedc031a425e02fe55674120c5adf6b3e"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "edad-max-30",
+			"hard": true,
+			"label": "Tener 30 años o menos en la fecha de presentación de la solicitud",
+			"timeDependent": "decreasing",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 6.b",
+				"excerpt": "Tener treinta años o menos.",
+				"excerptSha256": "234f8f1ddff50b542c96dcad8af91486d8db937c799ee91681fa3b379068cf61"
+			},
+			"condition": {
+				"field": "age",
+				"op": "lte",
+				"value": 30
+			}
+		},
+		{
+			"id": "empadronamiento-5-en-10",
+			"hard": false,
+			"label": "Al menos 5 años de empadronamiento en la CM dentro de los 10 años anteriores a la solicitud (proxy: antigüedad continuada actual; la norma admite periodos no continuados — ver ⚠)",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "bocm-20221229-28-natalidad-modif",
+				"locator": "Art. 6.c (redacción Acuerdo 21/12/2022)",
+				"excerpt": "al menos durante cinco años, dentro de los diez años",
+				"excerptSha256": "fb7546768a88c79b6ff55e2482cfae7120c7fd46f08cfb8da0822ae2bacf91bc"
+			},
+			"condition": {
+				"field": "residenceMonths",
+				"op": "gte",
+				"value": 60
+			}
+		},
+		{
+			"id": "renta-irpf",
+			"hard": false,
+			"label": "Renta anual por debajo de 30.000 € en tributación individual o 36.200 € en tributación conjunta (IRPF del último período impositivo vencido; comprobamos el límite más estricto)",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 6.d",
+				"excerpt": "No superar los 30.000 euros anuales de renta en tributación individual o los 36.200 euros anuales de renta en tributación conjunta",
+				"excerptSha256": "b6dc75b6f20b432eab46ec03d90b3a78f71aec166f03f2c4455da5264c29bc1a"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lt",
+				"value": 30000
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "situacion-beneficiaria",
+			"label": "Estar en una de estas situaciones en la fecha de solicitud: gestante desde la semana 21, madre con hijo/a nacido desde el 1/1/2022 (se puede pedir mientras el menor tenga menos de 24 meses) o persona que haya adoptado un menor desde el 1/1/2022",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 5.1",
+				"excerpt": "Gestantes desde la semana 21 de gestación, a partir de 1 de enero de 2022",
+				"excerptSha256": "a11ab7d08dc1df13c0062d950c76192be0b41fb3d5614370e18d5db131232b8a"
+			}
+		},
+		{
+			"id": "situacion-madre-adoptante",
+			"label": "Alternativamente: madre que haya tenido un hijo (o más, en parto múltiple) a partir del 1/1/2022, o persona que haya adoptado un menor desde esa fecha",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 5.1.b y c",
+				"excerpt": "Madres que hayan tenido un hijo o más hijos en caso de parto múltiple, a partir de 1 de enero de 2022",
+				"excerptSha256": "77df3fd588a8fd5cb7b145ac09bf8ae9f707f0853570992c37ab3fbf7342d212"
+			}
+		},
+		{
+			"id": "nacionalidad-residencia-legal",
+			"label": "Ser español/a o extranjero/a con residencia legal en España",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 6.a",
+				"excerpt": "Ser español/a o extranjera/o con residencia legal en Espa",
+				"excerptSha256": "850d249af29954442a93e9c2aa0ad3e7c38d21ef1bdb21927c26fe2fc5144d57"
+			}
+		},
+		{
+			"id": "empadronamiento-5-de-10-exacto",
+			"label": "El requisito real es haber estado empadronado/a en municipios de la CM al menos 5 años dentro de los 10 inmediatamente anteriores (no necesariamente continuados) y mantener la residencia en la CM mientras se percibe la ayuda",
+			"citation": {
+				"sourceId": "bocm-20221229-28-natalidad-modif",
+				"locator": "Art. 6.c (redacción Acuerdo 21/12/2022)",
+				"excerpt": "dentro de los diez años inme-",
+				"excerptSha256": "78e46565f9989bc32cde1b626b018bcd365274f3e30b44e1bd6e6426cf68e7aa"
+			}
+		},
+		{
+			"id": "prohibiciones-lgs",
+			"label": "No estar incurso en las prohibiciones del art. 13 de la Ley 38/2003 General de Subvenciones (obligaciones tributarias y de Seguridad Social exoneradas de acreditación en fase de pago)",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 6.e",
+				"excerpt": "No estar incurso en alguna de las prohibiciones establecidas en el artículo 13 de la Ley 38/2003",
+				"excerptSha256": "4bcae880d1ac729b8ea6cef5984a25c1d388a6c647ebaf915909eb78962a7d98"
+			}
+		},
+		{
+			"id": "patria-potestad",
+			"label": "No estar privado/a total o parcialmente de la patria potestad de los hijos por resolución judicial firme, ni que la tutela la hayan asumido los órganos de protección de menores de la CM",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 5.5",
+				"excerpt": "No podrán ser beneficiarios las personas privadas total o parcialmente de la patria potestad de sus hijos",
+				"excerptSha256": "adec3c8d2bf2aa995cb087f8ce508dbc29c176cc4c4dac0e9abc1db02d393976"
+			}
+		},
+		{
+			"id": "renta-irpf-exacta",
+			"label": "El límite se mide sobre la declaración del IRPF del último período impositivo con plazo de presentación vencido (30.000 € individual / 36.200 € conjunta de la unidad familiar); nosotros solo comprobamos bandas de ingresos anuales",
+			"citation": {
+				"sourceId": "bocm-20220223-13-natalidad-modif",
+				"locator": "Art. 8.2.c (redacción Acuerdo 16/02/2022)",
+				"excerpt": "la situación económica deberá acreditarse mediante Certificado negativo de Renta",
+				"excerptSha256": "9d47946e6911c69660465d4340f48ac5a088d5cc6f00dbdc9581884229faf724"
+			}
+		},
+		{
+			"id": "credito-presupuestario",
+			"label": "La concesión es directa por orden de entrada y depende del crédito presupuestario declarado para el ejercicio en curso (para 2026: Orden 3017/2025, ampliado por Orden 741/2026)",
+			"citation": {
+				"sourceId": "bocm-20251010-19-natalidad-credito-2026",
+				"locator": "Orden 3017/2025 — declaración de crédito 2026",
+				"excerpt": "se declara el importe del crédito presupuestario",
+				"excerptSha256": "5b86a3447fdfa10970fc46b49fc94a1a19dd1da124976967ea6bd982dec7498b"
+			}
+		},
+		{
+			"id": "certificado-tras-parto",
+			"label": "Si solicitas por gestación, debes presentar el certificado de nacimiento en un plazo máximo de tres meses desde el parto (si no, se pierde el derecho)",
+			"citation": {
+				"sourceId": "bocm-20221229-28-natalidad-modif",
+				"locator": "Art. 8.2.f (redacción Acuerdo 21/12/2022)",
+				"excerpt": "En este supuesto debe presentarse el certificado de nacimiento en el plazo máximo de tres meses",
+				"excerptSha256": "ac7068ae89af92d37f276066b5f3c5e7b0eb40afc0a990d272c1f3bd58ce9414"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"recurrence": "annual",
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 9.1",
+				"excerpt": "este plazo de presentación permanecerá abierto de forma continuada desde el 1 de enero hasta el 31 de diciembre de cada ejercicio anual",
+				"excerptSha256": "fa9f333724d301872de20ed1e217124d508cbee0d142c7fad86c8e46584165c1"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales (Dirección General de Infancia, Familia y Fomento de la Natalidad)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20211227-25-nacimiento-general",
+				"locator": "Art. 9.2",
+				"excerpt": "Las solicitudes podrán presentarse telemáticamente por registro electrónico",
+				"excerptSha256": "a079647fd40d35803c6ea8a73fa2aa9c96608a17c843e0b03032ff963d06715a"
+			}
+		},
+		"documents": [
+			{
+				"id": "documento-identidad",
+				"label": "DNI o documento identificativo válido en España de la persona solicitante (y del representante, si lo hay)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Art. 8.2.a",
+					"excerpt": "Documento Nacional de Identidad o documento identificativo, válido en territorio español, de la persona solicitante",
+					"excerptSha256": "432d069d52c116fc1ef24d88665db514a7e318141bc26cc2c5e010e3a03a88bc"
+				}
+			},
+			{
+				"id": "empadronamiento-actual-historico",
+				"label": "Certificado de empadronamiento actual en la CM y empadronamiento histórico que acredite al menos 5 años dentro de los últimos 10",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20221229-28-natalidad-modif",
+					"locator": "Art. 8.2.b (redacción Acuerdo 21/12/2022)",
+					"excerpt": "Documentación acreditativa de estar empadronado en la Comunidad de Madrid en el momento de presentar la solicitud y empadronamiento histórico",
+					"excerptSha256": "8bc71df1b7363b025c3f053fcfef1743ab9367dc857f0ae4cab87136dcf912c2"
+				}
+			},
+			{
+				"id": "irpf-o-certificado-renta",
+				"label": "Declaración del IRPF del último período impositivo vencido o certificado negativo de renta (solo si no autorizas la consulta a la AEAT)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20220223-13-natalidad-modif",
+					"locator": "Art. 8.2.c (redacción Acuerdo 16/02/2022)",
+					"excerpt": "la situación económica deberá acreditarse mediante Certificado negativo de Renta",
+					"excerptSha256": "9d47946e6911c69660465d4340f48ac5a088d5cc6f00dbdc9581884229faf724"
+				}
+			},
+			{
+				"id": "declaracion-responsable",
+				"label": "Declaración responsable (Anexo 2) de no incurrir en las circunstancias del art. 13 de la Ley 38/2003",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Art. 8.2.d",
+					"excerpt": "no concurre ninguna de las circunstancias previstas en el artículo 13 de la Ley 38/2003",
+					"excerptSha256": "66b717bd396b276d4ba4f4f012dfe4bfcde4a00ec788e876bcdca6a31c7be4d7"
+				}
+			},
+			{
+				"id": "informe-medico-gestacion",
+				"label": "Solo si solicitas por gestación: informe médico que acredite la semana 21 de embarazo iniciada, fecha previsible del parto y número de fetos",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-natalidad-mensual",
+					"locator": "Sección «Documentación» — gestantes",
+					"excerpt": "Informe médico, que acredite que has iniciado la semana 21 de embarazo",
+					"excerptSha256": "7062e1b15380b6f76600761cf3ee5eb250e3d4b4198f1787693577db6565200f"
+				}
+			},
+			{
+				"id": "certificado-nacimiento-adopcion",
+				"label": "Si solicitas por nacimiento o adopción: certificación registral individual, libro de familia o certificado de inscripción de la adopción en el Registro Civil",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Art. 8.2.e",
+					"excerpt": "Certificación registral individual o copia del libro de familia si este ha sido expedido con anterioridad a la entrada en vigor de la Ley 20/2011",
+					"excerptSha256": "153cedf9bf8003a427ad5d6115edf42b846c45af93bf139efb380262a806557f"
+				}
+			},
+			{
+				"id": "tarjeta-residente",
+				"label": "Solo si eres persona extranjera: tarjeta de residente (TIE) o solicitud de renovación",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20211227-25-nacimiento-general",
+					"locator": "Art. 8.2.a",
+					"excerpt": "En caso de que la persona solicitante sea extranjera será preciso presentar la tarjeta de residente o la solicitud de su renovación",
+					"excerptSha256": "daccbfa401e1105fe26833212dc7a7c2421fd8ff9fb0d91248e7f05e2cd93f1e"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"minEur": 500,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20211227-25-nacimiento-general",
+			"locator": "Art. 4",
+			"excerpt": "el importe de la subvención será de 500 euros mensuales por hijo",
+			"excerptSha256": "833d6b363cef049bd8c245d1a9da522fd5088604863d2b4d77dcf0e50636f792"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	]
+}

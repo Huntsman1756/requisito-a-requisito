@@ -1,0 +1,76 @@
+{
+	"id": "gp-titulo-fn-vallecas",
+	"description": "Madre de 41 años empadronada en Puente de Vallecas (municipio de Madrid, 28079) desde 2010, pareja casada, 3 hijos a cargo de 12, 9 y 5 años (todos sin discapacidad), asalariada, sin estudios propios. Caso «posible»: los 3 requisitos comprobables pasan (residencia CM, ≥2 hijos, edad computable) y la vía general (3+) está cubierta, pero quedan condiciones no comprobables con nuestras preguntas (soltería, convivencia, dependencia económica, nacionalidad/residencia legal).",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": { "ccaa": "13", "province": "28", "municipality": "28079" }
+			},
+			"residenceSince": { "state": "value", "value": { "year": 2010, "month": 3 } },
+			"age": { "state": "value", "value": { "min": 41, "max": 41, "maxExclusive": false } },
+			"birthYear": { "state": "value", "value": 1985 },
+			"dependents": {
+				"state": "value",
+				"value": [
+					{ "age": { "min": 12, "max": 12, "maxExclusive": false }, "disability": "no" },
+					{ "age": { "min": 9, "max": 9, "maxExclusive": false }, "disability": "no" },
+					{ "age": { "min": 5, "max": 5, "maxExclusive": false }, "disability": "no" }
+				]
+			},
+			"familyType": { "state": "value", "value": "familia-numerosa" },
+			"employmentStatus": { "state": "value", "value": "asalariado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": {
+				"state": "value",
+				"value": { "min": 16800, "max": 25200 }
+			},
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "propiedad" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-titulo-familia-numerosa",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-ley-40-2003-fn",
+					"locator": "Art. 5.2",
+					"reasoning": "Empadronada en Puente de Vallecas (28079, municipio de Madrid) ⇒ residencia en la Comunidad de Madrid ⇒ within_territory ccaa 13 = T."
+				},
+				{
+					"sourceId": "boe-ley-40-2003-fn",
+					"locator": "Art. 2.2.a",
+					"reasoning": "3 personas a cargo ⇒ count ≥ 2 = T (el suelo absoluto de la ley son 2 hijos en supuestos equiparados; con 3 el caso general queda cubierto de sobra)."
+				},
+				{
+					"sourceId": "boe-ley-40-2003-fn",
+					"locator": "Art. 3.1.a",
+					"reasoning": "Hijos de 12, 9 y 5 años: los 3 son ≤ 25 ⇒ los 3 computan ≥ 2 ⇒ T. Ninguno con discapacidad declarada, pero no hace falta para computar por edad."
+				},
+				{
+					"sourceId": "boe-ley-40-2003-fn",
+					"locator": "Art. 2.1",
+					"reasoning": "Requisito soft «caso general 3+»: 3 hijos computables ⇒ T por la vía general, sin necesidad de equiparación."
+				},
+				{
+					"sourceId": "sede-titulo-familia-numerosa",
+					"locator": "Ficha del trámite, cabecera",
+					"reasoning": "La sede marca «En plazo: permanente» ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "boe-ley-40-2003-fn",
+					"locator": "Art. 3.1-3.3 y 4",
+					"reasoning": "Veredicto «posible» (no «probable») porque quedan condiciones no comprobables: soltería, convivencia y dependencia económica de los hijos, nacionalidad/residencia legal de la unidad familiar, no cómputo en dos unidades y la clasificación en categoría."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

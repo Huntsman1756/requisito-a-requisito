@@ -1,0 +1,477 @@
+{
+	"benefitSlug": "madrid-titulo-familia-numerosa",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-ley-40-2003-fn",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/l/2003/11/18/40/con",
+			"title": "Ley 40/2003, de 18 de noviembre, de Protección a las Familias Numerosas (texto consolidado, última actualización 09/05/2023)"
+		},
+		{
+			"id": "boe-rd-1621-2005-reglamento-fn",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2005/12/30/1621/con",
+			"title": "Real Decreto 1621/2005 — Reglamento de la Ley 40/2003 (texto consolidado)"
+		},
+		{
+			"id": "bocm-20141230-10-decreto-141-fn",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2014/12/30/BOCM-20141230-10.PDF",
+			"title": "Decreto 141/2014, de 29 de diciembre — procedimiento de reconocimiento de la condición de familia numerosa y expedición del título en la Comunidad de Madrid (BOCM n.º 310, 30/12/2014)"
+		},
+		{
+			"id": "bocm-20230413-25-decreto-30-fn",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/04/13/BOCM-20230413-25.PDF",
+			"title": "Decreto 30/2023, de 5 de abril — modificación del Decreto 141/2014 (presentación electrónica/presencial, subsanación, plazo y vigencia del título) (BOCM n.º 87, 13/04/2023)"
+		},
+		{
+			"id": "sede-titulo-familia-numerosa",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/autorizaciones-licencias-permisos-carnes/titulo-familia-numerosa",
+			"title": "Sede electrónica CM — Título de familia numerosa, referencia 332"
+		}
+	],
+	"requirements": [
+		{
+			"id": "residencia-cm",
+			"hard": true,
+			"label": "Residir en la Comunidad de Madrid — la CM solo expide el título a quien tiene aquí su residencia",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 5.2",
+				"excerpt": "Corresponde a la comunidad autónoma de residencia del solicitante la competencia para el reconocimiento de la condición de familia numerosa",
+				"excerptSha256": "9c04f7980ad23c49bd86f20070138db9fa6193d2337d7031645c4d4bcd8dd406"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				}
+			}
+		},
+		{
+			"id": "hijos-minimo",
+			"hard": true,
+			"label": "Tener al menos 2 hijos o hijas a tu cargo (en el caso general la ley pide 3 o más; con solo 2 hace falta un supuesto equiparado — discapacidad, viudedad, orfandad…, ver avisos)",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 2.2.a",
+				"excerpt": "Uno o dos ascendientes con dos hijos, sean o no comunes, siempre que al menos uno de éstos sea discapacitado o esté incapacitado para trabajar",
+				"excerptSha256": "d32bba429de625761e951abf0529b090ca2612f53d836cf9f225378967175472"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 2
+			}
+		},
+		{
+			"id": "edad-hijos",
+			"hard": true,
+			"label": "Que al menos 2 de tus hijos estén en edad de computar: menores de 21 años —o hasta 25 incluidos si cursan estudios—; los hijos con discapacidad o incapacidad para trabajar computan a cualquier edad",
+			"timeDependent": "decreasing",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.1.a",
+				"excerpt": "Ser solteros y menores de 21 años de edad, o ser discapacitados o estar incapacitados para trabajar, cualquiera que fuese su edad",
+				"excerptSha256": "df947ec4cf198f3cf33f06a94a1ed2dfb53e03bc51a84a12628e629ec5b751e2"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 2,
+				"where": {
+					"any": [
+						{
+							"field": "age",
+							"op": "lte",
+							"value": 25,
+							"label": "25 años o menos (menores de 21 en general; hasta 25 si estudian)"
+						},
+						{
+							"field": "disability",
+							"op": "in",
+							"value": [
+								"yes",
+								"unknown",
+								"declined"
+							],
+							"label": "discapacidad o incapacidad para trabajar, a cualquier edad"
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": "caso-general-3-hijos",
+			"hard": false,
+			"label": "Caso general: 3 o más hijos que computen. Con solo 2, el título solo procede si encajas en una equiparación — un hijo con discapacidad o incapacidad, progenitor fallecido, hermanos huérfanos, o los dos ascendientes con discapacidad ≥65 % o incapacitados para trabajar",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 2.1",
+				"excerpt": "se entiende por familia numerosa la integrada por uno o dos ascendientes con tres o más hijos, sean o no comunes",
+				"excerptSha256": "c99ee86f11bf3b7fca754e8c4faa8087d897fcb5c7d4c59646f386e22951d14d"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 3,
+						"label": "3 o más hijos computables (caso general)",
+						"where": {
+							"any": [
+								{
+									"field": "age",
+									"op": "lte",
+									"value": 25
+								},
+								{
+									"field": "disability",
+									"op": "in",
+									"value": [
+										"yes",
+										"unknown",
+										"declined"
+									]
+								}
+							]
+						}
+					},
+					{
+						"all": [
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 2,
+								"where": {
+									"any": [
+										{
+											"field": "age",
+											"op": "lte",
+											"value": 25
+										},
+										{
+											"field": "disability",
+											"op": "in",
+											"value": [
+												"yes",
+												"unknown",
+												"declined"
+											]
+										}
+									]
+								}
+							},
+							{
+								"field": "dependents",
+								"op": "count_where_gte",
+								"count": 1,
+								"where": {
+									"field": "disability",
+									"op": "eq",
+									"value": "yes"
+								}
+							}
+						],
+						"label": "2 hijos computables, al menos uno con discapacidad o incapacidad confirmada"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "equiparaciones-2-hijos",
+			"label": "Con solo 2 hijos, el título exige una equiparación: que un hijo sea discapacitado o esté incapacitado para trabajar; que los dos ascendientes sean discapacitados —o uno con grado ≥65 %— o estén incapacitados; que el otro progenitor haya fallecido; o hermanos huérfanos de padre y madre (2+ bajo tutela/acogimiento/guarda, o 3+ —o 2 con discapacidad— mayores de 18 que convivan con dependencia económica entre ellos)",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 2.2",
+				"excerpt": "Se equiparan a familia numerosa, a los efectos de esta ley, las familias constituidas por",
+				"excerptSha256": "862c919b68212e386305d38a62fbf52fb30323946ac9da050dc94374db977fce"
+			}
+		},
+		{
+			"id": "solteros",
+			"label": "Cada hijo que computa debe ser soltero — no lo comprobamos",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.1.a",
+				"excerpt": "Ser solteros y menores de 21 años de edad",
+				"excerptSha256": "bcb0f35e988cbc0168305e34cdf5d27bbdc0b92b5228c2cab2c659bd07547789"
+			}
+		},
+		{
+			"id": "convivencia",
+			"label": "Los hijos deben convivir contigo; la separación transitoria por estudios, trabajo, tratamiento médico, rehabilitación u otras causas similares no rompe la convivencia — no lo comprobamos",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.1.b",
+				"excerpt": "Convivir con el ascendiente o ascendientes",
+				"excerptSha256": "4d74695e77da5658bc307057d0ea7c9aaed17aa38e2371029c834098d81ae2d4"
+			}
+		},
+		{
+			"id": "dependencia-economica",
+			"label": "Los hijos deben depender económicamente de ti: en general, sus ingresos anuales no pueden superar el SMI (hay reglas especiales si el hijo está incapacitado, si contribuye al sostenimiento con ascendientes jubilados, mayores de 65 o incapacitados, o en unidades con un único ascendiente no en activo)",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.1.c.1.º",
+				"excerpt": "El hijo obtenga unos ingresos no superiores, en cómputo anual, al salario mínimo interprofesional vigente, incluidas las pagas extraordinarias",
+				"excerptSha256": "9ca1f3d7748910288f027475555f9aa83517cc6cb20fe66e9ebd6dac6f8ce743"
+			}
+		},
+		{
+			"id": "estudios-21-25",
+			"label": "Los hijos de 21 a 25 años (ambos incluidos) solo computan si cursan estudios adecuados a su edad y titulación o encaminados a obtener un puesto de trabajo — lo comprueba la administración con certificado del centro o matrícula",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.1.a, segundo párrafo",
+				"excerpt": "cuando cursen estudios que se consideren adecuados a su edad y titulación o encaminados a la obtención de un puesto de trabajo",
+				"excerptSha256": "5a0e8f44b937c1c04b8845a679c5a530e55c8403f3775a14a79087bf07660cc5"
+			}
+		},
+		{
+			"id": "nacionalidad-residencia",
+			"label": "Los miembros de la unidad familiar deben ser españoles, de la UE/EEE, o residir legalmente en España (los nacionales de terceros países tienen derecho en igualdad si residen en España todos los miembros que dan derecho)",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.2",
+				"excerpt": "Los miembros de la unidad familiar deberán ser españoles o nacionales de un Estado miembro de la Unión Europea",
+				"excerptSha256": "0e0c20079d803a2cf3f8f5404285229a7f33b08cab2526c7808c3df23614c5cb"
+			}
+		},
+		{
+			"id": "doble-computo",
+			"label": "Nadie puede figurar en dos unidades familiares numerosas a la vez",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 3.3",
+				"excerpt": "Nadie podrá ser computado, a los efectos de esta ley, en dos unidades familiares al mismo tiempo",
+				"excerptSha256": "0375b57eaac10fc8746d5b7e50ba591d42ff755c1862ee7f78fc422ca2cade7d"
+			}
+		},
+		{
+			"id": "categoria-general-especial",
+			"label": "La categoría (general o especial) la fija la administración: especial con 5 o más hijos, con 4 si al menos 3 proceden de parto/adopción/acogimiento múltiples, o con 4 si la renta per cápita no supera el 75 % del SMI; cada hijo con discapacidad o incapacidad computa por 2",
+			"citation": {
+				"sourceId": "boe-ley-40-2003-fn",
+				"locator": "Art. 4.1.a y 4.3",
+				"excerpt": "Especial: las de cinco o más hijos y las de cuatro hijos de los cuales al menos tres procedan de parto, adopción o acogimiento permanente o preadoptivo múltiples",
+				"excerptSha256": "b249740f96c14146c30e27d3a4c76490ddd8889ae29a9b935c0be3c1fb476bf8"
+			}
+		},
+		{
+			"id": "vigencia-titulo",
+			"label": "En la Comunidad de Madrid la vigencia del título se extiende en principio hasta que el último hijo cumpla 26 años (si deja de estudiar al cumplir 21, la familia debe comunicarlo y el título se extingue); hay que comunicar a la administración cualquier variación familiar relevante en 3 meses",
+			"citation": {
+				"sourceId": "bocm-20230413-25-decreto-30-fn",
+				"locator": "Art. único, Cinco — nuevo art. 10.1.a del Decreto 141/2014",
+				"excerpt": "El cumplimiento de los veintiséis años de edad del último de los hijos",
+				"excerptSha256": "a7482877bacebddb71223f6d9c3c33cc05ccdc9a828ce18a822f37145b1f5bc2"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-titulo-familia-numerosa",
+				"locator": "Ficha del trámite, cabecera",
+				"excerpt": "En plazo: permanente",
+				"excerptSha256": "f5acc1ab18d98800643987e7645327a5c56673d6ffcbdffa13c65f250e16ae12"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales (Dirección General de Infancia, Familia y Fomento de la Natalidad)",
+			"url": "https://sede.comunidad.madrid/autorizaciones-licencias-permisos-carnes/titulo-familia-numerosa",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20230413-25-decreto-30-fn",
+				"locator": "Art. único, Dos — nuevo art. 7.1 del Decreto 141/2014",
+				"excerpt": "Las solicitudes podrán presentarse electrónicamente por registro electrónico a través de la sede electrónica de la Comunidad de Madrid o presencialmente",
+				"excerptSha256": "ce6b7ef538f87fa2aff7b3c6409cb81082f4ea18f766006361e9015e0619bbe4"
+			}
+		},
+		"documents": [
+			{
+				"id": "solicitud",
+				"label": "Solicitud según el modelo del Anexo I (en la sede o el impreso oficial para registro presencial)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.1",
+					"excerpt": "La solicitud del reconocimiento o renovación del título de familia numerosa, se ajustará al modelo que se aprueba como Anexo I",
+					"excerptSha256": "9a057ff8c2af99bd42612d9b70804638bdb0adb87c300f8e07fdd5e1267a9826"
+				}
+			},
+			{
+				"id": "libro-familia",
+				"label": "Copia del libro de familia (o, en su defecto, certificados de matrimonio y nacimiento de los hijos)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.2.a",
+					"excerpt": "Copia del libro de familia donde conste el nacimiento de los hijos",
+					"excerptSha256": "918677ce1cda42ffb27e11aff4a4e7ea938cc1c9166837224c7a8b2bbd4469a5"
+				}
+			},
+			{
+				"id": "dni",
+				"label": "Copia del DNI de los miembros de la unidad familiar mayores de 14 años (la CM lo consulta electrónicamente si autorizas la consulta — Anexo VI)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.2.b",
+					"excerpt": "Copia del documento nacional de identidad de los miembros de la unidad familiar mayores de catorce años o menores que lo posean",
+					"excerptSha256": "6830fda70d647aaaef5e24821e748bc2cc07205e059cac907348ffe15d53562c"
+				}
+			},
+			{
+				"id": "empadronamiento",
+				"label": "Certificado o volante de empadronamiento de todos los miembros del título, expedido como máximo en los 3 meses anteriores (no hace falta que figuren los hijos menores de 6 meses)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.2.c",
+					"excerpt": "Certificado o volante de empadronamiento de los miembros que vayan a figurar en el título de familia numerosa, expedido como máximo, dentro de los tres meses inmediatamente anteriores a la fecha de solicitud",
+					"excerptSha256": "84930992cdfb5021c7c07b94214f56ebf07d8174d61d3ef7dc8a77dd67bc8d2c"
+				}
+			},
+			{
+				"id": "doc-discapacidad",
+				"label": "Solo si aplica: documento acreditativo de la discapacidad o incapacidad para trabajar del hijo o ascendiente",
+				"mandatory": false,
+				"condition": {
+					"field": "dependents",
+					"op": "count_where_gte",
+					"count": 1,
+					"where": {
+						"field": "disability",
+						"op": "in",
+						"value": [
+							"yes",
+							"unknown",
+							"declined"
+						]
+					}
+				},
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.3.a",
+					"excerpt": "se acreditará mediante copia del documento acreditativo de tal extremo expedido por el organismo competente por razón de la materia",
+					"excerptSha256": "6eba62f5e791ab025e190901bb36b07f60ae67191d8baea17966a16dd90011fd"
+				}
+			},
+			{
+				"id": "doc-estudios",
+				"label": "Solo si hay hijos de 21 a 25 años: certificado del centro donde cursan estudios, matrícula oficial o preinscripción",
+				"mandatory": false,
+				"condition": {
+					"field": "dependents",
+					"op": "count_where_gte",
+					"count": 1,
+					"where": {
+						"field": "age",
+						"op": "between",
+						"value": [
+							21,
+							25
+						],
+						"inclusive": [
+							true,
+							true
+						]
+					}
+				},
+				"citation": {
+					"sourceId": "sede-titulo-familia-numerosa",
+					"locator": "Documentación — hijos de 21 a 25 años",
+					"excerpt": "Copia del certificado del Centro donde cursen estudios",
+					"excerptSha256": "2817dd9f254ace255aea4608ce39feef6d1bc87a6e12e5305cd60abbcabc0dae"
+				}
+			},
+			{
+				"id": "doc-defuncion",
+				"label": "Solo si aplica: certificado de defunción del otro progenitor o de un hijo, si no consta en el libro de familia",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.3.b",
+					"excerpt": "copia del certificado de defunción, si no consta en el libro de familia",
+					"excerptSha256": "5528e5f9647cb8ae1edf3ec30e18c9e04c868f60e1ae09239eff7eda91686690"
+				}
+			},
+			{
+				"id": "doc-separacion",
+				"label": "Solo si hay separación, divorcio o nulidad: documentación acreditativa de las medidas paternofiliales (y, si pides computar hijos que no conviven contigo, la resolución judicial de la obligación de alimentos y la autorización del otro progenitor)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.3.c",
+					"excerpt": "copia de la documentación acreditativa donde consten las medidas paternofiliales",
+					"excerptSha256": "053df70c4a03876ed53dc2cb1dcd8cf139a70cfba4443296701c15bf5f8ee13c"
+				}
+			},
+			{
+				"id": "doc-tutela",
+				"label": "Solo si aplica: resolución judicial o administrativa de tutela, guarda o acogimiento preadoptivo o permanente",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.3.d",
+					"excerpt": "copia de la resolución judicial o administrativa que la acuerde",
+					"excerptSha256": "075d78c0713048486b341385733d5e5d49ceaf5e6070f39376f2e95840fe478a"
+				}
+			},
+			{
+				"id": "doc-residencia-legal",
+				"label": "Solo si hay miembros extranjeros no comunitarios: documentación de residencia legal (permiso de residencia o visado de reagrupación; si está caducado, solicitud de prórroga y declaración responsable)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20141230-10-decreto-141-fn",
+					"locator": "Art. 6.2.b, último párrafo",
+					"excerpt": "copia de la documentación acreditativa de la residencia legal",
+					"excerptSha256": "357098ce97cb3874e827f8976e3483ccfec72dfc8f1049efb34ac51ed68880ba"
+				}
+			},
+			{
+				"id": "doc-dependencia-economica",
+				"label": "Solo si algún hijo tiene ingresos o pides la categoría especial por renta: certificaciones de la empresa u organismo pagador y de la AEAT acreditativas de las rentas",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20230413-25-decreto-30-fn",
+					"locator": "Art. único, Uno — nuevo art. 6.3.e del Decreto 141/2014",
+					"excerpt": "se acreditará mediante certificación de la empresa u Organismo que satisfaga las rentas de trabajo por cuenta ajena",
+					"excerptSha256": "f2df850eeea14e78daabd8d340404d9f8814c3a18cf8e917a2665b46c716dbd8"
+				}
+			}
+		]
+	},
+	"amount": null,
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	]
+}

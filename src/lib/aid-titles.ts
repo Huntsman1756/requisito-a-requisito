@@ -23,6 +23,13 @@ export const AID_TITLES: Record<string, string> = {
 	"madrid-abono-transporte-65": "Tarjeta azul de transporte (+65, Madrid capital)",
 	"prestacion-cuidado-menor-enfermedad-grave":
 		"Prestación por cuidado de menores con enfermedad grave",
+	"complemento-ayuda-infancia": "Complemento de ayuda para la infancia (IMV)",
+	"madrid-titulo-familia-numerosa": "Título oficial de familia numerosa",
+	"bono-social-termico": "Bono social térmico",
+	"madrid-ayudas-nacimiento-general":
+		"Ayuda económica por nacimiento (Comunidad de Madrid)",
+	"prestacion-nacimiento-cuidado-menor":
+		"Permiso y prestación por nacimiento y cuidado del menor",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;
