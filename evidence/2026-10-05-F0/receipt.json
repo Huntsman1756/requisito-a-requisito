@@ -1,58 +1,65 @@
 {
   "phase": "F0",
   "date": "2026-10-05",
-  "agent": "Devin (SWE-2) — sesión inaugural",
-  "repo": "la-ayuda",
-  "branch": "feat/premio-gtl-elegibilidad",
-  "headCommit": "63ad635b2458d50ba99bc26e78ba3bba99789c03",
-  "baseCommit": "63ad635b2458d50ba99bc26e78ba3bba99789c03",
+  "agent": "Devin (SWE-2) — sesiones 1 (la-ayuda) y 2 (reorientación, proyecto propio)",
+  "repo": "datawardsmadrid (producto propio desde ADR-022)",
+  "branch": "main",
+  "headCommit": "pendiente de este commit",
+  "baseCommit": "donante la-ayuda @ 63ad635b2458d50ba99bc26e78ba3bba99789c03 (importación)",
   "commands": [
-    { "cmd": "npm ci", "exitCode": 0, "summary": "136 paquetes; postinstall esbuild/core-js bloqueados por allowScripts sin impacto" },
+    { "cmd": "npm ci (la-ayuda worktree)", "exitCode": 0, "summary": "línea base del donante: check PASS, test 750/750, build PASS, a11y 12/12" },
+    { "cmd": "npm install (este repo)", "exitCode": 0, "summary": "andamiaje F0-7" },
     { "cmd": "npm run check", "exitCode": 0, "summary": "tsc --noEmit limpio" },
-    { "cmd": "npm test", "exitCode": 0, "summary": "61 files / 750 passed tras build (primera pasada pre-build: 4 suites por out/ ausente + 5 timeouts ambientales, todos verdes en re-ejecución)" },
-    { "cmd": "npm run build", "exitCode": 0, "summary": "2550 páginas, publication contract PASS, link check PASS; warnings preexistentes de presupuesto en /explorar" },
-    { "cmd": "npm run test:a11y", "exitCode": 0, "summary": "12/12 axe sin violaciones critical" },
-    { "cmd": "npm run pipeline:authority -- --strict", "exitCode": null, "summary": "N/A: el script y el ledger no existen en main (viven en integrate/autonomous-pipeline). Ver ADR-020." },
-    { "cmd": "npx playwright install chromium firefox webkit", "exitCode": 0, "summary": "no-op; revisiones 1.61.1 ya en F:\\Caches\\ms-playwright" }
+    { "cmd": "npm run lint", "exitCode": 0, "summary": "biome: 0 errores, 2 infos (versión de schema config)" },
+    { "cmd": "npm test", "exitCode": 0, "summary": "4 files / 40 tests (scaffold 3, schema Zod 36, catalog import 1)" },
+    { "cmd": "npm run build", "exitCode": 0, "summary": "next export OK: out/index.html generado" },
+    { "cmd": "npm run preview + playwright smoke", "exitCode": 0, "summary": "1/1: título, landmarks, skip link" },
+    { "cmd": "npm run catalog:import -- --donor F:/_Proyectos/la-ayuda --commit 63ad635b", "exitCode": 0, "summary": "244 importadas (57 Madrid + 187 estatales), 332 pistas, 5405 excluidas" }
   ],
   "gateChecklist": [
-    { "item": "Los datos de docs/00 tienen cita con artículo y página; el formato de la memoria está anotado", "status": "PASS", "evidence": "docs/00-contexto-convocatoria.md (citas art./pág.); evidence/2026-10-05-F0/fuentes/manifest.json; formato de memoria: la Orden no lo fija (art. 12.1.b), anotado" },
-    { "item": "La consulta está enviada (o hay una fecha de decisión por defecto fijada con Daniel)", "status": "FAIL", "evidence": "docs/06-consulta-elegibilidad.md tiene órgano/vía listos; el envío es F0-2 (Daniel). ADR-005 fija decisión por defecto el 13/10 si no hay respuesta." },
-    { "item": "inventario.json existe; ninguna cifra sin fuente", "status": "PASS", "evidence": "evidence/2026-10-05-F0/impacto/inventario.json — cada cifra con value/source/command_or_url/measuredAt; null con motivo donde no hay acceso" },
-    { "item": "baseline.json existe; los rojos preexistentes están identificados", "status": "PASS", "evidence": "evidence/2026-10-05-F0/baseline.json — sin rojos reales; warnings de presupuesto /explorar preexistentes documentados" },
-    { "item": "candidatas.json tiene ≥ 8 ayudas con autoridad vigente", "status": "PASS", "evidence": "evidence/2026-10-05-F0/vertical/candidatas.json — 16 candidatas (8 open, 6 rolling, 2 unknown) con status=active && reviewStatus=revisada" },
-    { "item": "Recibo evidence/<fecha>-F0/receipt.json y handoff escritos", "status": "PASS", "evidence": "este archivo + handoffs/2026-10-05-F0.md" }
+    { "item": "Los datos de docs/00 tienen cita con artículo y página; el formato de la memoria está anotado", "status": "PASS", "evidence": "docs/00 + evidence/2026-10-05-F0/fuentes/manifest.json (la Orden no fija formato de memoria, art. 12.1.b)" },
+    { "item": "La consulta está enviada (o hay una fecha de decisión por defecto fijada con Daniel)", "status": "PASS", "evidence": "F0-2 enviada por Daniel el 2026-10-05; regla por defecto ADR-027 (sin respuesta el 12/10 ⇒ Leader)" },
+    { "item": "inventario.json existe; ninguna cifra sin fuente", "status": "PASS", "evidence": "evidence/2026-10-05-F0/impacto/inventario.json + edubecas-search-console-resumen.json (1 clic/75d ⇒ sin tracción)" },
+    { "item": "baseline.json existe; los rojos preexistentes están identificados", "status": "PASS", "evidence": "evidence/2026-10-05-F0/baseline.json (donante) + línea propia en este recibo" },
+    { "item": "candidatas-madrid.json (F0-5b) tiene ≥ 8 ayudas de Madrid o estatales", "status": "PASS", "evidence": "evidence/2026-10-05-F0/vertical/candidatas-madrid.json — 24 candidatas, 12 priorizadas para nivel 1" },
+    { "item": "Andamiaje en verde (F0-7), Zod portado (F0-8) y catálogo importado con procedencia (F0-9)", "status": "PASS", "evidence": "commits en main; data/catalog/ con provenance.json" },
+    { "item": "Los repos donantes no tienen cambios nuevos atribuibles a este trabajo", "status": "PASS", "evidence": "git -C la-ayuda status: mismos 4 ficheros ajenos que antes de la sesión; solo lectura + git show" },
+    { "item": "Recibo evidence/<fecha>-F0/receipt.json y handoff escritos", "status": "PASS", "evidence": "este archivo + handoffs/2026-10-05-F0-v2.md" }
   ],
   "metrics": {
-    "fichas_total_parseadas": 5981,
-    "vertical_familias_educacion": 1906,
-    "vertical_vigentes": 123,
-    "candidatas_abiertas_o_rolling": 16,
-    "tests_baseline": "750/750",
-    "a11y_baseline": "12/12"
+    "catalogo_importado": 244,
+    "importadas_madrid": 57,
+    "importadas_estatales": 187,
+    "pistas_bocm": 332,
+    "excluidas": 5405,
+    "candidatas_en_plazo_o_rolling": 24,
+    "tests_propios": 40,
+    "e2e_smoke": "1/1 chromium"
   },
   "evidence": [
-    "evidence/2026-10-05-F0/fuentes/ (2 PDF + manifest.json con sha256 + textos extraídos)",
+    "evidence/2026-10-05-F0/fuentes/ (BOCM PDFs + sha256 + textos)",
     "evidence/2026-10-05-F0/impacto/inventario.json",
-    "evidence/2026-10-05-F0/vertical/candidatas.json",
-    "evidence/2026-10-05-F0/baseline.json"
+    "evidence/2026-10-05-F0/baseline.json",
+    "evidence/2026-10-05-F0/vertical/candidatas.json (pre-reorientación)",
+    "evidence/2026-10-05-F0/vertical/candidatas-madrid.json",
+    "data/catalog/ (benefits/, leads.json, provenance.json)"
   ],
   "deviations": [
-    { "class": "D3", "description": "El ledger de autoridad (data/pipeline/authority) no existe en main; se usa el gate status=active && reviewStatus=revisada", "reason": "ADR-020 (propuesta): el sistema de ledger vive en integrate/autonomous-pipeline, que no es la base indicada" },
-    { "class": "D1", "description": "La Orden no fija formato/extensión de la memoria; pendiente inspección del formulario 4050F1 (tras JS) o decisión propia", "reason": "Art. 12.1.b solo exige 'memoria descriptiva'" },
-    { "class": "D1", "description": "«Entrega 03/11 Real Casa de Correos» no consta en Orden ni sede; la sede dice 'durante Madrid Tech Week 28/10–5/11'", "reason": "Corregido en docs/00; prevalece sede" },
-    { "class": "D1", "description": "Ponderaciones de Tech Company y Public International Innovation corregidas en docs/00 (sí tienen pesos en art. 16.2)", "reason": "El análisis previo las marcaba 'no aplica'" }
+    { "class": "D2", "description": "Proyecto nuevo independiente en vez de evolución de la-ayuda", "reason": "ADR-022 aceptada por Daniel; sustituye ADR-002" },
+    { "class": "D1", "description": "importedAt de provenance.json = fecha del commit donante (determinismo de bytes), no la hora de ejecución", "reason": "El test de determinismo exige mismos bytes por commit; la fecha de ejecución no aporta" },
+    { "class": "D1", "description": "57 Madrid importadas vs las ≈54 previstas (las 3 fiscales no estaban type=tax_deduction pero sí excluidas por contenido fiscal? no: 57 Madrid sin tax_deduction)", "reason": "El recuento del handoff era aproximado; el filtro se aplicó tal cual: 0 tax_deduction importadas" },
+    { "class": "D1", "description": "pdfjs-dist ^6.3.289 no está en main de la-ayuda sino en integrate/autonomous-pipeline", "reason": "Necesario para F1-3 (snapshot PDF); misma versión que el donante en esa rama" }
   ],
   "knownLimits": [
-    "F0-2 (envío de consulta) pendiente de Daniel; la puerta queda con un FAIL hasta que se envíe o Daniel fije fecha de decisión",
-    "Cifras de tráfico de edubecas.es (GA4) y logs del VPS no accesibles desde esta máquina",
-    "5981 fichas con frontmatter parseable de 6473 archivos en src/content/benefits (el resto no son fichas .md o carecen de frontmatter estándar; no afecta al vertical)"
+    "GA4/Search Console de edubecas sin acceso completo: Daniel aportó resumen (1 clic/75d) ⇒ sin tracción que citar",
+    "La Orden no fija formato/extensión de la memoria; formulario 4050F1 tras JS sin inspeccionar",
+    "Las 12 priorizadas de candidatas-madrid incluyen 'procedure' (SAAD) que puede ser compleja de modelar; respaldo: resto de candidatas + leads BOCM"
   ],
   "openBlockers": [
-    "F0-2: enviar consulta a sociedadyeconomia.digital@madrid.org — Daniel",
-    "F0-3: cifras GA4 de edubecas.es — Daniel (si se quieren usar en la memoria)",
-    "D-1: vehículo (ADR-006) — Daniel, a la vista de inventario.json",
-    "ADR-020 propuesta: confirmar gate de autoridad en main — Daniel"
+    "F0-2: respuesta de la Subdirección (enviada 05/10; regla por defecto 12/10 ⇒ Leader)",
+    "D-4: crear repo GitHub público + autorizar push — Daniel",
+    "D-6: nombre del producto y dominio de la demo — Daniel",
+    "D-3: demo desplegada (vhost) o solo vídeo — Daniel"
   ],
-  "nextTask": "F1-1 (esquemas Zod equivalentes a schemas/ en la-ayuda)"
+  "nextTask": "F1-2 (registry.json de dominios) → F1-3 (snapshot) → F1-4 (gates G1–G10)"
 }
