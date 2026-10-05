@@ -1,6 +1,13 @@
 node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+test-results/
+playwright-report/
 *.tmp
 .DS_Store
 Thumbs.db
-# Bytes de fuentes oficiales: viven en F:\AgentState\datawardsmadrid\snapshots\n*.pdf
+# Bytes de fuentes oficiales: viven en F:\AgentState\datawardsmadrid\snapshots\
+*.pdf
 !evidence/**/fuentes/*.pdf
