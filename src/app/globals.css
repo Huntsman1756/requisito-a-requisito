@@ -1399,3 +1399,91 @@ select {
 		break-inside: avoid;
 	}
 }
+
+/* — Piloto (F6-0) — */
+.pilot-banner {
+	background: var(--amber-100, #fef3c7);
+	color: var(--amber-900, #78350f);
+	text-align: center;
+	margin: 0;
+	padding: 0.45rem 1rem;
+	font-size: 0.875rem;
+}
+.site-nav {
+	display: flex;
+	gap: 1.25rem;
+}
+.site-nav a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 500;
+}
+.site-nav a:hover {
+	text-decoration: underline;
+}
+.hero .lede {
+	font-size: 1.15rem;
+	max-width: 46rem;
+}
+.cta {
+	display: inline-block;
+	background: var(--accent, #1d4ed8);
+	color: #fff;
+	padding: 0.7rem 1.4rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	font-weight: 600;
+}
+.cta:hover {
+	filter: brightness(1.1);
+}
+.bullets {
+	padding-left: 1.25rem;
+}
+.aid-list {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: 1.25rem;
+}
+.aid-card {
+	border: 1px solid var(--border, #e5e7eb);
+	border-radius: 0.75rem;
+	padding: 1.25rem 1.5rem;
+}
+.aid-card h2 {
+	margin-top: 0;
+	font-size: 1.2rem;
+}
+.aid-card h3 {
+	font-size: 1rem;
+	margin-bottom: 0.35rem;
+}
+.aid-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin: 0.75rem 0;
+}
+.aid-meta dt {
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--muted, #6b7280);
+}
+.aid-meta dd {
+	margin: 0.15rem 0 0;
+}
+.tag {
+	display: inline-block;
+	font-size: 0.7rem;
+	font-weight: 600;
+	padding: 0.15rem 0.5rem;
+	border-radius: 999px;
+	vertical-align: middle;
+}
+.tag--review {
+	background: #e0f2fe;
+	color: #075985;
+}

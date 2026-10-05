@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
 	output: "export",
 	trailingSlash: true,
+	// GitHub Pages sirve el proyecto en /<repo>/; en local y CI se construye en la raíz.
+	basePath: process.env.BASE_PATH ?? "",
 	// Repo lives inside a parent dir with its own lockfile; pin the root
 	// so Next doesn't warn about workspace detection.
 	outputFileTracingRoot: import.meta.dirname,

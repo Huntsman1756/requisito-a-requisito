@@ -63,10 +63,12 @@ function citationsOf(rs: RuleSet): Cit[] {
 	): void => {
 		if ("all" in c) {
 			if (c.citation) out.push({ where: `${where}.all`, c: c.citation });
-			c.all.forEach((x, i) => conditionCitations(x, `${where}.all.${i}`));
+			for (const [i, x] of c.all.entries())
+				conditionCitations(x, `${where}.all.${i}`);
 		} else if ("any" in c) {
 			if (c.citation) out.push({ where: `${where}.any`, c: c.citation });
-			c.any.forEach((x, i) => conditionCitations(x, `${where}.any.${i}`));
+			for (const [i, x] of c.any.entries())
+				conditionCitations(x, `${where}.any.${i}`);
 		} else if ("not" in c) {
 			if (c.citation) out.push({ where: `${where}.not`, c: c.citation });
 			conditionCitations(c.not, `${where}.not`);
