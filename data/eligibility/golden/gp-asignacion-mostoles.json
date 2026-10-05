@@ -1,0 +1,108 @@
+{
+	"id": "gp-asignacion-mostoles",
+	"description": "Padre de 40 años, empadronado en Móstoles (28092) desde 2012, asalariado, con un hijo de 9 años a su cargo con discapacidad reconocida (≥33 %) e ingresos del hogar en la banda 8.400–16.800 €/año. Caso positivo típico de la asignación económica por hijo o menor a cargo (vía discapacidad, única abierta a solicitudes nuevas desde el 1/06/2020): el único requisito comprobable sale T, pero el veredicto no puede pasar de «posible» porque la convivencia y dependencia económica del causante, la residencia legal, la ausencia de prestación equivalente, el grado exacto por baremo y las particularidades del régimen transitorio no son comprobables con nuestras preguntas.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28092"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2012,
+					"month": 4
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 40,
+					"max": 40,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 9,
+							"max": 9,
+							"maxExclusive": false
+						},
+						"disability": "yes"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 16800
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "asignacion-hijo-a-cargo",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 351.a",
+					"reasoning": "Un hijo de 9 años a cargo con discapacidad reconocida («yes») satisface el causante exigible para solicitudes nuevas: menor de 18 con discapacidad ≥33 % (la equivalencia «yes»→≥33 % es laxa a propósito; el grado exacto se deja en uncovered «grado-discapacidad-baremo»). La vía count_where_gte da T y la vía alternativa (solicitante mayor de 18 con discapacidad propia ≥33 %) da F, así que el any del único requisito hard queda T."
+				},
+				{
+					"sourceId": "boe-ley-19-2021-imv",
+					"locator": "Disposición transitoria sexta",
+					"reasoning": "La vía sin discapacidad o con <33 % está cerrada a nuevas solicitudes desde el 1/06/2020 (prestación a extinguir): por eso el requisito hard exige discapacidad del causante y no solo «hijo <18», aunque la ficha de la Seguridad Social conserva la fórmula general. Documentado para el verificador."
+				},
+				{
+					"sourceId": "segss-asignacion-hijo-cargo",
+					"locator": "Ficha, «Plazos»",
+					"reasoning": "Procedimiento a instancia de parte sin convocatoria (reconocimiento en máximo 45 días): window.rolling ⇒ deadlineState ROLLING. La cita de la ventana usa el art. 355.2.a LGSS (nacimiento del derecho el 1.er día del trimestre natural siguiente a la solicitud)."
+				},
+				{
+					"sourceId": "boe-rd-241-2026-pensiones",
+					"locator": "Art. 24",
+					"reasoning": "Veredicto «posible» (no «probable»): 0 hard F y 0 hard U, pero uncoveredRequirements > 0 (convivencia y dependencia económica del causante, residencia legal, ausencia de prestación equivalente en otro régimen, grado exacto de discapacidad por baremo y régimen transitorio con límite de 15.356,00 €/año — inaplicable a la vía discapacidad). Importe 2026: 1.000,00 €/año (<18 con ≥33 %), 5.962,80 €/año (≥18 con ≥65 %), 8.942,40 €/año (≥75 % + necesidad de concurso)."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

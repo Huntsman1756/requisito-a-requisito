@@ -1,0 +1,102 @@
+{
+	"id": "gp-viuda-vallecas",
+	"description": "Mujer de 68 años empadronada en Puente de Vallecas (Madrid capital, 28079) desde 1985, recientemente viuda de su marido (asalariado fallecido), que convive con su hija de 22 años a su cargo. Ingresos en la banda más baja. Caso con requisitos comprobables todos en T (edad ≥65 para la cuantía del 60 % y carga familiar <26 para el posible 70 %), pero los requisitos decisivos —vínculo conyugal en la fecha del fallecimiento, cotización del causante (500 días en 5 años si estaba en alta), duración del matrimonio si enfermedad común preexistente— no se preguntan ⇒ veredicto posible, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 1985,
+					"month": 4
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 68,
+					"max": 68,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 22,
+							"max": 22,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "jubilado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 16800
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-viudedad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "segss-viudedad-cuantia",
+					"locator": "Apartado «Cuantía / Abono» › Porcentaje",
+					"reasoning": "age = 68 ≥ 65 ⇒ el requisito soft «edad-65-cuantia» queda en T (podría aspirar al 60 % de la base reguladora). Dependents: hija de 22 años sin discapacidad ⇒ 1 persona a cargo < 26 ⇒ soft «cargas-familiares-70» en T. softF nunca cambia el veredicto; aquí ambas soft son T y solo afectan a la cuantía orientativa, no al derecho."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 219.1, 219.2 y 221.2",
+					"reasoning": "El catálogo de preguntas no tiene estado civil ni hecho causante (sin maritalStatus): «ser cónyuge superviviente», la cotización del causante (500 días/5 años en alta o 15 años fuera de ella) y la duración mínima del vínculo quedan en uncoveredRequirements ⇒ 0 hard F, 0 hard U, uncoveredCount > 0 ⇒ posible."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 230",
+					"reasoning": "El derecho al reconocimiento es imprescriptible (solo se retrotraen los efectos: máximo 3 meses desde la solicitud, también en la página «Hecho causante / Efectos económicos» de la Seguridad Social) ⇒ no hay convocatoria: deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

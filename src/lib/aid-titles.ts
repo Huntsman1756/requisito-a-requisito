@@ -38,6 +38,10 @@ export const AID_TITLES: Record<string, string> = {
 	"madrid-ayudas-urgencia-social":
 		"Ayudas económicas de urgencia social (Comunidad de Madrid)",
 	"pension-no-contributiva": "Pensión no contributiva (jubilación o invalidez)",
+	"subsidio-desempleo": "Subsidio por desempleo (insuficiencia de cotización)",
+	"asignacion-hijo-a-cargo": "Asignación por hijo o menor a cargo",
+	"pension-viudedad": "Pensión de viudedad",
+	"madrid-ayudas-alquiler-plan-estatal": "Ayuda al alquiler (Plan Estatal de Vivienda)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

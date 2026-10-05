@@ -1,0 +1,290 @@
+{
+	"benefitSlug": "pension-viudedad",
+	"standalone": true,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 219–223 y 228–230 (texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026 — revalorización y cuantías mínimas de pensiones 2026"
+		},
+		{
+			"id": "boe-decreto-3158-1966-viudedad",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/d/1966/12/23/3158/con"
+		},
+		{
+			"id": "segss-viudedad-beneficiarios",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28490?changeLanguage=es",
+			"title": "Seguridad Social — Pensión de viudedad: causantes y beneficiarios/requisitos"
+		},
+		{
+			"id": "segss-viudedad-cuantia",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28492?changeLanguage=es",
+			"title": "Seguridad Social — Pensión de viudedad: cuantía y abono"
+		},
+		{
+			"id": "segss-viudedad-efectos",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28493?changeLanguage=es",
+			"title": "Seguridad Social — Pensión de viudedad: hecho causante y efectos económicos"
+		},
+		{
+			"id": "segss-viudedad-solicitud",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28498?changeLanguage=es",
+			"title": "Seguridad Social — Pensión de viudedad: solicitudes y documentación"
+		},
+		{
+			"id": "segss-viudedad-gestion",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/29611?changeLanguage=es",
+			"title": "Seguridad Social — Pensión de viudedad: gestión y pago (INSS/ISM)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-65-cuantia",
+			"hard": false,
+			"label": "Tener 65 años o más: la cuantía general es el 52 % de la base reguladora, pero desde los 65 puede subir al 60 % si además no tienes otra pensión pública, no trabajas y tus rentas no superan el límite",
+			"timeDependent": "increasing",
+			"citation": {
+				"sourceId": "boe-decreto-3158-1966-viudedad",
+				"locator": "Decreto 3158/1966, art. 31",
+				"excerpt": "respondiente base reguladora para la determinación de la cuantía de la pensión de viudedad será del 52 por ciento. 2. Cuando la pensión de viudedad constituya la principal o única fuente de ingresos del pensionista",
+				"excerptSha256": "8c6f153b811eed3990330116bab4d5fd60da21d28fd9c4a75512221f8952cfab"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 65
+			}
+		},
+		{
+			"id": "cargas-familiares-70",
+			"hard": false,
+			"label": "Convivir con hijos menores de 26 años o mayores con discapacidad: con cargas familiares la cuantía puede llegar al 70 % si la pensión es tu principal ingreso y los rendimientos de la unidad no superan el 75 % del SMI",
+			"citation": {
+				"sourceId": "boe-decreto-3158-1966-viudedad",
+				"locator": "Decreto 3158/1966, art. 31",
+				"excerpt": "el pensionista tenga cargas familiares, el porcentaje señalado en el apartado 1 será del 70 por 100",
+				"excerptSha256": "f1b4a4ad677526dab5d0d59621fe5a62405d0838e924e0346c5a36340923eb50"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"any": [
+						{
+							"field": "age",
+							"op": "lt",
+							"value": 26
+						},
+						{
+							"field": "disability",
+							"op": "eq",
+							"value": "yes"
+						}
+					]
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "ser-viudo-viuda",
+			"label": "Ser el cónyuge superviviente de la persona fallecida (o su pareja de hecho): la pensión es vitalicia salvo causas de extinción",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 219.1",
+				"excerpt": "Tendrá derecho a la pensión de viudedad, con carácter vitalicio, salvo que se produzca alguna de las causas de extinción que legal o reglamentariamente se establezcan, el cónyuge superviviente",
+				"excerptSha256": "081264f153c07806c49683fca4d64e09acf2145081187f549711a51ea4cc46b2"
+			}
+		},
+		{
+			"id": "cotizacion-causante",
+			"label": "Cotización del causante: si estaba en alta o asimilada al fallecer, 500 días cotizados en los 5 años anteriores; si no estaba en alta, 15 años cotizados; ninguna cotización si la muerte fue por accidente o enfermedad profesional",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 219.1",
+				"excerpt": "hubiera completado un período de cotización de quinientos días, dentro de los cinco años inmediatamente anteriores a la fecha del hecho causante de la pensión",
+				"excerptSha256": "31236ddeeed96129ec20155f3e2156dda2757d9ac510d5218a80c23335fb4014"
+			}
+		},
+		{
+			"id": "un-ano-matrimonio",
+			"label": "Si la muerte fue por enfermedad común anterior al matrimonio: haberse casado al menos 1 año antes del fallecimiento o tener hijos comunes (o convivencia previa que sume más de 2 años con el matrimonio); si no se acredita, queda una prestación temporal de 2 años",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Arts. 219.2 y 222",
+				"excerpt": "se requerirá, además, que el matrimonio se hubiera celebrado con un año de antelación como mínimo a la fecha del fallecimiento o, alternativamente, la existencia de hijos comunes",
+				"excerptSha256": "0c1aa1e88e6efbeda68386a6dead6f8d3f88f938f949b75ece8841b35080b0e6"
+			}
+		},
+		{
+			"id": "separacion-divorcio",
+			"label": "Si estabas separado/a judicialmente o divorciado/a: ser acreedor de la pensión compensatoria extinguida por la muerte del causante (o acreditar violencia de género), sin haber contraído nuevas nupcias ni constituido pareja de hecho",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 220.1",
+				"excerpt": "se requerirá que las personas divorciadas o separadas judicialmente sean acreedoras de la pensión compensatoria a que se refiere el artículo 97 del Código Civil y esta quedara extinguida a la muerte del causante",
+				"excerptSha256": "08e8b74d122bf4d95a39b8ef19accb3f20b34ad6054939e37ef6f132b2089dd0"
+			}
+		},
+		{
+			"id": "pareja-de-hecho",
+			"label": "Si eras pareja de hecho: inscripción en un registro autonómico/municipal o documento público con al menos 2 años de antelación al fallecimiento y convivencia estable e ininterrumpida de 5 años (no exigible con hijos comunes)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 221.2",
+				"excerpt": "una convivencia estable y notoria con carácter inmediato al fallecimiento del causante y con una duración ininterrumpida no inferior a cinco años, salvo que existan hijos en común",
+				"excerptSha256": "a893dbfb1cad9c2d78a876c0ec8dd3f0e4944a3dd7fe1d72c09adf97140bc717"
+			}
+		},
+		{
+			"id": "extincion-nuevo-vinculo",
+			"label": "La pensión se extingue si contraes nuevo matrimonio o constituyes una pareja de hecho (con excepciones reglamentarias, p. ej. mayores de 61 años)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 223.2",
+				"excerpt": "El derecho a pensión de viudedad se extinguirá, en todo caso, cuando el beneficiario contraiga matrimonio o constituya una pareja de hecho",
+				"excerptSha256": "35477022aff2f1509f22e52babb41ee7588ca419dbe599030973dda04b9b5f55"
+			}
+		},
+		{
+			"id": "complemento-minimos",
+			"label": "Si tu pensión queda por debajo del mínimo anual de tu tramo (2026: 9.931,60 €/año <60 años; 12.262,60 €/año 60–64; 13.106,80 €/año con 65+ o discapacidad ≥65 %; 17.592,40 €/año con cargas familiares) puedes pedir el complemento a mínimos, sujeto a límite de ingresos",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Anexo I, cuadro de cuantías mínimas (Viudedad)",
+				"excerpt": "Titular con cargas familiares. 17.592,40 Titular con sesenta y cinco años o con discapacidad en grado igual o superior al 65 por 100. 13.106,80 Titular con edad entre sesenta y sesenta y cuatro años. 12.262,60 Titular con menos de sesenta años. 9.931,60",
+				"excerptSha256": "81d05428a019f307efe75d1c188b92cd1fda48f7673be1865a338c02cb9d2aac"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 230",
+				"excerpt": "será imprescriptible, sin perjuicio de que los efectos de tal reconocimiento se produzcan a partir de los tres meses anteriores a la fecha en que se presente la correspondiente solicitud",
+				"excerptSha256": "27a755750d6944a29c974d18642dd8d0c56705a1e1c6703937bdca6343a281be"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) en el Régimen Especial del Mar",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-viudedad-gestion",
+				"locator": "Apartado «Gestión / Pago»",
+				"excerpt": "Gestión: El Instituto Nacional de la Seguridad Social (INSS), con carácter general.",
+				"excerptSha256": "7110442d71e63ab8f7713dc4cc1796967528be521375946c437655bf07d94762"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial del INSS (sede electrónica o formulario presencial)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-viudedad-solicitud",
+					"locator": "Apartado «Solicitudes» › Presentación de la solicitud",
+					"excerpt": "Presentación de la solicitud Formulario de solicitud",
+					"excerptSha256": "2ae9e6c59ed34363c017d768bd9126216da5bcb81d6100ee789fe096a4d895d7"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad en vigor: DNI (españoles) o pasaporte/documento del país de origen + NIE (extranjeros)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-viudedad-solicitud",
+					"locator": "Apartado «Solicitudes» › Documentos en todos los casos",
+					"excerpt": "Acreditación de identidad del solicitante, representante legal y demás personas que figuran en la solicitud",
+					"excerptSha256": "ffe240529bb7a9749c088657c473b7bca778c2032ad5e81df4f7336062222b31"
+				}
+			},
+			{
+				"id": "doc-defuncion",
+				"label": "Certificación del acta de defunción del causante",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-viudedad-solicitud",
+					"locator": "Apartado «Solicitudes» › Documentos en todos los casos",
+					"excerpt": "Certificación del Acta de Defunción del causante fallecido",
+					"excerptSha256": "248ef46a103c9257819cd9ec44f30ef53bec88a2d098475d3d7bb11547f3b420"
+				}
+			},
+			{
+				"id": "doc-matrimonio",
+				"label": "Si estabas casado/a con el causante: libro de familia o acta del Registro Civil que acredite el matrimonio y tu estado civil actual",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-viudedad-solicitud",
+					"locator": "Apartado «Solicitudes» › Si se solicita pensión de viudedad, a)",
+					"excerpt": "que acredite el matrimonio con el causante fallecido y el estado civil actual del solicitante",
+					"excerptSha256": "bc7f1ac7a7a63ea164527d16375e97a9321d93a5c4f26daea17a086aa263c56a"
+				}
+			},
+			{
+				"id": "doc-pareja-hecho",
+				"label": "Si eras pareja de hecho: certificado de inscripción en el registro autonómico o municipal (o escritura pública), actas del Registro Civil y certificado de empadronamiento de los 5 años de convivencia",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-viudedad-solicitud",
+					"locator": "Apartado «Solicitudes» › Si se solicita pensión de viudedad, c)",
+					"excerpt": "Certificado de inscripción de la pareja en el registro correspondiente de su Comunidad Autónoma o localidad de residencia",
+					"excerptSha256": "10e2df2bfbfe46d112f345f134f574047ffeefbbd16f896b759f51a4fd236ea2"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-decreto-3158-1966-viudedad",
+			"locator": "Decreto 3158/1966, art. 31.1",
+			"excerpt": "respondiente base reguladora para la determinación de la cuantía de la pensión de viudedad será del 52 por ciento",
+			"excerptSha256": "6ed23259fab204cbd2236e35956e834abdf71be0f2c88aa332054d91915e0e8b"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"mayores",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"mayor_65",
+		"ingresos_bajos"
+	]
+}

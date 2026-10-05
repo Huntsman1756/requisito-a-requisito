@@ -1,0 +1,283 @@
+{
+	"benefitSlug": "subsidio-desempleo",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"parametersUsed": [
+		"SMI_MENSUAL"
+	],
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 274–280 (subsidio por desempleo, nivel asistencial) — texto consolidado"
+		},
+		{
+			"id": "sepe-subsidio-cotizaciones-insuficientes",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/subsidio-cotizaciones-insuficientes-he-trabajado-menos-de-un-anyo.html",
+			"title": "SEPE — Subsidio de cotizaciones insuficientes: «He trabajado menos de un año» (requisitos, documentación y tramitación)"
+		},
+		{
+			"id": "sepe-subsidio-agotamiento",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/subsidio-agotamiento-prestacion-contributiva.html",
+			"title": "SEPE — Subsidio por agotamiento de la prestación contributiva (requisitos y canales de solicitud)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "desempleo",
+			"hard": false,
+			"label": "Estar en desempleo total, o trabajando a tiempo parcial: si mantienes varios contratos a tiempo parcial, la suma de las jornadas tiene que ser inferior a una jornada completa",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1",
+				"excerpt": "Serán beneficiarios del subsidio los desempleados que, cumpliendo los requisitos establecidos en el apartado 2, se encuentren en alguna de las siguientes situaciones",
+				"excerptSha256": "4a462e22d3e70565742d7c9537ac727aa47ab5855488058269ea75a32dbce69f"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "desempleado",
+				"label": "estás en desempleo"
+			}
+		},
+		{
+			"id": "carencia-rentas",
+			"hard": false,
+			"label": "Carencia de rentas propias: tus rentas del mes anterior a la solicitud no pueden superar el 75 % del SMI sin pagas extra (915,75 €/mes en 2026; proxy anual ≈ 10.989 €/año). Vía alternativa si tienes responsabilidades familiares: ver ⚠",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 275.1",
+				"excerpt": "cuando las rentas de cualquier naturaleza de la persona solicitante o beneficiaria durante el mes natural anterior a dichas fechas no superen el 75 por ciento del salario mínimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias",
+				"excerptSha256": "c42f2495a31a6f4c1699fe6ede982896e2d944a265175a57abe2833b5f41d30b"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "SMI_MENSUAL",
+				"multiplier": 9,
+				"label": "tus ingresos anuales están por debajo del umbral orientativo"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "hecho-causante",
+			"label": "Estar en uno de estos dos supuestos: (a) haber agotado la prestación contributiva por desempleo, o (b) estar en situación legal de desempleo sin cubrir el periodo mínimo de cotización para la contributiva, con al menos 90 días cotizados",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1.a y b",
+				"excerpt": "Encontrarse en situación legal de desempleo sin tener cubierto el periodo mínimo de cotización para tener derecho a la prestación contributiva, siempre que hayan cotizado al menos noventa días",
+				"excerptSha256": "536a88a2a4c0a5c25de497f6e30d42cfad814f53ff72d630bc70aa7295bc3c79"
+			}
+		},
+		{
+			"id": "sin-derecho-contributiva",
+			"label": "No tener derecho a la prestación contributiva por desempleo en la fecha de la solicitud (si la tienes, es la prestación la que te corresponde)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.2",
+				"excerpt": "en la fecha de la solicitud del subsidio se exigirá no tener derecho a la prestación contributiva por desempleo",
+				"excerptSha256": "ea186a5502d6e9bf5275cda508dca579ac0cd78fa0cdb0c75200f9ceecd29aeb"
+			}
+		},
+		{
+			"id": "menor-45-sin-responsabilidades",
+			"label": "Si accedes por agotamiento, tienes menos de 45 años y no tienes responsabilidades familiares: la prestación agotada debe haber durado 360 días o más",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1.a",
+				"excerpt": "En caso de ser menor de cuarenta y cinco años sin responsabilidades familiares se exigirá, además, que la prestación por desempleo agotada haya tenido una duración igual o superior a trescientos sesenta días",
+				"excerptSha256": "fcb17a8f11a0952055388063727ee10683b7ace7c924f8a1bc3e72b5745c273e"
+			}
+		},
+		{
+			"id": "responsabilidades-familiares",
+			"label": "Alternativa a la carencia de rentas propias: acreditar responsabilidades familiares, es decir, que la suma de rentas de toda la unidad familiar (cónyuge o pareja de hecho e hijos/as menores de 26 años, mayores con discapacidad o menores acogidos que convivan o dependan de ti) dividida entre sus miembros no supere el 75 % del SMI",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 275.2",
+				"excerpt": "la suma de las rentas obtenidas durante el mes natural anterior a dichas fechas por el conjunto de la unidad familiar, incluida la persona solicitante o beneficiaria, dividida entre el número de miembros que la componen, no supere el 75 por ciento del salario mínimo interprofesional",
+				"excerptSha256": "1c2c5c0ac9ba5aad043c09e65a82ab4f11454f2e474278a4c56a94084bd60a54"
+			}
+		},
+		{
+			"id": "inscripcion-acuerdo",
+			"label": "Estar inscrito/a como demandante de empleo y suscribir el acuerdo de actividad (va incluido en la solicitud)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.4",
+				"excerpt": "el reconocimiento del derecho al subsidio exigirá la inscripción como demandante de empleo, así como la suscripción del acuerdo de actividad",
+				"excerptSha256": "cd554e67faefa39d33416069cf3d4a464f10b05d07cfaf3f2558e21b098a2bdd"
+			}
+		},
+		{
+			"id": "incompatibilidades",
+			"label": "No encontrarte en un supuesto de incompatibilidad (p. ej. trabajo a tiempo completo o pensión incompatible con el trabajo)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.2",
+				"excerpt": "no encontrase en supuesto de incompatibilidad y carecer de rentas propias",
+				"excerptSha256": "cb49628313840382596151ac66a91c860b5553f9da988e0c71a9a4b3c42ab614"
+			}
+		},
+		{
+			"id": "plazo-6-meses",
+			"label": "Pedirlo dentro de los seis meses siguientes al hecho causante (agotamiento de la prestación o última situación legal de desempleo): fuera de ese plazo se deniega; si lo pides en los 15 días hábiles siguientes, el derecho nace al día siguiente del hecho causante",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 276.1",
+				"excerpt": "Si el subsidio por desempleo se solicitara una vez transcurridos los seis meses desde la fecha del hecho causante, la solicitud será denegada",
+				"excerptSha256": "a90e179990aab0a284c446174b7cf09b66d924e51789dfccf19bd91e7490d8f5"
+			}
+		},
+		{
+			"id": "cese-involuntario-posterior",
+			"label": "Si después del hecho causante has vuelto a trabajar (por cuenta propia o ajena), el cese en el último trabajo tiene que haber sido involuntario o con situación legal de desempleo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 276.1, in fine",
+				"excerpt": "para acceder al subsidio será necesario que el cese en el último trabajo sea, respectivamente, involuntario o con situación legal de desempleo",
+				"excerptSha256": "ddc02459211bd67009fc67ed804540a389bb9e5730655c68428910cee52dca3b"
+			}
+		},
+		{
+			"id": "duracion-trimestral",
+			"label": "El subsidio se reconoce por trimestres prorrogables: la duración máxima depende del supuesto, de las cotizaciones o de la duración de la prestación agotada, de la edad y de las responsabilidades familiares (de 3 a 30 meses; 21 meses con 180 días cotizados y responsabilidades familiares)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 277.1-3",
+				"excerpt": "En todos los casos el subsidio se reconocerá por periodos trimestrales, prorrogables hasta agotar la duración máxima",
+				"excerptSha256": "e0cb341276787251f03b2d0696b5952da552dd5937175c4197954aec626938a8"
+			}
+		},
+		{
+			"id": "remision-mayores-52",
+			"label": "Si tienes 52 o más años y cumples los requisitos del art. 280, te corresponde el subsidio para mayores de 52 años (subsidio-mayores-52), no este",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.3",
+				"excerpt": "Serán beneficiarios del subsidio para trabajadores mayores de cincuenta y dos años quienes cumplan los requisitos establecidos en el artículo 280",
+				"excerptSha256": "d98c5005e2758ac220f180fbf1347786d27fc9e4fa0f9dfdb369e9c59a1c8b11"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"businessDays": true,
+			"citation": {
+				"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+				"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+				"excerpt": "Solo puedes solicitar el alta inicial del subsidio dentro del plazo de los seis meses siguientes a la fecha del hecho causante",
+				"excerptSha256": "8cd0fd6b38696c27929aad409ecda695f23f4b9d74c53cdfe739743e85f7c082"
+			}
+		},
+		"channel": {
+			"managingBody": "Servicio Público de Empleo Estatal (SEPE)",
+			"url": "https://sede.sepe.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sepe-subsidio-agotamiento",
+				"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+				"excerpt": "La solicitud la podrás presentar a través de: La sede electrónica del SEPE . En la oficina de prestaciones",
+				"excerptSha256": "96bd9a5b5fbfaf5e82f1b2cc6657b812568c493496fac9c62856ef65fac74aa6"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial (incluye la declaración responsable de rentas e ingresos del mes anterior, tuya y de tu unidad familiar si procede, y el acuerdo de actividad)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Documentación necesaria»",
+					"excerpt": "Modelo oficial de solicitud (contiene la declaración responsable de rentas e ingresos obtenidos durante el mes natural anterior a la solicitud",
+					"excerptSha256": "561e8ea9d7e4897694f331260ec4b70b6c2dd6fdbf476e16e0acb3ac03778e9e"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Identificación en vigor de la persona solicitante (y de cónyuge, pareja de hecho e hijos/as que figuren en la solicitud): DNI o pasaporte (españoles/as); documento del país + certificado de registro UE con NIE o tarjeta de familiar UE (nacionales UE); TIE con fotografía (no UE)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Documentación necesaria»",
+					"excerpt": "Españoles y españolas: Documento Nacional de Identidad (DNI) o pasaporte",
+					"excerptSha256": "74283c382db64ffb1aa19d6762b34a1bd40ce83a23d824c7e9d8da67f712bd3f"
+				}
+			},
+			{
+				"id": "doc-cuenta-bancaria",
+				"label": "Cualquier documento bancario donde figure el número de cuenta del que seas titular para cobrar el subsidio",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Documentación necesaria»",
+					"excerpt": "Cualquier documento bancario en el que figure el número de cuenta de la que seas TITULAR y donde desees percibir la prestación",
+					"excerptSha256": "29173f2587d050a3da97231c4cd2c6b54cff64c2a082743d860d2384691a7ad7"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Si figuran hijos/as a tu cargo en la solicitud: Libro de Familia o certificación del Registro Civil de nacimiento o de familia (extranjeros: documento equivalente con traducción oficial)",
+				"mandatory": true,
+				"condition": {
+					"field": "dependents",
+					"op": "count_where_gte",
+					"count": 1
+				},
+				"citation": {
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Documentación necesaria»",
+					"excerpt": "Libro de Familia o certificación del Registro Civil de nacimiento o de familia",
+					"excerptSha256": "410f9dd7b5117145ae17c5f4d659c7ab10a813dfa5ca6a19784b92835d784d64"
+				}
+			},
+			{
+				"id": "doc-irpf",
+				"label": "Declaración del IRPF del último ejercicio fiscal",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Documentación necesaria»",
+					"excerpt": "Declaración del Impuesto sobre la Renta de las Personas Físicas del último ejercicio fiscal",
+					"excerptSha256": "fbe15e4817c0008292283143223e7c8055744203a07595cb751e042c582bc2a7"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 278",
+			"excerpt": "el 95 por ciento durante los ciento ochenta primeros días, el 90 por ciento desde el día ciento ochenta y uno al día trescientos sesenta, y el 80 por ciento a partir del día trescientos sesenta y uno",
+			"excerptSha256": "cba308b1bd4a4b940328555fe5f941aa1f1f2ae40a382d25c0ad20bfda743846"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"empleo",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

@@ -1,0 +1,97 @@
+{
+	"id": "gp-subsidio-getafe",
+	"description": "Persona de 47 años en Getafe, desempleada tras acabar un contrato temporal, empadronada desde 2015, sin personas a cargo e ingresos en la banda más baja. Caso positivo con advertencias: los dos requisitos comprobables (desempleo por proxy de employmentStatus; carencia de rentas por proxy del umbral 75 % SMI mensual ≈ 10.989 €/año) quedan en T, pero los decisivos —hecho causante (agotamiento o ≥90 días cotizados sin derecho a contributiva), inscripción como demandante y plazo de 6 meses— no son comprobables con nuestras preguntas ⇒ veredicto posible, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2015,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 47,
+					"max": 47,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "subsidio-desempleo",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 274.1",
+					"reasoning": "employmentStatus = «desempleado» ⇒ el requisito de desempleo queda en T por proxy (la condición es soft porque quien mantiene contratos a tiempo parcial cuya suma de jornadas es inferior a una completa también puede acceder, art. 274.1.b in fine)."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 275.1",
+					"reasoning": "incomeAnnual = banda 0–8.400 ⇒ proxy anual del 75 % del SMI mensual sin pagas extra (915,75 €/mes ×12 = 10.989 €/año) en T: todo el intervalo queda por debajo del umbral."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 274.1.a-b, 274.2 y 274.4",
+					"reasoning": "Los requisitos decisivos —haber agotado la prestación o acreditar ≥90 días cotizados sin cubrir el mínimo contributivo, no tener derecho a la contributiva en la fecha de solicitud, inscripción como demandante y acuerdo de actividad— son datos de vida laboral y de gestión que no se preguntan ⇒ uncovered; con 0 hard en F/U y uncoveredCount > 0 el veredicto es posible y no probable."
+				},
+				{
+					"sourceId": "sepe-subsidio-cotizaciones-insuficientes",
+					"locator": "Apartado «Cuándo, dónde y cómo lo tramito»",
+					"reasoning": "El subsidio es permanente: se puede pedir dentro de los 6 meses siguientes al hecho causante (y nace al día siguiente si se solicita en los 15 días hábiles) ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

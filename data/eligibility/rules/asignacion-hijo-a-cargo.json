@@ -1,0 +1,273 @@
+{
+	"benefitSlug": "asignacion-hijo-a-cargo",
+	"standalone": true,
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 351–356 (Título VI, capítulo I, sección 2.ª: asignación económica por hijo o menor a cargo; texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026, de 25 de marzo — revalorización de las pensiones y cuantías de las prestaciones familiares de la Seguridad Social para 2026 (art. 24)"
+		},
+		{
+			"id": "boe-ley-19-2021-imv",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/l/2021/12/20/19/con",
+			"title": "Ley 19/2021, de 20 de diciembre, del ingreso mínimo vital (DT 6.ª: cierre de nuevas solicitudes de la asignación sin discapacidad o con discapacidad <33 %; texto consolidado)"
+		},
+		{
+			"id": "segss-asignacion-hijo-cargo",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/44999/44850",
+			"title": "Seguridad Social — Información útil: Asignación económica por hijo o menor acogido a cargo (procedimiento [D]: objeto, causantes, requisitos, cuantías, plazos, documentación y dónde tramitar)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "causante-con-discapacidad",
+			"hard": true,
+			"label": "Tener a tu cargo un hijo o menor acogido (en acogimiento familiar permanente o guarda con fines de adopción) con discapacidad reconocida: ≥33 % si tiene menos de 18 años, ≥65 % si tiene 18 o más. Desde el 1/06/2020 no se admiten solicitudes nuevas por hijos sin discapacidad o con discapacidad <33 % (esa asignación quedó a extinguir — ver ⚠)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 351.a",
+				"excerpt": "Una asignación económica por cada hijo menor de dieciocho años de edad y afectado por una discapacidad en un grado igual o superior al 33 por ciento, o mayor de dicha edad cuando el grado de discapacidad sea igual o superior al 65 por ciento, a cargo del beneficiario, cualquiera que sea la naturaleza legal de la filiación, así como por los menores a su cargo en régimen de acogimiento familiar permanente o guarda con fines de adopción, que cumplan los mismos requisitos.",
+				"excerptSha256": "df443ef335234268c0cabb5f83a80c94947216e1aaaba36d9dbef9eb2cf6357c"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 1,
+						"where": {
+							"field": "disability",
+							"op": "in",
+							"value": [
+								"yes",
+								"unknown",
+								"declined"
+							]
+						},
+						"label": "tienes a tu cargo un hijo o menor con discapacidad (o sin confirmar — el grado exacto ≥33 %/≥65 % se comprueba en la ⚠)"
+					},
+					{
+						"all": [
+							{
+								"field": "age",
+								"op": "gte",
+								"value": 18
+							},
+							{
+								"field": "disability",
+								"op": "eq",
+								"value": "gte33"
+							}
+						],
+						"label": "eres tú la persona con discapacidad mayor de 18 años: puedes ser beneficiario si fuiste hijo a cargo y no se estableció medida de apoyo a tu capacidad (art. 352.2.c)"
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "convivencia-dependencia-economica",
+			"label": "El hijo o menor debe estar realmente «a cargo»: convivir contigo y depender económicamente de ti; si trabaja, sigue a cargo solo si sus rendimientos del trabajo no superan el 100 % del SMI anual (17.094 € en 2026)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS art. 351.a",
+				"excerpt": "El causante no perderá la condición de hijo o de menor a cargo por el mero hecho de realizar un trabajo lucrativo por cuenta propia o ajena siempre que continúe viviendo con el beneficiario de la prestación",
+				"excerptSha256": "a1d9980b84fb4b4328500d8758a7f4a6464a2de14a4ad1a043007823feca0e31"
+			}
+		},
+		{
+			"id": "residencia-legal-espana",
+			"label": "Residir legalmente en territorio español: lo exige la ley tanto a la persona beneficiaria como al hijo o menor a cargo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 352.1.a y b",
+				"excerpt": "Residan legalmente en territorio español.",
+				"excerptSha256": "d688835bf172d1b843b65d260b8df65fcd5f7fee6208e713230f4f90b994e369"
+			}
+		},
+		{
+			"id": "sin-prestacion-equivalente",
+			"label": "Ni el padre ni la madre pueden tener derecho a una prestación de esta misma naturaleza en otro régimen público de protección social",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 352.1.c",
+				"excerpt": "No tengan derecho, ni el padre ni la madre, a prestaciones de esta misma naturaleza en cualquier otro régimen público de protección social.",
+				"excerptSha256": "3f56a799672b8e090c59777483484cef9e6f5583273eba3544fd7ce573f0900e"
+			}
+		},
+		{
+			"id": "grado-discapacidad-baremo",
+			"label": "El grado de discapacidad lo determina el baremo oficial aprobado por real decreto (no basta una discapacidad sin reconocer): ≥33 % si el causante es menor de 18 años; ≥65 % si es mayor; ≥75 % más necesidad de otra persona da la cuantía superior",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 354",
+				"excerpt": "El grado de discapacidad, a efectos del reconocimiento de las asignaciones por hijo o menor a cargo, así como la situación de dependencia y la necesidad del concurso de otra persona a que se refiere el apartado 2 del artículo anterior se determinarán mediante la aplicación del baremo aprobado por el Gobierno mediante real decreto.",
+				"excerptSha256": "b5933441a3ad0c1016db2efcd4f373acc5710f5549169761933c82257f249023"
+			}
+		},
+		{
+			"id": "limite-ingresos",
+			"label": "Límite de ingresos: para solicitudes nuevas por hijo o menor con discapacidad NO se exige límite de ingresos del beneficiario. El límite vigente de 15.356,00 €/año (23.109,00 € para familias numerosas, +3.745,00 € por cada hijo a cargo a partir del cuarto, este incluido) solo sigue aplicándose al régimen transitorio de la asignación sin discapacidad o con discapacidad <33 %",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Art. 24.2",
+				"excerpt": "Los límites de ingresos para percibir la asignación económica quedan fijados en 15.356,00 euros anuales y, si se trata de familias numerosas, en 23.109,00 euros anuales, incrementándose en 3.745,00 euros anuales por cada hija o hijo a cargo a partir del cuarto, este incluido.",
+				"excerptSha256": "d93832abda6b042686ddd7c7564739067336c1b4503860ba4cc830c0d9a95844"
+			}
+		},
+		{
+			"id": "regimen-transitorio-extinguida",
+			"label": "La asignación por hijo o menor a cargo sin discapacidad o con discapacidad <33 % no admite solicitudes nuevas desde el 1/06/2020: quedó a extinguir y solo la siguen cobrando quienes la tenían reconocida mientras concurran los requisitos (vía con rentas bajas hoy: IMV + complemento de ayuda para la infancia)",
+			"citation": {
+				"sourceId": "boe-ley-19-2021-imv",
+				"locator": "Disposición transitoria sexta",
+				"excerpt": "no podrán presentarse nuevas solicitudes de la asignación económica por hijo o menor a cargo sin discapacidad o con discapacidad inferior al 33 por ciento del sistema de la Seguridad Social, que quedará a extinguir",
+				"excerptSha256": "af8a9c5d919c6ca015931e7773c7c906e7b291d4ea499c21841cc17d3319fd8e"
+			}
+		},
+		{
+			"id": "beneficiarios-especiales",
+			"label": "También pueden ser beneficiarios directos: los huérfanos de padre y madre (<18 con discapacidad ≥33 %, o mayores con ≥65 %), los menores abandonados no acogidos, y los hijos con discapacidad mayores de 18 años sin medida de apoyo a su capacidad (cobran la asignación que correspondería a sus padres)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 352.2",
+				"excerpt": "Los huérfanos de padre y madre, menores de dieciocho años y que sean personas con discapacidad en un grado igual o superior al 33 por ciento o mayores de dicha edad y que sean personas con discapacidad en un grado igual o superior al 65 por ciento",
+				"excerptSha256": "013fff6af7a676dbff3dc850f58ef7cb0421a9813591a705d104dc2c57e7d0e8"
+			}
+		},
+		{
+			"id": "separacion-divorcio",
+			"label": "En separación judicial o divorcio, el derecho al percibo lo conserva el padre o la madre que tenga a su cargo a los hijos o menores",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 352.1.b, párrafo segundo",
+				"excerpt": "En los casos de separación judicial o divorcio, el derecho al percibo de la asignación se conservará para el padre o la madre por los hijos o menores que tenga a su cargo.",
+				"excerptSha256": "f348f36f3034d70d9b87aec94fde1be1dbdafb4ee73b604d339fbfb40db5dad8"
+			}
+		},
+		{
+			"id": "gestion-por-regimen-afiliacion",
+			"label": "La reconoce el INSS, pero si uno de los padres está incluido en un régimen público de Seguridad Social, la asignación se reconoce por ese régimen",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS art. 361.2",
+				"excerpt": "En los supuestos en que uno de los padres esté incluido, en razón de la actividad desempeñada o por su condición de pensionista, en un régimen público de Seguridad Social, la prestación correspondiente será reconocida por dicho régimen",
+				"excerptSha256": "cc4549186f3f4ccddaa015ad76edd89a4d4d59b6695457737bc44a76b29f6c5f"
+			}
+		},
+		{
+			"id": "efectos-y-variaciones",
+			"label": "El derecho nace el primer día del trimestre natural siguiente a la solicitud y la resolución debe notificarse en un máximo de 45 días; una vez concedida hay que comunicar al INSS en 30 días cualquier variación familiar que afecte al derecho (nace, se modifica o se extingue por trimestres)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "LGSS art. 355.1",
+				"excerpt": "Todo beneficiario estará obligado a declarar cuantas variaciones se produzcan en su familia, siempre que estas deban ser tenidas en cuenta a efectos",
+				"excerptSha256": "aad4d54d1fabbdc38a87904bed69cbe4e8a1bb4691535eec788b7e60966bebce"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 355.2.a",
+				"excerpt": "En caso de nacimiento del derecho, a partir del día primero del trimestre natural inmediatamente siguiente a la fecha en que se haya solicitado el reconocimiento del mismo.",
+				"excerptSha256": "e8dce09ddc0d5e2a331c493030a688c863e51b79649a26df98884c146aef6d19"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — si un progenitor está incluido en un régimen público de Seguridad Social, la reconoce ese régimen",
+			"url": "https://prestaciones.seg-social.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-asignacion-hijo-cargo",
+				"locator": "Ficha, «Dónde tramitarlo» y «Entidad competente»",
+				"excerpt": "La solicitud y documentación necesaria deberá presentarse en cualquiera de los centros de atención e información de la Seguridad Social . Entidad competente: El reconocimiento del derecho a la asignación económica es competencia del INSS . En caso de estar uno de los padres incluido en un régimen público de Seguridad Social, la asignación económica se reconocerá por dicho régimen.",
+				"excerptSha256": "35fb8c88d8052a94392f57d348feb8962129de87263b54d30896606557a74bef"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial de la Seguridad Social (impresos del INSS / portal de prestaciones)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-asignacion-hijo-cargo",
+					"locator": "Ficha, «Impresos»",
+					"excerpt": "Impresos: Modelos de solicitud.",
+					"excerptSha256": "bb696dc793ba25c53e7119d0bb8509230ee330408bf44f1a5c7527aa9a9966ae"
+				}
+			},
+			{
+				"id": "doc-identidad-circunstancias",
+				"label": "Documentos que acrediten la identidad del solicitante y las circunstancias que determinan el derecho (no es exigible acreditar lo que la Administración de la Seguridad Social deba conocer por sí misma, p. ej. pensiones o subsidios)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-asignacion-hijo-cargo",
+					"locator": "Ficha, «Documentación»",
+					"excerpt": "Se aportarán los documentos necesarios para la acreditación de la identidad y de las circunstancias determinantes del derecho. En ningún caso, será exigible al solicitante la acreditación de hechos, datos o circunstancias que la Administración de la Seguridad Social deba conocer por sí misma.",
+					"excerptSha256": "1f70a6506d5162a58acbae417eb0766146ba568756c1bed81cf92b84f3349c18"
+				}
+			},
+			{
+				"id": "doc-grado-discapacidad",
+				"label": "Acreditación del grado de discapacidad del hijo o menor (resolución/certificado del IMSERSO u órgano autonómico competente), determinada por el baremo oficial",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 354",
+					"excerpt": "El grado de discapacidad, a efectos del reconocimiento de las asignaciones por hijo o menor a cargo, así como la situación de dependencia y la necesidad del concurso de otra persona a que se refiere el apartado 2 del artículo anterior se determinarán mediante la aplicación del baremo aprobado por el Gobierno mediante real decreto.",
+					"excerptSha256": "b5933441a3ad0c1016db2efcd4f373acc5710f5549169761933c82257f249023"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "range",
+		"minEur": 1000,
+		"maxEur": 8942.4,
+		"period": "annual",
+		"citation": {
+			"sourceId": "boe-rd-241-2026-pensiones",
+			"locator": "Art. 24.1.a y b",
+			"excerpt": "La cuantía de la asignación económica establecida en el artículo 353.1 en el supuesto de hijo o hija menor de dieciocho años y de menor a cargo en régimen de acogimiento familiar permanente o guarda con fines de adopción con un grado de discapacidad igual o superior al 33 por ciento será en cómputo anual de 1.000,00 euros. La cuantía de la asignación económica establecida en el artículo 353.1 en el supuesto de hijo o hija mayor de dieciocho años a cargo con un grado de discapacidad igual o superior al 65 por ciento será en cómputo anual de 5.962,80 euros. b) La cuantía de la asignación económica establecida en el artículo 353.2, para los casos de hijo o hija a cargo mayor de dieciocho años con un grado de discapacidad igual o superior al 75 por ciento y que, como consecuencia de pérdidas anatómicas o funcionales, necesite el concurso de otra persona para realizar los actos más esenciales de la vida, tales como vestirse, desplazarse, comer o análogos, será en cómputo anual de 8.942,40 euros.",
+			"excerptSha256": "aec573f6522186f3dcec2846c8982ebe9f107385877f087003a9a837ef316f3a"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 2
+	},
+	"themes": [
+		"familia_infancia",
+		"dependencia_discapacidad",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"tener_hijo",
+		"discapacidad",
+		"ingresos_bajos"
+	]
+}
