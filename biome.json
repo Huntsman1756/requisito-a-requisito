@@ -13,7 +13,7 @@
 			"**/*.mjs",
 			"**/*.json",
 			"**/*.jsonc",
-			"!!.tmp",
+			"!!.tmp", "!!.next", "!!out",
 			"!!data",
 			"!!.pytest_cache",
 			"!!**/__pycache__"

@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
 	"standalone": false,
-	"rulesVersion": 2,
+	"rulesVersion": 3,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -83,7 +83,9 @@
 				"op": "in",
 				"value": [
 					"asalariado",
-					"autonomo"
+					"autonomo",
+					"docente",
+					"investigador"
 				]
 			}
 		}

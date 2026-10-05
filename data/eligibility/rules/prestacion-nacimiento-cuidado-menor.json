@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "prestacion-nacimiento-cuidado-menor",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -61,7 +61,7 @@
 		},
 		{
 			"id": "persona-trabajadora",
-			"hard": true,
+			"hard": false,
 			"label": "Ser persona trabajadora por cuenta ajena o propia (la afiliación y el alta o asimilada en la Seguridad Social se comprueban en la solicitud — ver ⚠)",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
@@ -156,10 +156,10 @@
 			"id": "limites-adopcion-acogimiento",
 			"label": "En adopción, guarda o acogimiento (ámbito del Estatuto de los Trabajadores): el menor debe tener menos de 6 años, o ser menor de edad mayor de 6 años con discapacidad o con especiales dificultades de inserción acreditadas por los servicios sociales; en el ámbito del EBEP el acogimiento debe tener una duración no inferior a un año",
 			"citation": {
-				"sourceId": "boe-lgss-prestacion-familia",
-				"locator": "LGSS arts. 165.1/177/180/181",
-				"excerpt": "se consideran situaciones protegidas el nacimiento, la adopción, la guarda con fines de adopción y el acogimiento familiar",
-				"excerptSha256": "f8987bfc46d6740cf1955c112d0297317827578fbf8ffb16a965915f4787bb4c"
+				"sourceId": "boe-et-estatuto-trabajadores",
+				"locator": "ET art. 45.1.d",
+				"excerpt": "Nacimiento, adopción, guarda con fines de adopción o acogimiento, de conformidad con el Código Civil o las leyes civiles de las comunidades autónomas que lo regulen, de menores de seis años o de menores de edad mayores de seis años con discapacidad",
+				"excerptSha256": "836c5ee9c8dbf0f6b3a135fd84d0498b9118d8584eed024dd50df2b460b954de"
 			}
 		},
 		{
@@ -187,9 +187,9 @@
 			"label": "Estar al corriente en el pago de las cuotas de las que seas responsable directa (sobre todo autónomos), con el mecanismo de invitación al pago si falta alguna",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
-				"locator": "LGSS arts. 165.1/177/180/181",
-				"excerpt": "la empresa deberá de encontrarse al corriente de pago en las cuotas de la Seguridad Social",
-				"excerptSha256": "b987f7a89dbe715b96c408f94914c439c74a672cae6ee3b1c83a98be5194f4d4"
+				"locator": "LGSS art. 47.1",
+				"excerpt": "En el caso de trabajadores que sean responsables del ingreso de cotizaciones, para el reconocimiento de las correspondientes prestaciones económicas de la Seguridad Social será necesario que el causante se encuentre al corriente en el pago",
+				"excerptSha256": "9dab3d40c7a955bf3f8cd2eb29e5b239e315d54195be539aa8dcd9b1f00a76a9"
 			}
 		},
 		{
@@ -197,9 +197,9 @@
 			"label": "En parto múltiple o adopción/guarda/acogimiento simultáneo de más de un menor hay un subsidio especial por cada menor a partir del segundo (un solo pago al terminar las 6 semanas), que solo puede percibir uno de los progenitores",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
-				"locator": "LGSS arts. 165.1/177/180/181",
-				"excerpt": "Serán personas beneficiarias del subsidio por nacimiento y cuidado de menor previsto en esta sección las personas trabajadoras incluidas en el Régimen General",
-				"excerptSha256": "7595befc8beff8582ffa1fb6dc70219fe5ba9d6a592665e36a3e3c8cd0d14ba9"
+				"locator": "LGSS art. 359",
+				"excerpt": "Se entenderá que existe parto o adopción múltiple cuando el número de nacidos o adoptados sea igual o superior a dos",
+				"excerptSha256": "827a2035e5b3323e5f8c1f3a42825e08c11fc2fc76af8c9479774b0db7f36184"
 			}
 		}
 	],

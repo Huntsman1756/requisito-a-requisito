@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "complemento-ayuda-infancia",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -268,9 +268,7 @@
 		]
 	},
 	"amount": {
-		"type": "range",
-		"minEur": 57.5,
-		"maxEur": 115,
+		"type": "variable",
 		"period": "monthly",
 		"citation": {
 			"sourceId": "boe-ley-19-2021-imv",

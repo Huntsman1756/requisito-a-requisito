@@ -56,13 +56,13 @@
 			},
 			"employmentStatus": {
 				"state": "value",
-				"value": "empleado"
+				"value": "asalariado"
 			},
 			"incomeAnnual": {
 				"state": "value",
 				"value": {
-					"min": 28000,
-					"max": 42000
+					"min": 25200,
+					"max": null
 				}
 			},
 			"disability": {
