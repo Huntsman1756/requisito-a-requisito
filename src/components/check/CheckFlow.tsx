@@ -152,7 +152,10 @@ export function CheckFlow() {
 			{phase === "intro" && (
 				<section aria-labelledby="intro-title">
 					<h1 id="intro-title">{t("check.intro.title")}</h1>
-					<p className="lede">{t("check.intro.body")}</p>
+					<p className="lede">
+						Responde unas preguntas y te decimos qué ayudas merece la pena
+						comprobar. No hace falta registrarse.
+					</p>
 					<p>
 						<button type="button" className="cta" onClick={() => goTo("questions", 0)}>
 							{t("check.intro.start")}
@@ -164,9 +167,26 @@ export function CheckFlow() {
 
 			{phase === "questions" && visibleQuestions[step] && (
 				<>
-					<p className="progress" role="progressbar" aria-valuenow={step + 1} aria-valuemin={1} aria-valuemax={visibleQuestions.length}>
-						{t("check.progress", { n: step + 1, total: visibleQuestions.length })}
-					</p>
+					<div
+						className="progress"
+						role="progressbar"
+						aria-valuenow={step + 1}
+						aria-valuemin={1}
+						aria-valuemax={visibleQuestions.length}
+					>
+						<div
+							className="progress__bar"
+							style={{
+								width: `${((step + 1) / visibleQuestions.length) * 100}%`,
+							}}
+						/>
+						<p className="progress__label">
+							{t("check.progress", {
+								n: step + 1,
+								total: visibleQuestions.length,
+							})}
+						</p>
+					</div>
 					<QuestionStep
 						key={visibleQuestions[step].id + step}
 						question={visibleQuestions[step]}
@@ -189,7 +209,14 @@ export function CheckFlow() {
 							return (
 								<li key={q.id}>
 									<span className="review-q">{key(q.labelKey)}</span>
-									<span className="review-a">{describeAnswer(q, a)}</span>
+									<span className="review-a">
+								{describeAnswer(q, a, (code) => {
+									const m = data.territory.municipalities.find(
+										(x) => x.code === code,
+									);
+									return m?.name ?? code;
+								})}
+							</span>
 									<button
 										type="button"
 										className="btn-quiet"
@@ -234,7 +261,11 @@ export function CheckFlow() {
 	);
 }
 
-function describeAnswer(q: Question, a: Answer | undefined): string {
+function describeAnswer(
+	q: Question,
+	a: Answer | undefined,
+	resolveMuni?: (code: string) => string,
+): string {
 	if (!a || a.state === "unasked") return "—";
 	if (a.state === "unknown") return t("check.unknown");
 	if (a.state === "declined") return t("check.decline");
@@ -242,6 +273,8 @@ function describeAnswer(q: Question, a: Answer | undefined): string {
 	const v = a.value;
 	if (q.type === "territory") {
 		const tv = v as { municipality?: string; ccaa?: string };
+		if (tv.municipality && resolveMuni)
+			return `${resolveMuni(tv.municipality)} (${tv.municipality})`;
 		return tv.municipality ?? tv.ccaa ?? "";
 	}
 	if (q.type === "age" || q.type === "integer") {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import type { EvaluateCtx } from "../../lib/eligibility-engine/evaluate";
 import { evaluateRuleSet } from "../../lib/eligibility-engine/evaluate";
 import type {
@@ -192,7 +193,9 @@ export function ResultsView({
 						aria-expanded={showNoCumple}
 						onClick={() => setShowNoCumple((v) => !v)}
 					>
-						{t("results.noaplica.title", { n: byVerdict("no_cumple").length })}
+						{t("results.noaplica.title", {
+							n: byVerdict("no_cumple").length,
+						})} — ver por qué
 					</button>
 					{showNoCumple && (
 						<ul>
@@ -340,7 +343,7 @@ function ResultCard({
 											: r.status === "F"
 												? `✗ ${t("req.f")}`
 												: `? ${t("req.u")}`}
-										{!r.hard && ` (${t("req.warn").toLowerCase()})`}
+										{!r.hard && " (no bloqueante)"}
 									</span>{" "}
 									{req?.label}
 									{req && (
@@ -407,7 +410,8 @@ function ResultCard({
 							<div>
 								<dt>{t("card.effort")}</dt>
 								<dd>
-									{ev.effort.minMinutes}–{ev.effort.maxMinutes} min
+									{ev.effort.minMinutes}–{ev.effort.maxMinutes} min (estimación
+									propia)
 								</dd>
 							</div>
 						)}
@@ -421,6 +425,18 @@ function ResultCard({
 						</div>
 					</dl>
 
+					<p className="card-actions">
+						<a
+							className="cta"
+							href={ev.channel.url}
+							rel="noopener noreferrer"
+						>
+							{t("card.gotoChannel")} ↗
+						</a>{" "}
+						<Link className="btn-quiet" href={`/ayudas/${ev.benefitSlug}`}>
+							{t("card.fullDetail")}
+						</Link>
+					</p>
 					<button
 						type="button"
 						className="btn-quiet"
@@ -430,14 +446,36 @@ function ResultCard({
 						{t("req.why.title")}
 					</button>
 					{open && (
-						<p className="why">{t("card.verifiedAt", { date: ev.verifiedAt })}</p>
+						<p className="why">
+							{t("card.verifiedAt", { date: ev.verifiedAt })} ·{" "}
+							{rs.sources
+								.filter((s) => s.rank <= 2)
+								.map((s) => domainBadge(s.url))
+								.join(", ")}
+						</p>
 					)}
 				</>
 			)}
 
+			<p className="card-foot">
+				{rs.sources[0] ? domainBadge(rs.sources[0].url) : ""} ·{" "}
+				{t("card.verifiedAt", { date: ev.verifiedAt })}
+			</p>
 			<p className="legal">{t("legal.notice")}</p>
 		</article>
 	);
+}
+
+function domainBadge(url: string): string {
+	if (url.includes("boe.es")) return "BOE";
+	if (url.includes("bocm.es")) return "BOCM";
+	if (url.includes("comunidad.madrid")) return "Comunidad de Madrid";
+	if (url.includes("renfe.com")) return "Renfe";
+	if (url.includes("sepe.es")) return "SEPE";
+	if (url.includes("seg-social.es")) return "Seguridad Social";
+	if (url.includes("miteco")) return "MITECO";
+	if (url.includes("gob.es")) return "Gobierno de España";
+	return "Fuente oficial";
 }
 
 function DeadlinePill({ ev }: { ev: EvaluationResult }) {

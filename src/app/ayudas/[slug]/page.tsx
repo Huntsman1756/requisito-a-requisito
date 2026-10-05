@@ -127,8 +127,10 @@ export default async function Ficha({
 					<p>
 						{rs.amount.type === "variable"
 							? "Variable"
-							: `${rs.amount.minEur ?? ""}–${rs.amount.maxEur ?? ""} €`}{" "}
-						({rs.amount.period ?? ""}) — «{rs.amount.citation.excerpt}» (
+							: rs.amount.minEur === rs.amount.maxEur
+								? `${rs.amount.minEur?.toLocaleString("es-ES")} €`
+								: `${rs.amount.minEur ?? ""}–${rs.amount.maxEur ?? ""} €`}{" "}
+						— «{rs.amount.citation.excerpt}» (
 						{rs.amount.citation.locator})
 					</p>
 				</>
@@ -177,7 +179,7 @@ export default async function Ficha({
 				.
 			</p>
 			<p>
-				<Link href="/ayudas">← Todas las ayudas</Link> ·{" "}
+				<Link href="/ayudas">← Volver a las ayudas</Link> ·{" "}
 				<Link href="/comprobar">Comprueba si te aplica</Link>
 			</p>
 		</article>

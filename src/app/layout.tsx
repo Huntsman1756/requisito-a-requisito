@@ -35,6 +35,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<header className="site-header">
 					<div className="site-header__inner shell">
 						<Link className="brand" href="/">
+							<span aria-hidden="true" className="brand-mark">
+								R
+							</span>
 							Requisito a Requisito
 						</Link>
 						<nav className="site-nav" aria-label="Principal">
@@ -49,7 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				</p>
 				<main id="contenido">{children}</main>
 				<footer className="site-footer">
-					<p>
+					<p className="shell">
 						No somos una administración pública. La información se basa en
 						fuentes oficiales; la solicitud se hace siempre en la sede
 						oficial.
