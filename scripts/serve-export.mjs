@@ -17,6 +17,7 @@ const types = {
 	".png": "image/png",
 	".ico": "image/x-icon",
 	".woff2": "font/woff2",
+	".ttf": "font/ttf",
 };
 const server = createServer((request, response) => {
 	try {
@@ -24,9 +25,15 @@ const server = createServer((request, response) => {
 			response.writeHead(405).end();
 			return;
 		}
-		const pathname = decodeURIComponent(
+		let pathname = decodeURIComponent(
 			new URL(request.url, "http://localhost").pathname,
 		);
+		// En producción todo va bajo BASE_PATH ("/requisito-a-requisito"); en
+		// local lo aceptamos también como prefijo para que las rutas absolutas
+		// (p. ej. fuentes) resuelvan igual.
+		if (pathname.startsWith("/requisito-a-requisito/")) {
+			pathname = pathname.slice("/requisito-a-requisito".length);
+		}
 		let path = resolve(root, `.${pathname}`);
 		if (path !== root && !path.startsWith(root + sep)) {
 			response.writeHead(403).end();

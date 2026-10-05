@@ -45,12 +45,15 @@ async function sedeList(statusPath: string): Promise<RawItem[]> {
 	const seen = new Set<string>();
 	for (let page = 0; page < 40; page++) {
 		const html = await get(`${base}?t=&items_per_page=10&page=${page}`);
-		const links = [
-			...html.matchAll(/<h3><a href="([^"]+)" title="([^"]*)"[^>]*>/g),
-		];
-		const fresh = links.filter(([href]) => !seen.has(href));
+		const links = [...html.matchAll(/<h3>\s*<a\s+([^>]+)>/g)].map((m) => {
+			const attrs = m[1];
+			const href = /href="([^"]+)"/.exec(attrs)?.[1] ?? "";
+			const title = /title="([^"]*)"/.exec(attrs)?.[1] ?? "";
+			return { href, title };
+		});
+		const fresh = links.filter(({ href }) => href && !seen.has(href));
 		if (!fresh.length) break;
-		for (const [href, title] of fresh) {
+		for (const { href, title } of fresh) {
 			seen.add(href);
 			items.push({
 				title,

@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { formatDateEs } from "../../lib/format";
 
 export const metadata: Metadata = { title: "Observatorio" };
 
@@ -13,69 +14,76 @@ export default function Observatorio() {
 	const manifest = JSON.parse(
 		readFileSync(join(process.cwd(), "data/eligibility/bundle/manifest.json"), "utf8"),
 	);
-	let l2 = { items: [] as { accessState?: string; scope?: string }[] };
-	try {
-		l2 = JSON.parse(readFileSync(join(process.cwd(), OUT, "nivel-2.json"), "utf8"));
-	} catch {
-		/* aún no generado */
-	}
+	const l2 = JSON.parse(
+		readFileSync(join(process.cwd(), OUT, "nivel-2.json"), "utf8"),
+	);
 	const sources = JSON.parse(
 		readFileSync(join(process.cwd(), "data/eligibility/sources/registry.json"), "utf8"),
 	);
-	const byState = l2.items.reduce<Record<string, number>>((acc, i) => {
+	let verified = "";
+	for (const f of rules) {
+		const d = JSON.parse(readFileSync(join(rulesDir, f), "utf8"));
+		if (!verified || d.verifiedAt > verified) verified = d.verifiedAt;
+	}
+	const byState = (l2.items as { accessState?: string }[]).reduce<Record<string, number>>((acc, i) => {
 		const k = i.accessState ?? "UNKNOWN";
 		acc[k] = (acc[k] ?? 0) + 1;
 		return acc;
 	}, {});
-	const byScope = l2.items.reduce<Record<string, number>>((acc, i) => {
+	const byScope = (l2.items as { scope?: string }[]).reduce<Record<string, number>>((acc, i) => {
 		const k = i.scope ?? "estatal";
 		acc[k] = (acc[k] ?? 0) + 1;
 		return acc;
 	}, {});
 
 	return (
-		<section className="shell" aria-labelledby="observatorio-title">
+		<section className="shell band" aria-labelledby="observatorio-title" style={{ borderTop: 0 }}>
 			<h1 id="observatorio-title">Observatorio</h1>
 			<p className="lede">
-				Qué hay detrás: cuántas ayudas comprobamos, de dónde salen los datos y
-				cuándo se verificaron por última vez.
+				Qué cubrimos, de dónde sale y qué ha cambiado. Estas cifras se generan
+				con cada publicación.
 			</p>
 
-			<h2>Ayudas comprobadas requisito a requisito</h2>
-			<p>
-				{manifest.included.length} programas con reglas verificables. Cada
-				afirmación enlaza a la norma oficial.
-			</p>
+			<div className="obs">
+				<div><b>{manifest.included.length}</b><span className="note">ayudas comprobadas con reglas</span></div>
+				<div><b>{l2.items.length}</b><span className="note">relacionadas con fuente oficial</span></div>
+				<div><b>{(sources.domains?.length ?? 0)}</b><span className="note">dominios oficiales registrados</span></div>
+				<div><b>{formatDateEs(verified)}</b><span className="note">última verificación de reglas</span></div>
+			</div>
 
-			<h2>Catálogo relacionado (sin comprobar requisitos)</h2>
-			<p>{l2.items.length} programas con enlace a la fuente oficial.</p>
+			<h2 style={{ marginTop: "2rem" }}>Catálogo por estado de acceso</h2>
+			<div className="log">
+				<ul>
+					{Object.entries(byState as Record<string, number>).map(([k, v]) => (
+						<li key={k}>
+							<span className="label">{{ OPEN: "Plazo abierto", ROLLING: "Plazo continuo", UPCOMING: "Próxima", CLOSED_RECURRING: "Se convoca cada año", UNKNOWN: "Por confirmar" }[k] ?? k}</span>
+							<span className="mono">{v} programas</span>
+							<span>
+								{k === "OPEN" && "Plazo abierto ahora mismo"}
+								{k === "ROLLING" && "Se puede pedir en cualquier momento"}
+								{k === "UPCOMING" && "Anunciada; plazo aún no abierto"}
+								{k === "CLOSED_RECURRING" && "Cerrada; se convoca cada año"}
+								{k === "UNKNOWN" && "Estado por confirmar"}
+							</span>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<h2 style={{ marginTop: "2rem" }}>Por ámbito</h2>
 			<ul>
-				{Object.entries(byState).map(([k, v]) => (
+				{Object.entries(byScope as Record<string, number>).map(([k, v]) => (
 					<li key={k}>
-						{k}: {v}
+						{k === "comunidad-madrid" ? "Comunidad de Madrid" : k === "municipal" ? "Ayuntamientos" : "Estado"}
+						{" — "}{v}
 					</li>
 				))}
 			</ul>
-			<ul>
-				{Object.entries(byScope).map(([k, v]) => (
-					<li key={k}>
-						{k}: {v}
-					</li>
-				))}
-			</ul>
 
-			<h2>Fuentes oficiales usadas</h2>
-			<p>{sources.sources?.length ?? 0} dominios oficiales registrados.</p>
-
-			<h2>Última verificación</h2>
-			<p>
-				Las reglas se verificaron el {manifest.generatedAt?.slice(0, 10) ?? "—"}.{" "}
+			<p className="note" style={{ marginTop: "1.6rem" }}>
 				<a href="/datos/elegibilidad/manifest.json">Manifiesto del bundle</a> ·{" "}
-				<Link href="/explorar">Explorar el catálogo</Link>
-			</p>
-
-			<p className="legal">
-				Este observatorio se genera automáticamente con cada publicación.
+				<Link href="/explorar">Explorar el catálogo</Link> ·{" "}
+				<Link href="/datos/elegibilidad/nivel-2.json">Datos abiertos (JSON)</Link>
 			</p>
 		</section>
 	);

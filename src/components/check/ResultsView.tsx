@@ -17,6 +17,38 @@ import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import { formatDateEs, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
+import type { Condition } from "../../lib/eligibility-engine/schema";
+
+function fieldsIn(c: Condition, out: Set<string>): void {
+	if ("all" in c) for (const x of c.all) fieldsIn(x, out);
+	else if ("any" in c) for (const x of c.any) fieldsIn(x, out);
+	else if ("not" in c) fieldsIn(c.not, out);
+	else {
+		out.add(c.field);
+		if (c.where) fieldsIn(c.where, out);
+	}
+}
+
+/** R2-MAT: dimensiones del perfil (máx. 7 columnas, como en el prototipo). */
+const DIMENSIONS: { id: string; label: string; fields: string[] }[] = [
+	{ id: "emp", label: "Empadronamiento", fields: ["territory"] },
+	{ id: "edad", label: "Edad", fields: ["age", "birthYear"] },
+	{ id: "hijos", label: "Hijos", fields: ["dependents"] },
+	{ id: "ing", label: "Ingresos", fields: ["incomeAnnual"] },
+	{ id: "fam", label: "Situación familiar", fields: ["familyType"] },
+	{ id: "emp2", label: "Empleo", fields: ["employmentStatus", "studentStatus"] },
+	{ id: "otros", label: "Otros", fields: [] }, // resto (discapacidad, dependencia…)
+];
+const OTHERS_FIELDS = new Set(["disability", "dependency", "housingStatus", "residenceSince"]);
+
+function dimOf(field: string): string {
+	for (const d of DIMENSIONS) if (d.fields.includes(field)) return d.id;
+	return "otros";
+}
+function worstOf(statuses: string[]): string {
+	for (const s of ["F", "U", "W", "T"]) if (statuses.includes(s)) return s;
+	return "na";
+}
 
 const EVENT_LABELS: Record<string, string> = {
 	tener_hijo: "Voy a tener un hijo",
@@ -46,6 +78,7 @@ interface Props {
 	evalCtx: EvaluateCtx;
 	questions: Question[];
 	lifeEvent?: string | null;
+	exampleLabel?: string;
 	onSetAnswer: (field: string, a: Answer) => void;
 	onRestart: () => void;
 	onAnnounce: (s: string) => void;
@@ -57,6 +90,7 @@ export function ResultsView({
 	evalCtx,
 	questions,
 	lifeEvent,
+	exampleLabel,
 	onSetAnswer,
 	onRestart,
 	onAnnounce,
@@ -195,17 +229,24 @@ export function ResultsView({
 
 	return (
 		<section aria-labelledby="results-title">
-			<h1 id="results-title">{t("results.title")}</h1>
-
-			<p className="summary" role="status" aria-live="polite">
+			<div className="res-head">
+				<div>
+					{exampleLabel && <p className="persona">Ejemplo · {exampleLabel}</p>}
+					<h1 id="results-title">{t("results.title")}</h1>
+				</div>
+			</div>
+			<div className="tally" role="status" aria-live="polite">
+				<div className="ok"><b>{probables}</b><span>{key("tally.probables")}</span></div>
+				<div className="doubt"><b>{posibles}</b><span>{key("tally.posibles")}</span></div>
+				{missing.length > 0 && (
+					<div className="doubt"><b>{missing.length}</b><span>{key("tally.missing")}</span></div>
+				)}
+				<div className="seal-c"><b>{level2.length}</b><span>{key("tally.level2")}</span></div>
+			</div>
+			<p className="sr-only">
 				{visible.length === 0 && notEvaluable.length === 0
 					? t("results.summary.none")
-					: t("results.summary", {
-							probables,
-							posibles,
-							missing: missing.length,
-							missingAids,
-						})}
+					: t("results.summary", { probables, posibles, missing: missing.length, missingAids })}
 			</p>
 
 			{missing.length > 0 && (
@@ -319,49 +360,7 @@ export function ResultsView({
 			)}
 
 			{evaluations.length > 1 && (
-				<div className="matrix-toggle">
-					<button
-						type="button"
-						className="btn-quiet"
-						aria-expanded={showMatrix}
-						onClick={() => setShowMatrix((v) => !v)}
-					>
-						{showMatrix ? "Ocultar" : "Ver"} la tabla requisito a requisito
-					</button>
-				</div>
-			)}
-			{showMatrix && (
-				<div className="matrix-wrap" role="region" aria-label="Tabla de requisitos por ayuda" tabIndex={0}>
-					<table className="matrix">
-						<thead>
-							<tr>
-								<th scope="col">Ayuda</th>
-								{[...new Set(evaluations.flatMap(({ rs }) => rs.requirements.map((r) => r.id)))].map((id) => {
-									const label = evaluations.flatMap(({ rs }) => rs.requirements).find((r) => r.id === id)?.label ?? id;
-									return <th key={id} scope="col" className="matrix-th">{label}</th>;
-								})}
-							</tr>
-						</thead>
-						<tbody>
-							{evaluations.map(({ rs, ev }) => (
-								<tr key={ev.benefitSlug}>
-									<th scope="row" className="matrix-aid">{aidTitle(ev.benefitSlug)}</th>
-									{[...new Set(evaluations.flatMap(({ rs: r }) => r.requirements.map((x) => x.id)))].map((rid) => {
-										const rq = ev.requirements.find((x) => x.id === rid);
-										const sym = !rq ? "—" : rq.status === "T" ? "✓" : rq.status === "F" ? "✗" : "?";
-										const txt = !rq ? "No aplica" : rq.status === "T" ? "Cumples" : rq.status === "F" ? "No cumples" : "No se puede saber";
-										return (
-											<td key={rid} className={`matrix-cell matrix--${rq?.status ?? "na"}`}>
-												<span aria-hidden="true">{sym}</span>
-												<span className="sr-only">{txt}</span>
-											</td>
-										);
-									})}
-								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
+				<RequirementMatrix evaluations={evaluations} />
 			)}
 
 			{actionEvals.length > 0 && (
@@ -678,5 +677,159 @@ function DeadlinePill({ ev }: { ev: EvaluationResult }) {
 				? t("deadline.urgent")
 				: key(`deadline.${ev.deadline.state}`)}
 		</span>
+	);
+}
+
+
+/** Matriz requisito a requisito por dimensiones del perfil (R2-MAT). */
+function RequirementMatrix({
+	evaluations,
+}: {
+	evaluations: { rs: RuleSet; ev: EvaluationResult }[];
+}) {
+	const [open, setOpen] = useState(false);
+	const [cell, setCell] = useState<{ aid: string; dim: string } | null>(null);
+	const shown = evaluations.filter(({ ev }) => ev.verdict !== "no_cumple");
+
+	const cellReqs = (rs: RuleSet, ev: EvaluationResult, dimId: string) =>
+		ev.requirements.filter((r) => {
+			const src = rs.requirements.find((x) => x.id === r.id);
+			const fs = new Set<string>();
+			if (src) fieldsIn(src.condition, fs);
+			const dims = [...fs].map(dimOf);
+			if (dimId === "otros") return fs.size === 0 || dims.every((d) => d === "otros");
+			return dims.includes(dimId);
+		});
+
+	const tickFor = (st: string) =>
+		st === "T" ? { cls: "ok", sym: "✓", txt: "Cumples" }
+		: st === "F" ? { cls: "no", sym: "✕", txt: "No cumples" }
+		: st === "U" ? { cls: "doubt", sym: "?", txt: "Falta un dato" }
+		: { cls: "na", sym: "–", txt: "No aplica" };
+
+	const verdictLabel = (v: string) =>
+		v === "probable" ? "Encaja" : v === "posible" ? "Falta un dato" : v === "insuficiente" ? "Le falta" : "No te aplica";
+	const verdictCls = (v: string) =>
+		v === "probable" ? "v-ok" : v === "posible" || v === "insuficiente" ? "v-doubt" : "v-no";
+
+	return (
+		<>
+			<div className="matrix-toggle">
+				<button
+					type="button"
+					className="btn-quiet"
+					aria-expanded={open}
+					onClick={() => setOpen((v) => !v)}
+				>
+					{open ? "Ocultar" : "Ver"} la tabla requisito a requisito
+				</button>
+			</div>
+			{open && (
+				<>
+					<div className="matrix-wrap" role="region" aria-label="Tabla de requisitos por ayuda" tabIndex={0}>
+						<div className="matrix-mobile" aria-hidden="true">
+							{shown.map(({ rs, ev }) => (
+								<details key={ev.benefitSlug}>
+									<summary>{aidTitle(ev.benefitSlug)} — {verdictLabel(ev.verdict)}</summary>
+									<ul>
+										{ev.requirements.map((r) => {
+											const t = tickFor(r.status);
+											return <li key={r.id}><span className={`tick ${t.cls}`}>{t.sym}</span> {rs.requirements.find((x) => x.id === r.id)?.label ?? r.id}</li>;
+										})}
+									</ul>
+								</details>
+							))}
+						</div>
+						<table className="matrix" aria-describedby="m-legend">
+							<caption className="label">
+								Matriz de requisitos · pulsa una casilla para ver el texto oficial
+							</caption>
+							<thead>
+								<tr>
+									<th scope="col">Ayuda</th>
+									{DIMENSIONS.map((d) => (
+										<th key={d.id} scope="col">{d.label}</th>
+									))}
+									<th scope="col">Plazo</th>
+									<th scope="col">Resultado</th>
+								</tr>
+							</thead>
+							<tbody>
+								{shown.map(({ rs, ev }) => (
+									<tr key={ev.benefitSlug}>
+										<th scope="row">
+											{aidTitle(ev.benefitSlug)}
+											
+										</th>
+										{DIMENSIONS.map((d) => {
+											const reqs = cellReqs(rs, ev, d.id);
+											const st = worstOf(reqs.map((r) => r.status));
+											const tick = tickFor(st);
+											return (
+												<td key={d.id} className="c">
+													{reqs.length ? (
+														<button
+															type="button"
+															aria-label={`${aidTitle(ev.benefitSlug)} · ${d.label}: ${tick.txt}`}
+															onClick={() => setCell({ aid: ev.benefitSlug, dim: d.id })}
+														>
+															<span className={`tick ${tick.cls}`} aria-hidden="true">{tick.sym}</span>
+														</button>
+													) : (
+														<span className="tick na" aria-label="No aplica">–</span>
+													)}
+												</td>
+											);
+										})}
+										<td className="c">
+											{ev.deadline.state === "CLOSED_RECURRING" ? (
+												<span className="tick doubt" aria-label="Se convoca cada año">↻</span>
+											) : ev.deadline.state === "CLOSED" ? (
+												<span className="tick no" aria-label="Cerrada">✕</span>
+											) : ev.deadline.state === "UNKNOWN" ? (
+												<span className="tick doubt" aria-label="Plazo por confirmar">?</span>
+											) : (
+												<span className="tick ok" aria-label="Plazo abierto">✓</span>
+											)}
+										</td>
+										<td>
+											<span className={`verdict ${verdictCls(ev.verdict)}`}>
+												{verdictLabel(ev.verdict)}
+											</span>
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+					<div className="legend" id="m-legend">
+						<span><i className="tick ok">✓</i>Cumples</span>
+						<span><i className="tick doubt">?</i>Falta un dato</span>
+						<span><i className="tick no">✕</i>No cumples</span>
+						<span><i className="tick na">–</i>No aplica o no comprobable</span>
+						<span><i className="tick doubt">↻</i>Se convoca cada año</span>
+					</div>
+					{cell && (
+						<div className="cite-panel" role="status">
+							<p className="label">
+								{aidTitle(cell.aid)} · {DIMENSIONS.find((d) => d.id === cell.dim)?.label}
+							</p>
+							<ul>
+								{(() => {
+									const row = evaluations.find(({ ev }) => ev.benefitSlug === cell.aid);
+									if (!row) return null;
+									return cellReqs(row.rs, row.ev, cell.dim).map((r) => (
+										<li key={r.id}>
+											{tickFor(r.status).sym} {row.rs.requirements.find((x) => x.id === r.id)?.label ?? r.id}
+											<span className="mono"> · {r.citation.locator}</span>
+										</li>
+									));
+								})()}
+							</ul>
+						</div>
+					)}
+				</>
+			)}
+		</>
 	);
 }

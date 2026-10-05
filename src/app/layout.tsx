@@ -32,33 +32,41 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<a className="skip-link" href="#contenido">
 					Saltar al contenido principal
 				</a>
-				<header className="site-header">
-					<div className="site-header__inner shell">
-						<Link className="brand" href="/">
-							<span aria-hidden="true" className="brand-mark">
-								✓
-							</span>
-							<span className="brand-name">
-								Requisito&nbsp;a&nbsp;Requisito
-							</span>
+				<header className="top">
+					<div className="shell site-header__inner">
+						<Link className="brand" href="/" aria-label="Requisito a Requisito, inicio">
+							<svg className="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+								<rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="2.4" />
+								<path d="M4.8 8.2l2.6 2.6 4.6-5.4" fill="none" stroke="var(--seal)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+								<rect x="16" y="16" width="12" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="2.4" />
+								<path d="M18.8 22.2l2.6 2.6 4.6-5.4" fill="none" stroke="var(--seal)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M16 8h7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+								<path d="M7 16v7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+							</svg>
+							<span className="brand-name">Requisito a Requisito</span>
 						</Link>
 						<nav className="site-nav" aria-label="Principal">
+							<Link href="/comprobar">Comprobar</Link>
 							<Link href="/ayudas">Ayudas</Link>
+							<Link href="/explorar">Explorar</Link>
+							<Link href="/observatorio">Observatorio</Link>
 							<Link href="/como-funciona">Cómo funciona</Link>
 						</nav>
 					</div>
+					<p className="pilot-banner" role="status">
+						Versión piloto — catálogo en crecimiento. Tus respuestas no salen
+						de tu navegador.
+					</p>
 				</header>
-				<p className="pilot-banner" role="status">
-					Versión piloto — catálogo en crecimiento. Tus respuestas no salen
-					de tu navegador.
-				</p>
 				<main id="contenido">{children}</main>
 				<footer className="site-footer">
-					<p className="shell">
-						No somos una administración pública. La información se basa en
-						fuentes oficiales; la solicitud se hace siempre en la sede
-						oficial.
-					</p>
+					<div className="shell">
+						<span>
+							Requisito a Requisito · proyecto ciudadano independiente · código
+							y reglas abiertos
+						</span>
+						<span>No somos una administración pública.</span>
+					</div>
 				</footer>
 			</body>
 		</html>

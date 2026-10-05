@@ -13,7 +13,7 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 	// Pregunta 1: municipio (combobox)
 	const box = page.getByRole("combobox");
 	await box.fill("Madrid");
-	await page.getByRole("option", { name: "Madrid" }).first().click();
+	await page.getByRole("option", { name: "Madrid" }).first().getByRole("button").click();
 	await page.getByRole("button", { name: "Siguiente" }).click();
 	// Edad
 	await page.getByRole("spinbutton").fill("35");

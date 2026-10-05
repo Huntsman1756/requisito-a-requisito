@@ -7,19 +7,21 @@ Fecha: 2026-10-05 · Agente
 | Métrica | Valor |
 |---|---|
 | Fuentes consultadas | 5 (sede CM ×3 estados, BDNS API región 25/beneficiario 1, catálogo la-ayuda, pipeline BOCM, semilla) |
-| BDNS región 25 + beneficiario persona física 2026 | 2.050 registros |
+| BDNS región 25 + beneficiario persona física 2026 | 118 (BDNS, paginación corregida) registros |
 | Sede CM «En plazo» / «En tramitación» / «Pendiente apertura» | 80 / 300 / 3 |
 | Candidatos BOCM del pipeline | 536 |
 | Fichas la-ayuda importadas | 244 |
-| **Programas tras dedupe y clasificación** | **662** |
-| Descartados con motivo | 1470 |
+| **Programas tras dedupe y clasificación** | **723** |
+| Descartados con motivo | 355 |
 
 ## Por estado de acceso
 
-- CLOSED: 335
-- UNKNOWN: 260
-- OPEN: 39
-- ROLLING: 28
+Regeneración 2026-10-05 (BDNS corregida + parser de la sede):
+
+- CLOSED: 336 · UNKNOWN: 324 · OPEN: 39 · ROLLING: 24
+- comunidad-madrid: 498 · estatal: 197 · municipal: 28
+- Por fuente: pipeline-bocm 242 · la-ayuda 199 · sede-cm 188 · bdns 77 · seed 17
+- Descartes reales: 355 (data/universe/rejected.json con motivo)
 
 ## Por ámbito
 

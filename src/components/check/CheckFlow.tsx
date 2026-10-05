@@ -51,6 +51,8 @@ export function CheckFlow() {
 		loadCheckData()
 			.then((d) => {
 				setData(d);
+				const ev0 = searchParams.get("evento");
+				if (ev0) setLifeEvent(ev0);
 				const ex = searchParams.get("ejemplo");
 				if (ex) {
 					const p = EXAMPLES.find((x) => x.id === ex);
@@ -326,6 +328,7 @@ export function CheckFlow() {
 					evalCtx={evalCtx}
 					questions={questions}
 					lifeEvent={lifeEvent}
+					exampleLabel={example ? EXAMPLES.find((x) => x.id === example)?.label : undefined}
 					onSetAnswer={(field, a) =>
 						setAnswers((prev) => ({ ...prev, [field]: a }))
 					}
