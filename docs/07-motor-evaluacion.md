@@ -266,7 +266,7 @@ resultados parciales silenciosos.
 ## 6. Plazo (`deadline`)
 
 `OPEN` (hoy entre `opensAt` y `closesAt`), `UPCOMING` (antes de `opensAt`),
-`CLOSED` (después de `closesAt`), `ROLLING` (sin plazo, citado), `UNKNOWN`
+`CLOSED` (después de `closesAt`), `CLOSED_RECURRING` (cerrada, pero con ≥ 2 convocatorias anuales consecutivas citadas en `previousCalls`: se muestra con la última ventana y un «a partir de … aprox.» orientativo, ADR-038), `ROLLING` (sin plazo, citado), `UNKNOWN`
 (sin dato fiable). Días restantes en zona `Europe/Madrid`; el último día cuenta
 completo salvo cita en contra. `< 5 días` ⇒ estilo urgente (DESIGN.md).
 Contradicción entre fuentes del mismo rango ⇒ `UNKNOWN` + aviso («las fuentes

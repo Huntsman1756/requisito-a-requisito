@@ -5,79 +5,342 @@
   "description": "Salida del motor. Debe pasar los invariantes I1–I10 (docs/07 §5) antes de renderizarse.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["benefitSlug", "rulesVersion", "today", "verdict", "requirements", "missing", "blockers", "uncovered", "deadline", "documents", "channel", "whyShown", "verifiedAt", "explanationKeys", "selfCheck"],
+  "required": [
+    "benefitSlug",
+    "rulesVersion",
+    "today",
+    "verdict",
+    "requirements",
+    "missing",
+    "blockers",
+    "uncovered",
+    "deadline",
+    "documents",
+    "channel",
+    "whyShown",
+    "verifiedAt",
+    "explanationKeys",
+    "selfCheck"
+  ],
   "properties": {
-    "benefitSlug": { "type": "string" },
-    "rulesVersion": { "type": "integer" },
-    "today": { "type": "string", "format": "date" },
-    "verdict": { "enum": ["probable", "posible", "insuficiente", "no_cumple"] },
+    "benefitSlug": {
+      "type": "string"
+    },
+    "rulesVersion": {
+      "type": "integer"
+    },
+    "today": {
+      "type": "string",
+      "format": "date"
+    },
+    "verdict": {
+      "enum": [
+        "probable",
+        "posible",
+        "insuficiente",
+        "no_cumple"
+      ]
+    },
     "requirements": {
       "type": "array",
       "items": {
-        "type": "object", "additionalProperties": false,
-        "required": ["id", "hard", "status", "reasonKey", "citation"],
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "hard",
+          "status",
+          "reasonKey",
+          "citation"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "hard": { "type": "boolean" },
-          "status": { "enum": ["T", "F", "U"] },
-          "uncertainty": { "enum": ["unasked", "unknown", "declined", "range_straddles", "territory_partial", "conflict"] },
-          "reasonKey": { "type": "string" },
-          "reasonParams": { "type": "object", "additionalProperties": { "type": ["string", "number"] } },
-          "missingFields": { "type": "array", "items": { "type": "string" } },
-          "citation": { "$ref": "rule-set.schema.json#/$defs/citation" }
+          "id": {
+            "type": "string"
+          },
+          "hard": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "T",
+              "F",
+              "U"
+            ]
+          },
+          "uncertainty": {
+            "enum": [
+              "unasked",
+              "unknown",
+              "declined",
+              "range_straddles",
+              "territory_partial",
+              "conflict"
+            ]
+          },
+          "reasonKey": {
+            "type": "string"
+          },
+          "reasonParams": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number"
+              ]
+            }
+          },
+          "missingFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "citation": {
+            "$ref": "rule-set.schema.json#/$defs/citation"
+          }
         }
       }
     },
     "missing": {
       "type": "array",
       "items": {
-        "type": "object", "additionalProperties": false, "required": ["field", "questionId", "unlocks"],
-        "properties": { "field": { "type": "string" }, "questionId": { "type": "string" }, "unlocks": { "type": "integer", "minimum": 1 } }
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "questionId",
+          "unlocks"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "questionId": {
+            "type": "string"
+          },
+          "unlocks": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
       }
     },
-    "blockers": { "type": "array", "items": { "type": "string", "description": "requirement id" } },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "requirement id"
+      }
+    },
     "futureEligibility": {
-      "type": "object", "additionalProperties": false, "required": ["from", "becauseOf", "withinWindow"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "becauseOf",
+        "withinWindow"
+      ],
       "properties": {
-        "from": { "type": "string", "format": "date" },
-        "to": { "type": "string", "format": "date", "description": "Si la fecha es un rango (edad por intervalo)" },
-        "becauseOf": { "type": "array", "items": { "type": "string" } },
-        "withinWindow": { "const": true }
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "to": {
+          "type": "string",
+          "format": "date",
+          "description": "Si la fecha es un rango (edad por intervalo)"
+        },
+        "becauseOf": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "withinWindow": {
+          "const": true
+        }
       }
     },
-    "uncovered": { "type": "array", "items": { "type": "string" } },
+    "uncovered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "deadline": {
-      "type": "object", "additionalProperties": false, "required": ["state"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
       "properties": {
-        "state": { "enum": ["OPEN", "UPCOMING", "CLOSED", "ROLLING", "UNKNOWN"] },
-        "opensAt": { "type": "string", "format": "date" },
-        "closesAt": { "type": "string", "format": "date" },
-        "daysLeft": { "type": "integer" },
-        "urgent": { "type": "boolean" },
-        "conflict": { "type": "boolean" }
+        "state": {
+          "enum": [
+            "OPEN",
+            "UPCOMING",
+            "CLOSED",
+            "CLOSED_RECURRING",
+            "ROLLING",
+            "UNKNOWN"
+          ]
+        },
+        "opensAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "closesAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "daysLeft": {
+          "type": "integer"
+        },
+        "urgent": {
+          "type": "boolean"
+        },
+        "conflict": {
+          "type": "boolean"
+        },
+        "lastWindow": {
+          "type": "object",
+          "properties": {
+            "opensAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "closesAt": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "expectedFrom": {
+          "type": "string",
+          "format": "date",
+          "description": "Solo orientativo: inicio de la última convocatoria + 1 año; se muestra como «a partir de …, aprox.»"
+        }
       }
     },
     "amount": {
-      "type": "object", "additionalProperties": false, "required": ["type", "displayAsPersonal"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "displayAsPersonal"
+      ],
       "properties": {
-        "type": { "enum": ["per_applicant", "fixed", "range", "variable", "total_budget"] },
-        "minEur": { "type": "number" }, "maxEur": { "type": "number" }, "period": { "type": "string" },
-        "displayAsPersonal": { "type": "boolean", "description": "false obligatorio si type=total_budget (I6)" }
+        "type": {
+          "enum": [
+            "per_applicant",
+            "fixed",
+            "range",
+            "variable",
+            "total_budget"
+          ]
+        },
+        "minEur": {
+          "type": "number"
+        },
+        "maxEur": {
+          "type": "number"
+        },
+        "period": {
+          "type": "string"
+        },
+        "displayAsPersonal": {
+          "type": "boolean",
+          "description": "false obligatorio si type=total_budget (I6)"
+        }
       }
     },
-    "documents": { "type": "array", "items": { "type": "string", "description": "document id aplicable al perfil" } },
-    "channel": { "type": "object", "required": ["managingBody", "url", "online"], "properties": { "managingBody": { "type": "string" }, "url": { "type": "string" }, "online": { "type": "boolean" } } },
-    "effort": {
-      "type": "object", "additionalProperties": false, "required": ["minMinutes", "maxMinutes", "formulaVersion"],
-      "properties": { "minMinutes": { "type": "integer" }, "maxMinutes": { "type": "integer" }, "formulaVersion": { "type": "string" } }
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "document id aplicable al perfil"
+      }
     },
-    "whyShown": { "type": "array", "items": { "type": "string", "description": "requirement ids T que activan la ayuda" } },
-    "verifiedAt": { "type": "string", "format": "date" },
-    "staleness": { "enum": ["fresh", "aging", "stale"] },
-    "explanationKeys": { "type": "array", "items": { "type": "string" } },
+    "channel": {
+      "type": "object",
+      "required": [
+        "managingBody",
+        "url",
+        "online"
+      ],
+      "properties": {
+        "managingBody": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "online": {
+          "type": "boolean"
+        }
+      }
+    },
+    "effort": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minMinutes",
+        "maxMinutes",
+        "formulaVersion"
+      ],
+      "properties": {
+        "minMinutes": {
+          "type": "integer"
+        },
+        "maxMinutes": {
+          "type": "integer"
+        },
+        "formulaVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "whyShown": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "requirement ids T que activan la ayuda"
+      }
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "staleness": {
+      "enum": [
+        "fresh",
+        "aging",
+        "stale"
+      ]
+    },
+    "explanationKeys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "selfCheck": {
-      "type": "object", "additionalProperties": false, "required": ["passed", "failed"],
-      "properties": { "passed": { "type": "boolean" }, "failed": { "type": "array", "items": { "pattern": "^I([1-9]|10)$" } } }
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "failed"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "failed": {
+          "type": "array",
+          "items": {
+            "pattern": "^I([1-9]|10)$"
+          }
+        }
+      }
     }
   }
 }

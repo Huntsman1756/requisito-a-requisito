@@ -87,8 +87,9 @@ Para leer un donante sin depender de su working tree:
    cookies (ADR-007; contrato portado de `user-state.ts`; test bloqueante en todos
    los navegadores).
 7. **Solo se citan cifras medidas** en la memoria (0 cifras huérfanas, F7-6).
-8. **Sin dependencias nuevas, sin push, sin merge a main, sin despliegue y sin
-   envíos** sin autorización explícita de Daniel en esa sesión.
+8. **Dependencias nuevas solo según ADR-042.** Push, despliegue en Pages y merge a
+   main autorizados por delegación (ADR-036) si `validate:full` pasa. **Nunca**
+   envíos ni contactos con terceros, ni gastos.
 9. **No copiar** código, textos, CSS, iconos ni datos de proyectos de terceros;
    solo patrones, anotados en `docs/04` (docs/12 §6).
 10. Validación: `npm run check`, `npm run lint`, `npm test` y `npm run build`, en
@@ -123,6 +124,8 @@ phases/F0..F7        una fase por fichero con su puerta
 schemas/             JSON Schema 2020-12 (contrato normativo; Zod en el código)
 templates/           ejemplos y plantillas (RuleSet, golden, recibo, handoff, checklist manual)
 docs/13              reutilización de donantes (la-ayuda, EduAyudas…)
+docs/14              universo de ayudas de Madrid, fuentes de descubrimiento, oleadas
+docs/15              funcionalidades ampliadas, referencias y política de dependencias
 src/ data/ scripts/ tests/ public/   código y datos del producto (se crean en F0-7)
 evidence/            evidencias fechadas
 handoffs/            relevos entre sesiones

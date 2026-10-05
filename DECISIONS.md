@@ -256,3 +256,43 @@ consolidado del RD 897/2017 (35 % / 50 %) solo rige cuando acaba la prórroga.
 El catálogo donante era correcto. Caso de ejemplo de ADR-035 para la memoria
 («el sistema obliga a comprobar la vigencia temporal»). **El job F9 debe vigilar
 este RuleSet a partir del 01/01/2027.**
+
+## ADR-038 — Unidad = programa; estado CLOSED_RECURRING
+2026-10-05 · aceptada · El corpus ingerido está centrado en convocatorias: de las
+49 fichas activas de Madrid, 44 están cerradas. El producto pasa a centrarse en
+**programas** (permanentes y recurrentes) más las convocatorias abiertas. Nuevo
+estado `CLOSED_RECURRING`, solo con ≥ 2 convocatorias anuales consecutivas citadas
+(`previousCalls`); muestra la última ventana y una fecha orientativa «aprox.».
+Esquemas actualizados (`previousCalls`, `themes`, `lifeEvents`).
+
+## ADR-039 — Descubrimiento del universo de Madrid
+2026-10-05 · aceptada · Fuentes por prioridad: (1) buscador oficial de la sede de
+la Comunidad de Madrid «Ayudas, becas y subvenciones» (rango 3 para descubrir,
+canal y estado; requisitos de la norma BOCM enlazada); (2) API pública de la BDNS
+(región 25 y beneficiario persona física, id 1; 118 convocatorias en 2026); (3)
+BOCM del pipeline de la-ayuda (529 candidatos) y su catálogo; (4) sede del
+Ayuntamiento de Madrid y de los municipios grandes; (5) lista semilla de
+prestaciones permanentes estatales y de la CM (docs/14 §3). Lectura del VPS de
+official-sources solo en modo `readonly`. Salida: `data/universe/programs.json`.
+
+## ADR-040 — Producción de reglas en oleadas paralelas con verificador
+2026-10-05 · aceptada · Oleadas de 5 programas, con varios agentes en worktrees
+`F:\AgentState\worktrees\datawardsmadrid\ola-<n>`. Un verificador independiente
+por oleada comprueba citas, umbrales, G11 y vigencia. Daniel aprueba la oleada ya
+verificada **por muestreo** (2 de 5; cualquier KO ⇒ revisión completa). Objetivo:
+30–40 programas en el nivel 1 (mínimo 20) y todo el universo apto en el nivel 2.
+
+## ADR-041 — Funcionalidades ampliadas
+2026-10-05 · aceptada · docs/15: Must = ejemplos en portada, eventos vitales,
+matriz requisito a requisito, plan de acción (valor, documentos agrupados,
+calendario .ics, imprimir), Observatorio, estado de acceso, simulador oficial
+primero, identidad visual y explorar el catálogo. Should = reglas legibles, cita
+en contexto, modo acompañante y paso a paso por ayuda. Inspiración: GOV.UK, USAGov
+BEARS, Canada Benefits Finder, ACCESS NYC, MyFriendBen, grant-finder, Catala; sin
+copiar código.
+
+## ADR-042 — Política de dependencias (sustituye ADR-010)
+2026-10-05 · aceptada · Se permite una dependencia nueva si ahorra más de medio
+día, tiene licencia MIT/ISC/BSD/Apache-2.0, está mantenida, pesa ≤ 30 KB gzip en
+cliente, no tiene telemetría ni llamadas de red y se registra en un ADR. Nunca
+código AGPL/GPL copiado. (docs/15 §3)
