@@ -298,7 +298,7 @@ cliente, no tiene telemetría ni llamadas de red y se registra en un ADR. Nunca
 código AGPL/GPL copiado. (docs/15 §3)
 
 ## ADR-043 — Dirección de arte propia (sustituye al aspecto de la-ayuda)
-2026-10-05 · aceptada (Daniel pidió un front menos genérico; diseño de Claude) ·
+2026-10-05 · aceptada y prototipo aprobado por Daniel («está genial») ·
 Concepto «el expediente que se comprueba solo»: casillas de formulario oficial,
 citas en mono, sello de verificación como único gesto audaz, colores por
 administración competente, Atkinson Hyperlegible Next + IBM Plex. Sin rejillas de
