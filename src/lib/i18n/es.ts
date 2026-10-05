@@ -104,7 +104,7 @@ export const es = {
 	"results.summary.none":
 		"Con tus respuestas no hemos encontrado ayudas de este grupo. Esto no significa que no existan: revisa el catálogo completo.",
 	"results.missing.title": "Te faltan datos",
-	"results.missing.body": "Si respondes esto, podremos revisar {n} {n, plural, one {# ayuda más} other {# ayudas más}}.",
+	"results.missing.body": "Si respondes esto, podremos revisar {n, plural, one {# ayuda más} other {# ayudas más}}.",
 	"results.missing.answer": "Responder",
 	"results.missing.recalc": "Hemos recalculado tus resultados.",
 	"results.level2.title": "También podrían interesarte",

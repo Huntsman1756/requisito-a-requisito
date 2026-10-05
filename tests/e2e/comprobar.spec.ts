@@ -74,3 +74,10 @@ test("comprobar: sin JS el enlace al catálogo está", async ({ page, context })
 	const html = await response.text();
 	expect(html).toContain("ver las ayudas y sus fuentes");
 });
+
+test("sin números repetidos en los textos visibles (R2-I18N)", async ({ page }) => {
+	await page.goto("/comprobar/?ejemplo=familia-getafe");
+	await page.waitForSelector(".result-card, .card, [class*=card]", { timeout: 15000 });
+	const text = await page.evaluate(() => document.body.innerText);
+	expect(text).not.toMatch(/\b(\d+) \1\b/);
+});
