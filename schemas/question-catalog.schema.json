@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datawardsmadrid.local/schemas/question-catalog.schema.json",
+  "title": "Catálogo de preguntas del orientador",
+  "description": "la-ayuda/data/eligibility/questions.json. Máximo 10 preguntas visibles en un recorrido. Se muestran solo si alguna regla del bundle usa su campo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["catalogVersion", "questions", "consistencyChecks"],
+  "properties": {
+    "catalogVersion": { "type": "integer", "minimum": 1 },
+    "questions": {
+      "type": "array", "minItems": 1, "maxItems": 14,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "field", "type", "order", "labelKey", "whyKey", "allowUnknown", "allowDecline", "sensitivity"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^q-[a-z0-9-]+$" },
+          "field": { "type": "string" },
+          "type": { "enum": ["single", "multi", "integer", "age", "money_band", "month_year", "territory", "dependents"] },
+          "order": { "type": "integer", "minimum": 1 },
+          "labelKey": { "type": "string", "description": "Clave i18n de la pregunta" },
+          "helpKey": { "type": "string" },
+          "whyKey": { "type": "string", "description": "«Por qué te lo preguntamos» — obligatorio" },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["value", "labelKey"],
+              "properties": {
+                "value": { "type": "string", "description": "Token; reutilizar los de eligibilityFactors de la-ayuda cuando existan" },
+                "labelKey": { "type": "string" },
+                "interval": { "type": "array", "items": { "type": ["number", "null"] }, "minItems": 2, "maxItems": 2, "description": "Para bandas: [min, max) ; null = abierto" }
+              }
+            }
+          },
+          "min": { "type": "number" },
+          "max": { "type": "number" },
+          "allowUnknown": { "type": "boolean" },
+          "allowDecline": { "type": "boolean" },
+          "sensitivity": { "enum": ["normal", "special"], "description": "special = categoría especial RGPD art. 9" },
+          "showIf": { "$ref": "rule-set.schema.json#/$defs/condition", "description": "Condición sobre respuestas previas (p. ej. dependents > 0)" },
+          "derives": { "type": "array", "items": { "type": "string" }, "description": "Campos derivados (age → desde fecha; month_year → residenceMonths)" }
+        }
+      }
+    },
+    "consistencyChecks": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "when", "messageKey"],
+        "properties": {
+          "id": { "type": "string" },
+          "when": { "$ref": "rule-set.schema.json#/$defs/condition" },
+          "messageKey": { "type": "string", "description": "Pide confirmación; nunca bloquea" }
+        }
+      }
+    }
+  }
+}

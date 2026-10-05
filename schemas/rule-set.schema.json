@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datawardsmadrid.local/schemas/rule-set.schema.json",
+  "title": "RuleSet — reglas de elegibilidad de una ayuda",
+  "description": "Un fichero por ayuda en la-ayuda/data/eligibility/rules/<benefitSlug>.json. Ver docs/07-motor-evaluacion.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["benefitSlug", "rulesVersion", "verifiedAt", "humanReview", "referenceDate", "sources", "requirements", "uncoveredRequirements", "application", "amount"],
+  "properties": {
+    "benefitSlug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Debe existir en src/content/benefits/ con autoridad vigente." },
+    "rulesVersion": { "type": "integer", "minimum": 1, "description": "Incrementar en cualquier cambio semántico. Los golden lo exigen." },
+    "verifiedAt": { "type": "string", "format": "date" },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["pending", "approved", "rejected"] },
+        "by": { "type": "string" },
+        "at": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      }
+    },
+    "referenceDate": {
+      "description": "Fecha a la que se computan edad, residencia y parámetros. 'application' = fecha de evaluación (today).",
+      "oneOf": [
+        { "type": "string", "format": "date" },
+        { "const": "application" }
+      ]
+    },
+    "referenceDateCitation": { "$ref": "#/$defs/citation" },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "rank", "documentType", "url"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_.-]*$", "description": "Clave de data/eligibility/sources/<id>.json" },
+          "rank": { "enum": [1, 2, 3, 4] },
+          "documentType": { "enum": ["regulatory_base", "call", "extract", "resolution", "modification", "extension", "procedure_page", "informational"] },
+          "url": { "type": "string", "pattern": "^https://" },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "parametersUsed": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "requirements": {
+      "type": "array", "minItems": 1,
+      "items": { "$ref": "#/$defs/requirement" }
+    },
+    "uncoveredRequirements": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "label", "citation"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "citation": { "$ref": "#/$defs/citation" }
+        }
+      }
+    },
+    "application": {
+      "type": "object", "additionalProperties": false,
+      "required": ["window", "channel", "documents"],
+      "properties": {
+        "window": {
+          "type": "object", "additionalProperties": false,
+          "required": ["rolling", "citation"],
+          "properties": {
+            "opensAt": { "type": "string", "format": "date" },
+            "closesAt": { "type": "string", "format": "date" },
+            "rolling": { "type": "boolean" },
+            "recurrence": { "enum": ["none", "annual"], "default": "none" },
+            "businessDays": { "type": "boolean", "default": false },
+            "conflict": { "type": "boolean", "default": false },
+            "citation": { "$ref": "#/$defs/citation" }
+          }
+        },
+        "officialSimulator": {
+          "type": "object", "additionalProperties": false,
+          "required": ["url", "label", "citation"],
+          "description": "Simulador o comprobador oficial del organismo (p. ej. el del IMV). Si existe, es la acción principal de la tarjeta (ADR-018).",
+          "properties": {
+            "url": { "type": "string", "pattern": "^https://" },
+            "label": { "type": "string" },
+            "citation": { "$ref": "#/$defs/citation" }
+          }
+        },
+        "channel": {
+          "type": "object", "additionalProperties": false,
+          "required": ["managingBody", "url", "online", "citation"],
+          "properties": {
+            "managingBody": { "type": "string" },
+            "url": { "type": "string", "pattern": "^https://" },
+            "online": { "type": "boolean" },
+            "inPerson": { "type": "boolean" },
+            "citation": { "$ref": "#/$defs/citation" }
+          }
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "label", "mandatory", "citation"],
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "mandatory": { "type": "boolean" },
+              "condition": { "$ref": "#/$defs/condition", "description": "Solo se exige si la condición es T sobre el perfil." },
+              "citation": { "$ref": "#/$defs/citation" }
+            }
+          }
+        }
+      }
+    },
+    "amount": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["type", "citation"],
+          "properties": {
+            "type": { "enum": ["per_applicant", "fixed", "range", "variable", "total_budget"] },
+            "minEur": { "type": "number", "minimum": 0 },
+            "maxEur": { "type": "number", "minimum": 0 },
+            "period": { "enum": ["one_off", "monthly", "annual", "per_course"] },
+            "citation": { "$ref": "#/$defs/citation" }
+          }
+        }
+      ]
+    },
+    "effortInputs": {
+      "type": "object", "additionalProperties": false,
+      "description": "Entradas para la estimación propia de esfuerzo (ADR-009). No es dato oficial.",
+      "properties": {
+        "requiresCertificate": { "type": "boolean", "description": "Exige certificado/Cl@ve para tramitar online" },
+        "formPages": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "$defs": {
+    "citation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sourceId", "locator", "excerpt", "excerptSha256"],
+      "properties": {
+        "sourceId": { "type": "string" },
+        "locator": { "type": "string", "minLength": 2, "description": "Artículo/apartado/página. Ej: 'Art. 3.1.b, pág. 4'" },
+        "excerpt": { "type": "string", "minLength": 8, "description": "Literal; debe aparecer en el texto normalizado de la fuente." },
+        "excerptSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "requirement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "hard", "label", "citation", "condition"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "hard": { "type": "boolean", "description": "true: F excluye. false: aviso sin cambiar veredicto." },
+        "label": { "type": "string", "description": "Texto ciudadano corto (ES). Otras lenguas vía clave i18n si existe." },
+        "labelKey": { "type": "string" },
+        "timeDependent": { "enum": ["increasing", "decreasing", "none"], "default": "none", "description": "increasing: el paso del tiempo puede convertir F en T (edad mínima, meses de residencia)." },
+        "citation": { "$ref": "#/$defs/citation" },
+        "condition": { "$ref": "#/$defs/condition" }
+      }
+    },
+    "condition": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["all"], "properties": { "all": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/condition" } }, "label": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" } } },
+        { "type": "object", "additionalProperties": false, "required": ["any"], "properties": { "any": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/condition" } }, "label": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" } } },
+        { "type": "object", "additionalProperties": false, "required": ["not"], "properties": { "not": { "$ref": "#/$defs/condition" }, "label": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" } } },
+        { "$ref": "#/$defs/leaf" }
+      ]
+    },
+    "leaf": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field", "op"],
+      "properties": {
+        "label": { "type": "string" },
+        "citation": { "$ref": "#/$defs/citation" },
+        "field": { "type": "string", "description": "Campo del catálogo de preguntas o derivado (age, residenceMonths, incomeAnnual, territory, dependents…)" },
+        "op": { "enum": ["eq", "neq", "in", "not_in", "includes_any", "includes_all", "lt", "lte", "gt", "gte", "between", "within_territory", "count_where_gte", "exists"] },
+        "value": {},
+        "param": { "type": "string", "description": "Id en parameters.json; excluyente con value" },
+        "multiplier": { "type": "number", "exclusiveMinimum": 0 },
+        "inclusive": { "type": "array", "items": { "type": "boolean" }, "minItems": 2, "maxItems": 2 },
+        "where": { "$ref": "#/$defs/condition", "description": "Subcondición por persona a cargo (count_where_gte)" },
+        "count": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

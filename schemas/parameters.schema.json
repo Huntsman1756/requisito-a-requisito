@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datawardsmadrid.local/schemas/parameters.schema.json",
+  "title": "Parámetros con vigencia (patrón OpenFisca)",
+  "description": "la-ayuda/data/eligibility/parameters.json. IPREM, SMI, umbrales reutilizables. Cada periodo con cita.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["parameters"],
+  "properties": {
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "label", "unit", "periods"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z0-9_]+$" },
+          "label": { "type": "string" },
+          "unit": { "enum": ["EUR_YEAR", "EUR_MONTH", "EUR_DAY", "YEARS", "MONTHS", "RATIO"] },
+          "periods": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["from", "value", "citation"],
+              "properties": {
+                "from": { "type": "string", "format": "date" },
+                "to": { "type": "string", "format": "date" },
+                "value": { "type": "number" },
+                "citation": { "$ref": "rule-set.schema.json#/$defs/citation" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

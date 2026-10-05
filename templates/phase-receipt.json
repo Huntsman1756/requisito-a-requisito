@@ -1,0 +1,25 @@
+{
+  "phase": "F?",
+  "date": "YYYY-MM-DD",
+  "agent": "modelo/herramienta y sesión",
+  "repo": "la-ayuda",
+  "branch": "feat/premio-gtl-elegibilidad",
+  "headCommit": "<sha>",
+  "baseCommit": "<sha de main en el que se basa>",
+  "commands": [
+    { "cmd": "npm run check", "exitCode": 0, "summary": "" },
+    { "cmd": "npm test", "exitCode": 0, "summary": "N passed / N failed / N skipped" },
+    { "cmd": "npm run build", "exitCode": 0, "summary": "" }
+  ],
+  "gateChecklist": [
+    { "item": "copiar literal de la puerta de phases/F?.md", "status": "PASS|FAIL|N/A", "evidence": "ruta" }
+  ],
+  "metrics": {},
+  "evidence": ["evidence/YYYY-MM-DD-F?/..."],
+  "deviations": [
+    { "class": "D0|D1|D2|D3", "description": "", "reason": "" }
+  ],
+  "knownLimits": [],
+  "openBlockers": [],
+  "nextTask": "F?-?"
+}

@@ -1,0 +1,106 @@
+# Decisiones (ADR cortos)
+
+Formato: `ADR-NNN — título` · fecha · estado (propuesta/aceptada/sustituida) ·
+contexto · decisión · consecuencias. Añadir al final; no reescribir las aceptadas.
+
+## ADR-001 — Fecha límite 16/10/2026
+2026-10-05 · aceptada · La sede (02/10) y la Orden (15 días naturales) fijan 16/10;
+la prensa dice 18/10. Se usa 16/10; objetivo interno 14/10, presentación 15/10.
+
+## ADR-002 — No crear proyecto nuevo; evolucionar la-ayuda
+2026-10-05 · aceptada · Impact pondera 50% impacto demostrado; un proyecto de diez
+días no lo tiene. Se evoluciona `la-ayuda` con el motor de EduAyudas y el modelo
+probatorio de Renta Verificable. Sin fusión de repos.
+
+## ADR-003 — Sin LLM en el producto de esta entrega
+2026-10-05 · aceptada · Explicaciones por plantillas deterministas. Motivos: plazo,
+riesgo jurídico, contrato de la-ayuda («model output is never publication
+authority») y coherencia del mensaje (rules-as-code). Un LLM explicativo queda
+como trabajo futuro con restricción de no añadir hechos.
+
+## ADR-004 — Vertical familias/educación, sin fichas fiscales
+2026-10-05 · aceptada · Es donde EduAyudas aporta modelo de reglas y evita las
+fichas fiscales afectadas por la auditoría del 27/09/2026. Mínimo viable 8 fichas.
+
+## ADR-005 — Una sola categoría; plan A Impact, plan B Leader
+2026-10-05 · propuesta · Pendiente de la consulta (F0-2) y del inventario de
+impacto (F0-3). Si el 13/10 no hay respuesta, decide Daniel.
+
+## ADR-006 — Vehículo de impacto: la-ayuda sola o ecosistema La Ayuda + EduBecas
+2026-10-05 · propuesta · la-ayuda no tiene dominio público ni deploy (strict rojo);
+edubecas.es está vivo. Se decide tras F0-3 con cifras medidas.
+
+## ADR-007 — El perfil del ciudadano no sale del navegador
+2026-10-05 · aceptada · Export estático, evaluación en cliente, telemetría sin
+respuestas ni hashes de perfil. Test Playwright de red lo garantiza.
+
+## ADR-008 — «Qué te falta» como función central, con elegibilidad futura acotada
+2026-10-05 · aceptada · Es el diferenciador de la visión del producto. Tres
+mensajes deterministas (faltan datos / cumples todo salvo X / podrías a partir de
+fecha). Solo se promete fecha cuando el cambio depende del calendario (edad,
+antigüedad de empadronamiento) y cae dentro del plazo; nunca por ingresos o
+situación laboral.
+
+## ADR-009 — Esfuerzo como estimación propia etiquetada
+2026-10-05 · aceptada · Las fuentes oficiales casi nunca dan tiempo de
+solicitud. Se muestra «estimación de La Ayuda» con fórmula versionada sobre
+campos de la ficha y calibrada con solicitudes cronometradas; nunca como dato
+oficial. `total_budget` nunca se presenta como importe por persona.
+
+## ADR-010 — Sin dependencias nuevas
+2026-10-05 · aceptada · Se usan las de la-ayuda (Next, React, Zod, pdfjs-dist,
+Vitest, Playwright, axe, Biome). Las pruebas exhaustivas usan un generador propio
+(sin fast-check). Una dependencia nueva requiere autorización de Daniel.
+
+## ADR-011 — Sin backend en tiempo de ejecución
+2026-10-05 · aceptada · El «back» es el pipeline de build. La evaluación ocurre en
+el navegador sobre un bundle estático con digest. Garantiza privacidad, coste ~0 y
+escala sin servidor.
+
+## ADR-012 — Lógica trivalente (Kleene) sobre intervalos
+2026-10-05 · aceptada · Las respuestas imprecisas (bandas, mes/año, CCAA sin
+municipio) son intervalos o jerarquías. El motor devuelve T/F/U, nunca convierte
+incertidumbre en «no». Se garantiza monotonía por test exhaustivo.
+
+## ADR-013 — Parámetros con vigencia (patrón OpenFisca)
+2026-10-05 · aceptada · IPREM, SMI y umbrales reutilizables viven en
+`parameters.json` con periodos y cita; las reglas los referencian.
+
+## ADR-014 — Reglas como datos abiertos
+2026-10-05 · aceptada · RuleSets, parámetros y catálogo de preguntas se publican
+en el export estático con licencia y manifiesto. Argumento central del criterio
+de ecosistema.
+
+## ADR-015 — Segunda implementación independiente del veredicto
+2026-10-05 · aceptada · `verdict-oracle.ts` se escribe aparte y se compara en todo
+el espacio exhaustivo y en el navegador (I2). Coste bajo; protege la parte de la
+que depende la confianza.
+
+## ADR-007 (revisión 2026-10-05) — Privacidad sobre el contrato existente
+2026-10-05 · aceptada · Sustituye el detalle de persistencia del ADR-007 original:
+se usa `la-ayuda/src/lib/user-state.ts` (campos sensibles fuera de la URL, handoff
+en `sessionStorage`, perfil en `localStorage` solo con consentimiento). Los campos
+nuevos se añaden a `SENSITIVE_FIELDS`. El share hash no se habilita para el
+orientador. Sigue vigente: el perfil nunca sale del navegador.
+
+## ADR-016 — Dos niveles de resultados: comprobadas vs relacionadas
+2026-10-05 · aceptada · la-ayuda ya tiene un ranking heurístico (`rankBenefits`).
+Se conserva como nivel 2 («También podrían interesarte — no hemos comprobado los
+requisitos») sin etiquetas de cumplimiento. El nivel 1 es exclusivo del motor con
+RuleSets aprobados. Da utilidad más allá del vertical sin aparentar más rigor.
+
+## ADR-017 — Asimetría de errores: evitar falsos negativos
+2026-10-05 · aceptada · Decir «no te aplica» a quien sí cumple desanima a pedir la
+ayuda (problema de non take-up). `F` solo con un valor respondido y una regla sin
+ambigüedad. Los requisitos discutibles van a ⚠ `uncovered`. `no_cumple` siempre
+visible (plegado), con el motivo y la invitación a consultar la fuente.
+
+## ADR-018 — Enlazar simuladores oficiales en vez de competir
+2026-10-05 · aceptada · Si el organismo ofrece un simulador o comprobador oficial
+(p. ej. el del IMV), es la acción principal de la tarjeta (`application.officialSimulator`).
+
+## ADR-019 — Vías alternativas y excepciones explícitas (patrón Catala)
+2026-10-05 · aceptada · Los nodos `any/all/not` y las hojas admiten `label` +
+`citation`. El resultado indica la vía por la que se cumple; `missing` propone la
+vía con menos datos pendientes. La revisión humana se hace sobre una tabla de
+decisión legible generada desde el exhaustivo (patrón CUTECat).

@@ -1,0 +1,6 @@
+node_modules/
+*.tmp
+.DS_Store
+Thumbs.db
+# Bytes de fuentes oficiales: viven en F:\AgentState\datawardsmadrid\snapshots\n*.pdf
+!evidence/**/fuentes/*.pdf

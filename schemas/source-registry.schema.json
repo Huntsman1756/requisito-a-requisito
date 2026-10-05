@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datawardsmadrid.local/schemas/source-registry.schema.json",
+  "title": "Registro de dominios oficiales y fuentes descargadas",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["domains"],
+  "properties": {
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["host", "maxRank", "label"],
+        "properties": {
+          "host": { "type": "string", "description": "Host exacto o sufijo con punto inicial ('.gob.es')" },
+          "maxRank": { "enum": [1, 2, 3, 4], "description": "Rango máximo de autoridad que puede tener una fuente de este host" },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "snapshots": {
+      "type": "array",
+      "description": "Opcional aquí; en la-ayuda cada snapshot vive en data/eligibility/sources/<id>.json con este mismo esquema de item.",
+      "items": { "$ref": "#/$defs/snapshot" }
+    }
+  },
+  "$defs": {
+    "snapshot": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "url", "fetchedAt", "sha256", "textSha256", "contentType", "rank"],
+      "properties": {
+        "id": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https://" },
+        "fetchedAt": { "type": "string", "format": "date-time" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "textSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "contentType": { "type": "string" },
+        "rank": { "enum": [1, 2, 3, 4] },
+        "publishedAt": { "type": "string", "format": "date" },
+        "eli": { "type": "string" },
+        "supersededBy": { "type": "string" }
+      }
+    }
+  }
+}
