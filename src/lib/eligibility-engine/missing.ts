@@ -8,7 +8,6 @@ import type {
 	Condition,
 	EvaluationResult,
 	QuestionCatalog,
-	RuleSet,
 } from "./schema";
 import { deadlineState, type WindowLike } from "./deadline";
 
@@ -83,10 +82,17 @@ export function futureEligibilityOf(
 		if (!d) return undefined;
 		dates.push({ ...d, id: r.id });
 	}
-	const from = dates.map((d) => d.from).sort().at(-1)!;
-	const to = dates.every((d) => d.to !== undefined)
-		? dates.map((d) => d.to as string).sort().at(-1)
-		: undefined;
+	const sorted = dates.map((d) => d.from).sort();
+	const from = sorted[sorted.length - 1];
+	if (from === undefined) return undefined;
+	const sortedTo = dates
+		.map((d) => d.to)
+		.filter((x): x is string => x !== undefined)
+		.sort();
+	const to =
+		sortedTo.length === dates.length && sortedTo.length > 0
+			? sortedTo[sortedTo.length - 1]
+			: undefined;
 
 	// Solo si la fecha cae dentro del plazo (o rolling/recurrente citado).
 	const dl = deadlineState(window, today);
@@ -120,9 +126,16 @@ function whenSatisfied(
 			.map((sub) => whenSatisfied({ ...req, condition: sub }, today, profile))
 			.filter((x): x is { from: string; to?: string } => x !== undefined);
 		if (parts.length !== c.all.length) return undefined;
+		const sortedParts = parts.map((p) => p.from).sort();
+		const last = sortedParts[sortedParts.length - 1];
+		if (last === undefined) return undefined;
+		const tos = parts
+			.map((p) => p.to)
+			.filter((x): x is string => x !== undefined)
+			.sort();
 		return {
-			from: parts.map((p) => p.from).sort().at(-1)!,
-			to: parts.every((p) => p.to) ? parts.map((p) => p.to as string).sort().at(-1) : undefined,
+			from: last,
+			to: tos.length === parts.length ? tos[tos.length - 1] : undefined,
 		};
 	}
 	const leaf = c;
