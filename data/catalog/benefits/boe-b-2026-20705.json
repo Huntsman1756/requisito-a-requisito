@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "30 días naturales desde el día siguiente a la publicación en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total de las ayudas a repartir entre las confederaciones y federaciones beneficiarias: 265.450,00 euros",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-20705",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20705",
+  "referencePeriod": "2026",
+  "requirementsText": "Confederaciones de AMPA de ámbito estatal; confederaciones y/o federaciones de ámbito provincial ubicadas en territorio gestionado por el MEFPD; o confederaciones/federaciones que agrupen asociaciones de centros de más de una Comunidad Autónoma (las confederaciones deben agrupar como mínimo a tres federaciones).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20705",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para financiar actividades de confederaciones y federaciones de asociaciones de madres y padres de alumnos.",
+  "targetGroups": [
+    "confederaciones de AMPA",
+    "federaciones de AMPA"
+  ],
+  "title": "Ayudas a confederaciones y federaciones de AMPA 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución, de 16 de junio de 2026, de la Secretaría de Estado de Educación, por la que se convocan ayudas destinadas a las confederaciones y federaciones de asociaciones de madres y pa. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

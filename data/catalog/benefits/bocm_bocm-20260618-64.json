@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 30 de junio de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Hoja de inscripción",
+    "Fotocopia del DNI",
+    "Fotocopia del DNI del padre/madre/tutor (en caso de menores)",
+    "Volante de empadronamiento"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "4.000,00 euros (3.240,00 euros al descontar el 19% de IRPF)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Arganda del Rey",
+  "officialSourceLabel": "BOCM:BOCM-20260618-64",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-64",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mujer mayor de 16 años el día de la gala. Estar empadronada en Arganda del Rey. Aportar hoja de inscripción, fotocopia del DNI y, si es menor, fotocopia del DNI del padre/madre/tutor.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-64",
+  "status": "active",
+  "summary": "Convocatoria para la elección de la Reina y dos Damas de Honor de las fiestas patronales 2026 en Arganda del Rey, mediante régimen de concurrencia competitiva.",
+  "targetGroups": [
+    "mujeres mayores de 16 años",
+    "vecinos de Arganda del Rey"
+  ],
+  "title": "Convocatoria elección Reina y Damas Fiestas Patronales 2026 Arganda del Rey",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Arganda del Rey. Régimen económico. Extracto convocatoria subvenciones – Arganda del Rey. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

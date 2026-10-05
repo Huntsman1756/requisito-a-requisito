@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles a contar desde el día siguiente al de la publicación del presente extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 550.000 euros (275.000 euros para la línea de actividades de ocio y tiempo libre educativo) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Familia, Juventud y Asuntos Sociales",
+  "officialSourceLabel": "BOCM:BOCM-20260427-22",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-22",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad sin ánimo de lucro entre cuyos fines y actividades estén la promoción, formación y/o integración de la juventud, y desarrollar su actividad en el territorio de la Comunidad de Madrid.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-22",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones dirigida a entidades sin ánimo de lucro para desarrollar proyectos de animación sociocultural y educación no formal dirigidos a jóvenes en la Comunidad de Madrid.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "jóvenes"
+  ],
+  "title": "Subvenciones a entidades sin ánimo de lucro para proyectos de ocio y tiempo libre educativo para jóvenes en Madrid 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 859/2026, de la Consejería de Familia, Juventud y Asuntos Sociales, por la que se convocan subvenciones a entidades sin ánimo de lucro para el. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

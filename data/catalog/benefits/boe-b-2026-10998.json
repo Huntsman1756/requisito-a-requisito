@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "del 13 de abril a las 09:00 horas hasta el 7 de mayo a las 15:00 horas UTC +2",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "certificado electrónico de persona física"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 17.955.000,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Centro de Estudios Jurídicos, O.A.",
+  "officialSourceLabel": "BOE-B-2026-10998",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10998",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física que no incurra en prohibiciones de la Ley 38/2003, no disfrutar de otras ayudas con el mismo objeto, reunir los requisitos de la convocatoria de acceso correspondiente y estudiar la oposición bajo dirección de centro especializado o preparadores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10998",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para sufragar gastos e ingresos dejados de percibir por la preparación de oposiciones para el ingreso en las Carreras Judicial y Fiscal, Cuerpo de Letrados de la Administración de Justicia y Cuerpo de Abogados del Estado.",
+  "targetGroups": [
+    "opositores a la Carrera Judicial",
+    "opositores a la Carrera Fiscal",
+    "opositores al Cuerpo de Letrados de la Administración de Justicia",
+    "opositores al Cuerpo de Abogados del Estado"
+  ],
+  "title": "Ayudas para preparación de oposiciones Carreras Judicial y Fiscal 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 08 de abril de 2026, de la Dirección del Centro de Estudios Jurídicos, O.A., por la que se convocan en el ejercicio 2026 ayudas para la preparación de oposiciones para el . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2025 cerrada: 40 días hábiles desde la publicación del extracto (diciembre 2025-febrero 2026). Programa recurrente de convocatoria anual; no hay una nueva convocatoria abierta confirmada.",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "documentación del proyecto o actividad"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo",
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantías según las bases de la convocatoria (BDNS 875158); el extracto del BOE no fija importe individual.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Vivienda y Agenda Urbana (Dirección General de Arquitectura, Vivienda y Suelo)",
+  "officialSourceLabel": "BOE-B-2025-47163",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47163",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser persona física o jurídica de nacionalidad española, de un Estado miembro de la UE o del EEE, u otras nacionalidades legalmente constituidas antes de la finalización del plazo de solicitudes, conforme a la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2025-47163",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Vivienda y Agenda Urbana para actividades de difusión, fomento e investigación de la arquitectura (publicaciones, exposiciones, instalaciones, recorridos, actividades educativas). Convocatoria 2025 cerrada; el programa se convoca anualmente.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades culturales",
+    "profesionales de la arquitectura"
+  ],
+  "title": "Ayudas para la difusión, fomento e investigación de la arquitectura, 2025",
+  "type": "employment_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

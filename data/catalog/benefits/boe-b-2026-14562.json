@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: del 19 de mayo a las 8:00 hasta el 10 de septiembre de 2026 a las 15:00 (hora peninsular).",
+  "category": "educacion",
+  "documentsNeeded": [
+    "formulario de solicitud telemático",
+    "firma electrónica",
+    "documentación acreditativa de la necesidad específica de apoyo educativo"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [],
+    "familyType": [
+      "numerosa"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cuantías por modalidad: subsidio fijo de gastos adicionales de escolarización de 400 euros; reeducación pedagógica o del lenguaje hasta 913 euros; cuantía asociada a altas capacidades hasta 913 euros; otras modalidades según la convocatoria.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Educación, Formación Profesional y Deportes (Secretaría de Estado de Educación)",
+  "officialSourceLabel": "BOE-B-2026-14562",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14562",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser alumno con necesidad específica de apoyo educativo derivada de discapacidad, trastornos graves de conducta o de la comunicación y el lenguaje, TEA o altas capacidades intelectuales, no superar la renta y/o patrimonio familiar fijados en la convocatoria, y estar escolarizado en los niveles indicados.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-14562",
+  "status": "active",
+  "summary": "Ayudas y subsidios estatales para escolarización de alumnado con necesidad específica de apoyo educativo (discapacidad, trastornos graves, TEA, altas capacidades). Convocatoria 2026-2027 cerrada el 10 de septiembre de 2026.",
+  "targetGroups": [
+    "alumnos con discapacidad",
+    "alumnos con TEA",
+    "alumnos con altas capacidades intelectuales",
+    "familias numerosas"
+  ],
+  "title": "Ayudas para alumnos con necesidad específica de apoyo educativo, curso 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

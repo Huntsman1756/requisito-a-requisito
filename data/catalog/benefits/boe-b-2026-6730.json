@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente de la publicación del extracto en el BOE (publicado el 5 de marzo de 2026)",
+  "category": "empleo",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total de 4.000.000 de euros; cuantía individual máxima de 150.000 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales",
+  "officialSourceLabel": "BOE-B-2026-6730",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-6730",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa distribuidora independiente conforme al artículo 4.ñ) de la Ley 55/2007 y cumplir los requisitos del artículo 5 de la Orden CUD/508/2021. Las películas deben haber sido calificadas en España durante 2024 y 2025, con estreno comercial en el último trimestre de 2024 o durante 2025, y el plan de distribución realizado esencialmente en esas fechas.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-6730",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas distribuidoras independientes destinadas a financiar la distribución en salas de exhibición de películas españolas, comunitarias e iberoamericanas estrenadas en 2024-2025.",
+  "targetGroups": [
+    "empresas distribuidoras independientes"
+  ],
+  "title": "Ayudas para la distribución de películas de largometraje y cortometrajes 2026",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de 27 de febrero de 2026, del Organismo Autónomo Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan ayudas para la distribución de películas . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

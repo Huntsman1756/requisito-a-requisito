@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles contados a partir del día siguiente a la publicación del extracto de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "formulario de solicitud",
+    "memoria detallada del programa de actividades",
+    "presupuesto total de gastos e ingresos del proyecto"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total 160.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Madrid - Área de Gobierno de Cultura, Turismo y Deporte",
+  "officialSourceLabel": "BOCM:BOCM-20260423-74",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260423-74",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser librería constituida como empresa o entidad sin ánimo de lucro con domicilio social en Madrid o al menos una librería abierta en la ciudad. La venta de libros debe representar al menos el 60% del volumen de negocio. Superficie mínima de 30 m², apertura al público al menos 10 meses al año (mínimo 5 días y 35 horas semanales), rótulo exterior visible y oferta mínima de 3.000 títulos (reducible a 1.500 si es especializada o exigible 6.000 si facturación >600.000€).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260423-74",
+  "status": "active",
+  "summary": "Ayuda del Ayuntamiento de Madrid para financiar actividades de fomento de la lectura (presenciales o virtuales) organizadas por librerías madrileñas.",
+  "targetGroups": [
+    "librerías",
+    "empresas",
+    "entidades sin ánimo de lucro"
+  ],
+  "title": "Convocatoria de subvenciones para actividades de fomento de la lectura en librerías 2026-2027",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Área de Gobierno de Cultura, Turismo y Deporte. Extracto convocatoria subvenciones – Madrid. Régimen económico. Área de Gobierno de Cultura, Turismo y Deporte. Extracto co. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Desde el día siguiente a la publicación del extracto en el BOCM hasta el 30 de septiembre de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "justificación de gastos",
+    "documentación acreditativa de la actividad económica en la Comunidad de Madrid"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Hasta 20.000,00 euros por línea y 30.000,00 euros por empresa y convocatoria; subvención del 100% para gastos entre 1.000 y 10.000 euros, y del 60% para importes superiores.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Economía, Hacienda y Empleo de la Comunidad de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260618-19",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-19",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física o jurídica con actividad económica en la Comunidad de Madrid y realizar los gastos en centros de trabajo situados en dicha comunidad. Debe haber uno o varios trabajadores por cuenta ajena, aunque los autónomos sin empleados también pueden ser beneficiarios.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-19",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para empresas y autónomos de la Comunidad de Madrid para financiar gastos de promoción de la salud laboral, como alimentación saludable, actividad física y prevención del estrés.",
+  "targetGroups": [
+    "empresas",
+    "autónomos",
+    "trabajadores por cuenta ajena"
+  ],
+  "title": "Subvenciones para la promoción de la salud en el trabajo (Línea 6) 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden de 1 de junio de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan para 2026 las subvenciones dirigidas a la reduc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

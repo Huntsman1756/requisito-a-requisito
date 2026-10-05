@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Convocatoria 2026 abierta: solicitudes hasta las 23:59 (hora peninsular) del 31 de octubre de 2026.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "identificación electrónica (Cl@ve o certificado)",
+    "solicitud telemática en la sede del programa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "400 euros en tarjeta prepago: hasta 200 euros para artes en vivo, audiovisuales, patrimonio cultural y creación artística; hasta 100 euros para productos culturales en soporte físico; y hasta 100 euros para videojuegos y contenidos digitales (hasta 400 euros si se destina a cursos y talleres culturales o instrumentos musicales).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Cultura",
+  "officialSourceLabel": "BOE-B-2026-21271",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21271",
+  "referencePeriod": "2026",
+  "requirementsText": "Cumplir 18 años en 2026 (nacidos en 2008) y poseer nacionalidad española o residencia legal en España en el momento de presentar la solicitud. Son igualmente beneficiarias, sin necesidad de permiso de residencia ya concedido: las personas solicitantes de asilo en España, quienes hayan solicitado protección temporal y las personas extranjeras extuteladas que se encuentren en trámite de obtención del permiso de residencia legal (base Primera de la convocatoria).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "bono-cultural-joven",
+  "status": "active",
+  "summary": "Ayuda de 400 euros para personas que cumplen 18 años en 2026, para productos y actividades culturales. Convocatoria abierta hasta el 31 de octubre de 2026.",
+  "targetGroups": [
+    "jóvenes que cumplen 18 años en 2026"
+  ],
+  "title": "Bono Cultural Joven 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

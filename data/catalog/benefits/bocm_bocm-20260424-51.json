@@ -1,0 +1,52 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, contados a partir del siguiente a la publicación de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "DNI",
+    "Certificado de empadronamiento",
+    "Título de propiedad o autorización de la propiedad en caso de alquiler",
+    "Resolución de Grado de Dependencia o solicitud de valoración",
+    "Informe del equipo técnico de terapia ocupacional de mayores"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": true,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [
+      "propiedad",
+      "alquiler"
+    ],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Hasta dos mil euros (2.000,00 euros) por persona beneficiaria",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Concejalía Delegada de Familia y Bienestar Social del Ayuntamiento de Alcobendas",
+  "officialSourceLabel": "BOCM:BOCM-20260424-51",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-51",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona mayor de 70 años empadronada en Alcobendas mínimo 1 año en la vivienda a adaptar, o persona mayor menor de 70 años con empadronamiento mínimo 1 año y Grado de Dependencia reconocido o solicitado. La vivienda debe ser habitual, propiedad o copropiedad de la unidad familiar (o alquiler con autorización), y las obras no deben haberse realizado con anterioridad ni haber otras subvenciones pendientes de justificación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-51",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para la adaptación del domicilio habitual de personas mayores y pensionistas residentes en Alcobendas, destinadas a eliminar barreras arquitectónicas y facilitar la autonomía personal.",
+  "targetGroups": [
+    "personas mayores de 70 años",
+    "personas mayores menores de 70 años con dependencia",
+    "pensionistas"
+  ],
+  "title": "Subvenciones para adaptación del domicilio a personas mayores y pensionistas en Alcobendas 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Alcobendas. Régimen económico. Extracto convocatoria subvenciones – Alcobendas. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

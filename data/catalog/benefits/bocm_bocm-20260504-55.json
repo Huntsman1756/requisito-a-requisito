@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "10 días hábiles siguientes a la publicación del extracto en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "impreso de solicitud"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "4 premios de 300 euros y 4 accésits de 100 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Universidad Complutense de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260504-55",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260504-55",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado al menos en el segundo curso de un programa de doctorado de la UCM, con matrícula activa, al corriente de pago de tasas, haber superado la última evaluación y no haber depositado la tesis.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260504-55",
+  "status": "active",
+  "summary": "Convocatoria de premios para estudiantes de doctorado de la UCM que expliquen su investigación en 3 minutos.",
+  "targetGroups": [
+    "estudiantes de doctorado"
+  ],
+  "title": "Concurso Tesis en 3 Minutos UCM 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Resolución de 23 de abril de 2026, de la Universidad Complutense de Madrid, por la que se convoca la fase previa del Concurso de Tesis en 3 Minutos . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

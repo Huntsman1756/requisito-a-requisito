@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 29 de enero de 2026 hasta las 14 horas del 18 de febrero de 2026 (hora peninsular)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud cumplimentada en Sede Electrónica",
+    "archivos relacionados en el apartado 4 del artículo 14 de la resolución de convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "funcionario",
+      "empleado-publico"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación mensual de 2.150 a 3.100 euros; gastos de viaje hasta 1.200 €; gastos de instalación hasta 2.000 €",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2026-446",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-446",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser personal docente e investigador con vinculación funcional o contractual, en servicio activo y dedicación a tiempo completo. Poseer título de doctor. La obtención del grado de doctor debe ser anterior al 1 de enero de 2014 para la modalidad senior y posterior para la junior. Estancias de 3 a 6 meses en centros extranjeros.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-446",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para financiar estancias de movilidad de personal docente e investigador en centros extranjeros de enseñanza superior e investigación, con modalidades senior y junior.",
+  "targetGroups": [
+    "personal docente e investigador",
+    "funcionarios de carrera",
+    "personal contractual indefinido",
+    "personal contractual temporal"
+  ],
+  "title": "Subvenciones para estancias en el extranjero para personal docente e investigador",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Ciencia, Innovación y Universidades por la que se convocan, por tramitación anticipada, subvenciones para estancias en el extranjero para person. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

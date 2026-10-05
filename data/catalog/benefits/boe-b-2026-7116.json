@@ -1,0 +1,49 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 9 de marzo hasta las 14:00 horas del 23 de marzo de 2026.",
+  "category": "beca",
+  "documentsNeeded": [
+    "DNI o pasaporte",
+    "Certificado de nacionalidad",
+    "Certificado de empadronamiento",
+    "Titulación universitaria de Grado",
+    "Certificados de idiomas (español e inglés nivel B2)",
+    "Documentación acreditativa de no percepción de otras ayudas"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cuantía total máxima de 15.640.900 €; dotación individual de 800 € (o 2.500 € si empadronamiento fuera de Madrid) para Fase 0; 23.500 € a 48.500 € anuales para Fases I y II.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "ICEX España Exportación e Inversiones, E.P.E.",
+  "officialSourceLabel": "BOE-B-2026-7116",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7116",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser nacional de la UE, residente en España, nacido a partir del 1 de enero de 1998, poseer titulación universitaria de Grado o equivalente que permita acceso a Máster, dominar el español y acreditar nivel B2 de inglés. No haber sido beneficiario anterior salvo renuncia previa, no tener otras ayudas para la misma finalidad, no padecer enfermedades incompatibles y no tener antecedentes penales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-7116",
+  "status": "active",
+  "summary": "Convocatoria de becas para personas físicas con nacionalidad de la UE y residencia en España, nacidas a partir de 1998, para realizar un Máster en Gestión Internacional y prácticas en el exterior.",
+  "targetGroups": [
+    "personas físicas",
+    "nacionales de la Unión Europea",
+    "estudiantes de máster",
+    "jóvenes nacidos a partir de 1998"
+  ],
+  "title": "Becas de Internacionalización Empresarial de ICEX 51ª Promoción",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 4 de marzo de 2026 de ICEX España Exportación e Inversiones, E.P.E. por la que se convocan las Becas de Internacionalización Empresarial de ICEX España Exportación e Inver. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

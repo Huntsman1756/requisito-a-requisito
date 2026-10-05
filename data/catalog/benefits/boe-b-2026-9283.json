@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles contados a partir del día siguiente al de la publicación del extracto en el BOE (publicado el 25 de marzo de 2026).",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "documentación acreditativa del establecimiento permanente",
+    "documentación del proyecto o actividad a subvencionar"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantías individuales por beneficiario entre 40.000 € y el máximo por modalidad (importe total máximo de la convocatoria: 5.096.138 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-9283",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9283",
+  "referencePeriod": "2026",
+  "requirementsText": "Podrán solicitarlas personas físicas o jurídicas, públicas o privadas, con establecimiento permanente en la UE o Estados asociados al EEE, excluidos residentes en paraísos fiscales. También las entidades indicadas en el artículo 2.2 de la Orden CUL/2912/2010.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-9283",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para personas físicas o jurídicas, públicas o privadas, destinadas a apoyar la exhibición, investigación, formación e infraestructuras teatrales y circenses en el marco de las competencias de la Secretaría de Estado de Cultura.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades jurídicas públicas",
+    "entidades jurídicas privadas",
+    "asociaciones",
+    "federaciones",
+    "confederaciones",
+    "programadores de espacios escénicos",
+    "artistas y creadores"
+  ],
+  "title": "Ayudas para la exhibición, investigación, formación e infraestructuras teatrales y circenses 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de Resolución de la Secretaría de estado de cultura, por la que se convocan ayudas para la exhibición, investigación, formación e infraestructuras teatrales y circenses, correspondientes al a. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

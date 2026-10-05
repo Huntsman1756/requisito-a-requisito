@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el BOE",
+  "category": "beca",
+  "documentsNeeded": [
+    "acreditación de matrícula o finalización de estudios",
+    "acreditación de nota media"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cobertura de matrícula, alojamiento y manutención; reembolso de desplazamiento hasta 270 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Universidad Internacional Menéndez Pelayo",
+  "officialSourceLabel": "BOE-B-2026-17506",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17506",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado para finalizar el Grado en 2025-2026 (salvo TFG) o haber finalizado estudios en 2024-2025, y acreditar una nota media igual o superior a 8,00 puntos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17506",
+  "status": "active",
+  "summary": "Convocatoria de 80 becas para estudiantes de grado que participen en el Aula de Verano 'Blas Cabrera' de iniciación a la investigación, docencia e innovación científica en Santander.",
+  "targetGroups": [
+    "estudiantes de grado"
+  ],
+  "title": "Becas Aula de Verano Blas Cabrera 2026 UIMP",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 26 de mayo de 2026, de la Universidad Internacional Menéndez Pelayo, por la que se convocan becas para participar en el «Aula de Verano \"Blas Cabrera\" de iniciación a la. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

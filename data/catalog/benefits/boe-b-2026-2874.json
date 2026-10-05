@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "unknown",
+  "applicationWindow": "El anuncio del BOE no publica el plazo; consultar las bases en www.bde.es para el curso 2026-2027.",
+  "category": "educacion",
+  "documentsNeeded": [
+    "según las bases del programa publicadas en www.bde.es"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cuantía no publicada en el anuncio del BOE; consultar las bases en www.bde.es.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Banco de España",
+  "officialSourceLabel": "BOE-B-2026-2874",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-2874",
+  "referencePeriod": "2026",
+  "requirementsText": "Según las bases del programa, disponibles en www.bde.es (Sobre el Banco - Trabajar en el Banco) y solicitables en el Registro General del Banco de España (calle Alcalá, 48, Madrid) y en sus sucursales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-2874",
+  "status": "active",
+  "summary": "Programa del Banco de España de 10 ayudas para estudios en economía y finanzas, acordado por su Comisión Ejecutiva el 19 de diciembre de 2025. Las bases se publican en www.bde.es.",
+  "targetGroups": [
+    "estudiantes universitarios"
+  ],
+  "title": "Programa de 10 Ayudas para Estudios en Economía y Finanzas del Banco de España, curso 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

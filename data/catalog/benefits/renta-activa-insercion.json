@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Cerrada a nuevas incorporaciones desde el 1 de noviembre de 2024. Los derechos reconocidos, solicitados o suspendidos antes de esa fecha se rigen por la normativa anterior.",
+  "availability": {
+    "status": "cerrada"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "documento de identidad de toda la unidad familiar",
+    "justificante de ingresos y rentas",
+    "certificado de discapacidad o acreditación de situación de violencia de género o terrorismo (si procede)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía equivalente al 80% del IPREM mensual vigente durante un máximo de 11 meses (renovables bajo requisitos estrictos hasta un máximo de 3 períodos).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "SEPE (Servicio Público de Empleo Estatal)",
+  "officialSourceLabel": "SEPE - Subsidios y RAI anteriores al 1 de noviembre de 2024",
+  "officialSourceUrl": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/si-tengo-subsidio-rai-antes-noviembre-2024",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Cerrada a nuevas solicitudes desde el 1 de noviembre de 2024. Conservan derechos bajo la normativa anterior (RD 1369/2006) quienes antes del 31 de octubre de 2024 inclusive la tenían solicitada, la estaban percibiendo o la tenían suspendida. Para nuevas solicitudes, el nivel asistencial reformado por el RD-ley 2/2024 se articula a través de los subsidios por desempleo vigentes.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "renta-activa-insercion",
+  "status": "active",
+  "summary": "Programa del SEPE cerrado a nuevas incorporaciones desde el 1 de noviembre de 2024 (RD-ley 2/2024). Solo conservan derechos quienes lo tenían reconocido, solicitado o suspendido antes de esa fecha.",
+  "targetGroups": [
+    "desempleados de larga duración",
+    "mayores de 45 años",
+    "víctimas de violencia de género",
+    "personas con discapacidad"
+  ],
+  "title": "Renta Activa de Inserción (RAI)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "La RAI fue la última red estatal del área de empleo para sus colectivos; quienes la perdían o solicitaban antes del cierre conservan sus derechos. Para nuevos solicitantes, el SEPE deriva a los subsidios reformados por el RD-ley 2/2024."
+}

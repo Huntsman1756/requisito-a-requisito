@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "45 días hábiles desde la publicación (BOE 12/12/2025) — plazo cerrado en febrero de 2026.",
+  "category": "vivienda",
+  "documentsNeeded": [
+    "solicitud conforme al modelo facilitado en la sede electrónica",
+    "documentación acreditativa de los requisitos del artículo 3 de la Orden FOM/1932/2014"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe máximo total estimado 80.000.000 euros (condicionado a existencia de crédito; no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Vivienda y Agenda Urbana",
+  "officialSourceLabel": "BOE-B-2025-46004",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-46004",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser persona o entidad, pública o privada sin ánimo de lucro, que cumpla con los requisitos establecidos en el artículo 3 de la orden de bases reguladoras (Orden FOM/1932/2014).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-46004",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para financiar trabajos de conservación o enriquecimiento de bienes inmuebles del Patrimonio Histórico Español, dirigida a personas o entidades públicas o privadas sin ánimo de lucro.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades públicas",
+    "entidades privadas sin ánimo de lucro"
+  ],
+  "title": "Ayudas para conservación o enriquecimiento de bienes inmuebles del Patrimonio Histórico Español (Programa 2% Cultural)",
+  "type": "housing_support",
+  "whyItMatters": "Extracto de la Orden de 9 de diciembre de 2025 del Ministerio de Vivienda y Agenda Urbana, el Ministerio de Transportes y Movilidad Sostenible y el Ministerio de Cultura, por la que se convocan ayudas. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

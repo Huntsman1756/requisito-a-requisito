@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Descuento permanente, aplicable en cada compra de billete.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "familia",
+  "displayTitle": "Renfe para familias numerosas: 20 % y 50 % de descuento",
+  "documentsNeeded": [
+    "Título de familia numerosa en vigor"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [
+      "numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "20 % del billete (categoría general) o 50 % (categoría especial).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Renfe Viajeros",
+  "officialSourceLabel": "Renfe — Descuentos para familias numerosas",
+  "officialSourceUrl": "https://www.renfe.com/es/es/viajar/prepara-tu-viaje/descuentos/familia-numerosa",
+  "referencePeriod": "Vigente 2026",
+  "requirementsText": "Tener el título oficial de familia numerosa en vigor y acreditarlo al comprar el billete y durante el viaje. El descuento aplica a cada miembro de la familia numerosa con título individual o colectivo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "descuento-transporte-familia-numerosa",
+  "status": "active",
+  "summary": "Descuento del 20 % (categoría general) o 50 % (categoría especial) en billetes de tren de Renfe para personas con título de familia numerosa en vigor.",
+  "targetGroups": [
+    "familias numerosas"
+  ],
+  "title": "Descuento de transporte para familia numerosa en Renfe",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Abarta el transporte ferroviario habitual para las familias numerosas de forma permanente."
+}

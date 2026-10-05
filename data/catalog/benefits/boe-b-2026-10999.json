@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Segundo periodo de adjudicación: del 1 de septiembre al 30 de octubre de 2026 (primer periodo ya cerrado).",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "certificado de estudios de idiomas",
+    "acreditación del nivel SLP"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "militar"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Dotación total 237.311,80 euros; máximo 500 euros por persona e idioma.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Mando de Adiestramiento y Doctrina del Ejército de Tierra",
+  "officialSourceLabel": "BOE-B-2026-10999",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10999",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser personal del Ejército de Tierra en activo, de los Cuerpos Comunes destinados en su estructura o alumnos de formación de Centros Docentes Militares dependientes. Haber cursado estudios de idiomas declarados de interés para las FAS en los periodos indicados, haber mejorado o mantenido el nivel SLP y no haber recibido ayudas previas por estos cursos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10999",
+  "status": "active",
+  "summary": "Convocatoria de ayudas económicas para personal militar del Ejército de Tierra que haya cursado estudios de idiomas de interés para las FAS entre 2023-2025 y 2024-2026.",
+  "targetGroups": [
+    "personal militar del Ejército de Tierra",
+    "alumnos de Centros Docentes Militares"
+  ],
+  "title": "Ayudas económicas para formación de idiomas para personal militar del Ejército de Tierra 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 8 de abril de 2026, del Mando de Adiestramiento y Doctrina, por la que se convocan ayudas económicas para la formación de idiomas para personal militar del Ejército de Tie. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

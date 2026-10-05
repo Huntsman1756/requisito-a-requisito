@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "veinte días hábiles desde el día siguiente de la publicación del anuncio de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "DNI",
+    "Certificado de empadronamiento",
+    "Documentación que acredite la residencia en Majadahonda",
+    "Documentación que acredite el nacimiento o adopción"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": true,
+    "housingStatus": [
+      "alquiler"
+    ],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 441.703,00 euros (cuantía total) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Majadahonda",
+  "officialSourceLabel": "BOCM:BOCM-20260430-68",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260430-68",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser progenitor, español o extranjero con residencia legal en España. Estar empadronado en Majadahonda con antigüedad mínima de un año (al menos uno de los progenitores) y residir todos los miembros de la unidad familiar en el municipio. Ser propietario, titular de arrendamiento/uso o acreditar fehacientemente la residencia en Majadahonda.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260430-68",
+  "status": "active",
+  "summary": "Ayudas económicas del Ayuntamiento de Majadahonda para familias con hijos nacidos o adoptados en 2025, dirigidas a progenitores empadronados y residentes en la localidad.",
+  "targetGroups": [
+    "familias con hijos",
+    "progenitores",
+    "familias empadronadas en Majadahonda"
+  ],
+  "title": "Ayudas del Ayuntamiento de Majadahonda por nacimiento o adopción 2025",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Majadahonda. Régimen económico. Extracto convocatoria subvenciones – Majadahonda. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

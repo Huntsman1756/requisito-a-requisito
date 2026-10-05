@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "25 días hábiles contados a partir del día siguiente a la publicación del extracto en el BOE.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "clave concertada por vía electrónica",
+    "solicitud de subvención",
+    "documentación acreditativa de la entidad editorial",
+    "documentación de la obra a traducir"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 280.000 euros para traducciones de obras completas, con posibilidad de incremento hasta 320.000 euros si hay crédito adicional.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-349",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-349",
+  "referencePeriod": "2026",
+  "requirementsText": "Solicitantes: entidades editoriales extranjeras (públicas o privadas, con o sin ánimo de lucro) legalmente constituidas. La obra debe estar publicada en lengua oficial española o cooficial y editada por editorial española o tener autor nacionalidad española. El gasto subvencionable es exclusivamente el pago al traductor.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-349",
+  "status": "active",
+  "summary": "Subvenciones para entidades editoriales extranjeras que financien la traducción de obras literarias o científicas publicadas en español o lenguas cooficiales.",
+  "targetGroups": [
+    "entidades editoriales extranjeras"
+  ],
+  "title": "Convocatoria de subvenciones para el fomento de la traducción a lenguas extranjeras 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 18 de diciembre de 2025 de la Secretaría de Estado de Cultura, por la que se convocan subvenciones, en régimen de concurrencia competitiva, para el fomento de la traducció. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

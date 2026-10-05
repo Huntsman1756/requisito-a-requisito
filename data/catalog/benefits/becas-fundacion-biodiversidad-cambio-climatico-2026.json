@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas Fundación Biodiversidad: cambio climático (240 €/mes)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Documentación acreditativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "240 €/mes por beca (4 becas; dotación: 3.840 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Fundación Biodiversidad, MITECO",
+  "officialSourceLabel": "BOE — Convocatoria de becas de cambio climático de la Fundación Biodiversidad 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14487",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Personas de 18 a 30 años interesadas en formación en cambio climático, según las bases de la convocatoria de la Fundación Biodiversidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-fundacion-biodiversidad-cambio-climatico-2026",
+  "status": "active",
+  "summary": "Cuatro becas de la Fundación Biodiversidad (MITECO) para formación en cambio climático: 240 € mensuales a dedicación de 10 horas semanales, para jóvenes de 18 a 30 años.",
+  "targetGroups": [
+    "jóvenes de 18 a 30 años interesados en cambio climático"
+  ],
+  "title": "Becas de la Fundación Biodiversidad en cambio climático 2026",
+  "type": "scholarship",
+  "whyItMatters": "Primera experiencia formativa remunerada en el ámbito del cambio climático."
+}

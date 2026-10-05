@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a contar desde el siguiente a la publicación del extracto de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "instancia de solicitud",
+    "documentación complementaria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 200.000 euros para 2026 (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Organismo Autónomo Madrid Salud",
+  "officialSourceLabel": "BOCM:BOCM-20260427-52",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-52",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad o institución de carácter social, con personalidad jurídica y sin ánimo de lucro. Los proyectos deben estar dedicados a la prevención, asistencia y reinserción en el ámbito de las adicciones.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-52",
+  "status": "active",
+  "summary": "Subvenciones del Organismo Autónomo Madrid Salud para el apoyo al mantenimiento de proyectos de atención integral a las adicciones (prevención, asistencia y reinserción) realizados por entidades sin ánimo de lucro.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "entidades de carácter social"
+  ],
+  "title": "Convocatoria subvenciones Madrid Salud para proyectos de atención a adicciones",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. O. A. Madrid Salud. Extracto convocatoria subvenciones – Madrid. Régimen económico. O. A. Madrid Salud. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

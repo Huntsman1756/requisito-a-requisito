@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles, contados desde el día siguiente al de la publicación del extracto de esta convocatoria en el BOE.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud firmada por el representante legal",
+    "relación y memoria explicativa de las actividades",
+    "estatutos debidamente legalizados de la entidad",
+    "documento acreditativo de inscripción en el Registro Nacional de Asociaciones del Ministerio del Interior"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cuantía máxima por beneficiario: hasta 30.000,00 € (dotación total de la convocatoria: 26.000,00 €).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2025-45207",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-45207",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser asociaciones juveniles y federaciones/confederaciones de estudiantes y egresados de ámbito nacional con implantación en más de una comunidad autónoma. Deben tener como finalidad participar en la vida universitaria respetando normas democráticas. No podrán ser beneficiarias entidades que no hayan justificado o reintegrado importes de convocatorias anteriores, ni dos asociaciones con relación federada/jurídica para la misma actividad. Solo se admite una solicitud por entidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-45207",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para asociaciones juveniles, federaciones y confederaciones de estudiantes y egresados con ámbito universitario nacional para financiar actividades de participación estudiantil y asociacionismo.",
+  "targetGroups": [
+    "asociaciones juveniles",
+    "federaciones de estudiantes",
+    "confederaciones de estudiantes",
+    "federaciones de egresados",
+    "confederaciones de egresados"
+  ],
+  "title": "Subvenciones a asociaciones juveniles y federaciones de estudiantes y egresados universitarios",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 21 de noviembre de 2025, de la Secretaría de Estado de Ciencia, Innovación y Universidades, por la que se convocan, por tramitación anticipada, subvenciones a asociaciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

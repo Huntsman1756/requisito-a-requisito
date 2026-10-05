@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Veinte días hábiles contados a partir del día siguiente a la publicación del extracto en el BOE (22 de abril de 2026).",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud con firma electrónica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: Importe inicial de 1.000.000 euros, ampliable hasta 10.000.000 euros adicionales. Cuantías solicitables: 400.000-900.000 euros para innovación; 100.000-500.000 euros para conocimiento. (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Española de Cooperación Internacional para el Desarrollo (AECID)",
+  "officialSourceLabel": "BOE-B-2026-12559",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12559",
+  "referencePeriod": "2026",
+  "requirementsText": "Los beneficiarios deben ser agrupaciones sin personalidad jurídica integradas por al menos dos entidades de tipología distinta (sector privado, ONGD o ámbito académico). Se excluyen las Administraciones públicas y entidades con participación pública, salvo las académicas. Las propuestas individuales no se consideran para innovación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12559",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para financiar acciones de innovación y conocimiento en cooperación al desarrollo, dirigida a agrupaciones de entidades privadas, ONGD y académicas.",
+  "targetGroups": [
+    "empresas",
+    "empresas de economía social",
+    "asociaciones empresariales",
+    "ONGD",
+    "universidades",
+    "fundaciones universitarias",
+    "centros de investigación"
+  ],
+  "title": "Convocatoria de subvenciones para Acciones de Cooperación al Desarrollo en innovación 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 15 de abril de 2026, de la Dirección de la Agencia Española de Cooperación Internacional para el Desarrollo, por la que se convocan subvenciones para la realización de Acc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

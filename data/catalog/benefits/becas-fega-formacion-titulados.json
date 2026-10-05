@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (publicada en el BOE en el primer semestre de 2026).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas FEGA para titulados (1.150 € por beneficiario)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Título universitario y documentación acreditativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "1.150 € por beneficiario.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Fondo Español de Garantía Agraria (FEGA), MAPA",
+  "officialSourceLabel": "BOE — Convocatoria de becas de formación práctica del FEGA 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10172",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Titulados universitarios con titulación obtenida dentro de los últimos seis años, según las bases de la convocatoria del FEGA.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-fega-formacion-titulados",
+  "status": "active",
+  "summary": "Becas de formación práctica del Fondo Español de Garantía Agraria para titulados universitarios recientes: 1.150 € por beneficiario para prácticas en el organismo.",
+  "targetGroups": [
+    "titulados universitarios recientes"
+  ],
+  "title": "Becas de formación práctica para titulados del FEGA",
+  "type": "scholarship",
+  "whyItMatters": "Primera experiencia práctica remunerada en el organismo gestor de las ayudas agrarias."
+}

@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles desde la publicación (BOE 25/04/2026) — plazo cerrado.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "justificación de derechos de explotación o dominio público",
+    "documentación del proyecto de digitalización"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 60.000 euros por entidad solicitante; reparto estimado total 455.000 euros (255.000 CCAA/universidades + 100.000 entidades locales + 100.000 entidades privadas y reales academias).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-13098",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13098",
+  "referencePeriod": "2026",
+  "requirementsText": "Las obras deben no haber sido previamente digitalizadas o justificar la necesidad de una nueva digitalización. Los bienes deben formar parte del patrimonio bibliográfico o tener especial interés bibliográfico, estar en dominio público o contar con derechos de explotación. Se exige ceder derechos de publicación al Ministerio y autorizar la incorporación a catálogos oficiales. Quedan excluidos los bienes del patrimonio documental.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13098",
+  "status": "active",
+  "summary": "Subvenciones para la digitalización y preservación del patrimonio bibliográfico español, dirigidas a comunidades autónomas, universidades públicas, entidades locales y entidades privadas sin ánimo de lucro.",
+  "targetGroups": [
+    "comunidades autónomas",
+    "universidades públicas españolas",
+    "entidades locales españolas",
+    "entidades privadas sin fines de lucro de nacionalidad española",
+    "reales academias"
+  ],
+  "title": "Convocatoria de subvenciones a la digitalización y preservación del patrimonio bibliográfico 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 15 de marzo de 2026 de la Secretaría de Estado de Cultura por la que se convocan las subvenciones a la digitalización y preservación del patrimonio bibliográfico y su difu. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,55 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Continuo tras la resolución del Grado y el proceso de firma del PIA con la Comunidad Autónoma.",
+  "availability": {
+    "status": "permanente"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "resolución oficial de grado de dependencia",
+    "PIA cerrado con esta modalidad",
+    "contrato de trabajo formalizado con el asistente (alta en Régimen General) o contrato mercantil con entidad del sector",
+    "facturas y nóminas mes a mes"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": true,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio",
+      "alto"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantías máximas de 715€ (Grado III), 426€ (Grado II) y 300€ (Grado I), sujetas al coste real del contrato y la renta del dependiente.",
+  "lastReviewedAt": "2026-05-10",
+  "managingBody": "Órgaño competente de Asuntos Sociales de tu Comunidad Autónoma (marco estatal IMSERSO)",
+  "officialSourceLabel": "IMSERSO / CC.AA.",
+  "officialSourceUrl": "https://imserso.es/autonomia-personal-dependencia/sistema-autonomia-atencion-dependencia-saad/",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Tener reconocido el grado de dependencia pertinente (habitualmente Grados III o II), que el PIA determine la idoneidad de esta prestación y formalizar un contrato laboral con un asistente personal o con una empresa que preste el servicio.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "saad-asistencia-personal",
+  "status": "active",
+  "summary": "Ayuda económica para contratar a un asistente personal que facilite el acceso a la educación, al trabajo o a una vida más autónoma a personas con gran dependencia o dependencia severa.",
+  "targetGroups": [
+    "personas con gran dependencia"
+  ],
+  "title": "SAAD: Prestación económica de asistencia personal",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Es la modalidad orientada al ejercicio del derecho a la vida independiente: en lugar de ingresar en un centro o depender de la familia, la persona contrata a un asistente personal y el SAAD financia el coste del contrato dentro de los límites que fija el PIA (RD 1051/2013)."
+}

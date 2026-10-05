@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 20 de mayo al 30 de julio de 2026",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud mediante formulario en internet",
+    "certificación del director del centro de acogida (si aplica)",
+    "acreditación de condición de víctima de violencia de género",
+    "copia compulsada de resolución del Ministerio del Interior (víctimas del terrorismo)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "115,00 euros por ayuda",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-15350",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15350",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado en Primaria o ESO en centros públicos del ámbito de aplicación, no repetir curso y que los ingresos familiares no superen el umbral establecido o encontrarse en situaciones especiales (acogimiento, víctimas de violencia de género o terrorismo).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-15350",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para alumnos matriculados en centros docentes españoles en el exterior, Ceuta, Melilla y CIDEAD para el curso 2026/2027.",
+  "targetGroups": [
+    "alumnos de primaria",
+    "alumnos de secundaria obligatoria",
+    "alumnos en centros españoles en el exterior",
+    "alumnos en Ceuta y Melilla",
+    "alumnos del CIDEAD"
+  ],
+  "title": "Ayudas para adquisición de libros de texto y material didáctico e informático 2026/2027",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 6 de mayo de 2026 de la Secretaría de Estado de Educación por la que se convocan ayudas para la adquisición de libros de texto y material didáctico e informático para alum. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

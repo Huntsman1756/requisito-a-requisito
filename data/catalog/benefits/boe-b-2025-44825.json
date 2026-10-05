@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a contar desde el día siguiente al de la publicación del extracto de la convocatoria en el BOE",
+  "category": "beca",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 344.358€ (importe total de la convocatoria) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación",
+  "officialSourceLabel": "BOE-B-2025-44825",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-44825",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser nacional español y haber superado el Máster de Formación Permanente en Diplomacia y Relaciones Internacionales (Escuela Diplomática) o el Máster en Diplomacia y Función Pública Internacional (CEI-Fundación Privada Centro de Estudios Internacionales).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-44825",
+  "status": "active",
+  "summary": "Becas para que nacionales españoles que hayan superado los másteres de la Escuela Diplomática o del CEI realicen prácticas en el Ministerio de Asuntos Exteriores.",
+  "targetGroups": [
+    "nacionales españoles",
+    "diplomáticos",
+    "egresados de másteres oficiales de relaciones internacionales"
+  ],
+  "title": "Convocatoria becas de prácticas 2026 para nacionales españoles Másteres ED y CEI",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Orden de 28 de noviembre de 2025, por la que se aprueba la convocatoria del programa de becas de prácticas 2026 para nacionales españoles Másteres ED y CEI Extracto de la Orden de 28 de. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

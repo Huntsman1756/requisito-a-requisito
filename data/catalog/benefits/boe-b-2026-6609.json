@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles, a contar desde el siguiente al de la publicación de este extracto de la convocatoria en el Boletín Oficial del Estado",
+  "category": "beca",
+  "documentsNeeded": [
+    "solicitud cumplimentada (Anexo I)",
+    "documentación preceptiva en formato electrónico",
+    "acreditación de titulación",
+    "acreditación de calificación media final",
+    "certificado de estar al corriente de obligaciones tributarias y con la Seguridad Social"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "hasta 8.450,00€ anuales por becario",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Centro de Investigaciones Sociológicas",
+  "officialSourceLabel": "BOE-B-2026-6609",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-6609",
+  "referencePeriod": "2026",
+  "requirementsText": "Tener nacionalidad española o de la UE/residencia legal, poseer título de graduado/licenciado o equivalente, no haber sido adjudicatario previo de beca del CIS, acreditar nota media final igual o superior a 1,8, no padecer enfermedades que imposibiliten el cumplimiento de obligaciones, y estar al corriente de obligaciones tributarias y con la Seguridad Social.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-6609",
+  "status": "active",
+  "summary": "Se convocan diez becas para posgraduados con titulación universitaria para la formación en métodos y técnicas de investigación social aplicada.",
+  "targetGroups": [
+    "posgraduados",
+    "titulados universitarios"
+  ],
+  "title": "Convocatoria de diez becas de formación para posgraduados en el CIS para 2026",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 2 de marzo de 2026, del Centro de Investigaciones Sociológicas por la que se convocan diez becas de formación para posgraduados en materias de interés para el Organismo pa. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días a contar desde el 2 de marzo de 2026, finalizando el 20 de marzo de 2026 a las 14 horas.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud",
+    "documentación preceptiva",
+    "acreditación de carácter cultural",
+    "acreditación de gastos realizados en España",
+    "plan de accesibilidad (subtitulado y audiodescripción)",
+    "plan de sostenibilidad/impacto ambiental"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de 20.000.000 euros (posible adicional de hasta 17.000.000 euros). Importe máximo por proyecto: 800.000 euros (1.000.000 para animación, 300.000 para coproducciones minoritarias españolas).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA)",
+  "officialSourceLabel": "BOE-B-2025-48182",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-48182",
+  "referencePeriod": "2025",
+  "requirementsText": "Los proyectos deben estar en disposición de obtener la nacionalidad española, acreditar carácter cultural, no haber presentado solicitud de calificación por grupos de edad antes de la decisión final, y al menos el 50% de los gastos declarados deben realizarse en España o revertir en personal español. Deben incluir medidas de accesibilidad (subtitulado especial y audiodescripción) y acciones medioambientales/sostenibilidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-48182",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas productoras independientes para la producción de largometrajes con especial valor cinematográfico, cultural, social, documentales, de nuevos realizadores o experimentales.",
+  "targetGroups": [
+    "empresas productoras independientes"
+  ],
+  "title": "Ayudas selectivas para la producción de largometrajes sobre proyecto 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de diciembre de 2025, de la Dirección General del Instituto de la Cinematografía y de las Artes Audiovisuales O.A. por la que se convocan para el año 2026 ayudas select. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

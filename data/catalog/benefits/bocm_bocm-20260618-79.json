@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales desde el día siguiente a la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Impreso de solicitud",
+    "Declaración del IRPF del año anterior",
+    "Certificado de empadronamiento",
+    "Documentación acreditativa de la situación familiar y renta"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Importe máximo total de 625.000 euros; cuantía máxima de 100 euros por ciclo educativo",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Concejalía de Educación y Cultura del Ayuntamiento de Móstoles",
+  "officialSourceLabel": "BOCM:BOCM-20260618-79",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-79",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar empadronados en Móstoles (solicitante y alumno/a); estar matriculados en centros públicos, concertados o privados no concertados; renta per cápita familiar no superior a 13.500 euros anuales; estar al corriente de pago de obligaciones tributarias municipales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-79",
+  "status": "active",
+  "summary": "Convocatoria de ayudas del Ayuntamiento de Móstoles para familias con menores recursos económicos que sufraguen gastos educativos de sus hijos en el curso 2026-2027.",
+  "targetGroups": [
+    "familias con menores recursos económicos",
+    "padres/madres/tutores legales",
+    "alumnos de educación infantil, primaria, ESO y FP Básica"
+  ],
+  "title": "Ayudas a las familias para el curso escolar 2026-2027 (Móstoles)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Móstoles. Régimen económico. Extracto convocatoria subvenciones – Móstoles. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

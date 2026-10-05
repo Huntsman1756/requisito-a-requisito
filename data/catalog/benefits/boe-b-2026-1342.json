@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE (20 de enero de 2026)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "documentación acreditativa de la constitución legal",
+    "documentación sobre la naturaleza sin ánimo de lucro",
+    "certificado de residencia fiscal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: Importe máximo de 1.990.000 euros, con posibilidad de cuantía adicional de hasta 1.000.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Subsecretaría de Cultura (Ministerio de Cultura)",
+  "officialSourceLabel": "BOE-B-2026-1342",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-1342",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona jurídica sin ánimo de lucro, de nacionalidad española o de la UE/EEE, con residencia fiscal en España y legalmente constituida a la fecha de finalización del plazo. No podrán ser beneficiarios personas físicas, administraciones públicas, entidades con ánimo de lucro ni quienes hayan obtenido ayudas en las tres convocatorias consecutivas anteriores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-1342",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para entidades jurídicas sin ánimo de lucro que desarrollen actividades de profesionalización, innovación y promoción del sector cultural y creativo.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "entidades culturales",
+    "entidades creativas"
+  ],
+  "title": "Ayudas a entidades sin ánimo de lucro para la acción y la promoción cultural 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de diciembre de 2025 de la Subsecretaría de Cultura, por la que se convocan las ayudas a entidades sin ánimo de lucro para la acción y la promoción cultural correspondi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

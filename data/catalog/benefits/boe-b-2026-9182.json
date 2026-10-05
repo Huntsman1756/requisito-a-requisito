@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles, contados a partir del día siguiente al de la publicación del extracto de la Resolución de convocatoria en el Boletín Oficial del Estado",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "600.000 euros (200.000 para postgrados, 400.000 para actividades; máximo 8.000 euros por proyecto de postgrado y 18.000 euros por proyecto de actividades)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de las Mujeres",
+  "officialSourceLabel": "BOE-B-2026-9182",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9182",
+  "referencePeriod": "2026",
+  "requirementsText": "Los solicitantes deben ser universidades públicas del artículo 4.1 a) de la Ley Orgánica 2/2023. Los proyectos deben ser estudios de postgrado (máster o doctorado) o actividades universitarias relacionadas con la igualdad que destaquen por su calidad y valor estratégico.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-9182",
+  "status": "active",
+  "summary": "Subvenciones del Instituto de las Mujeres para universidades públicas destinadas a financiar postgrados de género y actividades universitarias de igualdad.",
+  "targetGroups": [
+    "universidades públicas"
+  ],
+  "title": "Convocatoria de subvenciones para Postgrados de Estudios Feministas y de Género 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 18 de marzo de 2026, de la Dirección del Instituto de las Mujeres, por la que se convoca la concesión de las subvenciones públicas destinadas a la realización de Postgrado. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

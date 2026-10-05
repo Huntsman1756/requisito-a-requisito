@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir de la publicación del extracto en el BOE (cerrando a las 14:00 horas del último día).",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "NIF de persona jurídica",
+    "Documentación acreditativa de inscripción en registros correspondientes (para asociaciones/fundaciones)",
+    "Solicitud a través de la aplicación electrónica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 1.212.000 euros. Cuantía mínima solicitable: 4.000 euros. Máximos por línea: 12.000€ (estudios), 5.000€ (publicaciones/eventos), 10.000€ (patrimonio). Posible cuantía adicional hasta 40.000€.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Memoria Democrática (Ministerio de Política Territorial y Memoria Democrática)",
+  "officialSourceLabel": "BOE-B-2026-12340",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12340",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad sin ánimo de lucro (asociación/fundación) legalmente constituida e inscrita, o universidad/organismo público de investigación. Disponer de NIF de persona jurídica. Cumplir requisitos a la fecha de publicación y mantenerlos durante la ejecución. Quedan excluidas entidades con ánimo de lucro, partidos políticos, colegios profesionales, etc.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12340",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para asociaciones, fundaciones, universidades y organismos públicos para ejecutar proyectos de dignificación y reconocimiento de víctimas de la Guerra Civil y Dictadura.",
+  "targetGroups": [
+    "asociaciones sin ánimo de lucro",
+    "fundaciones sin ánimo de lucro",
+    "universidades",
+    "organismos públicos de investigación"
+  ],
+  "title": "Subvenciones para actividades de Atención y Apoyo a las Víctimas de la Guerra y Dictadura 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 17 de marzo de 2026 del Secretario de Estado de Memoria Democrática por la que se convocan para el año 2026 Subvenciones destinadas a actividades relacionadas con la Atenc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

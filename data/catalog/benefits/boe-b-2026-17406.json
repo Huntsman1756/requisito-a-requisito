@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial del Estado",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 3.000.000 euros (importe global máximo) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Organización Nacional de Trasplantes O.A.",
+  "officialSourceLabel": "BOE-B-2026-17406",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17406",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro hospitalario sin fines de lucro autorizado para extracciones/trasplantes con actividad previa, oficina de coordinación autonómica de trasplantes, o entidad sin fines de lucro dependiente o colaboradora con las Administraciones Sanitarias.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17406",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones destinadas a instituciones y entidades sin ánimo de lucro para promover la donación y el trasplante de órganos, tejidos y células.",
+  "targetGroups": [
+    "centros hospitalarios sin fines de lucro",
+    "oficinas de coordinación autonómica de trasplantes",
+    "entidades sin fines de lucro"
+  ],
+  "title": "Subvenciones para fomentar la donación y trasplante de órganos, tejidos y células",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Dirección de la Organización Nacional de Trasplantes O.A., de 22 de mayo de 2026, por la que se convocan las subvenciones destinadas a instituciones y entidades de cual. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

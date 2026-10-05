@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a partir del día siguiente a la publicación en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [
+    "titulaciones recogidas en el Anexo I",
+    "Máster que habilita para el ejercicio de la docencia"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "docente"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "13.584 euros por curso académico (18.156 euros para Rusia) más 1.000 euros de ayuda de viajes (1.300 euros para China)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Subsecretaría del Ministerio de Educación, Formación Profesional y Deportes",
+  "officialSourceLabel": "BOE-B-2026-13096",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13096",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser docente en posesión de las titulaciones del Anexo I, tener nacionalidad española y poseer el Máster que habilita para el ejercicio de la docencia en Educación Secundaria Obligatoria, Bachillerato, Formación Profesional y enseñanzas de idiomas.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13096",
+  "status": "active",
+  "summary": "Convocatoria de plazas para docentes españoles que impartan lengua y cultura españolas en centros educativos de Bulgaria, China, Eslovaquia, Estonia, Hungría, Moldavia, Polonia, República Checa, Rumanía y Rusia.",
+  "targetGroups": [
+    "docentes",
+    "profesores de español"
+  ],
+  "title": "Convocatoria plazas profesores Secciones Bilingües de español en el extranjero 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 22 de abril de 2026 de la Subsecretaría del Ministerio de Educación, Formación Profesional y Deportes, por la que se convocan plazas de profesores en Secciones Bilingües d. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

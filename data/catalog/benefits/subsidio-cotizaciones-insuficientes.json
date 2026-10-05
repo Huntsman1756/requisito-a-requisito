@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Solicitud dentro de los seis meses siguientes al hecho causante; si se presenta fuera de plazo se deniega (SEPE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "documento de identidad (DNI, NIE, Pasaporte)",
+    "impreso de solicitud oficial del SEPE",
+    "libro de familia (si alegas responsabilidades familiares)",
+    "justificante de rentas"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía escalonada según tramo: 95% del IPREM los primeros 180 días (570 €/mes con IPREM 2026), 90% del día 181 al 360 (540 €/mes) y 80% a partir del día 361 (480 €/mes). Duración entre 3 y 21 meses según cotización, edad y cargas familiares.",
+  "lastReviewedAt": "2026-03-30",
+  "managingBody": "SEPE (Servicio Público de Empleo Estatal)",
+  "officialSourceLabel": "SEPE - Subsidio cotización insuficiente",
+  "officialSourceUrl": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/si-tengo-subsidio-rai-antes-noviembre-2024.html",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Estar desempleado, inscrito como demandante, carecer de rentas superiores al 75% del SMI y tener cotizados al menos 3 meses (si tienes responsabilidades familiares) o 6 meses (si no las tienes), sin llegar a 360 días.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "subsidio-cotizaciones-insuficientes",
+  "status": "active",
+  "summary": "Ayuda por desempleo para personas que han trabajado y cotizado, pero no llegan a los 360 días mínimos exigidos para cobrar el paro contributivo.",
+  "targetGroups": [
+    "personas desempleadas",
+    "trabajadores temporales"
+  ],
+  "title": "Subsidio por cotizaciones insuficientes",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Protege a los trabajadores con contratos temporales o discontinuos cortos que se quedan en paro antes de poder generar el año exacto de cotización."
+}

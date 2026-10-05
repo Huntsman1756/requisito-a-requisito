@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Procedimiento permanente, sin plazo de solicitud. La administración dispone de un máximo de seis meses para resolver el reconocimiento.",
+  "availability": {
+    "status": "permanente"
+  },
+  "category": "core",
+  "displayTitle": "Reconocimiento de la situación de dependencia y acceso al SAAD",
+  "documentsNeeded": [
+    "solicitud normalizada del órgano gestor competente",
+    "informes de salud que acrediten la situación funcional o cognitiva",
+    "documentación identificativa y, si tramita un tercero, acreditación de la representación"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "El reconocimiento no concede por sí solo una cuantía. La resolución y el PIA determinan entre los servicios del catálogo (teleasistencia, ayuda a domicilio, centro de día y de noche, atención residencial) y las prestaciones económicas (vinculada al servicio, cuidados en el entorno familiar, asistencia personal), cuyas cuantías dependen del grado y de la capacidad económica.",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Órgano gestor de la comunidad autónoma de residencia, a través de sus servicios sociales; en Ceuta y Melilla, las Direcciones Territoriales del IMSERSO (en el marco del SAAD)",
+  "officialSourceLabel": "Ley 39/2006, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia (BOE)",
+  "officialSourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-21990",
+  "referencePeriod": "Marco permanente",
+  "requirementsText": "Encontrarse en una situación de dependencia que pueda reconocerse en alguno de los grados establecidos, residir en territorio español y haberlo hecho durante cinco años (dos de ellos inmediatamente anteriores a la solicitud) y presentar la solicitud ante la administración competente: el órgano gestor de la comunidad autónoma de residencia o, en Ceuta y Melilla, las Direcciones Territoriales del IMSERSO. En los menores de cinco años el periodo de residencia se exige a quien ejerza su guarda y custodia, y las personas sin nacionalidad española se rigen por la normativa de extranjería y los tratados internacionales. Los menores de 3 años cuentan con un régimen específico.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "prestaciones-dependencia-saad",
+  "status": "active",
+  "summary": "Procedimiento estatal por el que se reconoce la situación de dependencia. El Programa Individual de Atención (PIA) determina después el servicio o la prestación económica que corresponde a cada persona.",
+  "targetGroups": [
+    "personas con dependencia",
+    "familias"
+  ],
+  "title": "Sistema para la Autonomía y Atención a la Dependencia (SAAD)",
+  "type": "procedure",
+  "whyItMatters": "«Las prestaciones de atención a la dependencia podrán tener la naturaleza de servicios y de prestaciones económicas…» (art. 14.1 de la Ley 39/2006)."
+}

@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles a partir del día siguiente a la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Anexo n.º 1 Solicitud de participación",
+    "Anexo n.º 2 Contenido del Proyecto de Innovación/Buenas prácticas educativas"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 23.000 euros en total, con una cuantía máxima de 1.000 euros por proyecto y centro educativo",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Concejalía de Educación y Cultura del Ayuntamiento de Móstoles",
+  "officialSourceLabel": "BOCM:BOCM-20260427-81",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-81",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro docente de titularidad pública, privada-concertada o privada no concertada en enseñanzas de ESO, Bachillerato, FP o U.F.I.L. en Móstoles. Los proyectos deben mejorar la calidad de la enseñanza y alcanzar al menos 8 puntos en la valoración.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-81",
+  "status": "active",
+  "summary": "Ayudas para centros educativos de Móstoles para desarrollar proyectos de innovación y buenas prácticas durante el curso 2025-2026.",
+  "targetGroups": [
+    "centros educativos",
+    "instituciones educativas"
+  ],
+  "title": "Convocatoria subvenciones Proyectos de Innovación y Buenas Prácticas Educativas 2025-2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Móstoles. Régimen económico. Extracto convocatoria subvenciones – Móstoles. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

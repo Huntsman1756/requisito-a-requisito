@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles a partir del día siguiente a la publicación de la convocatoria en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud de participación (Anexo n.º 1)",
+    "Contenido del proyecto teatral (Anexo n.º 2)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 10.000 euros para la convocatoria; 1.000 euros por proyecto y centro educativo",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Concejalía de Educación y Cultura del Ayuntamiento de Móstoles",
+  "officialSourceLabel": "BOCM:BOCM-20260427-79",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-79",
+  "referencePeriod": "2026",
+  "requirementsText": "Dirigida a centros de Educación Infantil y Primaria y al centro de Educación Especial de Móstoles. La concesión es en régimen de concurrencia competitiva.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-79",
+  "status": "active",
+  "summary": "Subvenciones para apoyar la participación de centros educativos de Móstoles en la Muestra de Teatro Escolar durante el curso 2025/2026.",
+  "targetGroups": [
+    "centros de Educación Infantil y Primaria",
+    "centro de Educación Especial"
+  ],
+  "title": "Convocatoria subvenciones Muestra de Teatro Escolar 2025/2026 (Móstoles)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Móstoles. Régimen económico. Extracto convocatoria subvenciones – Móstoles. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

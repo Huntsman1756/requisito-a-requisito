@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, contados a partir del primer día hábil siguiente al de la publicación del extracto en el BOE",
+  "category": "beca",
+  "documentsNeeded": [
+    "título de grado",
+    "certificación supletoria del título",
+    "documentación que acredite la situación de desempleo"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "1.250,00 € brutos mensuales y 600,00 € brutos anuales para gastos asociados por beca; cuantía total máxima 100.000 €",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Igualdad y para la Erradicación de la Violencia contra las Mujeres",
+  "officialSourceLabel": "BOE-B-2026-14244",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14244",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física de nacionalidad española o de la UE, haber finalizado estudios en 2024 o posterior, poseer el título de grado exigido, no haber disfrutado previamente de otras becas del Observatorio o la Secretaría de Estado, y encontrarse en situación de desempleo al momento de la incorporación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-14244",
+  "status": "active",
+  "summary": "Concesión de seis becas de formación dirigidas a personas físicas desempleadas con título de grado finalizado en 2024 o posterior.",
+  "targetGroups": [
+    "personas físicas desempleadas",
+    "titulados de grado"
+  ],
+  "title": "Convocatoria de Becas de formación en el Observatorio Estatal de Violencia sobre la Mujer 2026-2027",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 27 de abril de 2026, de la Secretaría de Estado de Igualdad y para la Erradicación de la Violencia contra las Mujeres, por la que se convocan las Becas de formación en el . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

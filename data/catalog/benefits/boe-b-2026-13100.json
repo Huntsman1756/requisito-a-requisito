@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: 15 días hábiles desde el día siguiente a la publicación del extracto en el BOE (abril-mayo de 2026).",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "proyecto según la línea elegida"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo",
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 30.000 euros por proyecto de la línea A (creación y producción) y hasta 15.000 euros por proyecto de la línea B. Cuantía máxima total: 1.000.000 euros.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Cultura (Secretaría de Estado de Cultura)",
+  "officialSourceLabel": "BOE-B-2026-13100",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13100",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser artista o persona investigadora con residencia fiscal permanente en territorio español, conforme a los requisitos de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-13100",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Cultura para proyectos de creación y producción artística (línea A, hasta 30.000 euros) y de investigación, comisariado y mediación (línea B, hasta 15.000 euros). Convocatoria 2026 cerrada.",
+  "targetGroups": [
+    "artistas",
+    "personas investigadoras"
+  ],
+  "title": "Ayudas a la producción e investigación artística en arte contemporáneo, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

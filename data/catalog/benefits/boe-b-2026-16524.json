@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE (publicado el 21 de mayo de 2026).",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "memoria explicativa de la entidad",
+    "descripción del proyecto",
+    "tres declaraciones responsables"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: Importe máximo total de 7.000.000,00 euros; el importe individual es proporcional a la puntuación obtenida. (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Igualdad y para la Erradicación de la Violencia contra las Mujeres",
+  "officialSourceLabel": "BOE-B-2026-16524",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16524",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad de naturaleza jurídico privada sin ánimo de lucro. Incorporar en sus estatutos la promoción de la igualdad, la perspectiva de género, la protección de los derechos humanos de las mujeres o la prevención de la violencia de género. Acreditar experiencia en proyectos de concienciación, prevención, sensibilización, investigación e innovación sobre violencia contra las mujeres.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16524",
+  "status": "active",
+  "summary": "Subvenciones públicas destinadas a entidades privadas sin ánimo de lucro para desarrollar programas de concienciación, prevención e investigación contra la violencia de género y otras formas de violencia hacia las mujeres.",
+  "targetGroups": [
+    "entidades privadas sin ánimo de lucro",
+    "organizaciones con experiencia en igualdad y violencia de género"
+  ],
+  "title": "Convocatoria de subvenciones para erradicar la violencia contra las mujeres",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 14 de mayo de 2026, de la Secretaría de Estado de Igualdad y para la Erradicación de la Violencia contra las Mujeres, por la que se convocan subvenciones públicas destinad. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

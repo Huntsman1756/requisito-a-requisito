@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Plazo de veinte días hábiles, contados a partir del día siguiente al de la publicación del extracto de la presente Resolución en el Boletín Oficial del Estado.",
+  "category": "ayuda",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe máximo individual de 50.000 €; importe máximo imputable a la subvención de 500.000 €; coste mínimo de la actividad de 5.000 €; ayuda hasta el 85% del coste.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-7475",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7475",
+  "referencePeriod": "2026",
+  "requirementsText": "Podrán concurrir entidades locales en cuyo ámbito territorial se ubiquen bienes declarados Patrimonio Mundial por la UNESCO, organismos autónomos locales con competencia de gestión directa de dichos bienes, y agrupaciones de entidades públicas sin personalidad. El coste mínimo de la actividad debe ser de 5.000 €.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-7475",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para entidades locales y organismos autónomos para financiar proyectos de conservación, protección y difusión de bienes declarados Patrimonio Mundial por la UNESCO.",
+  "targetGroups": [
+    "entidades locales",
+    "organismos autónomos locales",
+    "agrupaciones de entidades públicas sin personalidad"
+  ],
+  "title": "Ayudas para proyectos de conservación, protección y difusión de bienes Patrimonio Mundial 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 8 de marzo de 2026 de la Secretaría de Estado de Cultura por la que se convocan ayudas para proyectos de conservación, protección y difusión de bienes declarados Patrimoni. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

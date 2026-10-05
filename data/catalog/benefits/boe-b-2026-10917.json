@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 27 de mayo al 17 de junio de 2026 a las 14:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Solicitud telemática",
+    "Memoria de actividades científicas",
+    "Plan estratégico",
+    "Documentación acreditativa de la pertenencia al centro/unidad"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "80.000.000,00 euros (total); 4.500.000,00 euros (Centro Severo Ochoa); 2.250.000,00 euros (Unidad María de Maeztu); 140.350,00 euros (formación predoctoral)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Estatal de Investigación",
+  "officialSourceLabel": "BOE-B-2026-10917",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10917",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad a la que pertenezcan los centros o unidades definidos en el anexo I de la convocatoria. Deben ser organismos públicos de investigación, universidades públicas y privadas, u otros centros públicos/privados de I+D sin ánimo de lucro.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10917",
+  "status": "active",
+  "summary": "Ayudas para el fortalecimiento institucional y financiación de planes estratégicos de centros y unidades de investigación de excelencia, así como para la formación de personal investigador predoctoral.",
+  "targetGroups": [
+    "Organismos públicos de investigación",
+    "Universidades públicas y privadas",
+    "Centros públicos de I+D",
+    "Centros privados de I+D+i sin ánimo de lucro"
+  ],
+  "title": "Convocatoria 2026 de ayudas a Centros de Excelencia Severo Ochoa y Unidades María de Maeztu",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 7 de abril de 2026 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2026 de ayudas a «Centros de Excelencia Severo Ochoa» y . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

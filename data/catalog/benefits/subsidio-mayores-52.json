@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Tras agotar el paro o situación legal de desempleo. Hay que mantener la inscripción como demandante de empleo firmando el DARDE.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "documento de identidad",
+    "justificante de rentas actualizado",
+    "impreso de solicitud oficial del SEPE"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía equivalente al 80% del IPREM vigente. Se cobra hasta alcanzar la edad de jubilación ordinaria y cotiza para la jubilación por el 125% de la base mínima.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "SEPE (Servicio Público de Empleo Estatal)",
+  "officialSourceLabel": "SEPE - Tengo más de 52 años",
+  "officialSourceUrl": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/subsidio-desempleo/tengo-mas-de-52.html",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Requiere tener 52 años o más y encontrarse en una de estas dos situaciones de entrada: haber agotado una prestación contributiva por desempleo, o acreditar situación legal de desempleo con al menos 90 días cotizados. En ambos casos se exigen además, en la fecha del hecho causante: cumplir todos los requisitos para acceder a una pensión contributiva de jubilación salvo la edad (15 años cotizados, 2 de ellos dentro de los últimos 15) y haber cotizado por desempleo al menos 6 años a lo largo de la vida laboral. La vía de los 90 días solo sustituye al agotamiento de la prestación; no exime de los requisitos de cotización para jubilación y desempleo (art. 274.1 y 280.1 LGSS).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "subsidio-mayores-52",
+  "status": "active",
+  "summary": "Ayuda asistencial del SEPE para personas desempleadas mayores de 52 años que han agotado la prestación por desempleo y cumplen requisitos de jubilación.",
+  "targetGroups": [
+    "desempleados de larga duración",
+    "mayores de 52 años"
+  ],
+  "title": "Subsidio para mayores de 52 años",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Es el único subsidio de desempleo que cotiza para la jubilación, siendo un escudo vital para trabajadores mayores expulsados del mercado laboral que no encuentran nuevo empleo."
+}

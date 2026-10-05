@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a contar desde el día siguiente a la publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID del extracto de la Orden de convocatoria",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "documentación relativa a la justificación",
+    "acreditación de producción de espectáculos",
+    "documentación que acredite la condición de pyme",
+    "documentación que acredite la sede en la Comunidad de Madrid"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 6.000.000 de euros (3.000.000 para 2026 y 3.000.000 para 2027) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Cultura, Turismo y Deporte",
+  "officialSourceLabel": "BOCM:BOCM-20260428-27",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260428-27",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa de producción de espectáculos de teatro o danza con al menos 4 espectáculos producidos en los últimos seis años. Tener condición de pyme (<250 empleados, volumen de negocio <50M€ o balance <43M€). Domicilio fiscal y centros de trabajo en España, con al menos una sede en la Comunidad de Madrid (o filial en Madrid para empresas extranjeras).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260428-27",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas de producción de teatro o danza que acrediten actividad previa, con sede en Madrid y condición de pyme, para consolidar su estructura empresarial.",
+  "targetGroups": [
+    "empresas de teatro",
+    "empresas de danza",
+    "pymes culturales"
+  ],
+  "title": "Ayudas bienales para el fomento de estructuras de empresas de teatro y danza 2026-2027",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de Orden 694/2026, de la Consejería de Cultura, Turismo y Deporte, por la que se establece la convocatoria de ayudas bienales para el fomento de estructur. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

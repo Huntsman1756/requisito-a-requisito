@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 16 de enero hasta el 14 de febrero de 2026 a las 14 horas (horario peninsular)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Certificación académica personal de los estudios realizados",
+    "Certificado de evaluación del currículum vítae del director/a de la tesis doctoral",
+    "Certificado de evaluación de la Memoria del proyecto formativo y de la tesis doctoral"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Retribuciones mínimas anuales de 25.116 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2026-444",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-444",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado en un programa de doctorado en una universidad española en el curso 2025-2026, o acreditar posesión de título de máster o estar matriculado en un máster oficial que dé acceso a doctorado en 2026-2027.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-444",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para la formación de profesorado universitario en el marco del PEICTI 2024-2027, dirigida a estudiantes de doctorado o máster que accedan al doctorado.",
+  "targetGroups": [
+    "estudiantes de doctorado",
+    "estudiantes de máster",
+    "personas con discapacidad"
+  ],
+  "title": "Ayudas para la formación de profesorado universitario (FPU) 2025",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Orden Ministerial de 30 de diciembre de 2025 por la que se aprueba por tramitación anticipada la convocatoria de ayudas para la formación de profesorado universitario correspondiente al. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 30 de enero de 2026, a las 14.00 horas (hora peninsular), a partir del día siguiente a la publicación del extracto.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Propuesta de Actividades",
+    "Documentación acreditativa de cumplimiento de requisitos del RD 251/2024"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Presupuesto total estimado de 4.700.000 euros; límite de 200.000 euros por beneficiario para el programa IV.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Fondo Español de Garantía Agraria, O. A. (FEGA)",
+  "officialSourceLabel": "BOE-B-2025-47158",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47158",
+  "referencePeriod": "2025",
+  "requirementsText": "Acceso para las entidades establecidas en el artículo 3 del Real Decreto 251/2024, de 12 de marzo, que cumplan los requisitos y condicionantes del artículo 4 del citado real decreto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-47158",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para subvencionar propuestas de actividades de asesoramiento en digitalización y creación de servicios, destinadas a entidades del sector agroalimentario y forestal en el marco del PEPAC 2023-2027.",
+  "targetGroups": [
+    "entidades del sector agroalimentario y forestal",
+    "proveedores de servicios de asesoramiento"
+  ],
+  "title": "Ayudas para servicios de asesoramiento supraautonómico sector agroalimentario y forestal 2025",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 16 de diciembre 2025, del Fondo Español de Garantía Agraria, O. A. (FEGA) por la que se convocan anticipadamente en el año 2025 ayudas para servicios de asesoramiento de á. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

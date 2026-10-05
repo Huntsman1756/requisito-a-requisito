@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima por beneficiario: 30.000 euros (importe total de la convocatoria: 271.000 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-5044",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-5044",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad privada sin ánimo de lucro, radicada en España, con ámbito de actuación estatal o que implique más de una comunidad autónoma.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-5044",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para entidades sin ánimo de lucro que realicen actuaciones para favorecer el uso de TIC y productos de apoyo por parte de alumnos con necesidades educativas especiales derivadas de discapacidad.",
+  "targetGroups": [
+    "entidades privadas sin fines de lucro"
+  ],
+  "title": "Subvenciones a entidades privadas sin fines de lucro para TIC en alumnado con discapacidad",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 9 de febrero de 2026 de la Secretaría de Estado de Educación, por la que se convocan subvenciones a entidades privadas sin fines de lucro para la realización de actuacione. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

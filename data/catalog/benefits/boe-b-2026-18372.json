@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "del 10 de junio al 1 de julio de 2026 a las 14:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud telemática",
+    "documentación conforme al artículo 13 de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 6.600.000 € (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Estatal de Investigación",
+  "officialSourceLabel": "BOE-B-2026-18372",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18372",
+  "referencePeriod": "2026",
+  "requirementsText": "Podrán ser beneficiarios los organismos públicos de investigación, universidades públicas y privadas, entidades sanitarias públicas y privadas sin ánimo de lucro, Institutos de investigación sanitaria acreditados, Centros Tecnológicos, Centros de Apoyo a la Innovación Tecnológica y otros centros de I+D+i públicos y privados sin ánimo de lucro.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-18372",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para incentivar la creación de redes de investigación entre organismos públicos, universidades, centros de I+D+i y entidades sanitarias, con el fin de fomentar la colaboración y optimizar recursos.",
+  "targetGroups": [
+    "organismos públicos de investigación",
+    "universidades",
+    "centros de I+D+i",
+    "entidades sanitarias sin ánimo de lucro"
+  ],
+  "title": "Ayudas a redes de investigación 2026 (Agencia Estatal de Investigación)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de mayo de 2026 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria del año 2026 de las ayudas a redes de investigación. Ext. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

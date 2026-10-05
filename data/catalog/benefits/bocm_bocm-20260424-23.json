@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles a contar desde el día siguiente al de la publicación del extracto en el BOCM (publicado el 24 de abril de 2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "formulario anexo a la convocatoria",
+    "documentación que debe acompañar la solicitud"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de 200.000 euros; importe máximo de 4.500 euros por titular y explotación",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Medio Ambiente, Agricultura e Interior",
+  "officialSourceLabel": "BOCM:BOCM-20260424-23",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-23",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titular de explotaciones ganaderas de especies bovina, ovina, caprina y/o equina en régimen extensivo, localizadas en los municipios del anexo I de la orden por haberse constatado riesgo significativo de ataques de lobos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-23",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para titulares de explotaciones ganaderas extensivas en la Comunidad de Madrid que promuevan la adopción de medidas de protección frente a ataques de lobo ibérico.",
+  "targetGroups": [
+    "titulares de explotaciones ganaderas extensivas",
+    "personas físicas",
+    "personas jurídicas privadas",
+    "agrupaciones sin personalidad jurídica"
+  ],
+  "title": "Ayudas para medidas de protección contra el lobo ibérico 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 1396/2026, de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se establece, para el ejercicio 2026, la convocatoria de ayu. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

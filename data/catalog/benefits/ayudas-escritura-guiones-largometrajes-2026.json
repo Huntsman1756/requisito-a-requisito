@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo finalizó el 23 de julio de 2026.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "subvencion",
+  "displayTitle": "Ayudas ICAA a guiones de largometraje (30.000 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Proyecto de guion y documentación de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo",
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "30.000 € por proyecto de ficción; 20.000 € en otras modalidades.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA), Ministerio de Cultura",
+  "officialSourceLabel": "BOE — Convocatoria de ayudas a la escritura de guiones de largometraje 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17504",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Proyectos de guion de largometraje presentados por personas físicas o jurídicas según las bases de la convocatoria del ICAA.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "ayudas-escritura-guiones-largometrajes-2026",
+  "status": "active",
+  "summary": "Ayudas del Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA) para la escritura de guiones de largometraje: 30.000 € por proyecto de ficción y 20.000 € en otras modalidades, con una dotación de 4.000.000 €.",
+  "targetGroups": [
+    "guionistas y equipos de proyectos de largometraje"
+  ],
+  "title": "Ayudas a la escritura de guiones de largometraje 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Financia la fase de escritura de nuevos largometrajes españoles."
+}

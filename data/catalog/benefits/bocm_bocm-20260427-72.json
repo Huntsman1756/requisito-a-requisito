@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el día siguiente de su publicación en la sede electrónica hasta el 17 de mayo de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "formulario de inscripción"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "1.000 euros (desglosados en premios de 300, 250, 200, 150 y 100 euros)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Galapagar",
+  "officialSourceLabel": "BOCM:BOCM-20260427-72",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-72",
+  "referencePeriod": "2026",
+  "requirementsText": "Edades comprendidas entre 14 y 35 años (inclusive) en la fecha de cierre del plazo. No estar vinculado a contratos discográficos en vigor. Para el premio especial, al menos un integrante debe estar empadronado en Galapagar.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-72",
+  "status": "active",
+  "summary": "Subvenciones para fomentar la música juvenil mediante premios a solistas y grupos de música noveles de entre 14 y 35 años.",
+  "targetGroups": [
+    "solistas de música",
+    "grupos de música",
+    "jóvenes de 14 a 35 años"
+  ],
+  "title": "Convocatoria subvenciones Festival de grupos jóvenes, Galapagar 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Galapagar. Régimen económico. Extracto convocatoria subvenciones – Galapagar. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

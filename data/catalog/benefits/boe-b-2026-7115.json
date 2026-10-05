@@ -1,0 +1,49 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Veinte días hábiles a partir del día siguiente a la publicación del extracto en el BOE (7 de marzo de 2026)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "certificado electrónico de persona física",
+    "clave concertada",
+    "documentación del proyecto"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo",
+      "funcionario",
+      "investigador",
+      "docente"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cobertura de hasta el 50% del coste total del proyecto",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Cultura",
+  "officialSourceLabel": "BOE-B-2026-7115",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7115",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física con nacionalidad y/o residencia legal en países específicos (EE. UU., Canadá, Brasil, Japón, etc.) y tener vinculación laboral o académica actual con una universidad o centro de investigación en dichos países.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-7115",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Cultura para personas físicas con vinculación universitaria en el extranjero que promuevan la cultura y lengua españolas mediante publicaciones, investigaciones o proyectos creativos.",
+  "targetGroups": [
+    "personas físicas",
+    "investigadores",
+    "profesores universitarios",
+    "artistas"
+  ],
+  "title": "Programa de Ayudas Hispanex para personas físicas en el ámbito universitario extranjero",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Orden de 26 de febrero de 2026 por la que se convoca el Programa de Ayudas Hispanex para personas físicas en el ámbito universitario extranjero para la promoción exterior de la lengua y. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

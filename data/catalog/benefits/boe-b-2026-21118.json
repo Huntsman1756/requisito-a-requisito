@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, a partir del día siguiente a la publicación del presente extracto en el Boletín Oficial del Estado.",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Cuantía máxima por beneficiario: 3.000 euros por circo (importe total de la convocatoria: 40.000 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-21118",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21118",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa o empresario individual dedicado a la actividad circense, con itinerancia permanente durante el período lectivo y mantener un mínimo de tres alumnos en edad de escolarización obligatoria matriculados en educación primaria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-21118",
+  "status": "active",
+  "summary": "Subvenciones destinadas a empresas circenses para garantizar la atención educativa a los niños en edad de escolarización obligatoria que viajan con los circos durante el curso 2026-2027.",
+  "targetGroups": [
+    "empresas circenses",
+    "empresarios individuales dedicados a la actividad circense"
+  ],
+  "title": "Convocatoria de subvenciones a empresas circenses para atención educativa a población itinerante",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 15 de junio de 2026 de la Secretaría de Estado de Educación, por la que se convocan subvenciones a empresas circenses para la atención educativa a la población itinerante . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

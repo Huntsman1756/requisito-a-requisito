@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles contados a partir del siguiente al de la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "documentación justificativa de la subvención",
+    "resto de documentación exigida"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 90.000,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Cultura, Turismo y Deporte",
+  "officialSourceLabel": "BOCM:BOCM-20260424-27",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-27",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser personas físicas profesionales autónomos dados de alta en el Impuesto de Actividades Económicas en la Comunidad de Madrid, o empresas. Se excluyen las instituciones sin ánimo de lucro y las agrupaciones sin personalidad jurídica propia.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-27",
+  "status": "active",
+  "summary": "Convocatoria de ayudas públicas para librerías de la Comunidad de Madrid destinadas a la modernización e innovación de sus establecimientos y procesos de negocio.",
+  "targetGroups": [
+    "librerías",
+    "autónomos",
+    "empresas"
+  ],
+  "title": "Ayudas a la modernización de librerías 2026 (Orden 604/2026)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 604/2026, de 14 de abril, del Consejero de Cultura, Turismo y Deporte, por la que se convocan las ayudas a la modernización de las librerías c. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

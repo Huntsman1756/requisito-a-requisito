@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Veinte días hábiles contados a partir del día siguiente al de la publicación del extracto en el BOE (21 de mayo de 2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "memoria o proyecto",
+    "información conforme al Anexo III de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Crédito máximo de 800.000 euros; cuantía máxima por entidad de 500.000 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cooperación Internacional",
+  "officialSourceLabel": "BOE-B-2026-16450",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16450",
+  "referencePeriod": "2026",
+  "requirementsText": "Los beneficiarios deben ser fundaciones y asociaciones dependientes de partidos políticos con representación parlamentaria en el ámbito estatal. Las actividades deben contribuir a la democracia y las metas de la Agenda 2030 (ODS 5, 10 y 16) y articularse mediante conferencias, encuentros o publicaciones. Quedan excluidas las misiones de observación electoral.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16450",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para fundaciones y asociaciones dependientes de partidos políticos con representación parlamentaria estatal, destinadas a financiar actividades de cooperación internacional alineadas con la Agenda 2030.",
+  "targetGroups": [
+    "fundaciones dependientes de partidos políticos",
+    "asociaciones dependientes de partidos políticos"
+  ],
+  "title": "Subvenciones Cooperación Española 2026 a fundaciones y asociaciones de partidos políticos",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 19 de mayo de 2026 de la Secretaría de Estado de Cooperación Internacional por la que se convocan subvenciones, correspondientes al año 2026, para la realización de activi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

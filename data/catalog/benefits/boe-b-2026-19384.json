@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: 15 días naturales desde el día siguiente a la publicación del extracto en el BOE (junio de 2026).",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "acreditación de la condición de docente extranjero en activo"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Importe global máximo de la convocatoria: 135.000 euros. Las cuantías individualizadas se reflejan en los presupuestos del convenio con la entidad colaboradora.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Educación, Formación Profesional y Deportes (Subsecretaría)",
+  "officialSourceLabel": "BOE-B-2026-19384",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-19384",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser docente extranjero en activo de español como lengua extranjera o de materias no lingüísticas impartidas total o parcialmente en español en enseñanza reglada no universitaria de sistemas educativos extranjeros.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-19384",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Educación para que docentes extranjeros en activo participen en cursos de formación en España. Convocatoria 2026 cerrada (15 días naturales desde su publicación).",
+  "targetGroups": [
+    "docentes extranjeros",
+    "profesorado de español"
+  ],
+  "title": "Ayudas para cursos de formación en España para profesorado extranjero de español, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

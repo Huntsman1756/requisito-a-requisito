@@ -1,0 +1,49 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, a partir del día siguiente al de la publicación del extracto de esta Resolución en el «Boletín Oficial del Estado»",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "memoria del proyecto",
+    "documentación que acredite la capacidad y adecuación para la realización de la actividad",
+    "documentación que acredite la financiación propia (mínimo 10%)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 234.000 € (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-14385",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14385",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona jurídica sin ánimo de lucro (pública o privada), legalmente constituida. Acreditar capacidad para la actividad. Financiación propia mínima del 10% del coste total. No estar incurso en prohibiciones de la Ley 38/2003 ni ser deudor por reintegro de subvenciones.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-14385",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para la realización de proyectos de salvaguarda del Patrimonio Cultural Inmaterial, dirigidas a personas jurídicas sin ánimo de lucro.",
+  "targetGroups": [
+    "personas jurídicas sin ánimo de lucro",
+    "ayuntamientos",
+    "diputaciones",
+    "mancomunidades",
+    "entes locales",
+    "asociaciones",
+    "instituciones sin fines de lucro",
+    "universidades",
+    "entidades dependientes de comunidades autónomas"
+  ],
+  "title": "Ayudas para proyectos de salvaguarda del Patrimonio Cultural Inmaterial 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución del 30 de abril de la Secretaría de Estado de Cultura por la que se convocan ayudas, en régimen de concurrencia competitiva, para proyectos de salvaguarda del Patrimonio Cult. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

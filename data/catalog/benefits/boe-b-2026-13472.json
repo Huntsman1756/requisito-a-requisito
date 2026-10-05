@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "30 días hábiles desde la publicación (BOE 29/04/2026) — plazo cerrado.",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud de participación",
+    "documentación acreditativa de las acciones desarrolladas"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 15 premios sin dotación económica individual (seminario de formación + diploma); cuantía máxima de gasto de la convocatoria 50.000 euros.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Española de Cooperación Internacional para el Desarrollo (AECID)",
+  "officialSourceLabel": "BOE-B-2026-13472",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13472",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centros educativos españoles sostenidos con fondos públicos que impartan enseñanzas infantiles, básicas, secundaria postobligatoria, de personas adultas o de régimen especial, y haber desarrollado acciones educativas para la solidaridad global durante los cursos 2024-2025 y 2025-2026.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13472",
+  "status": "active",
+  "summary": "Convocatoria de premios para centros educativos públicos que hayan desarrollado proyectos de educación para el desarrollo sostenible y ciudadanía global.",
+  "targetGroups": [
+    "centros educativos públicos",
+    "centros de educación especial"
+  ],
+  "title": "Premio Nacional de Educación para la Solidaridad Global \"Vicente Ferrer\" 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Dirección de la Agencia Española de Cooperación Internacional para el Desarrollo (AECID) por la que se convoca la décimo quinta edición del Premio Nacional de Educación. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

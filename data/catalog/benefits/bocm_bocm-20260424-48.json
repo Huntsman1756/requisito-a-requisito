@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "del 3 al 21 de junio de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "vídeo en formato MP4",
+    "dos canciones en formato MP3",
+    "dossier del solista o grupo (trayectoria y enlaces a vídeos de actuaciones musicales)",
+    "certificaciones acreditativas o declaración responsable (si no se autoriza consulta de oficio)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Primer premio: 2.500,00 euros. Segundo premio: 1.500,00 euros. Tercer premio: 1.000,00 euros.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Distrito de Arganzuela (Ayuntamiento de Madrid)",
+  "officialSourceLabel": "BOCM:BOCM-20260424-48",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-48",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mayor de edad, residente en la Comunidad de Madrid, no haber obtenido el primer premio en las dos últimas ediciones, no tener contrato vigente con compañía discográfica y no ser miembro del jurado.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-48",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para solistas o grupos musicales residentes en la Comunidad de Madrid para promocionar la creación artística e innovación en música.",
+  "targetGroups": [
+    "solistas musicales",
+    "grupos musicales",
+    "personas físicas"
+  ],
+  "title": "Premios Arganzuela 2026 IX Edición de Música Popular",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Distrito de Arganzuela. Extracto convocatoria subvenciones – Madrid. Régimen económico. Distrito de Arganzuela. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

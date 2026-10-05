@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 7 de abril de 2026 a las 10:00.00 al 10 de abril de 2026 a las 14:00.00 (hora peninsular)",
+  "category": "ayuda",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 100.000.000,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial (SEPIDES E.P.E.)",
+  "officialSourceLabel": "BOE-B-2026-8564",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-8564",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser sociedades mercantiles con personalidad jurídica propia, legalmente constituidas en la UE, inscritas en el registro correspondiente, que desarrollen actividad industrial en los sectores del Anexo I y no formen parte del sector público.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-8564",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para sociedades mercantiles que desarrollen actividad industrial en la producción de baterías y pilas de combustible de hidrógeno para vehículos eléctricos.",
+  "targetGroups": [
+    "sociedades mercantiles",
+    "empresas industriales"
+  ],
+  "title": "Ayudas a proyectos de producción de baterías y pilas de combustible de hidrógeno (PERTE VEC)",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 18 de marzo de 2026 de la Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial Entidad Pública Empresarial por la que se efectúa la convocatoria de concesión . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

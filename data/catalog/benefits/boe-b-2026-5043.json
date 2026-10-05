@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE (hasta las 14:00 horas del último día)",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima por beneficiario: 30.000 euros (importe total de la convocatoria: 271.000 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-5043",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-5043",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad privada sin ánimo de lucro, radicada en España y con ámbito de actuación estatal o que implique más de una comunidad autónoma.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-5043",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para entidades privadas sin ánimo de lucro destinadas a la atención educativa de personas adultas con necesidades educativas especiales durante el curso 2026-2027.",
+  "targetGroups": [
+    "entidades privadas sin ánimo de lucro"
+  ],
+  "title": "Subvenciones a entidades privadas sin fines de lucro para atención educativa de personas adultas con NEE",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 6 de febrero de 2026 de la Secretaría de Estado de Educación, por la que se convocan subvenciones a entidades privadas sin fines de lucro para la realización de actuacione. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

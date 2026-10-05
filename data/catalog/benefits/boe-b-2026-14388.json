@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales a partir del día siguiente a la publicación del extracto en el BOE (publicado el 6 de mayo de 2026, finaliza a las 14 horas del último día).",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "DNI/NIE",
+    "Certificado de empadronamiento",
+    "Estatutos de la entidad",
+    "Cuentas anuales de los últimos 3 años (para sociedades de capital sin ánimo de lucro)",
+    "Documentación acreditativa de inscripción en el Registro Público correspondiente"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe por proyecto: mínimo 3.000 euros y máximo 25.000 euros. Cuantía total de la convocatoria: 200.000 euros (con posibilidad de hasta 1.200.000 euros por modificación presupuestaria).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de las Mujeres",
+  "officialSourceLabel": "BOE-B-2026-14388",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14388",
+  "referencePeriod": "2026",
+  "requirementsText": "Personas físicas: mayor de 18 años, nacionalidad española/UE/extracomunitaria con residencia en España, dominio del español y desarrollo del proyecto en territorio español. Entidades: fines estatutarios de creación artística/cultural e igualdad de género, al menos un 70% de mujeres en la Junta Directiva (salvo entidades exclusivamente femeninas), legalmente constituidas e inscritas, implantación en ámbito español.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-14388",
+  "status": "active",
+  "summary": "Subvenciones del Instituto de las Mujeres para fomentar la igualdad de género a través de la promoción de la creación, producción y difusión artística y cultural, dirigidas a personas físicas y entidades privadas sin ánimo de lucro.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades privadas sin ánimo de lucro",
+    "ONGs",
+    "asociaciones"
+  ],
+  "title": "Convocatoria de subvenciones para igualdad de género en creación artística y cultural 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución 28 de abril de 2026, de la Directora del Instituto de las Mujeres, por la que se convocan subvenciones para el fomento de la igualdad de género, destinadas a la promoción de . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

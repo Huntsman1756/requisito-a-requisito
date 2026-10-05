@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días naturales contados a partir del primer día hábil tras la publicación de la Resolución en BOE",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud del proyecto",
+    "modelo de adhesión a la solicitud (Anexo II) firmado digitalmente por cada docente participante",
+    "documentación oficial acreditativa de la participación en acción Erasmus + (solo para categoría 6)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "docente"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "49.740,00 euros (cuantía máxima total); importe individual máximo de 4.974 euros por premio",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-1399",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-1399",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser profesorado de centros públicos o privados que imparta enseñanzas oficiales no universitarias. Haber recibido un sello de calidad nacional eTwinning 2025. No haber obtenido Premio Nacional eTwinning en las convocatorias 2023, 2024 y 2025. Presentar una única solicitud por proyecto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-1399",
+  "status": "active",
+  "summary": "Convocatoria de 10 premios en especie (invitaciones a conferencias y ceremonias) para profesorado de centros públicos y privados que imparten enseñanzas oficiales no universitarias con sello eTwinning 2025.",
+  "targetGroups": [
+    "profesorado de enseñanzas oficiales no universitarias"
+  ],
+  "title": "Premios Nacionales eTwinning 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Educación de 28 de noviembre de 2025, por la que se convocan los Premios Nacionales eTwinning 2026 dirigidos a profesorado de enseñanzas oficial. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

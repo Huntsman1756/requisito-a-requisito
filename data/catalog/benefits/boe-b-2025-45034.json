@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 22 de diciembre de 2025, a las 12.00 del mediodía, hora peninsular.",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "443.523,63 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2025-45034",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-45034",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser alumnado de centros docentes españoles sostenidos con fondos públicos que curse 3º y 4º de ESO, FP Básica, Bachillerato, Ciclos Formativos de Grado Medio (FP o Enseñanzas Artísticas), o transición a la vida adulta para alumnado con necesidades educativas especiales. Los grupos deben estar compuestos por 20 a 25 alumnos y 2 profesores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-45034",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para que grupos de centros docentes españoles participen en un programa educativo en pueblos abandonados durante el periodo lectivo de 2026.",
+  "targetGroups": [
+    "alumnado de centros docentes públicos",
+    "profesores"
+  ],
+  "title": "Ayudas para el programa nacional Recuperación y utilización educativa de pueblos abandonados 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 2 de diciembre de 2025 de la Secretaría de Estado de Educación, por la que se convocan ayudas para participar en el programa nacional Recuperación y utilización educativa . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

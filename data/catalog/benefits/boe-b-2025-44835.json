@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 18 de diciembre de 2025, a las 12.00 del mediodía, hora peninsular",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "238.108,57 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2025-44835",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-44835",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser centros docentes españoles sostenidos con fondos públicos. La convocatoria se realiza en régimen de concurrencia competitiva.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-44835",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para centros docentes públicos españoles que participen en actividades de educación ambiental en los centros de Viérnoles (Cantabria) y Villardeciervos (Zamora) durante el año 2026.",
+  "targetGroups": [
+    "centros docentes públicos"
+  ],
+  "title": "Ayudas para participar en el programa nacional \"Centros de Educación Ambiental\" 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 2 de diciembre de 2026 de la Secretaría de Estado de Educación, por la que se convocan ayudas para participar en el programa nacional \"Centros de Educación Ambiental\" du. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

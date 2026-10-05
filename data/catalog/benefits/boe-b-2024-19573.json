@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "del 12 de junio al 2 de julio de 2024 a las 14:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud telemática",
+    "documentación conforme al artículo 13 de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 5.000.000 € (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Estatal de Investigación",
+  "officialSourceLabel": "BOE-B-2024-19573",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2024-19573",
+  "referencePeriod": "2024",
+  "requirementsText": "Ser entidad beneficiaria según el artículo 5: organismos públicos de investigación, universidades, entidades sanitarias sin ánimo de lucro, institutos de investigación sanitaria acreditados, centros tecnológicos y centros de I+D+i sin ánimo de lucro.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2024-19573",
+  "status": "active",
+  "summary": "Ayudas para incentivar la creación de redes de investigación entre organismos públicos, universidades y centros de I+D+i sin ánimo de lucro.",
+  "targetGroups": [
+    "organismos públicos de investigación",
+    "universidades",
+    "entidades sanitarias sin ánimo de lucro",
+    "centros tecnológicos",
+    "centros de I+D+i"
+  ],
+  "title": "Convocatoria 2024 de ayudas a redes de investigación (AEI)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 27 de mayo de 2024 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria del año 2024 de las ayudas a redes de investigación. Ext. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

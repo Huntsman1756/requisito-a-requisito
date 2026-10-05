@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: quince días hábiles desde el día siguiente a la publicación del extracto en el BOE (mayo-junio de 2026), hasta las 14:00 horas.",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "certificado de firma electrónica si se presenta por vía telemática"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Importe total de las ayudas: 137.960 euros (máximo 13 ayudas).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Centro de Estudios Políticos y Constitucionales",
+  "officialSourceLabel": "BOE-B-2026-15543",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15543",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser joven con titulación universitaria superior conforme a la convocatoria para realizar el Máster Universitario Oficial en Derecho Constitucional que imparte el CEPC.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-15543",
+  "status": "active",
+  "summary": "Hasta 13 ayudas del Centro de Estudios Políticos y Constitucionales para jóvenes titulados universitarios que cursen el Máster Universitario Oficial en Derecho Constitucional. Convocatoria 2026 cerrada.",
+  "targetGroups": [
+    "jóvenes titulados universitarios"
+  ],
+  "title": "Ayudas de formación del CEPC para el Máster en Derecho Constitucional, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

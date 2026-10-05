@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: solicitudes del 1 de mayo al 30 de junio de 2026.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "modelo de solicitud normalizado",
+    "acreditación de la condición de víctima de violencia de género",
+    "cuenta bancaria para el pago único"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Presupuesto de 40.951,13 euros ampliable en 35.000 euros; el importe individual se asigna por baremación de puntos.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ayuntamiento de Fuenlabrada",
+  "officialSourceLabel": "BOCM-20260427-68 (BDNS 899883)",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-68",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mujer víctima de violencia de género residente en Fuenlabrada, mayor de edad o emancipada, con medidas cautelares, orden de protección o sentencia condenatoria vigente según la convocatoria, y sin renta anual superior a 35.000 euros brutos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-68",
+  "status": "active",
+  "summary": "Ayudas del Ayuntamiento de Fuenlabrada para cubrir necesidades básicas de mujeres víctimas de violencia de género residentes en el municipio, por baremación de puntos. Solicitudes del 1 de mayo al 30 de junio de 2026 (cerrada).",
+  "targetGroups": [
+    "mujeres víctimas de violencia de género",
+    "vecinas de Fuenlabrada"
+  ],
+  "title": "Ayudas económicas a mujeres víctimas de violencia de género de Fuenlabrada, 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial del Estado",
+  "category": "beca",
+  "documentsNeeded": [
+    "acreditación de nota media",
+    "documentación que acredite la finalización del curso"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Cobertura de matrícula, alojamiento y manutención; reembolso de desplazamiento hasta 270 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Universidad Internacional Menéndez Pelayo",
+  "officialSourceLabel": "BOE-B-2026-17507",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17507",
+  "referencePeriod": "2026",
+  "requirementsText": "Haber finalizado el último curso del bachillerato o del ciclo formativo de grado superior de formación profesional y acreditar una nota media igual o superior a 9,60 puntos sobre 10 en el conjunto de los dos cursos del bachillerato o del correspondiente ciclo formativo de grado superior.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17507",
+  "status": "active",
+  "summary": "Convocatoria de 80 becas para estudiantes que hayan finalizado bachillerato o FP superior con nota media >= 9,60, para participar en el Aula de Verano en Santander.",
+  "targetGroups": [
+    "estudiantes de bachillerato",
+    "estudiantes de formación profesional de grado superior"
+  ],
+  "title": "Becas Aula de Verano Ortega y Gasset de iniciación a la Universidad 2026",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 26 de mayo de 2026, de la Universidad Internacional Menéndez Pelayo, por la que se convocan becas para participar en el «Aula de Verano \"Ortega y Gasset\" de iniciación a. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

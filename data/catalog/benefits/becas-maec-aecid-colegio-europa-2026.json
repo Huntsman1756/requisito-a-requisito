@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas MAEC-AECID Colegio de Europa (23.500 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Admisión en el Colegio de Europa y documentación académica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "23.500 € por beca (dotación: 282.000 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Asuntos Exteriores — AECID",
+  "officialSourceLabel": "BOE — Convocatoria de becas MAEC-AECID para el Colegio de Europa 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16320",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Jóvenes graduados españoles admitidos en el Colegio de Europa, según las bases de la convocatoria MAEC-AECID.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-maec-aecid-colegio-europa-2026",
+  "status": "active",
+  "summary": "Becas del Ministerio de Asuntos Exteriores (MAEC-AECID) para que jóvenes graduados españoles cursen estudios en el Colegio de Europa: 23.500 € por beca, con una dotación global de 282.000 €.",
+  "targetGroups": [
+    "jóvenes graduados españoles"
+  ],
+  "title": "Becas MAEC-AECID para el Colegio de Europa 2026",
+  "type": "scholarship",
+  "whyItMatters": "Financia un curso completo en el Colegio de Europa, puerta a las carreras europeas."
+}

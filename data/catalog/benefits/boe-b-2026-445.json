@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 16 de enero de 2026 hasta el 13 de febrero de 2026, a las 14,00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Solicitud cumplimentada",
+    "Memoria justificativa (máx. 1.000 palabras) con V.º B.º del director de tesis",
+    "Acreditación documental de aceptación del centro/grupo de investigación de destino",
+    "Autorización del centro de adscripción"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "1.500 € mensuales para alojamiento y manutención; hasta 600 € o 1.200 € para gastos de viaje; hasta 200 € mensuales para seguro médico",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2026-445",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-445",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar disfrutando de ayudas FPU en la fecha de cierre del plazo, cumplir los requisitos específicos de cada tipo de ayuda complementaria y mantener la condición de beneficiario FPU durante la actuación financiada.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-445",
+  "status": "active",
+  "summary": "Convocatoria de ayudas complementarias de movilidad y traslados temporales destinadas a personas beneficiarias de ayudas FPU (Formación del Profesorado Universitario) para estancias en centros extranjeros o españoles.",
+  "targetGroups": [
+    "beneficiarios de ayudas FPU",
+    "doctorandos"
+  ],
+  "title": "Ayudas complementarias para beneficiarios de ayudas FPU 2025 (Plan Estatal I+D+i 2024-2027)",
+  "type": "education_support",
+  "whyItMatters": "Extracto de Resolución de 30 de diciembre de 2025 de la Secretaría de Estado de Ciencia, Innovación y Universidades, por la que se aprueba por tramitación anticipada la convocatoria de ayudas compleme. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

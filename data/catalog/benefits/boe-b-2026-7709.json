@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días a contar desde el día siguiente a la publicación del extracto en el BOE (publicado el 13 de marzo de 2026)",
+  "category": "ayuda",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía total de 800.000 euros; máximo 70.000 euros por proyecto (130.000 euros para animación)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Dirección General del Instituto de la Cinematografía y de las Artes Audiovisuales",
+  "officialSourceLabel": "BOE-B-2026-7709",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7709",
+  "referencePeriod": "2026",
+  "requirementsText": "Los beneficiarios deben ser empresas productoras independientes. Si el cortometraje es realizado por varias empresas, estas deben constituir una agrupación de interés económico según la Ley General de Subvenciones.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-7709",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas productoras independientes para la producción de cortometrajes en el año 2026.",
+  "targetGroups": [
+    "empresas productoras independientes"
+  ],
+  "title": "Ayudas a la producción de cortometrajes realizados 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución 11 de marzo de 2026 de la Dirección General del Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan para el año 2026 ayudas a la producción de. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

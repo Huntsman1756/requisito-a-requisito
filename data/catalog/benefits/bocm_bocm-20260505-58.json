@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a contar desde el siguiente de la publicación de la convocatoria en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "DNI",
+    "Certificado de empadronamiento",
+    "Justificante de escolarización",
+    "Justificante de renta",
+    "Certificado de estar al corriente de impuestos municipales"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 715.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Alcobendas",
+  "officialSourceLabel": "BOCM:BOCM-20260505-58",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260505-58",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar empadronados en Alcobendas (alumno y solicitante) con antigüedad desde el 1 de septiembre de 2025; alumno escolarizado en centro público de Madrid (Infantil o Primaria); renta per cápita familiar no superior a 9.500 euros anuales en 2024; estar al corriente de impuestos municipales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260505-58",
+  "status": "active",
+  "summary": "Convocatoria de ayudas económicas para familias de Alcobendas destinadas a cubrir el coste del comedor escolar para el curso 2025-2026, sujeta a concurrencia competitiva y límite de renta.",
+  "targetGroups": [
+    "familias de Alcobendas",
+    "alumnos de Infantil y Primaria"
+  ],
+  "title": "Ayudas para comedor escolar curso 2025-2026 (Alcobendas)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Alcobendas. Régimen económico. Extracto convocatoria subvenciones – Alcobendas. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

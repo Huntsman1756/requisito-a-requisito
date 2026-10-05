@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el día siguiente a la publicación en el BOE hasta el 31 de enero de 2026",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud de candidatura",
+    "documentación justificativa de la iniciativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "3.000,00 € (Modalidad A); Honorífico sin dotación económica (Modalidad B)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Española de Protección de Datos",
+  "officialSourceLabel": "BOE-B-2025-42790",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-42790",
+  "referencePeriod": "2025",
+  "requirementsText": "Presentar iniciativas (programas, recursos didácticos, campañas) que promuevan la protección de datos. Modalidad A: Centros educativos, docentes, universidades, asociaciones. Modalidad B: Grupos de investigación, organizaciones, asociaciones, investigadores/as.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-42790",
+  "status": "active",
+  "summary": "Convocatoria de premios para reconocer iniciativas que promuevan el conocimiento y ejercicio del derecho a la protección de datos, dirigida a centros educativos, docentes, investigadores y organizaciones.",
+  "targetGroups": [
+    "centros educativos",
+    "docentes",
+    "universidades",
+    "asociaciones de estudiantes",
+    "asociaciones de profesorado",
+    "grupos de investigación",
+    "organizaciones",
+    "plataformas",
+    "investigadores"
+  ],
+  "title": "Premio a la formación, educación y concienciación en protección de datos 2025",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Agencia Española de Protección de Datos por la que se aprueban las bases reguladoras y se convoca el Premio a la formación, educación y concienciación en protección de . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

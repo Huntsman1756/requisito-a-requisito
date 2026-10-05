@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 15 de diciembre de 2025 hasta las 13 horas del 16 de enero de 2026 (hora peninsular española)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud firmada electrónicamente por el representante legal de la entidad solicitante",
+    "resto de documentación de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "investigador"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 1.000.000 de euros (importe global máximo estimativo) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Fundación Española para la Ciencia y la Tecnología (FECYT)",
+  "officialSourceLabel": "BOE-B-2025-44313",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-44313",
+  "referencePeriod": "2025",
+  "requirementsText": "Podrán ser solicitantes las entidades con personalidad jurídica propia, válidamente constituidas, con residencia fiscal o establecimiento permanente en España, donde el personal participante esté vinculado mediante relación laboral formalizada legalmente.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-44313",
+  "status": "active",
+  "summary": "Ayudas para la realización de estancias de personal investigador perteneciente a entidades beneficiarias, dirigidas a ejecutar actividades de asesoramiento científico e intercambio de conocimiento en la Administración General del Estado.",
+  "targetGroups": [
+    "entidades con personalidad jurídica propia",
+    "personal investigador vinculado laboralmente"
+  ],
+  "title": "Convocatoria de ayudas para estancias de personal investigador en políticas públicas 2025 (FECYT)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 28 de noviembre de 2025, de la Dirección General de la Fundación Española para la Ciencia y la Tecnología, F.S.P.(FECYT), por la que se publica la Convocatoria del procedi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

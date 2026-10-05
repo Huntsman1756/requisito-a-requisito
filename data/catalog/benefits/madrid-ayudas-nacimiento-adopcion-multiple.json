@@ -1,0 +1,58 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Acceso permanente por nacimiento/adopción múltiple: plazo de 60 días naturales desde el hecho causante (normas reguladoras BOCM 28/12/2023).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "Solicitud oficial de la CM",
+    "DNI / NIE completado con empadronamiento en la CC.AA.",
+    "Libro de Familia de la unidad completa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "general",
+      "monoparental",
+      "familia-numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "1.800 euros por cada hijo nacido o adoptado en nacimiento o adopción múltiple (3.600 euros gemelos, 5.400 euros trillizos).",
+  "lastReviewedAt": "2026-03-30",
+  "managingBody": "Comunidad de Madrid (Asuntos Sociales / Familia)",
+  "officialSourceLabel": "Comunidad de Madrid - Administración",
+  "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-nacimiento-o-adopcion-multiple",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Residencia legal en la Comunidad de Madrid. Ojo al requisito temporal de empadronamiento que pueda marcar la convocatoria anual vigente y acreditar documentalmente el parto múltiple de 2 o más hijos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+  "status": "active",
+  "summary": "Ayuda autonómica de pago único para compensar el fuerte impacto económico que supone enfrentarse a un nacimiento o adopción de dos o más hijos simultáneamente en la Comunidad de Madrid.",
+  "targetGroups": [
+    "familias con partos múltiples",
+    "familias residentes en Madrid"
+  ],
+  "title": "Comunidad de Madrid: Ayudas por parto o adopción múltiple",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Absorbe parte del impacto económico inmediato de equipar el hogar para varios hijos a la vez (cunas, carritos, sillitas de coche y bienes de cuidado en duplicado o triplicado en el mismo mes)."
+}

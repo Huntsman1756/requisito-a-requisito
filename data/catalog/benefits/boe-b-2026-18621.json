@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles después del día siguiente a la publicación del extracto en el BOE, finalizando a las 12:00 horas.",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total máximo de 75.000,00 euros. Se otorgarán un máximo de diez reconocimientos de 7.500 euros cada uno.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-18621",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18621",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser un centro educativo no universitario español sostenido con fondos públicos. Asumir un compromiso firme con el desarrollo sostenible y la ciudadanía global.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-18621",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para fomentar el enfoque escolar integral para la sostenibilidad y la ciudadanía global en centros educativos no universitarios españoles sostenidos con fondos públicos.",
+  "targetGroups": [
+    "centros educativos no universitarios españoles sostenidos con fondos públicos"
+  ],
+  "title": "Reconocimiento a Centros Educativos Sostenibles",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución, de 1 de junio de 2026, de la Secretaría de Estado de Educación, por la que se convoca el Reconocimiento a Centros Educativos Sostenibles. Extracto de la Resolución, de 1 de . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

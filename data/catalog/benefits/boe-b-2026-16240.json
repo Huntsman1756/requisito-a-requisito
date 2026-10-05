@@ -1,0 +1,49 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Veinte días hábiles a partir del día siguiente al de la publicación de este extracto en el BOE",
+  "category": "empleo",
+  "documentsNeeded": [
+    "breve currículum",
+    "memoria justificativa",
+    "copia del trabajo presentado (impreso o digital)",
+    "URL del trabajo publicado",
+    "dispositivo USB con el trabajo"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "20.000,00 euros distribuidos en cuatro premios de 5.000,00 euros cada uno",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Juventud",
+  "officialSourceLabel": "BOE-B-2026-16240",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16240",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física mayor de edad, nacionalidad española o extranjero con residencia legal en España, no superar los 35 años de edad al finalizar el plazo de presentación, y presentar trabajos publicados entre el 10 de mayo de 2025 y la fecha de publicación del extracto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16240",
+  "status": "active",
+  "summary": "Convocatoria de premios para reconocer el trabajo de jóvenes periodistas o comunicadores que hayan contribuido al fomento de valores cívicos, sociales y de igualdad.",
+  "targetGroups": [
+    "jóvenes periodistas",
+    "comunicadores",
+    "personas físicas"
+  ],
+  "title": "Premios Injuve de Periodismo y Comunicación 2026",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución del Organismo Autónomo Instituto de la Juventud, por la que se convocan los Premios Injuve de Periodismo y Comunicación en el año 2026. Extracto de la Resolución del Organism. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

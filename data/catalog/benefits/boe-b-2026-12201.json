@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Desde el 1 de septiembre al 20 de octubre de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Instancia normalizada",
+    "Firma electrónica avanzada",
+    "Documentos y anexos expresados en la Convocatoria de referencia",
+    "Poder notarial o disposición estatutaria (si aplica representante)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima total a repartir en la convocatoria: 270.000,00 euros (tope global según disponibilidad presupuestaria, no cuantía fija por federación).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejo Superior de Deportes",
+  "officialSourceLabel": "BOE-B-2026-12201",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12201",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser Federaciones Deportivas Españolas (FFDDEE) que hayan participado con sus equipos en competiciones internacionales convocadas por la FISU en 2026. La solicitud debe estar firmada por el Presidente o representante legal autorizado.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12201",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para federaciones deportivas españolas que participen en competiciones internacionales de la FISU en 2026, destinadas a sufragar gastos de desplazamiento.",
+  "targetGroups": [
+    "Federaciones Deportivas Españolas"
+  ],
+  "title": "Subvenciones a Federaciones Deportivas Españolas para desplazamientos a competiciones FISU 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 25 de marzo de 2026, la Presidencia del Consejo Superior de Deportes, por la que se convocan subvenciones a Federaciones Deportivas Españolas para desplazamientos a compet. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

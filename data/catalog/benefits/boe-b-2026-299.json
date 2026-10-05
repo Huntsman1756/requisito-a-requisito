@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 805.000 euros (máximo), con posibilidad de incremento hasta 915.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-299",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-299",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa o autónomo con actividad de edición de libros, tener residencia fiscal en España, no estar incursos en prohibiciones de la Ley General de Subvenciones ni tener deudas por reintegro de subvenciones. La obra no puede ser editada por empresa distinta al beneficiario. Quedan excluidas comunidades de bienes y entidades sin personalidad jurídica.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-299",
+  "status": "active",
+  "summary": "Subvenciones para empresas y autónomos dedicados a la edición de libros en lengua castellana, lenguas cooficiales, braille o audiolibros, que contribuyan al patrimonio bibliográfico español.",
+  "targetGroups": [
+    "empresas",
+    "autónomos"
+  ],
+  "title": "Convocatoria de subvenciones para la edición de libros 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 17 de diciembre de 2025, de la Secretaría de Estado de Cultura por la que se convocan subvenciones, en régimen de concurrencia competitiva, para la edición de libros corre. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

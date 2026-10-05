@@ -1,0 +1,59 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "A los pocos días del inicio de la reducción de jornada. Su concesión es inicial (1 o 2 meses) y se va prorrogando a medida que se certifica que la necesidad médica de cuidado continúa. Se prolonga incluso hasta los 23/26 años si el cáncer inició siendo menor.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "DNI o NIE de los padres y del menor",
+    "declaración médica reglamentaria (modelo oficial relleno por el médico del servicio público de salud especialista)",
+    "certificado de empresa confirmando el % de reducción de jornada",
+    "libro de familia"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [
+      "asalariado",
+      "autonomo"
+    ],
+    "familyType": [
+      "general",
+      "monoparental",
+      "familia-numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "La mutua o INSS te abonará un ingreso mensual igual al salario (base reguladora) que tu empresa te ha dejado de pagar por las horas no trabajadas, completando así de nuevo el 100% de tu sueldo mientras cuidas a tu hijo.",
+  "lastReviewedAt": "2026-03-22",
+  "managingBody": "Mutua colaboradora o Instituto Nacional de la Seguridad Social (INSS)",
+  "officialSourceLabel": "Seguridad Social (INSS) - Cuidado de Menores",
+  "officialSourceUrl": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/44084",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Certificado médico oficial del SES detallando que el niño necesita cuidados directos, continuos y permanentes por cáncer o enfermedad grave del listado RD 1148/2011, que ambos progenitores trabajen (alta Seguridad Social) y que uno de ellos reduzca su jornada laboral al menos un 50%.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "prestacion-cuidado-menor-enfermedad-grave",
+  "status": "active",
+  "summary": "Subsidio de la Seguridad Social que compensa la pérdida de ingresos de los padres que tienen que reducir su jornada laboral al 50% o más para cuidar a un hijo enfermo.",
+  "targetGroups": [
+    "familias con menores gravemente enfermos",
+    "trabajadores que reducen jornada"
+  ],
+  "title": "Prestación para cuidado de menores con cáncer u otra enfermedad grave",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Protege a las familias del desastre de perder la mitad o más de sus nóminas justo cuando enfrentan el duro golpe emocional y los gastos derivados de un ingreso hospitalario largo infantil (ej. quimioterapia infantil)."
+}

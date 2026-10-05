@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles siguientes a la publicación del extracto en el BOE (publicado el 13 de mayo de 2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud en el modelo del Apéndice II de la resolución",
+    "Documentación exigida en los apartados 2 y 3 de las bases reguladoras"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 94.350,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Jefatura de Personal de la Armada (Ministerio de Defensa)",
+  "officialSourceLabel": "BOE-B-2026-15334",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15334",
+  "referencePeriod": "2026",
+  "requirementsText": "Las entidades deben ser sin ánimo de lucro, altruistas, no reivindicativas, y no desarrollar actividades incompatibles con la neutralidad política de las Fuerzas Armadas y los valores democráticos. Deben acreditar su carácter benéfico social y relación con el personal militar retirado de la Armada.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-15334",
+  "status": "active",
+  "summary": "Subvenciones destinadas a entidades sin ánimo de lucro estrechamente relacionadas con la Armada para apoyar a personal militar retirado, cónyuges viudos y huérfanos en situación de discapacidad, gran necesidad o bajos ingresos.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "asociaciones",
+    "fundaciones",
+    "instituciones",
+    "organismos benéficos sociales relacionados con la Armada"
+  ],
+  "title": "Convocatoria de subvenciones de ayudas de acción social para organismos sin ánimo de lucro relacionados con la Armada 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución, de 24 de abril de 2026, de la Jefatura de Personal de la Armada, por la que se convocan las subvenciones de ayudas de acción social para organismos sin ánimo de lucro estrec. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

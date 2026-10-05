@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Beneficios permanentes: las deducciones se aplican en la declaración anual del IRPF.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "familia",
+  "displayTitle": "Madrid: beneficios fiscales y sociales para familias numerosas",
+  "documentsNeeded": [
+    "Título de familia numerosa",
+    "Declaración de IRPF (deducción autonómica)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "general"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Deducciones y bonificaciones variables según el beneficio y la categoría.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Comunidad de Madrid",
+  "officialSourceLabel": "Comunidad de Madrid — Beneficios para familias numerosas",
+  "officialSourceUrl": "https://www.comunidad.madrid/servicios/asuntos-sociales/beneficios-familias-numerosas",
+  "referencePeriod": "Beneficios vigentes (portal oficial, consultado 20/09/2026)",
+  "requirementsText": "Familias numerosas con domicilio fiscal o residencia en la Comunidad de Madrid; la deducción autonómica del IRPF exige que la renta familiar sea inferior a 30.000 € multiplicado por el número de miembros de la unidad familiar.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "madrid-beneficios-familias-numerosas",
+  "status": "active",
+  "summary": "Conjunto de beneficios de la Comunidad de Madrid para familias numerosas: deducciones autonómicas del IRPF (con límite de renta familiar de 30.000 € por miembro), deducción de 900 € por el tercer hijo y siguientes en el Impuesto sobre Sucesiones y ventajas en tasas y servicios.",
+  "targetGroups": [
+    "familias numerosas de la Comunidad de Madrid"
+  ],
+  "title": "Madrid: beneficios para familias numerosas",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Concentra los beneficios fiscales y sociales que reduce el coste de las familias numerosas madrileñas."
+}

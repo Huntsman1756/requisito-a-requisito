@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "10 días hábiles siguientes a la publicación del extracto en el BOCM",
+  "category": "core",
+  "documentsNeeded": [
+    "formulario de solicitud telemático"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "3.600 euros",
+  "lastReviewedAt": "2026-07-09",
+  "managingBody": "Universidad Complutense de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260428-29",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260428-29",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado en estudios oficiales en la UCM en el curso 2025-26 y encontrarse en situación de vulnerabilidad socioeconómica que requiera alojamiento alternativo por el cierre de los colegios mayores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260428-29",
+  "status": "active",
+  "summary": "Ayudas económicas para estudiantes matriculados en la UCM en situación de vulnerabilidad socioeconómica que necesiten alojamiento alternativo durante la Semana Santa de 2026.",
+  "targetGroups": [
+    "estudiantes universitarios",
+    "estudiantes en situación de vulnerabilidad socioeconómica"
+  ],
+  "title": "Ayudas extraordinarias para alojamiento de estudiantes UCM en Semana Santa 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Resolución de 20 de abril de 2026, de la Universidad Complutense de Madrid, por la que se convocan ayudas extraordinarias para estudiantes matricula. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

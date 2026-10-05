@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "10 días hábiles contados a partir del día siguiente al de la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación máxima total de la convocatoria: 1.200.000,00 euros (ampliable con crédito adicional)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Secretaría de Estado de Agricultura y Alimentación",
+  "officialSourceLabel": "BOE-B-2026-19387",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-19387",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad representativa o vinculada con los sectores agrícola y ganadero prevista en el artículo 2 de las bases reguladoras, cumpliendo los requisitos de los artículos 4, 5 y 6 y los criterios de valoración del artículo 11.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-19387",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para entidades representativas del sector agrícola y ganadero destinadas a financiar estancias formativas de jóvenes profesionales en explotaciones modelo.",
+  "targetGroups": [
+    "entidades representativas del sector agrícola y ganadero"
+  ],
+  "title": "Subvenciones programa CULTIVA 2026: estancias formativas jóvenes agricultores",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 4 de junio, de la Secretaría de Estado de Agricultura y Alimentación, por la que se convocan para el ejercicio 2026 las subvenciones destinadas a la organización del progr. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

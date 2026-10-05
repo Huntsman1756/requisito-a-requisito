@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: quince días hábiles desde el día siguiente a la publicación del extracto en el BOE (junio de 2026).",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "título universitario requerido"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "1.200 euros brutos mensuales.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Instituto Cervantes",
+  "officialSourceLabel": "BOE-B-2026-20841",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20841",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titulado universitario de grado, licenciado, ingeniero o arquitecto en las materias y especialidades del anejo I de la convocatoria, habiendo terminado los estudios en los cinco cursos académicos anteriores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-20841",
+  "status": "active",
+  "summary": "Beca de investigación del Instituto Cervantes para titulados universitarios recientes, dotada con 1.200 euros brutos mensuales. Convocatoria 2026 cerrada (15 días hábiles desde su publicación).",
+  "targetGroups": [
+    "titulados universitarios",
+    "investigadores"
+  ],
+  "title": "Beca de investigación del Instituto Cervantes, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

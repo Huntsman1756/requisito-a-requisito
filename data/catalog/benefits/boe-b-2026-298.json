@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente al de la publicación de este extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 245.000,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-298",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-298",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser fundaciones, asociaciones, organizaciones no gubernamentales o cualquier entidad sin fin de lucro que no pertenezca al sector público y que acredite haber realizado actuaciones de promoción del libro o de las publicaciones culturales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-298",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para entidades sin ánimo de lucro que promuevan y fortalezcan la industria editorial y las publicaciones culturales.",
+  "targetGroups": [
+    "entidades sin fines de lucro",
+    "fundaciones",
+    "asociaciones",
+    "organizaciones no gubernamentales"
+  ],
+  "title": "Subvenciones para entidades sin fines de lucro de la industria editorial 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 16 de diciembre de 2025 de la Secretaría de Estado de Cultura, por la que se convocan subvenciones, en régimen de concurrencia competitiva, para entidades sin fines de luc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

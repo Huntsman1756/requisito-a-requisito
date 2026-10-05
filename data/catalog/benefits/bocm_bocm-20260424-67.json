@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles desde la publicación (BOCM 24/04/2026) — plazo cerrado.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "modelo normalizado de solicitud general"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "2.500 euros totales repartidos entre los premios del certamen fotográfico (no es cuantía por premio).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Leganés",
+  "officialSourceLabel": "BOCM:BOCM-20260424-67",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-67",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mayor de 18 años, participar de forma individual y en nombre propio. Estar excluidos los miembros que formen parte del jurado.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-67",
+  "status": "active",
+  "summary": "Concurso fotográfico abierto a personas físicas para fomentar la creación artística y el patrimonio local, dotado con 2.500 euros en premios.",
+  "targetGroups": [
+    "personas mayores de 18 años",
+    "socios de colectivos fotográficos"
+  ],
+  "title": "Convocatoria del II Concurso Fotográfico “Luz sobre el Patrimonio de Leganés: Tesoros escondidos”",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Leganés. Régimen económico. Extracto convocatoria subvenciones – Leganés. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

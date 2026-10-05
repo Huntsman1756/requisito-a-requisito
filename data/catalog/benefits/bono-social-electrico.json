@@ -1,0 +1,56 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Medida permanente: la solicitud se presenta al comercializador de referencia en cualquier momento; los tipos incrementados rigen hasta el 31 de diciembre de 2026.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "displayTitle": "Bono social eléctrico: descuento del 42,5 % o 57,5 % en la factura",
+  "documentsNeeded": [
+    "Solicitud al comercializador de referencia",
+    "Documentación de renta o de la circunstancia que acredita la vulnerabilidad"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "general"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general",
+      "jubilado"
+    ],
+    "familyType": [
+      "general",
+      "numerosa"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Descuento del 42,5 % (vulnerable) o 57,5 % (vulnerable severo) en la factura hasta el 31/12/2026.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio para la Transición Ecológica (MITECO) — comercializadores de referencia",
+  "officialSourceLabel": "MITECO — Bono social de electricidad",
+  "officialSourceUrl": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001/que-es.html",
+  "referencePeriod": "Medida permanente (tipos incrementados hasta el 31/12/2026)",
+  "requirementsText": "Consumidores vulnerables según el Real Decreto 897/2017 (p. ej., por umbrales de renta/IPREM, familias numerosas, pensionistas con prestación mínima o víctimas de violencia de género), con el suministro a su nombre.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "bono-social-electrico",
+  "status": "active",
+  "summary": "Descuento en la factura de la luz para consumidores vulnerables: 42,5 % (vulnerable) y 57,5 % (vulnerable severo) hasta el 31 de diciembre de 2026, con cobertura del 100 % para consumidores en riesgo de exclusión atendidos por servicios sociales.",
+  "targetGroups": [
+    "consumidores vulnerables",
+    "familias con renta baja",
+    "pensionistas con prestación mínima"
+  ],
+  "title": "Bono social de electricidad",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Recorta de forma automática la factura de la luz de los hogares con menos recursos."
+}

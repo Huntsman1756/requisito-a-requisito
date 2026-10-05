@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 22 de enero de 2026 a las 9:00 horas al 25 de febrero de 2026 a las 12:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 355.000.000 EUR (Programa 1: 25.000.000 EUR; Programa 2: 330.000.000 EUR) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto para la Diversificación y Ahorro de la Energía (IDAE)",
+  "officialSourceLabel": "BOE-B-2025-48114",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-48114",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser persona jurídica pública o privada legalmente constituida, realizar la actividad que fundamenta la concesión y cumplir los requisitos de las bases reguladoras. También pueden ser beneficiarias las agrupaciones sin personalidad jurídica.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-48114",
+  "status": "active",
+  "summary": "Convocatoria de ayudas a proyectos de inversión para la fabricación de productos y componentes de tecnologías limpias, dirigida a personas jurídicas y agrupaciones sin personalidad jurídica.",
+  "targetGroups": [
+    "personas jurídicas",
+    "agrupaciones sin personalidad jurídica"
+  ],
+  "title": "Ayudas a proyectos para reforzar la Cadena de valor industrial de tecnologías limpias (IDAE)",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 23 de diciembre de 2025, del Consejo de Administración de E.P.E. Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P. por la que se realiza la primera con. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

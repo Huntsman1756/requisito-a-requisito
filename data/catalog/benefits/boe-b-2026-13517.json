@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes contado a partir del día siguiente al de la publicación en el «Boletín Oficial del Estado» del presente extracto.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "documentación conforme al artículo 11.2 de la Orden TED/352/2026"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 2.000.000,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Energía",
+  "officialSourceLabel": "BOE-B-2026-13517",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13517",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona jurídica titular de autorizaciones de aprovechamiento de residuos mineros (Sección B) o de permisos de investigación, concesiones de explotación o reservas a favor del estado previstos en la Ley 22/1973, de 21 de julio.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13517",
+  "status": "active",
+  "summary": "Convocatoria de ayudas públicas para personas jurídicas titulares de autorizaciones o permisos mineros, destinadas a financiar trabajos de investigación geológico-minera y estudios de evaluación económica de residuos de extracción.",
+  "targetGroups": [
+    "personas jurídicas titulares de autorizaciones de aprovechamiento de residuos mineros",
+    "titulares de permisos de investigación mineros",
+    "titulares de concesiones de explotación mineras"
+  ],
+  "title": "Ayudas Programa Nacional de Exploración Minera 2026-2030",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Energía por la que se aprueba la convocatoria para la concesión de ayudas públicas en 2026 del Programa Nacional de Exploración Minera 2026-2030. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

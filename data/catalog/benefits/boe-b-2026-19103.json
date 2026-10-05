@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "30 días naturales siguientes a la publicación del anuncio en el BOE, hasta las 15:00 horas",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "10.000 euros por modalidad (5.000 € primer premio, 3.000 € segundo, 2.000 € tercero)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Educación, Formación Profesional y Deportes",
+  "officialSourceLabel": "BOE-B-2026-19103",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-19103",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro educativo público o centro del Ministerio en el exterior que imparta enseñanzas no universitarias, o entidad/organización pública o privada con objetivos de fomento de vocaciones STEAM en niñas y jóvenes.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-19103",
+  "status": "active",
+  "summary": "Convocatoria de premios para reconocer proyectos educativos, materiales curriculares e innovaciones que impulsen las vocaciones de niñas y jóvenes en disciplinas STEAM.",
+  "targetGroups": [
+    "centros educativos públicos",
+    "centros del Ministerio en el exterior",
+    "entidades públicas o privadas"
+  ],
+  "title": "Premios Aulas por la Igualdad: Premios Alianza STEAM 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Orden de 4 de junio de 2026 del Ministerio de Educación, Formación Profesional y Deportes, por la que se convocan los Premios Aulas por la Igualdad: Premios Alianza STEAM 2026. Extracto. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

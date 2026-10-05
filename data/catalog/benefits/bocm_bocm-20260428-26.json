@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles contados a partir del día siguiente a la publicación del extracto en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de ayuda",
+    "presupuesto del proyecto",
+    "acreditación de trayectoria profesional",
+    "documentación de constitución y domicilio fiscal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Importe total de 1.000.000 de euros; cuantía individual entre 15.000 y 50.000 euros por proyecto",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Cultura, Turismo y Deporte",
+  "officialSourceLabel": "BOCM:BOCM-20260428-26",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260428-26",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titular de empresa de producción independiente con actividad audiovisual, tener domicilio fiscal y sede en la Comunidad de Madrid (o filial en España para extranjeras), y acreditar mínimo dos años de actividad o trayectoria profesional.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260428-26",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas de producción audiovisual independientes para el desarrollo de largometrajes o series en la Comunidad de Madrid.",
+  "targetGroups": [
+    "empresas de producción audiovisual",
+    "empresas independientes",
+    "productores de cine y televisión"
+  ],
+  "title": "Ayudas a empresas audiovisuales para proyectos en Madrid 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 617/2026, de 14 de abril, de la Consejería de Cultura, Turismo y Deporte, por la que se convocan ayudas a empresas audiovisuales para el desar. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

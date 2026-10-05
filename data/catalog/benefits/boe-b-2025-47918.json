@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde las 12:00 horas del 15 de enero de 2026 hasta las 12:00 horas del 24 de febrero de 2026",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud cumplimentada",
+    "documentación de personalidad jurídica",
+    "garantía (para anticipos)",
+    "documentación justificativa de la inversión"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 252.500.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto para la Diversificación y Ahorro de la Energía (IDAE)",
+  "officialSourceLabel": "BOE-B-2025-47918",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47918",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser personas jurídicas públicas o privadas, consorcios o agrupaciones empresariales con personalidad jurídica propia, domicilio fiscal en España y actividad económica. Los proyectos de repotenciación eólica deben ser sobre instalaciones existentes que comenzasen su operación antes del 30 de junio de 2010. Coste subvencionable mínimo de 1.000.000 € por proyecto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-47918",
+  "status": "active",
+  "summary": "Convocatoria de ayudas a la inversión para la repotenciación de instalaciones eólicas existentes y la renovación tecnológica de minicentrales hidroeléctricas, dirigida a entidades jurídicas con actividad económica.",
+  "targetGroups": [
+    "entidades jurídicas",
+    "consorcios",
+    "agrupaciones empresariales"
+  ],
+  "title": "Segunda convocatoria Programas Repotenciación Circular: Ayudas a la inversión en repotenciación eólica y minicentrales hidroeléctricas",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 23 de diciembre de 2025 del Consejo de Administración del E.P.E Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P., por la que se realiza la segunda con. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

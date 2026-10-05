@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el día siguiente a la publicación en el BOCM hasta el 10 de mayo de 2026 a las 23:59 h",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "microrrelato (máximo 40 palabras)",
+    "documentación de identificación (implícita para verificación de vecindad y tributación)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "4.500 euros (premios: 300, 250, 200 y 150 euros)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Patronato Municipal de Cultura de Fuenlabrada",
+  "officialSourceLabel": "BOCM:BOCM-20260427-69",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-69",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser vecino de Fuenlabrada a partir de 4 años. Estar al corriente de obligaciones tributarias con el Ayuntamiento. Presentar un solo trabajo por persona. Los menores de 18 años deben ser representados por tutores legales.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-69",
+  "status": "active",
+  "summary": "Convocatoria de un concurso de escritura de microrrelatos sobre 'Los Viajes de Gulliver' abierto a vecinos de Fuenlabrada de todas las edades, con premios en vales de libros.",
+  "targetGroups": [
+    "vecinos de Fuenlabrada",
+    "niños y jóvenes",
+    "adultos"
+  ],
+  "title": "Concurso de microrrelatos '300 de los Viajes de Gulliver' (Feria del Libro 2026)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Fuenlabrada. Régimen económico. Patronato Municipal de Cultura. Extracto convocatoria subvenciones – Fuenlabrada. Régimen económico. Patronato Municipal de Cultura. Extracto convocatoria subvencione. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

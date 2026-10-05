@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 27 de enero de 2026 al 26 de febrero de 2026 a las 14:00 horas (13:00 horas en Canarias)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud cumplimentada en el Portal de Ayudas",
+    "garantía de participación",
+    "garantía para anticipos (si se solicitan)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Presupuesto total de 90.000.000 €; ayuda máxima de 50 millones de euros por proyecto y entidad",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto para la Diversificación y Ahorro de la Energía (IDAE)",
+  "officialSourceLabel": "BOE-B-2026-125",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-125",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa, universidad, centro de investigación o tecnológico sin ánimo de lucro, u otra entidad pública o privada, o agrupación de personas jurídicas que cumplan las condiciones de los artículos 4 y 5 de la Orden TED/807/2023.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-125",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para empresas, centros de investigación y otras entidades para financiar proyectos innovadores de almacenamiento energético por bombeo reversible, financiados por Next GenerationEU.",
+  "targetGroups": [
+    "empresas",
+    "universidades",
+    "centros de investigación",
+    "centros tecnológicos sin ánimo de lucro",
+    "entidades públicas",
+    "entidades privadas",
+    "agrupaciones de personas jurídicas"
+  ],
+  "title": "Segunda convocatoria de ayudas para proyectos innovadores de almacenamiento mediante bombeo reversible",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 23 de diciembre de 2025, del Consejo de Administración de E.P.E. Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P. por la que se aprueba la segunda con. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

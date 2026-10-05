@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "plazo máximo de veinte días hábiles, contados a partir del siguiente a la publicación en el BOE del presente extracto",
+  "category": "beca",
+  "documentsNeeded": [
+    "solicitud firmada mediante firma electrónica avanzada"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 3.000.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejo Superior de Deportes",
+  "officialSourceLabel": "BOE-B-2026-10816",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10816",
+  "referencePeriod": "2026",
+  "requirementsText": "Los deportistas deben cumplir los requisitos del Apartado Quinto, punto 1. Las Federaciones Deportivas Españolas deben cumplir los requisitos del Apartado Quinto, punto 2.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10816",
+  "status": "active",
+  "summary": "Convocatoria de becas para deportistas de máximo interés y ayudas para Federaciones Deportivas Españolas para estancias en el Centro de Alto Rendimiento de Sant Cugat durante la temporada 2026/2027.",
+  "targetGroups": [
+    "deportistas",
+    "Federaciones Deportivas Españolas"
+  ],
+  "title": "Becas para deportistas y ayudas para concentraciones puntuales en CAR Sant Cugat 2026/2027",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 25 de marzo de 2026 de la Presidencia del Consejo Superior de Deportes, por la que se convocan becas para deportistas y ayudas para concentraciones puntuales para Federaci. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

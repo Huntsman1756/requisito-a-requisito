@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente al de la publicación de este extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "acreditación de actuación de fomento de la lectura",
+    "inscripción en registro público"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 250.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-12202",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12202",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser fundaciones, asociaciones u ONG sin fines de lucro no pertenecientes al sector público, legalmente constituidas, inscritas en el registro correspondiente, con residencia fiscal en España y acreditar haber realizado actuaciones de fomento de la lectura.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12202",
+  "status": "active",
+  "summary": "Subvenciones destinadas a fundaciones, asociaciones y ONG para apoyar proyectos de animación a la lectura en zonas rurales.",
+  "targetGroups": [
+    "fundaciones",
+    "asociaciones",
+    "organizaciones no gubernamentales"
+  ],
+  "title": "Convocatoria de subvenciones para animación a la lectura en el mundo rural 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 13 de abril de 2026 de la Secretaría de Estado de Cultura por la que se convocan subvenciones para el programa de animación a la lectura en el mundo rural correspondientes. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

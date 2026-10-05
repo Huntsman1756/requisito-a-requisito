@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el día siguiente a la publicación en el BOCM hasta tres meses después de dicha publicación",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Informe médico oficial (si aplica)",
+    "Certificado de empadronamiento",
+    "Informe de Evaluación del Edificio (IEE)",
+    "Declaración responsable habilitada en el impreso de Solicitud"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 4.000.000,00 euros (2.000.000,00 euros en 2026 y 2.000.000,00 euros en 2027) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Área de Gobierno de Políticas de Vivienda del Ayuntamiento de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260427-51",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-51",
+  "referencePeriod": "2026",
+  "requirementsText": "Para personas con discapacidad: tener un grado reconocido igual o superior al 33% (con movilidad reducida positiva o informe médico justificativo si es negativa) y estar empadronado y residente habitual en Madrid desde octubre de 2025. Para personas con enfermedades raras: tener la enfermedad reconocida con código Orpha y cumplir los mismos requisitos de empadronamiento y residencia. Los edificios deben tener Informe de Evaluación del Edificio (IEE) previo a la solicitud.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-51",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones del Ayuntamiento de Madrid para la adaptación de viviendas de personas con discapacidad o enfermedades raras, y para la accesibilidad en elementos comunes de edificios residenciales.",
+  "targetGroups": [
+    "personas con discapacidad",
+    "personas con enfermedades raras",
+    "propietarios o titulares de viviendas en Madrid"
+  ],
+  "title": "Plan Adapta Madrid 2026: Subvenciones para adaptación de viviendas y accesibilidad",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Área de Gobierno de Políticas de Vivienda. Extracto convocatoria subvenciones – Madrid. Régimen económico. Área de Gobierno de Políticas de Vivienda. Extracto convocatoria. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

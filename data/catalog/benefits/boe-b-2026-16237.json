@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Treinta días naturales, finalizando a las 23.59 horas del último día de plazo, contado a partir del día siguiente al de la publicación del extracto en el BOE (según corrección de errores publicada en BOE-B-2026-17295, de 26 de mayo de 2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud de subvención",
+    "Documentación justificativa de los requisitos del Anexo A",
+    "Documentación acreditativa de la naturaleza de entidad del Tercer Sector de Acción Social"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total de la convocatoria: 2.110.270,00 euros (crédito ampliable hasta 110.845.136,74 euros adicionales)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Secretaría de Estado de Derechos Sociales",
+  "officialSourceLabel": "BOE-B-2026-16237",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16237",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser beneficiario Cruz Roja Española o entidad del Tercer Sector de Acción Social (excluyendo organismos públicos, universidades, partidos políticos, colegios profesionales, cámaras, sociedades civiles, organizaciones empresariales y sindicatos). Las actividades deben referirse a los ejes del artículo 2.1 del Real Decreto-ley 7/2013 y cumplir los requisitos del Anexo A.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16237",
+  "status": "active",
+  "summary": "Subvenciones para la realización de actividades de interés general consideradas de interés social, dirigidas a Cruz Roja Española y entidades del Tercer Sector de Acción Social.",
+  "targetGroups": [
+    "Cruz Roja Española",
+    "entidades del Tercer Sector de Acción Social"
+  ],
+  "title": "Convocatoria de subvenciones para actividades de interés general de interés social",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 12 de mayo de 2026, de la Secretaría de Estado de Derechos Sociales, por la que se convocan subvenciones para la realización de actividades de interés general consideradas. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo fue de quince días naturales desde la publicación en el BOE.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas Patrimonio Nacional para posgraduados (1.250 €/mes)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Documentación académica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "1.250 €/mes por beca (dotación: 120.000 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Patrimonio Nacional",
+  "officialSourceLabel": "BOE — Convocatoria de becas de Patrimonio Nacional para posgraduados 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18331",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Titulados de posgrado admitidos en los programas de formación de Patrimonio Nacional, según las bases de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-patrimonio-nacional-posgraduados-2026",
+  "status": "active",
+  "summary": "Becas de Patrimonio Nacional para la formación de posgraduados: 1.250 € mensuales por beneficiario, con una dotación global de 120.000 €.",
+  "targetGroups": [
+    "titulados de posgrado"
+  ],
+  "title": "Becas de Patrimonio Nacional para posgraduados 2026",
+  "type": "scholarship",
+  "whyItMatters": "Financia la especialización de posgraduados en el ámbito del patrimonio cultural."
+}

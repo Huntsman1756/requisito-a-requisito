@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes a partir del día siguiente al de publicación del extracto en el BOE (publicado el 12 de mayo de 2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud en sede electrónica",
+    "programa o programas a subvencionar (Anexo III)",
+    "documentación acreditativa de inscripción en el Registro Nacional de Asociaciones"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 4.000.000 de euros (2.000.000 en 2027 y 2.000.000 en 2028) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Sanidad",
+  "officialSourceLabel": "BOE-B-2026-15262",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15262",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad de cualquier titularidad, sin ánimo de lucro y ámbito estatal, legalmente constituida e inscrita en el Registro Nacional de Asociaciones (o nivel nacional) con vigencia acreditada durante la ejecución. No pueden ser beneficiarias entidades de derecho público, partidos políticos, universidades, colegios profesionales, sindicatos, etc.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-15262",
+  "status": "active",
+  "summary": "Subvenciones dirigidas a entidades sin ánimo de lucro para financiar programas supracomunitarios de prevención y control del VIH y otras infecciones de transmisión sexual.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "ONG",
+    "asociaciones"
+  ],
+  "title": "Convocatoria de subvenciones para prevención y control del VIH y ITS (2027-2028)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de abril de 2026 de la Secretaría de Estado de Sanidad por la que se convocan subvenciones a entidades de cualquier titularidad, sin ánimo de lucro, con destino a la fi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

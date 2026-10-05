@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026-2027 cerrada: 15 días hábiles desde la publicación en el BOCM del 24 de abril de 2026. Programa anual por curso escolar; no hay nueva convocatoria abierta confirmada.",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "documentación de la unidad familiar"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Comedor escolar: hasta 400 euros por miembro de la unidad familiar que use el servicio. Material escolar: 50 euros (Infantil), 100 euros (Primaria, ESO, Educación Básica Obligatoria y FP Básica) y 200 euros (Bachillerato y FP Media). Dotación: 400.000 euros para comedor y 200.000 euros para material.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ayuntamiento de San Sebastián de los Reyes",
+  "officialSourceLabel": "BOCM-20260424-81",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-81",
+  "referencePeriod": "2026-2027",
+  "requirementsText": "Alumnado de San Sebastián de los Reyes que curse las enseñanzas indicadas en la convocatoria (Infantil, Primaria, ESO, Educación Especial, FP) en centros del municipio, conforme a las bases.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-81",
+  "status": "active",
+  "summary": "Ayudas municipales de San Sebastián de los Reyes para comedor escolar (hasta 400 euros por miembro de la unidad familiar) y material escolar (50-200 euros según etapa). Convocatoria 2026-2027 cerrada; se convoca cada curso.",
+  "targetGroups": [
+    "familias",
+    "alumnado"
+  ],
+  "title": "Ayudas de comedor escolar y material escolar 2026-2027 de San Sebastián de los Reyes",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

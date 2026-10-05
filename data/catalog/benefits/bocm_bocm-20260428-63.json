@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Desde el día siguiente a la publicación de la convocatoria hasta el 30 de noviembre de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud de participación (formulario Anexo I)",
+    "Identificación electrónica en la Sede Electrónica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "200 euros por premio (total 2.800 euros para 14 premios)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Boadilla del Monte",
+  "officialSourceLabel": "BOCM:BOCM-20260428-63",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260428-63",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mayor de 18 años, estar empadronado y residir en Boadilla del Monte, tener capacidad legal, no estar incurso en causas de exclusión (deudas tributarias, con la Seguridad Social o con el Ayuntamiento) y disponer de Instagram para la difusión del premio.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260428-63",
+  "status": "active",
+  "summary": "Subvenciones en forma de premios económicos de 200 euros para ciudadanos empadronados en Boadilla del Monte, seleccionados mediante sorteos para fomentar el consumo local.",
+  "targetGroups": [
+    "ciudadanos empadronados en Boadilla del Monte"
+  ],
+  "title": "Convocatoria de premios 2026: “Compra en Boadilla, apoya a Boadilla”",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Boadilla del Monte. Régimen económico. Extracto convocatoria subvenciones – Boadilla del Monte. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

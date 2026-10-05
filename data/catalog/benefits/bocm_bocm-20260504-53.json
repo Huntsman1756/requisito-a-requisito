@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, contados a partir del día siguiente al de la publicación del extracto en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Documentación justificativa del proyecto",
+    "Documentación que acredite el cumplimiento de requisitos legales (Ley 38/2003)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 840.000 euros (importe global máximo) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Sanidad",
+  "officialSourceLabel": "BOCM:BOCM-20260504-53",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260504-53",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad beneficiaria (IIS acreditados, hospitales/centros adscritos al SERMAS u otros entes públicos asistenciales adscritos a la Consejería de Sanidad). Deben cumplir los requisitos del artículo 13 de la Ley 38/2003 y no estar incursos en las circunstancias de los apartados 2 y 3 de dicho artículo. Los proyectos deben ser liderados por personal investigador emergente sin financiación previa significativa del Plan Estatal o UE.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260504-53",
+  "status": "active",
+  "summary": "Subvenciones para proyectos de investigación, desarrollo e innovación en Biomedicina y Ciencias de la Salud, liderados por personal investigador emergente, en centros del SERMAS e Institutos de Investigación Sanitaria de la Comunidad de Madrid.",
+  "targetGroups": [
+    "Institutos de Investigación Sanitaria (IIS) acreditados",
+    "Hospitales y centros asistenciales adscritos al SERMAS",
+    "Entes públicos de carácter asistencial adscritos a la Consejería de Sanidad",
+    "Personal investigador emergente"
+  ],
+  "title": "Convocatoria subvenciones I+D Biomedicina y Ciencias de la Salud (Programa “Lánzate”) 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 575/2026, de 17 de abril, de la Consejería de Sanidad, por la que se aprueba la convocatoria para el año 2026 de subvenciones destinadas a pro. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

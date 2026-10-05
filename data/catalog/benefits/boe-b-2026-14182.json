@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles desde la publicación (BOE 05/05/2026) — plazo cerrado.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "declaración responsable (Anexo III)",
+    "documentación acreditativa de títulos y requisitos académicos",
+    "documentación preceptiva en formato electrónico"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": false,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "6.000 euros ayudas individuales; 10.000 euros equipos de investigación; 5.000 euros ayudas para finalización de tesis doctorales.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Centro de Investigaciones Sociológicas",
+  "officialSourceLabel": "BOE-B-2026-14182",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14182",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser nacional español o de la UE/terceros con residencia legal. Poseer título de graduado/licenciado o equivalente. No estar incurso en prohibiciones de subvenciones. Estar al corriente de obligaciones tributarias y con la Seguridad Social. Acreditar suficiencia investigadora, máster o acceso al doctorado. Para tesis, estar en fase de finalización en Ciencia Política o Sociología.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-14182",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para la explotación del Banco de Datos del CIS y finalización de tesis doctorales en Ciencia Política o Sociología, dirigida a investigadores y estudiantes de doctorado.",
+  "targetGroups": [
+    "investigadores individuales",
+    "equipos de investigación",
+    "estudiantes de doctorado"
+  ],
+  "title": "Convocatoria de subvenciones para formación e investigación en materias de interés para el CIS 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de abril de 2026 del Centro de Investigaciones Sociológicas por la que se publica la convocatoria de subvenciones para formación e investigación en materias de interés . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

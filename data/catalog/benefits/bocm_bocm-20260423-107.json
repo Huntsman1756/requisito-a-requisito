@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 15 de septiembre de 2026, inclusive",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Hasta el 80% del coste del proyecto, con un límite máximo de 10.000 euros por beneficiario",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Pozuelo de Alarcón",
+  "officialSourceLabel": "BOCM:BOCM-20260423-107",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260423-107",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad o institución sin ánimo de lucro que desarrolle proyectos de atención y apoyo a personas con discapacidad y/o sus familias en el municipio de Pozuelo de Alarcón, dentro del período previsto y cumpliendo los requisitos del apartado cuarto de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260423-107",
+  "status": "active",
+  "summary": "Subvenciones para entidades e instituciones sin ánimo de lucro que desarrollen proyectos de atención y apoyo a personas con discapacidad y/o sus familias en el municipio de Pozuelo de Alarcón durante el curso 2025-2026.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro",
+    "instituciones sin ánimo de lucro"
+  ],
+  "title": "Convocatoria de subvenciones para entidades sin ánimo de lucro en Pozuelo de Alarcón",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Pozuelo de Alarcón. Régimen económico. Extracto convocatoria subvenciones – Pozuelo de Alarcón. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

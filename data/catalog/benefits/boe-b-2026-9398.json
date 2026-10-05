@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles contados a partir del día siguiente al de la publicación del extracto en el BOE",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud",
+    "documentación justificativa del proyecto",
+    "documentación acreditativa del establecimiento permanente"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantías máximas individuales por beneficiario según modalidad (importe total máximo de la convocatoria: 4.507.250 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-9398",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9398",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física o jurídica, pública o privada, con establecimiento permanente en la UE o Estados asociados al EEE, excluyendo residentes en paraísos fiscales. También aplican las entidades del artículo 2.2 de la Orden CUL/2912/2010.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-9398",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para personas físicas o jurídicas para actividades de música y lírica, con el objetivo de preservar el patrimonio y difundirlo en España y en el extranjero.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades jurídicas",
+    "entidades sin ánimo de lucro",
+    "asociaciones",
+    "organizadores de festivales",
+    "artistas"
+  ],
+  "title": "Ayudas a la música y la lírica 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de Resolución de 18 de marzo de 2026 de la Secretaría de Estado de Cultura, por la que se convocan ayudas a la música y la lírica, correspondientes al año 2026 Extracto de Resolución de 18 de. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

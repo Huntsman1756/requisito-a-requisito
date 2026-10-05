@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "1 mes contado a partir del día siguiente al de la publicación del extracto de la convocatoria en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Anexo I: Datos de la entidad",
+    "Anexo II: Memoria del proyecto",
+    "Anexo III: Declaración responsable de obligaciones por reintegro",
+    "Anexo IV: Declaración responsable de no estar incursa en prohibiciones",
+    "Poder bastante en derecho",
+    "Estatutos legalizados",
+    "Certificado de estar al corriente con la Seguridad Social",
+    "Certificado de estar al corriente con obligaciones tributarias"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 8.299.970,22 euros para entidades sociales y 1.000.000 euros para universidades (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+  "officialSourceLabel": "BOE-B-2026-16360",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16360",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad privada sin ánimo de lucro (asociaciones, fundaciones, economía social) o universidad. Objetivos alineados con los ODS de la Agenda 2030. No estar incursa en prohibiciones para obtener la condición de beneficiaria. Presentar solicitud electrónica con los anexos normalizados.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16360",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para proyectos e iniciativas de entidades privadas sin ánimo de lucro y universidades destinadas a impulsar la Agenda 2030 para el Desarrollo Sostenible en España.",
+  "targetGroups": [
+    "entidades privadas sin ánimo de lucro",
+    "universidades",
+    "entidades de economía social"
+  ],
+  "title": "Subvenciones para actividades de promoción e implementación de la Agenda 2030 (2026)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 14 de mayo de 2026 del Ministerio de Derechos Sociales, Consumo y Agenda 2030, por la que se convocan las subvenciones para la realización de actividades relacionadas con . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

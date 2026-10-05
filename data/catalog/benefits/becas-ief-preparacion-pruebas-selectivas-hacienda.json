@@ -1,0 +1,52 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo fue de quince días hábiles desde la publicación en el BOE.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas IEF para preparar las oposiciones de Hacienda (7.000 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Titulación y documentación de renta"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "7.000 € brutos por beca (20 becas).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Instituto de Estudios Fiscales, Ministerio de Hacienda",
+  "officialSourceLabel": "BOE — Convocatoria de becas del IEF para pruebas selectivas de Hacienda 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16610",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Licenciados y graduados que preparan las pruebas selectivas de los cuerpos de Hacienda, que cumplan los umbrales de renta de la convocatoria y no hayan disfrutado otra beca del IEF con el mismo objeto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-ief-preparacion-pruebas-selectivas-hacienda",
+  "status": "active",
+  "summary": "Veinte becas del Instituto de Estudios Fiscales (Ministerio de Hacienda) para preparar las pruebas selectivas de los cuerpos de Hacienda: 7.000 € brutos por beca, para licenciados y graduados que cumplan los umbrales de renta.",
+  "targetGroups": [
+    "licenciados y graduados que preparan oposiciones de Hacienda"
+  ],
+  "title": "Becas del Instituto de Estudios Fiscales para pruebas selectivas de Hacienda",
+  "type": "scholarship",
+  "whyItMatters": "Financia la preparación de las oposiciones a los cuerpos de Hacienda para titulados con menos recursos."
+}

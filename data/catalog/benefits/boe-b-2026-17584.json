@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles desde el día siguiente a la publicación en el BOE",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud ante la sede electrónica del Ministerio",
+    "cuenta justificativa según modelo normalizado"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 9.000.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Industria y Turismo",
+  "officialSourceLabel": "BOE-B-2026-17584",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17584",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser Agrupaciones Empresariales Innovadoras inscritas en el Registro regulado por la Orden IET/1444/2014 o miembros de las mismas.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17584",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para apoyar el funcionamiento, estudios de viabilidad y proyectos de I+D+i de Agrupaciones Empresariales Innovadoras inscritas en el registro oficial.",
+  "targetGroups": [
+    "Agrupaciones Empresariales Innovadoras",
+    "miembros de Agrupaciones Empresariales Innovadoras"
+  ],
+  "title": "Ayudas a Agrupaciones Empresariales Innovadoras 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Orden de 26 de mayo por la que se efectúa la convocatoria correspondiente a 2026 de las ayudas de apoyo a Agrupaciones Empresariales Innovadoras con objeto de mejorar su competitividad . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Dos meses para la modalidad Ideas y tres meses para la modalidad Proyectos Comerciales, contados a partir del día siguiente a la publicación del extracto en el BOE (30 de diciembre de 2025)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "documentación adjunta según bases reguladoras",
+    "cuenta en la plataforma Puertos 4.0"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 6.750.000 euros (750.000€ para Ideas y 6.000.000€ para Proyectos Comerciales) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Puertos del Estado",
+  "officialSourceLabel": "BOE-B-2025-48112",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-48112",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser personas físicas o jurídicas, públicas o privadas, españolas o extranjeras con plena capacidad de obrar. Las personas físicas no pueden ser beneficiarias de la modalidad comercial (solo solicitantes con compromiso de constituirse en jurídica). Las agrupaciones deben cumplir los requisitos individuales de sus miembros.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-48112",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para financiar la innovación tecnológica en el sector portuario y logístico, dirigida a empresas y emprendedores en las modalidades de ideas y proyectos comerciales.",
+  "targetGroups": [
+    "empresas",
+    "autónomos",
+    "personal laboral de Autoridades Portuarias y Puertos del Estado (intraemprendimiento)"
+  ],
+  "title": "Ayudas Puertos 4.0: Ideas y Proyectos Comerciales 2025",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 11 de diciembre de 2025 del Presidente de Puertos del Estado por la que se aprueba la convocatoria de concesión de ayudas públicas correspondientes al año 2025, en el marc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

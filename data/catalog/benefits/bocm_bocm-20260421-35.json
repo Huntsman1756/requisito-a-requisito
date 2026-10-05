@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días naturales a partir del día siguiente de la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "documentación exigida por la ordenanza municipal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 19.672,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Alcobendas",
+  "officialSourceLabel": "BOCM:BOCM-20260421-35",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260421-35",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser asociación o entidad sin ánimo de lucro inscrita en el Registro de Asociaciones, Fundaciones y entidades análogas del Ayuntamiento de Alcobendas, con fin social y proyectos en el ámbito de Salud y Bienestar Animal.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260421-35",
+  "status": "active",
+  "summary": "Subvenciones municipales para asociaciones y entidades sin ánimo de lucro que desarrollen proyectos de salud e integración social o bienestar animal en Alcobendas.",
+  "targetGroups": [
+    "asociaciones",
+    "entidades sin ánimo de lucro"
+  ],
+  "title": "Convocatoria subvenciones Salud y Bienestar Animal 2026 - Alcobendas",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Alcobendas. Régimen económico. Extracto convocatoria subvenciones – Alcobendas. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

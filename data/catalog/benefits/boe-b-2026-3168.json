@@ -1,0 +1,48 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 5 de marzo de 2026 a las 15:00 hora peninsular.",
+  "category": "beca",
+  "documentsNeeded": [
+    "solicitud cumplimentada en sede electrónica",
+    "certificado de notas",
+    "acreditación de condición de becario general"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "La beca cubre plaza, internado y pensión completa; el alumno debe abonar 100 euros a la empresa adjudicataria.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-3168",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-3168",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser nacido entre 2006 y 2009, estar matriculado en bachillerato o FP en 2025-2026, haber obtenido condición de becario general del Ministerio, tener aprobadas todas las asignaturas del curso anterior con mínimo 9 en inglés, y figurar en el orden de prelación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-3168",
+  "status": "active",
+  "summary": "Convocatoria de 2.400 becas para estudiantes de bachillerato y ciclos formativos que participen en un programa de inmersión en inglés en España durante julio de 2026.",
+  "targetGroups": [
+    "estudiantes de bachillerato",
+    "estudiantes de formación profesional",
+    "estudiantes de enseñanzas profesionales de música y danza",
+    "estudiantes de artes plásticas y diseño",
+    "estudiantes de enseñanzas deportivas",
+    "estudiantes de idiomas"
+  ],
+  "title": "Becas para programa intensivo de inmersión lingüística en inglés (julio 2026)",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 29 de enero de 2026, de la Secretaría de Estado de Educación, por la que se convocan becas para la participación en un programa intensivo de inmersión lingüística en inglé. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

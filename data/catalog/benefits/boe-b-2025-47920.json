@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a partir del día siguiente a la publicación en el BOE",
+  "category": "beca",
+  "documentsNeeded": [
+    "títulos académicos oficiales",
+    "títulos extranjeros homologados",
+    "acreditación de dominio del español"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 281.647,77 euros (importe global) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Museo Nacional Centro de Arte Reina Sofía",
+  "officialSourceLabel": "BOE-B-2025-47920",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47920",
+  "referencePeriod": "2025",
+  "requirementsText": "Poseer títulos académicos oficiales o extranjeros homologados. Acreditar dominio del español si la lengua oficial no es el español. No haber obtenido anteriormente becas del Museo en al menos tres ocasiones. No estar incursos en prohibiciones de la Ley General de Subvenciones. Presentar solicitud para una sola clase de beca.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-47920",
+  "status": "active",
+  "summary": "Convocatoria de becas para investigación y formación en materias del Museo Reina Sofía, dirigidas a personas con títulos académicos oficiales o equivalentes.",
+  "targetGroups": [
+    "investigadores",
+    "personas con títulos académicos oficiales"
+  ],
+  "title": "Becas de investigación, coordinación-formación y formación del Museo Reina Sofía 2026-2027",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 18 de diciembre de 2025 del Museo Nacional Centro de Arte Reina Sofía, por la que se convocan becas de investigación, coordinación-formación y formación en materias y acti. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

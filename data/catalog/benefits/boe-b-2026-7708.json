@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: 20 días hábiles por vía electrónica desde el día siguiente a la publicación del extracto en el BOE (marzo-abril de 2026).",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud electrónica según la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "asalariado",
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe individualizado a cada beneficiario para cada estancia formativa, más un seguro médico no farmacéutico.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Cultura",
+  "officialSourceLabel": "BOE-B-2026-7708",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7708",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser profesional del sector cultural con nacionalidad de alguno de los países miembros de la Comunidad Iberoamericana de Naciones, conforme a la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-7708",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Cultura para estancias formativas en España de profesionales del sector cultural de países iberoamericanos, con importe individualizado y seguro médico. Convocatoria 2025 cerrada.",
+  "targetGroups": [
+    "profesionales del sector cultural",
+    "ciudadanos iberoamericanos"
+  ],
+  "title": "Ayudas IBEREX de estancias formativas para profesionales iberoamericanos de la cultura, 2025",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

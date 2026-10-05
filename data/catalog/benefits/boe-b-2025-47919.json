@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde las 12:00 horas del 15 de enero de 2026 hasta las 12:00 horas del 24 de febrero de 2026",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud cumplimentada",
+    "documentación de la actuación",
+    "garantía (para anticipos)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 40.000.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto para la Diversificación y Ahorro de la Energía (IDAE)",
+  "officialSourceLabel": "BOE-B-2025-47919",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-47919",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser personas jurídicas públicas o privadas, consorcios o agrupaciones empresariales con personalidad jurídica propia, domicilio fiscal en España y que realicen actividad económica. Coste subvencionable mínimo de 400.000 € por proyecto. Instalaciones finalizadas antes del 30 de junio de 2030.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-47919",
+  "status": "active",
+  "summary": "Convocatoria de ayudas a la inversión para la repotenciación de instalaciones eólicas y la renovación tecnológica y medioambiental de minicentrales hidroeléctricas de hasta 50 MW, dirigida a entidades jurídicas.",
+  "targetGroups": [
+    "personas jurídicas",
+    "consorcios",
+    "agrupaciones empresariales"
+  ],
+  "title": "Segunda convocatoria Programas Repotenciación Circular: Ayudas a inversión en repotenciación eólica y renovación minicentrales hidroeléctricas",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 23 de diciembre de 2025 del Consejo de Administración del E.P.E Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P., por la que se realiza la segunda con. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Veinte días hábiles a partir del día siguiente a la publicación del extracto en el BOE",
+  "category": "beca",
+  "documentsNeeded": [
+    "título superior universitario",
+    "carta de acceso, invitación o admisión en centro estadounidense",
+    "certificado electrónico de persona física",
+    "documentación necesaria para la solicitud"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Asignación mensual de hasta 4.300 dólares; billete de ida y vuelta y gastos varios (1.300 dólares); gastos de matrícula y tasas (máximo 34.000 dólares)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Cultura",
+  "officialSourceLabel": "BOE-B-2026-11219",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11219",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser español, estar en posesión de un título superior expedido por una universidad española o reconocido/homologado por el Ministerio de Educación y Formación Profesional o por el Ministerio de Ciencia, Innovación y Universidades, y disponer de una carta de acceso, invitación o admisión en un centro estadounidense.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-11219",
+  "status": "active",
+  "summary": "Convocatoria de becas para españoles con título superior que deseen ampliar estudios artísticos o de gestión cultural en universidades y centros de los Estados Unidos de América.",
+  "targetGroups": [
+    "españoles",
+    "estudiantes de posgrado/artísticos"
+  ],
+  "title": "Becas del Ministerio de Cultura/Fulbright para la ampliación de estudios artísticos en EE.UU. (Curso 2026-2027)",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Orden del 6 de abril de 2026 por la que se convocan becas del Ministerio de Cultura/Fulbright para la ampliación de estudios artísticos en los Estados Unidos de América (Curso 2026-2027. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

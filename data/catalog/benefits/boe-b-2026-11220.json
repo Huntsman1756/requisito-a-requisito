@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles desde la publicación (BOE 11/04/2026) — plazo cerrado.",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "DNI/NIE",
+    "Modelo de instancia",
+    "Dossier de proyecto",
+    "Cartas de aceptación o invitación",
+    "Dossier de trabajos realizados"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "3.000 a 10.000 euros por proyecto según línea (investigación 3.000; producción/movilidad 5.000; comisariado Sala Amadís 7.000; emprendimiento 10.000). Crédito total 230.000 euros.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Dirección General del Instituto de la Juventud",
+  "officialSourceLabel": "BOE-B-2026-11220",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11220",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física o jurídica mayor de edad, con residencia legal en España, no superar los 30 años (o 35 en emprendimiento) en la fecha límite, y cumplir la Ley General de Subvenciones.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-11220",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para jóvenes creadores/as (hasta 30 o 35 años) para proyectos en artes escénicas, visuales, cómic, diseño, literatura y música.",
+  "targetGroups": [
+    "jóvenes creadores/as",
+    "artistas",
+    "emprendedores culturales"
+  ],
+  "title": "Ayudas Injuve para la Creación Joven 2026-2027",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Dirección General del Instituto de la Juventud, por la que se convocan las Ayudas Injuve para la Creación Joven, año 2026-2027 Extracto de la Resolución de la Dirección. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

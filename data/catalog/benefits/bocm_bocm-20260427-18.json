@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes contado a partir del día siguiente a la publicación de este extracto en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 85.000 euros (con posibilidad de cuantía adicional de 42.500 euros) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Medio Ambiente, Agricultura e Interior",
+  "officialSourceLabel": "BOCM:BOCM-20260427-18",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-18",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titular de explotaciones apícolas ubicadas en la Comunidad de Madrid, o pertenecer a agrupaciones de apicultores, cooperativas u organizaciones representativas integradas mayoritariamente por apicultores de la Comunidad de Madrid.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-18",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para apicultores y organizaciones del sector apícola en la Comunidad de Madrid para mejorar la producción y comercialización de productos apícolas.",
+  "targetGroups": [
+    "apicultores",
+    "cooperativas apícolas",
+    "organizaciones representativas de apicultores"
+  ],
+  "title": "Ayudas para la mejora de las condiciones de producción y comercialización de productos apícolas en la Comunidad de Madrid 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 1365/2026, de la Consejería de Medio Ambiente, Agricultura e Interior, por la que se convocan para 2026 las ayudas para la mejora de las condi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

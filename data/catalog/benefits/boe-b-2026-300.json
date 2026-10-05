@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el BOE",
+  "category": "beca",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "958,07 euros/mes por beca; dotación global de 206.943,12 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto Nacional de Estadística",
+  "officialSourceLabel": "BOE-B-2026-300",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-300",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física en posesión o en condiciones de obtener el título de grado universitario, obtenido durante los tres últimos años anteriores a la fecha de publicación de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-300",
+  "status": "active",
+  "summary": "Convocatoria de 18 becas formativas para postgraduados que deseen iniciarse en los métodos y técnicas de investigación estadística.",
+  "targetGroups": [
+    "postgraduados",
+    "estudiantes de grado universitario"
+  ],
+  "title": "Convocatoria de becas de postgrado en estadística para el año 2026",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución del Instituto Nacional de Estadística de 22 de diciembre de 2025 por la que se convocan becas de postgrado en estadística para el año 2026. Extracto de la Resolución del Inst. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes a partir del día siguiente al de la publicación del extracto en el BOE",
+  "category": "discapacidad",
+  "documentsNeeded": [
+    "modelo de solicitud del Programa de subvenciones Reina Letizia"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "5.225.550 € (crédito disponible), importe máximo 10.000 euros por beneficiario",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Real Patronato sobre Discapacidad",
+  "officialSourceLabel": "BOE-B-2026-21272",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-21272",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona con nacionalidad española o residencia legal en España, tener reconocida una discapacidad igual o superior al 33% o situaciones asimiladas, o ser persona con capacidad intelectual límite. Deben iniciar o estar cursando estudios o actividades formativas dirigidas a mejorar su formación, cualificación, empleabilidad e inserción social.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-21272",
+  "status": "active",
+  "summary": "Convocatoria de ayudas económicas para personas con discapacidad (≥33%) o capacidad intelectual límite que cursen estudios formativos para mejorar su empleabilidad e inserción social.",
+  "targetGroups": [
+    "personas con discapacidad",
+    "personas con capacidad intelectual límite"
+  ],
+  "title": "Ayudas Programa Reina Letizia para la Inclusión 2026",
+  "type": "disability_support",
+  "whyItMatters": "Extracto de la Resolución de 18 de junio de 2026 de la Secretaria General del Real Patronato sobre Discapacidad, por la que se convocan las ayudas del Programa Reina Letizia para la Inclusión, dirigid. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

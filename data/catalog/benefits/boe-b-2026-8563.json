@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE (publicado el 20 de marzo de 2026)",
+  "category": "beca",
+  "documentsNeeded": [
+    "Título oficial de formación profesional o universitario",
+    "Acreditación de nacionalidad o residencia",
+    "Solicitud cumplimentada firmada electrónicamente"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "15.600 euros anuales para graduados; 11.880 euros anuales para titulados de FP Superior (brutos mensuales: 1.300 y 990 euros respectivamente)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Instituto Nacional de Técnica Aeroespacial \"Esteban Terradas\" (Ministerio de Defensa)",
+  "officialSourceLabel": "BOE-B-2026-8563",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-8563",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titular de nacionalidad española o de país miembro de la UE, o extranjero residente en España. Poseer título oficial de FP Superior o título universitario oficial de graduado/graduada (o equivalente/acreditación de pago de derechos) obtenido en los cuatro años anteriores a la finalización del plazo de presentación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-8563",
+  "status": "active",
+  "summary": "Becas de formación teórico-práctica para recién titulados universitarios o de FP Superior dirigidas a facilitar su incorporación laboral en el INTA.",
+  "targetGroups": [
+    "recién titulados universitarios",
+    "titulados de Formación Profesional Superior"
+  ],
+  "title": "Convocatoria de becas de formación del INTA (Resolución 18/03/2026)",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 18 de marzo de 2026 de la Dirección General del Instituto Nacional de Técnica Aeroespacial \"Esteban Terradas\" por la que se convocan becas de formación. Extracto de la R. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

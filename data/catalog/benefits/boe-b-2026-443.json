@@ -1,0 +1,49 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente al de la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Documentación acreditativa de la constitución legal",
+    "Inscripción en el registro público correspondiente",
+    "Acreditación de residencia fiscal en España",
+    "Acreditación de actividades previas de promoción de la lectura o trayectoria consolidada"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 2.194.800,00 euros (distribuido: 754.800,00 para instituciones sin fines de lucro, 600.000,00 para empresas privadas y 840.000,00 para entidades locales) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-443",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-443",
+  "referencePeriod": "2026",
+  "requirementsText": "Las entidades deben estar legalmente constituidas, inscritas en el registro público correspondiente, tener residencia fiscal en España y acreditar haber realizado actividades de promoción de la lectura con anterioridad a la fecha de finalización del plazo, salvo proyectos con trayectoria consolidada.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-443",
+  "status": "active",
+  "summary": "Subvenciones para entidades sin ánimo de lucro, empresas privadas y ayuntamientos para fomentar la lectura y las letras españolas.",
+  "targetGroups": [
+    "Fundaciones privadas",
+    "Asociaciones",
+    "Organizaciones no gubernamentales",
+    "Empresas privadas",
+    "Autónomos",
+    "Ayuntamientos"
+  ],
+  "title": "Convocatoria de subvenciones para la promoción de la lectura y las letras españolas 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 29 de diciembre de 2025 de la Secretaría de Estado de Cultura por la que se convocan subvenciones, en régimen de concurrencia competitiva, para la promoción de la lectura . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

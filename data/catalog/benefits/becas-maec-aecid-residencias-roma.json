@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026-2027 cerrada: el plazo se regía por el calendario publicado en la sede electrónica de la AECID (Resolución de 18 de mayo de 2026). Programa anual recurrente: la próxima convocatoria se espera en 2027.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas de residencia en la Real Academia de España en Roma",
+  "documentsNeeded": [
+    "Formulario de solicitud telemático en la sede electrónica de la AECID",
+    "Documentación exigida en la resolución (proyecto, CV, acreditaciones)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "general"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "1.400 €/mes de residencia + hasta 5.000 € de gastos de producción.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Agencia Española de Cooperación Internacional para el Desarrollo (AECID), Ministerio de Asuntos Exteriores",
+  "officialSourceLabel": "BOE-B-2026-16319 — Extracto de la Resolución de 18 de mayo de 2026 (AECID)",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16319",
+  "referencePeriod": "Convocatoria 2026-2027 (cerrada)",
+  "requirementsText": "Cumplir los requisitos del apartado 2 de la resolución de convocatoria (Resolución de 18 de mayo de 2026, AECID). Solicitud telemática en castellano a través del formulario habilitado en la sede electrónica de la AECID, dentro del calendario oficial publicado.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-maec-aecid-residencias-roma",
+  "status": "active",
+  "summary": "Becas de la AECID para residencias de artistas y creadores en la Real Academia de España en Roma durante el curso 2026-2027, con dotación mensual y apoyo a la producción.",
+  "targetGroups": [
+    "artistas",
+    "creadores",
+    "investigadores"
+  ],
+  "title": "Becas MAEC-AECID para residencias en la Real Academia de España en Roma 2026-2027",
+  "type": "scholarship",
+  "whyItMatters": "Financia una residencia de creación en la Real Academia de España en Roma, una de las residencias artísticas de referencia del sector público español."
+}

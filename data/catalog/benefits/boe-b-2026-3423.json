@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "treinta días hábiles contados a partir del día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial del Estado",
+  "category": "pension",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "treinta mil euros (30.000 €)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Jefatura de Estado Mayor de la Armada",
+  "officialSourceLabel": "BOE-B-2026-3423",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-3423",
+  "referencePeriod": "2026",
+  "requirementsText": "Podrán optar a los premios las personas físicas de nacionalidad española o extranjera. En las disciplinas de 'Juventud' y 'Dibujo infantil', los participantes serán centros docentes públicos y privados ubicados en territorio nacional.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-3423",
+  "status": "active",
+  "summary": "Convocatoria de premios para fomentar el interés por el mar y las profesiones navales, dirigida a personas físicas y centros docentes.",
+  "targetGroups": [
+    "personas físicas",
+    "centros docentes"
+  ],
+  "title": "Premios Virgen del Carmen 2026 de la Armada",
+  "type": "elderly_support",
+  "whyItMatters": "Extracto de la Resolución del 23 de enero de 2026, de la Jefatura de Estado Mayor de la Armada, por la que se convocan los Premios Virgen del Carmen 2026. Extracto de la Resolución del 23 de enero de . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

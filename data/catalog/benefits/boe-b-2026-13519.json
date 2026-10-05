@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles computados desde el siguiente al de la publicación en el Boletín Oficial del Estado del extracto de la presente convocatoria",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 1.218.650 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Función Pública",
+  "officialSourceLabel": "BOE-B-2026-13519",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13519",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser organización sindical constituida según la Ley Orgánica 11/1985 y haber obtenido representación suficiente en los órganos de representación del personal en las Administraciones Públicas.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13519",
+  "status": "active",
+  "summary": "Subvenciones para financiar gastos de organizaciones sindicales con representación en las Mesas Generales de Negociación del TREBEP durante el año 2026.",
+  "targetGroups": [
+    "organizaciones sindicales"
+  ],
+  "title": "Convocatoria de subvenciones a organizaciones sindicales para Mesas Generales de Negociación 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de Resolución de 27 de abril de 2026 de la Secretaría de Estado de Función Pública, por la que se convocan subvenciones a las organizaciones sindicales presentes en las Mesas Generales Negoci. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

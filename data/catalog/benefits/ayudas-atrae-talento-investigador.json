@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo fue del 23 de abril al 4 de junio de 2026. El programa es recurrente.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "empleo",
+  "displayTitle": "Programa ATRAE: incorporación de talento investigador consolidado",
+  "documentsNeeded": [
+    "Solicitud y documentación según la convocatoria ATRAE"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "general"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Ayuda económica de incorporación; cuantía individual fijada en la convocatoria 2026.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2026-10918 — Extracto de la convocatoria ATRAE 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10918",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Ser persona investigadora con trayectoria consolidada y cumplir los requisitos de la convocatoria 2026 del Programa ATRAE (condiciones de incorporación a centros españoles).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "ayudas-atrae-talento-investigador",
+  "status": "active",
+  "summary": "Ayudas estatales del Programa ATRAE para la incorporación de personas investigadoras con trayectoria consolidada a centros españoles, convocatoria 2026.",
+  "targetGroups": [
+    "investigadores consolidados"
+  ],
+  "title": "Ayudas Programa ATRAE 2026 para la incorporación de talento investigador",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Programa estatal de referencia para la incorporación de talento investigador consolidado a centros españoles."
+}

@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 18 de febrero de 2026, a las 12.00 h (hora de Bruselas)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "formularios específicos para cada acción",
+    "acreditación (Sello de Calidad) para proyectos de voluntariado"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 9.718.641,80 Euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Dirección General del Instituto de la Juventud",
+  "officialSourceLabel": "BOE-B-2026-15552",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15552",
+  "referencePeriod": "2026",
+  "requirementsText": "Los solicitantes deben registrarse previamente según el procedimiento de la guía del programa y presentar la solicitud electrónica mediante los formularios específicos en la plataforma de la Agencia Nacional Española (ANE). Para proyectos de voluntariado, las organizaciones deben acreditar el cumplimiento de requisitos de calidad mediante el Sello de Calidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-15552",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para incentivar la participación de jóvenes y organizaciones en actividades de solidaridad y voluntariado en el marco del Programa Cuerpo Europeo de Solidaridad.",
+  "targetGroups": [
+    "jóvenes",
+    "organizaciones"
+  ],
+  "title": "Convocatoria de ayudas Programa «Cuerpo Europeo de Solidaridad» (febrero 2026)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Dirección General del Instituto de la Juventud, por la que se convocan ayudas del Programa «Cuerpo Europeo de Solidaridad» correspondientes a la ronda de febrero de 202. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales contados a partir del primer día hábil tras la publicación del extracto en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud de inscripción",
+    "documentación acreditativa de méritos"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "funcionario"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "456.930,00 €",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-796",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-796",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser funcionario docente en servicio activo, excedencia por cuidado de familiares/violencia, servicios especiales, o personal de apoyo en centros públicos. Para el curso de competencias directivas, ser funcionario de carrera nombrado antes del 1/10/2020 y acreditar formación o experiencia directiva específica. Para eTwinning, cumplir dos de tres requisitos de formación o sellos. Solo se permite inscripción en un curso.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-796",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para la adjudicación de plazas en cursos de formación permanente del profesorado de niveles no universitarios y actualización de competencias directivas.",
+  "targetGroups": [
+    "profesorado de niveles no universitarios",
+    "funcionarios docentes",
+    "personal directivo educativo"
+  ],
+  "title": "Convocatoria de 6.550 plazas para cursos tutorizados en línea para la formación del profesorado",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 15 de diciembre de 2025 de la Secretaría de Estado de Educación, por la que se convocan 6.550 plazas para la realización de cursos tutorizados en línea para la formación p. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

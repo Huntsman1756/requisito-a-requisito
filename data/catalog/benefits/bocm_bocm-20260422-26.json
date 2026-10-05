@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes a contar desde el día siguiente al de la publicación de esta convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "educacion",
+  "documentsNeeded": [
+    "Curriculum vitae del candidato",
+    "Extracto del curriculum vitae",
+    "Memoria descriptiva",
+    "Tres trabajos publicados relevantes",
+    "Cartas de apoyo y recomendación"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "menores_40"
+    ],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [
+      "investigador"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Premios de 42.000 y 21.000 euros por beneficiario según categoría; dotación total 189.000 euros.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Educación, Ciencia y Universidades",
+  "officialSourceLabel": "BOCM:BOCM-20260422-26",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260422-26",
+  "referencePeriod": "2026",
+  "requirementsText": "Los candidatos deben estar vinculados laboralmente a universidades o centros de investigación con domicilio fiscal en la Comunidad de Madrid. Para la modalidad de menos de 40 años, se requiere título de doctor y tener menos de 40 años a la fecha de finalización del plazo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260422-26",
+  "status": "active",
+  "summary": "Premios de investigación para reconocer la trayectoria científica o el trabajo de investigadores menores de 40 años en las áreas de Ciencias, Humanidades y Biociencias.",
+  "targetGroups": [
+    "investigadores",
+    "científicos",
+    "académicos"
+  ],
+  "title": "Convocatoria Premios Investigación Comunidad de Madrid 2026",
+  "type": "education_support",
+  "whyItMatters": "Convocatoria premios – Orden 1430/2026, de 11 de abril, de la Consejera de Educación, Ciencia y Universidades, por la que se convocan para el año 2026 los premios de investigación de la Comunidad de M. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

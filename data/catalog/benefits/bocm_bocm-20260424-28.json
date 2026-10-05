@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: plazo abierto hasta el 11 de mayo de 2026, inclusive.",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud según la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "6.000 euros por proyecto de investigación; presupuesto total de la convocatoria: 25.000 euros.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Universidad de Alcalá",
+  "officialSourceLabel": "BOCM-20260424-28 (BDNS 899317)",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260424-28",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona investigadora con dedicación a tiempo completo en activo, con vinculación contractual o estatutaria a la UAH al menos hasta la finalización del proyecto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260424-28",
+  "status": "active",
+  "summary": "Financiación de la Universidad de Alcalá de 6.000 euros por proyecto para personas investigadoras vinculadas a la UAH. Convocatoria 2026 cerrada el 11 de mayo de 2026.",
+  "targetGroups": [
+    "personal investigador",
+    "UAH"
+  ],
+  "title": "Convocatoria UAH de financiación de proyectos de investigación, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

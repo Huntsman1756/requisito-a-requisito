@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente a la publicación del extracto en el BOE (15 de abril de 2026)",
+  "category": "beca",
+  "documentsNeeded": [
+    "certificado electrónico de persona física",
+    "solicitud a través de la sede electrónica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "2.300 € a 3.500 € brutos mensuales según destino",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio de Cultura",
+  "officialSourceLabel": "BOE-B-2026-11645",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11645",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser joven español. Estar en formación práctica en gestión cultural. Presentar la solicitud exclusivamente a través de la sede electrónica del Ministerio de Cultura con certificado electrónico de persona física.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-11645",
+  "status": "active",
+  "summary": "Convocatoria de becas para jóvenes españoles que deseen realizar formación práctica en gestión cultural en instituciones de prestigio en el exterior y representaciones diplomáticas.",
+  "targetGroups": [
+    "jóvenes españoles",
+    "estudiantes de gestión cultural"
+  ],
+  "title": "Becas Culturex 2026-2027: formación práctica en gestión cultural en el exterior",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Orden del 6 de abril de 2026 por la que se convocan becas \"Culturex\" de formación práctica en gestión cultural para jóvenes españoles en instituciones culturales de reconocido prestig. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

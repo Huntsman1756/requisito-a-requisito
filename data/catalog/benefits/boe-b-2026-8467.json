@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 24 de abril de 2026 a las 12:00 — plazo cerrado.",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total de la convocatoria 1.935.865,68 euros (beneficiarios: centros docentes sostenidos con fondos públicos).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-8467",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-8467",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro docente español sostenido con fondos públicos. La convocatoria se realiza en régimen de concurrencia competitiva.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-8467",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para centros docentes públicos españoles para complementar la educación del alumnado no universitario mediante rutas formativas durante el curso 2026-2027.",
+  "targetGroups": [
+    "centros docentes públicos"
+  ],
+  "title": "Ayudas para participar en el programa nacional Rutas científicas, artísticas y literarias 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 17 de abril de 2026 de la Secretaría de Estado de Educación, por la que se convocan ayudas para participar en el programa nacional Rutas científicas, artísticas y literari. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

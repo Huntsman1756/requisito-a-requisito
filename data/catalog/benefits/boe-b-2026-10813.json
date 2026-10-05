@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "documentación indicada en el artículo 5.5 de las bases reguladoras",
+    "anexos incorporados a la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "400.000,00 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría General de Instituciones Penitenciarias (Ministerio del Interior)",
+  "officialSourceLabel": "BOE-B-2026-10813",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10813",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser fundaciones, asociaciones u organizaciones no gubernamentales sin fines lucrativos según la Ley 49/2002. Presentar solicitud exclusivamente por vía electrónica en la sede del Ministerio del Interior.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10813",
+  "status": "active",
+  "summary": "Subvención dirigida a fundaciones, asociaciones y ONGs para colaborar en la ejecución y seguimiento de medidas alternativas a la prisión y la asistencia a penados en libertad condicional.",
+  "targetGroups": [
+    "fundaciones",
+    "asociaciones",
+    "organizaciones no gubernamentales (ONG)"
+  ],
+  "title": "Convocatoria subvención colaboración medidas alternativas a la pena privativa de libertad",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto Resolución de 3 de abril 2026 de la Secretaria General de Instituciones Penitenciarias, por la que se convoca la subvención para la colaboración en la ejecución y seguimiento de las medidas a. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

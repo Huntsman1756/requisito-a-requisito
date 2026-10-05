@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "veinte días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Tesis Doctoral",
+    "Certificado de calificación Sobresaliente Cum Laude"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "3.000,00 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Universidad Complutense de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260618-27",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-27",
+  "referencePeriod": "2026",
+  "requirementsText": "Haber defendido la Tesis Doctoral en la UCM sobre feminismo y/o género con calificación de Sobresaliente Cum Laude entre enero de 2025 y abril de 2026. Las tesis deberán estar escritas en castellano y con lenguaje inclusivo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-27",
+  "status": "active",
+  "summary": "Convocatoria de un premio de 3.000 euros para apoyar la investigación en feminismo y género realizada por estudiantes de doctorado de la UCM que hayan defendido su tesis con calificación de Sobresaliente Cum Laude.",
+  "targetGroups": [
+    "estudiantes de doctorado",
+    "investigadores"
+  ],
+  "title": "V Premio a la mejor Tesis Doctoral en Feminismo y/o Género (UCM)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Resolución de 2 de junio de 2026, por la que se convoca el V Premio a la mejor Tesis Doctoral en Feminismo y/o Género de la Unidad de Igualdad UCM E. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

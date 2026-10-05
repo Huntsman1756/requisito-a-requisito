@@ -1,0 +1,55 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026-2027 cerrada: el plazo fue de 15 días hábiles desde la publicación del extracto en el BOCM. Convocatoria anual.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas de FP Grado D en centros privados (Madrid)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Documentación de renta familiar",
+    "Matrícula o reserva de plaza en el ciclo"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [
+      "general"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Hasta 3.000 €/año (grado medio) o 3.500 €/año (grado superior, primer curso) según renta.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades",
+  "officialSourceLabel": "BOCM — Extracto de la convocatoria de becas FP Grado D 2026-2027",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-23",
+  "referencePeriod": "Convocatoria 2026-2027 (cerrada)",
+  "requirementsText": "Estar matriculado o con reserva de plaza para el curso 2026-2027 en un ciclo formativo de FP Grado D de grado medio o superior en un centro privado autorizado de la Comunidad de Madrid. Límites de edad: 36 años (primer curso), 37 (segundo) o 38 (tercer curso de dobles titulaciones). No superar el límite de renta per cápita familiar de 35.913 €. Las becas se conceden por concurrencia competitiva según la renta per cápita hasta agotar el crédito.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "madrid-becas-fp-grado-d",
+  "status": "active",
+  "summary": "Becas de la Comunidad de Madrid para cursar ciclos formativos de FP Grado D de grado medio o superior en centros docentes privados autorizados, curso 2026-2027.",
+  "targetGroups": [
+    "estudiantes de FP",
+    "familias con renta baja"
+  ],
+  "title": "Becas de Formación Profesional Grado D 2026-2027 (Comunidad de Madrid)",
+  "type": "scholarship",
+  "whyItMatters": "Hace asequible un ciclo de FP Grado D en un centro privado autorizado a estudiantes con renta limitada."
+}

@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a partir del día siguiente a la publicación del extracto en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "proyecto de rehabilitación o mejora",
+    "acreditación de antigüedad de actividad",
+    "justificante de funciones realizadas (100 funciones)",
+    "proyecto de reapertura (si aplica)",
+    "documentación de la sede electrónica del Ayuntamiento de Madrid"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 453.549,91 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consorcio de Rehabilitación y Equipamiento de Teatros de Madrid (Área de Gobierno de Cultura, Turismo y Deporte del Ayuntamiento de Madrid)",
+  "officialSourceLabel": "BOCM:BOCM-20260430-49",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260430-49",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser propietario o arrendatario de salas de teatro dedicadas a la exhibición escénica en Madrid, con antigüedad mínima de dos años de actividad, haber realizado al menos 100 funciones en los últimos dos años o acreditar proyecto de reapertura tras cese. Las actuaciones deben ejecutarse entre el 1 de septiembre de 2025 y el 31 de agosto de 2026 y no haber recibido subvención anterior.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260430-49",
+  "status": "active",
+  "summary": "Subvenciones para la rehabilitación, mejora de seguridad, accesibilidad y eficiencia energética de teatros y salas de artes escénicas en Madrid, dirigidas a propietarios o arrendatarios con actividad previa.",
+  "targetGroups": [
+    "propietarios de teatros",
+    "arrendatarios de teatros",
+    "salas de artes escénicas"
+  ],
+  "title": "Convocatoria subvenciones rehabilitación y mejora de teatros Madrid 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Área de Gobierno de Cultura, Turismo y Deporte. Extracto convocatoria subvenciones – Madrid. Régimen económico. Área de Gobierno de Cultura, Turismo y Deporte. Extracto co. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

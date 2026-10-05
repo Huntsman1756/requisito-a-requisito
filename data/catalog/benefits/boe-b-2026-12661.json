@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Desde el 1 de septiembre al 20 de octubre de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud mediante instancia normalizada firmada electrónicamente",
+    "Documentos y anexos requeridos",
+    "Cuenta justificativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima de 330.000,00 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejo Superior de Deportes",
+  "officialSourceLabel": "BOE-B-2026-12661",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12661",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser Federaciones Deportivas Españolas (FFDDEE) que hayan participado con sus respectivos equipos en las competiciones internacionales convocadas por la Federación Internacional de Deporte Universitario (FISU) en el año 2026.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12661",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para federaciones deportivas españolas que participen en los Campeonatos del Mundo Universitarios de 2026, destinadas a sufragar gastos de alojamiento, manutención, equipación y tasas.",
+  "targetGroups": [
+    "Federaciones Deportivas Españolas"
+  ],
+  "title": "Subvenciones a Federaciones Deportivas Españolas para Campeonatos del Mundo Universitarios 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 25 de marzo de 2026, la Presidencia del Consejo Superior de Deportes, por la que se convocan subvenciones a Federaciones Deportivas Españolas para participación en los Cam. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

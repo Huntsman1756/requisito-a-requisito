@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Ayudas máster Derecho Militar (máx. 4.300 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Acreditación de la situación militar y admisión al máster"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "militar"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 4.300 € por alumno (dotación: 20.000 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Defensa — Ejército de Tierra",
+  "officialSourceLabel": "BOE — Convocatoria de ayudas para el máster en Derecho Militar (ET)",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13661",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Oficiales y suboficiales del Ejército de Tierra en situación de servicio activo, incluidos en las prioridades de la convocatoria y admitidos en el máster en Derecho Militar.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "ayudas-master-derecho-militar-ejercito",
+  "status": "active",
+  "summary": "Ayudas del Ejército de Tierra para oficiales y suboficiales en servicio activo que cursen el máster en Derecho Militar: dotación de 20.000 € con un máximo de 4.300 € por alumno.",
+  "targetGroups": [
+    "oficiales y suboficiales del Ejército de Tierra"
+  ],
+  "title": "Ayudas para el máster en Derecho Militar (Ejército de Tierra)",
+  "type": "scholarship",
+  "whyItMatters": "Financia la especialización jurídica del personal del Ejército."
+}

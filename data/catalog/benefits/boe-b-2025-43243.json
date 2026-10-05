@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles a partir del día siguiente a la publicación del extracto en el BOE (22 de noviembre de 2025)",
+  "category": "beca",
+  "documentsNeeded": [
+    "Títulos académicos oficiales o homologados",
+    "Acreditación de dominio del español (para extranjeros)",
+    "Acreditación de situación legal en España (para extranjeros)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "20.000 euros anuales por beca (40.000 euros anuales en total)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Museo Nacional Centro de Arte Reina Sofía",
+  "officialSourceLabel": "BOE-B-2025-43243",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-43243",
+  "referencePeriod": "2025",
+  "requirementsText": "Estar en posesión de los títulos académicos oficiales requeridos o equivalentes homologados. Los extranjeros deben acreditar dominio perfecto del español y situación legal en España.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-43243",
+  "status": "active",
+  "summary": "Convocatoria de dos becas anuales para la formación en coordinación de proyectos editoriales y proyectos de investigación en la Dirección de Estudios del Museo Reina Sofía.",
+  "targetGroups": [
+    "personas con formación académica en arte, edición o investigación"
+  ],
+  "title": "Becas del Museo Reina Sofía para formación en proyectos editoriales y transversales 2026",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 20 de noviembre de 2025, del Museo Nacional Centro de Arte Reina Sofía, por la que se convocan una beca para la formación en proyectos editoriales y otra beca para proyect. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

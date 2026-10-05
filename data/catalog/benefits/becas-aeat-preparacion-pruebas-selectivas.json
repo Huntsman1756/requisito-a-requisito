@@ -1,0 +1,51 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas AEAT para preparar oposiciones (286 becas)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Titulación y documentación acreditativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía por beca según cuerpo y bases de la convocatoria.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Agencia Estatal de Administración Tributaria (AEAT)",
+  "officialSourceLabel": "BOE — Convocatoria de becas de la AEAT para pruebas selectivas 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17577",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Aspirantes a las pruebas selectivas de los cuerpos de la AEAT que cumplan los requisitos de la convocatoria (p. ej., 40 becas para el Cuerpo de Gestión de la Hacienda del Estado).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-aeat-preparacion-pruebas-selectivas",
+  "status": "active",
+  "summary": "Becas de la Agencia Estatal de Administración Tributaria para la preparación de las pruebas selectivas de sus cuerpos: 286 becas con una dotación global de 478.651 €.",
+  "targetGroups": [
+    "titulados que preparan oposiciones de la AEAT"
+  ],
+  "title": "Becas de la AEAT para preparar pruebas selectivas",
+  "type": "scholarship",
+  "whyItMatters": "Financia la preparación de las oposiciones a los cuerpos de la AEAT."
+}

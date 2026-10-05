@@ -1,0 +1,59 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "5 años a contar desde el día siguiente al del nacimiento o adopción, aunque se recomienda solicitarla en los primeros meses.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "Documento de identidad de los progenitores",
+    "Libro de familia actualizado (o certificado de paternidad/maternidad/adopción)",
+    "Certificado de discapacidad de la madre o del padre (si es el factor de acceso)",
+    "Título de Familia numerosa (si es el factor de acceso)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "monoparental",
+      "familia-numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Pago único de 1.000 euros inamovible, salvo que los ingresos superen ligeramente el límite (en ese caso se abona una cuantía reducida o diferencia).",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Instituto Nacional de la Seguridad Social (INSS)",
+  "officialSourceLabel": "Seguridad Social (INSS)",
+  "officialSourceUrl": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/44999/265/106090",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "El nacimiento o adopción debe haberse producido en territorio español y el beneficiario debe residir legalmente en España. La familia debe ser legalmente numerosa o monoparental, o la madre o el padre padecer una discapacidad del 65% o más. Los ingresos de la unidad familiar no pueden superar los límites que marca la Ley de Presupuestos de cada año.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+  "status": "active",
+  "summary": "Prestación económica de pago único de la Seguridad Social (1.000 euros) para compensar los gastos derivados del nacimiento o la adopción en familias con características especiales.",
+  "targetGroups": [
+    "familias numerosas",
+    "familias monoparentales",
+    "madres o padres con discapacidad (igual o superior al 65%)"
+  ],
+  "title": "Ayuda por nacimiento o adopción (Familias numerosas, monoparentales o progenitores con discapacidad)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Garantiza un colchón de 1.000 euros muy necesarios en el momento del parto/adopción para aquellos hogares estructuralmente más frágiles económicamente (monoparentales) o logísticamente (numerosas/discapacidad)."
+}

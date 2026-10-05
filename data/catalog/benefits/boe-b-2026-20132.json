@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "veinte días hábiles, contados a partir del día siguiente al de la publicación en el BOE del presente extracto",
+  "category": "beca",
+  "documentsNeeded": [
+    "certificado digital",
+    "DNI electrónico"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "1.686,33 euros/mes por beneficiario (importe total máximo anual de la convocatoria: 202.359,60 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Española de Medicamentos y Productos Sanitarios",
+  "officialSourceLabel": "BOE-B-2026-20132",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20132",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser titular universitario de Grado o de Licenciatura y haber finalizado los estudios correspondientes del título exigido para la beca solicitada dentro de los 5 años anteriores a la fecha de publicación de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20132",
+  "status": "active",
+  "summary": "Convocatoria de 10 becas de formación superior en régimen de concurrencia competitiva dirigidas a titulados universitarios de Grado o Licenciatura que hayan finalizado sus estudios en los últimos 5 años.",
+  "targetGroups": [
+    "titulados universitarios de Grado",
+    "titulados universitarios de Licenciatura"
+  ],
+  "title": "Convocatoria de becas de formación de la Agencia Española de Medicamentos y Productos Sanitarios",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de 28 de mayo de 2026, de la Agencia Española de Medicamentos y Productos Sanitarios, por la que se convocan becas de formación de la Agencia Extracto de la Resolución de 28 . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

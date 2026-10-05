@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales contados a partir del primer día hábil tras la publicación del extracto de la presente resolución en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [
+    "DNI",
+    "acreditación de nivel lingüístico",
+    "certificado de estar al corriente de obligaciones tributarias y con la Seguridad Social"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "funcionario"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "180.000,00 euros (cuantía máxima destinada); hasta 1.500,00 euros por beneficiario",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-10882",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10882",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser funcionario/a de carrera en servicio activo o en excedencia por cuidado de familiares, violencia de género o terrorista, nombrado con anterioridad al 1 de octubre de 2024. Estar impartiendo docencia directa en centro español (salvo excedencias). Acreditar nivel B2 del idioma del país elegido (o inglés para ciertos países). No haber obtenido ayuda en las cuatro últimas convocatorias. Estar al corriente de obligaciones tributarias y con la Seguridad Social.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10882",
+  "status": "active",
+  "summary": "Convocatoria de 120 plazas para estancias profesionales en centros educativos europeos para el curso 2026/2027, dirigida a personal docente.",
+  "targetGroups": [
+    "personal docente",
+    "funcionarios de carrera"
+  ],
+  "title": "Resolución de 23 de marzo de 2026 de la Secretaría de Estado de Educación, por la que se convocan 120 plazas de Estancias Profesionales en diversos paises europeos, para el curso 2026/2027",
+  "type": "education_support",
+  "whyItMatters": "Resolución de 23 de marzo de 2026 de la Secretaría de Estado de Educación, por la que se convocan 120 plazas de Estancias Profesionales en diversos paises europeos, para el curso 2026/2027 Resolución . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles desde la publicación (BOE 17/03/2026) — plazo cerrado.",
+  "category": "beca",
+  "documentsNeeded": [
+    "acreditación de nacionalidad",
+    "acreditación de residencia legal",
+    "título universitario o resolución de reconocimiento/equivalencia",
+    "acreditación de nivel C2 de español (si no se tiene nacionalidad española)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "1.234 euros/mes por beca (máximo 14.808 euros/año); presupuesto total 171.936,60 euros para 11 becas.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación (Ministerio de Educación, Formación Profesional y Deportes)",
+  "officialSourceLabel": "BOE-B-2026-8264",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-8264",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser mayor de edad, poseer nacionalidad española o de la UE/EEE con residencia legal en España (o acreditar nivel C2 de español si no es español), y poseer la titulación requerida obtenida con posterioridad al 1 de enero de 2021.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-8264",
+  "status": "active",
+  "summary": "Convocatoria de 11 becas para la formación especializada en el ámbito de la Dirección General de Evaluación y Cooperación Territorial del Ministerio de Educación, dirigida a personas con titulación universitaria reciente.",
+  "targetGroups": [
+    "titulados universitarios",
+    "personas mayores de edad"
+  ],
+  "title": "Becas para formación especializada en áreas y materias educativas 2026-2027",
+  "type": "scholarship",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Educación por la que se convocan becas para la formación especializada en áreas y materias educativas en el ámbito de la Dirección General de Ev. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

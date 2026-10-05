@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles contados a partir del día siguiente al de la publicación de este extracto en el Boletín Oficial del Estado",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud de subvención",
+    "Documentación justificativa del proyecto de investigación"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "24.000 € en total, con un máximo de 6.000 € por proyecto",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Centro Universitario de la Guardia Civil",
+  "officialSourceLabel": "BOE-B-2026-788",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-788",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser personas físicas, jurídicas, agrupaciones, comunidades de bienes o unidades económicas con domicilio en la Unión Europea capaces de llevar a cabo proyectos de investigación en seguridad. Un mismo beneficiario no podrá presentar más de una solicitud.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-788",
+  "status": "active",
+  "summary": "Subvenciones para financiar proyectos de investigación en el ámbito de la seguridad pública, destinadas a personas físicas, jurídicas y agrupaciones.",
+  "targetGroups": [
+    "personas físicas",
+    "personas jurídicas",
+    "agrupaciones de personas físicas o jurídicas",
+    "comunidades de bienes",
+    "unidades económicas"
+  ],
+  "title": "Convocatoria subvenciones investigación seguridad Centro Universitario Guardia Civil 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 1 de diciembre de 2025 de la Dirección del Centro Universitario de la Guardia Civil,  mediante la cual se hace pública la convocatoria por la que se establecen las condici. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

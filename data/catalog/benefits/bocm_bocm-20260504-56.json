@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el día siguiente a la publicación en el BOCM hasta el 30 de junio de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "formulario de solicitud",
+    "documentación acreditativa de la inscripción como ponente",
+    "factura de abono del gasto de inscripción",
+    "certificado electrónico o DNI electrónico",
+    "documentación exigida en la base 4 de la Convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Total 30.000 euros; 1.300 euros (presencial fuera de España), 900 euros (presencial nacional fuera de Península), 700 euros (presencial Península), hasta 500 euros (inscripción no presencial)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Universidad Rey Juan Carlos",
+  "officialSourceLabel": "BOCM:BOCM-20260504-56",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260504-56",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado y con matrícula activa en programas de doctorado de la URJC (RD 99/2011 y 576/2023). No disponer de fondos propios para el viaje. Estar al corriente de obligaciones tributarias y de la Seguridad Social. No haber sido condenado por delitos específicos.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260504-56",
+  "status": "active",
+  "summary": "Ayudas para estudiantes de doctorado de la URJC para participar como ponentes en congresos científicos internacionales.",
+  "targetGroups": [
+    "estudiantes de doctorado"
+  ],
+  "title": "III Convocatoria de bolsas de viaje del Consejo Social URJC para estudiantes de doctorado",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Resolución de 22 de abril de 2026, del Rector Magfco. de la Universidad Rey Juan Carlos, por la que se aprueba la III Convocatoria, y sus bases reguladoras, del Co. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

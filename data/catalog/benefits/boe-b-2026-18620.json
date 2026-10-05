@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles a partir del día siguiente a la publicación en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "2.250.000,00 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-18620",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18620",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centros educativos públicos ubicados en territorio nacional que impartan educación infantil, básica, secundaria postobligatoria, de personas adultas o idiomas de régimen especial. Quedan excluidas las enseñanzas superiores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-18620",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para promover agrupaciones de centros educativos públicos que impulsen proyectos comunes de sostenibilidad, inclusión y pedagogías STEM.",
+  "targetGroups": [
+    "centros educativos públicos"
+  ],
+  "title": "Ayudas para promover agrupaciones de centros educativos. Convocatoria 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 1 de junio de 2026 de la Secretaría de Estado de Educación, por la que se convocan ayudas destinadas a promover agrupaciones de centros educativos. Convocatoria 2026. Extr. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

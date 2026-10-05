@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles a partir del día siguiente a la publicación del extracto en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 10.350 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Educación, Ciencia y Universidades",
+  "officialSourceLabel": "BOCM:BOCM-20260429-21",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260429-21",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro público, privado o privado concertado de la Comunidad de Madrid que tenga escolarizados alumnos de 5.º o 6.º de Educación Primaria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260429-21",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para centros educativos de la Comunidad de Madrid con alumnos de 5º y 6º de Primaria para participar en un concurso de oratoria destinado a mejorar las competencias de comunicación oral.",
+  "targetGroups": [
+    "centros educativos públicos",
+    "centros educativos privados",
+    "centros educativos concertados",
+    "alumnos de 5.º de Primaria",
+    "alumnos de 6.º de Primaria"
+  ],
+  "title": "Convocatoria XI Concurso de Oratoria en Primaria Comunidad de Madrid 2025-2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 1628/2026, de 17 de abril, de la Consejera de Educación, Ciencia y Universidades, por la que se convoca la XI edición del Concurso de Oratoria. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

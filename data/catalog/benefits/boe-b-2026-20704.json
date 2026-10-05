@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Hasta el 19 de octubre de 2026 a las 15:00 horas",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Premios en especie por importe máximo de 1.500 euros (individual) o 4.500 euros (grupo); financiación total del concurso de 91.000 euros.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-20704",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20704",
+  "referencePeriod": "2026",
+  "requirementsText": "Dirigido al alumnado de las modalidades de Educación Primaria, ESO, Ciclos Formativos, Bachillerato, Educación Especial y Educación de Personas Adultas. Se otorga un premio por modalidad y formato.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20704",
+  "status": "active",
+  "summary": "Concurso dirigido al alumnado de primaria, secundaria, bachillerato y formación profesional para premiar trabajos que contribuyan al conocimiento de la Constitución Española.",
+  "targetGroups": [
+    "alumnado de primaria",
+    "alumnado de secundaria",
+    "alumnado de bachillerato",
+    "alumnado de formación profesional",
+    "alumnado de educación especial",
+    "alumnado de educación de personas adultas"
+  ],
+  "title": "Concurso Nacional Una Constitución para todos. España en Democracia y Libertad 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Educación, por la que se convoca en el año 2026 el Concurso Nacional Una Constitución para todos. España en Democracia y Libertad. Extracto de l. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

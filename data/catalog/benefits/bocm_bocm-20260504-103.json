@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales a partir del día siguiente a la publicación de la convocatoria en la Plataforma de Subvenciones del Estado y en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención 2026",
+    "documentación requerida",
+    "justificación de gastos y pagos de subvenciones anteriores",
+    "certificado de estar al corriente de obligaciones con la Seguridad Social",
+    "certificado de estar al corriente de obligaciones tributarias"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 5.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de San Fernando de Henares",
+  "officialSourceLabel": "BOCM:BOCM-20260504-103",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260504-103",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser asociaciones de mujeres legalmente constituidas, con fines de igualdad, sede en el municipio, inscritas en el Registro de Entidades con antigüedad mínima de 1 año, haber justificado subvenciones anteriores, estar al corriente de obligaciones tributarias y con la Seguridad Social, y no estar incurso en prohibiciones de obtener ayudas.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260504-103",
+  "status": "active",
+  "summary": "Subvenciones destinadas a asociaciones de mujeres sin ánimo de lucro del municipio para financiar proyectos que fomenten la igualdad y erradiquen la violencia de género.",
+  "targetGroups": [
+    "asociaciones de mujeres"
+  ],
+  "title": "Convocatoria de subvenciones a asociaciones de mujeres de San Fernando de Henares",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– San Fernando de Henares. Extracto convocatoria subvenciones – San Fernando de Henares. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

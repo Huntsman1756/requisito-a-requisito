@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días desde la publicación (BOE 28/04/2026) — plazo cerrado.",
+  "category": "empleo",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total 2.880.000 euros; la ayuda individual no puede superar la totalidad de los gastos subvencionables del proyecto.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales",
+  "officialSourceLabel": "BOE-B-2026-13408",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13408",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad sin ánimo de lucro y cumplir los requisitos establecidos en el apartado cuarto de la resolución. Las actividades deben desarrollarse durante el curso escolar 2026-2027.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13408",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para entidades sin ánimo de lucro para desarrollar actividades de fomento del audiovisual entre jóvenes en centros educativos durante el curso 2026-2027.",
+  "targetGroups": [
+    "entidades sin ánimo de lucro"
+  ],
+  "title": "Ayudas para entidades sin ánimo de lucro - Programa Cine Escuela 2026-2027",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de 16 de abril de 2026, del Organismo Autónomo Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan ayudas a entidades sin ánimo de lucro para . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas Cicerone del CNIC (1.500 € + desplazamiento)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Expediente académico"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "1.500 € por beca + hasta 300 € de desplazamiento.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Centro Nacional de Investigaciones Cardiovasculares (CNIC)",
+  "officialSourceLabel": "BOE — Convocatoria de becas Cicerone del CNIC 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-5059",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Estudiantes universitarios admitidos en el programa de prácticas Cicerone del CNIC, según las bases de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-cicerone-cnic-2026",
+  "status": "active",
+  "summary": "Becas del Centro Nacional de Investigaciones Cardiovasculares (CNIC) para prácticas de verano en sus laboratorios: 1.500 € por beca más hasta 300 € de ayuda de desplazamiento, para estudiantes universitarios.",
+  "targetGroups": [
+    "estudiantes universitarios de ciencias de la salud"
+  ],
+  "title": "Becas Cicerone del CNIC 2026",
+  "type": "scholarship",
+  "whyItMatters": "Prácticas remuneradas de verano en un centro de investigación cardiovascular de referencia."
+}

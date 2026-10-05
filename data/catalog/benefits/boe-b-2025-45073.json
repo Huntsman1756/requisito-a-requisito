@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles, contados desde el día siguiente al de la publicación del extracto de esta convocatoria en el BOE (4 de diciembre de 2025)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud firmada por el representante legal",
+    "Relación de actividades",
+    "Memoria explicativa de las actividades desarrolladas o a desarrollar"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima total: 45.000,00€. Cuantía máxima por solicitud: 20.000,00€. Cuantía máxima por actividad: 10.000 €",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2025-45073",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-45073",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser organización sindical representativa del sector del personal docente e investigador universitario según la LO 11/1985. No haber incumplido justificaciones o reintegros en convocatorias anteriores. Presentar solicitud a nombre de la candidatura que obtuvo representantes. No se admitirá más de una solicitud por entidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-45073",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para financiar gastos corrientes y medidas de apoyo institucional de sindicatos representativos del personal docente e investigador universitario.",
+  "targetGroups": [
+    "sindicatos del ámbito universitario"
+  ],
+  "title": "Subvenciones para apoyo institucional a sindicatos del ámbito universitario",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 21 de noviembre de 2025 de la Secretaría de Estado de Ciencia, Innovación y Universidades por la que se convocan, por tramitación anticipada, las subvenciones para financi. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

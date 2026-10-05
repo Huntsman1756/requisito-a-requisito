@@ -1,0 +1,40 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince (15) días hábiles contados a partir del día siguiente al de la publicación del extracto de la resolución de la convocatoria en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 207.450,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Mando de Personal del Ejército de Tierra (Ministerio de Defensa)",
+  "officialSourceLabel": "BOE-B-2026-20843",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20843",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser Organismos, Asociaciones, Fundaciones e Instituciones sin ánimo de lucro relacionadas con el Ejército de Tierra. Los fines deben estar relacionados con el personal militar retirado del Ejército de Tierra y Cuerpos Comunes adscritos a la acción social, sus cónyuges viudos o huérfanos. Deben cumplir los requisitos establecidos en la convocatoria a la fecha de terminación del plazo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20843",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para Organismos, Asociaciones, Fundaciones e Instituciones sin ánimo de lucro relacionadas con el Ejército de Tierra, destinadas a apoyar a personal militar retirado, cónyuges viudos, huérfanos y personas en situación de discapacidad o gran necesidad.",
+  "targetGroups": [
+    "Organismos",
+    "Asociaciones",
+    "Fundaciones",
+    "Instituciones sin ánimo de lucro relacionadas con el Ejército de Tierra"
+  ],
+  "title": "Convocatoria de subvenciones de ayudas de acción social para entidades relacionadas con el Ejército de Tierra 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de fecha 17 de junio de 2026 del Mando de Personal del Ejército de Tierra, por la se convocan subvenciones de ayudas de acción social para Organismos, Asociaciones, Fundacion. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

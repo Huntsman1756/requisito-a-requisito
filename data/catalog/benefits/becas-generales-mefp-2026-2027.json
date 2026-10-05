@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026/2027 cerrada: plazo del 7 de abril al 18 de mayo de 2026.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas generales MEFP 2026/27 (matrícula + cuantías fijas)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo en la sede del MEFP",
+    "Documentación académica y de renta"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [
+      "general"
+    ],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Matrícula cubierta + 1.700 € (renta) + 2.700 € (residencia) + 50–125 € (excelencia) + variable (mín. 60 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Educación, Formación Profesional y Deportes",
+  "officialSourceLabel": "BOE — Convocatoria general de becas del MEFP 2026/2027",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9261",
+  "referencePeriod": "Convocatoria 2026/2027 (cerrada)",
+  "requirementsText": "Estudiantes de enseñanzas universitarias y no universitarias que cumplan los umbrales de renta y los requisitos académicos de la convocatoria general de becas del MEFP para 2026/2027.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-generales-mefp-2026-2027",
+  "status": "active",
+  "summary": "Becas generales del Ministerio de Educación, Formación Profesional y Deportes para el curso 2026/2027: cubren la matrícula universitaria y añaden cuantías fijas de 1.700 € por renta, 2.700 € por residencia y 50–125 € por excelencia, más una cuantía variable.",
+  "targetGroups": [
+    "estudiantes universitarios y de enseñanzas no universitarias"
+  ],
+  "title": "Becas generales del Ministerio de Educación 2026/2027",
+  "type": "scholarship",
+  "whyItMatters": "La convocatoria de becas de mayor alcance del país: sostiene la continuidad de estudios de millones de estudiantes."
+}

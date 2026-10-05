@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles a partir del día siguiente de la publicación del extracto en el BOE (publicado el 18 de febrero de 2026)",
+  "category": "empleo",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "1.627.750 euros (total); hasta 120.000 euros para festivales y 100.000 euros para ceremonias de entrega de premios (individual)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales",
+  "officialSourceLabel": "BOE-B-2026-4877",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-4877",
+  "referencePeriod": "2026",
+  "requirementsText": "Los festivales deben ser de reconocido prestigio, celebrarse en España en 2026 y dedicar especial atención a la programación y difusión del cine español, comunitario e iberoamericano, así como a películas de animación, documentales y cortometrajes. Deben cumplir los requisitos del artículo 5 de la Orden CUD/888/2021.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-4877",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para la organización de festivales o certámenes cinematográficos de reconocido prestigio en España durante 2026, dirigidas a entidades públicas, locales y personas jurídicas o físicas.",
+  "targetGroups": [
+    "Comunidades Autónomas",
+    "Organismos dependientes de Comunidades Autónomas",
+    "Corporaciones Locales",
+    "Organismos dependientes de Corporaciones Locales",
+    "Personas jurídicas con residencia legal en España",
+    "Personas físicas"
+  ],
+  "title": "Ayudas para la organización de festivales y certámenes cinematográficos 2026",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de 12 de febrero de 2026, del Organismo Autónomo Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan ayudas para la organización de festivales. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

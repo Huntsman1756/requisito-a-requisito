@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde las 9:00 horas del día siguiente a la publicación en el BOE hasta las 15:00 horas del 10 de junio de 2026",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud a través de la aplicación EFESO",
+    "documentación conforme a las normas y modelos de la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "169.694.633,80 euros (crédito global FSE+ de la convocatoria, no cuantía por proyecto)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Dirección General de Cooperación Autonómica y Local (Ministerio de Política Territorial y Memoria Democrática)",
+  "officialSourceLabel": "BOE-B-2026-10174",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10174",
+  "referencePeriod": "2026",
+  "requirementsText": "Los solicitantes deben ser ayuntamientos de municipios con población superior a 20.000 habitantes, diputaciones provinciales, forales, cabildos, consejos insulares o comunidades autónomas uniprovinciales. Los proyectos deben incluir itinerarios de inserción laboral dirigidos a desempleados y responder a necesidades locales de empleo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-10174",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para cofinanciar proyectos de formación para el empleo (itinerarios de inserción laboral y jornadas de activación) promovidos por ayuntamientos, diputaciones y comunidades autónomas uniprovinciales.",
+  "targetGroups": [
+    "ayuntamientos",
+    "diputaciones provinciales",
+    "cabildos",
+    "consejos insulares",
+    "comunidades autónomas uniprovinciales"
+  ],
+  "title": "Segunda convocatoria EFESO: selección de proyectos de formación para el empleo promovidos por entidades locales",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de 27 de marzo de 2026, de la Dirección General de Cooperación Autonómica y Local, por la que se aprueba la segunda convocatoria para la selección de proyectos de formación p. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

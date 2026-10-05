@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: 20 días hábiles desde la publicación del extracto en el BOE (abril-mayo de 2026).",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud presentada por la federación",
+    "firma electrónica avanzada"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Crédito presupuestario previsto de la convocatoria: 3.804.712,20 euros (cuantía por beca según la convocatoria).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Consejo Superior de Deportes",
+  "officialSourceLabel": "BOE-B-2026-13482",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13482",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser deportista que cumpla los requisitos del Apartado Quinto de la convocatoria. Las solicitudes se presentan por las Federaciones Deportivas Españolas a través de la sede electrónica del CSD.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-13482",
+  "status": "active",
+  "summary": "Becas del Consejo Superior de Deportes para deportistas en el CAR de Madrid durante la temporada 2026/2027. Las solicitudes se presentan a través de las Federaciones Deportivas Españolas. Convocatoria cerrada.",
+  "targetGroups": [
+    "deportistas de alto rendimiento"
+  ],
+  "title": "Becas para deportistas en el Centro de Alto Rendimiento de Madrid, temporada 2026/2027",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

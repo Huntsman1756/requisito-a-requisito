@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada (plazo publicado en el BOE).",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas máster Pensamiento Estratégico (máx. 800 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Acreditación de la situación militar y admisión al máster"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "militar"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 800 € por alumno (dotación: 15.200 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Defensa",
+  "officialSourceLabel": "BOE — Convocatoria de becas para el máster en Pensamiento Estratégico",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11539",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Personal militar en situación de servicio activo o en la reserva, admitido en el máster en Pensamiento Estratégico según las prioridades de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-master-pensamiento-estrategico-defensa",
+  "status": "active",
+  "summary": "Ayudas del Ministerio de Defensa para el máster en Pensamiento Estratégico, dirigidas a personal militar en servicio activo o en la reserva: dotación de 15.200 € con un máximo de 800 € por alumno.",
+  "targetGroups": [
+    "personal militar en servicio activo o reserva"
+  ],
+  "title": "Becas para el máster en Pensamiento Estratégico (Ministerio de Defensa)",
+  "type": "scholarship",
+  "whyItMatters": "Financia la formación estratégica del personal militar."
+}

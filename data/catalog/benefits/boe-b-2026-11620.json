@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: quince días hábiles desde el día siguiente a la publicación del extracto en el BOE (abril-mayo de 2026).",
+  "category": "empleo",
+  "documentsNeeded": [
+    "solicitud según la convocatoria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación de 7.000 euros; máximo de 4.000 euros por persona para máster y de 500 euros para estudios federativos.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Mando de Adiestramiento y Doctrina del Ejército de Tierra",
+  "officialSourceLabel": "BOE-B-2026-11620",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11620",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser oficial, suboficial o personal profesional de tropa del Ejército de Tierra en situación de servicio activo, incluido en alguna de las categorías del artículo 4 de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "slug": "boe-b-2026-11620",
+  "status": "active",
+  "summary": "Ayudas del Mando de Adiestramiento y Doctrina del Ejército de Tierra para formación en preparación física y entrenamiento deportivo de su personal en activo. Convocatoria 2026 cerrada.",
+  "targetGroups": [
+    "personal militar",
+    "Ejército de Tierra"
+  ],
+  "title": "Ayudas para la formación del personal del Ejército de Tierra en preparación física, 2026",
+  "type": "education_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

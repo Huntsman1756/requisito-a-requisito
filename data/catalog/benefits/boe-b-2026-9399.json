@@ -1,0 +1,47 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles contados a partir del día siguiente al de la publicación del extracto en el BOE (26 de marzo de 2026)",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud",
+    "documentación justificativa del proyecto",
+    "documentación acreditativa del establecimiento permanente"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantías individuales por beneficiario entre 25.000 y el máximo por modalidad (importe total máximo de la convocatoria: 3.555.922 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-9399",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9399",
+  "referencePeriod": "2026",
+  "requirementsText": "Tener establecimiento permanente en la UE o Estados asociados al EEE. No ser residente en paraísos fiscales. Cumplir las bases reguladoras de la Orden CUL/2912/2010.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-9399",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para personas físicas o jurídicas, públicas o privadas, para financiar proyectos de danza y creación interdisciplinar en España y en el extranjero.",
+  "targetGroups": [
+    "personas físicas",
+    "entidades jurídicas",
+    "entidades sin ánimo de lucro",
+    "asociaciones",
+    "espacios escénicos",
+    "festivales",
+    "organizadores de giras"
+  ],
+  "title": "Ayudas a la danza y la creación interdisciplinar 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de Resolución de 18 de marzo de 2026 de la Secretaría de Estado de Cultura, por la que se convocan ayudas a la danza y la creación interdisciplinar, correspondientes al año 2026 Extracto de R. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

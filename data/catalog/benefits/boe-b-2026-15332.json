@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles contados a partir del día siguiente a la publicación del extracto en el BOE (publicado el 13 de mayo de 2026).",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Formulario electrónico de solicitud",
+    "Acreditación de inscripción en el Registro de ONGD",
+    "Acreditación de «ONGD calificada»",
+    "Certificado de Asociación Humanitaria (si aplica)",
+    "Documentación que acredite la representación de la entidad"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía por beneficiario entre 1.500.000 € y 5.000.000 € según tipo de convenio (crédito máximo total de la convocatoria).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Agencia Española de Cooperación Internacional para el Desarrollo (AECID)",
+  "officialSourceLabel": "BOE-B-2026-15332",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-15332",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser organización no gubernamental de desarrollo (ONGD) inscrita en el Registro de ONGD adscrito a la AECID y acreditada como «ONGD calificada». En caso de agrupaciones, designar una ONGD líder con dicha acreditación. Para convenios humanitarios, acreditar especialidad según DG ECHO.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-15332",
+  "status": "active",
+  "summary": "Subvenciones para ONGD y agrupaciones para la realización de convenios de cooperación para el desarrollo sostenible, humanitarios y educación para el desarrollo global durante el periodo 2026-2029.",
+  "targetGroups": [
+    "ONGD",
+    "agrupaciones de ONGD"
+  ],
+  "title": "Convocatoria de subvenciones para convenios de cooperación al desarrollo 2026-2029",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 7 de mayo de 2026 de la Dirección de la Agencia Española de Cooperación Internacional para el Desarrollo por la que se aprueba la convocatoria pública de concesión de subv. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

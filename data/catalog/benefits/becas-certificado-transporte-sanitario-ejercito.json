@@ -1,0 +1,50 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo fue de diez días hábiles desde la publicación en el BOE.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Ayudas certificado transporte sanitario ET (máx. 1.500 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Acreditación de la situación militar y de la formación"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "militar"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Hasta 1.500 € por alumno (dotación: 100.828,20 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ministerio de Defensa — Ejército de Tierra",
+  "officialSourceLabel": "BOE — Convocatoria de ayudas para el certificado de transporte sanitario (ET)",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18609",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Oficiales y suboficiales del Ejército de Tierra en situación de servicio activo, incluidos en las prioridades de la convocatoria y admitidos en la formación del certificado de transporte sanitario.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-certificado-transporte-sanitario-ejercito",
+  "status": "active",
+  "summary": "Ayudas del Ejército de Tierra para oficiales y suboficiales en servicio activo que obtengan el certificado de profesionalidad de transporte sanitario: dotación de 100.828,20 € con un máximo de 1.500 € por alumno.",
+  "targetGroups": [
+    "oficiales y suboficiales del Ejército de Tierra"
+  ],
+  "title": "Ayudas para el certificado de transporte sanitario (Ejército de Tierra)",
+  "type": "scholarship",
+  "whyItMatters": "Financia la certificación sanitaria del personal del Ejército."
+}

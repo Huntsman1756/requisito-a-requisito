@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles contados desde el siguiente a la publicación del extracto en el BOCM (publicado el 27/04/2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Formulario de solicitud",
+    "Anexo I (Memoria de la Entidad Solicitante y Memoria del Proyecto)",
+    "Documentación requerida en la convocatoria",
+    "Firma electrónica del representante legal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total: 1.063.400,00 euros. Cuantías máximas por proyecto: 55.000 euros (91-100 pts), 45.000 euros (81-90 pts), 35.000 euros (70-80 pts). Máximo 80% del coste.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Madrid - Área de Gobierno de Políticas Sociales, Familia e Igualdad",
+  "officialSourceLabel": "BOCM:BOCM-20260427-50",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-50",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad o institución de carácter social sin ánimo de lucro. Desarrollar proyectos que complementen las actuaciones de la Dirección General de Igualdad y Contra la Violencia de Género. Ejecutar los proyectos entre el 1 de enero y el 31 de diciembre de 2026.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-50",
+  "status": "active",
+  "summary": "Subvenciones para entidades e instituciones de carácter social sin ánimo de lucro que desarrollen proyectos de igualdad, derechos LGTBI o contra la violencia de género.",
+  "targetGroups": [
+    "entidades sociales sin ánimo de lucro"
+  ],
+  "title": "Convocatoria subvenciones 2026 a entidades sociales sin ánimo de lucro (Madrid)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Área de Gobierno de Políticas Sociales, Familia e Igualdad. Extracto convocatoria subvenciones – Madrid. Régimen económico. Área de Gobierno de Políticas Sociales, Familia. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 2 de junio al 30 de junio de 2026, ambos inclusive",
+  "category": "educacion",
+  "documentsNeeded": [
+    "titulación universitaria",
+    "certificado de residencia o nacionalidad",
+    "documentación acreditativa del curso académico"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "5.600 € por curso académico, más gastos de seguro médico y curso de formación inicial",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Subsecretaría de Educación, Formación Profesional y Deportes",
+  "officialSourceLabel": "BOE-B-2026-16328",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16328",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser ciudadano extranjero con nacionalidad o residencia permanente en los países listados (Alemania, Australia, Francia, etc.) y haber obtenido una titulación universitaria o ser estudiante universitario de segundo curso como mínimo al cierre de la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-16328",
+  "status": "active",
+  "summary": "Convocatoria de plazas para auxiliares de conversación extranjeros para el curso académico 2026-2027, dirigida a ciudadanos de países específicos con titulación universitaria o estudiantes de segundo curso.",
+  "targetGroups": [
+    "auxiliares de conversación extranjeros",
+    "ciudadanos de países con convenio bilateral",
+    "estudiantes universitarios"
+  ],
+  "title": "Convocatoria de auxiliares de conversación extranjeros 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 13 de mayo de 2026, de la Subsecretaría de Educación, Formación Profesional y Deportes, por la que se convocan plazas para auxiliares de conversación extranjeros para el c. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

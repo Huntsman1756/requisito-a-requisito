@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta el 12 de febrero de 2026 a las 12:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud electrónica",
+    "formularios específicos para cada acción"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 667.000 Euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Dirección General del Instituto de la Juventud",
+  "officialSourceLabel": "BOE-B-2026-19517",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-19517",
+  "referencePeriod": "2026",
+  "requirementsText": "Los solicitantes deben registrarse previamente según la Guía del Programa y presentar la solicitud electrónica mediante los formularios específicos disponibles en el sitio web de la Agencia Nacional.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-19517",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para promover la movilidad educativa del personal del ámbito deportivo y la cooperación internacional en el marco del Programa Erasmus+.",
+  "targetGroups": [
+    "personal del ámbito deportivo",
+    "organizaciones deportivas"
+  ],
+  "title": "Ayudas Erasmus+ Deporte, ronda febrero 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de la Dirección General del Instituto de la Juventud, por la que se convocan ayudas de la línea de Deporte, del Programa Erasmus+, correspondientes a la ronda de febrero de 2. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

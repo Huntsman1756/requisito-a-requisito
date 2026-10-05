@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles a partir del día siguiente a la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Anexo n.º 1: Solicitud de participación",
+    "Anexo n.º 2: Contenido del Proyecto de Innovación/Buenas prácticas educativas"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 42.000 euros en total, con una cuantía máxima de 1.000 euros por proyecto y centro educativo",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Concejalía de Educación y Cultura del Ayuntamiento de Móstoles",
+  "officialSourceLabel": "BOCM:BOCM-20260427-80",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-80",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro docente de titularidad pública, privada-concertada o privada no concertada en las enseñanzas de Educación Infantil (segundo ciclo) y Educación Primaria, o centro público de Educación Especial de Móstoles. Los proyectos deben mejorar la calidad de la enseñanza y alcanzar al menos 8 puntos en la valoración.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-80",
+  "status": "active",
+  "summary": "Ayudas para centros docentes de Móstoles para desarrollar proyectos de innovación y buenas prácticas educativas durante el curso 2025-2026.",
+  "targetGroups": [
+    "centros docentes públicos",
+    "centros privados-concertados",
+    "centros privados no concertados",
+    "centros de educación especial"
+  ],
+  "title": "Convocatoria subvenciones Proyectos de Innovación/Buenas prácticas educativas 2025-2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Móstoles. Régimen económico. Extracto convocatoria subvenciones – Móstoles. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

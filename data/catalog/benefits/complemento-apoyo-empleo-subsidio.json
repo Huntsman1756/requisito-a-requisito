@@ -1,0 +1,55 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Debe comunicarse a la máxima brevedad en cuanto se tramita el nuevo alta laboral, estando supeditado a los ciclos exactos de la actual legislatura española y sus reglamentos SEPE en activo.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "documentación identificativa",
+    "copia del nuevo contrato de trabajo",
+    "impreso y canales oficiales de regularización telemática ante el SEPE manifestando el cruce de complementos"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado",
+      "asalariado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Porcentaje del IPREM según trimestre del subsidio y jornada pactada: de 480 €/mes (1.er trimestre, jornada completa) decreciendo hasta 30 €/mes (5.º trimestre en adelante, jornada <50%). Sin tope de 180 días (ese límite corresponde a la variante contributiva).",
+  "lastReviewedAt": "2026-03-30",
+  "managingBody": "SEPE (Servicio Público de Empleo Estatal)",
+  "officialSourceLabel": "SEPE - Complemento de Apoyo al Empleo",
+  "officialSourceUrl": "https://www.sepe.es/HomeSepe/es/prestaciones-desempleo/subsidio-desempleo/complemento-apoyo-empleo-subsidio.html",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Ser perceptor de una prestación (subsidios ordinarios reformados posteriores al marco central del SEPE), encontrar un empleo (a tiempo parcial o completo sin rebasar ciertos umbrales salariales paralelos) y cumplir requisitos estrictos sobre la incompatibilidad sectorial (Ej. no en altos cargos ni reincorporaciones a la misma empresa anterior sin justificación lícita).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "complemento-apoyo-empleo-subsidio",
+  "status": "active",
+  "summary": "Fórmula transitoria introducida por la reforma de los subsidios por desempleo para incentivar la reinserción al permitir compatibilizar gradualmente una ayuda del SEPE con un nuevo salario.",
+  "targetGroups": [
+    "personas desempleadas",
+    "trabajadores asalariados de bajos ingresos",
+    "parados de larga duración"
+  ],
+  "title": "Complemento de Apoyo al Empleo (CAE) del subsidio",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Permite compatibilizar la percepción del subsidio con el inicio de una actividad por cuenta ajena, de modo que aceptar un contrato de corta duración o a tiempo parcial no implique perder de forma inmediata y total la prestación."
+}

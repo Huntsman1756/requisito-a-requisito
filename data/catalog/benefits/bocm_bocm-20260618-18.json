@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Hasta el 30 de septiembre de 2026",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Hasta 20.000,00 euros por línea y 30.000,00 euros por empresa y convocatoria.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Economía, Hacienda y Empleo (Comunidad de Madrid)",
+  "officialSourceLabel": "BOCM:BOCM-20260618-18",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-18",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física o jurídica con actividad económica en la Comunidad de Madrid, tener uno o varios trabajadores por cuenta ajena (o ser autónomo) y realizar los gastos en centros de trabajo situados en dicha comunidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-18",
+  "status": "active",
+  "summary": "Ayudas dirigidas a empresas y autónomos con actividad en la Comunidad de Madrid para financiar planes de seguridad vial laboral y medidas de transporte seguro.",
+  "targetGroups": [
+    "empresas",
+    "autónomos"
+  ],
+  "title": "Subvenciones para la reducción de la siniestralidad laboral (Línea 3: Seguridad vial laboral)",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden de 1 de junio de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan para 2026 las subvenciones dirigidas a la reduc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

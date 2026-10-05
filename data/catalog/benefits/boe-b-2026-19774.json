@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 17 de junio de 2026 al 16 de julio de 2026, a las 12:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud",
+    "documentación anexa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Presupuesto máximo total de la convocatoria: 30.250.000 euros; la subvención por beneficiario no será inferior al 30% del presupuesto elegible",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Centro para el Desarrollo Tecnológico y la Innovación, E.P.E. (CDTI)",
+  "officialSourceLabel": "BOE-B-2026-19774",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-19774",
+  "referencePeriod": "2026",
+  "requirementsText": "Pymes (según el anexo I de la Orden CNU/161/2025) y grandes empresas, estas últimas solo si la dirección de desarrollo del proyecto se localiza en Canarias o tienen menos de 499 empleados. Personalidad jurídica propia, válidamente constituidas y domicilio fiscal en España o en la UE con establecimiento en territorio español. No incurso en las circunstancias del art. 13 de la Ley 38/2003 ni en las demás exclusiones de la convocatoria. Los proyectos deben desarrollarse en las comunidades y ciudades autónomas elegibles FEDER de la convocatoria (Andalucía, Castilla-La Mancha, Extremadura, Illes Balears, Canarias, Castilla y León, Comunitat Valenciana, Galicia, Región de Murcia, Ceuta y Melilla), con presupuesto elegible mínimo de 175.000 euros por entidad.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-19774",
+  "status": "active",
+  "summary": "Ayudas destinadas a empresas para la participación en proyectos de I+D de cooperación tecnológica internacional (INNOGLOBAL), cofinanciadas por el FEDER.",
+  "targetGroups": [
+    "pymes",
+    "grandes empresas (con condiciones)"
+  ],
+  "title": "Convocatoria INNOGLOBAL 2026: Ayudas para Proyectos de I+D en cooperación tecnológica internacional",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 11 de junio de 2026 de la Presidencia del Centro para el Desarrollo Tecnológico y la Innovación, E.P.E. (CDTI), por la que se aprueba la convocatoria para el año 2026 del . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

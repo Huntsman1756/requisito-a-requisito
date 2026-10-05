@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Diez días hábiles contados a partir del día siguiente a la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Solicitud modelo Anexo A",
+    "Documentación acreditativa de implantación efectiva",
+    "Documentación justificativa de gastos y actividades"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: Cuantía máxima de 237.300 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ministerio del Interior",
+  "officialSourceLabel": "BOE-B-2026-17478",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17478",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser asociación profesional de guardias civiles inscrita en el Registro correspondiente y acreditar un grado de implantación efectiva (cifras mínimas de efectivos) a fecha 1 de marzo de 2026.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17478",
+  "status": "active",
+  "summary": "Subvenciones para asociaciones profesionales de guardias civiles para cubrir gastos de organización, funcionamiento y actividades de interés profesional.",
+  "targetGroups": [
+    "asociaciones profesionales de guardias civiles"
+  ],
+  "title": "Convocatoria de subvenciones a asociaciones profesionales de guardias civiles 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 19 de mayo de 2026, por la que se convocan subvenciones a las asociaciones profesionales de guardias civiles para el año 2026 Extracto de la Resolución de 19 de mayo de 20. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

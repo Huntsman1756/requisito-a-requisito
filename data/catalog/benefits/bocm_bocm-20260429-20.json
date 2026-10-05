@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "cinco días hábiles a partir del día siguiente al de la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "No se detectaron importes en el extracto. Ver fuente oficial para cuantías.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Educación, Ciencia y Universidades",
+  "officialSourceLabel": "BOCM:BOCM-20260429-20",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260429-20",
+  "referencePeriod": "2026",
+  "requirementsText": "Participar pueden los centros públicos, privados y privados concertados de la Comunidad de Madrid que tengan alumnos escolarizados en 4.º curso de ESO y/o 1.º de Bachillerato.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260429-20",
+  "status": "active",
+  "summary": "Convocatoria de un torneo de debate escolar para mejorar las habilidades argumentativas y orales de los alumnos de ESO y Bachillerato de la Comunidad de Madrid.",
+  "targetGroups": [
+    "centros educativos",
+    "alumnos de ESO",
+    "alumnos de Bachillerato"
+  ],
+  "title": "XVII Torneo Escolar de Debate de la Comunidad de Madrid 2025-2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden 1624/2026, de 17 de abril, de la Consejera de Educación, Ciencia y Universidades, por la que se convoca el XVII Torneo Escolar de Debate de la. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

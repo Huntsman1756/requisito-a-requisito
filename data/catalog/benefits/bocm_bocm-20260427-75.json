@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "10 días hábiles tras la publicación del extracto de las bases en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "modelo de solicitud",
+    "documentación requerida por las bases"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 20.000,00 euros (crédito total disponible) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Humanes de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260427-75",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260427-75",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser centro educativo de Humanes de Madrid (público, concertado o CEPA). El importe se calcula mediante reparto equitativo de la partida presupuestaria según el número de alumnos aportado por el centro.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260427-75",
+  "status": "active",
+  "summary": "Ayudas económicas para subvencionar gastos de actividades culturales complementarias en centros educativos de Humanes de Madrid.",
+  "targetGroups": [
+    "centros educativos",
+    "escuelas infantiles",
+    "institutos de educación secundaria",
+    "centros de educación de personas adultas"
+  ],
+  "title": "Convocatoria subvenciones actividades culturales en centros educativos 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Humanes de Madrid. Régimen económico. Extracto convocatoria subvenciones – Humanes de Madrid. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

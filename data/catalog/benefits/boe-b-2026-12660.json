@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días hábiles contados a partir del día siguiente a la publicación en el BOE",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Instancia normalizada firmada electrónicamente",
+    "Autorización de delegación de competencia (si aplica)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 2.013.009,25 € para gastos de gestión y 938.208,98 € para equipamiento de centros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejo Superior de Deportes",
+  "officialSourceLabel": "BOE-B-2026-12660",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12660",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser Comunidad Autónoma o Ciudad Autónoma de Ceuta/Melilla, o entidad de derecho público/sector público que gestione programas de Alto Rendimiento o Tecnificación en CTD y CETD clasificados por el CSD.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-12660",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para Comunidades Autónomas y entidades públicas que gestionen programas de Alto Rendimiento y Tecnificación en Centros de Tecnificación Deportiva.",
+  "targetGroups": [
+    "Comunidades Autónomas",
+    "Ciudades Autónomas de Ceuta y Melilla",
+    "Entidades de derecho público",
+    "Entidades del sector público autonómico"
+  ],
+  "title": "Ayudas a Comunidades Autónomas para equipamientos deportivos (Team España Centros 2026)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 21 de abril de 2026 de la Presidencia del Consejo Superior de Deportes, por la que se convocan ayudas a Comunidades Autónomas, dentro del programa Team España Centros, par. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

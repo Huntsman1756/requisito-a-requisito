@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: períodos de solicitud del 18 al 29 de mayo, del 1 al 12 de junio y del 1 al 15 de septiembre de 2026. Programa recurrente por cuatrimestres; no hay nueva convocatoria abierta confirmada.",
+  "category": "familia",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "Libro de Familia o certificación literal del Registro Civil"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Presupuesto de la convocatoria: 465.000 euros, ampliables con 50.000 euros adicionales. La cuantía individual se determina según las bases.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ayuntamiento de Pozuelo de Alarcón",
+  "officialSourceLabel": "BOCM-20260430-71",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260430-71",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser progenitor, adoptante o acogedor residente en Pozuelo de Alarcón, constar en el Libro de Familia o certificación del Registro Civil, y no haber sido privado de la patria potestad ni condenado por los delitos indicados en la convocatoria.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260430-71",
+  "status": "active",
+  "summary": "Ayudas del Ayuntamiento de Pozuelo de Alarcón para progenitores, adoptantes o acogedores residentes en el municipio por nacimientos, adopciones o acogimientos. Convocatoria 2026 cerrada (tres períodos finalizados el 15 de septiembre); se convoca anualmente por cuatrimestres.",
+  "targetGroups": [
+    "familias",
+    "progenitores",
+    "adoptantes",
+    "acogedores"
+  ],
+  "title": "Ayudas por nacimiento, adopción o acogimiento en Pozuelo de Alarcón, 2026",
+  "type": "child_support",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

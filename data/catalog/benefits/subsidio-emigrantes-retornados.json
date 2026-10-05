@@ -1,0 +1,54 @@
+{
+  "applicationStatus": "rolling",
+  "applicationWindow": "Debe solicitarse en el SEPE dentro de los 15 días hábiles contados a partir del cumplimiento del mes de espera tras la inscripción inicial como demandante tras retornar, modificable bajo reformas de prestaciones.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "documento de identidad",
+    "certificado de Emigrante Retornado emitido por las Delegaciones o Subdelegaciones del Gobierno (Área de Trabajo e Inmigración)",
+    "formulario oficial de solicitud del SEPE",
+    "acreditación en su caso del despido o finalización de relación laboral en el extranjero"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "desempleado"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía escalonada: 95% del IPREM los primeros 180 días (570 €/mes), 90% del día 181 al 360 (540 €/mes) y 80% desde el día 361 (480 €/mes). Duración máxima 18 meses, reconocida por periodos trimestrales prorrogables.",
+  "lastReviewedAt": "2026-03-30",
+  "managingBody": "SEPE (Servicio Público de Empleo Estatal)",
+  "officialSourceLabel": "SEPE - Soy persona emigrante que ha retornado a España",
+  "officialSourceUrl": "https://www.sepe.es/HomeSepe/es/Personas/distributiva-prestaciones/quiero-cobrar-el-paro/soy-emigrante-retornado.html",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Ser persona desempleada española, haber trabajado un mínimo de 12 meses en un país de fuera del EEE y Suiza en los 6 años anteriores, no tener derecho a la prestación contributiva por haber cotizado en España a su regreso, e inscribirse como demandante de empleo a la vuelta superando el trámite legal (certificado de emigrante retornado o equivalente).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "subsidio-emigrantes-retornados",
+  "status": "active",
+  "summary": "Ayuda económica del SEPE para españoles que regresan al país tras haber trabajado en países no pertenecientes al Espacio Económico Europeo ni a Suiza.",
+  "targetGroups": [
+    "desempleados",
+    "emigrantes retornados"
+  ],
+  "title": "Subsidio de emigrante retornado",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Protege a los trabajadores españoles que se fueron al extranjero a buscar oportunidades en países sin convenios que totalicen su paro y regresan a España sin trabajo ni recursos propios urgentes."
+}

@@ -1,0 +1,39 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes contado a partir del día siguiente al de la publicación de la convocatoria en el «Boletín Oficial del Estado»",
+  "category": "empleo",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Cuantía máxima de 9.750.000 € (9.600.000 € para beneficiarios y 150.000 € para recursos)",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Transportes y Movilidad Sostenible",
+  "officialSourceLabel": "BOE-B-2026-7581",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7581",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser transportista autónomo por carretera y abandonar la actividad. Se otorgará prioridad a quienes tengan declarada incapacidad permanente absoluta, total o gran invalidez para el desempeño de la profesión habitual; el resto se ordenará por edad descendente.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-7581",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para transportistas autónomos por carretera que decidan abandonar su actividad profesional, con prioridad para quienes tengan declarada incapacidad permanente.",
+  "targetGroups": [
+    "transportistas autónomos por carretera"
+  ],
+  "title": "Ayudas a transportistas autónomos por carretera que abandonen la actividad en 2026",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Transportes y Movilidad Sostenible por la que se convocan ayudas a transportistas autónomos por carretera que abandonen la actividad en 2026. Ex. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días contados a partir del día siguiente al de la publicación del extracto en el BOE (publicado el 18 de junio de 2026).",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "acreditación de constitución e inscripción en registro público",
+    "certificado de estar al corriente de obligaciones tributarias",
+    "certificado de estar al corriente de obligaciones con la Seguridad Social"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Máximo 109.930 euros en total; hasta 10.000 euros por entidad para proyectos archivísticos y hasta 5.000 euros para actividades de formación.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Cultura",
+  "officialSourceLabel": "BOE-B-2026-20741",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20741",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad o institución privada sin ánimo de lucro, legalmente constituida e inscrita en el registro público correspondiente. Estar al corriente de obligaciones tributarias, con la Seguridad Social y de reintegros de subvenciones. No incurrir en exclusiones del artículo 13 de la Ley General de Subvenciones.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20741",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para entidades privadas sin ánimo de lucro para desarrollar proyectos archivísticos y actividades de formación y difusión en el año 2026.",
+  "targetGroups": [
+    "entidades privadas sin ánimo de lucro"
+  ],
+  "title": "Ayudas a entidades privadas sin ánimo de lucro para proyectos archivísticos 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Cultura de 8 de junio de 2026 por la que se convocan ayudas a entidades privadas sin ánimo de lucro para el desarrollo de proyectos archivístico. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

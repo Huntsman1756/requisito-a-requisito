@@ -1,0 +1,59 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Tras la formalización legal del acogimiento.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "core",
+  "documentsNeeded": [
+    "DNI / NIE de los acogedores",
+    "Resolución administrativa o Auto Judicial que formaliza el acogimiento",
+    "Acreditación de cuenta bancaria"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto",
+      "senior"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "general"
+    ],
+    "familyType": [
+      "general",
+      "monoparental",
+      "familia-numerosa"
+    ],
+    "hasChildren": true,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Desde 01/01/2026: 500 €/mes por menor (acogimiento general), 1.000 €/mes (acogimiento especial/discapacidad o necesidades médicas complejas), 2.000 €/mes (acogimiento de urgencia), más complemento de 1.000 €/mes para acogimientos de mayores de 12 años formalizados desde 2026.",
+  "lastReviewedAt": "2026-03-30",
+  "managingBody": "Consejería de Familia, Juventud y Asuntos Sociales (Comunidad de Madrid)",
+  "officialSourceLabel": "Comunidad de Madrid - Acogimiento",
+  "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones",
+  "referencePeriod": "2025-2026",
+  "requirementsText": "Tener formalizado legalmente un acogimiento familiar (ya sea de urgencia, temporal o permanente, en familia extensa o ajena) de uno o varios menores cuya tutela o guarda tenga asumida la Comisión de Tutela del Menor de la Comunidad de Madrid.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "madrid-ayuda-familias-acogedoras",
+  "status": "active",
+  "summary": "Prestación autonómica mensual dirigida a las familias madrileñas que tienen acogido a un menor tutelado por la administración para sufragar los gastos derivados de su cuidado y manutención.",
+  "targetGroups": [
+    "familias acogedoras",
+    "menores tutelados"
+  ],
+  "title": "Comunidad de Madrid: Ayuda económica a familias acogedoras",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Sin esta prestación, las familias que dan un paso de altísimo valor social acogiendo a niños rotos del sistema tendrían que sufragar ellos el 100% de la ropa, educación y manutención de un hijo que legalmente es responsabilidad del Estado."
+}

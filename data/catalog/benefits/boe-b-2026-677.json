@@ -1,0 +1,42 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Desde el 27 de enero de 2026 hasta las 14,00 horas del 16 de febrero de 2026",
+  "category": "educacion",
+  "documentsNeeded": [
+    "título de graduado, licenciado, arquitecto, ingeniero o equivalente",
+    "expediente académico",
+    "solicitud cumplimentada en la Sede Electrónica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Dotación mensual de 2.670,00 euros, 20.000,00 euros para matrícula y 1.500,00 euros para gastos de viaje",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Ciencia, Innovación y Universidades",
+  "officialSourceLabel": "BOE-B-2026-677",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-677",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser nacional español (sin doble nacionalidad estadounidense), poseer o estar en condiciones de obtener título de graduado/ingeniero/architecto concluido tras el 1 de enero de 2020, haber cursado mínimo 240 créditos y tener nota media igual o superior a 7 sobre 10.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-677",
+  "status": "active",
+  "summary": "Convocatoria de 12 ayudas para realizar estudios de máster en universidades de Estados Unidos para el curso 2026-2027, dirigidas a nacionales españoles con titulación universitaria reciente.",
+  "targetGroups": [
+    "estudiantes de máster",
+    "nacionales españoles"
+  ],
+  "title": "Ayudas Fulbright para máster en EE.UU. 2026-2027",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 30 de diciembre de 2025 de la Secretaría de Estado de Ciencia, Innovación y Universidades por la que se convocan por tramitación anticipada 12 ayudas para la realización d. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

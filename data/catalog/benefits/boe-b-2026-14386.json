@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 12 de mayo de 2026 al 12 de junio de 2026, a las 12:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud",
+    "documentación anexa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Presupuesto elegible entre 3.500.000 y 10.000.000 euros por proyecto; cuantía total máxima de la convocatoria: 60.000.000 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Centro para el Desarrollo Tecnológico y la Innovación E.P.E. (CDTI)",
+  "officialSourceLabel": "BOE-B-2026-14386",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14386",
+  "referencePeriod": "2026",
+  "requirementsText": "Proyectos de I+D en cooperación liderados por empresas, plurianuales (3-4 años), con inicio el 1 de enero de 2027. La agrupación debe tener entre 3 y 6 empresas, al menos una PYME, y cumplir requisitos de tamaño y composición. El presupuesto mínimo es 3.500.000 euros y el máximo 10.000.000 euros.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-14386",
+  "status": "active",
+  "summary": "Ayudas para proyectos de I+D en cooperación liderados por agrupaciones de empresas, enmarcadas en el Plan Estatal de Investigación 2024-2027.",
+  "targetGroups": [
+    "agrupaciones de empresas",
+    "PYMEs",
+    "empresas"
+  ],
+  "title": "Convocatoria 2026 Programa Misiones de Ciencia e Innovación (CDTI)",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 30 de abril de 2026 de la Presidencia del Centro para el Desarrollo Tecnológico y la Innovación E.P.E., por la que se aprueba la convocatoria para el año 2026 del procedim. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

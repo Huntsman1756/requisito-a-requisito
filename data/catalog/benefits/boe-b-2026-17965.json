@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes contado a partir del día siguiente al de la publicación de la convocatoria en el Boletín Oficial del Estado",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud a través de la sede electrónica",
+    "archivo Excel cumplimentado descargable en la sede",
+    "resguardo acreditativo de garantía ante la Caja General de Depósitos (opcional para pago inmediato)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 3.858.000 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Transportes y Movilidad Sostenible",
+  "officialSourceLabel": "BOE-B-2026-17965",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17965",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser asociación profesional de transportistas o de empresas auxiliares con implantación en al menos tres Comunidades Autónomas, o asociación profesional de trabajadores. También otras entidades sin ánimo de lucro públicas o privadas con vinculación acreditada al sector del transporte terrestre.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17965",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para la formación en relación con el transporte por carretera dirigida a asociaciones profesionales del sector.",
+  "targetGroups": [
+    "asociaciones profesionales de transportistas",
+    "empresas de actividades auxiliares del transporte",
+    "asociaciones profesionales de trabajadores",
+    "entidades sin ánimo de lucro vinculadas al transporte"
+  ],
+  "title": "Ayudas para la formación en transporte por carretera 2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de la Secretaría de Estado de Transportes y Movilidad Sostenible, por la que se convocan ayudas para la formación en relación con el transporte por carretera para el año 2026. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria cerrada: 20 días hábiles desde el día siguiente a la publicación en el BOCM (abril-mayo de 2026).",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "solicitud según la convocatoria",
+    "documentación acreditativa de la situación de necesidad"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Dotación de la convocatoria: 60.000 euros.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Ayuntamiento de Loeches",
+  "officialSourceLabel": "BOCM-20260421-43 (BDNS 898426)",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260421-43",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser ciudadano de Loeches en riesgo de pobreza y/o exclusión social, en situación de necesidad social, conforme a la Ordenanza General Reguladora de Subvenciones del Ayuntamiento.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260421-43",
+  "status": "active",
+  "summary": "Ayudas del Ayuntamiento de Loeches para vecinos en riesgo de pobreza y/o exclusión social, con dotación de 60.000 euros. Convocatoria 2026 cerrada (20 días hábiles desde su publicación).",
+  "targetGroups": [
+    "personas en riesgo de pobreza",
+    "vecinos de Loeches"
+  ],
+  "title": "Ayudas extraordinarias a la ciudadanía de Loeches en riesgo de pobreza o exclusión social, 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Ayuda verificada contra su publicación oficial en boletín; consulta la fuente para bases completas, baremos y justificación."
+}

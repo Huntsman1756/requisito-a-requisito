@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles siguientes a la publicación del extracto en el BOCM",
+  "category": "core",
+  "documentsNeeded": [
+    "formulario de solicitud telemático"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "3.000 euros",
+  "lastReviewedAt": "2026-07-09",
+  "managingBody": "Universidad Complutense de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260423-62",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260423-62",
+  "referencePeriod": "2026",
+  "requirementsText": "Estar matriculado en estudios oficiales del Grado de Farmacia o Doble Grado en Farmacia y Nutrición Humana y Dietética de la Facultad de Farmacia de la UCM en el curso 2025-26 y haber completado los tres primeros años de estudios.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260423-62",
+  "status": "active",
+  "summary": "Convocatoria de 15 ayudas de 3.000 euros para estudiantes de Grado y Doble Grado de Farmacia de la UCM que realicen actividades formativas en COFARES.",
+  "targetGroups": [
+    "estudiantes de farmacia",
+    "estudiantes de grado",
+    "estudiantes de doble grado"
+  ],
+  "title": "Ayudas de Formación en COFARES para estudiantes de Farmacia UCM",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Resolución de 14 de abril de 2026, de la Universidad Complutense de Madrid, por la que se convocan 15 Ayudas de Formación en COFARES para estudiante. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

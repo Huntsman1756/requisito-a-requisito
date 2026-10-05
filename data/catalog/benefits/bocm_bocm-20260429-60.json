@@ -1,0 +1,52 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Quince días hábiles siguientes a la publicación del extracto en el BOCM (publicado el 29/04/2026)",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "Instancia de solicitud",
+    "Documentos de constitución (estatutos o escritura)",
+    "Datos de la obra (título, autor, duración)",
+    "Fotocopia del texto íntegro de la obra",
+    "Autorización y recibo de pago de derechos de autor (si procede)",
+    "Compromiso firmado de representación (para primer premio)",
+    "Acreditación del poder de representación",
+    "Certificado de estar al corriente de obligaciones tributarias y con la Seguridad Social (si no se autoriza consulta)"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": null
+  },
+  "estimatedValueText": "6.600 euros (3.000 € primer premio, 2.000 € segundo, 1.000 € tercero, 600 € premio del público)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Junta Municipal de Chamberí (Ayuntamiento de Madrid)",
+  "officialSourceLabel": "BOCM:BOCM-20260429-60",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260429-60",
+  "referencePeriod": "2026",
+  "requirementsText": "Grupos de teatro no profesionales (asociaciones, escuelas, etc.) con personalidad jurídica. Estar al corriente de obligaciones tributarias y con la Seguridad Social. Presentar obras clásicas (escritas antes de 1970) en castellano, de 60 a 120 minutos de duración.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260429-60",
+  "status": "active",
+  "summary": "Subvención para grupos de teatro no profesionales que participen en el I Certamen de Teatro Clásico de Chamberí, con premios monetarios para los clasificados.",
+  "targetGroups": [
+    "grupos de teatro no profesionales",
+    "asociaciones culturales",
+    "escuelas de teatro",
+    "colegios",
+    "fundaciones"
+  ],
+  "title": "Convocatoria del I Certamen de Teatro Clásico del Distrito de Chamberí",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Madrid. Régimen económico. Distrito de Chamberí. Extracto convocatoria subvenciones – Madrid. Régimen económico. Distrito de Chamberí. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

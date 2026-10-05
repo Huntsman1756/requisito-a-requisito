@@ -1,0 +1,44 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días naturales contados a partir del primer día hábil tras la publicación del extracto en el BOE",
+  "category": "educacion",
+  "documentsNeeded": [
+    "solicitud de inscripción",
+    "documentación acreditativa de méritos"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": false,
+    "disability": false,
+    "employmentStatus": [
+      "funcionario"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "432.360,00 €",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-17579",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-17579",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser funcionario docente en servicio activo o excedencia (cuidado, violencia de género/terrorista), en servicios especiales, impartiendo enseñanzas en centros públicos, personal de apoyo en centros públicos o adscrito a Programas de Acción Educativa en el Exterior.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-17579",
+  "status": "active",
+  "summary": "Convocatoria de 6.100 plazas para cursos de formación permanente del profesorado de niveles no universitarios, dirigida a funcionarios y personal docente.",
+  "targetGroups": [
+    "profesorado de niveles no universitarios",
+    "funcionarios docentes",
+    "personal docente en centros públicos"
+  ],
+  "title": "Convocatoria de cursos tutorizados en línea para formación permanente del profesorado",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 25 de mayo de 2026 de la Secretaría de Estado de Educación, por la que se convocan 6.100 plazas para la realización de cursos tutorizados en línea para la formación perman. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

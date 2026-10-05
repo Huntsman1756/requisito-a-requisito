@@ -1,0 +1,985 @@
+{
+  "commit": "63ad635b2458d50ba99bc26e78ba3bba99789c03",
+  "commitDate": "2026-09-27T21:24:00+02:00",
+  "donor": "F:/_Proyectos/la-ayuda",
+  "files": {
+    "ayudas-atrae-talento-investigador": {
+      "path": "src/content/benefits/ayudas-atrae-talento-investigador.md",
+      "sha256": "ce6dc9c48946047cf32c1f8c1e2f9b3570d181ae53814f20b425f49a34041a31"
+    },
+    "ayudas-escritura-guiones-largometrajes-2026": {
+      "path": "src/content/benefits/ayudas-escritura-guiones-largometrajes-2026.md",
+      "sha256": "7ab22c07f52474992fb5fcc402477915c1e20a028405bb4d7b4a32d01818f5d7"
+    },
+    "ayudas-master-derecho-militar-ejercito": {
+      "path": "src/content/benefits/ayudas-master-derecho-militar-ejercito.md",
+      "sha256": "a90dbcf156b81e65298ffc772ff821f2867b3719d67614c6fa75c0821566a963"
+    },
+    "ayudas-master-prevencion-riesgos-ejercito": {
+      "path": "src/content/benefits/ayudas-master-prevencion-riesgos-ejercito.md",
+      "sha256": "355e2e02f0c61c27aa703ae2fc0110a135380892bfaf6f9d4255a55642650790"
+    },
+    "becas-aeat-preparacion-pruebas-selectivas": {
+      "path": "src/content/benefits/becas-aeat-preparacion-pruebas-selectivas.md",
+      "sha256": "1ef31bd7dc30d1b9790d4992c798361a8270858e868c0471a83849e0fd666232"
+    },
+    "becas-certificado-transporte-sanitario-ejercito": {
+      "path": "src/content/benefits/becas-certificado-transporte-sanitario-ejercito.md",
+      "sha256": "24c7faafac034426d02898517480ce26cd0ac4301763184cbe99191c688ba10b"
+    },
+    "becas-cicerone-cnic-2026": {
+      "path": "src/content/benefits/becas-cicerone-cnic-2026.md",
+      "sha256": "71774d99ed3b8286ae670596c1dbfc9f6060503c18b070616af87f0c889f5dc7"
+    },
+    "becas-fega-formacion-titulados": {
+      "path": "src/content/benefits/becas-fega-formacion-titulados.md",
+      "sha256": "ab15de08836faceae4214579f19a9095a4c609d14fd809020e0b828d6279e4f0"
+    },
+    "becas-fundacion-biodiversidad-2026": {
+      "path": "src/content/benefits/becas-fundacion-biodiversidad-2026.md",
+      "sha256": "ad112c66df85d9df726aab0e09f0245ac484d1a13bc77d23c0196d20081c2447"
+    },
+    "becas-fundacion-biodiversidad-cambio-climatico-2026": {
+      "path": "src/content/benefits/becas-fundacion-biodiversidad-cambio-climatico-2026.md",
+      "sha256": "0442c47a5322ec284deecd64a0b9c9feade3767e040eea32e59dcbdb8bbdd3cc"
+    },
+    "becas-generales-mefp-2026-2027": {
+      "path": "src/content/benefits/becas-generales-mefp-2026-2027.md",
+      "sha256": "d3b617631dce96961960bab4ace4cdf7ec77b70b935157dbb33fcdcd3c242f9d"
+    },
+    "becas-ief-preparacion-pruebas-selectivas-hacienda": {
+      "path": "src/content/benefits/becas-ief-preparacion-pruebas-selectivas-hacienda.md",
+      "sha256": "c0eb6ee74618d63de2aebb9dca82ffefa7114180d2a2e6dc74d22ad9c9ae54fc"
+    },
+    "becas-jae-intro-icu-csic-2026": {
+      "path": "src/content/benefits/becas-jae-intro-icu-csic-2026.md",
+      "sha256": "b8ff950d7a10ae0bd7438179bdfceef7fd882656e5bac9cf85f342284850931d"
+    },
+    "becas-maec-aecid-colegio-europa-2026": {
+      "path": "src/content/benefits/becas-maec-aecid-colegio-europa-2026.md",
+      "sha256": "ed5c9000425755f2c07fe8c666af4200acedf2d612f664a010f55b5746ef322e"
+    },
+    "becas-maec-aecid-iberoamerica-africa-asia-2026": {
+      "path": "src/content/benefits/becas-maec-aecid-iberoamerica-africa-asia-2026.md",
+      "sha256": "fdf72b55f7cb32a9e89507b5855eee21051590103c47726b60c1e471708eb752"
+    },
+    "becas-maec-aecid-residencias-roma": {
+      "path": "src/content/benefits/becas-maec-aecid-residencias-roma.md",
+      "sha256": "e508d6d44f7ac4c8b95a77e43c891e9081a703405497a3e7b72bbed6bf3e3045"
+    },
+    "becas-master-analisis-datos-masivos-ejercito": {
+      "path": "src/content/benefits/becas-master-analisis-datos-masivos-ejercito.md",
+      "sha256": "f62e3562eed814421719e8ebfdc8ff4188de888b174b291f5dfcba3423c8d318"
+    },
+    "becas-master-gestion-procesos-madoc": {
+      "path": "src/content/benefits/becas-master-gestion-procesos-madoc.md",
+      "sha256": "581fef6a4ccb81fb1ade7919cad9f1c5c660a0277c77ad22f2ad6b5870a5c280"
+    },
+    "becas-master-pensamiento-estrategico-defensa": {
+      "path": "src/content/benefits/becas-master-pensamiento-estrategico-defensa.md",
+      "sha256": "855a110e442fda6716aaca5cb97421e7b935828bb47b8da01b1b74aa90ed82a4"
+    },
+    "becas-patrimonio-nacional-posgraduados-2026": {
+      "path": "src/content/benefits/becas-patrimonio-nacional-posgraduados-2026.md",
+      "sha256": "154d176496ad5aaef72599b167fbe92f087e11a1b0235e0d60a7b9c8ccef0609"
+    },
+    "becas-uimp-verano-santander": {
+      "path": "src/content/benefits/becas-uimp-verano-santander.md",
+      "sha256": "05d6c9c8120b7901e421387e8abc2aa6b376adbbba3563a54332a46750cf1e0c"
+    },
+    "bocm_bocm-20260421-34": {
+      "path": "src/content/benefits/bocm_bocm-20260421-34.md",
+      "sha256": "19bd29a7e429bdc8c4746c276394c23b0df3a1a3c2e4eb9ec644a23cb000e164"
+    },
+    "bocm_bocm-20260421-35": {
+      "path": "src/content/benefits/bocm_bocm-20260421-35.md",
+      "sha256": "67c9cff5fde4026f2b04e8a988a2ff70f2baf8c4a9d061bf0bc69074454cb49e"
+    },
+    "bocm_bocm-20260421-43": {
+      "path": "src/content/benefits/bocm_bocm-20260421-43.md",
+      "sha256": "cd6348cd0e0f1fa34bf751cddc33798d1200a5cf971b41b2f847a2f096d0d1e5"
+    },
+    "bocm_bocm-20260422-26": {
+      "path": "src/content/benefits/bocm_bocm-20260422-26.md",
+      "sha256": "1c33150bd34718744df8d1c1056f38c0e781065a47db75863817aeb194bfa191"
+    },
+    "bocm_bocm-20260423-107": {
+      "path": "src/content/benefits/bocm_bocm-20260423-107.md",
+      "sha256": "54902b0b2e314795572c285f06b3d884c20cc76fc8ab8521319a18c4f14f6a5a"
+    },
+    "bocm_bocm-20260423-62": {
+      "path": "src/content/benefits/bocm_bocm-20260423-62.md",
+      "sha256": "78278561ba618ec9a7416f33e6ea115d716b814a7a3b97f50eafdf3bb3e2dc7a"
+    },
+    "bocm_bocm-20260423-74": {
+      "path": "src/content/benefits/bocm_bocm-20260423-74.md",
+      "sha256": "13d04a6b2c3fb8a54e394c2d45596b88df2a666a334bb56dd6c3461b6c8c372a"
+    },
+    "bocm_bocm-20260424-23": {
+      "path": "src/content/benefits/bocm_bocm-20260424-23.md",
+      "sha256": "61b6868d49a4efa3cb44726b8b65c8b55c0944fc931b515d25e4235a678d2451"
+    },
+    "bocm_bocm-20260424-26": {
+      "path": "src/content/benefits/bocm_bocm-20260424-26.md",
+      "sha256": "76a966df2b4e78a6661ff32225b8348111523c2d804da5a6f61957c0497a0819"
+    },
+    "bocm_bocm-20260424-27": {
+      "path": "src/content/benefits/bocm_bocm-20260424-27.md",
+      "sha256": "73d68efb4be6ea7c2e490d12b0e5b8d439723a5c5f38d4755e53025e4c61bf26"
+    },
+    "bocm_bocm-20260424-28": {
+      "path": "src/content/benefits/bocm_bocm-20260424-28.md",
+      "sha256": "bc4ada1ea7c0b2cf5dcaf140ea28ed74364ed9476deb24a0bbf8edb7a546cab0"
+    },
+    "bocm_bocm-20260424-48": {
+      "path": "src/content/benefits/bocm_bocm-20260424-48.md",
+      "sha256": "03909300b449e653ed415d110b82db7d71434bc5d7d440a6df01863ccee9eb67"
+    },
+    "bocm_bocm-20260424-51": {
+      "path": "src/content/benefits/bocm_bocm-20260424-51.md",
+      "sha256": "5422fa1bfa49fcc2c0e6b7dcaedf303b2f97ce576cbb274076d937f9393a01ab"
+    },
+    "bocm_bocm-20260424-67": {
+      "path": "src/content/benefits/bocm_bocm-20260424-67.md",
+      "sha256": "4fd9d3ac55b935313b2748f4aff030fd981b2e80222d9f0b3e749999da106e93"
+    },
+    "bocm_bocm-20260424-81": {
+      "path": "src/content/benefits/bocm_bocm-20260424-81.md",
+      "sha256": "ab8a9541bd50710bd8e86333e956da3e7fd9849f45625c4abf2aa88213ca8607"
+    },
+    "bocm_bocm-20260427-18": {
+      "path": "src/content/benefits/bocm_bocm-20260427-18.md",
+      "sha256": "0958d5b3ec9e839504cdd9b2b8b5468f287ad66a632e7f432085387d57478fe8"
+    },
+    "bocm_bocm-20260427-22": {
+      "path": "src/content/benefits/bocm_bocm-20260427-22.md",
+      "sha256": "3bd98ce4c97722070d19426cb65114f5ffbfc4949f0f42ac6104652fc418a35e"
+    },
+    "bocm_bocm-20260427-50": {
+      "path": "src/content/benefits/bocm_bocm-20260427-50.md",
+      "sha256": "2433b06912e253ddb7f122d1b53238896a7e31e29e14ecdee060591d6cbc8afb"
+    },
+    "bocm_bocm-20260427-51": {
+      "path": "src/content/benefits/bocm_bocm-20260427-51.md",
+      "sha256": "a8c7f7586831b4d62a57f1f722cbb2112a0b79236ff38dc284e959dbb5607b94"
+    },
+    "bocm_bocm-20260427-52": {
+      "path": "src/content/benefits/bocm_bocm-20260427-52.md",
+      "sha256": "b0f8e437c72b6ebc3348e4e9e258de1f4fad6e8bac0f7ebddcc6108a95f35a55"
+    },
+    "bocm_bocm-20260427-68": {
+      "path": "src/content/benefits/bocm_bocm-20260427-68.md",
+      "sha256": "c0fa8ceaab3e74b97af60b85b3ff616339c2a4c403252ec061a2632dd8d7ffe3"
+    },
+    "bocm_bocm-20260427-69": {
+      "path": "src/content/benefits/bocm_bocm-20260427-69.md",
+      "sha256": "7437068ce01a70cbf952c5f035ef608510107be571ec95265ce52a3074924113"
+    },
+    "bocm_bocm-20260427-72": {
+      "path": "src/content/benefits/bocm_bocm-20260427-72.md",
+      "sha256": "228f04167cf965531e515aa6b26f436885e91c2520878e6f7f043a8bfccef06f"
+    },
+    "bocm_bocm-20260427-75": {
+      "path": "src/content/benefits/bocm_bocm-20260427-75.md",
+      "sha256": "7a2bc504b7bec1c1cc161e04b40a3e620898e66126223d845434291a3a511b1e"
+    },
+    "bocm_bocm-20260427-79": {
+      "path": "src/content/benefits/bocm_bocm-20260427-79.md",
+      "sha256": "284e9928ac80c97291687c71de557a67dd5c629642d6b105f0cab94dac646400"
+    },
+    "bocm_bocm-20260427-80": {
+      "path": "src/content/benefits/bocm_bocm-20260427-80.md",
+      "sha256": "7215b58995ede7f76531ad1c21ea5882e7a87ace5f53db90a5437080c5e0ae31"
+    },
+    "bocm_bocm-20260427-81": {
+      "path": "src/content/benefits/bocm_bocm-20260427-81.md",
+      "sha256": "28c66de3da0f67dd5969c4f3acf8e1eff7fe5d3b7713621c4e649f16f1c3657c"
+    },
+    "bocm_bocm-20260428-26": {
+      "path": "src/content/benefits/bocm_bocm-20260428-26.md",
+      "sha256": "081415f71c002ed6809f00f7a38d6da40064708d93d1ed9e706f97fb7e6f3450"
+    },
+    "bocm_bocm-20260428-27": {
+      "path": "src/content/benefits/bocm_bocm-20260428-27.md",
+      "sha256": "5e386704e22caf0c9ee2b1e9a419327cba179f3f8c2e93543b650c37d1cde7e1"
+    },
+    "bocm_bocm-20260428-29": {
+      "path": "src/content/benefits/bocm_bocm-20260428-29.md",
+      "sha256": "2ba4f3fbb779b61204641e3f16e4fa5a2eb0d91272009bc10d4b78731803a8fd"
+    },
+    "bocm_bocm-20260428-63": {
+      "path": "src/content/benefits/bocm_bocm-20260428-63.md",
+      "sha256": "14016ecdf28bbcd0a973c15c026109f4d5bca2383a6ce6304246dfc40915e02f"
+    },
+    "bocm_bocm-20260429-20": {
+      "path": "src/content/benefits/bocm_bocm-20260429-20.md",
+      "sha256": "28d9f8b8c5d9c12c1d6afedf4cf97a7fe4a7a021e2f5359a158866e34c21356a"
+    },
+    "bocm_bocm-20260429-21": {
+      "path": "src/content/benefits/bocm_bocm-20260429-21.md",
+      "sha256": "08186e80320cddd819caa312982b8a0b40cf438bb539edbf17f7653e09fd708e"
+    },
+    "bocm_bocm-20260429-59": {
+      "path": "src/content/benefits/bocm_bocm-20260429-59.md",
+      "sha256": "061b710d57d1467d37b2e44f0153bc515632c886f4607133a411c695dfd63cdd"
+    },
+    "bocm_bocm-20260429-60": {
+      "path": "src/content/benefits/bocm_bocm-20260429-60.md",
+      "sha256": "16fb3342122f4368d28491b54b39dfe57bb6358422ba83977f09dd867896af42"
+    },
+    "bocm_bocm-20260430-49": {
+      "path": "src/content/benefits/bocm_bocm-20260430-49.md",
+      "sha256": "eb2e50122d7cd4950ffe50de47fc2a4099388eee011e77803df6fea21164ee60"
+    },
+    "bocm_bocm-20260430-68": {
+      "path": "src/content/benefits/bocm_bocm-20260430-68.md",
+      "sha256": "b9280de5ecf401d11be231bcabc916af1d4b7eddf7a3eb7c00089fe43a1296c5"
+    },
+    "bocm_bocm-20260430-71": {
+      "path": "src/content/benefits/bocm_bocm-20260430-71.md",
+      "sha256": "b940a0ba319adb2e3ca7a1c407b5d7b26c2d99d5c9bd777338c427b086a3f331"
+    },
+    "bocm_bocm-20260504-101": {
+      "path": "src/content/benefits/bocm_bocm-20260504-101.md",
+      "sha256": "84c1ccac19f0ad7cde1a82bed889dd92c7e259ca3c3948e0a79993a572b7ffb0"
+    },
+    "bocm_bocm-20260504-103": {
+      "path": "src/content/benefits/bocm_bocm-20260504-103.md",
+      "sha256": "24f03089768ef73127c0a17b830fdb5f5e01cdda99ed9b87830ca11890b71abd"
+    },
+    "bocm_bocm-20260504-53": {
+      "path": "src/content/benefits/bocm_bocm-20260504-53.md",
+      "sha256": "36e0899f0195e3b18555f1323c42f8d6f2a2a3c2d51b3697322ed1a772f56e8e"
+    },
+    "bocm_bocm-20260504-55": {
+      "path": "src/content/benefits/bocm_bocm-20260504-55.md",
+      "sha256": "4366efcaf4d154249c8605196e034c618b58c7adf107f7c6a6ab4939b841ba11"
+    },
+    "bocm_bocm-20260504-56": {
+      "path": "src/content/benefits/bocm_bocm-20260504-56.md",
+      "sha256": "c50411f74f11a87fb6bf536d1b6e36f37471afc8017402f18802fc8060c1a1d7"
+    },
+    "bocm_bocm-20260504-85": {
+      "path": "src/content/benefits/bocm_bocm-20260504-85.md",
+      "sha256": "cfbf64367fd005d9abe6b22c7928c7a4547691437bf5769432a9e7b92d47205f"
+    },
+    "bocm_bocm-20260505-34": {
+      "path": "src/content/benefits/bocm_bocm-20260505-34.md",
+      "sha256": "d9e09194de5035f9ac11f9b7cb97377623d7a5d0d337f4ab31d3fe0df45efebf"
+    },
+    "bocm_bocm-20260505-58": {
+      "path": "src/content/benefits/bocm_bocm-20260505-58.md",
+      "sha256": "7edf9b415eaaa9e91e04866b462f964ff1b2c53abd4587b79eb073f9e1f84756"
+    },
+    "bocm_bocm-20260618-18": {
+      "path": "src/content/benefits/bocm_bocm-20260618-18.md",
+      "sha256": "4aa5ab2cd9d635cbc9739d1e89c7e42ff41c729211d20ad2e6f6342b2362423d"
+    },
+    "bocm_bocm-20260618-19": {
+      "path": "src/content/benefits/bocm_bocm-20260618-19.md",
+      "sha256": "688ea661326b083b8b9016b5d58c1b00cc23b7b70c5464ff0dc942d9f7a00584"
+    },
+    "bocm_bocm-20260618-20": {
+      "path": "src/content/benefits/bocm_bocm-20260618-20.md",
+      "sha256": "6f0ec5bccb8a460749deafafd1d901dde33765ead0d0801d3c0f7d01ad2097d5"
+    },
+    "bocm_bocm-20260618-27": {
+      "path": "src/content/benefits/bocm_bocm-20260618-27.md",
+      "sha256": "d072f4d986860ff4a5832b9c3eca00da5f59bc82cdeddddd27ebf4974860e802"
+    },
+    "bocm_bocm-20260618-64": {
+      "path": "src/content/benefits/bocm_bocm-20260618-64.md",
+      "sha256": "706321f82eb0e2609a27ab6976ce1ddd4c029350f3a270d09f3bde079c62b06e"
+    },
+    "bocm_bocm-20260618-79": {
+      "path": "src/content/benefits/bocm_bocm-20260618-79.md",
+      "sha256": "43aec7bcb0c6c4f61ade8cc0a534323c5ebf5cfc2ae79a8ade22cefe236cd572"
+    },
+    "boe-b-2024-19570": {
+      "path": "src/content/benefits/boe-b-2024-19570.md",
+      "sha256": "d39e4d1eb49cb359fbee2e5ff84bb4145ea7095688c99f3afe3d282d21eab59c"
+    },
+    "boe-b-2024-19573": {
+      "path": "src/content/benefits/boe-b-2024-19573.md",
+      "sha256": "7cc5027039f4c9d79b0fd34fc6ceb675409cf35428c66d8f3172bdc28061ea9a"
+    },
+    "boe-b-2025-42790": {
+      "path": "src/content/benefits/boe-b-2025-42790.md",
+      "sha256": "a6e40e41195bd6029233bb5bdf2df918a1d8f71bc4d4db93b033d7024eff48a7"
+    },
+    "boe-b-2025-43243": {
+      "path": "src/content/benefits/boe-b-2025-43243.md",
+      "sha256": "67cbf82e9dd5f6ae88134ef0ef77b9608800ca5ea782639eb9cfd59be2f0b558"
+    },
+    "boe-b-2025-43996": {
+      "path": "src/content/benefits/boe-b-2025-43996.md",
+      "sha256": "f10e8a4eb1f7b8b45df90616d2665d7ef06dfdaf053050545b1fb2261b959c6d"
+    },
+    "boe-b-2025-44313": {
+      "path": "src/content/benefits/boe-b-2025-44313.md",
+      "sha256": "6c0bebe000f1f15c3f94756e7fa8897b5e4be7be505b5c30e8c3a0d180eab145"
+    },
+    "boe-b-2025-44825": {
+      "path": "src/content/benefits/boe-b-2025-44825.md",
+      "sha256": "7ca9291381c83dc5baef85fd07ed2acac5bca9b6b65dc3f266209ddbe3dfe5ab"
+    },
+    "boe-b-2025-44835": {
+      "path": "src/content/benefits/boe-b-2025-44835.md",
+      "sha256": "e8e57d01791bb1eabb476664e40e87ef7e20983c99e1d63729cc343cfb212414"
+    },
+    "boe-b-2025-45034": {
+      "path": "src/content/benefits/boe-b-2025-45034.md",
+      "sha256": "2ac722a3a3d4021de974467f440195b88e688dd0e687d4e585246f25b161914c"
+    },
+    "boe-b-2025-45073": {
+      "path": "src/content/benefits/boe-b-2025-45073.md",
+      "sha256": "6c162b51021749b494ab90ab117a62746d071b9121187d4a4b7011048a62796c"
+    },
+    "boe-b-2025-45207": {
+      "path": "src/content/benefits/boe-b-2025-45207.md",
+      "sha256": "dcd943b31d17d15e76fc920928709c86b7226fe0e1546510c865cfdeafae38d8"
+    },
+    "boe-b-2025-46003": {
+      "path": "src/content/benefits/boe-b-2025-46003.md",
+      "sha256": "d9af8eb9a2e18836fa3210c68f1dbd4ca1b8d9dffda07151e48dd9a818ee01f9"
+    },
+    "boe-b-2025-46004": {
+      "path": "src/content/benefits/boe-b-2025-46004.md",
+      "sha256": "2d6d03e2770ea0c576ade07c11be1ac350814595847c18dcd854c2a563aa66e5"
+    },
+    "boe-b-2025-47158": {
+      "path": "src/content/benefits/boe-b-2025-47158.md",
+      "sha256": "e92f36042bc6def912580d097d257276c78aa07676a0038c23ec85c40c422374"
+    },
+    "boe-b-2025-47163": {
+      "path": "src/content/benefits/boe-b-2025-47163.md",
+      "sha256": "a8279cca8b4331e5bd8195d201a5ee54e7cfddc1ef77739d01d72e0533fccee6"
+    },
+    "boe-b-2025-47587": {
+      "path": "src/content/benefits/boe-b-2025-47587.md",
+      "sha256": "f81b650f3d250c7f578ab444f1c2d73cb759e95fd0dc8d86d11b67bb78557427"
+    },
+    "boe-b-2025-47918": {
+      "path": "src/content/benefits/boe-b-2025-47918.md",
+      "sha256": "6e9768439e72de7dc41cc6c9ef72be0693fe691661cbbc6141ad962ce08ed2a1"
+    },
+    "boe-b-2025-47919": {
+      "path": "src/content/benefits/boe-b-2025-47919.md",
+      "sha256": "e2815430cc3c0e9084fa3ca0ce7f33601dc25b3872fbb53601ae5df1ae2f4e33"
+    },
+    "boe-b-2025-47920": {
+      "path": "src/content/benefits/boe-b-2025-47920.md",
+      "sha256": "96e82643795550a598a3aa8299b4c446e1a8bd6dca385d0842672da95c341555"
+    },
+    "boe-b-2025-48112": {
+      "path": "src/content/benefits/boe-b-2025-48112.md",
+      "sha256": "6d8ca5cf8958a43dbfc3dc42b940ad0a2cc71b7bfd084156d4a9f13277f626d9"
+    },
+    "boe-b-2025-48114": {
+      "path": "src/content/benefits/boe-b-2025-48114.md",
+      "sha256": "85e5f5bc99cb3ab5fd55c3788b28d04d56f1c92f71ea72b9dafe0520ed489b5c"
+    },
+    "boe-b-2025-48182": {
+      "path": "src/content/benefits/boe-b-2025-48182.md",
+      "sha256": "62dbb3b4227daec1e57d610cea093c1e09ebb9343ec1865f240d087e9ee98bb6"
+    },
+    "boe-b-2026-10174": {
+      "path": "src/content/benefits/boe-b-2026-10174.md",
+      "sha256": "d8a20e5ac1e31668bbfcbab9770b832d08b19bd47d0866395a69e139b7d25e05"
+    },
+    "boe-b-2026-10220": {
+      "path": "src/content/benefits/boe-b-2026-10220.md",
+      "sha256": "80865ab3c4bc6bcf9c05680a3d46cef7fb53c5bfdda7605db73c2d71b169897e"
+    },
+    "boe-b-2026-10813": {
+      "path": "src/content/benefits/boe-b-2026-10813.md",
+      "sha256": "17749f05eb2d91e7e95488986bd0456a42f271267cf6ffe2c90a9adf087df4aa"
+    },
+    "boe-b-2026-10816": {
+      "path": "src/content/benefits/boe-b-2026-10816.md",
+      "sha256": "dc5feca477479ba685279d068855cc35f2bdc467d51e81e597c9982d8450235e"
+    },
+    "boe-b-2026-10825": {
+      "path": "src/content/benefits/boe-b-2026-10825.md",
+      "sha256": "1c8a57db1141c04585e8d0a2fcfd05093d3817420aa2d7f2a15fb98e38b11af7"
+    },
+    "boe-b-2026-10826": {
+      "path": "src/content/benefits/boe-b-2026-10826.md",
+      "sha256": "62a22429771a3a33aaeff696e42c2eb52959e0bf74c13ff5ff6e8649cf3ecfec"
+    },
+    "boe-b-2026-10882": {
+      "path": "src/content/benefits/boe-b-2026-10882.md",
+      "sha256": "3e201b6aa9f6405d8ba91fa50e843cfd8425473787ba3fd71f93563e33a1ade9"
+    },
+    "boe-b-2026-10917": {
+      "path": "src/content/benefits/boe-b-2026-10917.md",
+      "sha256": "66ae3f57403184a9f00d61a893b6c43d5ab99145876bbf6c0bf4ce0eab42f7e3"
+    },
+    "boe-b-2026-10920": {
+      "path": "src/content/benefits/boe-b-2026-10920.md",
+      "sha256": "b10d15e7dd56daba84b314d49cd3019b3f592524a69255bed560da155c39caa6"
+    },
+    "boe-b-2026-10998": {
+      "path": "src/content/benefits/boe-b-2026-10998.md",
+      "sha256": "b52c9ac135ad37052f5fcaee47dcc05403076d7da2417f047b7a41f612b44837"
+    },
+    "boe-b-2026-10999": {
+      "path": "src/content/benefits/boe-b-2026-10999.md",
+      "sha256": "cb5d0dc54d9dd4a058e23426e6782b12762af466a2e4dd8534c2323db7d47e03"
+    },
+    "boe-b-2026-11025": {
+      "path": "src/content/benefits/boe-b-2026-11025.md",
+      "sha256": "3e09b6d80b2383bbe558ef2274c1c3f2f6ab0dfef932fec78c4572c30c3d7983"
+    },
+    "boe-b-2026-11219": {
+      "path": "src/content/benefits/boe-b-2026-11219.md",
+      "sha256": "3e2a107f580899fdc5079b1b68fcb97ea9630e1707e252d7c2802b9fac8f2336"
+    },
+    "boe-b-2026-11220": {
+      "path": "src/content/benefits/boe-b-2026-11220.md",
+      "sha256": "6d245e839e57235bbdccabce0ba6a62c11da3a81c797f161428978551c2a1c7e"
+    },
+    "boe-b-2026-11560": {
+      "path": "src/content/benefits/boe-b-2026-11560.md",
+      "sha256": "44f84fcaaf3b2884dfa0068baceea91c4a6a4bd87c58a3b480e1af2bd712c910"
+    },
+    "boe-b-2026-11620": {
+      "path": "src/content/benefits/boe-b-2026-11620.md",
+      "sha256": "e87eb9fb96a0ae52d457fb024b5e75a66b988d6fd1560e0cc2a2586dfef8762a"
+    },
+    "boe-b-2026-11645": {
+      "path": "src/content/benefits/boe-b-2026-11645.md",
+      "sha256": "1826b6beea0c13d898f5d4be40fa9d12b239540ba031a590f88c0a7ebbed7f8a"
+    },
+    "boe-b-2026-11742": {
+      "path": "src/content/benefits/boe-b-2026-11742.md",
+      "sha256": "1a74a1f9cf16c3949470816565aa0b9237e30e29d7e4f6625002e8c46d189779"
+    },
+    "boe-b-2026-11888": {
+      "path": "src/content/benefits/boe-b-2026-11888.md",
+      "sha256": "54abae5a47a28153c804a3da8441a11ea76ab0980344f93d810dade6ff41de4b"
+    },
+    "boe-b-2026-12085": {
+      "path": "src/content/benefits/boe-b-2026-12085.md",
+      "sha256": "47b6b4bc8068db0f30eabfbad55cd3aceaffa5d9953e5bf0cf69d527c70bf9bb"
+    },
+    "boe-b-2026-12201": {
+      "path": "src/content/benefits/boe-b-2026-12201.md",
+      "sha256": "a5e4e821a0e6d65706b7066ad72315de1a8dff05fc7d1441d861ab4a64e3d72f"
+    },
+    "boe-b-2026-12202": {
+      "path": "src/content/benefits/boe-b-2026-12202.md",
+      "sha256": "3ee54af11cb4b5f15ac13a523b3e183b9a9a56c3e4db55f72235cded828e1ee5"
+    },
+    "boe-b-2026-12340": {
+      "path": "src/content/benefits/boe-b-2026-12340.md",
+      "sha256": "4d68071a64e29007fc14a2cb8cf825e61deef8a2cf796a7c3da40301689dddd2"
+    },
+    "boe-b-2026-125": {
+      "path": "src/content/benefits/boe-b-2026-125.md",
+      "sha256": "e5bec8bdda176e7792b8ec35cb5dccd7130cba96c4b538b9b8a9095dee948f6a"
+    },
+    "boe-b-2026-12557": {
+      "path": "src/content/benefits/boe-b-2026-12557.md",
+      "sha256": "a9f534dbe991e8aadfe802a47256ec9e32e918d69a899c26852e1ef94e672b53"
+    },
+    "boe-b-2026-12558": {
+      "path": "src/content/benefits/boe-b-2026-12558.md",
+      "sha256": "ad39cbcbabf81c5155a6068adddb56f758928510f0d6924d53dc5f5361ebd876"
+    },
+    "boe-b-2026-12559": {
+      "path": "src/content/benefits/boe-b-2026-12559.md",
+      "sha256": "dd97ead018de982c90295506a46c37ab3ac0b01c6ca30e79549187b42887c802"
+    },
+    "boe-b-2026-12660": {
+      "path": "src/content/benefits/boe-b-2026-12660.md",
+      "sha256": "264649d9b9c051765f47e227be9ea04fce3b6f0f0f0642abda596326e660af35"
+    },
+    "boe-b-2026-12661": {
+      "path": "src/content/benefits/boe-b-2026-12661.md",
+      "sha256": "91cdff9dc4e96df7ee2edb7d4a2e6d966006223023d8633c4d5f0b9f3b34d14c"
+    },
+    "boe-b-2026-13096": {
+      "path": "src/content/benefits/boe-b-2026-13096.md",
+      "sha256": "11ead22d49587a5abeda5d8eb26de66f69c8b7e024688c693b1129721f02aca5"
+    },
+    "boe-b-2026-13098": {
+      "path": "src/content/benefits/boe-b-2026-13098.md",
+      "sha256": "e7c54f1fe245fc15b9df8b570d7a49a1c78d849ad267591359974cf57bcd4dd7"
+    },
+    "boe-b-2026-13099": {
+      "path": "src/content/benefits/boe-b-2026-13099.md",
+      "sha256": "e13c2f0f2891266505ca47ff2fc52047d30f11094ca956cbcd5dd9c3f7f7c503"
+    },
+    "boe-b-2026-13100": {
+      "path": "src/content/benefits/boe-b-2026-13100.md",
+      "sha256": "7455150b17c4fdc2b87cf9c58c6368b13d8f669292ec2cadde078248d9b93612"
+    },
+    "boe-b-2026-13408": {
+      "path": "src/content/benefits/boe-b-2026-13408.md",
+      "sha256": "4552fc04944a5fffe1c9a2b155d362d18e61d712bb737193169680c17610dfdb"
+    },
+    "boe-b-2026-1342": {
+      "path": "src/content/benefits/boe-b-2026-1342.md",
+      "sha256": "a41d518802faa5b70a42140307964511c3b7a12c1dc904c9f59a7f2b17bc2f8e"
+    },
+    "boe-b-2026-13472": {
+      "path": "src/content/benefits/boe-b-2026-13472.md",
+      "sha256": "8e81bb543aaaf9b88868db9342d23a8b2e6c4269a8c59b5b08ed9939d25d9b5b"
+    },
+    "boe-b-2026-13473": {
+      "path": "src/content/benefits/boe-b-2026-13473.md",
+      "sha256": "75f4ac3a3e9febbbc7f2889bc2f8d90c1e1c66804797f8e081a25f12e57c6d76"
+    },
+    "boe-b-2026-13482": {
+      "path": "src/content/benefits/boe-b-2026-13482.md",
+      "sha256": "3fabb404f0dbc4a749672f1c9be75d8c80c65f02fd1fb850090785b97d9d3c5e"
+    },
+    "boe-b-2026-13517": {
+      "path": "src/content/benefits/boe-b-2026-13517.md",
+      "sha256": "333251d3036f8dd5305294c8278ce4a339c7b1da5774bb9df3b57f86567f63fa"
+    },
+    "boe-b-2026-13519": {
+      "path": "src/content/benefits/boe-b-2026-13519.md",
+      "sha256": "a62eedb8d984390cf260d0c0242ce7266d9dcfb1d494feaf833c85071c5a508a"
+    },
+    "boe-b-2026-1399": {
+      "path": "src/content/benefits/boe-b-2026-1399.md",
+      "sha256": "e551d3fb65a2675efbdf8ff82c44f391546bb102131ff68d9f85e9bb114481d2"
+    },
+    "boe-b-2026-14182": {
+      "path": "src/content/benefits/boe-b-2026-14182.md",
+      "sha256": "b13f8aabddecb80d441c6a33011b37374cbd2d45dae967017821d8a233f428d2"
+    },
+    "boe-b-2026-14244": {
+      "path": "src/content/benefits/boe-b-2026-14244.md",
+      "sha256": "cd9ed079478314bb70b632f513e02e78100527f5c69ce3c91073986102c24926"
+    },
+    "boe-b-2026-14385": {
+      "path": "src/content/benefits/boe-b-2026-14385.md",
+      "sha256": "8421c5fb511efc1352814654f2123bf87735f23a0af050f3929df64c9c328f4b"
+    },
+    "boe-b-2026-14386": {
+      "path": "src/content/benefits/boe-b-2026-14386.md",
+      "sha256": "b61872fb5c701e02cf495e49f38f3205c868f38256ec735ec18e86499171f79e"
+    },
+    "boe-b-2026-14388": {
+      "path": "src/content/benefits/boe-b-2026-14388.md",
+      "sha256": "6c07e929db4825a53b6150cdce9a34b16ceb042d965208835c2ad375f25fbe7f"
+    },
+    "boe-b-2026-14562": {
+      "path": "src/content/benefits/boe-b-2026-14562.md",
+      "sha256": "ec59b0f4ffe66b104c3eb2459dc721c297e78a545d5e47cb25ae0e345d45e7a8"
+    },
+    "boe-b-2026-15262": {
+      "path": "src/content/benefits/boe-b-2026-15262.md",
+      "sha256": "351528b00ac42b981dd54b0a8e1e827c925084283d88c33069bf2541b6a8b461"
+    },
+    "boe-b-2026-15332": {
+      "path": "src/content/benefits/boe-b-2026-15332.md",
+      "sha256": "5ca3fa02f7a129b338d17de5bf62c8edf3643b0ad47a351a78178411d1cdc6a3"
+    },
+    "boe-b-2026-15334": {
+      "path": "src/content/benefits/boe-b-2026-15334.md",
+      "sha256": "edc431e7314ca94be4ab73e9d220aa497ef4d51571a07f8b72ca6f061b82514b"
+    },
+    "boe-b-2026-15350": {
+      "path": "src/content/benefits/boe-b-2026-15350.md",
+      "sha256": "cb7a28b44572041c8046b54ede3e6d5387fb055d9101b7e2ad9d5b97d6ebeedb"
+    },
+    "boe-b-2026-15543": {
+      "path": "src/content/benefits/boe-b-2026-15543.md",
+      "sha256": "73a7e2abaf577da15b2a0cb8518e77ba42dd461824e77cf6d0b220db09caa663"
+    },
+    "boe-b-2026-15552": {
+      "path": "src/content/benefits/boe-b-2026-15552.md",
+      "sha256": "50165e92a03eb2e1ae6234397329058e32f3a2334ea41a3401e7e7880acbf94f"
+    },
+    "boe-b-2026-16152": {
+      "path": "src/content/benefits/boe-b-2026-16152.md",
+      "sha256": "eb68e332a2290324286a2108d5147829df5ced0445aad8dc680940fb625ba2fa"
+    },
+    "boe-b-2026-16237": {
+      "path": "src/content/benefits/boe-b-2026-16237.md",
+      "sha256": "f8328d8b51918d5bbbeb838b8df5c6b3f6176c68e45b492f9482b4f530d60d49"
+    },
+    "boe-b-2026-16240": {
+      "path": "src/content/benefits/boe-b-2026-16240.md",
+      "sha256": "01dc78f24bd119c68ed94923088dec654e9c35fe0372b5a5ffdf01d48a2fbbf1"
+    },
+    "boe-b-2026-16328": {
+      "path": "src/content/benefits/boe-b-2026-16328.md",
+      "sha256": "6da85a61d7a5dbbb6a924ebd0e8b46a696fd8e0fb604e08b0e36df54d8f1097c"
+    },
+    "boe-b-2026-16360": {
+      "path": "src/content/benefits/boe-b-2026-16360.md",
+      "sha256": "7e110d606a89200d18c7b2b96bcfe9755d68524280f756c5f2fe4c6db6d012f9"
+    },
+    "boe-b-2026-16361": {
+      "path": "src/content/benefits/boe-b-2026-16361.md",
+      "sha256": "f71292d2cc19b7d13d961368b6b13fb67fea6122ee759be23802363a5f91a2cc"
+    },
+    "boe-b-2026-16450": {
+      "path": "src/content/benefits/boe-b-2026-16450.md",
+      "sha256": "40df0b6d345626e8a6727757dc02a9ce3d672f7d3e8e6430517d6655b1a64b3c"
+    },
+    "boe-b-2026-16524": {
+      "path": "src/content/benefits/boe-b-2026-16524.md",
+      "sha256": "d0ac5eed17cb6c319c687384730aed51f939f4ac4ec5baa76a2ba0a3bf90708b"
+    },
+    "boe-b-2026-17406": {
+      "path": "src/content/benefits/boe-b-2026-17406.md",
+      "sha256": "5ab431ff0f44efb92c8723ee6f4fcae926d61435911c5191b323e78509a708e5"
+    },
+    "boe-b-2026-17478": {
+      "path": "src/content/benefits/boe-b-2026-17478.md",
+      "sha256": "46a55fc74c566498ea4c98ba47ad068bc9cdeb691972a5b2a3794494278c928a"
+    },
+    "boe-b-2026-17506": {
+      "path": "src/content/benefits/boe-b-2026-17506.md",
+      "sha256": "dfb110d8c1ca4057dbee8142ed2010194ff3b2e64d5d525e4d5bf396672589d9"
+    },
+    "boe-b-2026-17507": {
+      "path": "src/content/benefits/boe-b-2026-17507.md",
+      "sha256": "fb9c8334019374a8daa9e960bfc6aed360ee370c5078c6e8855c20f4e2499005"
+    },
+    "boe-b-2026-17579": {
+      "path": "src/content/benefits/boe-b-2026-17579.md",
+      "sha256": "894b8e1380f53704b929b1868d3c73d1025d6a74b2f776197ecabc8a05ead8ff"
+    },
+    "boe-b-2026-17584": {
+      "path": "src/content/benefits/boe-b-2026-17584.md",
+      "sha256": "c56e48825c4d054b0676c4be0728f6d380996d54ad255226245663bf7d8ce9ab"
+    },
+    "boe-b-2026-17965": {
+      "path": "src/content/benefits/boe-b-2026-17965.md",
+      "sha256": "b8daf34866e40310139acddc49888251fb0afc2f8eae2bdbd52faf3d3fbdad97"
+    },
+    "boe-b-2026-18372": {
+      "path": "src/content/benefits/boe-b-2026-18372.md",
+      "sha256": "64d0e9ce5c51ee81e2cd4358a15be6e98cc3f0c2f079f7552978d2cef68e0326"
+    },
+    "boe-b-2026-18620": {
+      "path": "src/content/benefits/boe-b-2026-18620.md",
+      "sha256": "825bf2e4e32fabc609ceaa431aec825de2862bb28ac8ffb1dcb32ac9d16f9a3a"
+    },
+    "boe-b-2026-18621": {
+      "path": "src/content/benefits/boe-b-2026-18621.md",
+      "sha256": "8b0e370dbef1e226c0293564f6239af55daac803e971ed40a77daaaa25bb9499"
+    },
+    "boe-b-2026-18666": {
+      "path": "src/content/benefits/boe-b-2026-18666.md",
+      "sha256": "fe6441f76ecb861d05283ae8db98c225dd2efab9417e8ee48fcd8aeef40256c0"
+    },
+    "boe-b-2026-19103": {
+      "path": "src/content/benefits/boe-b-2026-19103.md",
+      "sha256": "9159856300e039a6277a4ee3cf35bc945c4bfcc19de45734c27b7786ee9fd178"
+    },
+    "boe-b-2026-19384": {
+      "path": "src/content/benefits/boe-b-2026-19384.md",
+      "sha256": "450fac6e3a8d34fcc6d5d04fa67d81dcb69522f281c605020b663cc361cb1490"
+    },
+    "boe-b-2026-19387": {
+      "path": "src/content/benefits/boe-b-2026-19387.md",
+      "sha256": "a1fa8b5030436c6f26e2480cfe7776d1232bae0045bd2e2618fa3879b5a061cf"
+    },
+    "boe-b-2026-19517": {
+      "path": "src/content/benefits/boe-b-2026-19517.md",
+      "sha256": "1edd6cd767bd8cbf442745fab564241cb90df9be0c100d73127cc6110e52cb8e"
+    },
+    "boe-b-2026-19774": {
+      "path": "src/content/benefits/boe-b-2026-19774.md",
+      "sha256": "44b29109ead65da8f456820224a3a4a9b01be72111296b371ff788e8ed3c9c42"
+    },
+    "boe-b-2026-19775": {
+      "path": "src/content/benefits/boe-b-2026-19775.md",
+      "sha256": "b33244156973e4d2e2e79d050c1cdedef36406c176143c7385b447c1be5f99bc"
+    },
+    "boe-b-2026-20132": {
+      "path": "src/content/benefits/boe-b-2026-20132.md",
+      "sha256": "5ab08ab32c468944ba564a090308205d353e34e81691de9a7f6a6d020365707f"
+    },
+    "boe-b-2026-20133": {
+      "path": "src/content/benefits/boe-b-2026-20133.md",
+      "sha256": "a689d39bada798be9a64c7b617ca40620447ca05d9d4d224ebb4647aca99fe6e"
+    },
+    "boe-b-2026-20473": {
+      "path": "src/content/benefits/boe-b-2026-20473.md",
+      "sha256": "bf877f41610fa758a3cbfaa85b125b68c81f09dd498c120b9b240c41565fb6fb"
+    },
+    "boe-b-2026-20704": {
+      "path": "src/content/benefits/boe-b-2026-20704.md",
+      "sha256": "9b65d0bce108cd7067f3e415fc0ecda56459e5e1a8c6bb2c8b37649548323ebc"
+    },
+    "boe-b-2026-20705": {
+      "path": "src/content/benefits/boe-b-2026-20705.md",
+      "sha256": "e8347dc9b10d4610963f252636eb16050e3a32eaea330d467daf48380bed0f6f"
+    },
+    "boe-b-2026-20741": {
+      "path": "src/content/benefits/boe-b-2026-20741.md",
+      "sha256": "a55d6d2e915b84fec140cb638169d1b2a98aaa8a969e55ab69699b25642e7218"
+    },
+    "boe-b-2026-20841": {
+      "path": "src/content/benefits/boe-b-2026-20841.md",
+      "sha256": "1ea96f63628e8c070eb786d4ba702964047a451a19d441cf64f9fafb0eb7e671"
+    },
+    "boe-b-2026-20843": {
+      "path": "src/content/benefits/boe-b-2026-20843.md",
+      "sha256": "b664c1083971e4191cc270d2b40477a79b4d321fe00f53640d9f459ebb5d29d3"
+    },
+    "boe-b-2026-20883": {
+      "path": "src/content/benefits/boe-b-2026-20883.md",
+      "sha256": "70759d828618d9ecd4db1918d70d19b4fb9705a948f3d9bf94d6297b0cf33322"
+    },
+    "boe-b-2026-21118": {
+      "path": "src/content/benefits/boe-b-2026-21118.md",
+      "sha256": "4b299a298a0e08324be1005c80f23ad692a5ec5c91f72c1fdecaf341564adbbd"
+    },
+    "boe-b-2026-21272": {
+      "path": "src/content/benefits/boe-b-2026-21272.md",
+      "sha256": "b927f03c1bb2669fe562e94fde531b1698de36f7cf7fe38d1f9adc4067afe7a6"
+    },
+    "boe-b-2026-21435": {
+      "path": "src/content/benefits/boe-b-2026-21435.md",
+      "sha256": "b8211120bed03fe96f9d769925e4c28ec3c4e0cf3f2b4cf03f05d9e213a50ab6"
+    },
+    "boe-b-2026-2874": {
+      "path": "src/content/benefits/boe-b-2026-2874.md",
+      "sha256": "2fbbca8e1e3c863788a3a11c9fb5b01d62bdb66c6c96548f1cf15aa41b126031"
+    },
+    "boe-b-2026-298": {
+      "path": "src/content/benefits/boe-b-2026-298.md",
+      "sha256": "17aefc10ca03da8a877749e6b6bfd12c0c706d8a076d66508f677aada071dfdb"
+    },
+    "boe-b-2026-299": {
+      "path": "src/content/benefits/boe-b-2026-299.md",
+      "sha256": "80142ea862aef15eb545c22e7a55941dab7f531ef32581a93a9618610601123c"
+    },
+    "boe-b-2026-300": {
+      "path": "src/content/benefits/boe-b-2026-300.md",
+      "sha256": "afb59368a88b19e6d71cbed91c5e5c9127ffb1185900b43e6080e1a9b11f1730"
+    },
+    "boe-b-2026-3011": {
+      "path": "src/content/benefits/boe-b-2026-3011.md",
+      "sha256": "d23ed19b41e8d9bdc98d07c00aa7b46441c862d80ee150d5246fd116e2832adc"
+    },
+    "boe-b-2026-3168": {
+      "path": "src/content/benefits/boe-b-2026-3168.md",
+      "sha256": "e8b73e0396b66496f88695ed3f45153e7efcef05f658c8c87d45052d0a158f5a"
+    },
+    "boe-b-2026-3423": {
+      "path": "src/content/benefits/boe-b-2026-3423.md",
+      "sha256": "4cdd2f4f699ccab558b0708f20500313521843e24c8e4c25974659aa68ac2fef"
+    },
+    "boe-b-2026-349": {
+      "path": "src/content/benefits/boe-b-2026-349.md",
+      "sha256": "f6305d558154affe96c663efcc81ecc4a4782c32291dac5175409aa9b590c6f3"
+    },
+    "boe-b-2026-4030": {
+      "path": "src/content/benefits/boe-b-2026-4030.md",
+      "sha256": "ee5fbb08b6e74191cb6485005ab10242e74cbf6dc3599e6e93c3d5fc3a1088b2"
+    },
+    "boe-b-2026-443": {
+      "path": "src/content/benefits/boe-b-2026-443.md",
+      "sha256": "b62b44860ec558d4ec2e4b01ab0b55527231092dbe26b8641678062589416ff5"
+    },
+    "boe-b-2026-444": {
+      "path": "src/content/benefits/boe-b-2026-444.md",
+      "sha256": "60eaf6cb2750733e327463c3bf102e4df624d5b9e354e47a591c486c7535f352"
+    },
+    "boe-b-2026-445": {
+      "path": "src/content/benefits/boe-b-2026-445.md",
+      "sha256": "f9cf2040f09da46ad240c008e4c55f5eb48df4f337f96dd55b75d2c2a15110d9"
+    },
+    "boe-b-2026-446": {
+      "path": "src/content/benefits/boe-b-2026-446.md",
+      "sha256": "68238ee87adbf735d7b090a74fba747749f472780ce6e836f061cf7c61fcff74"
+    },
+    "boe-b-2026-4877": {
+      "path": "src/content/benefits/boe-b-2026-4877.md",
+      "sha256": "a71c4d949731d8144a1e6505c07a1b49b7486cdc23b01bfa6af08c4607a3668c"
+    },
+    "boe-b-2026-5043": {
+      "path": "src/content/benefits/boe-b-2026-5043.md",
+      "sha256": "9353fc91b8d1655bdb729afe475183a98cac23e7a2e8cb4f40c8d233f3d3af9c"
+    },
+    "boe-b-2026-5044": {
+      "path": "src/content/benefits/boe-b-2026-5044.md",
+      "sha256": "23e159aca685a2ee6da06381668a8cf000790950c59e94faed46f96accdec311"
+    },
+    "boe-b-2026-5045": {
+      "path": "src/content/benefits/boe-b-2026-5045.md",
+      "sha256": "65198bebeb3b461355d70a8c0139d7e16d92f72320995864bf16ec507744f06a"
+    },
+    "boe-b-2026-6609": {
+      "path": "src/content/benefits/boe-b-2026-6609.md",
+      "sha256": "e3b361ed182abec77d0d2eccd79fa1cd70bb09ef9cc46e24be6a129916beee24"
+    },
+    "boe-b-2026-6718": {
+      "path": "src/content/benefits/boe-b-2026-6718.md",
+      "sha256": "f9e86d8438f4779cae80d90799e59153903819d97b91db258eb8cf49ddb8af2d"
+    },
+    "boe-b-2026-6730": {
+      "path": "src/content/benefits/boe-b-2026-6730.md",
+      "sha256": "efa653284d8d53cc268ed350972848489ba73f0e46073480a0859e743b2f2fba"
+    },
+    "boe-b-2026-677": {
+      "path": "src/content/benefits/boe-b-2026-677.md",
+      "sha256": "21cbb6170b4f6c4a167ad33add1bec1a2cd0d6dc2989c1227a992894ca589fae"
+    },
+    "boe-b-2026-7115": {
+      "path": "src/content/benefits/boe-b-2026-7115.md",
+      "sha256": "d159a24b288ce3cb212bfe8d3abfa4d1cc0461630a98fad64ab742c79d6df1f0"
+    },
+    "boe-b-2026-7116": {
+      "path": "src/content/benefits/boe-b-2026-7116.md",
+      "sha256": "f0fe718e9f7af51cd98cc0e97411e793881ad0e0db0f17183ffae56c2acb6075"
+    },
+    "boe-b-2026-7377": {
+      "path": "src/content/benefits/boe-b-2026-7377.md",
+      "sha256": "08c7bd9f3f9d7888b9589668a2128fd5774b966d3d94442e2d293b6790b54f5b"
+    },
+    "boe-b-2026-7397": {
+      "path": "src/content/benefits/boe-b-2026-7397.md",
+      "sha256": "ae95fdf455a50b313b4443e007b272ffec8f687e5ee5377a687dfbc149805cf0"
+    },
+    "boe-b-2026-7475": {
+      "path": "src/content/benefits/boe-b-2026-7475.md",
+      "sha256": "5d4ff54732786e1af302a236925f278aa4c96fe75287d16e8dfc7ee8bde7c385"
+    },
+    "boe-b-2026-7478": {
+      "path": "src/content/benefits/boe-b-2026-7478.md",
+      "sha256": "de0de539844edb25c5864a53962c11dcef4dba5eee65d51d402e0e32948e107e"
+    },
+    "boe-b-2026-7581": {
+      "path": "src/content/benefits/boe-b-2026-7581.md",
+      "sha256": "0e18bcf99d9a6c25b3601d90754f69fb67212b6faceb6f7a1b70fd998610d579"
+    },
+    "boe-b-2026-7708": {
+      "path": "src/content/benefits/boe-b-2026-7708.md",
+      "sha256": "0de728e5e7b7f4777251a9d540854f799bfa01ddb59d36e4a1ee5f9f5c21971e"
+    },
+    "boe-b-2026-7709": {
+      "path": "src/content/benefits/boe-b-2026-7709.md",
+      "sha256": "30b3fcf944c110e8a6c784f55be149f60e0c1178dcf1c43330c5bcd62d9caab8"
+    },
+    "boe-b-2026-788": {
+      "path": "src/content/benefits/boe-b-2026-788.md",
+      "sha256": "d16096e62808bcf30f29b911c2204ba13ddb7766ec30d28a4e92e192ea8dc3d4"
+    },
+    "boe-b-2026-796": {
+      "path": "src/content/benefits/boe-b-2026-796.md",
+      "sha256": "56203a5187e8042ce43de9d15b53dcb183b394eac7aa5d37476b114d080f8bbf"
+    },
+    "boe-b-2026-8264": {
+      "path": "src/content/benefits/boe-b-2026-8264.md",
+      "sha256": "4bc7af9c0f1427694d46876b9f97fee57de37f41eb5c22995245f1a4351ae66b"
+    },
+    "boe-b-2026-8296": {
+      "path": "src/content/benefits/boe-b-2026-8296.md",
+      "sha256": "94c5f25cdfc495e84d6a21d2806f3c41fdb6942e4480f574c8c35f5d2d0fdf13"
+    },
+    "boe-b-2026-8467": {
+      "path": "src/content/benefits/boe-b-2026-8467.md",
+      "sha256": "56d9ac2298b744b2cd1106fdd1aa9bad67615043408c48c8696e28173ac536d6"
+    },
+    "boe-b-2026-8563": {
+      "path": "src/content/benefits/boe-b-2026-8563.md",
+      "sha256": "efb0baa7bc0c8b09717f6f19b69b4abbab537cb8c09cc9cd77f395bc624959be"
+    },
+    "boe-b-2026-8564": {
+      "path": "src/content/benefits/boe-b-2026-8564.md",
+      "sha256": "bb5ed0b9416d2948ada33166c1fc979def95b43dc077e456e252891537e69400"
+    },
+    "boe-b-2026-8862": {
+      "path": "src/content/benefits/boe-b-2026-8862.md",
+      "sha256": "c3e302a62f38a2e7613e8041c599fb21cd7c6f0a720a69b53880736c20d7e72b"
+    },
+    "boe-b-2026-9182": {
+      "path": "src/content/benefits/boe-b-2026-9182.md",
+      "sha256": "86f7f780ad644fbaf4628986bb740baf6c9bbb836331cae014fa3ad7b0663306"
+    },
+    "boe-b-2026-9283": {
+      "path": "src/content/benefits/boe-b-2026-9283.md",
+      "sha256": "939d1d4f25239809588722bdb7d56d2c0d705cdfaf194fab8e9f061cf7f01ef0"
+    },
+    "boe-b-2026-9398": {
+      "path": "src/content/benefits/boe-b-2026-9398.md",
+      "sha256": "44bc35bcedce0c3e530c1873417bd326cbc1a4c0e5b78e0b9277bfcdd9bd4c5e"
+    },
+    "boe-b-2026-9399": {
+      "path": "src/content/benefits/boe-b-2026-9399.md",
+      "sha256": "7cd40f78b4a2f82f30c07e188e4cbc27da734ee8c22f36a0e0e4ded1d8d5f141"
+    },
+    "bono-cultural-joven": {
+      "path": "src/content/benefits/bono-cultural-joven.md",
+      "sha256": "a2c42788355f33c448d9e00642913569f44d51a2dd865db85ed4e4a02c6b4ec6"
+    },
+    "bono-social-electrico": {
+      "path": "src/content/benefits/bono-social-electrico.md",
+      "sha256": "dd927638c82addbbd8fcab0bb50a0d85cfc14d1f198be2d82f5b20c721d2fe72"
+    },
+    "complemento-apoyo-empleo-subsidio": {
+      "path": "src/content/benefits/complemento-apoyo-empleo-subsidio.md",
+      "sha256": "a52c1cdd5b714ae3beb7b08318b78fc127288c35a06b400c82387f664d1f805d"
+    },
+    "descuento-transporte-familia-numerosa": {
+      "path": "src/content/benefits/descuento-transporte-familia-numerosa.md",
+      "sha256": "b218c07718509a500439413b3fdc03ccc125136c354f4205564caa3b5b32fecd"
+    },
+    "madrid-ayuda-familias-acogedoras": {
+      "path": "src/content/benefits/madrid-ayuda-familias-acogedoras.md",
+      "sha256": "c68ceb7a473c500fe80f341561e1793763f9b69a055329c5ee47f092333573a5"
+    },
+    "madrid-ayudas-nacimiento-adopcion-multiple": {
+      "path": "src/content/benefits/madrid-ayudas-nacimiento-adopcion-multiple.md",
+      "sha256": "f9099ef55169d0765689b436af34c8701247d7da0f1aeeb1e60209c4d912f088"
+    },
+    "madrid-becas-bachillerato-centros-privados": {
+      "path": "src/content/benefits/madrid-becas-bachillerato-centros-privados.md",
+      "sha256": "bc8a1ee19751926b90e0d249cec4765685aba1c63ec66a35b555c04b1ddfc773"
+    },
+    "madrid-becas-fp-grado-d": {
+      "path": "src/content/benefits/madrid-becas-fp-grado-d.md",
+      "sha256": "74e0b56732bdb847f3bd78c204cd8700409bde6202b397e96a80181367b22ba9"
+    },
+    "madrid-beneficios-familias-numerosas": {
+      "path": "src/content/benefits/madrid-beneficios-familias-numerosas.md",
+      "sha256": "7bb3e97b7e51f5225a251c33352f135dda38e352cdcb13e419644e6cd2260b95"
+    },
+    "prestacion-cuidado-menor-enfermedad-grave": {
+      "path": "src/content/benefits/prestacion-cuidado-menor-enfermedad-grave.md",
+      "sha256": "92c17be16f52d2019d3efc367d3c924c93cbcb603dbf8dc7f16799aff1d2de4a"
+    },
+    "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad": {
+      "path": "src/content/benefits/prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad.md",
+      "sha256": "c9eef66f1fae43bb3e9dbffb4cf63344231a466111adf9b8675a6ea9848ea096"
+    },
+    "prestaciones-dependencia-saad": {
+      "path": "src/content/benefits/prestaciones-dependencia-saad.md",
+      "sha256": "2200390e4c6622463ec71913aa6709e28f0db00cb3e945f90df634ec38e83861"
+    },
+    "renta-activa-insercion": {
+      "path": "src/content/benefits/renta-activa-insercion.md",
+      "sha256": "a9bb0b0d556668c74622f8f546a2b9084ef89ee97f5ae7d7d480321763e5c50d"
+    },
+    "saad-asistencia-personal": {
+      "path": "src/content/benefits/saad-asistencia-personal.md",
+      "sha256": "a6b23e14133cb98ea2019c9918f02212c477cceefe57fbec165358195846c67a"
+    },
+    "subsidio-cotizaciones-insuficientes": {
+      "path": "src/content/benefits/subsidio-cotizaciones-insuficientes.md",
+      "sha256": "443635b2d77cde8d04b08352aba287bb3236d41695a455f5a5a6ead6f5adde7b"
+    },
+    "subsidio-emigrantes-retornados": {
+      "path": "src/content/benefits/subsidio-emigrantes-retornados.md",
+      "sha256": "4f66b74275c496b926628e2f39681539aa9cfe246f935471b25c54455b3bcc0d"
+    },
+    "subsidio-mayores-52": {
+      "path": "src/content/benefits/subsidio-mayores-52.md",
+      "sha256": "b08afde2a1f720362cd34e60b1333001c91650535890fd980a6bbda1bd8fc963"
+    }
+  },
+  "importedAt": "2026-09-27T21:24:00+02:00",
+  "repoUrl": "https://github.com/Huntsman1756/mapa-de-beneficios.git"
+}

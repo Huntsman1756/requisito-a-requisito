@@ -1,0 +1,55 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026-2027 cerrada: el plazo fue de 15 días hábiles desde la publicación del extracto en el BOCM. Convocatoria anual.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas de Bachillerato en centros privados (Madrid)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Documentación de renta familiar",
+    "Matrícula o reserva de plaza"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [
+      "general"
+    ],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "bajo",
+      "medio"
+    ],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": true
+  },
+  "estimatedValueText": "3.750 €/año (renta ≤10.000 €) o 2.000 €/año (renta >10.000 €), en 10 mensualidades.",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades",
+  "officialSourceLabel": "BOCM — Extracto de la convocatoria de becas de Bachillerato 2026-2027",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260504-52",
+  "referencePeriod": "Convocatoria 2026-2027 (cerrada)",
+  "requirementsText": "Estar matriculado o con reserva de plaza para el curso completo 2026-2027 en Bachillerato del sistema educativo español en un centro privado autorizado de la Comunidad de Madrid. No superar el límite de renta per cápita familiar de 35.913 € (renta del ejercicio 2024). Mantener los requisitos durante todo el curso.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "madrid-becas-bachillerato-centros-privados",
+  "status": "active",
+  "summary": "Becas de la Comunidad de Madrid para estudiar Bachillerato en centros privados autorizados durante el curso 2026-2027, con cuantías de hasta 3.750 € anuales según la renta familiar.",
+  "targetGroups": [
+    "estudiantes de bachillerato",
+    "familias con renta baja"
+  ],
+  "title": "Becas de Bachillerato 2026-2027 en centros privados de la Comunidad de Madrid",
+  "type": "scholarship",
+  "whyItMatters": "Cubre una parte sustancial de la escolaridad de Bachillerato en centros privados autorizados para familias con renta limitada."
+}

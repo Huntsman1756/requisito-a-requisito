@@ -1,0 +1,38 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "20 días hábiles contados a partir del día siguiente a la publicación del extracto en el BOE",
+  "category": "subvencion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Cuantía máxima por beneficiario: 500.000 euros por solicitud (presupuesto total estimado de la convocatoria: 9.818.671,98 euros).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Fondo Español de Garantía Agraria, O. A. (FEGA)",
+  "officialSourceLabel": "BOE-B-2026-11742",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-11742",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser entidad establecida en el artículo 3 del Real Decreto 251/2024, de 12 de marzo, y cumplir los requisitos y condicionantes establecidos en el artículo 4 del citado real decreto.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-11742",
+  "status": "active",
+  "summary": "Subvenciones destinadas a entidades del sector agroalimentario y forestal para actividades de intercambio de conocimientos, formación e información de ámbito supraautonómico, enmarcadas en la estrategia de digitalización.",
+  "targetGroups": [
+    "entidades del sector agroalimentario",
+    "entidades del sector forestal"
+  ],
+  "title": "Convocatoria anticipada de subvenciones de intercambio de conocimientos y formación sector agroalimentario",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto de la Resolución de 14 de abril de 2026, del Fondo Español de Garantía Agraria, O. A. (FEGA) por la que se convocan anticipadamente, las subvenciones de intercambio de conocimientos y activid. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

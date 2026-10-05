@@ -1,0 +1,45 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "15 días naturales a partir del día siguiente de la publicación en el BOCM",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "documentación exigida por la ordenanza municipal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "mayor"
+    ],
+    "dependency": null,
+    "disability": true,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: 23.651,00 euros (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Ayuntamiento de Alcobendas",
+  "officialSourceLabel": "BOCM:BOCM-20260421-34",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260421-34",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser asociación o entidad sin ánimo de lucro inscrita en el Registro de Asociaciones, Fundaciones y entidades análogas del Ayuntamiento de Alcobendas, con fin social y proyectos en ámbito de Protección Social y Mayores.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "municipal",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260421-34",
+  "status": "active",
+  "summary": "Subvenciones para asociaciones y entidades sin ánimo de lucro que desarrollen proyectos de atención a personas con discapacidad y mayores en el municipio de Alcobendas.",
+  "targetGroups": [
+    "asociaciones",
+    "entidades sin ánimo de lucro"
+  ],
+  "title": "Convocatoria subvenciones protección social y mayores 2026 - Alcobendas",
+  "type": "aid_or_benefit",
+  "whyItMatters": "– Alcobendas. Régimen económico. Extracto convocatoria subvenciones – Alcobendas. Régimen económico. Extracto convocatoria subvenciones. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

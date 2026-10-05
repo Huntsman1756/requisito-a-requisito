@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "45 días hábiles a contar desde la publicación de la convocatoria",
+  "category": "vivienda",
+  "documentsNeeded": [
+    "solicitud en el modelo facilitado",
+    "documentación acreditativa de requisitos"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "80.000.000 € (dotación total de la convocatoria 2025, no cuantía por beneficiario)",
+  "lastReviewedAt": "2026-09-19",
+  "managingBody": "Ministerio de Vivienda y Agenda Urbana",
+  "officialSourceLabel": "BOE-B-2025-46003",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-46003",
+  "referencePeriod": "2025",
+  "requirementsText": "Ser persona o entidad, pública o privada sin ánimo de lucro, que cumpla los requisitos del artículo 3 de las bases reguladoras (Orden FOM/1932/2014, vigente para esta convocatoria 2025; sustituida por la Orden VAU/403/2026 para convocatorias posteriores).",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2025-46003",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para financiar trabajos de conservación o enriquecimiento de bienes inmuebles del Patrimonio Histórico Español, dirigida a personas o entidades públicas o privadas sin ánimo de lucro.",
+  "targetGroups": [
+    "entidades públicas",
+    "entidades privadas sin ánimo de lucro"
+  ],
+  "title": "Ayudas para conservación o enriquecimiento de bienes inmuebles del Patrimonio Histórico Español (Programa 2% Cultural)",
+  "type": "housing_support",
+  "whyItMatters": "Extracto de la Orden de 9 de diciembre de 2025 del Ministerio de Vivienda y Agenda Urbana, el Ministerio de Transportes y Movilidad Sostenible y el Ministerio de Cultura, por la que se convocan ayudas. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

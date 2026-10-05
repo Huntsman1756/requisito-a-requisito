@@ -1,0 +1,37 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Un mes a partir del día siguiente de la publicación del extracto en el BOE",
+  "category": "empleo",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": null
+  },
+  "estimatedValueText": "Importe total de 500.000 euros; importe máximo por ayuda de 120.000 euros",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Instituto de la Cinematografía y de las Artes Audiovisuales",
+  "officialSourceLabel": "BOE-B-2026-13099",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13099",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser agencia de ventas internacionales independiente, haber suscrito al menos un contrato con distribuidor extranjero para estreno en salas o VOD, haber adquirido los derechos de explotación antes de la publicación de la resolución y realizar actividades de promoción entre el 1 de septiembre de 2025 y la fecha de publicación.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-13099",
+  "status": "active",
+  "summary": "Convocatoria de ayudas para agencias de ventas internacionales independientes que incentiven la distribución de películas españolas en el extranjero.",
+  "targetGroups": [
+    "agencias de ventas internacionales independientes"
+  ],
+  "title": "Ayudas a la distribución internacional de películas cinematográficas españolas 2026",
+  "type": "employment_support",
+  "whyItMatters": "Extracto de la Resolución de 16 de abril de 2026, del Organismo Autónomo Instituto de la Cinematografía y de las Artes Audiovisuales, por la que se convocan ayudas a la distribución internacional de p. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

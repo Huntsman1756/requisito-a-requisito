@@ -1,0 +1,46 @@
+{
+  "applicationStatus": "open",
+  "applicationWindow": "Desde el día siguiente a la publicación del extracto en el BOCM hasta el 30 de septiembre de 2026.",
+  "category": "subvencion",
+  "documentsNeeded": [
+    "solicitud de subvención",
+    "justificación de gastos",
+    "documentación acreditativa de la actividad económica"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "autonomo"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [
+      "madrid"
+    ],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Presupuesto máximo de 200.000,00 euros para la línea 5; máximo 20.000,00 euros por línea y 30.000,00 euros por empresa y convocatoria.",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Consejería de Economía, Hacienda y Empleo de la Comunidad de Madrid",
+  "officialSourceLabel": "BOCM:BOCM-20260618-20",
+  "officialSourceUrl": "https://www.bocm.es/bocm-20260618-20",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser persona física o jurídica con actividad económica en la Comunidad de Madrid y realizar los gastos en centros de trabajo situados en dicha comunidad. Los autónomos pueden solicitarla con o sin trabajadores por cuenta ajena.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "regional",
+  "scopeRegion": "madrid",
+  "slug": "bocm_bocm-20260618-20",
+  "status": "active",
+  "summary": "Convocatoria de subvenciones para empresas y autónomos con actividad en la Comunidad de Madrid para financiar gastos de investigación, desarrollo e innovación en prevención de riesgos laborales.",
+  "targetGroups": [
+    "empresas",
+    "autónomos"
+  ],
+  "title": "Subvenciones para I+D+i en prevención de riesgos laborales 2026",
+  "type": "aid_or_benefit",
+  "whyItMatters": "Extracto convocatoria subvenciones – Extracto de la Orden de 1 de junio de 2026, de la Consejería de Economía, Hacienda y Empleo, por la que se convocan para 2026 las subvenciones dirigidas a la reduc. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

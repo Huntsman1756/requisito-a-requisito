@@ -1,0 +1,43 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Hasta las 14:00 horas del 24 de abril de 2026",
+  "category": "educacion",
+  "documentsNeeded": [],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "Premios de hasta 8.000 euros (Modalidad A, Tragedia) y 6.000 euros (Modalidad A, Comedia), 4.000 euros (Modalidad B).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Secretaría de Estado de Educación",
+  "officialSourceLabel": "BOE-B-2026-4030",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-4030",
+  "referencePeriod": "2026",
+  "requirementsText": "Participan grupos de teatro con alumnado de centros públicos y privados. Modalidad A: alumnos de ESO, Bachillerato o FP. Modalidad B: únicamente alumnos de ESO. La participación puede ser a través del centro docente o entidades sin fines de lucro.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-4030",
+  "status": "active",
+  "summary": "Convocatoria de premios para grupos de teatro escolar que representen obras clásicas grecolatinas, dirigida a alumnos de Educación Secundaria y Bachillerato de centros públicos y privados.",
+  "targetGroups": [
+    "grupos de teatro escolar",
+    "alumnos de Educación Secundaria",
+    "alumnos de Bachillerato",
+    "alumnos de Formación Profesional",
+    "centros educativos públicos",
+    "centros educativos privados",
+    "entidades sin fines de lucro"
+  ],
+  "title": "XIX Concurso Nacional de Teatro Clásico Grecolatino en enseñanzas no universitarias 2025-2026",
+  "type": "education_support",
+  "whyItMatters": "Extracto de la Resolución de 5 de febrero de 2026 de la Secretaría de Estado de Educación por la que se convoca el XIX Concurso Nacional de Teatro Clásico Grecolatino en las enseñanzas no universitari. Ver detalle en la fuente oficial para requisitos y plazos completos."
+}

@@ -1,0 +1,52 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Convocatoria 2026 cerrada: el plazo fue de un mes desde la publicación en el BOE.",
+  "availability": {
+    "status": "desconocida"
+  },
+  "category": "beca",
+  "displayTitle": "Becas JAE Intro ICU del CSIC (4.200 €)",
+  "documentsNeeded": [
+    "Solicitud dentro del plazo",
+    "Expediente académico y documentación acreditativa"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [
+      "joven",
+      "adulto"
+    ],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [
+      "investigador",
+      "general"
+    ],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [
+      "general"
+    ],
+    "residencyRegion": [],
+    "studentStatus": true
+  },
+  "estimatedValueText": "4.200 € por beca (7 mensualidades de 600 €).",
+  "lastReviewedAt": "2026-09-20",
+  "managingBody": "Consejo Superior de Investigaciones Científicas (CSIC)",
+  "officialSourceLabel": "BOE — Convocatoria de becas JAE Intro ICU del CSIC 2026",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7478",
+  "referencePeriod": "Convocatoria 2026 (cerrada)",
+  "requirementsText": "Mayores de edad con nacionalidad española o de un Estado de la UE/EEE, sin título de doctor y sin haber disfrutado una beca JAE anterior, según las bases de la convocatoria JAE Intro ICU del CSIC.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "becas-jae-intro-icu-csic-2026",
+  "status": "active",
+  "summary": "Becas de introducción a la investigación del CSIC (programa JAE Intro ICU): 4.200 € por beca en siete mensualidades de 600 €, para mayores de edad con nacionalidad española o de la UE/EEE sin doctorado.",
+  "targetGroups": [
+    "estudiantes y titulados que inician su carrera investigadora"
+  ],
+  "title": "Becas JAE Intro ICU del CSIC 2026",
+  "type": "scholarship",
+  "whyItMatters": "Puerta de entrada remunerada a la carrera investigadora en el CSIC."
+}

@@ -1,0 +1,41 @@
+{
+  "applicationStatus": "closed",
+  "applicationWindow": "Del 18 de junio de 2026 al 23 de julio de 2026, a las 12:00 horas",
+  "category": "ayuda",
+  "documentsNeeded": [
+    "Comunicado de aprobación o selección del proyecto emitido por el órgano de gobierno internacional",
+    "Documentación que acredite la constitución y personalidad jurídica",
+    "Documentación que acredite el domicilio fiscal"
+  ],
+  "eligibilityFactors": {
+    "ageGroup": [],
+    "dependency": null,
+    "disability": null,
+    "employmentStatus": [],
+    "familyType": [],
+    "hasChildren": null,
+    "housingStatus": [],
+    "incomeBandHint": [],
+    "residencyRegion": [],
+    "studentStatus": false
+  },
+  "estimatedValueText": "Dotación total de la convocatoria: Cuantía total máxima de cinco millones de euros (5.000.000 euros) (no es cuantía por beneficiario).",
+  "lastReviewedAt": "2026-09-18",
+  "managingBody": "Dirección General del Centro para el Desarrollo Tecnológico y la Innovación, E.P.E.",
+  "officialSourceLabel": "BOE-B-2026-20473",
+  "officialSourceUrl": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-20473",
+  "referencePeriod": "2026",
+  "requirementsText": "Ser empresa válidamente constituida con personalidad jurídica propia y domicilio fiscal en España (o UE con sucursal en España). Haber desarrollado los proyectos de I+D en España y haber resultado seleccionados en la convocatoria internacional del Programa Estratégico Corea España, obteniendo el comunicado de aprobación previo.",
+  "reviewStatus": "revisada",
+  "scopeLevel": "state",
+  "scopeRegion": null,
+  "slug": "boe-b-2026-20473",
+  "status": "active",
+  "summary": "Ayudas para financiar proyectos de I+D seleccionados en la convocatoria internacional del Programa Estratégico Corea España, dirigidas a empresas con domicilio fiscal en España.",
+  "targetGroups": [
+    "empresas"
+  ],
+  "title": "Procedimiento de concesión directa de ayudas I+D Programa Corea España 2026",
+  "type": "general_benefit",
+  "whyItMatters": "Extracto de la Resolución de 11 de junio de 2026 de la Dirección General del Centro para el Desarrollo Tecnológico y la Innovación, E.P.E., por la que se aprueba el procedimiento de concesión directa . Ver detalle en la fuente oficial para requisitos y plazos completos."
+}
