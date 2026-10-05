@@ -188,3 +188,62 @@ Consecuencias: memoria con el esqueleto A (docs/05); nueva fase **F8 Piloto real
 para conseguir evidencia de impacto honesta; la demo desplegada y el repo público
 pasan de Should a **Must** (sin ellos no hay piloto); suben de prioridad D-3, D-4
 y D-6.
+
+## ADR-029 — Nombre: «Requisito a Requisito»
+2026-10-05 · aceptada (Daniel) · Lema: «Ayudas públicas en la Comunidad de Madrid,
+comprobadas con la fuente oficial». No se usa el nombre ni el logotipo de la
+Comunidad de Madrid como marca. Repo GitHub: `requisito-a-requisito`.
+
+## ADR-030 — Piloto desplegado en GitHub Pages; dominio propio después
+2026-10-05 · aceptada (autonomía delegada por Daniel) · Sustituye la opción VPS de
+docs/11 para el piloto. Motivos: export estático, cero coste, no toca el VPS de
+edubecas.es, despliegue y rollback por Actions, y es coherente con el repo público
+(ADR-025). URL: `https://huntsman1756.github.io/requisito-a-requisito/`
+(`basePath` en next.config). Si el proyecto sale bien, Daniel compra un dominio y
+se configura como custom domain de Pages. Limitación aceptada: Pages no permite
+cabeceras HTTP propias ⇒ CSP mediante `<meta http-equiv>` (sin `frame-ancestors`);
+HTTPS lo pone Pages.
+
+## ADR-031 — Job diario de frescura hasta el 05/11/2026
+2026-10-05 · aceptada · GitHub Actions diario: revalida las fuentes citadas, marca
+como `stale` las reglas cuya cita ya no aparece, descubre convocatorias nuevas de
+la CM como **pistas** (issues, sin publicar), recompila y despliega solo si pasan
+los gates (fail-closed). Detalle: phases/F9. Los plazos los calcula el navegador
+cada día.
+
+## ADR-032 — Sin contador de uso (D-7)
+2026-10-05 · aceptada (autonomía) · GitHub Pages no tiene backend y cualquier
+contador implicaría un tercero o un servidor. Se mantiene la privacidad estricta.
+El impacto del piloto se mide con sesiones observadas, testimonios con permiso y
+respuestas de entidades (phases/F8). Se puede reconsiderar con dominio propio.
+
+## ADR-033 — Cobertura de tests (D-8)
+2026-10-05 · aceptada (autonomía) · Se autoriza `@vitest/coverage-v8` como
+devDependency con la versión alineada con vitest. Puerta F2: ≥ 95 % de líneas y
+ramas en `src/lib/eligibility-engine/`.
+
+## ADR-034 — Gate G11: requisitos, umbrales e importes solo de fuentes de rango 1–2
+2026-10-05 · aceptada · Detectado en el lote 1: el descuento de Renfe y el subsidio
+de mayores de 52 citaban webs de rango 3 (renfe.com, sepe.es) para requisitos e
+importes. Nuevo gate fail-closed: la `citation` de todo `requirement`, `amount`,
+umbral y `referenceDate` debe apuntar a una fuente de **rango 1 o 2**. El rango 3
+solo vale para `channel`, `documents`, `officialSimulator` y el estado operativo
+del plazo. Test negativo obligatorio.
+
+## ADR-035 — Vigencia normativa: modificaciones y disposiciones transitorias
+2026-10-05 · aceptada · Antes de citar un importe o un porcentaje de una norma
+modificada con frecuencia (p. ej. el bono social eléctrico, RD 897/2017), se
+revisa en el BOE la sección «Análisis → Posteriores» de la norma y las
+disposiciones de los reales decretos-ley que fijen valores **temporales** vigentes
+a `referenceDate`. Si no se puede determinar con certeza el valor vigente ⇒
+`amount` sin cifra (variable) + ⚠, y nunca un número dudoso. Los avisos de
+discrepancia al donante (la-ayuda) solo se registran tras esta comprobación.
+
+## ADR-036 — Autonomía delegada (2026-10-05)
+2026-10-05 · aceptada (Daniel: «tienes total autonomía para decidir cómo realizar
+todo el proyecto») · Quedan cerradas por delegación D-3 (despliegue en Pages),
+D-4 (repo público `requisito-a-requisito` y push), D-6 (nombre; dominio después),
+D-7 y D-8. **Siguen reservados a Daniel:** revisión de los lotes de reglas y de
+las personas golden (G10; formato ligero), contactos y sesiones del piloto,
+revisión final de la memoria, firma y presentación, y cualquier gasto (dominio).
+Los agentes no envían correos ni contactan con terceros en nombre de Daniel.

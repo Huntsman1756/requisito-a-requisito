@@ -9,7 +9,7 @@ Es un **proyecto nuevo e independiente**, hecho para este concurso. Reutiliza
 código y datos de proyectos propios estatales (la-ayuda, EduAyudas) **sin
 modificarlos**: son donantes de solo lectura (docs/13).
 
-Producto (nombre provisional, D-6): **Ayudas Madrid · con fuente**. Orientador que, a partir de
+Producto: **Requisito a Requisito** (ADR-029) — *Ayudas públicas en la Comunidad de Madrid, comprobadas con la fuente oficial*. Orientador que, a partir de
 ≤ 10 preguntas, dice qué ayudas públicas merece la pena comprobar, qué requisitos
 cumples, cuáles no y cuáles no se pueden saber, **qué te falta**, plazo,
 documentos y dónde solicitar, con cada afirmación enlazada a la fuente oficial.

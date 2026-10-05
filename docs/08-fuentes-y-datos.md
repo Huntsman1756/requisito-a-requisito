@@ -13,6 +13,8 @@ fuente con rango. **Rango menor = más autoridad.**
 | 4 | Portal informativo oficial | `comunidad.madrid`, `*.gob.es` (páginas informativas) | Solo contexto y texto divulgativo; nunca umbrales |
 | — | **Prohibido** | prensa, blogs, agregadores, foros, otros catálogos, salidas de modelos | Nunca |
 
+**Gate G11 (ADR-034):** requisitos, umbrales, importes y fechas de referencia solo se citan de fuentes de **rango 1–2**. El rango 3 sirve para canal, documentos, simulador oficial y estado operativo del plazo. **Vigencia (ADR-035):** antes de citar un valor de una norma modificada a menudo, revisar «Análisis → Posteriores» en el BOE y las disposiciones temporales vigentes.
+
 **Conflictos:** gana el rango menor. Si dos fuentes del **mismo** rango
 contradicen un dato material ⇒ el dato queda `UNKNOWN`, el requisito o plazo se
 marca `conflict`, el gate de build lo reporta y la UI dice «las fuentes oficiales

@@ -1,8 +1,7 @@
 # Estrategia
 
 > **Actualización 2026-10-05 (ADR-022, ADR-026), que prevalece sobre lo de abajo:**
-> se presenta un **proyecto nuevo e independiente**, *Ayudas Madrid · con fuente*
-> (nombre provisional), **solo para la Comunidad de Madrid** y hecho para este
+> se presenta un **proyecto nuevo e independiente**, **Requisito a Requisito**, **solo para la Comunidad de Madrid** y hecho para este
 > concurso. Reutiliza código y datos de la-ayuda y EduAyudas **sin modificarlos**
 > (docs/13). Candidato: Daniel, **persona física**. Las secciones «Qué se presenta
 > (plan A)» y «Riesgo principal» de abajo describían la opción anterior

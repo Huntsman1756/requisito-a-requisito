@@ -24,6 +24,9 @@ F2 para datos reales (los wireframes no) · **Responsable:** agente; **revisión
 | F4-15 | Ficha de ayuda (`/ayudas/[slug]`) para nivel 1 y nivel 2, con fuente, fecha y procedencia (incluido «importada de la-ayuda@<commit>» en el pie técnico) |
 | F4-12 | Datos abiertos: publicar RuleSets, parámetros y catálogo en `/datos/elegibilidad/` con licencia y manifiesto |
 
+## Bucle de calidad visual (obligatorio, porque el front es clave)
+Tras cada pantalla: capturas en 375 y 1366 px (claro y oscuro) en `evidence/<fecha>-F4/capturas/` y autorrevisión contra la lista de docs/09: jerarquía de la tarjeta (§4), microcopy (§5, palabras prohibidas), estados (§3), anti-patrones de `DESIGN.md` §6 (nada de tarjetas dentro de tarjetas, mosaicos ni look de «dashboard IA») y accesibilidad (§7). Antes de cerrar F4, **una revisión independiente**: un subagente sin contexto previo recibe solo las capturas y docs/09, y devuelve los problemas por gravedad. Se corrigen los graves. Daniel ve las capturas (F4-W) sin bloquear.
+
 ## Pruebas a escribir
 - Por componente: render de **cada estado** de la tabla de docs/09 §3.
 - E2E (en `desktop-chromium` y `mobile-ios` durante la fase; la matriz completa en F5):

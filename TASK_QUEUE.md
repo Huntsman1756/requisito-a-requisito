@@ -1,6 +1,6 @@
 # Cola de tareas
 
-**Categoría: Global Tech Impact (ADR-028).** **Fase activa: F3** — F0/F1/F2 cerradas el 2026-10-05. Próximo: F3 lotes (reglas Madrid citadas) → F3-R/G/M; después F4.
+**Producto: Requisito a Requisito (ADR-029). Categoría: Global Tech Impact (ADR-028).** **Fase activa: F3** — orden decidido el 2026-10-05: **F3-FIX → F6-0 → F4 → F3 lote 2 + golden → F9 → F8/F5 → F7** — F0/F1/F2 cerradas el 2026-10-05. Próximo: F3 lotes (reglas Madrid citadas) → F3-R/G/M; después F4.
 Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit · evidencia)` · `BLOQUEADO: motivo — quién`.
 
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
@@ -13,28 +13,31 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F0-7 | **Andamiaje del proyecto en este repo** (phases/F0 F0-7) | agente | 06/10 | — | HECHO (2026-10-05 · feat(f0-7)) | check/lint/test/build PASS + e2e smoke 1/1 |
 | F0-8 | **Portar `6595a533`** (Zod) del worktree de la-ayuda | agente | 06/10 | F0-7 | HECHO (2026-10-05 · feat(f0-8)) | 36 tests schema en verde; worktree conservado |
 | F0-9 | **Importar el catálogo** de la-ayuda con procedencia (docs/13 §2) | agente | 06/10 | F0-7 | HECHO (2026-10-05 · feat(f0-9)) | 244 (57 Madrid + 187 estatales) + 332 pistas; determinismo test OK |
-| D-6 | Nombre del producto (provisional «Ayudas Madrid · con fuente») y dominio/subdominio de la demo | **Daniel** | 08/10 | — | TODO | Necesario para F4-1 y F6 |
+| D-6 | Nombre | Daniel | — | — | HECHO (ADR-029) | **Requisito a Requisito**; dominio propio después |
 | F0-6 | Navegadores de Playwright en la caché de F: | agente | 06/10 | F0-4 | HECHO (2026-10-05 · baseline.json) | chromium-1228, firefox-1532, webkit-2311 ya en F:\Caches\ms-playwright |
 | F0-3b | Search Console de edubecas.es aportado por Daniel | agente | 05/10 | — | HECHO (2026-10-05 · evidence/2026-10-05-F0/impacto/edubecas-search-console-resumen.json) | 1 clic / 1.128 impresiones en 75 días (posición ~71). **No es tracción: no se cita como impacto** |
 | F0-5b | **Inventario de candidatas al nivel 1, ámbito Comunidad de Madrid (ADR-021)**, sobre el catálogo importado en F0-9 + pistas BOCM | agente | 06/10 | F0-4 | HECHO (2026-10-05 · evidence/2026-10-05-F0/vertical/candidatas-madrid.json) | 24 candidatas en plazo/rolling; 12 priorizadas nivel 1 ≥ 8 ✓ |
 | D-1 | Vehículo | **Daniel** | — | — | HECHO (2026-10-05 · ADR-022) | Proyecto nuevo, solo Madrid; la-ayuda y EduAyudas como donantes de solo lectura |
-| D-4 | **Crear el repo GitHub público** de este proyecto (ADR-025) y autorizar el push. Al ser nuevo, no hay historial heredado que auditar; el agente comprueba que no haya secretos antes del primer push | **Daniel** (decisión) + agente (escaneo) | 08/10 | — | TODO | Sin esto, el ecosistema queda en promesa |
+| D-4 | Repo público | Claude (delegado) | — | — | HECHO (ADR-025/030/036) | `requisito-a-requisito`, público; lo crea el agente con `gh` tras comprobar que no hay secretos |
 | D-5 | Categoría | **Daniel** | — | — | HECHO (ADR-028) | **Global Tech Impact**: confirmada la admisión de persona física por la Subdirección (`evidence/2026-10-05-consulta/`) |
 | F1-1..8 | Zod, registro de dominios, snapshot, validate (G1–G10), build, parámetros, INE y catálogo de preguntas | agente | 07/10 | F0-4 | HECHO (2026-10-05 · commits be24d10…61002d0) | registry, snapshot+normalize, G1–G10 con negativos, build con digest, IPREM/SMI BOE, INE 2026 (19 CCAA/52 prov/8132 mun), preguntas ≤10 visibles. 101 tests |
 | F2-1..15 | Motor: intervalos, Kleene, operadores, territorio, parámetros, derivados, veredicto + oráculo, «qué te falta», plazo, esfuerzo, invariantes, explicaciones, exhaustivo y rendimiento | agente | 08/10 | F1-1 | HECHO (2026-10-05 · commits 9f3a43c, 7521a82, 2849e17) | Motor puro completo; 151 tests; exhaustivo 0 violaciones en 3 fixtures; pureza verificada; microbench 25 evals <5ms. Pendiente: exhaustivo sobre reglas reales (F3) |
+| F3-FIX | **Correcciones de rigor del lote 1 antes de la revisión de Daniel:** (a) gate G11 (ADR-034) con test negativo; (b) descuento Renfe FN → citar la Ley 40/2003 y su reglamento (BOE, rango 1) para requisito e importe, con renfe.com solo como canal; (c) subsidio mayores de 52 → citar el artículo vigente de la LGSS (BOE consolidado) para requisitos e importe, con sepe.es solo como canal; (d) Bono Cultural Joven → modelar «cumplir 18 años en 2026» con año de nacimiento (pregunta o derivado de mes/año); con la edad sola, 18 años ⇒ U, nunca T; golden del nacido en nov-2007 ⇒ no `probable`; (e) bono social eléctrico → ADR-035: revisar «Posteriores» en el BOE y las disposiciones de RDL vigentes a octubre de 2026; si hay duda, importe variable + ⚠; revisar también si FN y renta deben ser vías alternativas (`any`) hard en lugar de soft; (f) regenerar `lote-1.md` | agente | 06/10 | — | TODO | **Bloquea F3-R lote 1** |
+| F6-0 | **Walking skeleton público:** aplicar el nombre (ADR-029); comprobar que no hay secretos; `gh repo create Huntsman1756/requisito-a-requisito --public`; `basePath`; workflow de Pages (build con `validate:full` → deploy); CSP por meta; banner «Versión piloto»; URL funcionando con la entrada + «Cómo funciona» + lote 1 visible | agente | 07/10 | F3-FIX | TODO | ADR-030 |
+| F9 | **Job diario de frescura** (phases/F9) | agente | 11/10 | F6-0 | TODO | Debe funcionar solo hasta el 05/11 |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | EN CURSO (2026-10-05 · lote 1: 6/6 ayudas, 0 errores, 20 tests frontera, 340 perfiles exhaustivos 0 violaciones) | evidence/2026-10-05-F3/lote-1.md **pendiente revisión Daniel (G10)** |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
 | F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |
 | F3-M | Mutación: 0 supervivientes | agente | 10/10 | F3-G | TODO | |
 | F4-1..12 | Diseño y frontend | agente | 11/10 | F2 | TODO | |
-| F4-W | Aprobación de wireframes | **Daniel** | 08/10 | F4-2 | TODO | |
+| F4-W | Vistazo a las capturas de diseño (no bloqueante: el agente sigue; Daniel puede pedir cambios) | **Daniel** | 09/10 | F4-2 | TODO | |
 | F5-1..11 | QA transversal (10 proyectos, a11y, visual, rendimiento, privacidad, full) | agente | 12/10 | F4 | TODO | |
 | F5-M | Checklist manual en dispositivos reales | **Daniel** | 12/10 | F5-2 | TODO | |
-| D-3 | Demo: **despliegue autorizado** (Must por el piloto) | **Daniel** | **08/10** | — | TODO | |
+| D-3 | Demo desplegada | Claude (delegado) | — | — | HECHO (ADR-030) | GitHub Pages; dominio propio más adelante |
 | F6-1..5 | Vídeo, capturas, (demo), comprobaciones posteriores | agente | 13/10 | F5 | TODO | |
 | D-2 | Categoría definitiva | **Daniel** | — | — | HECHO (ADR-028) | Impact |
-| D-7 | ¿Contador anónimo de uso (sin perfil) en la demo para medir el piloto? Si no, el impacto se mide solo con sesiones y testimonios | **Daniel** | 08/10 | — | TODO | Ver phases/F8 §evidencia 4 |
-| D-8 | ¿Autorizar la dependencia de desarrollo `@vitest/coverage-v8` (misma versión que vitest) para medir la cobertura del motor (puerta F2 ≥ 95 %)? | **Daniel** | 07/10 | — | TODO | Alternativa: informe de ramas por tabla (ya cubierto por exhaustivo y oráculo) |
+| D-7 | Contador de uso | Claude (delegado) | — | — | HECHO (ADR-032) | No; impacto por sesiones y testimonios |
+| D-8 | Cobertura | Claude (delegado) | — | — | HECHO (ADR-033) | `@vitest/coverage-v8` autorizado |
 | F8-1..6 | **Piloto real** (phases/F8): demo piloto, kit de sesión, 3–10 sesiones, testimonios con permiso, consolidación | agente + **Daniel** | 13/10 | F3 lote 1, F4 mínimo, D-3/D-4/D-6 | TODO | Clave para el 50 % de impacto |
 | F7-1..8 | Evidencia, memoria, veracidad y paquete | agente | 14/10 | F0-3 … F6 | TODO | |
 | P-1 | Firmar y presentar en la sede | **Daniel** | 15/10 | F7 | TODO | Límite absoluto 16/10 |

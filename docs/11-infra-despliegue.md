@@ -40,6 +40,8 @@ telemetría** y la memoria explica cómo se medirá.
 
 ## 2. Infraestructura de servido
 
+> **Decisión vigente (ADR-030): piloto en GitHub Pages** (`https://huntsman1756.github.io/requisito-a-requisito/`), con deploy por GitHub Actions solo si `validate:full` pasa y rollback volviendo a desplegar el commit anterior. CSP por `<meta>`. La opción VPS de abajo queda para cuando haya un dominio propio. Job diario de frescura: phases/F9.
+
 Al ser un proyecto independiente, **la demo no depende del estado de la-ayuda**
 (ADR-022/025). Daniel ya opera un VPS (el de edubecas.es).
 

@@ -14,6 +14,7 @@ abre **solo** el fichero de la fase activa.
 | F5 QA transversal | `phases/F5-qa-transversal.md` | 10–12/10 | F4 | **Daniel: checklist manual** |
 | F6 Infraestructura y demo | `phases/F6-infra-demo.md` | 11–13/10 | F5 | **Daniel: D-3 y autorización de despliegue** |
 | F8 Piloto real (evidencia de impacto) | `phases/F8-piloto-impacto.md` | 10–14/10 | F3 lote 1, F4 mínimo, demo | **Daniel: contactos y sesiones** |
+| F9 Frescura continua (job diario) | `phases/F9-frescura-continua.md` | 10–11/10 y en marcha hasta el 05/11 | F6-0 | — |
 | F7 Impacto, memoria y entrega | `phases/F7-impacto-memoria-entrega.md` | 06–14/10 | F0-3; cifras de F3–F6 | **Daniel: memoria, D-2, firma y presentación** |
 
 ```
