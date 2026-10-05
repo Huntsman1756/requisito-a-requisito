@@ -296,3 +296,13 @@ copiar código.
 día, tiene licencia MIT/ISC/BSD/Apache-2.0, está mantenida, pesa ≤ 30 KB gzip en
 cliente, no tiene telemetría ni llamadas de red y se registra en un ADR. Nunca
 código AGPL/GPL copiado. (docs/15 §3)
+
+## ADR-043 — Dirección de arte propia (sustituye al aspecto de la-ayuda)
+2026-10-05 · aceptada (Daniel pidió un front menos genérico; diseño de Claude) ·
+Concepto «el expediente que se comprueba solo»: casillas de formulario oficial,
+citas en mono, sello de verificación como único gesto audaz, colores por
+administración competente, Atkinson Hyperlegible Next + IBM Plex. Sin rejillas de
+tarjetas, sin fotos de stock; las imágenes son miniaturas de los documentos
+oficiales citados. Fuente de verdad visual: `design/prototipo/requisito-a-requisito.html`.
+Especificación: docs/16. Se conserva de la-ayuda solo la estructura técnica de los
+tokens. Lucide (ISC) se admite si hace falta (ADR-042).

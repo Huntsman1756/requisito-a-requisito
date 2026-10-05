@@ -1,0 +1,418 @@
+<title>Requisito a Requisito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Concepto: el expediente que se comprueba solo. Cada requisito es una casilla de formulario oficial con su
+   número, su marca y su cita; el sello de verificación es el único gesto audaz. Sin rejillas de tarjetas. */
+:root{
+  --paper:#EEF2F5;      /* papel de formulario, frío */
+  --sheet:#FFFFFF;      /* hoja */
+  --ink:#14202F;        /* tinta */
+  --ink-2:#4A5668;      /* tinta secundaria */
+  --rule:#CDD5DE;       /* líneas de casilla */
+  --tint:#E3E9F4;       /* fondo de casilla activa */
+  --seal:#2337A0;       /* tinta de sello: el acento */
+  --seal-soft:#DCE2F6;
+  --ok:#1D7448;  --ok-soft:#DDEFE4;     /* cumples */
+  --doubt:#9A6200; --doubt-soft:#F6EAD2; /* falta un dato */
+  --no:#A93A2C;  --no-soft:#F5E0DC;     /* no cumples */
+  --na:#56627A;  --na-soft:#E4E8EF;     /* no comprobable aquí */
+  --lvl-estado:#2337A0; --lvl-cm:#7A2E5E; --lvl-ayto:#16685F;
+  --f-display:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,sans-serif;
+  --f-label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --shell:72rem; --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E141C; --sheet:#151D28; --ink:#E6ECF3; --ink-2:#A6B2C2; --rule:#2B3747; --tint:#1C2636;
+  --seal:#8EA0FF; --seal-soft:#1E2850; --ok:#6FCF97; --ok-soft:#14301F; --doubt:#E8B04B; --doubt-soft:#33270F;
+  --no:#F08A7C; --no-soft:#3A1915; --na:#A3AFC2; --na-soft:#202938;
+  --lvl-estado:#8EA0FF; --lvl-cm:#E39AC6; --lvl-ayto:#6FD0C2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E141C; --sheet:#151D28; --ink:#E6ECF3; --ink-2:#A6B2C2; --rule:#2B3747; --tint:#1C2636;
+  --seal:#8EA0FF; --seal-soft:#1E2850; --ok:#6FCF97; --ok-soft:#14301F; --doubt:#E8B04B; --doubt-soft:#33270F;
+  --no:#F08A7C; --no-soft:#3A1915; --na:#A3AFC2; --na-soft:#202938;
+  --lvl-estado:#8EA0FF; --lvl-cm:#E39AC6; --lvl-ayto:#6FD0C2; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.55 var(--f-body);padding-inline:16px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--seal);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--seal);outline-offset:2px;border-radius:2px}
+.shell{max-width:var(--shell);margin-inline:auto}
+.label{font:600 .78rem/1.2 var(--f-label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.mono{font-family:var(--f-mono);font-size:.82rem}
+.note{font-size:.9rem;color:var(--ink-2)}
+
+/* ---------- barra superior ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.top .shell{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink)}
+.brand b{font:800 1.12rem/1 var(--f-display);letter-spacing:-.01em;white-space:nowrap}
+.mark{width:30px;height:30px;flex:none}
+.nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--seal)}
+.proto{font:500 .8rem/1.3 var(--f-label);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-block:.45rem;border-bottom:1px dashed var(--rule)}
+
+/* ---------- portada ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:3rem;align-items:center;padding-block:3.2rem 2.4rem}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--seal)}
+.lede{margin-top:1rem;font-size:1.15rem;max-width:36rem;color:var(--ink-2)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;padding:0 1.25rem;border-radius:var(--r);font:700 1rem var(--f-body);text-decoration:none;border:2px solid var(--seal);cursor:pointer}
+.btn.primary{background:var(--seal);color:var(--sheet)}
+.btn.ghost{background:transparent;color:var(--seal)}
+.promises{display:grid;gap:.45rem;margin-top:1.6rem;padding:0;list-style:none}
+.promises li{display:flex;gap:.6rem;align-items:flex-start;font-size:.98rem}
+.promises svg{flex:none;margin-top:.2rem;color:var(--seal)}
+
+/* hoja de muestra con casillas y sello */
+.specimen{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:1.4rem 1.4rem 1.6rem;box-shadow:0 1px 0 var(--rule),0 18px 40px -28px rgba(20,32,47,.45)}
+.specimen .head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:.6rem;margin-bottom:.4rem}
+.specimen .head h3{font-size:1.15rem}
+.box{display:grid;grid-template-columns:2.2rem 1.6rem minmax(0,1fr);gap:.55rem;align-items:start;padding-block:.65rem;border-bottom:1px solid var(--rule)}
+.box .n{font:500 .78rem var(--f-mono);color:var(--ink-2);padding-top:.15rem}
+.tick{width:1.45rem;height:1.45rem;border:2px solid currentColor;border-radius:3px;display:grid;place-items:center;font:800 .9rem/1 var(--f-display)}
+.tick.ok{color:var(--ok);background:var(--ok-soft)} .tick.doubt{color:var(--doubt);background:var(--doubt-soft)}
+.tick.no{color:var(--no);background:var(--no-soft)} .tick.na{color:var(--na);background:var(--na-soft);border-style:dashed}
+.box p{font-size:.98rem}
+.box .src{display:block;margin-top:.2rem;font:400 .78rem var(--f-mono);color:var(--ink-2)}
+.seal{position:absolute;right:-10px;bottom:-22px;transform:rotate(-7deg);border:3px double var(--seal);color:var(--seal);background:color-mix(in srgb,var(--sheet) 86%,transparent);padding:.45rem .8rem .5rem;border-radius:4px;text-align:center;font:700 .74rem/1.25 var(--f-label);letter-spacing:.09em;text-transform:uppercase}
+.seal small{display:block;font:500 .7rem var(--f-mono);letter-spacing:0;text-transform:none}
+
+/* eventos vitales: lista, no rejilla */
+section.band{padding-block:2.6rem;border-top:1px solid var(--rule)}
+.band h2{font-size:clamp(1.45rem,2.6vw,1.9rem);letter-spacing:-.015em}
+.band .sub{margin-top:.4rem;color:var(--ink-2);max-width:42rem}
+.events{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2.5rem}
+.events a{display:grid;grid-template-columns:2.6rem minmax(0,1fr) auto;align-items:center;gap:.9rem;padding-block:.9rem;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.events a:hover .ev-t{color:var(--seal)}
+.ev-i{width:2.6rem;height:2.6rem;border-radius:50%;background:var(--tint);display:grid;place-items:center;color:var(--seal)}
+.ev-t{font-weight:700}
+.ev-c{font:500 .8rem var(--f-mono);color:var(--ink-2);white-space:nowrap}
+
+/* ejemplos */
+.examples{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1rem;border:1px solid var(--rule);background:var(--sheet);border-radius:999px;color:var(--ink);font:500 .95rem var(--f-body);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--seal);background:var(--seal-soft);color:var(--ink)}
+
+/* proceso: secuencia real, numerada */
+.steps{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:.8rem}
+.steps li::before{content:"Paso " counter(s);display:block;font:600 .78rem var(--f-label);letter-spacing:.08em;text-transform:uppercase;color:var(--seal);margin-bottom:.35rem}
+.steps h3{font-size:1.08rem;margin-bottom:.3rem}
+
+/* ---------- pregunta ---------- */
+.screen{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(1.2rem,3vw,2.2rem);max-width:44rem}
+.progress{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.bar{flex:1;height:6px;background:var(--tint);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:25%;background:var(--seal)}
+fieldset{border:0;padding:0;margin:0}
+legend{font:800 clamp(1.4rem,3vw,1.85rem)/1.2 var(--f-display);padding:0;margin-bottom:.4rem}
+.why{margin-top:.5rem}
+.why summary{cursor:pointer;color:var(--seal);font-weight:500}
+.field{margin-top:1.3rem}
+.field label{display:block;font-weight:700;margin-bottom:.35rem}
+.input{width:100%;min-height:52px;padding:0 1rem;border:2px solid var(--rule);border-radius:var(--r);background:var(--sheet);color:var(--ink);font:500 1.05rem var(--f-body)}
+.input:focus{border-color:var(--seal);outline:none;box-shadow:0 0 0 3px var(--seal-soft)}
+.listbox{list-style:none;margin:.35rem 0 0;padding:.3rem;border:1px solid var(--rule);border-radius:var(--r);background:var(--sheet)}
+.listbox li{padding:.55rem .7rem;border-radius:4px;display:flex;justify-content:space-between;gap:1rem}
+.listbox li[aria-selected="true"]{background:var(--seal-soft)}
+.listbox .mono{color:var(--ink-2)}
+.alt{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.1rem}
+.alt button{min-height:44px;padding:0 1rem;border:1px dashed var(--ink-2);border-radius:var(--r);background:transparent;color:var(--ink);font:500 .95rem var(--f-body);cursor:pointer}
+.nav-q{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap}
+
+/* ---------- resultados ---------- */
+.res-head{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:end}
+.persona{font:500 .9rem var(--f-label);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2)}
+.tally{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:1rem}
+.tally div{display:grid}
+.tally b{font:800 2rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.tally .ok b{color:var(--ok)} .tally .doubt b{color:var(--doubt)} .tally .seal-c b{color:var(--seal)}
+.missing{margin-top:1.6rem;border-left:4px solid var(--doubt);background:var(--doubt-soft);padding:1rem 1.2rem;border-radius:0 var(--r) var(--r) 0;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.missing p{max-width:38rem}
+
+/* matriz requisito a requisito: la firma */
+.matrix-wrap{margin-top:1.8rem;overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r);background:var(--sheet)}
+table.matrix{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
+.matrix th,.matrix td{border-bottom:1px solid var(--rule);padding:.65rem .7rem;text-align:left;vertical-align:middle}
+.matrix thead th{font:600 .74rem/1.25 var(--f-label);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);background:var(--tint);white-space:nowrap}
+.matrix tbody th{font-weight:700;min-width:14rem}
+.matrix tbody th small{display:block;font:400 .78rem var(--f-mono);color:var(--ink-2);margin-top:.15rem}
+.matrix td.c{text-align:center;width:5.2rem}
+.matrix td.c button{background:none;border:0;padding:0;cursor:pointer;display:inline-grid}
+.matrix .verdict{font:700 .82rem var(--f-label);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.v-ok{color:var(--ok)} .v-doubt{color:var(--doubt)} .v-no{color:var(--no)}
+.lvl{display:inline-block;font:600 .7rem/1 var(--f-label);letter-spacing:.07em;text-transform:uppercase;padding:.25rem .45rem;border:1.5px solid currentColor;border-radius:3px;margin-right:.4rem;vertical-align:1px}
+.lvl.estado{color:var(--lvl-estado)} .lvl.cm{color:var(--lvl-cm)} .lvl.ayto{color:var(--lvl-ayto)}
+.legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.8rem;font-size:.9rem;color:var(--ink-2)}
+.legend span{display:inline-flex;gap:.4rem;align-items:center}
+.legend .tick{width:1.1rem;height:1.1rem;font-size:.7rem}
+.cite-panel{margin-top:1rem;background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--seal);border-radius:0 var(--r) var(--r) 0;padding:1rem 1.2rem}
+.cite-panel blockquote{margin:.5rem 0 0;font-size:1rem}
+.cite-panel mark{background:var(--seal-soft);color:var(--ink);padding:0 .15rem;border-radius:2px}
+
+/* expediente y plan */
+.two{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2rem;margin-top:2.2rem;align-items:start}
+.dossier{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r)}
+.dossier .top-line{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 1.2rem;border-bottom:2px solid var(--ink)}
+.dossier h3{font-size:1.3rem;margin-top:.3rem}
+.state{font:700 .78rem var(--f-label);letter-spacing:.06em;text-transform:uppercase;padding:.3rem .55rem;border-radius:3px;white-space:nowrap}
+.state.open{background:var(--ok-soft);color:var(--ok)} .state.rolling{background:var(--seal-soft);color:var(--seal)}
+.dossier .boxes{padding:0 1.2rem}
+.dossier dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.5rem 1.2rem;margin:0;padding:1rem 1.2rem;border-top:1px solid var(--rule)}
+.dossier dt{font:600 .76rem var(--f-label);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);padding-top:.2rem}
+.dossier dd{margin:0}
+.dossier .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 1.2rem;border-top:1px solid var(--rule)}
+.plan{border-top:2px solid var(--ink);padding-top:.9rem}
+.plan h3{font-size:1.2rem}
+.amount{font:800 2.3rem/1 var(--f-display);font-variant-numeric:tabular-nums;margin-top:.6rem}
+.plan .group{margin-top:1.4rem}
+.plan ul{list-style:none;padding:0;margin:.5rem 0 0}
+.plan li{display:flex;justify-content:space-between;gap:1rem;padding-block:.5rem;border-bottom:1px solid var(--rule)}
+.plan li span:last-child{font:500 .82rem var(--f-mono);color:var(--ink-2);white-space:nowrap;text-align:right}
+.cal li span:first-child{font:500 .85rem var(--f-mono);min-width:5.5rem}
+.legal{margin-top:2rem;padding:1rem 1.2rem;border:1px solid var(--rule);border-radius:var(--r);font-size:.95rem;color:var(--ink-2);background:var(--sheet)}
+
+/* observatorio */
+.obs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem;margin-top:1.4rem}
+.obs div{border-top:2px solid var(--ink);padding-top:.6rem}
+.obs b{display:block;font:800 1.9rem/1.05 var(--f-display);font-variant-numeric:tabular-nums}
+.log{margin-top:1.6rem;border:1px solid var(--rule);border-radius:var(--r);background:var(--sheet)}
+.log li{display:grid;grid-template-columns:6.5rem 7rem minmax(0,1fr);gap:1rem;padding:.6rem 1rem;border-bottom:1px solid var(--rule);font-size:.93rem}
+.log ul{list-style:none;margin:0;padding:0}
+.log .mono{color:var(--ink-2)}
+footer{border-top:1px solid var(--rule);margin-top:3rem;padding-block:1.6rem 2.4rem;color:var(--ink-2);font-size:.92rem}
+footer .shell{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+
+@media (max-width: 860px){
+  .hero,.two{grid-template-columns:minmax(0,1fr)}
+  .steps,.events{grid-template-columns:minmax(0,1fr)}
+  .obs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .seal{right:6px}
+  .log li{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="top">
+  <div class="shell">
+    <a class="brand" href="#portada" aria-label="Requisito a Requisito, inicio">
+      <svg class="mark" viewBox="0 0 30 30" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M4.8 8.2l2.6 2.6 4.6-5.4" fill="none" stroke="var(--seal)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="16" y="16" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M18.8 22.2l2.6 2.6 4.6-5.4" fill="none" stroke="var(--seal)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8h7m-7 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M7 16v7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <b>Requisito a Requisito</b>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#comprobar">Comprobar</a><a href="#portada-eventos">Ayudas</a><a href="#observatorio">Observatorio</a><a href="#portada-como">Cómo funciona</a>
+    </nav>
+  </div>
+  <div class="proto"><div class="shell">Prototipo de diseño · los datos son de ejemplo y se sustituyen por el bundle real</div></div>
+</header>
+
+<main class="shell">
+<!-- ================= PORTADA ================= -->
+<section id="portada" class="hero" aria-labelledby="h-portada">
+  <div>
+    <p class="label">Comunidad de Madrid · ayudas del Estado, la Comunidad y tu ayuntamiento</p>
+    <h1 id="h-portada" style="margin-top:.6rem">Comprueba tus ayudas <em>requisito a requisito</em>, con el texto oficial delante.</h1>
+    <p class="lede">Contesta unas pocas preguntas. Te decimos qué ayudas encajan contigo, qué requisitos cumples, cuáles no y qué te falta saber para comprobar el resto.</p>
+    <div class="cta">
+      <a class="btn primary" href="#comprobar">Empezar · 3 minutos</a>
+      <a class="btn ghost" href="#resultados">Ver un ejemplo</a>
+    </div>
+    <ul class="promises">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.8-7 9-4-1.2-7-4.6-7-9V6z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Tus respuestas no salen de este dispositivo. Sin registro.</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z M15 3v4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Cada requisito enlaza al artículo de la norma que lo exige.</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>«No se puede saber» no es un no: te decimos qué dato o documento falta.</li>
+    </ul>
+  </div>
+
+  <div class="specimen" aria-label="Ejemplo de comprobación de una ayuda">
+    <div class="head"><h3>Bono Cultural Joven 2026</h3><span class="lvl estado">Estado</span></div>
+    <div class="box"><span class="n">01</span><span class="tick ok" aria-label="Cumples">✓</span><p>Haber nacido en 2008<span class="src">Extracto · «Primero. Beneficiarios» · BOE-B-2026-21271</span></p></div>
+    <div class="box"><span class="n">02</span><span class="tick na" aria-label="No comprobable aquí">⚠</span><p>Nacionalidad española o residencia legal en España<span class="src">Lo comprobará el Ministerio al solicitar</span></p></div>
+    <div class="box"><span class="n">03</span><span class="tick ok" aria-label="Plazo abierto">✓</span><p>Plazo abierto hasta el 31 de octubre de 2026<span class="src">Extracto · «Cuarto. Plazo»</span></p></div>
+    <div class="seal" aria-hidden="true">Comprobado con la fuente<small>BOE · 05.10.2026</small></div>
+  </div>
+</section>
+
+<section id="portada-eventos" class="band" aria-labelledby="h-eventos">
+  <h2 id="h-eventos">¿Qué te está pasando?</h2>
+  <p class="sub">Empieza por tu situación. Solo te preguntaremos lo necesario para esas ayudas.</p>
+  <ul class="events">
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 5h3l2 9h10l2-7H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ev-t">Voy a tener un hijo o acabo de tenerlo</span><span class="ev-c">14 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7V5h6v2M4 4l16 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ev-t">Me he quedado sin trabajo</span><span class="ev-c">9 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4zM7 10v5c3 2 7 2 10 0v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ev-t">Estudio o voy a estudiar</span><span class="ev-c">17 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ev-t">Busco vivienda o me independizo</span><span class="ev-c">8 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ev-t">Cuido de un familiar</span><span class="ev-c">6 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8" fill="currentColor"/><path d="M12 7v6h5l2 6M12 10H8M9.5 13.5a5 5 0 105.4 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ev-t">Tengo una discapacidad</span><span class="ev-c">7 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ev-t">Tengo 65 años o más</span><span class="ev-c">5 ayudas</span></a></li>
+    <li><a href="#comprobar"><span class="ev-i"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7.5A6 6 0 107 15M4 10h9M4 13h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ev-t">Me cuesta llegar a fin de mes</span><span class="ev-c">11 ayudas</span></a></li>
+  </ul>
+  <p class="label" style="margin-top:1.8rem">O mira un caso de ejemplo</p>
+  <div class="examples" role="group" aria-label="Casos de ejemplo">
+    <button class="chip" aria-pressed="true">Madre sola con un bebé · Getafe</button>
+    <button class="chip" aria-pressed="false">Estudiante de 18 años · Alcalá de Henares</button>
+    <button class="chip" aria-pressed="false">55 años y en paro · Puente de Vallecas</button>
+    <button class="chip" aria-pressed="false">Pareja joven de alquiler · Móstoles</button>
+  </div>
+</section>
+
+<section id="portada-como" class="band" aria-labelledby="h-como">
+  <h2 id="h-como">Cómo lo comprobamos</h2>
+  <ol class="steps">
+    <li><h3>Leemos la norma</h3><p class="note">Cada requisito sale del BOE, el BOCM o el boletín de tu ayuntamiento, y guardamos el párrafo exacto.</p></li>
+    <li><h3>Lo convertimos en reglas</h3><p class="note">Las reglas comparan tus respuestas con cada requisito. Si falta un dato, lo decimos; nunca adivinamos.</p></li>
+    <li><h3>Lo revisamos cada día</h3><p class="note">Si una fuente cambia, esa ayuda se retira hasta revisarla. Puedes ver el registro en el Observatorio.</p></li>
+  </ol>
+</section>
+
+<!-- ================= PREGUNTA ================= -->
+<section id="comprobar" class="band" aria-labelledby="h-preg">
+  <p class="label" id="h-preg">Pantalla de pregunta</p>
+  <div class="screen" style="margin-top:1rem">
+    <div class="progress"><span class="mono">Pregunta 2 de 8</span><div class="bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="8" aria-label="Progreso"><i></i></div></div>
+    <fieldset>
+      <legend>¿En qué municipio estás empadronada o empadronado?</legend>
+      <details class="why"><summary>¿Por qué te lo preguntamos?</summary><p class="note" style="margin-top:.4rem">Muchas ayudas son de la Comunidad o de tu ayuntamiento, y exigen estar empadronado en él.</p></details>
+      <div class="field">
+        <label for="muni">Municipio de la Comunidad de Madrid</label>
+        <input id="muni" class="input" value="Get" role="combobox" aria-expanded="true" aria-controls="muni-list" aria-autocomplete="list">
+        <ul id="muni-list" class="listbox" role="listbox" aria-label="Municipios">
+          <li role="option" aria-selected="true">Getafe <span class="mono">28065</span></li>
+          <li role="option" aria-selected="false">Guadarrama <span class="mono">28068</span></li>
+        </ul>
+      </div>
+    </fieldset>
+    <div class="alt"><button type="button">No lo sé</button><button type="button">Prefiero no decirlo</button><button type="button">Vivo fuera de la Comunidad de Madrid</button></div>
+    <div class="nav-q"><button class="btn ghost" type="button">Atrás</button><button class="btn primary" type="button">Siguiente</button></div>
+  </div>
+</section>
+
+<!-- ================= RESULTADOS ================= -->
+<section id="resultados" class="band" aria-labelledby="h-res">
+  <div class="res-head">
+    <div>
+      <p class="persona">Ejemplo · Madre sola con un bebé de 2 meses · Getafe · ingresos 14.000–18.000 €</p>
+      <h2 id="h-res" style="margin-top:.4rem">Tu comprobación, requisito a requisito</h2>
+    </div>
+    <a class="btn ghost" href="#comprobar">Cambiar respuestas</a>
+  </div>
+  <div class="tally" role="status" aria-live="polite">
+    <div class="ok"><b>3</b><span>encajan contigo</span></div>
+    <div class="doubt"><b>2</b><span>dependen de un dato</span></div>
+    <div class="seal-c"><b>6</b><span>relacionadas, sin comprobar</span></div>
+  </div>
+
+  <div class="missing">
+    <p><b>Nos falta un dato para comprobar 2 ayudas más.</b> ¿Tienes el título de familia monoparental de la Comunidad de Madrid?</p>
+    <div class="alt" style="margin-top:0"><button type="button">Sí</button><button type="button">No</button><button type="button">No lo sé</button></div>
+  </div>
+
+  <div class="matrix-wrap">
+    <table class="matrix" aria-describedby="m-legend">
+      <caption class="label" style="text-align:left;padding:.8rem .7rem">Matriz de requisitos · pulsa una casilla para ver el texto oficial</caption>
+      <thead><tr><th scope="col">Ayuda</th><th scope="col">Empadronamiento</th><th scope="col">Hijos</th><th scope="col">Ingresos</th><th scope="col">Situación familiar</th><th scope="col">Plazo</th><th scope="col">Resultado</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><span class="lvl estado">Estado</span>Prestación por nacimiento para familias monoparentales<small>LGSS arts. 357–361 · 1.000 € pago único</small></th>
+          <td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><button data-cite="hijos"><span class="tick ok" aria-label="Cumples">✓</span></button></td><td class="c"><span class="tick doubt" aria-label="Falta el dato exacto">?</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Se puede pedir siempre">✓</span></td><td><span class="verdict v-doubt">Falta un dato</span></td></tr>
+        <tr><th scope="row"><span class="lvl estado">Estado</span>Bono social eléctrico<small>RD 897/2017 · RDL 7/2026 · 42,5 % de descuento</small></th>
+          <td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Se puede pedir siempre">✓</span></td><td><span class="verdict v-ok">Encaja</span></td></tr>
+        <tr><th scope="row"><span class="lvl cm">Comunidad</span>Ayuda a la natalidad de la Comunidad de Madrid<small>BOCM · 500 € al mes, ejemplo</small></th>
+          <td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick ok" aria-label="Plazo abierto">✓</span></td><td><span class="verdict v-ok">Encaja</span></td></tr>
+        <tr><th scope="row"><span class="lvl ayto">Ayuntamiento</span>Ayuda municipal por nacimiento · Getafe<small>Bases municipales, ejemplo</small></th>
+          <td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick doubt" aria-label="Cerrada, se convoca cada año">↻</span></td><td><span class="verdict v-doubt">Abre cada año</span></td></tr>
+        <tr><th scope="row"><span class="lvl cm">Comunidad</span>Ayuda por nacimiento o adopción múltiple<small>Acuerdo 27/12/2023 · BOCM</small></th>
+          <td class="c"><span class="tick ok" aria-label="Cumples">✓</span></td><td class="c"><span class="tick no" aria-label="No cumples">✕</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick na" aria-label="No aplica">–</span></td><td class="c"><span class="tick ok" aria-label="Se puede pedir siempre">✓</span></td><td><span class="verdict v-no">No te aplica</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend" id="m-legend">
+    <span><i class="tick ok">✓</i>Cumples</span><span><i class="tick doubt">?</i>Falta un dato</span><span><i class="tick no">✕</i>No cumples</span><span><i class="tick na">–</i>No aplica o no comprobable aquí</span><span><i class="tick doubt">↻</i>Se convoca cada año</span>
+  </div>
+  <div class="cite-panel" id="cita" aria-live="polite">
+    <p class="label">Texto oficial · Prestación por nacimiento · LGSS, art. 357.1</p>
+    <blockquote>Texto ilustrativo, no literal: aquí aparece el párrafo guardado de la norma y se resalta la frase que fundamenta la casilla, por ejemplo <mark>la prestación se reconoce en caso de nacimiento en familias monoparentales</mark>, seguida del enlace al artículo en el BOE.</blockquote>
+    <p class="note" style="margin-top:.5rem">En el producto el texto es el extracto literal comprobado por el gate G4.</p>
+  </div>
+
+  <div class="two">
+    <article class="dossier" aria-labelledby="h-dos">
+      <div class="top-line">
+        <div><span class="lvl cm">Comunidad</span><span class="mono">Expediente de ejemplo</span><h3 id="h-dos">Ayuda a la natalidad de la Comunidad de Madrid</h3></div>
+        <span class="state open">Plazo abierto</span>
+      </div>
+      <div class="boxes">
+        <div class="box"><span class="n">01</span><span class="tick ok">✓</span><p>Estar empadronada en la Comunidad de Madrid<span class="src">Art. 3.1.a · Getafe (28065)</span></p></div>
+        <div class="box"><span class="n">02</span><span class="tick ok">✓</span><p>Hijo o hija nacido en los últimos 12 meses<span class="src">Art. 3.1.b · tu respuesta: 2 meses</span></p></div>
+        <div class="box"><span class="n">03</span><span class="tick ok">✓</span><p>Ingresos por debajo del límite<span class="src">Art. 4 · tu banda entera queda por debajo</span></p></div>
+        <div class="box"><span class="n">04</span><span class="tick na">⚠</span><p>Estar al corriente con Hacienda y la Seguridad Social<span class="src">Art. 3.2 · lo comprobará la Administración</span></p></div>
+      </div>
+      <dl>
+        <dt>Puedes recibir</dt><dd>Ejemplo: 500 € al mes (por solicitante)</dd>
+        <dt>Necesitarás</dt><dd>DNI o NIE, libro de familia, certificado de empadronamiento</dd>
+        <dt>Tiempo aprox.</dt><dd>20–30 min con certificado digital · <a href="#portada-como">cómo lo estimamos</a></dd>
+        <dt>Por qué te sale</dt><dd>Tienes un bebé menor de un año y vives en Getafe</dd>
+      </dl>
+      <div class="foot"><span class="mono">Verificado con la fuente · 05.10.2026</span><a class="btn primary" href="#resultados">Ir a la sede oficial</a></div>
+    </article>
+
+    <aside class="plan" aria-labelledby="h-plan">
+      <h3 id="h-plan">Tu plan</h3>
+      <p class="note">Solo suma importes por persona que la norma fija.</p>
+      <p class="amount">hasta 7.000 €</p>
+      <p class="note">en 3 ayudas que encajan contigo · ejemplo</p>
+      <div class="group">
+        <p class="label">Documentos que te sirven para varias</p>
+        <ul>
+          <li><span>DNI o NIE</span><span>3 ayudas</span></li>
+          <li><span>Libro de familia</span><span>3 ayudas</span></li>
+          <li><span>Certificado de empadronamiento</span><span>2 ayudas</span></li>
+        </ul>
+      </div>
+      <div class="group cal">
+        <p class="label">Plazos</p>
+        <ul>
+          <li><span>siempre</span><span>Prestación por nacimiento</span></li>
+          <li><span>31 dic 2026</span><span>Natalidad CM</span></li>
+          <li><span>~mar 2027</span><span>Ayuda municipal (aprox.)</span></li>
+        </ul>
+      </div>
+      <div class="cta"><button class="btn ghost" type="button">Añadir plazos al calendario</button><button class="btn ghost" type="button">Copiar resumen</button></div>
+    </aside>
+  </div>
+
+  <p class="legal">Esto no determina tu derecho a la ayuda; la decisión corresponde al organismo competente. No somos una administración pública: la solicitud se hace siempre en la sede oficial.</p>
+</section>
+
+<!-- ================= OBSERVATORIO ================= -->
+<section id="observatorio" class="band" aria-labelledby="h-obs">
+  <h2 id="h-obs">Observatorio</h2>
+  <p class="sub">Qué cubrimos, de dónde sale y qué ha cambiado. Cifras de ejemplo en este prototipo.</p>
+  <div class="obs">
+    <div><b>34</b><span class="note">ayudas comprobadas con reglas</span></div>
+    <div><b>187</b><span class="note">ayudas relacionadas con fuente oficial</span></div>
+    <div><b>61</b><span class="note">documentos oficiales citados</span></div>
+    <div><b>06:00</b><span class="note">revisión diaria de fuentes</span></div>
+  </div>
+  <div class="log"><ul>
+    <li><span class="mono">05.10.2026</span><span class="label">Sin cambios</span><span>61 fuentes revisadas; todas siguen diciendo lo mismo.</span></li>
+    <li><span class="mono">04.10.2026</span><span class="label" style="color:var(--doubt)">Retirada</span><span>Cambió la página del SEPE del subsidio de mayores de 52; la ayuda queda en revisión.</span></li>
+    <li><span class="mono">03.10.2026</span><span class="label" style="color:var(--seal)">Novedad</span><span>Nueva convocatoria detectada en la BDNS (Aranjuez, becas socioeducativas). Pendiente de revisión.</span></li>
+  </ul></div>
+</section>
+</main>
+
+<footer><div class="shell"><span>Requisito a Requisito · proyecto ciudadano independiente · código y reglas abiertos</span><span>No somos una administración pública.</span></div></footer>
+
+<script>
+document.querySelectorAll('.examples .chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.examples .chip').forEach(c=>c.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');
+}));
+</script>

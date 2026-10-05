@@ -29,7 +29,7 @@ Aplica además `F:\_Proyectos\AGENTS.md` (unidades, worktrees, temporales y cach
 5. Según la tarea:
    - motor → `docs/07-motor-evaluacion.md` + `schemas/`
    - fuentes y reglas → `docs/08-fuentes-y-datos.md`
-   - interfaz → `docs/09-diseno-ux.md` + `DESIGN.md` (portado de la-ayuda en F0-7)
+   - interfaz → **`docs/16-direccion-de-arte.md` + `design/prototipo/requisito-a-requisito.html` (fuente de verdad visual)** + `docs/09-diseno-ux.md` (contenido, flujo y accesibilidad)
    - QA → `docs/10-qa-matriz.md`
    - build, servido o demo → `docs/11-infra-despliegue.md`
    - visión de conjunto → `docs/02-arquitectura.md`
@@ -126,6 +126,8 @@ templates/           ejemplos y plantillas (RuleSet, golden, recibo, handoff, ch
 docs/13              reutilización de donantes (la-ayuda, EduAyudas…)
 docs/14              universo de ayudas de Madrid, fuentes de descubrimiento, oleadas
 docs/15              funcionalidades ampliadas, referencias y política de dependencias
+docs/16              dirección de arte (ADR-043)
+design/prototipo/    prototipo HTML: fuente de verdad visual
 src/ data/ scripts/ tests/ public/   código y datos del producto (se crean en F0-7)
 evidence/            evidencias fechadas
 handoffs/            relevos entre sesiones

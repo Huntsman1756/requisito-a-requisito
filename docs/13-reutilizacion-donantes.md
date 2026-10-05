@@ -47,8 +47,8 @@ builds en su checkout. Lectura de ficheros y `git show <commit>:<ruta>` como muc
 
 | Origen | Destino | Adaptación |
 |---|---|---|
-| la-ayuda `src/app/globals.css` (tokens, reset, botones, pills, formularios, dark mode, reduced-motion, print) + `public/fonts/` | `src/app/globals.css`, `public/fonts/` | Quitar lo que no se use; conservar los nombres de tokens para poder comparar con `DESIGN.md` |
-| la-ayuda `DESIGN.md` | `DESIGN.md` (propio) | Copia adaptada: mismos principios y anti-patrones, más los componentes del orientador (docs/09) |
+| la-ayuda `src/app/globals.css` (solo la **estructura** técnica: reset, mecanismo de tokens y dark mode, reduced-motion, print) | `src/app/globals.css` | **El aspecto visual NO se porta (ADR-043)**: valores, fuentes y componentes según docs/16 |
+| la-ayuda `DESIGN.md` | `DESIGN.md` (propio) | **Reescrito desde docs/16 (ADR-043)**; de la-ayuda solo los anti-patrones de honestidad (no presentar borradores como activos, no ocultar la fuente) |
 | la-ayuda `src/lib/user-state.ts` | `src/lib/user-state.ts` | Se conservan el contrato (campos públicos y sensibles, handoff, perfil con consentimiento) y sus tests. Los campos sensibles pasan a ser los del orientador |
 | la-ayuda `src/lib/rules/assistant.ts` (`rankBenefits`) + `README.md` | `src/lib/related/rank.ts` | Solo para el nivel 2. Sin penalización de región (todo es Madrid o estatal); pesos documentados |
 | la-ayuda `src/content/types.ts` (subconjunto) | `src/lib/catalog/schema.ts` | Solo los campos que usa el producto |

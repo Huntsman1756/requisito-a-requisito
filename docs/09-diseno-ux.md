@@ -1,5 +1,8 @@
 # Diseño y experiencia — «La Ayuda · Tus derechos, con fuente»
 
+> **Actualización 2026-10-05 (ADR-043):** el aspecto visual ya no se porta de la-ayuda. Manda `docs/16-direccion-de-arte.md` y el prototipo `design/prototipo/requisito-a-requisito.html`. Siguen vigentes de este documento: principios de contenido, flujo de pantallas, estados de componentes, microcopy y accesibilidad.
+
+
 El diseño importa tanto como el motor: el jurado y el ciudadano juzgarán en
 segundos. Este documento **parte del** sistema de la-ayuda, portado a este repo
 (`DESIGN.md` propio, copiado de `la-ayuda/DESIGN.md`, «Portal cívico 2026»): mismos
