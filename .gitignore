@@ -17,10 +17,13 @@ docs/*.xlsx
 public/datos/elegibilidad/
 src/generated/
 
-# nombre reservado de Windows (accidentes de redirecci�n)
+# nombre reservado de Windows (accidentes de redirección)
 nul
 
 # Secretos locales: NUNCA al repo (es público)
 .env
 .env.*
 !.env.example
+
+# Caché del panel (respuestas de modelos)
+.cache/

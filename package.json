@@ -32,7 +32,9 @@
 		"coverage:engine": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/lib/eligibility-engine/**' --coverage.reporter=text",
 		"universe:build": "tsx scripts/universe/build.ts",
 		"freshness": "tsx scripts/freshness.ts",
-		"link:check": "tsx scripts/link-check.ts"
+		"link:check": "tsx scripts/link-check.ts",
+		"panel:ping": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local ./scripts/review-panel/ping.ts",
+		"panel:run": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local ./scripts/review-panel/run.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",
