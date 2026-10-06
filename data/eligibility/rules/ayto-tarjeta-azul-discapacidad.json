@@ -1,0 +1,309 @@
+{
+	"benefitSlug": "ayto-tarjeta-azul-discapacidad",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20090316-tarjeta-azul",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2009/03/16/2009-03-16_11032009_0226.pdf",
+			"title": "Resolución de 28 de febrero de 2009, de la Gerencia del CRTM — entrada en vigor de la Tarjeta Azul y requisitos de obtención (BOCM n.º 63, 16/03/2009)"
+		},
+		{
+			"id": "bocm-20110525-tarjeta-azul",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2011/05/25/BOCM-20110525-21.PDF",
+			"title": "Resolución de 11 de abril de 2011, del Director-Gerente del CRTM — modifica los requisitos de obtención de la Tarjeta Azul, a propuesta de la Junta de Gobierno de la Ciudad de Madrid (BOCM n.º 122, 25/05/2011)"
+		},
+		{
+			"id": "bocm-20251231-2-precios-2026",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/12/31/BOCM-20251231-2.PDF",
+			"title": "Resolución de 29 de diciembre de 2025, de la Dirección-Gerencia del CRTM — precios del transporte público en 2026 (con descuento), Acuerdo del Consejo de Administración (BOCM n.º 311, 31/12/2025)"
+		},
+		{
+			"id": "bocm-20251231-3-tarifas-2026",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/12/31/BOCM-20251231-3.PDF",
+			"title": "Resolución de 29 de diciembre de 2025, de la Dirección-Gerencia del CRTM — tarifas oficiales actualizadas del transporte público en 2026, Acuerdo del Consejo de Administración (BOCM n.º 311, 31/12/2025)"
+		},
+		{
+			"id": "bocm-20260122-20-condiciones-ttp",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/01/22/BOCM-20260122-20.PDF",
+			"title": "Resolución de 19 de enero de 2026, de la Dirección-Gerencia del CRTM — Condiciones generales de contratación y utilización de las tarjetas de transporte público personales (BOCM n.º 18, 22/01/2026)"
+		},
+		{
+			"id": "crtm-tarjeta-azul",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://crtm.es/landing-billetes-y-tarifas/tarjeta-transporte-publico-azul/",
+			"title": "CRTM — Tarjeta Transporte Público azul (cómo obtenerla, uso, garantía y caducidad)"
+		},
+		{
+			"id": "sede-ayto-tarjeta-azul",
+			"rank": 4,
+			"documentType": "procedure_page",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextoid=ac464e85763fd310VgnVCM1000000b205a0aRCRD&vgnextchannel=2cb9a38813180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default",
+			"title": "Sede electrónica del Ayuntamiento de Madrid — Tarjeta Azul de transportes para autobuses (EMT) y metro: requisitos, trámite y documentación"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_14P"
+	],
+	"requirements": [
+		{
+			"id": "empadronado-municipio-madrid",
+			"hard": true,
+			"label": "Estar empadronado/a en el municipio de Madrid (la Tarjeta Azul es municipal: no basta residir en otro municipio de la Comunidad de Madrid)",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A)",
+				"excerpt": "Podrán disfrutar de este beneficio aquellas personas que, siendo residentes en Madrid, reúnan alguna de las condiciones siguientes",
+				"excerptSha256": "dd0555b4e1a4025ac1ba3f97a6a7a5c403912c92d18eac6d1a38a7b89925a946"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28079"
+				}
+			}
+		},
+		{
+			"id": "discapacidad-min-33",
+			"hard": true,
+			"label": "Tener reconocida una discapacidad (en cualquiera de sus formas) con un grado igual o superior al 33 %, acreditado con el certificado emitido por la Comisión Técnica Calificadora u otro organismo competente",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A) Cuarta",
+				"excerpt": "Tener la condición de discapacitado (en cualquiera de sus formas), con un grado de minusvalía igual o superior al 33 por 100 reflejado en el certificado emitido por la Comisión Técnica Calificadora u otro organismo competente",
+				"excerptSha256": "6ebea69bbaae0674f4e49ebe9f1a237a8a23738d08992c007e55f67be3b5aeb2"
+			},
+			"condition": {
+				"field": "disability",
+				"op": "eq",
+				"value": "gte33"
+			}
+		},
+		{
+			"id": "renta-max-3-iprem",
+			"hard": true,
+			"label": "Ingresos totales individuales de 3 × IPREM o menos: 25.200 €/año en 2026 (la tabla oficial de la Resolución computa el tope anual con el IPREM de 14 pagas). Solo cuenta tu renta individual — esta categoría no admite la escala por cargas familiares",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Resolución 2011, Disposición Tercera.3",
+				"excerpt": "que no perciba ingresos totales individuales superiores a tres veces el IPREM",
+				"excerptSha256": "9d04c26d600c2390f87b2f5f5b43b910c9d6165fa7b36d30b68ee730501e5385"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_14P",
+				"multiplier": 3
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "otras-categorias-beneficiarias",
+			"label": "La Tarjeta Azul cubre más colectivos empadronados en Madrid: personas mayores de 65 (tarjeta ya modelada en «madrid-abono-transporte-65»), pensionistas por razón de edad o invalidez permanente, cónyuges o parejas de hecho inscritas sin ingresos propios y personas mayores de 18 con dependencia reconocida (tope 1 × IPREM)",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A) Quinta",
+				"excerpt": "Ser mayor de dieciocho años y tener reconocida la situación de dependencia, en aplicación de la normativa vigente, en cualquiera de sus grados y niveles, que no perciba ingresos totales individuales superiores al IPREM",
+				"excerptSha256": "7fcf4e6f8490c0cdccd25b8f79b6df354e6f9adf339cbfe61df0ed66e869f0f4"
+			}
+		},
+		{
+			"id": "conyuge-sin-ingresos",
+			"label": "Si tu cónyuge o pareja de hecho inscrita es titular de la Tarjeta Azul por las categorías de edad o pensión y tú no tienes ingresos a tu nombre, puedes tener tarjeta propia — este cuestionario no pregunta la renta de la pareja, así que no lo podemos comprobar",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A) Tercera",
+				"excerpt": "el cónyuge o pareja de hecho inscrita en el correspondiente Registro, que no tenga ingresos a su nombre",
+				"excerptSha256": "cc86e5865eb2aeb1368a6bec33ece6e0dd16db8acde39b3b768e076896099a1b"
+			}
+		},
+		{
+			"id": "menores-dependientes",
+			"label": "Los menores de 18 años con dependencia reconocida también pueden tener Tarjeta Azul: en ese caso el tope de renta se mide sobre el padre, la madre o la persona de la que dependen, con la escala por número de menores solicitantes",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A) Séptima",
+				"excerpt": "En los casos de personas dependientes menores de dieciocho años, debidamente reconocidos, se les concederá la Tarjeta Azul en los siguientes casos",
+				"excerptSha256": "afffaa2c5a8411684b8391fcd35dd6fdcb297d508ec95da8fc7ec1d2c0c63f72"
+			}
+		},
+		{
+			"id": "verificacion-renta-administrativa",
+			"label": "No vale solo con declarar: la solicitud incluye autorización para que el Ayuntamiento o el CRTM comprueben tus datos en ficheros públicos (la comprobación de renta se hace con datos de la AEAT y del INSS), y asumes el compromiso de comunicar cualquier variación",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado B).4",
+				"excerpt": "Solicitud, autorizando la comprobación de los datos por parte del Ayuntamiento de Madrid o el Consorcio de Transportes y el compromiso de comunicar las variaciones de la situación",
+				"excerptSha256": "dfc5ed9e6191edfd11cf680db704e6b6e51309a75b1342258b7e1ea7b46d1688"
+			}
+		},
+		{
+			"id": "revision-periodica",
+			"label": "El Ayuntamiento revisa con la frecuencia que determine que sigues cumpliendo los requisitos; la tarjeta caduca a los 5 años de su emisión y hay que volver a solicitarla para verificar los requisitos",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado C)",
+				"excerpt": "El Ayuntamiento de Madrid, con la frecuencia que determine, procederá a la revisión de las Tarjetas Azules, al objeto de contrastar que las circunstancias de sus titulares continúan haciéndoles merecedores del beneficio concedido",
+				"excerptSha256": "ca45d8bb727d1b1c4b3307aebe6b671e6511a66e159b3807e00aed6896e93d4e"
+			}
+		},
+		{
+			"id": "validez-red-zona-a",
+			"label": "El título cargado sirve solo en Metro de Madrid (zona A, incluido ML-1) y en la EMT: no vale en Cercanías ni en autobuses interurbanos, ni siquiera en trayectos que pasan por Madrid ciudad",
+			"citation": {
+				"sourceId": "bocm-20090316-tarjeta-azul",
+				"locator": "Expositivo, creación del título",
+				"excerpt": "un nuevo título de transporte, de carácter personal y de validez mensual y utilización ilimitada en las redes de MetroMadrid (red de metro en la zona tarifaria A, incluido ML-1) y de la Empresa Municipal de Transportes de Madrid",
+				"excerptSha256": "d5cc84f5a086000f3398ec9b92213b5627d6cafe8f98f79645be99ad571b378e"
+			}
+		},
+		{
+			"id": "precio-bonificado-anual",
+			"label": "Los 3,70 €/30 días son un precio bonificado de 2026 (la tarifa oficial sin bonificar es 6,30 €): las bonificaciones se aprueban por acuerdos periódicos del CRTM y el precio puede cambiar",
+			"citation": {
+				"sourceId": "bocm-20251231-3-tarifas-2026",
+				"locator": "Tabla «TARIFAS DESDE 01/01/2026 — TÍTULO 30 DÍAS», fila TARJETA AZUL",
+				"excerpt": "TARJETA AZUL 6,30 €",
+				"excerptSha256": "5d33b7e75421a4ab7aa7f098ac1a73dc6f886c276600603fc73a5bbf21a13bb8"
+			}
+		},
+		{
+			"id": "iprem-14-pagas",
+			"label": "La Resolución anualiza los topes a 14 pagas: el cuadro oficial muestra el tope de renta anual (22.365,42 € = 42 × IPREM mensual 532,51 €), lo que justifica el uso del IPREM anual de 14 pagas para esta categoría.",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Cuadro de importes, columna INGRESOS AÑO",
+				"excerpt": "INGRESOS AÑO Importes hasta (euros) 7.455,14 7.455,14 22.365,42 7.455,14 8.685,16 10.235,45 13.158,32 8.685,16 10.235,45 13.158,32 (03/18.285/11) BOCM-20110525-21 http://www.bocm.e",
+				"excerptSha256": "2b42ec6a5853529060b58954f95ef11a074ad8e560a582ac6e442bcaa5a712be"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"opensAt": "2011-05-16",
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Disposición Segundo",
+				"excerpt": "Que el día 16 de mayo de 2011 comience el proceso de recepción de solicitudes y tramitación de tarjeta de los solicitantes discapacitados sujetos a los nuevos requisitos económicos",
+				"excerptSha256": "5061d6aac1151ca8d4a56ac739e61b3e0e2156241d1d9a7babdf19fae5331ecd"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Madrid — Oficinas de Atención a la Ciudadanía Línea Madrid y sede electrónica (la emisión, el envío y la gestión de la tarjeta corren a cargo del CRTM)",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextoid=ac464e85763fd310VgnVCM1000000b205a0aRCRD&vgnextchannel=2cb9a38813180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "crtm-tarjeta-azul",
+				"locator": "Cómo obtenerla",
+				"excerpt": "La Tarjeta Azul se solicita de forma presencial en las Oficinas de Atención al Ciudadano Línea Madrid , sin cita previa, excepto las oficinas auxiliares de Aravaca, El Pardo y Valverde, o por medios electrónicos (actualmente, solo para la categoría de 'Persona con discapacidad mayor de 18 años')",
+				"excerptSha256": "bae3a0c103762052e6af44d2e3794a887f4089afb8cad95b03b099277e1d566b"
+			}
+		},
+		"documents": [
+			{
+				"id": "dni",
+				"label": "Fotocopia del DNI (en la solicitud en línea la identidad se acredita con identificación electrónica, p. ej. Cl@ve o certificado)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado B).1",
+					"excerpt": "Fotocopia del documento nacional de identidad",
+					"excerptSha256": "cee5100318720bb7e62f820f2bac3e724aa8ffe5024ce9f9423df3b163c35d11"
+				}
+			},
+			{
+				"id": "foto",
+				"label": "Fotografía tamaño pasaporte, reciente y en color (si la solicitas presencialmente, te la pueden tomar en la propia oficina)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20260122-20-condiciones-ttp",
+					"locator": "Cláusula 4, Obtención de la TTP personal",
+					"excerpt": "aportar una fotografía tamaño pasaporte, reciente y en color",
+					"excerptSha256": "a3a275351bec2f093276753eade7e64facf2c84c6fa3cc44b219112756e63ed6"
+				}
+			},
+			{
+				"id": "certificado-discapacidad",
+				"label": "Certificado de discapacidad con grado igual o superior al 33 %, emitido por la Comisión Técnica Calificadora u otro organismo competente",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado A) Cuarta",
+					"excerpt": "reflejado en el certificado emitido por la Comisión Técnica Calificadora u otro organismo competente",
+					"excerptSha256": "3045d398e0cfa6054070fa9eddea1f83c75ea7b40c47160f2f3223a526a6c5b7"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Documento acreditativo de los ingresos que percibes (la solicitud incluye autorización para que el Ayuntamiento o el CRTM verifiquen los datos en ficheros públicos)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado B).2",
+					"excerpt": "Documento acreditativo de los ingresos percibidos por el solicitante o, en su caso, del padre, madre o tutor",
+					"excerptSha256": "d36703976e0708be03c55cc4e388b147e8d13ac513cacdfcdfa68c95ba739cb6"
+				}
+			},
+			{
+				"id": "solicitud-autorizaciones",
+				"label": "Solicitud con autorización para la comprobación de tus datos por el Ayuntamiento o el CRTM y compromiso de comunicar variaciones de tu situación",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado B).4",
+					"excerpt": "Solicitud, autorizando la comprobación de los datos por parte del Ayuntamiento de Madrid o el Consorcio de Transportes y el compromiso de comunicar las variaciones de la situación",
+					"excerptSha256": "dfc5ed9e6191edfd11cf680db704e6b6e51309a75b1342258b7e1ea7b46d1688"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "fixed",
+		"minEur": 3.7,
+		"maxEur": 3.7,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20251231-2-precios-2026",
+			"locator": "Tabla «TÍTULO 30 DÍAS — PRECIOS APLICABLES CON DESCUENTO DESDE 1/1/2026», fila TARJETA AZUL",
+			"excerpt": "TARJETA AZUL 3,70 €",
+			"excerptSha256": "2ae48a498576d73d9f1e3b70f18dc374cea926dd35b7235e4701cddbe73c6ddb"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"transporte",
+		"dependencia_discapacidad"
+	],
+	"lifeEvents": [
+		"discapacidad"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-7.md"
+	}
+}

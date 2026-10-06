@@ -1,0 +1,73 @@
+{
+	"id": "gp-escuela-infantil-madrid",
+	"description": "Familia de Madrid capital (28079) con una niña de 1 año (nacida en 2025) e ingresos medios del hogar (16.800–25.200 €/año). Caso 'posible': cumple los dos requisitos comprobables (residencia en el municipio y menor de 3 años a cargo), pero quedan cubiertas por 'qué te falta' la existencia de vacantes en el proceso extraordinario, la elección de escuela y la documentación ⇒ 'posible', y el proceso extraordinario está abierto hasta el 30/05/2027 ⇒ OPEN.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 1,
+							"max": 1,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200,
+					"maxExclusive": true
+				}
+			},
+			"disability": {
+				"state": "declined"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "ayto-escuela-infantil",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "OPEN",
+			"justification": [
+				{
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 2.1.a (Destinatarios)",
+					"reasoning": "Residencia en el municipio de Madrid (28079): requisito hard 'residir-madrid' = T."
+				},
+				{
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 2.1 (Destinatarios)",
+					"reasoning": "Hija de 1 año (nacida en 2025) ⇒ nivel 1-2 de primer ciclo: requisito hard 'hijo-primer-ciclo' = T (dependents con age < 3 ≥ 1)."
+				},
+				{
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 15.1.b y 15.3",
+					"reasoning": "El plazo ordinario (6–17/04/2026) cerró, pero el proceso extraordinario admite solicitudes en cada escuela hasta el 30/05/2027. A 06/10/2026: OPEN. Solo se llama si quedan vacantes tras agotar la lista de no admitidos ⇒ la disponibilidad de plaza queda en 'qué te falta' (uncovered) y el veredicto es 'posible', no 'probable'."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

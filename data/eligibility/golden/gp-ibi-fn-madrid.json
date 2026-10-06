@@ -1,0 +1,140 @@
+{
+	"id": "gp-ibi-fn-madrid",
+	"description": "Padre de 46 años empadronado en el municipio de Madrid (28079) desde 2008, casado, 4 hijos a cargo de 17, 14, 11 y 8 años (sin discapacidad), asalariado, vive en vivienda habitual en propiedad. Caso «posible»: los 3 requisitos comprobables pasan (empadronado en Madrid, titular de familia numerosa, vivienda no alquilada), pero quedan condiciones no comprobables con nuestras preguntas (ser sujeto pasivo del IBI de esa vivienda, uso real como vivienda habitual de la familia numerosa, valor catastral individualizado, título vigente el 1 de enero del devengo, solicitud si el título no es de la CM, tramo de valor catastral que fija el porcentaje).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2008,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 46,
+					"max": 46,
+					"maxExclusive": false
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": 1980
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 17,
+							"max": 17,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 14,
+							"max": 14,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 11,
+							"max": 11,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 8,
+							"max": 8,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 25200,
+					"max": null
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "ayto-ibi-familia-numerosa",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20231228-42-ibi",
+					"locator": "Art. 12.3",
+					"reasoning": "Empadronado en el municipio de Madrid (28079) ⇒ within_territory municipio 28079 = T. La bonificación la aplica de oficio la Administración municipal en el recibo del impuesto."
+				},
+				{
+					"sourceId": "bocm-20231228-42-ibi",
+					"locator": "Art. 12.1",
+					"reasoning": "Declara ser familia numerosa (4 hijos a cargo) ⇒ familyType eq «familia-numerosa» = T. Que el título estuviera vigente en el devengo (1 de enero) no se comprueba: queda en uncovered."
+				},
+				{
+					"sourceId": "bocm-20231228-42-ibi",
+					"locator": "Art. 12.1 y 12.6",
+					"reasoning": "housingStatus = propiedad ⇒ not_in [«alquiler»] = T: la bonificación recae sobre el IBI de la vivienda habitual del sujeto pasivo, y no está de alquiler. La titularidad exacta (sujeto pasivo / copropiedad) queda en uncovered."
+				},
+				{
+					"sourceId": "atm-ibi-familia-numerosa",
+					"locator": "Requisitos",
+					"reasoning": "La bonificación se mantiene mientras se mantenga la condición de familia numerosa ⇒ procedimiento permanente ⇒ deadlineState ROLLING."
+				},
+				{
+					"sourceId": "bocm-20231228-42-ibi",
+					"locator": "Art. 12.1-12.6",
+					"reasoning": "Veredicto «posible» (no «probable») porque quedan condiciones no comprobables: ser sujeto pasivo del IBI de esa vivienda, uso real como vivienda habitual de la familia numerosa, valor catastral individualizado y su tramo (fija el porcentaje 10/30/50/80/90 %), título vigente en el devengo y solicitud cuando no se aplique de oficio."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

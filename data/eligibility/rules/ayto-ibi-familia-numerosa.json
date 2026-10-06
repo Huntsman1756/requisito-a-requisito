@@ -1,0 +1,269 @@
+{
+	"benefitSlug": "ayto-ibi-familia-numerosa",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20231228-42-ibi",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/12/28/BOCM-20231228-42.PDF",
+			"title": "Ordenanza 5/2023, de 22 de diciembre — modificación de la Ordenanza Fiscal reguladora del Impuesto sobre Bienes Inmuebles del Ayuntamiento de Madrid (redacción actual del art. 12, bonificación por familia numerosa) (BOCM n.º 308, 28/12/2023, págs. 135-141)"
+		},
+		{
+			"id": "bocm-20241227-61-ibi",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/12/27/BOCM-20241227-61.PDF",
+			"title": "Ordenanza 4/2024, de 23 de diciembre — modificación de la Ordenanza Fiscal reguladora del Impuesto sobre Bienes Inmuebles (nueva redacción del último párrafo del art. 12.1, tras la Sentencia TSJM 329/2024) (BOCM n.º 308, 27/12/2024, págs. 478-481)"
+		},
+		{
+			"id": "bocm-20251226-63-ibi",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/12/26/BOCM-20251226-63.PDF",
+			"title": "Ordenanza 9/2025, de 22 de diciembre — última modificación vigente de la Ordenanza Fiscal del IBI (en vigor desde el 01/01/2026; modifica los arts. 4, 8, 9, 13 y 15 bis, sin tocar el art. 12) (BOCM n.º 307, 26/12/2025)"
+		},
+		{
+			"id": "atm-ibi-familia-numerosa",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://agenciatributaria.madrid.es/portales/contribuyente/es/Impuestos-tasas-y-precios-publicos/Bienes-Inmuebles-IBI-/Exenciones-bonificaciones-y-supuestos-de-no-sujecion/Bonificacion-por-familia-numerosa-IBI-Informacion/?vgnextchannel=82d5990d45a81810VgnVCM1000001d4a900aRCRD&vgnextfmt=default&vgnextoid=642635a0d1081810VgnVCM2000001f4a900aRCRD",
+			"title": "Agencia Tributaria Madrid, Portal del Contribuyente — «Bonificación por familia numerosa. IBI. Información»"
+		},
+		{
+			"id": "atm-ibi-bonificaciones-tramite",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://agenciatributaria.madrid.es/portales/contribuyente/es/Tramites/Impuesto-sobre-Bienes-Inmuebles-IBI-Bonificaciones-y-exenciones/?vgnextfmt=default&vgnextoid=50fcdeea22581810VgnVCM1000001d4a900aRCRD&vgnextchannel=97d608f9be116810VgnVCM1000001d4a900aRCRD",
+			"title": "Agencia Tributaria Madrid, Portal del Contribuyente — «Impuesto sobre Bienes Inmuebles (IBI). Bonificaciones, exenciones y supuestos de no sujeción» (trámite)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "empadronado-madrid",
+			"hard": true,
+			"label": "Estar empadronado en el municipio de Madrid — la bonificación se aplica de oficio en el recibo del IBI del Ayuntamiento de Madrid",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.3 (redacción dada por la Ordenanza 5/2023, art. único.Dos)",
+				"excerpt": "en el municipio de Madrid, aplicándose de oficio por la Administración municipal en el recibo del impuesto",
+				"excerptSha256": "8dfe5f73cdc99ff824852ec6d4df8ad82c4e1f0ba87764008a8055d996d3b772"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28079"
+				}
+			}
+		},
+		{
+			"id": "titulo-familia-numerosa",
+			"hard": true,
+			"label": "Ser titular de familia numerosa — el título debe estar vigente en el momento del devengo del impuesto (1 de enero del ejercicio del recibo)",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.1 (redacción dada por la Ordenanza 5/2023, art. único.Dos)",
+				"excerpt": "Los sujetos pasivos del impuesto que, en el momento del devengo, ostenten la condición de titulares de familia numerosa, conforme lo establecido en la Ley 40/2003",
+				"excerptSha256": "1ae7511732e8ee20be43d5a3084fe67f740f60ddaa4d3758bd3aac4e0786f16c"
+			},
+			"condition": {
+				"field": "familyType",
+				"op": "eq",
+				"value": "familia-numerosa"
+			}
+		},
+		{
+			"id": "vivienda-habitual-propia",
+			"hard": true,
+			"label": "Que tu vivienda habitual no sea de alquiler: la bonificación va sobre el recibo del IBI del sujeto pasivo (propietario, usufructuario o titular de un derecho real) — si vives de alquiler, ese recibo no es tuyo",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.1 y 12.6 (redacción dada por la Ordenanza 5/2023, art. único.Dos)",
+				"excerpt": "El cambio de domicilio de la vivienda habitual del sujeto pasivo determinará la pérdida del derecho a la bonificación en cuanto a dicho inmueble",
+				"excerptSha256": "f3dd126d42ca6c2af6f3df14b031196580e69a5a5d987344e29dec2ccef75a9e"
+			},
+			"condition": {
+				"field": "housingStatus",
+				"op": "not_in",
+				"value": [
+					"alquiler"
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "sujeto-pasivo-titularidad",
+			"label": "Debes ser sujeto pasivo del IBI de la vivienda habitual (propietario, usufructuario o titular de otro derecho real): la bonificación va en tu recibo y, si hay varios sujetos pasivos, solo cubre el porcentaje de quienes figuren en el título de familia numerosa (salvo nulidad, separación o divorcio, que cubre el porcentaje de ambos cónyuges) — no comprobamos la titularidad catastral",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.5",
+				"excerpt": "solo se aplicará sobre el porcentaje del derecho que corresponda a los sujetos in- cluidos en el título de familia numerosa",
+				"excerptSha256": "1c34965f18ffeafd93e80788e811a10afff02ce5df2799a3fa031c1d5879aac5"
+			}
+		},
+		{
+			"id": "vivienda-habitual-real",
+			"label": "La vivienda debe ser la habitual de la familia numerosa — unidad urbana de uso residencial destinada, exclusivamente, a su necesidad permanente de vivienda; el Ayuntamiento presume habitual la que figure en tu empadronamiento — no comprobamos el uso real",
+			"citation": {
+				"sourceId": "bocm-20241227-61-ibi",
+				"locator": "Art. 12.1, último párrafo (redacción vigente tras la Ordenanza 4/2024, art. único.Tres)",
+				"excerpt": "se entenderá por vivienda habitual aquella unidad urbana de uso residen- cial destinada, exclusivamente, a satisfacer la necesidad permanente de vivienda de la fa- milia numerosa",
+				"excerptSha256": "059f16c29103b349f7413fe2ef3564f74fb7d6e392537de53bd019a936f5c644"
+			}
+		},
+		{
+			"id": "valor-catastral-individualizado",
+			"label": "El valor catastral de la vivienda habitual debe estar individualizado — si el inmueble carece de datos catastrales, basta aportar la escritura de propiedad; tampoco comprobamos en qué tramo de valor catastral estás (afecta al porcentaje)",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.2",
+				"excerpt": "que el valor catastral de la vi- vienda habitual esté individualizado",
+				"excerptSha256": "c33511f24a15cff40f7bde80b8933f504f99680a1e4d745c9056cec1e4851e4b"
+			}
+		},
+		{
+			"id": "fn-vigente-1-enero",
+			"label": "El título debe estar vigente el 1 de enero del ejercicio del recibo: la bonificación se aplica desde el ejercicio siguiente a adquirir la condición de familia numerosa y cesa cuando se pierde — nosotros solo sabemos si la tienes hoy",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.3, primer párrafo",
+				"excerpt": "a partir del ejercicio siguiente a aquel en que se hubiera adquirido la condición de familia numerosa, cesando su aplicación cuando se pierda dicha condición",
+				"excerptSha256": "c5c0e9dc795d7f14647f00750ad6eadf66028718fac29442fdfaf7de6e6e1ec1"
+			}
+		},
+		{
+			"id": "solicitud-si-no-oficio",
+			"label": "La bonificación se aplica de oficio; si no consta en tu recibo (por ejemplo, si tu título no lo expidió la Comunidad de Madrid), hay que presentar una solicitud — concedida una vez, no hay que reiterarla en las renovaciones del título",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.3, segundo párrafo",
+				"excerpt": "podrá solicitarse por la persona interesada",
+				"excerptSha256": "c4b6b5e269749dd0c729608071febc830c5396e79dbb7844b04c269180ef02c8"
+			}
+		},
+		{
+			"id": "porcentaje-categoria-valor",
+			"label": "El porcentaje que te corresponde depende de la categoría de tu familia numerosa (general o especial) y del valor catastral de la vivienda: 90 % hasta 204.000 € en ambas categorías; 50 % general / 80 % especial entre 204.000 y 408.000 €; 10 % / 30 % por encima de 408.000 €",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.4",
+				"excerpt": "se determinará en función de la categoría de la familia numerosa",
+				"excerptSha256": "cb4276d6aa3013da1a77c25a90f04c6c0c3ccf75901bd39d1590ff5aeaa17f76"
+			}
+		},
+		{
+			"id": "cambio-domicilio",
+			"label": "Si cambias de vivienda habitual pierdes la bonificación en ese inmueble; se aplicará a la nueva vivienda desde el ejercicio siguiente al cambio, siempre que sigas cumpliendo los requisitos",
+			"citation": {
+				"sourceId": "bocm-20231228-42-ibi",
+				"locator": "Art. 12.6, segundo párrafo",
+				"excerpt": "El cambio de domicilio de la vivienda habitual del sujeto pasivo determinará la pérdida del derecho a la bonificación",
+				"excerptSha256": "b8f66e53ebdd94cc838c461c10bd3279575b303c2664acdadf28154be7573618"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "atm-ibi-familia-numerosa",
+				"locator": "Requisitos",
+				"excerpt": "Se mantendrá mientras se mantenga la condición de familia numerosa",
+				"excerptSha256": "b114f36bc8f9fd4f07d74f3b9ced3654884c0d2ff0c5732d4c773c1ae8b2077e"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Madrid — Agencia Tributaria Madrid (Organismo Autónomo)",
+			"url": "https://agenciatributaria.madrid.es/portales/contribuyente/es/Tramites/Impuesto-sobre-Bienes-Inmuebles-IBI-Bonificaciones-y-exenciones/?vgnextfmt=default&vgnextoid=50fcdeea22581810VgnVCM1000001d4a900aRCRD&vgnextchannel=97d608f9be116810VgnVCM1000001d4a900aRCRD",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "atm-ibi-bonificaciones-tramite",
+				"locator": "Cómo realizar el trámite",
+				"excerpt": "Completa y presenta la solicitud a través del enlace disponible en \"Tramitar en línea\"",
+				"excerptSha256": "1fe4765d3b11f49a7cebc0d176738e5ce9b9fcf494725b79d710f851f812f164"
+			}
+		},
+		"documents": [
+			{
+				"id": "instancia-solicitud",
+				"label": "Solicitud (por la sede tributaria o en las oficinas de registro) — solo si la bonificación no consta ya aplicada de oficio en tu recibo o tu título no lo expidió la Comunidad de Madrid",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "atm-ibi-familia-numerosa",
+					"locator": "Requisitos",
+					"excerpt": "Si no consta aplicada en el recibo, la persona interesada deberá presentar solicitud",
+					"excerptSha256": "9d1a5ee2e48d2a3c3858569dca33d1ffeb25f432593143e4cdd1b39a89192d59"
+				}
+			},
+			{
+				"id": "carne-fn",
+				"label": "Certificado o fotocopia del carné vigente de familia numerosa — solo si tienes que pedir la bonificación; concedida una vez, no se reitera en las sucesivas renovaciones del título",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20231228-42-ibi",
+					"locator": "Art. 12.3, segundo párrafo",
+					"excerpt": "fotocopia del carné vigente de familia numerosa",
+					"excerptSha256": "f42fd8855a2dcf89339d6accfec2281f40fd486ff74e148f8f76c0008e926e72"
+				}
+			},
+			{
+				"id": "doc-representacion",
+				"label": "Solo si actúas por medio de representante: impreso de otorgamiento de representación",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "atm-ibi-bonificaciones-tramite",
+					"locator": "Cómo realizar el trámite — Observaciones",
+					"excerpt": "debe adjuntar el impreso de otorgamiento de representación",
+					"excerptSha256": "8f037c909b3e54268fc10246681525a51d2290847b718edc986eca697f9b7017"
+				}
+			},
+			{
+				"id": "doc-escritura-sin-catastro",
+				"label": "Solo si el inmueble carece de datos catastrales: escritura de propiedad",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "atm-ibi-familia-numerosa",
+					"locator": "Requisitos",
+					"excerpt": "Si el inmueble careciese de datos catastrales, basta la aportación de la escritura de propiedad",
+					"excerptSha256": "94664bc072eeb7d3644528dc9dd4f79303553e41a4d489b2477854bdaf14cfc0"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "annual",
+		"citation": {
+			"sourceId": "bocm-20231228-42-ibi",
+			"locator": "Art. 12.4 (cuadro de porcentajes por valor catastral y categoría)",
+			"excerpt": "Hasta 204.000 euros 90% 90% Superior a 204.000 euros y hasta 408.000 euros 50% 80% Superior a 408.000 euros 10% 30%",
+			"excerptSha256": "694a072846d909785dd5740e1debe0235a0c11fd24cf9aebf453b3a6c3c2c230"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"vivienda",
+		"familia_infancia"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-7.md"
+	}
+}

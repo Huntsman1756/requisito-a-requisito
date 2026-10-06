@@ -1,0 +1,348 @@
+{
+	"benefitSlug": "ayto-escuela-infantil",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boam-20260324-1031-admision-eim-2627",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.b4c91589e7f6a5d829da39e5a8a409a0/?vgnextoid=bcadeb00a0bfc910VgnVCM100000891ecb1aRCRD&vgnextchannel=257865dd72ede410VgnVCM1000000b205a0aRCRD&vgnextfmt=default",
+			"title": "BOAM nº 10092/1031 (24/03/2026) — Resolución de 13 de marzo de 2026 del Director General de Educación, Juventud y Voluntariado: convocatoria admisión EIM Ayuntamiento de Madrid 2026/2027"
+		},
+		{
+			"id": "boam-20260324-bases-eim-2627",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://sede.madrid.es/UnidadesDescentralizadas/UDCBOAM/2023Junio/Areas/PolSocialesFamIgualdad/A%C3%B1o%202026/Escuelas%20Infantiles%2026-27/ANEXO%20BASES.pdf",
+			"title": "Anexo a la Resolución de 13/03/2026 — Bases de la convocatoria de admisión primer ciclo Educación Infantil red municipal de escuelas infantiles 2026/2027 (BOAM 10092)"
+		},
+		{
+			"id": "boam-20260324-instrucciones-eim-2627",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://sede.madrid.es/UnidadesDescentralizadas/UDCBOAM/2023Junio/Areas/PolSocialesFamIgualdad/A%C3%B1o%202026/Escuelas%20Infantiles%2026-27/INSTRUCCIONES.pdf",
+			"title": "Anexo a la Resolución de 13/03/2026 — Instrucciones generales de la solicitud de admisión EIM 2026/2027 (BOAM 10092)"
+		},
+		{
+			"id": "boam-20240906-anexo-cuotas-eim-2425",
+			"rank": 1,
+			"documentType": "resolution",
+			"url": "https://sede.madrid.es/UnidadesDescentralizadas/UDCBOAM/2023Junio/Areas/PolSocialesFamIgualdad/PERSONAL%202024/LIBRE%20DESIGNACI%C3%93N/LD-16-007-2024/1.3%20ANEXO%20I%20CUOTAS%20BOAM.pdf",
+			"title": "Anexo a la Resolución de 20/08/2024 — Instrucción para el establecimiento de cuotas en las escuelas infantiles de la red municipal 2024/2025 (BOAM nº 9711, 06/09/2024; última instrucción de cuotas localizada)"
+		},
+		{
+			"id": "boam-20250307-bases-eim-2526",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://sede.madrid.es/UnidadesDescentralizadas/UDCBOAM/2023Junio/Areas/PolSocialesFamIgualdad/A%C3%B1o%202025/Convocatoria_Admisi%C3%B3n_Escuelas_Infantiles_25-26/2%201.7%20BOAM%20ANEXO%20RESOLUCI%C3%93N%20ADMISI%C3%93N%2025-26.pdf",
+			"title": "Anexo a la Resolución de 27/02/2025 — Bases convocatoria admisión EIM 2025/2026 (BOAM nº 9834, 07/03/2025)"
+		},
+		{
+			"id": "boam-20240307-bases-eim-2425",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://sede.madrid.es/UnidadesDescentralizadas/UDCBOAM/2023Junio/Areas/PolSocialesFamIgualdad/A%C3%B1o%202024/2%20BOAM%20ANEXO%20RESOLUCI%C3%93N%20ADMISI%C3%93N%202024-2025.pdf",
+			"title": "Anexo a la Resolución de 4/03/2024 — Bases convocatoria admisión EIM 2024/2025 (BOAM nº 9587, 07/03/2024)"
+		},
+		{
+			"id": "sede-ayto-admision-eim-2627",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextchannel=385737c190180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default&vgnextoid=9605abeea25eb910VgnVCM100000891ecb1aRCRD",
+			"title": "Sede electrónica Ayuntamiento de Madrid — Solicitud de admisión en escuelas infantiles del Ayuntamiento de Madrid. Curso 2026-2027"
+		}
+	],
+	"requirements": [
+		{
+			"id": "residir-madrid",
+			"hard": true,
+			"label": "El menor debe residir en el municipio de Madrid (o prever residir antes del inicio del curso; hay excepciones para no residentes — ver ⚠)",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1.a (Destinatarios)",
+				"excerpt": "los menores residentes en el municipio de Madrid o que prevean residir con anterioridad a la fecha de inicio del curso escolar",
+				"excerptSha256": "2b527f0afc9378e092f0c2342ef910fcd3de40d618d3aff5d857a0d07602533e"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28079"
+				}
+			}
+		},
+		{
+			"id": "hijo-primer-ciclo",
+			"hard": true,
+			"label": "Tener a cargo una niña o niño en edad de primer ciclo de Educación Infantil (nacidos en 2024, 2025 o 2026; los de 2023 solo con permanencia acreditada, y los «no nacidos» con parto previsto antes del 01/01/2027 — ver ⚠)",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1 (Destinatarios)",
+				"excerpt": "(nacidos en 2024, 2025 y 2026 o de 2023 que precisen continuar en el primer ciclo de educación infantil por causas acreditadas)",
+				"excerptSha256": "27dc14df717d486417436d151675d0c5cf14664ecc2b291cb03a7dad9628cf9f"
+			},
+			"condition": {
+				"field": "dependents",
+				"op": "count_where_gte",
+				"count": 1,
+				"where": {
+					"field": "age",
+					"op": "lt",
+					"value": 3
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "nacimiento-previsto-2027",
+			"label": "También pueden pedir plaza los «no nacidos» con fecha probable de parto anterior al 1 de enero de 2027 (informe médico); el cuestionario solo recoge hijos ya nacidos",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1.b",
+				"excerpt": "los menores cuyo nacimiento se prevea para fecha anterior al 1 de enero de 2027, cuando así conste en informe médico emitido al efecto",
+				"excerptSha256": "ef67a46eb03e5f2c8f5c204511e829e8c152171ab85b2f4e155cdf1ccca2133a"
+			}
+		},
+		{
+			"id": "borde-nacidos-2023",
+			"label": "La convocatoria exige nacido en 2024 o posterior: un menor de 2 años nacido en oct–dic de 2023 solo entra si acredita permanencia en el ciclo; nuestra pregunta de edad no distingue ese borde",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1 (Destinatarios)",
+				"excerpt": "o de 2023 que precisen continuar en el primer ciclo de educación infantil por causas acreditadas",
+				"excerptSha256": "3105044c23298cba50f272c26e1ff86b6d074db2d2ff4a77a577a58c0027daf0"
+			}
+		},
+		{
+			"id": "excepciones-residencia",
+			"label": "Pueden solicitar sin residir en Madrid: menores con otro hermano/a escolarizado en 2026/2027 en una escuela de la red municipal (solo para esas escuelas) y menores a quienes se aplique la gratuidad del art. 72 del XII Convenio Colectivo (p. ej. progenitores que trabajan en la escuela)",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1.d y 2.1.e",
+				"excerpt": "no residiendo en Madrid, tengan otra hija o hijo escolarizado para el curso 2026/2027 en alguna de las escuelas de la red municipal de escuelas infantiles del Ayuntamiento de Madrid, únicamente para dichas escuelas",
+				"excerptSha256": "d8aabb0d93116b21f629f3bf603422684fd941643bf6d49f678d92b13b46aad5"
+			}
+		},
+		{
+			"id": "adopcion-acogimiento",
+			"label": "También pueden pedir plaza menores en trámite de adopción o acogimiento familiar, condicionado a aportar la filiación al formalizar la matrícula",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1.c",
+				"excerpt": "Podrá solicitarse plaza para los menores en trámite de adopción o acogimiento familiar condicionada a la presentación de su filiación en el momento de efectuar la matrícula",
+				"excerptSha256": "f10d11fd978bf35e531f22ef48ab98ab141c4733ccdf1f49d7a8c6d741a76830"
+			}
+		},
+		{
+			"id": "incorporacion-16-semanas",
+			"label": "La incorporación de los nacidos en 2026 se realiza a partir de las 16 semanas cumplidas (la plaza puede reservarse hasta los seis meses comunicándolo a la escuela)",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.2",
+				"excerpt": "La incorporación a las escuelas infantiles municipales de las niñas y niños nacidos en el año 2026 se realizará a partir de las 16 semanas cumplidas",
+				"excerptSha256": "c90b4755b9c5e6c31382b2dce6709e3c70e1b5b28a02fb9c3f7949c1b7dbb743"
+			}
+		},
+		{
+			"id": "proceso-extraordinario",
+			"label": "El plazo ordinario cerró el 17/04/2026. Hoy solo cabe el proceso extraordinario: solicitud en cada escuela (o Registro electrónico), por riguroso orden de entrega, sin baremo, y solo se llama cuando quedan vacantes tras agotar la lista de no admitidos",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 15.3.a–c",
+				"excerpt": "Las solicitudes admitidas en cada escuela en el proceso extraordinario se incorporarán a la lista de no admitidos por riguroso orden de entrega. En este proceso no se aplica el baremo de admisión.",
+				"excerptSha256": "286686ce227b4d48b3349266492e9cd3f94eaa6e2fce067c65d2213d70f1d717"
+			}
+		},
+		{
+			"id": "baremo-prioridad",
+			"label": "En el proceso ordinario, cuando hay más solicitudes que vacantes se puntúa (situación laboral, renta per cápita de la unidad familiar sobre el IRPF 2024, hermanos, proximidad, familia numerosa o monoparental, discapacidad, parto múltiple, acogimiento…): cumplir los requisitos no garantiza plaza",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 13.1",
+				"excerpt": "Cuando el número de solicitantes para ocupar una plaza sea superior al de las vacantes existentes, se resolverá el proceso mediante los criterios de baremación y desempate establecidos en este artículo",
+				"excerptSha256": "64d754cf2736fb310258b7dfe3484716b923e805518e440d4944204113ad2cc4"
+			}
+		},
+		{
+			"id": "solicitud-unica",
+			"label": "Se presenta una única solicitud por niña o niño con hasta cuatro escuelas por orden de preferencia; presentar más de una solicitud puede ser motivo de exclusión",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 21.1 (capítulo III, vía NEE; la misma regla figura en el apartado 9 para la vía ordinaria)",
+				"excerpt": "Se presentará una única solicitud por niña o niño en la que se podrán indicar por orden de preferencia hasta cuatro escuelas infantiles de la red municipal",
+				"excerptSha256": "24f438a899a27bd63bc2c29120c578ca8bdc728c6c7dd308556ecf6e07bf2154"
+			}
+		},
+		{
+			"id": "cuotas-comedor-horario",
+			"label": "La escolaridad es gratuita. Solo se paga el comedor (96 €/mes, salvo exención o reducción) y el horario ampliado voluntario (12 €/mes por cada tramo de media hora, 7:30–9:00 y 16:00–17:30): familia numerosa especial exenta de horario ampliado, general −50 %, y exención del 100 % en supuestos de vulnerabilidad. Cuotas según la instrucción anual — la última localizada es la de 2024/2025; la de 2026/2027 puede variar",
+			"citation": {
+				"sourceId": "boam-20240906-anexo-cuotas-eim-2425",
+				"locator": "Instrucción de cuotas 2024/2025, apdos. 2.1–2.3 y 3",
+				"excerpt": "La cuota de comedor será abonada por todas las familias a excepción de aquellas que resultan exentas o beneficiarias de reducción y será de 96 euros mensuales",
+				"excerptSha256": "bbb9a93faae7418410c9fd80f02e0708df4217cdf33c25e898b7434da7f5da37"
+			}
+		},
+		{
+			"id": "via-nee",
+			"label": "El alumnado con necesidades educativas especiales tiene vía propia (capítulo III): reserva de plazas, baremo y calendario específicos (listas NEE el 01/06/2026)",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, capítulo III, apdo. 21.1",
+				"excerpt": "Las escuelas remitirán al Área de Gobierno del Ayuntamiento de Madrid competente en materia educativa las solicitudes que correspondan a alumnas y alumnos con necesidades educativas especiales",
+				"excerptSha256": "676ec919e2480a9f40fa28f5a8fde070af8fe553ff441b343aa9e8faa757a0ad"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"closesAt": "2027-05-30",
+			"rolling": false,
+			"recurrence": "annual",
+			"businessDays": false,
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 15.3 (proceso extraordinario; abierto desde el día siguiente a la resolución de listas definitivas)",
+				"excerpt": "La admisión de solicitudes de proceso extraordinario en todas y cada una de las escuelas finalizará el 30 de mayo de 2027.",
+				"excerptSha256": "2d4902411ecebec295de98239aab1324b768136469efc555473031efa5e98177"
+			},
+			"previousCalls": [
+				{
+					"opensAt": "2024-04-03",
+					"closesAt": "2024-04-16",
+					"citation": {
+						"sourceId": "boam-20240307-bases-eim-2425",
+						"locator": "Bases 2024/2025, calendario de admisión ordinaria",
+						"excerpt": "Plazo presentación solicitudes 3 a 16 de abril de 2024",
+						"excerptSha256": "a985b70115f9e4c64a972db119c9f6b5999be1a258a3258c8a2af5fe962d40ec"
+					}
+				},
+				{
+					"opensAt": "2025-03-12",
+					"closesAt": "2025-03-26",
+					"citation": {
+						"sourceId": "boam-20250307-bases-eim-2526",
+						"locator": "Bases 2025/2026, calendario de admisión ordinaria",
+						"excerpt": "Plazo presentación solicitudes 12 a 26 de marzo de 2025",
+						"excerptSha256": "8c5b88afb641654138a3b6c4ad570c79ab80d2491460bc8ec91075104a45022a"
+					}
+				},
+				{
+					"opensAt": "2026-04-06",
+					"closesAt": "2026-04-17",
+					"citation": {
+						"sourceId": "boam-20260324-bases-eim-2627",
+						"locator": "Bases 2026/2027, calendario de admisión ordinaria",
+						"excerpt": "Plazo presentación solicitudes 6 a 17 de abril de 2026",
+						"excerptSha256": "49d0d2a1220c0f106745ee7ccecbdec2518dd05ee8db3dd0e9b6dbb666a708ef"
+					}
+				}
+			]
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Madrid — Dirección General de Educación, Juventud y Voluntariado (Área de Gobierno de Políticas Sociales, Familia e Igualdad)",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextchannel=385737c190180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default&vgnextoid=9605abeea25eb910VgnVCM100000891ecb1aRCRD",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 15.3.a (proceso extraordinario vigente hoy)",
+				"excerpt": "La solicitud podrá hacerse presencialmente o a través de cualquier Registro, así como a través del Registro electrónico del Ayuntamiento de Madrid",
+				"excerptSha256": "8a19a57615fc5a8a2ed1f656ff5df420d1880f0056cf4783a7916430314bce75"
+			}
+		},
+		"documents": [
+			{
+				"id": "impreso-solicitud",
+				"label": "Impreso de solicitud debidamente cumplimentado (modelo normalizado; en el proceso extraordinario, el modelo específico publicado en www.madrid.es/escuelasinfantiles)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 10.1.a",
+					"excerpt": "Impreso de solicitud debidamente cumplimentado",
+					"excerptSha256": "5ac6e725706b12e4a1906cb1fde23781f6df891be4b1eb80a2c03b2462354ee9"
+				}
+			},
+			{
+				"id": "anexo-1-firma",
+				"label": "Anexo I: firma del segundo progenitor, o acreditación de monoparentalidad, o declaración de imposibilidad de firma",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 10.1.b",
+					"excerpt": "Anexo I completando uno de los tres supuestos que se indican a continuación",
+					"excerptSha256": "c30df4c5fe5584e2041d8fe9a7ff107454cbc7712de481020a1600cb8e23dbe4"
+				}
+			},
+			{
+				"id": "filiacion-menor",
+				"label": "Acreditación de la filiación de la niña o niño (el certificado de nacimiento puede consultarse de oficio si lo autorizas)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 10.1.c",
+					"excerpt": "Acreditación de la filiación de la niña o niño para el que se solicita la plaza. Se podrá autorizar la consulta del certificado de nacimiento para niñas y niños nacidos en España",
+					"excerptSha256": "6e2e5066d951aa80adcffad76c8328591a9ecf637cd1712520553d1d3800bb4e"
+				}
+			},
+			{
+				"id": "documentacion-unidad-familiar",
+				"label": "Acreditación de todos los miembros de la unidad familiar (certificados de nacimiento, libro de familia, convenio regulador…), necesaria para el baremo y la renta per cápita",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "boam-20260324-bases-eim-2627",
+					"locator": "Bases, apdo. 10.2",
+					"excerpt": "Todos los miembros que la componen y las circunstancias que determinan la inclusión o no dentro de la unidad familiar deberán ser acreditados",
+					"excerptSha256": "92bcc0541eb3183418d11667e5ed27c5c44ad4e2d3a126c92aa4a7de82b55f2c"
+				}
+			},
+			{
+				"id": "certificado-medico-fpp",
+				"label": "Certificado/informe médico con fecha probable de parto (solo para menores no nacidos)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "sede-ayto-admision-eim-2627",
+					"locator": "Ficha del trámite — «¿A quién va dirigido?»",
+					"excerpt": "los menores cuyo nacimiento se prevea para fecha anterior al 1 de enero de 2027, cuando así conste en informe médico emitido al efecto",
+					"excerptSha256": "ef67a46eb03e5f2c8f5c204511e829e8c152171ab85b2f4e155cdf1ccca2133a"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "fixed",
+		"minEur": 0,
+		"maxEur": 0,
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boam-20260324-1031-admision-eim-2627",
+			"locator": "Resolución, exposición de motivos (Ordenanza EIM modificada en 2019)",
+			"excerpt": "contempla la gratuidad de la cuota de escolaridad para el curso 2019/2020 y sucesivos",
+			"excerptSha256": "192494540b8ddef0682ed3018832cebcbd1b65de928da2e92318cec949c17153"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia",
+		"educacion"
+	],
+	"lifeEvents": [
+		"tener_hijo"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-7.md"
+	}
+}

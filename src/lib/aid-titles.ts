@@ -42,6 +42,18 @@ export const AID_TITLES: Record<string, string> = {
 	"asignacion-hijo-a-cargo": "Asignación por hijo o menor a cargo",
 	"pension-viudedad": "Pensión de viudedad",
 	"madrid-ayudas-alquiler-plan-estatal": "Ayuda al alquiler (Plan Estatal de Vivienda)",
+	"cese-actividad-autonomos": "Cese de actividad de autónomos",
+	"pension-incapacidad-permanente": "Pensión de incapacidad permanente",
+	"pension-jubilacion-contributiva": "Pensión de jubilación contributiva",
+	"pension-orfandad": "Pensión de orfandad",
+	"ayto-emergencia-social":
+		"Ayudas económicas de emergencia social (Ayuntamiento de Madrid)",
+	"ayto-escuela-infantil":
+		"Escuelas infantiles municipales (Ayuntamiento de Madrid)",
+	"ayto-ibi-familia-numerosa":
+		"Bonificación del IBI para familias numerosas (Ayuntamiento de Madrid)",
+	"ayto-tarjeta-azul-discapacidad":
+		"Tarjeta azul de transporte (personas con discapacidad, Madrid capital)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

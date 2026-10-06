@@ -1,0 +1,269 @@
+{
+	"benefitSlug": "ayto-emergencia-social",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-7.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20130704-64-ordenanza-presecon",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2013/07/04/BOCM-20130704-64.PDF",
+			"title": "Acuerdo del Pleno, de 26 de junio de 2013, por el que se aprueba la modificación de la Ordenanza reguladora del procedimiento de concesión de prestaciones sociales de carácter económico para situaciones de especial necesidad y/o emergencia social en los servicios sociales del Ayuntamiento de Madrid (BOCM n.º 157, pág. 188 ss.; texto vigente de los arts. 1, 2, 4, 6 a 12, 14, 15 c-f, 16 a 19, disposición adicional y anexo)"
+		},
+		{
+			"id": "bocm-20210419-56-ordenanza-5-2021",
+			"rank": 1,
+			"documentType": "modification",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/04/19/BOCM-20210419-56.PDF",
+			"title": "Acuerdo de 30 de marzo de 2021 del Pleno del Ayuntamiento de Madrid por el que se aprueba la Ordenanza 5/2021, de 30 de marzo, por la que se modifica la Ordenanza de las prestaciones económicas del sistema público de servicios sociales del Ayuntamiento de Madrid, de 28 de septiembre de 2004 (BOCM n.º 92, pág. 195-199; modifica arts. 4 d) y 15 a) y añade 16.3 y 17 bis)"
+		},
+		{
+			"id": "ayto-ordenanza-presecon-consolidada",
+			"rank": 4,
+			"documentType": "informational",
+			"url": "https://www.madrid.es/UnidadesDescentralizadas/ServSocialesYAtencionDependencia/ServiciosSociales/Especial%20Informativos/Tarjeta_Familias/Capitulos/ficheros/Ordenanza_prestac_econ.pdf",
+			"title": "Ordenanza de las prestaciones económicas del sistema público de servicios sociales del Ayuntamiento de Madrid, de 28 de septiembre de 2004 — texto consolidado de la base de datos normativa municipal (marginal ANM 2021\\337, última actualización publicada el 19/04/2021)"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_12P"
+	],
+	"requirements": [
+		{
+			"id": "empadronado-madrid",
+			"hard": true,
+			"label": "Estar empadronado/a en el municipio de Madrid (en el distrito al que se dirija la solicitud). La ordenanza solo prevé excepciones justificadas en informe social municipal",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 12.2 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "Estar empadronado en el Distrito al cual se dirige la solicitud o en el municipio de Madrid en las solicitudes a tramitar por el Área de Gobierno competente en materia de servicios sociales, salvo, en ambos supuestos, en situaciones excepcionales justificadas en el informe social municipal.",
+				"excerptSha256": "8736f726744ed8a2124e52061fd42023d1685a7275fb906319e0ac646ee17afc"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28079"
+				},
+				"label": "estás empadronado/a en la ciudad de Madrid (28079)"
+			}
+		},
+		{
+			"id": "mayor-edad",
+			"hard": true,
+			"timeDependent": "increasing",
+			"label": "Ser mayor de edad. Los menores solo acceden si están emancipados, circunstancia que no podemos comprobar aquí",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 12.1 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "Ser mayor de edad o menor emancipado.",
+				"excerptSha256": "1d4190d08e159b1c3856b3680eb4775ffa10d1ba6106999ed1d4202bba92ee11"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 18
+			}
+		},
+		{
+			"id": "carencia-recursos",
+			"hard": false,
+			"label": "Acreditar la situación de necesidad (carencia de medios económicos): la ordenanza no fija un umbral de ingresos — lo pondera el baremo del trabajador social. Como referencia orientativa usamos ingresos anuales por debajo de 1 × IPREM (7.200 €/año (IPREM de 12 pagas))",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 12.3 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "Acreditar la situación de necesidad.",
+				"excerptSha256": "b09738c16da1d3b2b971af0b8cf246afad3cb8d9609a35cba8dc50d3dc1726d4"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_12P"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "situacion-emergencia-social",
+			"label": "Debe concurrir una situación de emergencia social o de especial necesidad: una necesidad económica coyuntural y urgente (carencia de medios para alimentación, alojamiento, salud, vestido, higiene u otras). Lo valora un trabajador social, no lo podemos comprobar aquí",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 8.1 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "Las ayudas económicas de emergencia social son aquellas que están dirigidas a facilitar la superación de situaciones en las que concurra una necesidad económica coyuntural y urgente",
+				"excerptSha256": "3d4dde884d5bc1c90a330d8ade0fcdc9cc38f8cc968ee75e6322f5c022708bc1"
+			}
+		},
+		{
+			"id": "valoracion-trabajador-social",
+			"label": "La concesión exige valoración previa del trabajador social de tu Centro de Servicios Sociales y un diseño de intervención social: la ayuda es un instrumento dentro de ese proceso, no un derecho subjetivo automático",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 4 b) (redacción de la modificación de 26/06/2013)",
+				"excerpt": "Que la necesidad objeto de la ayuda esté valorada por el trabajador social de un Centro de Servicios Sociales e integrada en un proceso de intervención social.",
+				"excerptSha256": "13896ab5d1bde38e21921a038fa10bd8e37089283eb83d6e92bc8615bb10a99b"
+			}
+		},
+		{
+			"id": "aceptacion-diseno-intervencion",
+			"label": "Debes aceptar expresamente las condiciones que figuren en el diseño de intervención social que elabore el trabajador social (compromisos de seguimiento incluidos; el incumplimiento extingue la ayuda)",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 12.5 (redacción de la modificación de 26/06/2013; el guion «di- seño» reproduce el corte tipográfico del PDF oficial)",
+				"excerpt": "Aceptación expresa, por parte del usuario, de las condiciones que figuren en el di- seño de intervención social",
+				"excerptSha256": "958178f63ee3d73d35de29738e0c8c450ff46990f62ef6dab51eb507dee612b9"
+			}
+		},
+		{
+			"id": "excepcion-empadronamiento",
+			"label": "Si estás en una situación excepcional (p. ej. sin hogar o urgencia vital), el requisito de empadronamiento puede dispensarse si lo justifica el informe social municipal; el canal entonces es SAMUR Social o los centros de servicios sociales",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 12.2 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "salvo, en ambos supuestos, en situaciones excepcionales justificadas en el informe social municipal.",
+				"excerptSha256": "c9fe2ef66e8f5cc8a82c7d16a1b2e0d11239ee6e5e8b3ac8fae180e8145dc7ef"
+			}
+		},
+		{
+			"id": "baremo-sin-umbral-fijo",
+			"label": "No hay umbral de ingresos publicado: la necesidad se puntúa con un baremo profesional (tipología familiar, situación socioeconómica, riesgo de exclusión y proceso o emergencia, hasta 10 puntos) aplicado por el trabajador social",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, disposición adicional (redacción de la modificación de 26/06/2013)",
+				"excerpt": "los criterios de valoración que figuran en el anexo, con arreglo a una escala validada y estandarizada",
+				"excerptSha256": "ae91d44c20e462c5d3623b55fe1d082cfd57f0a793ce9649af788d793533ab69"
+			}
+		},
+		{
+			"id": "incompatibilidad-mismo-concepto",
+			"label": "No se conceden ayudas por el mismo concepto que ya haya cubierto otra Administración u organismo público, salvo que la ayuda concedida no solventara la necesidad (podría complementarse)",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 6.2 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "No podrán otorgarse ayudas por el mismo concepto que hayan sido concedidas por otra Administración",
+				"excerptSha256": "e1de3e87d36bde6689c35e4e804eaf722ac76ee31c378279a262f8f41c92ae14"
+			}
+		},
+		{
+			"id": "documentacion-emergencia-flexible",
+			"label": "En ayudas de emergencia social o situaciones especialmente graves, si la documentación no puede aportarse por causas ajenas al solicitante, se puede dar curso a la solicitud con el compromiso de aportarla antes de la propuesta de resolución",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 14.6 (redacción de la modificación de 26/06/2013)",
+				"excerpt": "se podrá dar curso a la solicitud con el compromiso de aportar dicha documentación",
+				"excerptSha256": "834d70410b8d3833407b0aa5d7e3464ded12db936d53ae1b173afdd1801dd615"
+			}
+		},
+		{
+			"id": "cuantia-y-plazo-por-resolucion",
+			"label": "La cuantía y la duración de la ayuda se fijan en el diseño de intervención social y en la resolución; como regla general la ayuda cubre como máximo el 90 por ciento del coste, pero en emergencia social o situaciones especialmente graves puede cubrirse el total",
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 15 c) (redacción de la modificación de 26/06/2013)",
+				"excerpt": "con mención de la modalidad de ayuda y del plazo de duración",
+				"excerptSha256": "ffae20bfc58503939e9706cf00bf96e79d961c69804c7b89a4d05a6152890173"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20130704-64-ordenanza-presecon",
+				"locator": "Ordenanza, art. 15 e) (redacción de la modificación de 26/06/2013)",
+				"excerpt": "en el caso de las ayudas económicas de emergencia social, será de cinco días naturales",
+				"excerptSha256": "6ef38d36e697f3401cf9295aeec2f490c6eb7a1c74f343ecf9064910918bd6da"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Madrid — Área de Gobierno competente en materia de servicios sociales (Centros de Servicios Sociales de los distritos; para urgencias, SAMUR Social)",
+			"url": "https://sede.madrid.es/portal/site/tramites/menuitem.62876cb64654a55e2dbd7003a8a409a0/?vgnextchannel=0079a38813180210VgnVCM100000c90da8c0RCRD&vgnextfmt=default&vgnextoid=aa50ef82e1bed010VgnVCM1000000b205a0aRCRD",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20210419-56-ordenanza-5-2021",
+				"locator": "Ord. 5/2021, modificación del art. 15.a (solicitud)",
+				"excerpt": "\"Solicitud en el modelo oficial dirigida al distrito o al área de gobierno competente en materia de servicios sociales, en su caso, y presentada en el Registro Municipal correspon- diente o por cualquiera de los medios previstos en el artículo 38 de la Ordenanza de Aten- ción a la Ciudadanía y Admin",
+				"excerptSha256": "ad98d5340929c2f4b7060f01f584aa3625b885bbc878a3997352a03c88c25c11"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad: fotocopia del DNI del solicitante y de los miembros de la unidad familiar que lo posean (o NIE u otro documento oficial de identidad)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Reescritura 2013, art. 14 (documentación)",
+					"excerpt": "Art. 14. Documentación.— La documentación que deberá presentarse para obtener cualquier tipo de ayuda económica será la siguiente: 1. Relativa a la identidad y situación familiar: a) Fotocopia del DNI del solicitante y en su caso de los miembros de la unidad fami- liar que lo posean. En el supuesto de personas que no dispongan d",
+					"excerptSha256": "9fa1976ea5255886f40d4bdc8c9d0e76905b2f7eb4767c1ee4784ee374395263"
+				}
+			},
+			{
+				"id": "doc-filiacion",
+				"label": "Si aplica, libros de familia u otro documento que acredite el matrimonio, filiación o convivencia (certificado de pareja de hecho en su caso)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Reescritura 2013, art. 14 (documentación)",
+					"excerpt": "Art. 14. Documentación.— La documentación que deberá presentarse para obtener cualquier tipo de ayuda económica será la siguiente: 1. Relativa a la identidad y situación familiar: a) Fotocopia del DNI del solicitante y en su caso de los miembros de la unidad fami- liar que lo posean. En el supuesto de personas que no dispongan d",
+					"excerptSha256": "9fa1976ea5255886f40d4bdc8c9d0e76905b2f7eb4767c1ee4784ee374395263"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Situación económica: en el modelo oficial, autorización para cotejar los datos con la AEAT; si no constan datos, declaración responsable de ingresos o de carencia absoluta de rentas, y certificados de prestaciones que se perciban",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Reescritura 2013, art. 14 (documentación)",
+					"excerpt": "Art. 14. Documentación.— La documentación que deberá presentarse para obtener cualquier tipo de ayuda económica será la siguiente: 1. Relativa a la identidad y situación familiar: a) Fotocopia del DNI del solicitante y en su caso de los miembros de la unidad fami- liar que lo posean. En el supuesto de personas que no dispongan d",
+					"excerptSha256": "9fa1976ea5255886f40d4bdc8c9d0e76905b2f7eb4767c1ee4784ee374395263"
+				}
+			},
+			{
+				"id": "doc-necesidad",
+				"label": "Documentos que acrediten la situación de necesidad que motiva la solicitud y, en su caso, presupuesto del servicio para el que se pide la ayuda",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Reescritura 2013, art. 14 (documentación)",
+					"excerpt": "Art. 14. Documentación.— La documentación que deberá presentarse para obtener cualquier tipo de ayuda económica será la siguiente: 1. Relativa a la identidad y situación familiar: a) Fotocopia del DNI del solicitante y en su caso de los miembros de la unidad fami- liar que lo posean. En el supuesto de personas que no dispongan d",
+					"excerptSha256": "9fa1976ea5255886f40d4bdc8c9d0e76905b2f7eb4767c1ee4784ee374395263"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-20130704-64-ordenanza-presecon",
+			"locator": "Ordenanza, art. 8.1 (redacción de la modificación de 26/06/2013)",
+			"excerpt": "Las ayudas económicas de emergencia social son aquellas que están dirigidas a facilitar la superación de situaciones en las que concurra una necesidad económica coyuntural y urgente",
+			"excerptSha256": "3d4dde884d5bc1c90a330d8ade0fcdc9cc38f8cc968ee75e6322f5c022708bc1"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"ingresos_minimos",
+		"vivienda"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

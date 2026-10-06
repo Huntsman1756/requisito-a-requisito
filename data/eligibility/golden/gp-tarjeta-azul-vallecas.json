@@ -1,0 +1,102 @@
+{
+	"id": "gp-tarjeta-azul-vallecas",
+	"description": "Persona de 45 años empadronada en Madrid capital (28079, distrito de Vallecas), con discapacidad reconocida igual o superior al 33 % e ingresos anuales en banda media-baja (8.400–16.800 €). Caso «posible»: cumple los tres requisitos duros de la categoría de discapacidad de la Tarjeta Azul (empadronamiento en Madrid + discapacidad ≥33 % + renta individual ≤ 3×IPREM, 25.200 €/año en 2026); quedan sin comprobar la verificación administrativa de la renta (AEAT/INSS), la revisión periódica y el precio bonificado ⇒ veredicto posible con plazo ROLLING (trámite permanente, en línea para esta categoría y presencial sin cita en Línea Madrid).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2005,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 45,
+					"max": 45,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 16800,
+					"maxExclusive": true
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "gte33"
+			},
+			"dependency": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "ayto-tarjeta-azul-discapacidad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado A)",
+					"reasoning": "«Residentes en Madrid» ⇒ municipio 28079 ⇒ requisito hard 'empadronado-municipio-madrid' = T."
+				},
+				{
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado A) Cuarta",
+					"reasoning": "Discapacidad ≥33 % (certificado de organismo competente) ⇒ disability=gte33 ⇒ requisito hard 'discapacidad-min-33' = T."
+				},
+				{
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Anexo, apartado A) Cuarta",
+					"reasoning": "Tope de renta individual 3×IPREM. La tabla oficial de la propia Resolución computa el tope anual con IPREM de 14 pagas (en 2011: 22.365,42 € = 3×7.455,14) ⇒ 3×8.400 = 25.200 €/año en 2026; la banda 8.400–16.800 € queda por debajo ⇒ hard 'renta-max-3-iprem' = T."
+				},
+				{
+					"sourceId": "bocm-20110525-tarjeta-azul",
+					"locator": "Disposición Segundo",
+					"reasoning": "Recepción de solicitudes de solicitantes con discapacidad abierta desde el 16/05/2011 sin cierre ⇒ deadlineState ROLLING. Veredicto 'posible' (no 'probable') porque quedan uncoveredRequirements: la renta se verifica contra AEAT/INSS, hay revisión periódica y el precio de 3,70 € es bonificado (tarifa oficial 6,30 €)."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

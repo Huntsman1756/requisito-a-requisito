@@ -124,6 +124,26 @@
 			"host": "prestaciones.seg-social.es",
 			"maxRank": 3,
 			"label": "Sede electrónica de la Seguridad Social (prestaciones.seg-social.es)"
+		},
+		{
+			"host": "sede.madrid.es",
+			"maxRank": 1,
+			"label": "Sede electrónica del Ayuntamiento de Madrid — aloja el BOAM (diario oficial municipal)"
+		},
+		{
+			"host": "agenciatributaria.madrid.es",
+			"maxRank": 3,
+			"label": "Agencia Tributaria de Madrid — Portal del Contribuyente"
+		},
+		{
+			"host": "www.emvs.es",
+			"maxRank": 3,
+			"label": "EMVS Madrid (órgano gestor)"
+		},
+		{
+			"host": "emvs.es",
+			"maxRank": 3,
+			"label": "EMVS Madrid (órgano gestor)"
 		}
 	]
 }

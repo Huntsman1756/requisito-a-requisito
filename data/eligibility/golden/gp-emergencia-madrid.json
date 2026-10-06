@@ -1,0 +1,106 @@
+{
+	"id": "gp-emergencia-madrid",
+	"description": "Mujer de 42 años empadronada en la ciudad de Madrid (28079, distrito de Carabanchel) desde 2015, desempleada, con un hijo menor a cargo e ingresos anuales en la banda más baja (0–8.400 €). Caso «posible»: cumple los dos requisitos duros comprobables (empadronamiento en el municipio de Madrid y mayoría de edad); el aviso de carencia de recursos queda en U porque la banda 0–8.400 € straddles el IPREM orientativo (7.200 €) y la ordenanza no fija umbral; la situación de emergencia social, la valoración del trabajador social, la aceptación del diseño de intervención y la cuantía final son no comprobables ⇒ veredicto posible con plazo ROLLING (solicitud continua; resolución en 5 días naturales para emergencia social).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2015,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 42,
+					"max": 42,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 9,
+							"max": 9,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "monoparental"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "ayto-emergencia-social",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Ordenanza, art. 12.2",
+					"reasoning": "La persona está empadronada en el municipio de Madrid (28079) ⇒ requisito de empadronamiento en T."
+				},
+				{
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Ordenanza, art. 12.1",
+					"reasoning": "«Ser mayor de edad o menor emancipado»: 42 años ⇒ T."
+				},
+				{
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Ordenanza, art. 12.3",
+					"reasoning": "«Acreditar la situación de necesidad»: sin umbral oficial publicado. Con la referencia orientativa de 1×IPREM (7.200 €/año), la banda 0–8.400 € straddles el umbral ⇒ el aviso queda en U (nunca F, es soft) y la valoración real la hace el trabajador social con el baremo del anexo."
+				},
+				{
+					"sourceId": "bocm-20130704-64-ordenanza-presecon",
+					"locator": "Ordenanza, art. 15 e)",
+					"reasoning": "Solicitud en cualquier momento (sin ventana de convocatoria) y resolución en «cinco días naturales» para emergencia social ⇒ deadlineState ROLLING. Veredicto posible porque la situación de emergencia/especial necesidad (art. 8.1), la valoración profesional (art. 4 b) y la aceptación del diseño de intervención (art. 12.5) no son comprobables con el cuestionario."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

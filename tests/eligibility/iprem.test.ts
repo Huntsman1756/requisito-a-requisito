@@ -17,6 +17,9 @@ const ALLOWED_14P = new Set([
 	"bono-social-termico",
 	"madrid-ayudas-alquiler-plan-estatal",
 	"madrid-bono-alquiler-joven",
+	// Resolución 2011 tarjeta azul: el cuadro oficial anualiza a 14 pagas
+	// (22.365,42 € = 42 × 532,51); citado en uncovered `iprem-14-pagas`
+	"ayto-tarjeta-azul-discapacidad",
 ]);
 
 function* paramsOf(node: unknown): Generator<string> {
