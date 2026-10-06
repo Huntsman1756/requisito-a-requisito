@@ -219,6 +219,13 @@ describe("self-check en cada evaluación del lote", () => {
 			{ territory: val({ ccaa: "13" }) },
 		];
 		for (const slug of rules.keys()) {
+			// R8-VIG: las versiones con vigencia fuera de `today` no se evalúan
+			// (fail-closed por diseño); solo se exige pasar el self-check a la
+			// versión vigente.
+			const r = rs(slug);
+			if ((r.validFrom && r.validFrom > TODAY) || (r.validUntil && r.validUntil < TODAY)) {
+				continue;
+			}
 			for (const a of perfiles) {
 				const ev = verdictOf(slug, a);
 				expect(ev.selfCheck.failed, `${slug} ${JSON.stringify(a)}`).toEqual([]);
