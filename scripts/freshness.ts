@@ -240,9 +240,14 @@ async function main() {
 	// En una corrida anómala (red degradada, bloqueos masivos de IP) no se
 	// toca el stale acumulado: el gate verifica contra el último estado
 	// fiable, no contra una lista fabricada por una corrida rota.
-	const anomalous = res.fetchErrors.length > 10;
+	// Umbral relativo: algunas fuentes (segss.es) devuelven bloqueos
+	// persistentes desde las IPs del CI; si cada error contara igual, el
+	// job nunca actualizaría el stale acumulado.
+	const checked =
+		res.unchanged + res.cosmetic.length + res.stale.length + res.fetchErrors.length;
+	const anomalous = res.fetchErrors.length > Math.max(10, checked * 0.2);
+	if (!DRY) mkdirSync(FRESH_DIR, { recursive: true });
 	if (!DRY && !anomalous) {
-		mkdirSync(FRESH_DIR, { recursive: true });
 		// stale.json: el build las excluirá (fail-closed vía G12/stale)
 		writeFileSync(
 			join(SOURCES_DIR, "..", "freshness-stale.json"),
