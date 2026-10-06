@@ -1,0 +1,10 @@
+{
+	"fase": "F8",
+	"fecha": "2026-10-06",
+	"hecho_por_agente": {
+		"F8-1": "Banner «Versión piloto» en layout.tsx; URL pública lista",
+		"F8-2": "Kit: kit/guion-sesion.md, hoja-observacion.md, consentimiento.md, mensaje-difusion.md"
+	},
+	"depende_de_daniel": ["F8-3 lista de contactos", "F8-4 sesiones 3-10"],
+	"pendiente": "piloto.json tras sesiones; testimonios con permiso"
+}
