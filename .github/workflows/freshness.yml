@@ -33,7 +33,7 @@ jobs:
           python - <<'PY'
           import json, os, subprocess
           try:
-              stale = json.load(open("data/freshness/stale.json")).get("stale", [])
+              stale = json.load(open("data/eligibility/freshness-stale.json")).get("stale", [])
           except Exception:
               stale = []
           for sid in stale:
@@ -62,7 +62,7 @@ jobs:
         run: |
           git config user.name "requisito-bot"
           git config user.email "requisito-bot@users.noreply.github.com"
-          git add data/eligibility/sources data/freshness data/catalog/leads-new.json
+          git add data/eligibility/sources data/eligibility/freshness-stale.json data/freshness data/catalog/leads-new.json
           if git diff --cached --quiet; then
             echo "sin cambios que commitear"
           else

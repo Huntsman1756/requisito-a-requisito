@@ -117,6 +117,16 @@ async function revalidateSources(): Promise<{
 				unchanged.push(meta.id);
 				continue;
 			}
+			// Guard contra falsos stale: una página de bloqueo/challenge o una
+			// respuesta truncada llega con 200 pero mucho menos texto que el
+			// snapshot. Una reforma real no reduce la fuente a menos del 25 %.
+			const oldText = readFileSync(join(SOURCES_DIR, `${meta.id}.txt`), "utf8");
+			if (newText.length < Math.max(500, oldText.length * 0.25)) {
+				fetchErrors.push(
+					`${meta.id}: respuesta sospechosa (${newText.length} < ${Math.round(oldText.length * 0.25)} chars)`,
+				);
+				continue;
+			}
 			// texto distinto: ¿siguen presentes los extractos citados?
 			const missing = excerptsForSource(meta.id).filter(
 				(ex) => !newText.includes(ex),
