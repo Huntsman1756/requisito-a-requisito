@@ -35,16 +35,30 @@ export default function Observatorio() {
 		acc[k] = (acc[k] ?? 0) + 1;
 		return acc;
 	}, {});
-	// Frescura: última corrida del job diario (data/freshness/runs.jsonl)
-	let lastRun: { date: string; checked: number; skipped?: string[]; stale: string[] } | null = null;
+	// Frescura: últimas corridas del job (data/freshness/runs.jsonl).
+	// La diaria de CI cubre las normas; la local (R7-LOCAL) cubre las sedes
+	// que bloquean el CI. Se muestran las dos fechas.
+	let lastCi: { date: string; checked: number; skipped?: string[]; stale: string[] } | null = null;
+	let lastLocal: { date: string; checked: number; stale: string[] } | null = null;
 	try {
 		const lines = readFileSync(join(process.cwd(), "data/freshness/runs.jsonl"), "utf8")
 			.trim()
 			.split("\n");
-		lastRun = JSON.parse(lines[lines.length - 1]);
+		for (const l of lines) {
+			const r = JSON.parse(l) as {
+				date: string;
+				runner?: string;
+				checked: number;
+				skipped?: string[];
+				stale: string[];
+			};
+			if (r.runner === "local") lastLocal = r;
+			else lastCi = r;
+		}
 	} catch {
-		lastRun = null;
+		lastCi = null;
 	}
+	const lastRun = lastCi;
 	const dailyCount = lastRun ? lastRun.checked : null;
 	const periodicCount = lastRun ? (lastRun.skipped?.length ?? 0) : null;
 	const staleCount = lastRun ? lastRun.stale.length : null;
@@ -89,7 +103,7 @@ export default function Observatorio() {
 					<div className="obs">
 						<div><b>{dailyCount}</b><span className="note">fuentes revisadas cada día (normas y sedes accesibles)</span></div>
 						<div><b>{periodicCount}</b><span className="note">de revisión periódica (las sedes bloquean el proceso automático)</span></div>
-						<div><b>{formatDateEs(lastRun.date)}</b><span className="note">última revisión</span></div>
+						<div><b>{formatDateEs(lastRun.date)}</b><span className="note">última revisión diaria</span></div>
 						<div><b>{staleCount}</b><span className="note">fuentes marcadas como cambiadas</span></div>
 					</div>
 					<p className="note">
@@ -97,7 +111,11 @@ export default function Observatorio() {
 						accesibles) y se comprueba que los extractos citados siguen
 						presentes; si falta alguno, la ayuda sale del listado hasta su
 						revisión. Las páginas informativas de las administraciones no
-						responden al proceso automático y se revisan en otro ciclo.
+						responden al proceso automático y se revisan en otro ciclo
+						{lastLocal
+							? ` — última revisión periódica: ${formatDateEs(lastLocal.date)}`
+							: " — aún sin revisión periódica registrada"}
+						.
 					</p>
 				</>
 			) : (

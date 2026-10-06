@@ -55,6 +55,8 @@ interface SourceMeta {
 
 interface RunRecord {
 	date: string;
+	runner?: "ci" | "local";
+	onlySkipped?: boolean;
 	checked: number;
 	unchanged: number;
 	cosmetic: string[];
@@ -112,6 +114,12 @@ const CI_UNREACHABLE_HOSTS = new Set([
 const unreachableHosts = new Set(
 	process.env.FRESHNESS_LOCAL === "1" ? [] : [...CI_UNREACHABLE_HOSTS],
 );
+// --only-skipped (R7-LOCAL): revalida SOLO las fuentes que el CI se salta
+// (hosts en CI_UNREACHABLE_HOSTS). La corrida local las ve con
+// FRESHNESS_LOCAL=1 → nada queda en `unreachableHosts` → la condición de
+// selección es el host, no el bucket.
+const ONLY_SKIPPED = args.includes("--only-skipped");
+const RUNNER = ONLY_SKIPPED || process.env.FRESHNESS_LOCAL === "1" ? "local" : "ci";
 
 async function revalidateSources(): Promise<{
 	unchanged: number;
@@ -129,7 +137,9 @@ async function revalidateSources(): Promise<{
 	const fetchErrors: string[] = [];
 	const skipped: string[] = [];
 	for (const meta of metas) {
-		if (unreachableHosts.has(new URL(meta.url).host)) {
+		const host = new URL(meta.url).host;
+		if (ONLY_SKIPPED && !CI_UNREACHABLE_HOSTS.has(host)) continue;
+		if (!ONLY_SKIPPED && unreachableHosts.has(host)) {
 			skipped.push(meta.id);
 			continue;
 		}
@@ -218,8 +228,13 @@ async function discoverLeads(): Promise<{ title: string; url: string; source: st
 	const norm = (s: string) =>
 		s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim();
 	const leads: { title: string; url: string; source: string }[] = [];
-	// sede CM «En plazo»
-	try {
+	// sede CM «En plazo»: el buscador responde 404 a las IPs de GitHub
+	// (WAF) — el descubrimiento corre en la revalidación local (R7-LOCAL,
+	// FRESHNESS_LOCAL=1) y aquí se omite honestamente.
+	const sedeHost = "sede.comunidad.madrid";
+	if (unreachableHosts.has(sedeHost)) {
+		console.log(`[freshness] leads sede: ${sedeHost} no verificable desde este entorno — corre en la revalidación local`);
+	} else try {
 		for (let page = 0; page < 5; page++) {
 			const { bytes } = await get(
 				`https://sede.comunidad.madrid/buscador/tipo/Ayudas%2C%20Becas%20y%20Subvenciones/TipoEstadoDinamico/En%20plazo?t=&items_per_page=10&page=${page}`,
@@ -271,18 +286,32 @@ async function main() {
 	const checked =
 		res.unchanged + res.cosmetic.length + res.stale.length + res.fetchErrors.length;
 	const anomalous = res.fetchErrors.length > Math.max(10, checked * 0.2);
+	const staleFile = join(SOURCES_DIR, "..", "freshness-stale.json");
 	if (!DRY) mkdirSync(FRESH_DIR, { recursive: true });
 	if (!DRY && !anomalous) {
-		// stale.json: el build las excluirá (fail-closed vía G12/stale)
+		// stale.json: el build las excluirá (fail-closed vía G12/stale).
+		// En corridas --only-skipped se fusiona con el stale previo del CI:
+		// la corrida local solo ve el subconjunto saltado.
+		let stale = res.stale;
+		if (ONLY_SKIPPED && existsSync(staleFile)) {
+			try {
+				const prev = JSON.parse(readFileSync(staleFile, "utf8")) as { stale?: string[] };
+				stale = [...new Set([...(prev.stale ?? []), ...stale])];
+			} catch {
+				// sin previo legible: solo lo de esta corrida
+			}
+		}
 		writeFileSync(
-			join(SOURCES_DIR, "..", "freshness-stale.json"),
-			`${JSON.stringify({ date: TODAY, stale: res.stale }, null, 2)}\n`,
+			staleFile,
+			`${JSON.stringify({ date: TODAY, stale }, null, 2)}\n`,
 		);
 	}
 	const leads = await discoverLeads();
 	console.log(`[freshness] leads nuevos: ${leads.length}`);
 	const rec: RunRecord = {
 		date: TODAY,
+		runner: RUNNER,
+		onlySkipped: ONLY_SKIPPED || undefined,
 		checked: res.unchanged + res.cosmetic.length + res.stale.length + res.fetchErrors.length,
 		unchanged: res.unchanged,
 		cosmetic: res.cosmetic,

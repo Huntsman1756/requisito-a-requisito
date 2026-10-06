@@ -83,3 +83,36 @@ Al ser un proyecto independiente, **la demo no depende del estado de la-ayuda**
 | Export local | `npm run build` + `npm run preview` (`serve-export.mjs` portado) | E2E, a11y, rendimiento: se prueba lo que se sirve |
 | Demo | VPS, vhost propio (opción A) | Jurado |
 | CI | GitHub Actions del repo nuevo (`check`, `lint`, `test`, `build`, E2E Chromium) | Tras crear el repo remoto con autorización (D-4) |
+
+## 4. Frescura periódica local (R7-LOCAL, ADR-049)
+
+El job diario de GitHub Actions (`freshness.yml`) no alcanza dos familias
+de fuentes porque el WAF bloquea las IPs del CI: `seg-social.es` (página de
+bloqueo con 200) y `comunidad.madrid`/`sede.comunidad.madrid` (404). Esas
+40 fuentes se revalidan en el equipo de Daniel con la tarea programada
+`Requisito-FreshnessLocal` (diaria, 07:30) que ejecuta
+`scripts/freshness-local.ps1`:
+
+- `git pull --ff-only` → `npm run freshness:local` (= `FRESHNESS_LOCAL=1
+  tsx scripts/freshness.ts --only-skipped`, misma lógica fail-closed;
+  `runner: "local"` y `onlySkipped` en `data/freshness/runs.jsonl`).
+- Solo commitea `data/eligibility/sources`,
+  `data/eligibility/freshness-stale.json`, `data/freshness` y
+  `data/catalog/leads-new.json` (stale fusionado con el del CI).
+- Si el árbol tiene cambios sin commitear, el pull no es fast-forward o
+  la corrida es anómala (exit 2), **no hace nada** y lo anota en
+  `F:\AgentState\datawardsmadrid\freshness-local.log`.
+
+Operación:
+
+- Pausar: `schtasks /Change /TN "Requisito-FreshnessLocal" /DISABLE`
+- Volver: `schtasks /Change /TN "Requisito-FreshnessLocal" /ENABLE`
+- Quitar: `schtasks /Delete /TN "Requisito-FreshnessLocal" /F`
+- Estado: `schtasks /Query /TN "Requisito-FreshnessLocal"`
+- Limitación conocida: el disparador adicional «al iniciar sesión» no se
+  pudo registrar desde un entorno sin privilegios; solo corre la diaria
+  (si el PC está apagado a las 07:30, no hay corrida ese día). El
+  Observatorio muestra la fecha real de la última revisión periódica.
+- Migración futura a VPS (R7-VPS): probar antes que las sedes responden
+  desde la IP del VPS, cron con el mismo script, deploy key de solo
+  lectura-escritura para este repo; retirar entonces la tarea de Windows.
