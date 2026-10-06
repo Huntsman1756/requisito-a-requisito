@@ -15,9 +15,9 @@ se pierden. **Requisito a Requisito** convierte la norma en una conversación de
 cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada en
 cada afirmación.
 
-Números medidos (evidencia en el repositorio): **35 ayudas** comprobadas
-requisito a requisito · **127 fuentes oficiales** verificadas · **653 programas**
-del universo de Madrid catalogados · **253 pruebas** automáticas en verde ·
+Números medidos (evidencia en el repositorio): **45 ayudas** comprobadas
+requisito a requisito · **154 fuentes oficiales** verificadas · **653 programas**
+del universo de Madrid catalogados · **269 pruebas** automáticas en verde ·
 **114 enlaces** del producto verificados el 6/10 · el perfil **nunca sale del
 navegador**.
 
@@ -38,7 +38,7 @@ lectura por él y le lleva directamente al simulador o a la sede oficial.
 Un asistente estático (sin servidor, sin cuentas, sin registro) que:
 
 1. Pregunta lo mínimo (≤ 10 preguntas, con «No lo sé» y «Prefiero no decirlo»).
-2. Evalúa **35 ayudas comprobadas** y 653 fichas del catálogo.
+2. Evalúa **45 ayudas comprobadas** y 653 fichas del catálogo.
 3. Responde por ayuda: qué requisitos cumples (✓), cuáles no (✗), cuáles no se
    pueden saber sin más datos (?) y cuáles quedan fuera de alcance del
    cuestionario (⚠).
@@ -57,20 +57,22 @@ reusar el motor sin depender de este producto.
 
 ### Medido (con evidencia)
 
-- **35 reglas verificadas** en el nivel 1 tras autor ⇒ verificador
-  independiente ⇒ corrección ⇒ merge ⇒ despliegue (ADR-040). De las 6 olas,
-  el verificador detectó y se corrigieron: un nombre de programa que no existe
-  en Madrid («Beca 6000» es andaluza → renombrada al programa real de la CM),
-  la RAI incluida aunque está **derogada desde 01/11/2024** (retirada del nivel
-  1, documentada en el universo), y 3 falsos negativos de la ola 4 corregidos
-  antes de publicar. El sistema se autoprotege: una regla defectuosa no llega
-  a producción.
+- **45 reglas verificadas** en el nivel 1 tras autor ⇒ verificador
+  independiente ⇒ corrección ⇒ merge ⇒ despliegue (ADR-040): 18 del Estado,
+  19 de la Comunidad de Madrid y 8 municipales (Madrid, Móstoles, Leganés y
+  Fuenlabrada). De las 8 olas, el verificador detectó y se corrigieron: un
+  nombre de programa que no existe en Madrid («Beca 6000» es andaluza →
+  renombrada al programa real de la CM), la RAI incluida aunque está
+  **derogada desde 01/11/2024** (retirada del nivel 1, documentada en el
+  universo), 3 falsos negativos de la ola 4 corregidos antes de publicar y
+  dos códigos INE municipales erróneos en la ola 8. El sistema se
+  autoprotege: una regla defectuosa no llega a producción.
 - **653 programas** del universo de Madrid catalogados y clasificados
   (descubrimiento: sede CM, BDNS, pipeline BOCM, semilla de permanentes);
   387 fichas útiles en el nivel 2.
-- **127 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
+- **154 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
-- **253 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
+- **269 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
   WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
   reducido). El navegador Firefox no arranca en este equipo (limitación
   documentada del entorno, no del producto).
@@ -84,9 +86,13 @@ reusar el motor sin depender de este producto.
   envío. El job diario de frescura (F9) re-descarga cada fuente, compara
   extractos y retira automáticamente la regla afectada si la fuente cambia —
   nunca reescribe una regla.
-- Panel de revisión multimodelo ya implementado (extracción de ítems, prompt
-  versionado, agregación determinista, caché por huella); las llamadas reales
-  esperan la clave `NAN_API_KEY`.
+- Panel de revisión multimodelo implementado (extracción de ítems, prompt
+  versionado, agregación determinista, caché por huella, límite de
+  concurrencia y de llamadas por minuto): **calibración en curso** sobre un
+  conjunto determinista de 311 casos (mutantes de reglas verificadas,
+  controles y casos históricos); el panel no se ejecuta sobre las reglas ni
+  se escribe `panelReview` hasta que la calibración sea aceptada por el
+  revisor.
 
 ### Piloto (en curso, 10–13/10)
 
@@ -113,7 +119,8 @@ Madrid; los resultados se consolidarán en `piloto.json` antes de la entrega.
   produce ~5 reglas/día; la verificación automática de extractos reduce el
   coste de revisión a los desacuerdos.
 - Extensible por vertical (vivienda, empleo, dependencia) y por territorio:
-  la ola 7 ya incorpora programas del **Ayuntamiento de Madrid**.
+  las olas 7–8 ya incorporan programas de cuatro ayuntamientos (Madrid,
+  Móstoles, Leganés y Fuenlabrada).
 
 ## 7. Garantías
 
@@ -140,6 +147,7 @@ Daniel — persona física; titular y responsable directo del proyecto.
 - Kit de piloto: `evidence/2026-10-06-F8/kit/`
 - Informe QA: `evidence/2026-10-06-F5/qa-report.md`
 - Hojas de verificación por ola: `evidence/2026-10-05-F3/verificacion-ola-*.md`
+  y `evidence/2026-10-06-F3/verificacion-ola-7.md`, `verificacion-ola-8.md`
 
 ---
 
