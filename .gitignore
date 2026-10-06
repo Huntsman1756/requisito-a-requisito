@@ -11,6 +11,7 @@ Thumbs.db
 # Bytes de fuentes oficiales: viven en F:\AgentState\datawardsmadrid\snapshots\
 *.pdf
 !evidence/**/fuentes/*.pdf
+!submission/memoria.pdf
 data/eligibility/bundle/
 # Exportes aportados por Daniel; la copia con hash vive en evidence/
 docs/*.xlsx
