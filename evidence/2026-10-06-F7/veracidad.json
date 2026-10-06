@@ -28,8 +28,8 @@
 			"ok": true
 		},
 		{
-			"texto": "288 pruebas en verde",
-			"evidencia": "vitest run --testTimeout 30000 → 288 passed, 27 ficheros (18:10)",
+			"texto": "405 pruebas en verde",
+			"evidencia": "vitest run --testTimeout 30000 → 405 passed, 28 ficheros",
 			"ok": true
 		},
 		{
@@ -101,6 +101,11 @@
 		{
 			"texto": "R8-VIG: versiones con vigencia — la web muestra la redacción anterior hasta el 22/10/2026 y la Ley 4/2026 desde el 23/10; ficha y tarjeta avisan del cambio",
 			"evidencia": "src/lib/eligibility-engine/versions.ts + invariante I11; tests/eligibility/versions.test.ts (7 tests: frontera 22/23, sin-versión y solape fail-closed, goldens en ambas fechas); producción verificada",
+			"ok": true
+		},
+		{
+			"texto": "238 mutantes dirigidos, 0 supervivientes; 175.451 perfiles exhaustivos sin violación",
+			"evidencia": "npm run eligibility:mutate (238 mutantes, 2 equivalentes pinneados en hard-flags.test.ts); npm run eligibility:exhaustive (175.451 perfiles, 0 violaciones, selección por versión vigente)",
 			"ok": true
 		}
 	],

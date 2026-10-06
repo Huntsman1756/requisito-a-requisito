@@ -17,7 +17,7 @@ cada afirmación.
 
 Números medidos (evidencia en el repositorio): **50 ayudas** comprobadas
 requisito a requisito · **167 fuentes oficiales** verificadas · **421 programas**
-del universo de Madrid clasificados aptos para personas · **288 pruebas** automáticas en verde ·
+del universo de Madrid clasificados aptos para personas · **405 pruebas** automáticas en verde ·
 **114 enlaces** del producto verificados el 6/10 · el perfil **nunca sale del
 navegador**.
 
@@ -78,11 +78,15 @@ reusar el motor sin depender de este producto.
   por URL oficial.
 - **167 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
-- **288 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
+- **405 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
   WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
   reducido). El navegador Firefox no arranca en este equipo (limitación
   documentada del entorno, no del producto).
 - **114 URLs** del bundle verificadas (link-check, 0 fallidas).
+- **Mutación dirigida**: 238 mutantes de las reglas (umbral ±1, dureza
+  invertida) — **0 supervivientes** sin explicar; y barrido exhaustivo de
+  175.451 perfiles sin violación de invariantes, monotonía ni determinismo
+  (`eligibility:mutate` / `eligibility:exhaustive`).
 - **axe**: 0 violaciones serious/critical en las 5 páginas públicas × 9
   proyectos, tras corregir un contraste del CTA en modo oscuro.
 
