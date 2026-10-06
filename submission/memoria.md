@@ -83,9 +83,19 @@ reusar el motor sin depender de este producto.
 ### Capacidad implementada (no medida aún)
 
 - Privacidad por diseño: el perfil vive en el navegador; no hay telemetría ni
-  envío. El job diario de frescura (F9) re-descarga cada fuente, compara
-  extractos y retira automáticamente la regla afectada si la fuente cambia —
-  nunca reescribe una regla.
+  envío. El job diario de frescura (F9) re-descarga cada día las normas
+  oficiales, compara extractos y retira automáticamente la regla afectada
+  si la fuente cambia — nunca reescribe una regla. Las páginas de las sedes
+  electrónicas que bloquean el acceso automatizado (40 de las 154 fuentes)
+  se revalidan periódicamente en una corrida local con la misma regla
+  fail-closed; el Observatorio muestra los recuentos reales de cada ciclo.
+- **Detección real (6/10/2026)**: el job marcó cambiada la Ley 39/2006 de
+  Dependencia tras la publicación de la Ley 4/2026 (BOE-A-2026-20528) —
+  9 extractos citados ya no existían en el texto consolidado. Las 2 ayudas
+  afectadas se retiraron del listado sin intervención humana, se documentó
+  qué cambió en sustancia (no solo citas: parentesco, incompatibilidades,
+  plazo suspensivo) y se re-autorizaron contra la nueva redacción el mismo
+  día (evidencia en `evidence/2026-10-06-F9/` y `-F3/verificacion-ola-9.md`).
 - Panel de revisión multimodelo implementado (extracción de ítems, prompt
   versionado, agregación determinista, caché por huella, límite de
   concurrencia y de llamadas por minuto): **calibración en curso** sobre un
@@ -110,7 +120,8 @@ Madrid; los resultados se consolidarán en `piloto.json` antes de la entrega.
 - **Reglas como código (Rules as Code)**: cada requisito lleva cita literal,
   huella y procedencia, alineado con OpenFisca y las prácticas RaC.
 - **Job de frescura abierto**: `.github/workflows/freshness.yml` revalida las
-  fuentes cada día y abre issues si cambian.
+  normas cada día (las páginas de sedes, en un ciclo periódico local) y abre
+  issues si cambian; el Observatorio publica las cifras de cada corrida.
 
 ## 6. Escalabilidad (20 %)
 
