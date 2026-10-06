@@ -1,0 +1,161 @@
+{
+	"benefitSlug": "sermas-reintegro-gastos-sanitarios",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-reintegro-gastos-sanitarios-2010",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2010/05/11/BOCM-20100511-16.PDF",
+			"title": "Resolución 21/2010, de 12 de abril, de la Viceconsejería de Asistencia Sanitaria — modelo de «Solicitud de reintegro de gastos» (farmacia, asistencia sanitaria y desplazamiento), BOCM n.º 111"
+		},
+		{
+			"id": "bocm-decreto-84-2021-ortoprotesica",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/07/05/BOCM-20210705-1.PDF",
+			"title": "Decreto 84/2021, de 30 de junio — Catálogo de Material Ortoprotésico y ayudas por gastos de desplazamiento fuera de la CM"
+		},
+		{
+			"id": "sede-reintegro-gastos-sanitarios",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios",
+			"title": "Sede electrónica CM — Reintegro de gastos por farmacia, asistencia sanitaria o desplazamiento (ref. 44933, permanente, sin tasas)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "titular-tarjeta-sermas",
+			"hard": false,
+			"label": "Ser titular de la Tarjeta Sanitaria Individual emitida por la Comunidad de Madrid o tener derecho a la asistencia sanitaria a cargo del Servicio Madrileño de Salud",
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto, art. 2",
+				"excerpt": "las personas con derecho a la asistencia sanita- ria a cargo del Servicio Madrileño de Salud en el momento de producirse el hecho causan- te de la prestación.",
+				"excerptSha256": "764612c878c57b1bf74d15f49d6444c740cacbf5927c900901ab7a619b79cf7f"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "eq",
+				"value": "cm"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "gasto-acreditado",
+			"label": "Haber pagado de más o adelantado un gasto reintegrable (farmacia de la cartera común suplementaria, asistencia urgente fuera del SNS o desplazamiento por derivación autorizada) y disponer de factura o justificante del pago",
+			"citation": {
+				"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+				"locator": "Resolución 21/2010, anexo (modelo de solicitud)",
+				"excerpt": "Gastos de farmacia □ Gastos de asistencia sanitaria (incluido personal de empresas en el exterior y en embajadas) □ Gastos de desplazamiento (incluido alojamiento, manutención y ambulancia, en su caso)",
+				"excerptSha256": "4476929cb0ba3d47264d71652cc3c38a733d42472e00ef606011739f037fc651"
+			}
+		},
+		{
+			"id": "plazos-por-tipo",
+			"label": "Cada tipo de gasto tiene su plazo de solicitud (farmacia, asistencia y desplazamiento pueden tener plazos distintos): comprueba el tuyo en la ficha oficial antes de pedir",
+			"citation": {
+				"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+				"locator": "Resolución 21/2010 — habilita el trámite de reintegro de gastos",
+				"excerpt": "la realización de trámites telemáticos durante la tramitación del expedien- te del procedimiento denominado \"Solicitud de reintegro de gastos\".",
+				"excerptSha256": "5b76cccb1426f760426c7be3ddb4fa2b8d7fb6d03b4095c6539001c0b8694f0c"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-reintegro-gastos-sanitarios",
+				"locator": "Ficha del procedimiento — campo «plazo»",
+				"excerpt": "plazo: permanente",
+				"excerptSha256": "bfb37a6ccbea8237f1b8495a148e99117341f2bdb1ad75a8f6bbc836ef97c779"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Servicio Madrileño de Salud (SERMAS), reintegro de gastos",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+				"locator": "Resolución 21/2010, art. primero",
+				"excerpt": "Habilitar al Registro Telemático",
+				"excerptSha256": "45c6f634622ba7f8479bf466f4bedb5991a7299f42fc97f58da84db6b380b1bf"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-dni",
+				"label": "Fotocopia del DNI/NIE del solicitante (anverso y reverso)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+					"locator": "Anexo, punto 5",
+					"excerpt": "Fotocopia DNI / NIE anverso y reverso del solicitante",
+					"excerptSha256": "497fe9b5e557d56c52f6af9f97333c7f70738d32d025b3b53504421440928551"
+				}
+			},
+			{
+				"id": "doc-informe-medico",
+				"label": "Fotocopia del informe médico justificativo del reintegro (en castellano)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+					"locator": "Anexo, apartado «De farmacia»",
+					"excerpt": "Fotocopia del informe médico justificativo del reintegro que se solicita. En castellano",
+					"excerptSha256": "cf556842c5ce805ac7c3db13a0b54da0e668b0c7ee8d28ba004a2bbe03e74a11"
+				}
+			},
+			{
+				"id": "doc-factura",
+				"label": "Factura (de la farmacia o del servicio) — no valen tickets de caja",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+					"locator": "Anexo, apartado «De farmacia»",
+					"excerpt": "Factura de la farmacia. No son válidos los ticket de caja . Las facturas deberán cumplir todos los requisitos que establece el art. 6 del R.D. 1496/2003",
+					"excerptSha256": "d0caf998c3d742be2a0ada346e33fbc35aa965194c47a7c4de7b6659dce40b81"
+				}
+			},
+			{
+				"id": "doc-iban",
+				"label": "Certificación bancaria o libreta con el IBAN del titular de la tarjeta sanitaria",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+					"locator": "Anexo, apartado «De farmacia»",
+					"excerpt": "Certificación bancaria o fotocopia de la libreta de ahorros, que especifique la clave de la entidad, sucursal, dígitos de control y número de la cuenta del titular",
+					"excerptSha256": "10383727f2172413fea66ab2d0129bbda7442d382caccb7d09e4de958aca0db2"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-reintegro-gastos-sanitarios-2010",
+			"locator": "Resolución 21/2010 — objeto",
+			"excerpt": "procedimiento denominado \"Solicitud de reintegro de gastos\".",
+			"excerptSha256": "d2f8ac2042319cc1e0f0c35c3ff163ce04ea791706f1b12bb6515fe75926162d"
+		}
+	},
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"id": "gp-ola10-paciente-sermas",
+	"description": "Residente en Madrid capital sin más datos: los dos reintegros SERMAS quedan posibles — el único requisito comprobable (derecho a la asistencia del SERMAS, proxy territorio) es T y los demás son ⚠ no evaluables por el cuestionario.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28001"
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "sermas-reintegro-gastos-sanitarios",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+					"locator": "Decreto, art. 2",
+					"reasoning": "Tarjeta sanitaria CM ≈ territorio CM (T); gasto acreditado y plazos por tipo no son comprobables ⇒ ⚠."
+				}
+			]
+		},
+		{
+			"benefitSlug": "sermas-ortoprotesica-desplazamiento",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+					"locator": "Decreto, arts. 2 y 12",
+					"reasoning": "Derecho a la asistencia SERMAS T; prescripción especialista y justificante de pago no comprobables ⇒ ⚠; plazo máximo 12 meses desde el pago."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	}
+}

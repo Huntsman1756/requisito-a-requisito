@@ -77,7 +77,7 @@ const EXCLUDE: [RegExp, string][] = [
 	[/empresas|sociedades mercantiles|pymes\b|microempresas|emprendedores/, "destinada a empresas/autónomos"],
 	[/asociaciones|fundaciones|entidades sin animo|universidad(es)?\b|organizaciones/, "destinada a entidades"],
 	[/nombramiento|plaza\s+de|concurso-oposicion|subasta/, "no es una ayuda"],
-	[/justificacion de (la |las )?(subvenci|ayuda|gasto)|anticipo de la subvenci|liquidacion de la subvenci|comunicacion de datos|aportacion de documentacion|reintegro de gastos/, "trámite interno de la convocatoria"],
+	[/justificacion de (la |las )?(subvenci|ayuda|gasto)|anticipo de la subvenci|liquidacion de la subvenci|comunicacion de datos|aportacion de documentacion|reintegro de (la |el )?(subvencion|ayuda|importe|fondo)/, "trámite interno de la convocatoria"],
 	[/para contratar|contratacion de personas|sello de excelencia|responsabilidad social/, "ayuda al empleador, no a la persona"],
 	[/federaciones|establecimientos|montes|bovino|ovino|caprino|explotacion|agricola|ganader|vinedo|forestal/, "actividad agraria/económica"],
 	[/leader\b|desarrollo local participativo|plan de cooperacion|obras y servicios municipales|obras publicas de infraestructuras|areas industriales/, "desarrollo local o entidades"],

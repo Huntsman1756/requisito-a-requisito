@@ -54,6 +54,28 @@ export const AID_TITLES: Record<string, string> = {
 		"Bonificación del IBI para familias numerosas (Ayuntamiento de Madrid)",
 	"ayto-tarjeta-azul-discapacidad":
 		"Tarjeta azul de transporte (personas con discapacidad, Madrid capital)",
+	"mostoles-prestaciones-sociales":
+		"Prestaciones sociales económicas (Móstoles)",
+	"leganes-prestaciones-especial-necesidad":
+		"Prestaciones sociales de especial necesidad (Leganés)",
+	"fuenlabrada-prestaciones-sociales":
+		"Prestaciones sociales económicas (Fuenlabrada)",
+	"fuenlabrada-fuenlacarenet-2026":
+		"FuenlaCareNet — ayuda de urgencia social (Fuenlabrada)",
+	"madrid-accede-prestamo-libros":
+		"Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid)",
+	"madrid-ayuda-pago-unico-vg":
+		"Ayuda económica de pago único (víctimas de violencia de género, CM)",
+	"sermas-reintegro-gastos-sanitarios":
+		"Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS)",
+	"sermas-ortoprotesica-desplazamiento":
+		"Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS)",
+	"cm-reintegro-accidentes-trabajo":
+		"Reintegro de gastos por accidente de trabajo (empleados públicos CM)",
+	"prestamos-personal-publico-cm":
+		"Préstamo sin intereses para personal de la CM (hasta 5.000 €)",
+	"anticipos-docentes-cm":
+		"Anticipo de nómina para funcionarios docentes (Comunidad de Madrid)",
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;

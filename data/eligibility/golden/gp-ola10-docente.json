@@ -1,0 +1,43 @@
+{
+	"id": "gp-ola10-docente",
+	"description": "Funcionario docente en servicio activo: el anticipo de nómina (hasta la retribución líquida mensual) cumple el requisito duro ⇒ posible ROLLING. El préstamo docente de la misma resolución cerró el 01/10/2026 y no se modela.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28001"
+				}
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "docente"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "anticipos-docentes-cm",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+					"locator": "Resolución, base decimoquinta.1",
+					"reasoning": "Funcionario docente en activo T; sin anticipo pendiente/retención judicial ⚠ no comprobables."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	}
+}

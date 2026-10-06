@@ -1,0 +1,111 @@
+{
+	"benefitSlug": "anticipos-docentes-cm",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-resolucion-prestamos-docentes-2026",
+			"rank": 1,
+			"documentType": "call",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/06/24/BOCM-20260624-22.PDF",
+			"title": "Resolución de 12 de junio de 2026, del Director General de Recursos Humanos — convoca préstamos (plazo cerrado el 01/10/2026) y anticipos (permanente) para funcionarios docentes no universitarios, BOCM n.º 148"
+		},
+		{
+			"id": "sede-anticipos-docentes",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/anticipos-docentes-2026",
+			"title": "Sede electrónica CM — Anticipos para funcionarios docentes"
+		}
+	],
+	"requirements": [
+		{
+			"id": "funcionario-docente-activo",
+			"hard": true,
+			"label": "Ser funcionario, de carrera o en prácticas, de cuerpos docentes no universitarios en situación de servicio activo (no vale si tu puesto está en la relación de puestos de la Administración educativa)",
+			"citation": {
+				"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+				"locator": "Resolución, base decimoquinta.1",
+				"excerpt": "Ser funcionario, de carrera o en prácticas, de cuerpos docentes no universitarios y estar en situación de servicio activo. No podrán solicitar estos préstamos los funcionarios que ocupen puestos incluidos en la relación de puestos de trabajo de la Administración educativa.",
+				"excerptSha256": "491154df8e7bf013de64861bfc301c2a488709c7a3a57b8e448d6050ca870145"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "docente"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "sin-anticipo-pendiente",
+			"label": "No tener pendiente de devolución un anticipo anterior concedido por la CM, ni retención judicial de parte de la nómina, ni estar incurso en un reintegro de cantidades satisfechas indebidamente",
+			"citation": {
+				"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+				"locator": "Resolución, base decimoquinta.2-4",
+				"excerpt": "No tener pendiente de devolución anticipo anterior concedido por la Comunidad de Madrid. 3. No estar sujeto a retención de parte de su nómina, acordada por resolución judicial. 4. No estar incurso en un procedimiento de reintegro de cantidades satisfechas inde- bidamente en nómina.",
+				"excerptSha256": "d314def40c0cc15bc9388e36d42de14b438a5bef07692c8177169242c92176b8"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+				"locator": "Resolución, base decimosexta.2-3",
+				"excerpt": "Las solicitudes de anticipos que tengan entrada en las Direcciones de Área Terri- torial antes del día 5 de cada mes, se abonarán en la nómina correspondiente a dicho mes. 3. Las solicitudes que tengan entrada en las Direcciones de Área Territorial a partir del día 5 de un determinado mes, se percibirán en la nómina correspondiente al mes siguien-",
+				"excerptSha256": "ac25de2755cd2d07d39c6b75c8972a2e642342204d1485eedb239737a5990d29"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades (resuelve la Dirección de Área Territorial)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/anticipos-docentes-2026",
+			"online": true,
+			"inPerson": false,
+			"citation": {
+				"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+				"locator": "Resolución, base decimoctava.1",
+				"excerpt": "La solicitud de anticipo se presentará mediante la aplicación informática que se encuentra disponible en el portal de la Comunidad de Madrid, en https://sede.comunidad.madrid/ayudas-becas-subvenciones/anticipos-docentes-2026 , dirigida a la Dirección del Á",
+				"excerptSha256": "138c787b8f58859e70ae64291d691c064dd988de9641b637022aa0208ca28a89"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud-web",
+				"label": "Solicitud electrónica desde la sede de la CM (certificado digital, Cl@ve o IDentifica)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+					"locator": "Resolución, base decimoctava",
+					"excerpt": "portal de la Comunidad de Madrid, en https://sede.comunidad.madrid/ayudas-becas-subvenciones/prestamos-docentes-2026 . No se admitirá ninguna solicitud que no haya sido cumplimentada y generada a través de dicha aplicación informática, conforme a lo previsto en este apartado. 2. Las personas interesadas podrán actuar mediante representante, entendiéndose con éste las actuaciones administrativas, salvo manifestación expresa en contrario. La re- presentación deberá acreditarse por cualquier medio válido en derecho que deje constancia fidedigna o mediante declaración en comparecencia personal de la persona interesada. 3. La solicitud vinculará a los participantes en los términos en ella expresados. Séptima Documentación Las solicitudes deberán acompañarse de la siguiente documentación debidamente firmada de manera que permita acreditar su autenticidad: 1. Justificación del gasto, mediante copia de factura o presupuesto debidamente de- tallados. La factura o presupuesto deberán figurar a nombre del solicitante, con su DNI. MIÉRCOLES 24 DE JUNIO DE 2026 Pág. 104 B.O.C.M. Núm. 148 BOCM-20260624-22 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM 2. En el supuesto de gastos por estudios o tratamientos médicos de otros miembros de la unidad familiar, que no figuren a nombre del solicitante del préstamo, se deberá acre- ditar la pertenencia a la misma unidad familiar de este: a) En caso de hijos: Mediante copia del libro de familia o certificación equivalente que acredite la relación de parentesco. b) En el caso de cónyuge o pareja de hecho: Mediante copia del libro de familia o cer- tificación equivalente que acredite la celebración del matrimonio o de la acredita- ción del Registro de Uniones de hecho. Aquellos solicitantes que estén inscritos en el Registro de Uniones de hecho de la Comunidad de Madrid deberán aportar la acreditación de su inscripción, en el caso de oponerse a su consulta en la solici- tud de participación. c) En el caso de gastos por tratamientos médicos, la documentación o justificante que se presente no debe contener datos relativos al diagnóstico, prueba realizada o de- nominación del servicio que ha atendido al paciente, limitándose a constatar la asistencia a un centro médico para realizar una consulta, prueba o tratamiento. 3. Si se considera necesario, explicación adicional de la naturaleza y necesidad del gasto. 4. En el supuesto de gastos derivados de la adquisición de vehículo y/o suscripción de pólizas de seguros de vehículos por parte del profesorado que desempeñe puestos cata- logados como singulares itinerantes, la Comunidad de Madrid consultará en sus registros, el carácter itinerante del puesto docente que desempeña. 5. En caso de haber obtenido préstamos en otras convocatorias análogas deberá acre- ditarse la amortización de dichos préstamos, mediante certificación emitida por la Unidad de Nóminas de la Dirección de Área Territorial correspondiente. 6. En el caso de actuar mediante representante, deberá presentar: a) Documento de otorgamiento de la representación. b) La Comunidad de Madrid consultará por medios electrónicos el DNI, salvo que el interesado se oponga expresamente, marcando la casilla correspondiente de la so- licitud, en cuyo caso, deberá aportar copia del mismo. Octava Forma y lugar de presentación de las solicitudes 1. Las solicitudes deberán ser cumplimentadas electrónicamente a través de la apli- cación indicada en la base sexta, incluyendo la documentación que debe acompañarlas, y presentadas en el registro electrónico de la Comunidad de Madrid, mediante el botón al efecto en la aplicación, según lo establecido en el artículo 3 del Decreto 188/2021, de 21 de julio, del Consejo de Gobierno, por el que se regula la obligación de relacionarse por me- dios electrónicos con la Administración de la Comunidad de Madrid del personal a su servi- cio y de los participantes en procesos selectivos. 2. Para poder presentar la solicitud por medios electrónicos es necesario disponer de uno de los certificados electrónicos reconocidos o cualificados de firma electrónica, que sean operativos en la Comunidad de Madrid y expedidos por prestadores incluidos en la \"Lista de confianza de prestadores de servicios de certificación\", o bien estar dado de alta en IDentifica, medio de identificación y firma digital de la Comunidad de Madrid, o en alguno de los sistemas de identificación y autenticación Cl@ve de la Administración General del Estado o cualquier otro sistema de firma electrónica que la Comunidad de Madrid considere válido en los términos y condiciones que se establezcan específicamente para cada tipo de firma. Dicha información se encuentra en el portal \"personal+educación\" ( www.comunidad.madrid/educacion/personal-educacion ), en el apartado, \"Tramitación electrónica\" ( https://www.comunidad.madrid/servicios/educacion/tramitacion-electronica ). 3. La documentación requerida deberá anexarse a la solicitud en el momento de su presentación y registro. No será necesario aportar aquellos documentos en los que exista la opción, en el formulario de solicitud, para que la Administración pueda consultar los co- rrespondientes datos. La Administración actuante podrá consultar o recabar dichos docu- mentos, salvo que el interesado se opusiera a ello. En el caso de que manifestara su oposi- ción para la consulta y comprobación de sus datos, el solicitante estará obligado a aportar copia de los documentos correspondientes, de acuerdo con lo establecido en el artículo 28 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Admi- nistraciones Públicas, sin perjuicio de las verificaciones necesarias que podrá efectuar la Administración destinataria, en el ejercicio de sus competencias, para comprobar la exacti- tud de los datos declarados. MIÉRCOLES 24 DE JUNIO DE 2026 B.O.C.M. Núm. 148 Pág. 105 BOCM-20260624-22 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM También podrá presentarse la documentación en un momento posterior a la solicitud, siempre dentro del plazo establecido en el procedimiento, a través del portal de Administración digital de la Comunidad de Madrid ( https://sede.comunidad.madrid/ ), siguiendo la ruta \"Cuenta Digital\", \"Mis gestiones\", \"Aportar documentación\". Asimismo, en dicho portal es posible comprobar los documentos anexados a la solicitud siguiendo la ruta \"Cuenta Digital\", \"Mis gestiones\", \"Consultar documentos\". 4. No se admitirá ninguna solicitud ni documentación que no haya sido cumplimen- tada y enviada a través de la aplicación informática puesta a disposición en la ruta especi- ficada. En caso de que la solicitud no sea presentada de forma telemática, el solicitante fi- gurará en la lista provisional de excluidos, por la causa \"Por defecto de forma en la presentación de la solicitud\". Si en el plazo de alegaciones a estas listas no se realizara la correspondiente subsanación, mediante la presentación electrónica de la solicitud, se le ten- drá por desistido en su solicitud y figurará en la lista definitiva de excluidos. 5. Asimismo, de conformidad con lo regulado en el artículo 3, punto 2 del citado Decreto 188/2021, las notificaciones individuales se realizarán exclusivamente por medios electrónicos, por lo que los solicitantes deberán estar dados de alta en el servicio de Notificaciones Telemáticas de la Comunidad de Madrid (NOTE). La información del proceso de alta en este servicio y el sistema de comunicación se encuentra en el portal de Administración digital de la Comunidad de Madrid ( https://sede.comunidad.madrid/ ), siguiendo la secuencia: \"Herramientas\", \"Guía de tramitación\", \"Notificaciones\". Novena Plazo de presentación de las solicitudes Las solicitudes de préstamos podrán presentarse desde el día siguiente a la publicación de la presente convocatoria en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID hasta el 1 de octubre de 2026, inclusive. Décima Relación provisional de personas adjudicatarias 1. Finalizado el plazo de presentación de solicitudes, mediante resolución de la Di- rección General de Recursos Humanos, se hará pública la relación provisional de personas adjudicatarias, en función del orden de prelación señalado en la base quinta, incluyendo la cuantía del préstamo concedido y el número de mensualidades que ha solicitado para pro- ceder a su devolución, así como la de personas excluidas, indicando la causa de exclusión. Las citadas relaciones se expondrán en el lugar señalado en la base vigesimoprimera. 2. Estas publicaciones se ajustarán a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, no constituyen fuente de acceso público y no podrán ser reproducidas ni en todo ni en parte, ni transmitidas ni re- gistradas por ningún sistema de recuperación de información sin el consentimiento expre- so de los propios interesados. 3. Contra la relación provisional de adjudicatarios se podrá presentar escrito de ale- gaciones, en el plazo de diez días hábiles contados a partir del día siguiente al de su expo- sición, que se cumplimentará exclusivamente por medios electrónicos, a través de la apli- cación informática que se encuentra disponible en la ruta especificada en la base sexta. Undécima Relaciones definitivas y percepción del préstamo 1. Examinadas las alegaciones, la Dirección General de Recursos Humanos, me- diante resolución, hará públicas las relaciones definitivas de adjudicatarios y de excluidos, en los lugares señalados en la base anterior. 2. El importe del préstamo concedido se abonará a los adjudicatarios en su nómina. 3. La diferencia entre el tipo 0 de interés que se aplica a estos préstamos y el interés legal del dinero, fijado en la Ley de Presupuestos Generales del Estado de cada año, será tenido en cuenta a efectos de cotización a la Seguridad Social y de las retenciones fiscales aplicables, de acuerdo con la legislación vigente. MIÉRCOLES 24 DE JUNIO DE 2026 Pág. 106 B.O.C.M. Núm. 148 BOCM-20260624-22 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM Duodécima Devolución de los préstamos 1. El préstamo adjudicado será devuelto sin interés, en el número de mensualidades indicado por el interesado en su solicitud, siendo treinta y seis mensualidades el límite máximo de amortización de dichos préstamos. 2. El importe concedido se dividirá entre el número de mensualidades elegido, al ob- jeto de calcular la cantidad mensual a detraer de los haberes del funcionario, descuento que se iniciará en la nómina correspondiente al mes siguiente a aquel en que se abonó dicho préstamo. 3. No obstante lo anterior, previa solicitud dirigida al departamento de nóminas de la Dirección de Área Territorial a la que pertenezca su Centro docente, el interesado podrá liquidar el préstamo en su totalidad antes del plazo fijado en su petición. Decimotercera Reintegro de los préstamos 1. El incumplimiento de las normas de la presente convocatoria o la falsedad de los datos o de los documentos aportados supondrá la obligación inmediata de devolver el prés- tamo, sin perjuicio de la responsabilidad a que hubiera lugar. 2. Asimismo, la pérdida de la condición de funcionario de carrera, o la no obtención de dicha condición en el caso de los funcionarios en prácticas, así como el cese en la rela- ción de servicio o la pérdida de la condición de beneficiario del Acuerdo Sectorial del per- sonal funcionario docente al servicio de la Administración Comunidad de Madrid, supon- drá la obligación inmediata de reintegrar la totalidad de la cantidad que quede por devolver del préstamo recibido. 3. El incumplimiento de las obligaciones de devolución, establecidas en los aparta- dos anteriores, será causa suficiente para que la Dirección General de Recursos Humanos inicie un expediente administrativo de reintegro por la cantidad pendiente de devolución, de conformidad con lo establecido en la Orden de 23 de mayo de 2001, del Consejero de Presidencia y Hacienda, por la que se establece el procedimiento de reintegro de las canti- dades satisfechas indebidamente en nómina por el personal al servicio de la Administración de la Comunidad de Madrid. 4. En todo caso, la solicitud y obtención del préstamo presupone la aceptación de lo establecido en la presente resolución. PROCEDIMIENTO PARA LA CONCESIÓN DE ANTICIPOS Decimocuarta Ámbito de aplicación Se podrán conceder anticipos a los funcionarios incluidos en el ámbito de aplicación del Acuerdo Sectorial del Personal funcionario docente al servicio de la Administración de la Comunidad de Madrid que imparte enseñanzas no universitarias, aprobado mediante Acuerdo de Consejo de Gobierno, de 26 de octubre de 2006. Decimoquinta Requisitos de los solicitantes 1. Ser funcionario, de carrera o en prácticas, de cuerpos docentes no universitarios y estar en situación de servicio activo. No podrán solicitar estos préstamos los funcionarios que ocupen puestos incluidos en la relación de puestos de trabajo de la Administración educativa. 2. No tener pendiente de devolución anticipo anterior concedido por la Comunidad de Madrid. 3. No estar sujeto a retención de parte de su nómina, acordada por resolución judicial. 4. No estar incurso en un procedimiento de reintegro de cantidades satisfechas inde- bidamente en nómina. MIÉRCOLES 24 DE JUNIO DE 2026 B.O.C.M. Núm. 148 Pág. 107 BOCM-20260624-22 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM Decimosexta Anticipos de mensualidades 1. Los funcionarios que reúnan los requisitos señalados en la base anterior podrán solicitar anticipos sobre mensualidades por el importe máximo de la retribución líquida mensual que perciban. La cuantía máxima concedida será la equivalente a la de la mensua- lidad en que se haga efectivo el abono del anticipo. 2. Las solicitudes de anticipos que tengan entrada en las Direcciones de Área Terri- torial antes del día 5 de cada mes, se abonarán en la nómina correspondiente a dicho mes. 3. Las solicitudes que tengan entrada en las Direcciones de Área Territorial a partir del día 5 de un determinado mes, se percibirán en la nómina correspondiente al mes siguien- te al de presentación de la solicitud. 4. En ambos casos, el anticipo concedido se descontará de la nómina correspondien- te al mes siguiente al de su percepción. Decimoséptima Anticipos de pagas extraordinarias 1. Igualmente, siempre que se cumplan los requisitos establecidos en la base Deci- moquinta de la presente resolución, los funcionarios podrán solicitar anticipos sobre las pa- gas extraordinarias que vayan a percibir dentro del ejercicio económico en que se formule la solicitud, siendo el importe máximo a conceder el equivalente a la cuantía líquida de las pagas extraordinarias que correspondan al funcionario. 2. El anticipo solicitado se percibirá en la nómina del mes siguiente a la formulación de la solicitud y se descontará de la nómina del mes en que procediera el abono de la paga o pagas extraordinarias inmediatamente posteriores y, siempre dentro del mismo ejercicio económico en que se presentó la solicitud. Decimoctava Solicitud y lugar de presentación 1. La solicitud de anticipo se presentará mediante la aplicación informática que se encuentra disponible en el portal de la Comunidad de Madrid, en https://sede.comunidad.madrid/ayudas-becas-subvenciones/anticipos-docentes-2026",
+					"excerptSha256": "eb77344f0875d13c228a34d6cc9c5244cf7bd42895836da1828374f0d39636bf"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-resolucion-prestamos-docentes-2026",
+			"locator": "Resolución, base decimosexta.1",
+			"excerpt": "anticipos sobre mensualidades por el importe máximo de la retribución líquida mensual que perciban.",
+			"excerptSha256": "3a5afcb72caf23757a03d28d905e6c5a2587b48c35d351fa5480d1659986a1d9"
+		}
+	},
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

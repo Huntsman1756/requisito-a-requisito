@@ -1,0 +1,122 @@
+{
+	"benefitSlug": "prestamos-personal-publico-cm",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-convenio-unico-laboral-2025-2028",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2024/12/23/BOCM-20241223-6.PDF",
+			"title": "Convenio Colectivo Único para el Personal Laboral al servicio de la Administración de la CM 2025-2028 (Resolución de 12/12/2024, BOCM n.º 305) — art. 139, préstamos y anticipos"
+		},
+		{
+			"id": "sede-prestamos-personal",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/prestamos-anticipos-personal-publico",
+			"title": "Sede electrónica CM — Préstamos y anticipos para personal público de la Comunidad de Madrid (ref. 88194, permanente, sin tasas)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "personal-laboral-cm",
+			"hard": true,
+			"label": "Trabajar al servicio de la Administración de la Comunidad de Madrid (el Convenio regula este derecho para el personal laboral fijo; el funcionario dispone de acuerdos sectoriales propios)",
+			"citation": {
+				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+				"locator": "Convenio, art. 139.1",
+				"excerpt": "El personal laboral fijo, previa justificación razonada de la necesidad de hacer frente a gastos económicos de naturaleza imprevista o extraordinaria, tendrá derecho a percibir préstamos sin interés y anticipos con arreglo a los criterios establecidos en los siguientes apartados",
+				"excerptSha256": "b3ad183bb12c4796e6bdc5e87fd7f104f0dea852ea495d7d0d958a95a842f56b"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "empleado-publico"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "gasto-imprevisto-justificado",
+			"label": "Justificar la necesidad: un gasto económico imprevisto o extraordinario (vale factura o presupuesto suficientemente detallado)",
+			"citation": {
+				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+				"locator": "Convenio, art. 139.2",
+				"excerpt": "será documento justificativo suficiente la presentación de factura y/o presupuesto suficientemente detallado",
+				"excerptSha256": "283617543d6ca9e67bb26366f2d878d7639df25b3cf6ea88925ae39d7dd09f8a"
+			}
+		},
+		{
+			"id": "dotacion-fondo",
+			"label": "La concesión depende de la dotación presupuestaria del fondo del año (si se agota, las solicitudes posteriores pueden no tener cubierta la cantidad)",
+			"citation": {
+				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+				"locator": "Convenio, art. 139.4",
+				"excerpt": "Las dotaciones para préstamos y anticipos serán los que, en cada ejercicio presupuestario, sean consignados en los diferentes programas, de manera diferenciada respecto de los fondos del apartado anterior.",
+				"excerptSha256": "7a16f488acf018325c79fb6cec9a3dfaa3c69f5daec8351d7b8fd5a50be0d3cb"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-prestamos-personal",
+				"locator": "Ficha del procedimiento — campo «plazo»",
+				"excerpt": "plazo: permanente",
+				"excerptSha256": "bfb37a6ccbea8237f1b8495a148e99117341f2bdb1ad75a8f6bbc836ef97c779"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería de Economía, Hacienda y Empleo (Dirección General competente en función pública)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/prestamos-anticipos-personal-publico",
+			"online": true,
+			"inPerson": false,
+			"citation": {
+				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+				"locator": "Convenio, art. 139.2 — comisión mixta",
+				"excerpt": "criterios para la concesión de los préstamos se llevará a cabo por una comisión mixta integrada por representantes de la Administración y las organizaciones sindicales presentes en la comisión paritaria.",
+				"excerptSha256": "c6d5665373022803ecf320be562174d07ca0739c03e608168e935e5c9f419576"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-factura-presupuesto",
+				"label": "Factura o presupuesto que justifique el gasto imprevisto",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+					"locator": "Convenio, art. 139.2",
+					"excerpt": "la presentación de factura y/o presupuesto suficientemente detallado",
+					"excerptSha256": "d67cf33a0548c06c56760f83fdec3b3066ea98f973cc8a2544b929a049335540"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"maxEur": 5000,
+		"citation": {
+			"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+			"locator": "Convenio, art. 139.2",
+			"excerpt": "cuantía máxima de 5.000 euros, y el plazo máximo de amortización será de treinta y seis mensualidades consecutivas",
+			"excerptSha256": "024ea5832c8a9cd4faa5c9bf6419b95706d3fb65502f56a10d39c3a2a7dfe7db"
+		}
+	},
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

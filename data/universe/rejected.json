@@ -35,6 +35,16 @@
   "source": "sede-cm"
  },
  {
+  "title": "Ayudas de cooperación para la sucesión de explotaciones agrícolas (2026)",
+  "reason": "actividad agraria/económica",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Ayudas al cultivo del viñedo de secano en vaso (2026-2030)",
+  "reason": "actividad agraria/económica",
+  "source": "sede-cm"
+ },
+ {
   "title": "Ayudas de emergencia para pequeñas y medianas empresas industriales por los incendios de la Sierra Oeste",
   "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
@@ -42,11 +52,6 @@
  {
   "title": "Ayudas de emergencia para pymes comerciales, de servicios y artesanas por los incendios de la Sierra Oeste",
   "reason": "destinada a empresas/autónomos",
-  "source": "sede-cm"
- },
- {
-  "title": "Reintegro de gastos por farmacia, asistencia sanitaria o desplazamiento",
-  "reason": "trámite interno de la convocatoria",
   "source": "sede-cm"
  },
  {
@@ -75,11 +80,6 @@
   "source": "sede-cm"
  },
  {
-  "title": "Reintegro de gastos por prestación ortoprotésica",
-  "reason": "trámite interno de la convocatoria",
-  "source": "sede-cm"
- },
- {
   "title": "Ayudas para incentivar el uso de servicios de I+D e innovación por las pequeñas y medianas empresas (Programa Cheque Innovación), en el marco de la estrategia regional de investigación e innovación para una especialización inteligente (RIS3)",
   "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
@@ -87,11 +87,6 @@
  {
   "title": "Préstamos y anticipos para personal público de la Comunidad de Madrid",
   "reason": "interno del empleado público",
-  "source": "sede-cm"
- },
- {
-  "title": "Reintegro de gastos derivados de accidentes de trabajo o enfermedad profesional",
-  "reason": "trámite interno de la convocatoria",
   "source": "sede-cm"
  },
  {
@@ -780,16 +775,6 @@
   "source": "sede-cm"
  },
  {
-  "title": "Ayudas de cooperación para la sucesión de explotaciones agrícolas (2026)",
-  "reason": "actividad agraria/económica",
-  "source": "sede-cm"
- },
- {
-  "title": "Ayudas al cultivo del viñedo de secano en vaso (2026-2030)",
-  "reason": "actividad agraria/económica",
-  "source": "sede-cm"
- },
- {
   "title": "Ayudas para el crecimiento o consolidación de autónomos y microempresas",
   "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
@@ -1018,6 +1003,11 @@
   "title": "Subvenciones a asociaciones de criadores para conservación de razas ganaderas 2026",
   "reason": "destinada a entidades",
   "source": "la-ayuda"
+ },
+ {
+  "title": "BASES XI CONCURSO DE DECORACIÓN E ILUMINACIÓN NAVIDEÑA DE VIVIENDAS DE ARROYOMOLINOS 2026",
+  "reason": "premio/certamen, no prestación",
+  "source": "bdns"
  },
  {
   "title": "SUBVENCION NOMINATIVA ASOCIACION VICTIMAS DE TERRORISMO DE BOADILLA DEL MONTE ANUALIDAD 2026",

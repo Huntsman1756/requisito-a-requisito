@@ -1,0 +1,153 @@
+{
+	"benefitSlug": "sermas-ortoprotesica-desplazamiento",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-decreto-84-2021-ortoprotesica",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/07/05/BOCM-20210705-1.PDF",
+			"title": "Decreto 84/2021, de 30 de junio — Catálogo de Material Ortoprotésico de la CM, prestación ortoprotésica y ayudas por desplazamiento fuera de la CM"
+		},
+		{
+			"id": "sede-ortoprotesica",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-prestaciones-ortoprotesicas",
+			"title": "Sede electrónica CM — Reintegro de gastos por prestación ortoprotésica (ref. 44932, permanente, sin tasas)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "derecho-asistencia-sermas",
+			"hard": false,
+			"label": "Tener derecho a la asistencia sanitaria a cargo del Servicio Madrileño de Salud en el momento en que se produce el gasto",
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto, art. 2",
+				"excerpt": "las personas con derecho a la asistencia sanita- ria a cargo del Servicio Madrileño de Salud en el momento de producirse el hecho causan- te de la prestación.",
+				"excerptSha256": "764612c878c57b1bf74d15f49d6444c740cacbf5927c900901ab7a619b79cf7f"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "eq",
+				"value": "cm"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "prescripcion-especialista",
+			"label": "Tener prescripción de material ortoprotésico del Catálogo (Anexo II) hecha por un facultativo de atención especializada del Sistema Nacional de Salud de la materia correspondiente",
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto, art. 12 (prescripción médica)",
+				"excerpt": "la prescripción médica de un producto ortoprotésico deberá ser realizada conforme a los si- guientes requisitos: a) Debe ser emitida por un médico especialista en la materia correspondiente a la clí- nica del paciente perteneciente al Sistema Nacional de Salud, o que actúen por cuenta del mismo",
+				"excerptSha256": "8b42f48cda31b04f01f25a924c5117d76f2077b6a759d8e98539ce6cce52f373"
+			}
+		},
+		{
+			"id": "gasto-o-endoso",
+			"label": "Haber adelantado el importe del producto (o, si cediste el cobro al establecimiento dispensador con endoso, no tienes que adelantar nada)",
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto — desplazamiento con fines asistenciales",
+				"excerpt": "los gastos generados como consecuencia del desplazamiento de un paciente a otra comunidad autóno- ma o a otro estado perteneciente a la Unión Europea y a la Asociación Europea de Libre Comercio.",
+				"excerptSha256": "adf57178806ce979a7a7dab6ae790e92cb38413bb6b4114b08255ca0bff124e7"
+			}
+		},
+		{
+			"id": "plazo-doce-meses",
+			"label": "La solicitud debe presentarse en el plazo máximo de doce meses desde la fecha de emisión del justificante de pago (pasado ese plazo se inadmite por extemporánea)",
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto — plazo de solicitud",
+				"excerpt": "solicitud en el plazo máximo de doce meses a contar desde la fecha de emisión del justificante de pago. Trans- currido dicho plazo legal, la solicitud será inadmitida por extemporánea.",
+				"excerptSha256": "70db392791e476c82d76f272d20b325a86a8e780bad1fe729f9cef6817f3bdc8"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-ortoprotesica",
+				"locator": "Ficha del procedimiento — campo «plazo»",
+				"excerpt": "plazo: permanente",
+				"excerptSha256": "bfb37a6ccbea8237f1b8495a148e99117341f2bdb1ad75a8f6bbc836ef97c779"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — SERMAS, reintegro de prestación ortoprotésica",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-prestaciones-ortoprotesicas",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+				"locator": "Decreto — obtención de la prestación",
+				"excerpt": "mediando en todo caso solicitud del interesado",
+				"excerptSha256": "a6f05dd60cd058ffcd7c0809ff281c6016ad79b00ea6a77db6930b4751b628f0"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad-tsi",
+				"label": "Documento de identidad y tarjeta sanitaria del SERMAS",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+					"locator": "Decreto, art. 2",
+					"excerpt": "las personas con derecho a la asistencia sanita- ria a cargo del Servicio Madrileño de Salud en el momento de producirse el hecho causan- te de la prestación.",
+					"excerptSha256": "764612c878c57b1bf74d15f49d6444c740cacbf5927c900901ab7a619b79cf7f"
+				}
+			},
+			{
+				"id": "doc-prescripcion",
+				"label": "Prescripción del material ortoprotésico por especialista del SNS",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+					"locator": "Decreto, art. 12",
+					"excerpt": "la prescripción médica de un producto ortoprotésico deberá ser realizada conforme a los si- guientes requisitos: a) Debe ser emitida por un médico especialista en la materia correspondiente a la clí- nica del paciente perteneciente al Sistema Nacional de Salud, o que actúen por cuenta del mismo",
+					"excerptSha256": "8b42f48cda31b04f01f25a924c5117d76f2077b6a759d8e98539ce6cce52f373"
+				}
+			},
+			{
+				"id": "doc-factura",
+				"label": "Factura o justificante del pago del material, si adelantaste el importe",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+					"locator": "Decreto, arts. 3.a y plazo de solicitud",
+					"excerpt": "el hecho causante es la fecha de emisión del justificante de pago o, la fecha de emisión de la correspondiente factura proforma en el caso de LUNES 5 DE JULIO DE 2021 Pág. 14 B.O.C.M. Núm. 158 BOCM-20210705-1 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM la tramitación de la prestación ortoprotésica a través de la figura del endoso regu- lado en el artículo 25. b) \"Importe máximo de financiación\": el importe máximo de financiación es la cuan- tía máxima fijada para cada tipo de producto a efectos de su financiación y será el establecido en la correspondiente cartera de servicios comunes del Sistema Nacio- nal de Salud vigente en el momento de la adquisición del material ortoprotésico. c) \"Aportación del usuario\": la aportación del usuario para cada tipo de producto en materia de financiación, será la que venga establecida por el titular de la compe- tencia en materia de cartera de servicios del Sistema Nacional de Salud en el mo- mento de la adquisición del material ortoprotésico. d) \"Periodo de renovación\": por periodo de renovación ha de entenderse el periodo mínimo que ha de transcurrir entre la adquisición de un producto que hubiese sido financiado a través de la prestación ortoprotésica y la adquisición posterior del mismo producto a efectos de su nueva financiación. e) \"Endoso\": el endoso es la figura a través de la cual el interesado en la prestación ortoprotésica cede el derecho de cobro de dicha prestación en favor del estable- cimiento dispensador del material ortoprotésico, que hará entrega al paciente del producto adquirido sin necesidad de adelantar el importe correspondiente a la prestación sobre los mismos, facilitando así a los pacientes la adquisición de los productos ortoprotésicos. TÍTULO I Del Catálogo de Material Ortoprotésico de la Comunidad de Madrid y la prestación ortoprotésica Capítulo I Catálogo de Material Ortoprotésico de la Comunidad de Madrid Artículo 4 Catálogo de Material Ortoprotésico en la Comunidad de Madrid El Catálogo de Material Ortoprotésico en la Comunidad de Madrid contiene todos aquellos productos sanitarios de carácter ortoprotésico susceptibles de financiación a través de la prestación ortoprotésica incluida en la cartera común suplementaria del Sistema Na- cional de Salud. SECCIÓN 1. a Catálogo de productos Artículo 5 Catálogo de productos objeto de financiación a través de reintegro de gastos 1. Los productos objeto de financiación por la Comunidad de Madrid a través del re- integro de gastos por prestación ortoprotésica serán los contemplados en el Anexo I, que coincidirán con los establecidos en la correspondiente cartera común suplementaria del Sis- tema Nacional de Salud vigente en el momento de la adquisición del material ortoprotési- co, todo ello sin perjuicio de lo establecido en el artículo 6. 2. Quedan excluidos de la prestación ortoprotésica de la Comunidad de Madrid los artículos denominados de préstamo, segunda mano, así como las recuperaciones, reparacio- nes y el alquiler de material ortoprotésico. Artículo 6 Catálogo de productos objeto de financiación directa por los hospitales Serán objeto de financiación directamente por parte del hospital al que pertenece el fa- cultativo que realiza la indicación al paciente, aquellos productos pertenecientes a los sub- grupos: \"Prótesis de restauración facial\" (código 06 30 30) incluyendo las de nariz y/o los pabellones auriculares y/o globos oculares en casos de traumatismo, enfermedad o malfor- mación congénita; \"Prótesis de maxilares\" (código 06 30 33); \"Recambios de componentes externos de implantes auditivos\" (código 22 06 99) y \"Recambios de componentes externos del estimulador diafragmático o electroestimulador del nervio frénico\" (código 89 99 00), in- dicados en el artículo único de la Orden SCB/480/2019, de 26 de abril. LUNES 5 DE JULIO DE 2021 B.O.C.M. Núm. 158 Pág. 15 BOCM-20210705-1 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM SECCIÓN 2. a Normas generales de aplicación del catálogo de material ortoprotésico Artículo 7 Aportación del usuario La aportación del usuario para cada tipo de producto no será objeto de financiación a través de la prestación ortoprotésica. Artículo 8 Periodo de renovación 1. El periodo de renovación de cada producto coincidirá con la vida media fijada para los mismos en la correspondiente cartera de servicios comunes del Sistema Nacional de Salud vigente en el momento de la adquisición del material ortoprotésico. Dicho perio- do de renovación podrá reducirse en casos debidamente justificados por el prescriptor por tratarse de niños en los que se requiere una adecuación a la etapa de crecimiento o de pa- cientes en los que la evolución de su patología o cambios antropométricos así lo exijan o bien cuando concurran circunstancias objetivas que influyan en un especial desgaste de los productos (apartado 4.2.e) del Anexo VI del Real Decreto 1030/2006, de 15 de septiembre). 2. El mero hecho del transcurso del plazo de renovación del producto no genera auto- máticamente la necesidad de renovación, sino que deberá ser valorada específicamente en cada caso por el prescriptor. La renovación solo podrá concederse cuando no sea debida al mal trato o uso inadecuado del producto por parte del usuario [apartado 4.2.e) del Anexo VI del Real Decreto 1030/2006, de 15 de septiembre]. Artículo 9 Mejora 1. Con la prescripción de uno de los artículos incluidos en la Oferta regulada en el Anexo VI del Real Decreto 1030/2006, queda suficientemente acreditado que el producto prescrito es adecuado y suficiente para la patología del paciente desde el punto de vista clí- nico, al encontrarse dicho producto incluido en la cartera de servicios del Sistema Nacional de Salud. 2. No obstante lo anterior, el paciente por su propia voluntad podrá adquirir en base a la mejora regulada en el presente artículo, un producto distinto del mismo tipo que el pres- crito, siempre que dicho producto se encuentre entre los comunicados a la citada Oferta de acuerdo con lo regulado en el artículo 13 de la Orden SCB/45/2019, de 22 de enero. Así en aquellos casos en los que se adquiera por el usuario un producto comunicado a la Oferta por importe superior al importe máximo de financiación del artículo prescrito, se abonará en concepto de prestación ortoprotésica el citado importe máximo de financiación correspon- diente a dicho tipo de producto, siendo por tanto a cargo del interesado la diferencia exis- tente entre dicho importe máximo de financiación y el precio de venta al público (PVP) del producto adquirido, debiendo cumplirse en todo caso lo establecido para el acceso a la pres- tación ortoprotésica. 3. En el caso de productos elaborados a medida, únicamente se financiarán aquellos que se clasifiquen en uno de los tipos de productos del catálogo común y no superen el res- pectivo importe máximo de financiación. Artículo 10 Establecimientos dispensadores y adaptadores y adquisición de los productos 1. A efectos de financiación a través de la prestación ortoprotésica, la adaptación y dis- pensación de los productos ortoprotésicos se realizará en los establecimientos autorizados para dicho fin. En todo caso, se tratará de establecimientos sanitarios que cuenten con la correspon- diente autorización sanitaria, de acuerdo con lo dispuesto en el Real Decreto 1277/2003, de 10 de octubre, por el que se establecen las bases generales sobre autorización de centros, servicios y establecimientos sanitarios. 2. Los establecimientos sanitarios dispensadores y adaptadores de productos orto- protésicos que opten por dispensar productos a cargo del Sistema Nacional de Salud asu- mirán todas las condiciones establecidas en el Anexo VI del RD 1030/2006 y no podrán coLUNES 5 DE JULIO DE 2021 Pág. 16 B.O.C.M. Núm. 158 BOCM-20210705-1 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM brar al usuario cantidades adicionales a la aportación que en su caso le pudiera correspon- der en función del tipo de producto, salvo lo establecido en el artículo 9. 3. No será objeto de financiación a través de la prestación ortoprotésica de la Comu- nidad de Madrid, los artículos ortoprotésicos destinados a uso deportivo, ni los utilizados con finalidad estética que no guarden relación con accidente, enfermedad o malformación con- génita, ni aquello de los que se realice publicidad dirigida al público en general (Anexo VI del Real Decreto 1030/2006), ni la adquisición de cualquiera de los productos establecidos en el vigente Catálogo General de Material Ortoprotésico cuando los mismos sean adquiri- dos por correspondencia, a distancia o a través de medios telemáticos, según lo establecido en la legislación vigente. Capítulo II Prestación ortoprotésica SECCIÓN 1. a Requisitos de la prestación ortoprotésica Artículo 11 Acceso a la prestación ortoprotésica El acceso a la prestación ortoprotésica se hará, garantizando las necesidades sanitarias de los usuarios, a través de la prescripción médica realizada por facultativos especialistas de acuerdo con lo establecido en los artículos siguientes y mediando en todo caso solicitud del interesado. Artículo 12 Prescripción médica A los solos efectos de financiación de los productos incluidos en la prestación ortopro- tésica regulada en esta norma y, de acuerdo con lo establecido en el artículo anterior, la prescripción médica de un producto ortoprotésico deberá ser realizada conforme a los si- guientes requisitos: a) Debe ser emitida por un médico especialista en la materia correspondiente a la clí- nica del paciente perteneciente al Sistema Nacional de Salud, o que actúen por cuenta del mismo, estableciéndose las unidades clínicas o especialidades que pue- den prescribir cada producto, en el apartado relativo a servicio prescriptor del Anexo I, no siendo objeto de financiación a través de la prestación ortoprotésica ningún producto prescrito por unidades clínicas o especialidades distintas a las fi- jadas en el citado Anexo I. b) Para la prescripción médica se atenderá a criterios de individualización en relación con los pacientes, sus condiciones de salud y de calidad de vida, tales como edad, evolución previsible de la patología o discapacidad, situación laboral y social, gra- do de autonomía personal y acceso a servicios de la comunidad y otros de análo- ga significación, así como a las indicaciones clínicas establecidas conforme a lo regulado en el artículo 17. Artículo 13 Requisitos generales de la prescripción médica susceptible de prestación ortoprotésica 1. En la prescripción de los productos ortoprotésicos deberán constar, como mínimo, los siguientes datos: a) Responsable de la prescripción: datos de identificación del facultativo (nombre y apellidos, número de colegiado, código de identificación asignado por las admi- nistraciones competentes, centro sanitario y servicio). b) Usuario: datos de identificación (nombre y apellidos; NIF/NIE; Código de Identi- ficación Personal de la Comunidad de Madrid (CIPA); fecha de nacimiento), peso y talla, si procede, y colectivo al que pertenece según su condición de asegurado, de acuerdo con la clasificación que en cada momento establezca el organismo LUNES 5 DE JULIO DE 2021 B.O.C.M. Núm. 158 Pág. 17 BOCM-20210705-1 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM competente sobre la materia en función del porcentaje de aportación que le corres- ponda en virtud del tipo de tarjeta sanitaria, según la normativa aplicable. c) Motivo de la prescripción: accidente de trabajo, accidente de tráfico, accidente de- portivo, otro tipo de accidente (especificar), malformación congénita, enfermedad u otro origen (especificar). d) Diagnóstico: discapacidad o patología que justifica la prescripción, patologías con- comitantes que influyan en la prescripción y otra información clínica de interés. e) Valoración social (cuando proceda): actividades que realiza, medio en el que vive u otras circunstancias que puedan influir en la prescripción o renovación de los productos. f) Prescripción: fecha; producto y tipo de producto (incluido código y descripción); clase de prescripción (primera prescripción, renovación con la justificación del motivo, o recambio); recomendaciones de uso. Cuando sea necesario indicar pro- ductos de varios tipos diferentes para el mismo usuario para componer una misma prescripción final global, todos ellos se indicarán conjuntamente constituyendo a todos los efectos una única prescripción. g) Firma del responsable de la prescripción. h) Revisiones que hayan de realizarse, en su caso. 2. La prescripción deberá ser anterior a la adquisición del producto objeto de finan- ciación. Artículo 14 Modelo de prescripción médica susceptible de prestación ortoprotésica 1. Toda prescripción susceptible de prestación ortoprotésica realizada por un facul- tativo especialista perteneciente al Servicio Madrileño de Salud, será elaborada a través de la aplicación informática de prescripción electrónica de material ortoprotésico a través del modelo que se genere mediante la utilización de la misma, salvo casos debidamente justi- ficados de incidencia informática o similar en el momento de la prescripción que podrá ser elaborada en otro soporte, siempre que consten en todo caso, los datos consignados en el artículo anterior. 2. Cualquier modificación que se realice en el documento de prescripción, deberá ser realizada y validada por un facultativo prescriptor, no admitiéndose modificación alguna realizada por persona distinta al citado facultativo. Artículo 15 Periodo de vigencia de la prescripción médica 1. La prescripción tendrá una vigencia de doce meses a contar desde la fecha de emi- sión. Transcurrido ese periodo sin haber adquirido el producto prescrito, dicho documento perderá toda validez a efectos de la obtención de la prestación ortoprotésica vinculada al mismo. 2. Para el caso de la tramitación de la prestación ortoprotésica a través de la figura del endoso regulada en el artículo 25, los doce meses de vigencia de la prescripción se con- tarán desde la fecha de emisión de dicha prescripción y hasta la fecha de la correspondien- te factura proforma. Artículo 16 Especial prescripción En el Anexo I se establecen aquellos artículos objeto de prestación ortoprotésica cali- ficados como de \"especial prescripción\". En estos casos, la prescripción deberá ir acompa- ñada de informe clínico emitido por el facultativo prescriptor en el que quede suficiente- mente acreditado el cumplimiento de las indicaciones clínicas establecidas, con el fin de que la inspección médica pueda valorar el cumplimiento de los correspondientes requisitos de financiación en cada caso, de acuerdo con lo establecido en el artículo 22. Artículo 17 Indicaciones clínicas e incompatibilidades 1. En el Anexo I se establecen las indicaciones clínicas que han de concurrir en el pacien- te a efectos de acceder a la financiación de la prestación ortoprotésica por la adquisición de cada uno de los correspondientes productos incluidos en la misma, no siendo objeto de financiación ningún artículo prescrito para indicaciones distintas a las fijadas en dicho Anexo. LUNES 5 DE JULIO DE 2021 Pág. 18 B.O.C.M. Núm. 158 BOCM-20210705-1 BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID BO CM 2. En el Anexo II se establecen las incompatibilidades de prescripción de determina- dos artículos en relación con la prestación ortoprotésica, que habrán de tenerse en cuenta en el momento de la prescripción. SECCIÓN 2. a Procedimiento de obtención de la prestación ortoprotésica Artículo 18 Solicitud de obtención de la prestación ortoprotésica 1. El procedimiento se iniciará a solicitud del paciente al que le prescriben el produc- to ortoprotésico, o quien ostente su representación legal de acuerdo con el Código Civil, todo ello sin perjuicio de los requisitos establecidos para estos casos por la legislación vi- gente y de lo establecido en el artículo 5 de la Ley 39/2015, de 1 de octubre. Los interesados en la prestación ortoprotésica deberán presentar solicitud en el plazo máximo de doce meses a contar desde la fecha de emisión del justificante de pago. Trans- currido dicho plazo legal, la solicitud será inadmitida por extemporánea. Para el caso de la tramitación de la prestación ortoprotésica a través de la figura del en-",
+					"excerptSha256": "f3ba8644dfea02fc517adacaf0eb8b0ec9ded359acfc7495a402051978a96ddc"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-decreto-84-2021-ortoprotesica",
+			"locator": "Decreto, art. 1",
+			"excerpt": "regular los procedimientos de obtención de la prestación ortoprotési- ca en el ámbito de la Comunidad de Madrid, así como de las ayudas por los gastos generados como consecuencia del desplazamiento de un paciente a otra comunidad autóno- ma o a otro estado perteneciente a la Unión Europea y a la Asociación Europea de Libre Comercio.",
+			"excerptSha256": "ee0549b858df23b89db2421b37fd67674d2b009c81bb0a87c9c18b52126f0885"
+		}
+	},
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

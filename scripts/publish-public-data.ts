@@ -117,10 +117,27 @@ for (const f of readdirSync(benefitsDir).filter((x) => x.endsWith(".json"))) {
 	const raw = JSON.parse(readFileSync(join(benefitsDir, f), "utf8")) as Ficha;
 	if (raw.officialSourceUrl) fichasByUrl.set(raw.officialSourceUrl, raw);
 }
+// Ola-10: un programa con regla propia no se repite como ficha de nivel 2 —
+// la deduplicación es por URL oficial (canal de la regla o de sus fuentes).
+const rulesDir = join(root, "data/eligibility/rules");
+const ruleUrls = new Set<string>();
+for (const f of readdirSync(rulesDir).filter((x) => x.endsWith(".json"))) {
+	const rs = JSON.parse(readFileSync(join(rulesDir, f), "utf8")) as {
+		application?: { channel?: { url?: string } };
+		sources?: { url?: string }[];
+	};
+	if (rs.application?.channel?.url) ruleUrls.add(rs.application.channel.url);
+	for (const s of rs.sources ?? []) if (s.url) ruleUrls.add(s.url);
+}
+
 const level2 = universe
 	.filter((p) => {
 		if (!p.officialSourceUrl) {
 			skipped.push({ f: p.id, reason: "sin officialSourceUrl" });
+			return false;
+		}
+		if (ruleUrls.has(p.officialSourceUrl)) {
+			skipped.push({ f: p.id, reason: "ya tiene regla (deduplicado por URL oficial)" });
 			return false;
 		}
 		if (p.accessState === "CLOSED") {

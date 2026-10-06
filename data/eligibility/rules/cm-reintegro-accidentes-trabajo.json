@@ -1,0 +1,133 @@
+{
+	"benefitSlug": "cm-reintegro-accidentes-trabajo",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-resolucion-reintegro-accidentes-2021",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/02/02/BOCM-20210202-17.PDF",
+			"title": "Resolución de 19 de enero de 2021, de la Dirección General de Función Pública — modelo de solicitud de reintegro de gastos por accidente de trabajo o enfermedad profesional (empleados públicos CM, RGSS)"
+		},
+		{
+			"id": "sede-reintegro-accidentes",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-accidentes-trabajo",
+			"title": "Sede electrónica CM — Reintegro de gastos derivados de accidente de trabajo o enfermedad profesional (ref. 91278, permanente, sin tasas)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "empleado-publico-cm",
+			"hard": true,
+			"label": "Ser empleado público de la Comunidad de Madrid incluido en el Régimen General de la Seguridad Social (la CM actúa como empresa colaboradora de la Seguridad Social)",
+			"citation": {
+				"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+				"locator": "Resolución de 19/01/2021, encabezado",
+				"excerpt": "la solicitud de reintegro de gastos derivados de accidente de trabajo o enfermedad profesional para em- pleados públicos incluidos en el Régimen General de la Seguridad Social cuya protección corresponde a la Comunidad de Madrid como empresa colaborado- ra de la Seguridad Social.",
+				"excerptSha256": "1f86969d9f8e2945c8054967d2e8699330a7d5ca8c7cf031504be75b9bea46b0"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "empleado-publico"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "asistencia-por-accidente",
+			"label": "Haber recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional y tener gastos (ortoprotésicos, farmacéuticos o de transporte) que reclamar",
+			"citation": {
+				"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+				"locator": "Anexo — «Documentos que se acompañan a la solicitud»",
+				"excerpt": "SI SE TRATA DE GASTOS POR ADQUISICIÓN DE MATERIAL ORTOPROTÉSICO Según Anexo VI del R.D. 1030/2006 apdo. 7. Debe aportar factura original del establecimiento ortopédico a nombre de la persona destinataria del material B. SI SE TRATA DE GASTOS POR ADQUISICIÓN DE PRODUCTOS FARMACÉUTICOS Según Anexo V del R.D. 1030/2006 apdo. 1 Debe aportar factura original del establecimiento farmacéutico a nombre de la persona destinataria del medicamento prescrito.",
+				"excerptSha256": "10b8f92a787e38747c98f2acc7ec8add6215cb9d230fa9580a081f30baaee85e"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "sede-reintegro-accidentes",
+				"locator": "Ficha del procedimiento — campo «plazo»",
+				"excerpt": "plazo: permanente",
+				"excerptSha256": "bfb37a6ccbea8237f1b8495a148e99117341f2bdb1ad75a8f6bbc836ef97c779"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Dirección General de Función Pública",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-accidentes-trabajo",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+				"locator": "Anexo — destinatario",
+				"excerpt": "Consejería de Hacienda y Función Pública",
+				"excerptSha256": "220de99ae7aeac08809bb95abbbe680cad86b2c6d97cc5af36cbce11093d919f"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-modelo",
+				"label": "Modelo oficial de solicitud (anexo de la Resolución de 19/01/2021)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+					"locator": "Resolución, punto único",
+					"excerpt": "establece el modelo de impreso para la solicitud de reintegro de gastos derivados de accidente de trabajo o enfermedad profesional para em- pleados públicos incluidos en el Régimen General de la Seguridad Social cuya protección corresponde a la Comunidad de Madrid como empresa colaborado- ra de la Seguridad Social. El criterio 14.h) del Decreto 85/2002, de 23 de mayo, por el que se regulan los sistemas de evaluación de la calidad de los servicios públicos y se aprueban los Criterios de Calidad de la Actuación Administrativa en la Comunidad de Madrid, establece la obligación de pu- blicar en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID por resolución del órgano competente los impresos normalizados de los distintos procedimientos administrativos. Por ello, una vez informado favorablemente por la Dirección General de Transparencia, Gobier- no Abierto y Atención al Ciudadano, mediante resolución de 22 de julio de 2020, RESUELVO Ordenar la publicación en el BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID del modelo de impreso para la solicitud de reintegro de gastos derivados de accidente de traba- jo o enfermedad profesional para empleados públicos incluidos en el Régimen General de la Seguridad Social cuya protección corresponde a la Comunidad de Madrid como empre- sa colaboradora de la Seguridad Social, que se adjunta como Anexo, a los efectos regula- dos en el artículo 35.1 de la Ley 11/2007, de 22 de junio, de Acceso Electrónico de los Ciu- dadanos a los Servicios Públicos, correspondientes al procedimiento de referencia.",
+					"excerptSha256": "fdfc063a47981d61ed30b817ceb095ea5b5fc11f206f63e180712614df7c60e4"
+				}
+			},
+			{
+				"id": "doc-facturas",
+				"label": "Factura original del gasto (establecimiento ortopédico, farmacéutico o de transporte) a nombre de la persona destinataria",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+					"locator": "Anexo — documentos a acompañar",
+					"excerpt": "Debe aportar factura original del establecimiento ortopédico a nombre de la persona destinataria del material",
+					"excerptSha256": "cc6bc2543a66cb4b3678d1eac12e0f5ff5871a067e71f4a2204cf2cdb4f09102"
+				}
+			},
+			{
+				"id": "doc-iban",
+				"label": "Código IBAN para el abono",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+					"locator": "Anexo — datos bancarios",
+					"excerpt": "Código IBAN Entidad Oficina D.C Número de Cuenta",
+					"excerptSha256": "0df512c986cf376c8fb8f17767b09557b1f19139473a724e7206c99828fc2e0f"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+			"locator": "Resolución — objeto",
+			"excerpt": "la solicitud de reintegro de gastos derivados de accidente de trabajo o enfermedad profesional",
+			"excerptSha256": "52d77007658f6b50dcb1f2bf527900a90415b4aa69d4f8106a4b1ab41fb31eff"
+		}
+	},
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"id": "gp-ola10-empleado-publico",
+	"description": "Empleado público residente en Madrid: reintegro por accidente de trabajo y préstamo sin intereses (5.000 €) cumplen el requisito duro comprobable ⇒ posible.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28001"
+				}
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "empleado-publico"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "cm-reintegro-accidentes-trabajo",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-resolucion-reintegro-accidentes-2021",
+					"locator": "Resolución de 19/01/2021, encabezado",
+					"reasoning": "Empleado público CM (RGSS) T; la asistencia por accidente y los gastos acreditados son ⚠."
+				}
+			]
+		},
+		{
+			"benefitSlug": "prestamos-personal-publico-cm",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+					"locator": "Convenio, art. 139.1-2",
+					"reasoning": "Empleado público T (el derecho fino es del laboral fijo — matiz en ⚠); justificación del gasto y dotación del fondo ⚠. Cuantía máxima 5.000 €."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+	}
+}
