@@ -18,6 +18,11 @@ import { es, type I18nKey, t } from "../../lib/i18n/es";
 import { formatDateEs, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
 import {
+	notEvaluableNow,
+	nextVersion,
+	pickValidVersions,
+} from "../../lib/eligibility-engine/versions";
+import {
 	cellReqs,
 	DIMENSIONS,
 	dimOf,
@@ -88,14 +93,25 @@ export function ResultsView({
 	const [copied, setCopied] = useState(false);
 	const [cleared, setCleared] = useState(false);
 
-	const evaluations = useMemo(
-		() =>
-			data.bundle.rulesets.map((rs) => ({
-				rs,
-				ev: evaluateRuleSet(rs, profile, evalCtx),
-			})),
-		[data, profile, evalCtx],
-	);
+	const evaluations = useMemo(() => {
+		// R8-VIG: una sola versión por ayuda — la vigente en la fecha de
+		// consulta. Las ayudas sin versión vigente (o con varias) no se
+		// evalúan («No podemos evaluar», fail-closed).
+		const { evaluable, unavailable } = pickValidVersions(
+			data.bundle.rulesets,
+			evalCtx.today,
+		);
+		const evs = evaluable.map((rs) => ({
+			rs,
+			ev: evaluateRuleSet(rs, profile, evalCtx),
+		}));
+		for (const { slug } of unavailable) {
+			// para el enlace a la fuente usamos cualquier versión conocida
+			const any = data.bundle.rulesets.find((r) => r.benefitSlug === slug);
+			evs.push({ rs: any as never, ev: notEvaluableNow(slug, evalCtx.today) });
+		}
+		return evs;
+	}, [data, profile, evalCtx]);
 
 	const byVerdict = (v: string) =>
 		evaluations.filter(
@@ -505,6 +521,12 @@ function ResultCard({
 					rs.panelReview?.status !== "approved" &&
 					" · revisión final pendiente"}
 			</p>
+			{rs.versionNote && (
+				<p className="note version-note">
+					{rs.versionNote}{" "}
+					<Link href={`/ayudas/${ev.benefitSlug}`}>ver las dos versiones</Link>
+				</p>
+			)}
 			<p className="verdict-line">
 						{isEncaja({ ev }) && ev.verdict !== "probable"
 							? "Cumples todo lo comprobable; quedan condiciones del trámite por verificar"

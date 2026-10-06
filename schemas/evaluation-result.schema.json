@@ -337,7 +337,7 @@
         "failed": {
           "type": "array",
           "items": {
-            "pattern": "^I([1-9]|10)$"
+            "pattern": "^I([1-9]|1[01])$"
           }
         }
       }

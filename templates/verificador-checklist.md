@@ -25,6 +25,11 @@ Por cada ruleset `data/eligibility/rules/<slug>.json` del worktree del autor:
       solo normas del Ayto. ni al revés.
 - [ ] Requisitos `hard` sin medición exacta ⇒ falsos negativos (KO). Preferir
       `soft` cuando el cuestionario no lo mide.
+- [ ] **Vigencia de la redacción (R8-VIG)**: si la norma citada tiene una
+      modificación ya publicada pero aún no vigente (fecha de efecto futura en
+      el BOE), comprobar que hay versiones con vigencia (`validFrom` /
+      `validUntil`) y que el texto citado es el vigente en la fecha de hoy —
+      nunca la reforma futura como si ya aplicara.
 
 ## Motor y goldens
 - [ ] `rulesVersion` del golden = la del ruleset.

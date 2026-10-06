@@ -138,6 +138,12 @@ export function assertEvaluationInvariants(
 	// I8: frescura ≤ 90 días
 	if (diffDays(rs.verifiedAt, ev.today) > STALE_DAYS) failed.push("I8");
 
+	// I11 (R8-VIG): la versión evaluada es vigente en la fecha de consulta
+	// (referenceDate si la convocatoria la fija; si no, hoy).
+	const vigDate = rs.referenceDate === "application" ? ev.today : rs.referenceDate;
+	if (rs.validFrom && vigDate < rs.validFrom) failed.push("I11");
+	if (rs.validUntil && vigDate > rs.validUntil) failed.push("I11");
+
 	// I9: parámetros resueltos con vigencia que cubre referenceDate
 	const refDate = rs.referenceDate === "application" ? ev.today : rs.referenceDate;
 	for (const p of rs.parametersUsed ?? []) {

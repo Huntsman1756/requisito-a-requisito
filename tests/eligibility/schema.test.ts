@@ -314,9 +314,9 @@ describe("evaluationResultSchema", () => {
 		expect(evaluationResultSchema.safeParse(m).success).toBe(false);
 	});
 
-	it("rejects an invariant code outside I1-I10", () => {
+	it("rejects an invariant code outside I1-I11", () => {
 		const m = clone(valid);
-		m.selfCheck = { passed: false, failed: ["I11"] };
+		m.selfCheck = { passed: false, failed: ["I12"] };
 		expect(evaluationResultSchema.safeParse(m).success).toBe(false);
 	});
 

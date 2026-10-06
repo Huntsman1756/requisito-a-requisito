@@ -6,7 +6,12 @@ import { formatDateEs } from "../lib/format";
 
 function stats() {
 	const dir = join(process.cwd(), "data/eligibility/rules");
+	// R8-VIG: los ficheros `<slug>__v-*.json` son versiones futuras del mismo
+	// programa — las ayudas se cuentan por slug, no por fichero.
 	const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+	const slugs = new Set(
+		files.map((f) => f.slice(0, -5).replace(/__v-\d{4}-\d{2}-\d{2}$/, "")),
+	);
 	let verified = "";
 	const specimen = JSON.parse(
 		readFileSync(join(dir, "bono-cultural-joven.json"), "utf8"),
@@ -27,7 +32,7 @@ function stats() {
 	}, {});
 	return {
 		specimenDomain: (specimen.sources?.[0]?.id?.split("-")[0] ?? "boe").toUpperCase(),
-		rules: files.length,
+		rules: slugs.size,
 		level2: n2.items.length,
 		verified,
 		specimen,

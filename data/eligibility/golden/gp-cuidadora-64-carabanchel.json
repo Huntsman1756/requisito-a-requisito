@@ -76,7 +76,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "prestacion-cuidador-no-profesional",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

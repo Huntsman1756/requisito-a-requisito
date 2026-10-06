@@ -12,6 +12,9 @@ interface Rs {
 	benefitSlug: string;
 	rulesVersion: number;
 	verifiedAt: string;
+	validFrom?: string;
+	validUntil?: string;
+	versionNote?: string;
 	humanReview: { status: string };
 	sources: { id: string; rank: number; url: string; title: string }[];
 	requirements: { id: string; label: string; hard: boolean; citation: { locator: string; excerpt: string; sourceId: string } }[];
@@ -30,18 +33,40 @@ interface Rs {
 	} | null;
 }
 
-function load(slug: string): Rs | null {
-	const p = join(RULES_DIR, `${slug}.json`);
-	try {
-		return JSON.parse(readFileSync(p, "utf8"));
-	} catch {
-		return null;
+// R8-VIG: un mismo slug puede tener varias versiones (`<slug>.json` y
+// `<slug>__v-AAAA-MM-DD.json`). La ficha muestra la vigente en la fecha del
+// build y un aviso con enlace a los textos cuando existe otra versión.
+function versionsOf(slug: string): Rs[] {
+	const out: Rs[] = [];
+	for (const f of readdirSync(RULES_DIR)) {
+		if (!f.endsWith(".json")) continue;
+		const base = f.slice(0, -5).replace(/__v-\d{4}-\d{2}-\d{2}$/, "");
+		if (base !== slug) continue;
+		try {
+			out.push(JSON.parse(readFileSync(join(RULES_DIR, f), "utf8")));
+		} catch {
+			// archivo ilegible: se ignora
+		}
 	}
+	return out;
+}
+
+function load(slug: string): { rs: Rs; other: Rs[] } | null {
+	const all = versionsOf(slug);
+	if (all.length === 0) return null;
+	const today = new Date().toISOString().slice(0, 10);
+	const valid = all.filter(
+		(r) =>
+			(!r.validFrom || r.validFrom <= today) &&
+			(!r.validUntil || r.validUntil >= today),
+	);
+	const rs = valid[0] ?? all.find((r) => !r.validFrom) ?? all[0];
+	return { rs, other: all.filter((r) => r !== rs) };
 }
 
 export function generateStaticParams() {
 	return readdirSync(RULES_DIR)
-		.filter((f) => f.endsWith(".json"))
+		.filter((f) => f.endsWith(".json") && !/__v-\d{4}-\d{2}-\d{2}/.test(f))
 		.map((f) => ({ slug: f.slice(0, -5) }));
 }
 
@@ -59,8 +84,9 @@ export default async function Ficha({
 	params: Promise<{ slug: string }>;
 }) {
 	const { slug } = await params;
-	const rs = load(slug);
-	if (!rs) notFound();
+	const loaded = load(slug);
+	if (!loaded) notFound();
+	const { rs, other } = loaded;
 
 	const w = rs.application.window;
 	const src = (id: string) => rs.sources.find((s) => s.id === id);
@@ -76,6 +102,22 @@ export default async function Ficha({
 					year: "numeric",
 				})}
 			</p>
+
+			{rs.versionNote && other.length > 0 && (
+				<p className="note version-note">
+					{rs.versionNote}{" "}
+					{rs.sources[0] && (
+						<a href={rs.sources[0].url} rel="noopener noreferrer">
+							texto vigente ahora ↗
+						</a>
+					)}{" "}
+					{other[0]?.sources[0] && (
+						<a href={other[0].sources[0].url} rel="noopener noreferrer">
+							· texto de la nueva versión ↗
+						</a>
+					)}
+				</p>
+			)}
 
 			<h2>Requisitos</h2>
 			<ul className="req-list">

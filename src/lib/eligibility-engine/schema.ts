@@ -183,6 +183,13 @@ export const ruleSetSchema = z.strictObject({
 	benefitSlug: z.string().regex(/^[a-z0-9][a-z0-9-]*$/),
 	standalone: z.boolean().optional(),
 	rulesVersion: z.number().int().min(1),
+	// R8-VIG: vigencia de esta versión de la regla (fechas incluidas).
+	// Varias versiones del mismo benefitSlug deben tener ventanas disjuntas.
+	validFrom: isoDate.optional(),
+	validUntil: isoDate.optional(),
+	// Texto visible cuando existe otra versión de esta misma ayuda con otra
+	// vigencia (p. ej. «Esta ayuda cambia el 23 de octubre de 2026»).
+	versionNote: z.string().optional(),
 	verifiedAt: isoDate,
 	verification: z
 		.strictObject({
@@ -479,7 +486,7 @@ export const evaluationResultSchema = z.strictObject({
 	explanationKeys: z.array(z.string()),
 	selfCheck: z.strictObject({
 		passed: z.boolean(),
-		failed: z.array(z.string().regex(/^I([1-9]|10)$/)),
+		failed: z.array(z.string().regex(/^I([1-9]|1[01])$/)),
 	}),
 });
 export type EvaluationResult = z.infer<typeof evaluationResultSchema>;

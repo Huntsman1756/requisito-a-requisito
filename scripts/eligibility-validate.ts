@@ -304,6 +304,35 @@ export function validateEligibility(opts: ValidateOptions): ValidateResult {
 		rulesets.push(rs);
 	}
 
+	// R8-VIG (I11 a nivel build): las ventanas de vigencia de versiones del
+	// mismo benefitSlug no pueden solaparse (0 solapes ⇒ a cada fecha le
+	// corresponde como mucho una versión; un hueco produce «No podemos
+	// evaluar» en esa fecha, eso es fail-closed correcto).
+	const bySlug = new Map<string, { file: string; from: string; until: string }[]>();
+	for (const rs of rulesets) {
+		const file = rs.benefitSlug;
+		const arr = bySlug.get(rs.benefitSlug) ?? [];
+		arr.push({
+			file,
+			from: rs.validFrom ?? "0000-01-01",
+			until: rs.validUntil ?? "9999-12-31",
+		});
+		bySlug.set(rs.benefitSlug, arr);
+	}
+	for (const [slug, vs] of bySlug) {
+		if (vs.length < 2) continue;
+		vs.sort((a, b) => a.from.localeCompare(b.from));
+		for (let i = 1; i < vs.length; i++) {
+			if (vs[i].from <= vs[i - 1].until) {
+				err(
+					"ELIG_VERSION_OVERLAP",
+					slug,
+					`ventanas de vigencia solapadas: ${vs[i - 1].from}..${vs[i - 1].until} y ${vs[i].from}..${vs[i].until}`,
+				);
+			}
+		}
+	}
+
 	return { ok: errors.length === 0, errors, warnings, rulesets };
 }
 

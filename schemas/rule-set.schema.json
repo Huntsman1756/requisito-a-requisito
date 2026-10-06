@@ -36,6 +36,20 @@
       "type": "string",
       "format": "date"
     },
+    "validFrom": {
+      "type": "string",
+      "format": "date",
+      "description": "Primera fecha en que esta versión está vigente (incluida). Varias versiones del mismo benefitSlug deben tener ventanas disjuntas (R8-VIG)."
+    },
+    "validUntil": {
+      "type": "string",
+      "format": "date",
+      "description": "Última fecha vigente (incluida). Sin validFrom/validUntil la versión es siempre vigente."
+    },
+    "versionNote": {
+      "type": "string",
+      "description": "Nota visible cuando existe otra versión de la misma ayuda con otra vigencia."
+    },
     "verification": {
       "type": "object",
       "additionalProperties": false,

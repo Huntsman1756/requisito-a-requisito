@@ -72,7 +72,7 @@ export default function Observatorio() {
 			</p>
 
 			<div className="obs">
-				<div><b>{manifest.included.length}</b><span className="note">ayudas comprobadas con reglas</span></div>
+				<div><b>{new Set(manifest.included as string[]).size}</b><span className="note">ayudas comprobadas con reglas</span></div>
 				<div><b>{l2.items.length}</b><span className="note">relacionadas con fuente oficial</span></div>
 				<div><b>{(sources.domains?.length ?? 0)}</b><span className="note">dominios oficiales registrados</span></div>
 				<div><b>{formatDateEs(verified)}</b><span className="note">última verificación de reglas</span></div>
