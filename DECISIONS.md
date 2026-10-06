@@ -375,3 +375,12 @@ detección). No mejora la calidad de las reglas ni del producto, y su despliegue
 consumiría días. Los riesgos equivalentes aquí (secretos, escrituras en donantes,
 publicación sin revisión) ya los cubren reglas explícitas y gates (G12, ADR-044,
 prohibición de escribir en donantes, `NAN_API_KEY` fuera del repo).
+
+## ADR-049 — Revisión local de fuentes bloqueadas para el CI: Windows ahora, VPS después
+2026-10-06 · aceptada (Daniel) · 40 de 154 fuentes (sede.comunidad.madrid y
+seg-social.es) bloquean a GitHub Actions. Se revisan con una tarea programada de
+Windows en el PC de Daniel (diaria, más al iniciar sesión si se perdió), con la
+misma lógica fail-closed que F9 y push del resultado. Si el PC está apagado, ese
+día no hay revisión de esas fuentes: el Observatorio muestra la fecha real de la
+última revisión de cada grupo (R7-HONEST). Migración posterior a un VPS de Daniel
+(R7-VPS), comprobando antes que esas sedes responden desde su IP.
