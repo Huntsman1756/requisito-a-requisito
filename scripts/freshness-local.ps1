@@ -1,4 +1,4 @@
-# freshness-local.ps1 — R7-LOCAL: revalidación diaria de las fuentes que el
+﻿# freshness-local.ps1 — R7-LOCAL: revalidación diaria de las fuentes que el
 # CI no alcanza (sedes que bloquean IPs de datacenter: seg-social.es,
 # comunidad.madrid). Corre en el Windows de Daniel bajo tarea programada
 # «Requisito-FreshnessLocal» (autorizada en ADR-049).
