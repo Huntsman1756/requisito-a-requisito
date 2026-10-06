@@ -43,10 +43,13 @@ export default function ComoFunciona() {
 			</p>
 			<h2>Frescura</h2>
 			<p>
-				Revisamos las fuentes cada día: si una fuente cambia y un extracto
-				citado ya no aparece, la ayuda afectada se retira automáticamente de la
-				lista hasta que la revisamos de nuevo. Nunca mostramos un dato
-				desactualizado como vigente.
+				Revisamos cada día las normas oficiales (BOE, BOCM y otras sedes
+				accesibles); las páginas informativas de las administraciones —las que
+				indican canal y documentos— se revisan periódicamente, porque sus
+				sedes no responden al proceso automático. Si una fuente cambia y un
+				extracto citado ya no aparece, la ayuda afectada se retira
+				automáticamente de la lista hasta que la revisamos de nuevo. Nunca
+				mostramos un dato desactualizado como vigente.
 			</p>
 			<h2>Privacidad</h2>
 			<p>

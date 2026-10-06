@@ -187,10 +187,11 @@ export default function Home() {
 						</p>
 					</li>
 					<li>
-						<h3>Lo revisamos cada día</h3>
+						<h3>Revisamos las normas cada día</h3>
 						<p className="note">
-							Si una fuente cambia, esa ayuda se retira hasta revisarla. Puedes
-							ver el registro en el Observatorio.
+							Si una fuente cambia, esa ayuda se retira hasta revisarla. Las
+							páginas de las sedes se revisan periódicamente. Puedes ver el
+							registro en el Observatorio.
 						</p>
 					</li>
 				</ol>

@@ -35,6 +35,19 @@ export default function Observatorio() {
 		acc[k] = (acc[k] ?? 0) + 1;
 		return acc;
 	}, {});
+	// Frescura: última corrida del job diario (data/freshness/runs.jsonl)
+	let lastRun: { date: string; checked: number; skipped?: string[]; stale: string[] } | null = null;
+	try {
+		const lines = readFileSync(join(process.cwd(), "data/freshness/runs.jsonl"), "utf8")
+			.trim()
+			.split("\n");
+		lastRun = JSON.parse(lines[lines.length - 1]);
+	} catch {
+		lastRun = null;
+	}
+	const dailyCount = lastRun ? lastRun.checked : null;
+	const periodicCount = lastRun ? (lastRun.skipped?.length ?? 0) : null;
+	const staleCount = lastRun ? lastRun.stale.length : null;
 
 	return (
 		<section className="shell band" aria-labelledby="observatorio-title" style={{ borderTop: 0 }}>
@@ -69,6 +82,27 @@ export default function Observatorio() {
 					))}
 				</ul>
 			</div>
+
+			<h2 style={{ marginTop: "2rem" }}>Frescura de las fuentes</h2>
+			{lastRun ? (
+				<>
+					<div className="obs">
+						<div><b>{dailyCount}</b><span className="note">fuentes revisadas cada día (normas y sedes accesibles)</span></div>
+						<div><b>{periodicCount}</b><span className="note">de revisión periódica (las sedes bloquean el proceso automático)</span></div>
+						<div><b>{formatDateEs(lastRun.date)}</b><span className="note">última revisión</span></div>
+						<div><b>{staleCount}</b><span className="note">fuentes marcadas como cambiadas</span></div>
+					</div>
+					<p className="note">
+						Cada día se re-descargan las normas (BOE, BOCM y otras sedes
+						accesibles) y se comprueba que los extractos citados siguen
+						presentes; si falta alguno, la ayuda sale del listado hasta su
+						revisión. Las páginas informativas de las administraciones no
+						responden al proceso automático y se revisan en otro ciclo.
+					</p>
+				</>
+			) : (
+				<p className="note">Sin datos de frescura aún.</p>
+			)}
 
 			<h2 style={{ marginTop: "2rem" }}>Por ámbito</h2>
 			<ul>
