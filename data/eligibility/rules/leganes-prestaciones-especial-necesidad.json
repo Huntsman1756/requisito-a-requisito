@@ -1,0 +1,248 @@
+{
+ "benefitSlug": "leganes-prestaciones-especial-necesidad",
+ "standalone": true,
+ "rulesVersion": 1,
+ "verifiedAt": "2026-10-06",
+ "humanReview": {
+  "status": "pending"
+ },
+ "verification": {
+  "status": "ok",
+  "by": "verificador-independiente",
+  "at": "2026-10-06",
+  "report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
+ },
+ "referenceDate": "application",
+ "sources": [
+  {
+   "id": "bocm-20230328-leganes-ordenanza-prestaciones",
+   "rank": 1,
+   "documentType": "regulatory_base",
+   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/03/28/BOCM-20230328-62.PDF",
+   "title": "Ordenanza reguladora del procedimiento de concesión de prestaciones sociales de carácter económico para situaciones de especial necesidad y/o necesidad social en los servicios sociales del Ayuntamiento de Leganés (aprobación definitiva por acuerdo de pleno de 14 de marzo de 2023; BOCM n.º 74, de 28 de marzo de 2023, doc. 62)"
+  }
+ ],
+ "parametersUsed": [
+  "IPREM_ANUAL_12P"
+ ],
+ "requirements": [
+  {
+   "id": "empadronado-leganes-6m",
+   "hard": true,
+   "label": "Estar empadronado/a en Leganés de forma ininterrumpida al menos 6 meses antes de la solicitud. Se exceptúa a las víctimas de violencia de género o intrafamiliar, a los supuestos de protección del menor (arts. 10.3 y 11.1 de la Ley 1/1996) y a las prestaciones para personas transeúntes",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 3.a",
+    "excerpt": "Podrán ser beneficiarios/as de estas ayudas las personas individuales o unidades familiares, residentes en el municipio de Leganés con una acreditación de residen- cia efectiva de forma ininterrumpida (empadronamiento) de al menos 6 meses con antelación a la fecha de presentación de la solicitud.",
+    "excerptSha256": "2e672ae4fa9e4fe149eacfb81693a25f00321b6fda785007e0410d2bb7b2fb5b"
+   },
+   "condition": {
+    "all": [
+     {
+      "field": "territory",
+      "op": "within_territory",
+      "value": {
+       "municipality": "28074"
+      },
+      "label": "estás empadronado/a en Leganés (28074)"
+     },
+     {
+      "field": "residenceMonths",
+      "op": "gte",
+      "value": 6
+     }
+    ]
+   }
+  },
+  {
+   "id": "limite-ingresos-anexo-i",
+   "hard": false,
+   "label": "No superar los límites de ingresos del Anexo I, deducible el 50 % de hipoteca o alquiler de la vivienda habitual (máximo 500 €/mes): 100 % del IPREM para 1 miembro, 150 % para 2, 160 % para 3, 170 % para 4, 180 % para 5, 190 % para 6, 200 % para 7, 205 % para 8, 210 % para 9 y 215 % para 10; cada miembro con discapacidad ≥65 % o dependencia grado 2 o superior computa como dos. Como referencia orientativa usamos ingresos por debajo de 1 × IPREM",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 3.c y anexo I",
+    "excerpt": "No superar los límites de ingresos establecidos en el Anexo I de la presente Orde- nanza, una vez deducidos el 50 % de los gastos de hipoteca o alquiler de la vivien- da habitual, como máximo quinientos euros al mes.",
+    "excerptSha256": "76c074e204ca8d268848a44fa070be8f7888f76d55c52c3018aa1ff688aa77e8"
+   },
+   "condition": {
+    "field": "incomeAnnual",
+    "op": "lte",
+    "param": "IPREM_ANUAL_12P"
+   }
+  }
+ ],
+ "uncoveredRequirements": [
+  {
+   "id": "situacion-necesidad",
+   "label": "Acreditar suficientemente la situación de necesidad, que valora el/la trabajador/a social dentro del diseño de intervención social",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 3.b",
+    "excerpt": "Acreditación suficiente de la situación de necesidad.",
+    "excerptSha256": "0686cd905d4b749ee0ee9f3449594cc61a118bb993894b4b5ce576eb137f0f13"
+   }
+  },
+  {
+   "id": "recursos-agotados",
+   "label": "Que no existan o estén agotados todos los recursos disponibles por la persona solicitante, su unidad familiar o alguno de sus miembros",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 3.d",
+    "excerpt": "Que no existan o hayan sido agotados todos los recursos disponibles por la perso- na solicitante, su unidad familiar o alguno de sus miembros.",
+    "excerptSha256": "ed623f62f4b10bca9a034af035afd4ffc4c30faa6fdd2dee7b336d813b71bee9"
+   }
+  },
+  {
+   "id": "extranjeria-y-asilo",
+   "label": "Las personas sin nacionalidad española se rigen por la L.O. 4/2000 (los residentes tienen derecho a las prestaciones sociales en igualdad de condiciones; las prestaciones básicas, en cualquier situación administrativa); las solicitantes de asilo o refugio, por la Ley 12/2009 y su normativa de desarrollo",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 3.e-f",
+    "excerpt": "los ex- tranjeros, cualquiera que sea su situación administrativa, tienen derecho a los servicios y prestaciones sociales básicas.",
+    "excerptSha256": "d694d883cd93c6f325f539bafffa006785e8374f080615b3be6345581527b8d8"
+   }
+  },
+  {
+   "id": "incompatibilidades",
+   "label": "No se conceden ayudas por el mismo concepto ya concedidas por otra Administración u organismo público ni si fueron denegadas por incumplir requisitos, salvo que la ayuda concedida no solventara la necesidad",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 4",
+    "excerpt": "No podrán otorgarse ayudas con el mismo concepto que hayan sido concedidas por otra Administración u Organismo Público",
+    "excerptSha256": "80aabccb6e7c9568010b3329824625c6f9f183bfe182160cd345a3508a569773"
+   }
+  },
+  {
+   "id": "diseno-intervencion",
+   "label": "La concesión forma parte de un diseño de intervención social elaborado con el/la trabajador/a social de referencia, cuyos acuerdos debe aceptar la persona beneficiaria",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 5.2",
+    "excerpt": "Como parte del proceso debe establecerse un diseño de intervención social con la participación del/la trabajador/a social de referencia y la persona solicitante, cuyos acuer- dos deben de ser aceptados por la persona beneficiaria.",
+    "excerptSha256": "5a4614e97d39966b8577af6c8d8c1dc947fc019b0083a4b46044470b3c52c21c"
+   }
+  },
+  {
+   "id": "modalidades-con-requisitos-propios",
+   "label": "Cada modalidad del anexo II/III tiene condiciones propias: escuelas infantiles, ayuda familiar (200 €/mes primera persona +100 € hasta 600 €, 6 meses), alquiler o hipoteca (700 €/mes, 3 meses), suministros, gafas, audífonos, farmacia…; en eléctrico y agua se exige primero solicitar el bono social correspondiente",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 6-7 y anexos II-III",
+    "excerpt": "siempre que se cum- plan con los requisitos exigidos, la solicitud previa, en caso de no exis- tir, del bono social eléctrico de la compañía suministradora.",
+    "excerptSha256": "79a2981b8aa54f86c1fb479a99a17958710d10dbf84f5c600abccc3e8944b2a5"
+   }
+  },
+  {
+   "id": "comunicacion-cambios",
+   "label": "Debes comunicar al Ayuntamiento en 15 días naturales cualquier hecho sobrevenido que afecte al cumplimiento de los requisitos (composición de la unidad familiar, ingresos, patrimonio)",
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 8.e",
+    "excerpt": "Comunicar al Ayuntamiento de Leganés en el plazo de 15 días naturales los he- chos sobrevenidos en relación con el cumplimiento de los requisitos",
+    "excerptSha256": "f5c3e0541aa0cd32166f4d4f4eae837494164ec568e4415aed6dddde591a1a79"
+   }
+  }
+ ],
+ "application": {
+  "window": {
+   "rolling": true,
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 9-10 (procedimiento permanente, sin convocatoria)",
+    "excerpt": "Las solicitudes se realizarán en el modelo normalizado que estipule el Ayuntamiento de Leganés",
+    "excerptSha256": "2320c92fb7de8a74edcbfdce8603b3052a3349688ac7aa42a155203a984fe2fb"
+   }
+  },
+  "channel": {
+   "managingBody": "Ayuntamiento de Leganés — Área de Servicios Sociales",
+   "url": "https://www.leganes.org/servicios-sociales",
+   "online": true,
+   "inPerson": true,
+   "citation": {
+    "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+    "locator": "Ordenanza, art. 10.1",
+    "excerpt": "El procedimiento se iniciará de ofi- cio por parte del Ayuntamiento de Leganés o a instancia de las personas interesadas.",
+    "excerptSha256": "94951b78b9d6fae12a910c650fc6872af588bf101a0fb7e4d856f3e82cb7a34d"
+   }
+  },
+  "documents": [
+   {
+    "id": "doc-identidad",
+    "label": "DNI o documento de identidad del solicitante",
+    "mandatory": true,
+    "citation": {
+     "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+     "locator": "Ordenanza, anexo IV",
+     "excerpt": "DNI o documento de identidad del solicitante.",
+     "excerptSha256": "d790878798dcc001628a1483d7ef9b20a5b59d2b5c2fdfbe939ad6560071c954"
+    }
+   },
+   {
+    "id": "doc-libro-familia",
+    "label": "Libro de familia o certificado de inscripción",
+    "mandatory": false,
+    "citation": {
+     "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+     "locator": "Ordenanza, anexo IV",
+     "excerpt": "Libro de Familia o Certificado de inscripción.",
+     "excerptSha256": "c7e1ebbeb83fff1aefc28bc3c8aa3eeb6abcfaba188db49f3237f785589c8f01"
+    }
+   },
+   {
+    "id": "doc-ingresos",
+    "label": "Justificante de ingresos de todos los miembros mayores de 16 años de la unidad familiar, según proceda",
+    "mandatory": true,
+    "citation": {
+     "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+     "locator": "Ordenanza, anexo IV",
+     "excerpt": "Justificante de ingresos de todos los miembros mayores de 16 años de la unidad familiar, según proceda.",
+     "excerptSha256": "d2de1ec2b892a2618ff0ac44f09c437b973b824c049fa5c80e1e2112f597b6a7"
+    }
+   },
+   {
+    "id": "doc-demanda-empleo",
+    "label": "Tarjetas de demanda de empleo de los mayores de 16 años, según proceda",
+    "mandatory": false,
+    "citation": {
+     "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+     "locator": "Ordenanza, anexo IV",
+     "excerpt": "Tarjetas de demanda de empleo, de los mayores de 16 años, según proceda.",
+     "excerptSha256": "e6c37bbc357afda4c3545b1c179f3c0edce01a752688a82c687c8f47c289606b"
+    }
+   },
+   {
+    "id": "doc-vivienda",
+    "label": "Contrato de alquiler de la vivienda y recibo (para la deducción del 50 % de alquiler o hipoteca)",
+    "mandatory": false,
+    "citation": {
+     "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+     "locator": "Ordenanza, anexo IV",
+     "excerpt": "Contrato de alquiler de la vivienda y recibo.",
+     "excerptSha256": "40755432e5e5a0e9cbd1cf4357154f49c3977764d2c0bd2447e5d44909cc8e75"
+    }
+   }
+  ]
+ },
+ "amount": {
+  "type": "variable",
+  "period": "monthly",
+  "citation": {
+   "sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+   "locator": "Ordenanza, anexo III",
+   "excerpt": "Ayuda para el pago de alquiler o cuota hipotecaria 100 % de la cuantía máxima mensual 700 €/mes 3 meses",
+   "excerptSha256": "9eec8f7a38982373271374a546be6c442fb48a8f98e5d441e06a1b3c65d9fdcc"
+  }
+ },
+ "effortInputs": {
+  "requiresCertificate": true,
+  "formPages": 1
+ },
+ "themes": [
+  "ingresos_minimos",
+  "vivienda"
+ ],
+ "lifeEvents": [
+  "perder_empleo",
+  "ingresos_bajos"
+ ]
+}

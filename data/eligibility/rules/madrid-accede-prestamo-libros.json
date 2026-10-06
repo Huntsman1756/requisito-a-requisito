@@ -1,0 +1,167 @@
+{
+ "benefitSlug": "madrid-accede-prestamo-libros",
+ "standalone": true,
+ "rulesVersion": 1,
+ "verifiedAt": "2026-10-06",
+ "humanReview": {
+  "status": "pending"
+ },
+ "verification": {
+  "status": "ok",
+  "by": "verificador-independiente",
+  "at": "2026-10-06",
+  "report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
+ },
+ "referenceDate": "application",
+ "sources": [
+  {
+   "id": "bocm-20181214-decreto-168-accede",
+   "rank": 1,
+   "documentType": "regulatory_base",
+   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2018/12/14/BOCM-20181214-18.PDF",
+   "title": "Decreto 168/2018, de 11 de diciembre, del Consejo de Gobierno, por el que se aprueba el Reglamento del Programa Accede, sistema de préstamo de los libros de texto y el material curricular de la Comunidad de Madrid (BOCM n.º 297, de 14 de diciembre de 2018, doc. 18)"
+  },
+  {
+   "id": "bocm-20191213-orden-3616-accede",
+   "rank": 1,
+   "documentType": "modification",
+   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2019/12/13/BOCM-20191213-14.PDF",
+   "title": "Orden 3616/2019, de 5 de diciembre, del Consejero de Educación y Juventud, por la que se desarrolla el Decreto 168/2018 (calendario de renovación, plazos de adhesión y entrega, cuantía de la fianza), con la redacción dada por la Orden 2049/2022 (BOCM n.º 297, de 13 de diciembre de 2019, doc. 14)"
+  },
+  {
+   "id": "bocm-20260826-orden-3286-accede",
+   "rank": 1,
+   "documentType": "call",
+   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2026/08/26/BOCM-20260826-3.PDF",
+   "title": "Orden 3286/2026, de 24 de agosto, de la Consejería de Educación, Ciencia y Universidades, por la que se modifica la Orden 3616/2019 (nuevo calendario de renovación hasta 2030) y se establecen las cuantías económicas para el curso 2026/2027 en el Programa Accede (BOCM n.º 203, de 26 de agosto de 2026, doc. 3)"
+  }
+ ],
+ "parametersUsed": [],
+ "requirements": [
+  {
+   "id": "alumno-centro-sostenido",
+   "hard": false,
+   "label": "Cursar Educación Primaria, Educación Secundaria Obligatoria, Formación Profesional Básica o Educación Especial en un centro docente sostenido con fondos públicos de la Comunidad de Madrid que se haya adherido al programa (incluye el alumnado con necesidades educativas especiales que use material curricular adaptado)",
+   "citation": {
+    "sourceId": "bocm-20181214-decreto-168-accede",
+    "locator": "Decreto, arts. 1-2.1",
+    "excerpt": "Los alumnos de los centros que cursen las enseñanzas a que se refiere el artículo anterior podrán ser beneficiarios del Programa Accede siempre que soliciten su participa- ción a través del modelo que figura en el anexo I.",
+    "excerptSha256": "859d4f9451692a456ecc02187781117d4133ff3d07e61f022372c2099f2b1a77"
+   },
+   "condition": {
+    "field": "studentStatus",
+    "op": "eq",
+    "value": "si"
+   }
+  }
+ ],
+ "uncoveredRequirements": [
+  {
+   "id": "solicitud-adhesion-anexo-i",
+   "label": "Presentar la solicitud de participación (modelo del anexo I) en el centro, tras la matrícula y antes del comienzo del curso; si te incorporas con posterioridad, en el momento de la incorporación. En centros concertados el centro debe haber manifestado antes su adhesión",
+   "citation": {
+    "sourceId": "bocm-20181214-decreto-168-accede",
+    "locator": "Decreto, art. 2.2-3",
+    "excerpt": "El modelo contenido en el anexo I se entregará cumplimentado en el centro co- rrespondiente una vez realizada la matrícula y antes del comienzo del curso escolar, salvo que el alumno se incorpore al centro c",
+    "excerptSha256": "ca8e4a489175d7a037bfe98bd680008f2f0f83af3a889daf41c7d40058d76e00"
+   }
+  },
+  {
+   "id": "entrega-libros-curso-anterior",
+   "label": "Para adherirte debes entregar, en junio, la totalidad de los libros de texto y material curricular del curso anterior en perfecto estado de uso, salvo: 1.º y 2.º de Primaria, alumnado con necesidades educativas especiales, repetidores o con asignaturas pendientes (en las asignaturas afectadas), materiales de elaboración propia y los cursos con renovación establecida por orden",
+   "citation": {
+    "sourceId": "bocm-20181214-decreto-168-accede",
+    "locator": "Decreto, art. 5.1",
+    "excerpt": "el alumnado deberá hacer entrega de la totalidad de los libros de texto y material curricular del curso anterior en perfecto es- tado de uso con las siguientes excepciones: a) Estudiantes de primero y segundo de Educación Primaria.",
+    "excerptSha256": "306c809a35b1fae5c9885a599c415f38725119dc7d795128033eed4dd8059873"
+   }
+  },
+  {
+   "id": "fianza-opcional",
+   "label": "El centro puede pedir una fianza de entre 5 y 60 euros al año para garantizar la devolución en perfecto estado de los libros prestados; se devuelve al entregar todos los libros al finalizar el curso o al darse de baja",
+   "citation": {
+    "sourceId": "bocm-20191213-orden-3616-accede",
+    "locator": "Orden, art. 3.2-3 y 3.5",
+    "excerpt": "La cuantía de la fianza, en su caso, se fija en un importe anual comprendido entre 5 y 60 euros, ambos inclusive.",
+    "excerptSha256": "e29bf5e7e387ee9220ece8e5e67baa2ef49cd0dc58cd6d64415d0d5845f13e61"
+   }
+  },
+  {
+   "id": "obligaciones-usuario",
+   "label": "Como beneficiario debes entregar al centro en perfecto estado los libros y material curricular del curso anterior en la fecha que fije la Comisión de Gestión y devolver los prestados al final del curso; el incumplimiento puede excluirte del curso siguiente",
+   "citation": {
+    "sourceId": "bocm-20181214-decreto-168-accede",
+    "locator": "Decreto, arts. 5.2 y 8",
+    "excerpt": "deberá devolver la totalidad de los libros de texto y material curricular que les hayan sido prestados el curs",
+    "excerptSha256": "5d3c502917c6db3d7800260139f8d2807087d442f528287eca014943757abb2a"
+   }
+  },
+  {
+   "id": "vigencia-programa-2026-2030",
+   "label": "Vigencia del programa: la Orden 3286/2026 modifica la Orden 3616/2019 y prolonga el calendario de renovación hasta 2030, y fija las cuantías de la fianza y de las dotaciones para el curso 2026/2027",
+   "citation": {
+    "sourceId": "bocm-20260826-orden-3286-accede",
+    "locator": "Orden, exposición y disposición primera",
+    "excerpt": "calendario de renovación que abarque hasta el año 2030",
+    "excerptSha256": "53da56938a0355f4d58ec454d23da056c8903bc2e2421fe34c64ee73f9c1e7e4"
+   }
+  }
+ ],
+ "application": {
+  "window": {
+   "rolling": true,
+   "recurrence": "annual",
+   "citation": {
+    "sourceId": "bocm-20191213-orden-3616-accede",
+    "locator": "Orden, art. 3.1 (entrega de libros en junio; el plazo de adhesión se abre tras la matrícula cada curso)",
+    "excerpt": "Para poder adherirse al Programa Accede los alumnos deben entregar, en el mes de junio, la totalidad de los libros de texto y el material curricular del curso anterior en per- fecto estado de uso",
+    "excerptSha256": "796210fa4fd242f34912e6ac253f3cab69f11826a66903d95ea04b5653acf668"
+   }
+  },
+  "channel": {
+   "managingBody": "Comunidad de Madrid — Consejería de Educación, Ciencia y Universidades (gestión a través del centro docente; Plataforma Accede)",
+   "url": "https://www.comunidad.madrid/educacion/programa-accede",
+   "online": false,
+   "inPerson": true,
+   "citation": {
+    "sourceId": "bocm-20181214-decreto-168-accede",
+    "locator": "Decreto, art. 2.3",
+    "excerpt": "El modelo contenido en el anexo I se entregará cumplimentado en el centro co- rrespondiente una vez realizada la matrícula y antes del comienzo del curso escolar",
+    "excerptSha256": "11dcdbdb446f07171637f1ed7453b77080c561cb8373c8dc9ddcc851f54cb923"
+   }
+  },
+  "documents": [
+   {
+    "id": "doc-anexo-i",
+    "label": "Modelo de solicitud de participación (anexo I del Decreto 168/2018) cumplimentado en el centro docente",
+    "mandatory": true,
+    "citation": {
+     "sourceId": "bocm-20181214-decreto-168-accede",
+     "locator": "Decreto, arts. 2.1 y 2.3",
+     "excerpt": "siempre que soliciten su participa- ción a través del modelo que figura en el anexo I.",
+     "excerptSha256": "4323b8b201a7143f01411b885efaf5d8c3bf688a44b3291529c3854bd7b38076"
+    }
+   }
+  ]
+ },
+ "amount": {
+  "type": "variable",
+  "period": "annual",
+  "citation": {
+   "sourceId": "bocm-20181214-decreto-168-accede",
+   "locator": "Decreto, art. 5.1",
+   "excerpt": "podrá disponer gratuitamente, en régimen de préstamo, de los libros de texto y material curricular equivalente al libro de texto, necesario para el desarrollo del programa completo de una asignatura",
+   "excerptSha256": "0002f2dcaba1388d720b3889b576cc580cfaffddf2e64e677323c0c5e3b81db6"
+  }
+ },
+ "effortInputs": {
+  "requiresCertificate": false,
+  "formPages": 1
+ },
+ "themes": [
+  "educacion"
+ ],
+ "lifeEvents": [
+  "ingresos_bajos"
+ ]
+}

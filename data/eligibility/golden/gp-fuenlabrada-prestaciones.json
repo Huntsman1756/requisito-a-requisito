@@ -1,0 +1,66 @@
+{
+	"id": "gp-fuenlabrada-prestaciones",
+	"description": "Mujer de 50 años empadronada en Fuenlabrada (28058) desde 2016, con una hija menor a cargo e ingresos anuales en la banda baja (0-8.400 €). Cubre dos ayudas: (1) prestaciones sociales individuales del Ayuntamiento - cumple los requisitos duros comprobables (mayoría de edad y empadronamiento), el aviso de ingresos queda en U por straddle del límite orientativo de persona sola (7.984 €) ⇒ posible ROLLING; (2) prestación #FuenlaCareNet - cumple empadronamiento y unidad familiar con menor a cargo (la derivación por Servicios Sociales y la aceptación no son comprobables) ⇒ posible, ventana OPEN (segundo periodo 01/10/2026-30/09/2027).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28058" } },
+			"residenceSince": { "state": "value", "value": { "year": 2016, "month": 4 } },
+			"age": { "state": "value", "value": { "min": 50, "max": 50, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [
+				{ "age": { "min": 10, "max": 10, "maxExclusive": false }, "disability": "no" }
+			] },
+			"familyType": { "state": "value", "value": "monoparental" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "fuenlabrada-prestaciones-sociales",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 4.1-4.2",
+					"reasoning": "50 años y empadronada en Fuenlabrada (28058) ⇒ los dos requisitos duros comprobables en T."
+				},
+				{
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 4.3 y art. 7.1",
+					"reasoning": "Carencia de ingresos (soft): la banda 0-8.400 € straddles el límite orientativo de persona sola (7.984 €/año); el baremo real depende del tamaño de la unidad ⇒ U."
+				}
+			]
+		},
+		{
+			"benefitSlug": "fuenlabrada-fuenlacarenet-2026",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "OPEN",
+			"justification": [
+				{
+					"sourceId": "bocm-20260521-fuenlacarenet",
+					"locator": "Bases 2026, apartado segundo.a",
+					"reasoning": "Empadronada en Fuenlabrada (28058) ⇒ requisito hard en T (la anterioridad a la aprobación de las bases se presume y se traslada a la verificación administrativa)."
+				},
+				{
+					"sourceId": "bocm-20260521-fuenlacarenet",
+					"locator": "Bases 2026, apartado segundo.b",
+					"reasoning": "Unidad familiar con una menor de edad a cargo ⇒ requisito hard en T; la valoración de riesgo y la derivación por Servicios Sociales no son comprobables ⇒ posible."
+				},
+				{
+					"sourceId": "bocm-20260521-fuenlacarenet",
+					"locator": "Bases 2026, apartado quinto",
+					"reasoning": "Hoy 06/10/2026 está dentro del segundo periodo (01/10/2026-30/09/2027) ⇒ deadlineState OPEN."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

@@ -1,0 +1,41 @@
+{
+	"id": "gp-accede-estudiante",
+	"description": "Adolescente de 15 años residente en la Comunidad de Madrid, escolarizado (studentStatus = si) y sin ingresos propios. Caso «posible» para el Programa Accede: el único requisito comprobable (ser alumno) queda en T; la solicitud del anexo I en el centro, la entrega en junio de los libros del curso anterior y la posible fianza no son comprobables ⇒ veredicto posible con plazo ROLLING (programa permanente con calendario anual por curso).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
+			"residenceSince": { "state": "value", "value": { "year": 2011, "month": 6 } },
+			"age": { "state": "value", "value": { "min": 15, "max": 15, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "general" },
+			"studentStatus": { "state": "value", "value": "si" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "general" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-accede-prestamo-libros",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20181214-decreto-168-accede",
+					"locator": "Decreto, arts. 1-2.1",
+					"reasoning": "Es estudiante ⇒ el aviso comprobable de «alumno de centro sostenido con fondos públicos» queda en T (soft; nivel y centro no se comprueban)."
+				},
+				{
+					"sourceId": "bocm-20181214-decreto-168-accede",
+					"locator": "Decreto, arts. 2.3 y 5",
+					"reasoning": "La solicitud del anexo I tras la matrícula y la entrega de los libros del curso anterior en junio no son comprobables ⇒ posible; el programa es permanente con calendario anual ⇒ ROLLING."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

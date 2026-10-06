@@ -1,0 +1,49 @@
+{
+	"id": "gp-mostoles-prestaciones",
+	"description": "Mujer de 45 años empadronada en Móstoles (28092) desde 2010, desempleada, con dos hijos menores a cargo e ingresos anuales en la banda más baja (0–8.400 €). Caso «posible»: cumple los dos requisitos duros comprobables (mayoría de edad y empadronamiento en Móstoles); el aviso de carencia de ingresos queda en U porque la banda 0–8.400 € straddles el IPREM orientativo (7.200 €) y el umbral real depende del tamaño de la unidad; el resto de requisitos son no comprobables con el cuestionario ⇒ veredicto posible con plazo ROLLING.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28092" } },
+			"residenceSince": { "state": "value", "value": { "year": 2010, "month": 5 } },
+			"age": { "state": "value", "value": { "min": 45, "max": 45, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [
+				{ "age": { "min": 7, "max": 7, "maxExclusive": false }, "disability": "no" },
+				{ "age": { "min": 12, "max": 12, "maxExclusive": false }, "disability": "no" }
+			] },
+			"familyType": { "state": "value", "value": "monoparental" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "mostoles-prestaciones-sociales",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 4.1.b",
+					"reasoning": "Empadronada en Móstoles (28092) ⇒ requisito hard en T."
+				},
+				{
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 4.1.a",
+					"reasoning": "«Ser mayor de dieciocho años o menor emancipado»: 45 años ⇒ T."
+				},
+				{
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 4.1.c",
+					"reasoning": "Carencia de ingresos (soft): la banda 0–8.400 € straddles el IPREM orientativo y el umbral real depende del tamaño de la unidad (3 miembros ⇒ 1,5×IPREM) ⇒ U, nunca F."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

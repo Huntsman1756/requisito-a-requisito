@@ -1,0 +1,41 @@
+{
+	"id": "gp-leganes-prestaciones",
+	"description": "Hombre de 38 años empadronado en Leganés (28074) desde enero de 2020 (más de 6 meses de empadronamiento ininterrumpido), asalariado con ingresos anuales en la banda baja (0–8.400 €) y vivienda en alquiler. Caso «posible»: cumple el requisito duro de residencia (municipio + ≥6 meses); el aviso de límite de ingresos del anexo I queda en U (la banda straddles el IPREM de referencia y la tabla real depende del número de miembros); la situación de necesidad, el agotamiento de recursos y el diseño de intervención no son comprobables ⇒ veredicto posible con plazo ROLLING.",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28074" } },
+			"residenceSince": { "state": "value", "value": { "year": 2020, "month": 1 } },
+			"age": { "state": "value", "value": { "min": 38, "max": 38, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "asalariado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "leganes-prestaciones-especial-necesidad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 3.a",
+					"reasoning": "Empadronado en Leganés (28074) de forma ininterrumpida desde 01/2020 ⇒ más de 6 meses ⇒ requisito hard en T."
+				},
+				{
+					"sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 3.c y anexo I",
+					"reasoning": "Límite de ingresos del anexo I (soft): para 1 miembro el tope es 100 % IPREM (7.200 €/año); la banda 0–8.400 € straddles ⇒ U."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

@@ -1,0 +1,46 @@
+{
+	"id": "gp-vg-pago-unico",
+	"description": "Mujer de 35 años residente en la Comunidad de Madrid (Madrid capital), desempleada, con ingresos anuales en la banda baja (0–8.400 €). Caso «posible» para la ayuda de pago único por violencia de género: cumple el requisito duro de residencia en la CM y el aviso de rentas (la banda entera queda por debajo de 10.989 € = 75 % del SMI ×12); el título de violencia de género, el informe de dificultades de empleo y la no percepción anterior no son comprobables ⇒ veredicto posible con plazo ROLLING (vigencia indefinida).",
+	"today": "2026-10-06",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
+			"residenceSince": { "state": "value", "value": { "year": 2008, "month": 9 } },
+			"age": { "state": "value", "value": { "min": 35, "max": 35, "maxExclusive": false } },
+			"dependents": { "state": "value", "value": [] },
+			"familyType": { "state": "value", "value": "general" },
+			"employmentStatus": { "state": "value", "value": "desempleado" },
+			"studentStatus": { "state": "value", "value": "no" },
+			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
+			"disability": { "state": "value", "value": "no" },
+			"housingStatus": { "state": "value", "value": "alquiler" }
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-ayuda-pago-unico-vg",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, art. 3.c",
+					"reasoning": "Residente en la Comunidad de Madrid (ccaa 13) ⇒ requisito hard en T."
+				},
+				{
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, art. 3.d",
+					"reasoning": "Banda 0–8.400 €/año entera por debajo de 10.989 € (75 % del SMI mensual ×12) ⇒ aviso soft en T."
+				},
+				{
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, arts. 3.a/b/e y 1.2",
+					"reasoning": "Título de VG vigente, informe del SPE de dificultades de empleo y no percepción anterior: no comprobables ⇒ posible; vigencia indefinida ⇒ ROLLING."
+				}
+			]
+		}
+	],
+	"review": { "status": "pending" }
+}

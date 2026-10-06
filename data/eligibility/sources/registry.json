@@ -144,6 +144,56 @@
 			"host": "emvs.es",
 			"maxRank": 3,
 			"label": "EMVS Madrid (órgano gestor)"
+		},
+		{
+			"host": "www.mostoles.es",
+			"maxRank": 2,
+			"label": "Sede electrónica del Ayuntamiento de Móstoles"
+		},
+		{
+			"host": "mostoles.es",
+			"maxRank": 2,
+			"label": "Sede electrónica del Ayuntamiento de Móstoles"
+		},
+		{
+			"host": "www.leganes.org",
+			"maxRank": 2,
+			"label": "Portal del Ayuntamiento de Leganés"
+		},
+		{
+			"host": "leganes.org",
+			"maxRank": 2,
+			"label": "Portal del Ayuntamiento de Leganés"
+		},
+		{
+			"host": "transparencia.ayto-fuenlabrada.es",
+			"maxRank": 2,
+			"label": "Portal de transparencia del Ayuntamiento de Fuenlabrada"
+		},
+		{
+			"host": ".ayto-fuenlabrada.es",
+			"maxRank": 3,
+			"label": "Ayuntamiento de Fuenlabrada (otros subdominios)"
+		},
+		{
+			"host": "getafe.es",
+			"maxRank": 2,
+			"label": "Portal del Ayuntamiento de Getafe"
+		},
+		{
+			"host": "www.getafe.es",
+			"maxRank": 2,
+			"label": "Portal del Ayuntamiento de Getafe"
+		},
+		{
+			"host": ".getafe.es",
+			"maxRank": 3,
+			"label": "Ayuntamiento de Getafe (otros subdominios)"
+		},
+		{
+			"host": ".ayto-alcaladehenares.es",
+			"maxRank": 3,
+			"label": "Ayuntamiento de Alcalá de Henares"
 		}
 	]
 }
