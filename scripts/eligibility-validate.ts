@@ -289,9 +289,11 @@ export function validateEligibility(opts: ValidateOptions): ValidateResult {
 			}
 		}
 
-		// G10 revisión humana
-		if (rs.humanReview.status !== "approved") {
-			const msg = `humanReview.status = ${rs.humanReview.status}`;
+		// G10 revisión: estricta con aprobación humana o panel calibrado (ADR-047)
+		const humanOk = rs.humanReview.status === "approved";
+		const panelOk = rs.panelReview?.status === "approved";
+		if (!humanOk && !panelOk) {
+			const msg = `humanReview.status = ${rs.humanReview.status}${panelOk === false && rs.panelReview ? ` · panelReview = ${rs.panelReview.status}` : ""}`;
 			if (opts.strictHumanReview) {
 				err("ELIG_G10_HUMAN_REVIEW", slug, msg);
 			} else {

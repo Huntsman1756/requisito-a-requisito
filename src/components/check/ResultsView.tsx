@@ -496,7 +496,14 @@ function ResultCard({
 				<span className={pill}>{isEncaja({ ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
 			</h2>
 			<p className="review-state note">
-				Comprobada con la fuente{rs.humanReview?.status !== "approved" && " · revisión final pendiente"}
+				Comprobada con la fuente
+				{rs.humanReview?.status === "approved" && " · revisada"}
+				{rs.humanReview?.status !== "approved" &&
+					rs.panelReview?.status === "approved" &&
+					" · revisada por un panel independiente"}
+				{rs.humanReview?.status !== "approved" &&
+					rs.panelReview?.status !== "approved" &&
+					" · revisión final pendiente"}
 			</p>
 			<p className="verdict-line">
 						{isEncaja({ ev }) && ev.verdict !== "probable"

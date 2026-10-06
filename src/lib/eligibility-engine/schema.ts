@@ -198,6 +198,16 @@ export const ruleSetSchema = z.strictObject({
 		at: isoDate.optional(),
 		notes: z.string().optional(),
 	}),
+	panelReview: z
+		.strictObject({
+			status: z.enum(["pending", "approved", "escalated"]),
+			promptVersion: z.string().optional(),
+			models: z.array(z.string()).optional(),
+			at: isoDate.optional(),
+			report: z.string().optional(),
+			calibration: z.string().optional(),
+		})
+		.optional(),
 	referenceDate: z.union([isoDate, z.literal("application")]),
 	referenceDateCitation: citationSchema.optional(),
 	sources: z
