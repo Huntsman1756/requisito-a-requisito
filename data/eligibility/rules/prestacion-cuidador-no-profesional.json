@@ -2,7 +2,7 @@
 	"benefitSlug": "prestacion-cuidador-no-profesional",
 	"standalone": true,
 	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"verifiedAt": "2026-10-06",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -57,7 +57,7 @@
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 18.1-2",
 				"excerpt": "El Consejo Territorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia acordará las condiciones de acceso a esta prestación, para su posterior aprobación por el Gobierno mediante real decreto",
-				"excerptSha256": "5b335aaf84b1696d8351a80dd001f9287f507249d06da1fcd459646437ec183e"
+				"excerptSha256": "039f5d5a8be77ab8d81ef4f31df61f6538dce1fe3c9d443719964dd926f3442d"
 			},
 			"condition": {
 				"field": "dependency",
@@ -106,7 +106,7 @@
 		},
 		{
 			"id": "vinculo-familiar-cuidador",
-			"label": "La persona cuidadora debe ser cónyuge o pariente por consanguinidad, afinidad o adopción hasta el tercer grado de la persona dependiente — también valen, como situaciones asimiladas, las parejas de hecho, tutores, personas con funciones de acogimiento y miembros de órdenes religiosas que cuidan a otros de la orden",
+			"label": "Ser cónyuge o pariente por consanguinidad, afinidad o adopción hasta el tercer grado, que conviva con la persona dependiente y la atienda desde al menos un año antes de la solicitud (o figuras asimiladas: parejas de hecho, tutores, personas con funciones de acogimiento). En revisión: la Ley 4/2026, vigente desde el 23/10/2026, amplía el cuidado al «entorno familiar o relacional» —el decreto de la Comunidad de Madrid aún no se ha actualizado—",
 			"citation": {
 				"sourceId": "bocm-20150526-1-dependencia",
 				"locator": "Art. 42.1.b",
@@ -119,9 +119,9 @@
 			"label": "Convivir con la persona dependiente en su mismo domicilio y que se den condiciones adecuadas de convivencia y de habitabilidad de la vivienda — se acredita con el certificado de empadronamiento conjunto y lo comprueba la Administración",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
-				"locator": "Art. 14.4",
+				"locator": "Art. 18.1",
 				"excerpt": "Cuando la persona en situación de dependencia lo desee, esté siendo atendida por su entorno familiar o relacional y se den las condiciones adecuadas de convivencia y de habitabilidad de la vivienda, se podrá reconocer una prestación económica para cuidados en el entorno familiar",
-				"excerptSha256": "58cf2c993308044e548bd504b2137060eff8f3d8b6d7f287c09be7e3dfd71cf7"
+				"excerptSha256": "3e1a3de22c7a6c3b71284269d3f171a2ec181d7ce7cfba91e295618643fd8314"
 			}
 		},
 		{
@@ -159,14 +159,14 @@
 			"label": "La persona cuidadora se incorpora a la Seguridad Social en el Régimen que le corresponda, según lo que determine reglamentariamente el Gobierno (disposición adicional cuarta de la Ley 39/2006 en su nueva redacción)",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
-				"locator": "Art. 18.3",
+				"locator": "Disposición adicional cuarta",
 				"excerpt": "Reglamentariamente el Gobierno determinará la incorporación a la Seguridad Social de los cuidadores no profesionales en el Régimen que les corresponda, así como los requisitos y procedimiento de afiliación, alta y cotización",
-				"excerptSha256": "633c9e9c2a0cb6f407c8e5a20ec13867b9c0d71fee7b6409e2922f169617beb0"
+				"excerptSha256": "7f9460667bc904d57df7f92efecd92a60fed08fa1f434cc8920e2db4f29480b7"
 			}
 		},
 		{
 			"id": "incompatibilidades",
-			"label": "Es incompatible con todos los servicios y prestaciones del Sistema para la Autonomía y Atención a la Dependencia, salvo con la teleasistencia y los servicios de prevención de la dependencia y promoción de la autonomía personal — si ya se disfruta otro servicio o prestación, hay que causar baja en él",
+			"label": "El decreto de la CM la declara incompatible con todos los servicios y prestaciones salvo teleasistencia y servicios de prevención y promoción de la autonomía; la Ley 4/2026 elimina el régimen de incompatibilidades de la ley estatal, pendiente de desarrollo autonómico",
 			"citation": {
 				"sourceId": "bocm-20150526-1-dependencia",
 				"locator": "Art. 8.1.e",
@@ -211,7 +211,17 @@
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 5.2",
 				"excerpt": "carezcan de la nacionalidad española, se regirán por lo establecido en la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social, en los tratados internacionales y en los convenios que se establezcan con el país de origen",
-				"excerptSha256": "c692009c8cf55cb2c897595c59381da91acb9c41743f11cd2132470b2dee7c35"
+				"excerptSha256": "ac3315be6a445c5cb72da1e723b61df3fb1291a93c26563d0349ffb2bd6f1b63"
+			}
+		},
+		{
+			"id": "apoyos-servicios-cuidadores",
+			"label": "Nuevo derecho (Ley 4/2026): se acordarán en seis meses criterios comunes mínimos de servicios de apoyo a personas familiares o convivientes que cuidan en el hogar —asesoramiento, apoyo psicológico, respiro, formación y accesibilidad del hogar—",
+			"citation": {
+				"sourceId": "boe-ley-39-2006-dependencia",
+				"locator": "Disposición final cuarta bis",
+				"excerpt": "acordará, en el plazo máximo de seis meses desde la entrada en vigor de la Ley 4/2026, de 1 de octubre",
+				"excerptSha256": "f7a6079100891c89dfe07df645eb41db73eff1083555ae25af35aa81da86e1cd"
 			}
 		}
 	],
@@ -374,9 +384,9 @@
 		"mayor_65"
 	],
 	"verification": {
-		"status": "ko",
-		"by": "frescura-F9",
+		"status": "ok",
+		"by": "verificador-independiente",
 		"at": "2026-10-06",
-		"report": "evidence/2026-10-06-F9/stale-ley-39-2006.md"
+		"report": "evidence/2026-10-06-F3/verificacion-ola-9.md"
 	}
 }

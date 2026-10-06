@@ -75,7 +75,7 @@
 	},
 	"expectations": [
 		{
-			"benefitSlug": "madrid-dependencia-saad",
+			"benefitSlug": "prestaciones-dependencia-saad",
 			"rulesVersion": 1,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
