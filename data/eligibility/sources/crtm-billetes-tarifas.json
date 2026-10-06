@@ -1,9 +1,9 @@
 {
   "id": "crtm-billetes-tarifas",
   "url": "https://www.crtm.es/billetes-y-tarifas",
-  "fetchedAt": "2026-10-05T18:30:00.000Z",
-  "sha256": "6e68ca052a880f1d625fc61574a750ff77127125cf5663f8e81de513787d9aba",
-  "textSha256": "0760b7c38005be54b6d57598200d6b6a94ea43670aaf8e3ff91ba98d684a5bb5",
+  "fetchedAt": "2026-10-06T12:02:09.159Z",
+  "sha256": "cd92fa9b2db72a234a792e58e049ec1894c422828240ae96b6133b15a53674d4",
+  "textSha256": "66c194c5a809e4377dcd56cfb8315f42701c523e8363ab4cef2d6cc33a4e2dc0",
   "contentType": "text/html; charset=utf-8",
   "rank": 3
 }
