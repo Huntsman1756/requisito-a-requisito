@@ -85,6 +85,7 @@ function domainFor(
 	field: string,
 	catalog: QuestionCatalog,
 	thresholds: number[],
+	today?: string,
 ): Answer[] {
 	const q = catalog.questions.find((x) => x.field === field);
 	const domain: Answer[] = [];
@@ -112,12 +113,27 @@ function domainFor(
 			}
 			if (thresholds.length === 0) {
 				domain.push(value({ min: 0, max: 0, maxExclusive: false }));
+				// Punto «muy por encima»: sin umbrales propios, permite que un
+				// requisito `lte param` pueda ser F y un mutante de su hard sea
+				// detectable (F3-M).
+				domain.push(value({ min: 10_000_000, max: 10_000_000, maxExclusive: false }));
 			}
 			break;
 		}
 		case "month_year":
+			// Frontera exacta por meses: residenceMonths deriva un intervalo ±1
+			// según el día del mes; generar t−2..t+2 meses atrás garantiza que
+			// cualquier mutante ±1 del umbral se detecta (F3-M).
 			for (const t of thresholds) {
-				domain.push(value({ year: 2026 - Math.ceil(t / 12), month: 1 }));
+				const ref = today ?? "2026-10-06";
+				const [ry, rm] = ref.split("-").map(Number);
+				for (const diff of [t - 2, t - 1, t, t + 1, t + 2]) {
+					if (diff < 0) continue;
+					const m0 = rm - 1 - diff;
+					const y = ry + Math.floor(m0 / 12);
+					const mo = ((m0 % 12) + 12) % 12 + 1;
+					domain.push(value({ year: y, month: mo }));
+				}
 			}
 			if (thresholds.length === 0) domain.push(value({ year: 2020, month: 1 }));
 			break;
@@ -178,6 +194,49 @@ function valueDomain(domain: Answer[]): Answer[] {
 	return domain.filter((a) => a.state === "value");
 }
 
+/**
+ * Combinaciones de respuestas por campo (misma estrategia que runExhaustive:
+ * cartesiano, o cobertura por pares + fronteras si supera maxProfiles).
+ * Devuelve los combos como arrays de Answer alineados con `fields`.
+ * F3-M (mutación dirigida) lo reutiliza para comparar mutante vs. original.
+ */
+export function profileCombos(
+	rs: RuleSet,
+	catalog: QuestionCatalog,
+	maxProfiles = MAX_PROFILES,
+	today?: string,
+): { fields: string[]; combos: Answer[][] } {
+	const fields = fieldsOf(rs);
+	const thresholds = thresholdsOf(rs);
+	const domains = fields.map((f) =>
+		domainFor(f, catalog, thresholds.get(f) ?? [], today),
+	);
+	const total = domains.reduce((acc, d) => acc * Math.max(1, d.length), 1);
+	if (total <= maxProfiles) return { fields, combos: cartesian(domains) };
+
+	const combos: Answer[][] = [];
+	const base = domains.map((d) => d[0]);
+	combos.push(base);
+	for (let i = 0; i < fields.length; i++) {
+		for (const x of domains[i]) {
+			const c = [...base];
+			c[i] = x;
+			combos.push(c);
+		}
+		for (let j = i + 1; j < fields.length; j++) {
+			for (const x of domains[i]) {
+				for (const y of domains[j]) {
+					const c = [...base];
+					c[i] = x;
+					c[j] = y;
+					combos.push(c);
+				}
+			}
+		}
+	}
+	return { fields, combos };
+}
+
 export function runExhaustive(
 	rs: RuleSet,
 	catalog: QuestionCatalog,
@@ -187,7 +246,7 @@ export function runExhaustive(
 	const fields = fieldsOf(rs);
 	const thresholds = thresholdsOf(rs);
 	const domains = fields.map((f) =>
-		domainFor(f, catalog, thresholds.get(f) ?? []),
+		domainFor(f, catalog, thresholds.get(f) ?? [], evalCtx.today),
 	);
 	const total = domains.reduce((acc, d) => acc * Math.max(1, d.length), 1);
 

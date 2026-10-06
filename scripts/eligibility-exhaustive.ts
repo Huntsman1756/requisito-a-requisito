@@ -9,10 +9,12 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { runExhaustive } from "../src/lib/eligibility-engine/exhaustive";
+import { pickValidVersions } from "../src/lib/eligibility-engine/versions";
 import {
 	parametersSchema,
 	questionCatalogSchema,
 	ruleSetSchema,
+	type RuleSet,
 } from "../src/lib/eligibility-engine/schema";
 
 function argValue(name: string): string | undefined {
@@ -33,13 +35,24 @@ if (process.argv[1]?.endsWith("eligibility-exhaustive.ts")) {
 			readFileSync(join(root, "data", "eligibility", "parameters.json"), "utf8"),
 		),
 	);
+	const today = argValue("today") ?? new Date().toISOString().slice(0, 10);
 	const files = readdirSync(rulesDir).filter((f) => f.endsWith(".json")).sort();
-	let totalProfiles = 0;
-	let violations = 0;
+	// R8-VIG: agrupar por slug y evaluar solo la versión vigente en `today`;
+	// las versiones de otra ventana las cubren tests/eligibility/versions.test.ts.
+	const bySlug = new Map<string, RuleSet[]>();
 	for (const f of files) {
 		const rs = ruleSetSchema.parse(
 			JSON.parse(readFileSync(join(rulesDir, f), "utf8")),
 		);
+		const list = bySlug.get(rs.benefitSlug) ?? [];
+		list.push(rs);
+		bySlug.set(rs.benefitSlug, list);
+	}
+	let totalProfiles = 0;
+	let violations = 0;
+	for (const [slug, group] of bySlug) {
+		const { evaluable } = pickValidVersions(group, today);
+		for (const rs of evaluable) {
 		const r = runExhaustive(rs, catalog, {
 			parameters,
 			today: argValue("today") ?? new Date().toISOString().slice(0, 10),
@@ -56,6 +69,8 @@ if (process.argv[1]?.endsWith("eligibility-exhaustive.ts")) {
 		);
 		for (const v of r.violations.slice(0, 5)) console.log(`  inv ${v.code}: ${v.profile.slice(0, 120)}`);
 		for (const v of r.monotonicityViolations.slice(0, 5)) console.log(`  mono ${v.field}: ${v.detail}`);
+		}
+		if (evaluable.length === 0) console.log(`${slug}: sin versión vigente en ${today} (omitida)`);
 	}
 	console.log(`total: ${totalProfiles} perfiles, ${violations} violaciones`);
 	process.exit(violations === 0 ? 0 : 1);
