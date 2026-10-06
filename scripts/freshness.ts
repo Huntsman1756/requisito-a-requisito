@@ -98,11 +98,16 @@ function excerptsForSource(sourceId: string): string[] {
 // Dominios no verificables desde el entorno de CI (GitHub Actions):
 // seg-social.es devuelve desde IPs de datacenter una página de bloqueo
 // que llega con HTTP 200 y vocabulario plausible pero sin el contenido
-// real. Contarían como stale falsos; se verifican en corridas locales.
+// real; comunidad.madrid responde 404 al mismo tráfico (verificado:
+// 200 desde red residencial). Contarían como stale/errores falsos;
+// se verifican en corridas locales con FRESHNESS_LOCAL=1.
 const CI_UNREACHABLE_HOSTS = new Set([
 	"www.seg-social.es",
 	"prestaciones.seg-social.es",
 	"sede.seg-social.gob.es",
+	"www.comunidad.madrid",
+	"sede.comunidad.madrid",
+	"comunidad.madrid",
 ]);
 const unreachableHosts = new Set(
 	process.env.FRESHNESS_LOCAL === "1" ? [] : [...CI_UNREACHABLE_HOSTS],
