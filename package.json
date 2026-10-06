@@ -31,7 +31,8 @@
 		"datos:public": "tsx ./scripts/publish-public-data.ts",
 		"coverage:engine": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/lib/eligibility-engine/**' --coverage.reporter=text",
 		"universe:build": "tsx scripts/universe/build.ts",
-		"freshness": "tsx scripts/freshness.ts"
+		"freshness": "tsx scripts/freshness.ts",
+		"link:check": "tsx scripts/link-check.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",

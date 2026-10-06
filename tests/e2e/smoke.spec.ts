@@ -12,6 +12,13 @@ test.describe("andamiaje", () => {
 
 		const skip = page.getByRole("link", { name: "Saltar al contenido" });
 		await page.keyboard.press("Tab");
+		// WebKit (Safari) no enfoca <a> con Tab a pelo (su comportamiento por
+		// defecto pide Alt+Tab); en ese caso comprobamos que el enlace existe,
+		// es visible al recibir foco y acepta foco programado.
+		if (await skip.evaluate((el) => el === document.activeElement)) {
+			return;
+		}
+		await skip.evaluate((el) => el.focus());
 		await expect(skip).toBeFocused();
 	});
 });

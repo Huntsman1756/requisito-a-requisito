@@ -106,7 +106,12 @@ a { color: var(--seal); text-underline-offset: 3px }
 .btn, .cta a, .cta button { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: 0 1.25rem; border-radius: var(--r); font: 700 1rem var(--f-body); text-decoration: none; border: 2px solid var(--seal); cursor: pointer }
 .btn-primary, .btn.primary, .cta .cta { background: var(--seal); color: #fff }
 .btn-primary { background: var(--seal); color: var(--sheet); border-color: var(--seal) }
-:root[data-theme="dark"] .btn-primary, @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary { color: #0E141C } }
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .btn-primary,
+	:root:not([data-theme="light"]) .btn.primary,
+	:root:not([data-theme="light"]) .cta .cta { color: #0E141C }
+}
+:root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn.primary, :root[data-theme="dark"] .cta .cta { color: #0E141C }
 .btn-ghost, .btn.ghost { background: transparent; color: var(--seal) }
 .btn-quiet { background: transparent; color: var(--seal); border: 1px solid var(--rule); min-height: 44px; padding: 0 1rem; border-radius: var(--r); font: 600 .95rem var(--f-body); cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; text-decoration: none }
 .promises { display: grid; gap: .45rem; margin-top: 1.6rem; padding: 0; list-style: none }

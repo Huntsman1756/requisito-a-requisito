@@ -78,7 +78,14 @@ export function CheckFlow() {
 		if (!data) return [];
 		const fields = usedFields(data.bundle.rulesets);
 		return data.questions.questions
-			.filter((q) => fields.has(q.field))
+			// q.field es el campo que la pregunta escribe; `derives` declara los
+			// derivados que las reglas consultan (p. ej. residenceMonths desde
+			// residenceSince). Sin esto la pregunta nunca saldría.
+			.filter(
+				(q) =>
+					fields.has(q.field) ||
+					(q.derives ?? []).some((d) => fields.has(d)),
+			)
 			.sort((a, b) => a.order - b.order);
 	}, [data]);
 
