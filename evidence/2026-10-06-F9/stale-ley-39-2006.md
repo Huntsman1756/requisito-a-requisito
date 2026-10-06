@@ -25,3 +25,17 @@ redacción de la Ley 39/2006 (arts. 18, 19, 20, 22, 24 modificados por la
 Ley 4/2026) y repetir el ciclo autor ⇒ verificador ⇒ merge. El flujo
 fail-closed funcionó como se diseñó: ninguna afirmación queda citando un
 texto derogado.
+
+## Actualización 2026-10-06 (OLA-9, primer paso)
+
+Las 9 citas rotas se reescribieron con los literales de la nueva redacción
+(extractos verificados con `t.includes`). Pero la reforma es estructural,
+no solo redaccional: desaparecen el parentesco hasta tercer grado, el año
+de cuidados previo, la sección de incompatibilidades (suprimida), el plazo
+suspensivo de dos años y el carácter excepcional de la prestación por
+entorno familiar; «programa individual de atención» pasa a «Plan
+Individual de Atención»; los menores con régimen propio pasan de 3 a 6
+años y la afiliación del cuidador pasa del convenio especial al Régimen
+de la SS que corresponda (disposición adicional cuarta). Las reglas
+permanecen en `rules-hold/` hasta una re-autoría sustantiva completa:
+de nada sirve que la cita resuelva si el requisito ya no existe.

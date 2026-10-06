@@ -56,7 +56,7 @@
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 18.1-2",
-				"excerpt": "se establecerán las condiciones de acceso a esta prestación, en función del grado reconocido a la persona en situación de dependencia y de su capacidad económica",
+				"excerpt": "El Consejo Territorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia acordará las condiciones de acceso a esta prestación, para su posterior aprobación por el Gobierno mediante real decreto",
 				"excerptSha256": "5b335aaf84b1696d8351a80dd001f9287f507249d06da1fcd459646437ec183e"
 			},
 			"condition": {
@@ -95,8 +95,8 @@
 			}
 		},
 		{
-			"id": "pia-modalidad-excepcional",
-			"label": "Esta prestación es excepcional: la tiene que establecer el Programa Individual de Atención (PIA) como modalidad de intervención más adecuada, a propuesta de los servicios sociales de Atención Social Primaria y cuando no sea posible el reconocimiento de un servicio más adecuado — no se elige a la carta",
+			"id": "pia-modalidad",
+			"label": "La prestación la establece el Plan Individual de Atención (PIA) según tu voluntad: se reconoce cuando la persona dependiente lo desea y está siendo atendida por su entorno familiar o relacional — no se elige a la carta, la establece el expediente",
 			"citation": {
 				"sourceId": "bocm-20150526-1-dependencia",
 				"locator": "Art. 41",
@@ -120,7 +120,7 @@
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 14.4",
-				"excerpt": "siempre que se den condiciones adecuadas de convivencia y de habitabilidad de la vivienda y así lo establezca su Programa Individual de Atención",
+				"excerpt": "Cuando la persona en situación de dependencia lo desee, esté siendo atendida por su entorno familiar o relacional y se den las condiciones adecuadas de convivencia y de habitabilidad de la vivienda, se podrá reconocer una prestación económica para cuidados en el entorno familiar",
 				"excerptSha256": "58cf2c993308044e548bd504b2137060eff8f3d8b6d7f287c09be7e3dfd71cf7"
 			}
 		},
@@ -156,11 +156,11 @@
 		},
 		{
 			"id": "ss-convenio-cuidador",
-			"label": "La persona cuidadora debe afiliarse, darse de alta y cotizar a la Seguridad Social conforme a la norma reglamentaria (convenio especial de cuidadores no profesionales, RD 615/2007)",
+			"label": "La persona cuidadora se incorpora a la Seguridad Social en el Régimen que le corresponda, según lo que determine reglamentariamente el Gobierno (disposición adicional cuarta de la Ley 39/2006 en su nueva redacción)",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 18.3",
-				"excerpt": "El cuidador deberá ajustarse a las normas sobre afiliación, alta y cotización a la Seguridad Social que se determinen reglamentariamente",
+				"excerpt": "Reglamentariamente el Gobierno determinará la incorporación a la Seguridad Social de los cuidadores no profesionales en el Régimen que les corresponda, así como los requisitos y procedimiento de afiliación, alta y cotización",
 				"excerptSha256": "633c9e9c2a0cb6f407c8e5a20ec13867b9c0d71fee7b6409e2922f169617beb0"
 			}
 		},
@@ -210,7 +210,7 @@
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 5.2",
-				"excerpt": "carezcan de la nacionalidad española se regirán por lo establecido en la Ley Orgánica 4/2000",
+				"excerpt": "carezcan de la nacionalidad española, se regirán por lo establecido en la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social, en los tratados internacionales y en los convenios que se establezcan con el país de origen",
 				"excerptSha256": "c692009c8cf55cb2c897595c59381da91acb9c41743f11cd2132470b2dee7c35"
 			}
 		}

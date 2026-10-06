@@ -120,17 +120,17 @@
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 5.2",
-				"excerpt": "carezcan de la nacionalidad española se regirán por lo establecido en la Ley Orgánica 4/2000",
+				"excerpt": "carezcan de la nacionalidad española, se regirán por lo establecido en la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social, en los tratados internacionales y en los convenios que se establezcan con el país de origen",
 				"excerptSha256": "c692009c8cf55cb2c897595c59381da91acb9c41743f11cd2132470b2dee7c35"
 			}
 		},
 		{
-			"id": "menores-3-anos",
-			"label": "Los menores de 3 años tienen régimen propio: la ley les reconoce atención de ayuda a domicilio y prestaciones vinculadas o de entorno familiar, y se valoran con una escala específica (en la CM, el CRECOVI)",
+			"id": "menores-6-anos",
+			"label": "Los menores de 6 años tienen régimen propio: la ley les reconoce atención de ayuda a domicilio y prestaciones vinculadas o de entorno familiar, y se valoran con una escala específica (en la CM, el CRECOVI)",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Disposición adicional decimotercera, apdo. 1",
-				"excerpt": "el Sistema para la Autonomía y Atención a la Dependencia atenderá las necesidades de ayuda a domicilio y, en su caso, prestaciones económicas vinculadas y para cuidados en el entorno familiar a favor de los menores de 3 años acreditados en situación de dependencia",
+				"excerpt": "el Sistema para la Autonomía y Atención a la Dependencia atenderá las necesidades de las niñas y niños menores de 6 años acreditados en situación de dependencia, con los servicios y prestaciones que les correspondan, de los previstos en esta ley",
 				"excerptSha256": "b68618fdd425ff4f5a4d44a7392498d4231e74ea614c9a9318f3d5f5cbaa67c7"
 			}
 		},
@@ -140,7 +140,7 @@
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 29.1",
-				"excerpt": "establecerán un programa individual de atención en el que se determinarán las modalidades de intervención más adecuadas",
+				"excerpt": "establecerán un Programa Individual de Atención en el que se determinarán las modalidades de cuidados y apoyos acordes a la voluntad, deseos y preferencias de la persona en situación de dependencia",
 				"excerptSha256": "98d6e0a929c4cb8cd3e21b2d00c2ddb26260fa2b6fe02d335534e68ed52a9a05"
 			}
 		},
@@ -156,11 +156,11 @@
 		},
 		{
 			"id": "prestacion-entorno-familiar",
-			"label": "Si lo que te interesa es la prestación por cuidados en el entorno familiar (que te cuide un familiar no profesional): es excepcional, exige condiciones adecuadas de convivencia y habitabilidad de la vivienda, que el PIA la establezca y que la persona cuidadora se dé de alta y cotice a la Seguridad Social",
+			"label": "Si lo que te interesa es la prestación por cuidados en el entorno familiar (que te cuide un familiar o entorno cercano): la reconoce la ley cuando la persona dependiente lo desea, está siendo atendida por su entorno familiar o relacional y se dan condiciones adecuadas de convivencia y habitabilidad (excepcionalmente se puede no exigir la convivencia con viviendas próximas y cuidados sin contraprestación); el PIA la establece según tu voluntad",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 14.4 y 18.1-3",
-				"excerpt": "El beneficiario podrá, excepcionalmente, recibir una prestación económica para ser atendido por cuidadores no profesionales",
+				"excerpt": "Cuando la persona en situación de dependencia lo desee, esté siendo atendida por su entorno familiar o relacional y se den las condiciones adecuadas de convivencia y de habitabilidad de la vivienda, se podrá reconocer una prestación económica para cuidados en el entorno familiar",
 				"excerptSha256": "677ac25917e3f15b8cc78e16ca9979b5ff4fa05169ec0a4c21c82bf682cdc15e"
 			}
 		},
@@ -315,7 +315,7 @@
 		"citation": {
 			"sourceId": "boe-ley-39-2006-dependencia",
 			"locator": "Art. 14.1",
-			"excerpt": "Las prestaciones de atención a la dependencia podrán tener la naturaleza de servicios y de prestaciones económicas",
+			"excerpt": "Las prestaciones de promoción de la autonomía personal y atención a las personas en situación de dependencia podrán tener naturaleza de servicios y de prestaciones económicas e irán destinadas a la prevención de las situaciones de dependencia, a la promoción de la autonomía personal y la vida independiente",
 			"excerptSha256": "19b4d7044db71809e99a0897741cad89a22c9b5f1e8402c16fac79f591e1ba2f"
 		}
 	},
