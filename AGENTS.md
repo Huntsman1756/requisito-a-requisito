@@ -128,6 +128,7 @@ docs/13              reutilización de donantes (la-ayuda, EduAyudas…)
 docs/14              universo de ayudas de Madrid, fuentes de descubrimiento, oleadas
 docs/15              funcionalidades ampliadas, referencias y política de dependencias
 docs/16              dirección de arte (ADR-043)
+docs/17              panel de revisión multimodelo NAN (ADR-047)
 design/prototipo/    prototipo HTML: fuente de verdad visual
 src/ data/ scripts/ tests/ public/   código y datos del producto (se crean en F0-7)
 evidence/            evidencias fechadas

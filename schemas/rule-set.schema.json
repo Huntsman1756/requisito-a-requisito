@@ -442,6 +442,43 @@
         ]
       },
       "description": "Eventos vitales (docs/15 B)"
+    },
+    "panelReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "description": "Revisión del panel multimodelo (docs/17, ADR-047). No es revisión humana.",
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "approved",
+            "escalated"
+          ]
+        },
+        "promptVersion": {
+          "type": "string"
+        },
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "at": {
+          "type": "string",
+          "format": "date"
+        },
+        "report": {
+          "type": "string"
+        },
+        "calibration": {
+          "type": "string",
+          "description": "Ruta del informe de calibración vigente"
+        }
+      }
     }
   },
   "$defs": {

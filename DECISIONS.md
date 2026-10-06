@@ -352,3 +352,26 @@ de la CM aún sin regla (becas de FP, préstamo de libros (ACCEDE), discapacidad
 Las pensiones contributivas del Estado (jubilación, incapacidad permanente,
 orfandad) aportan poco a un orientador, porque dependen de la vida laboral, que
 no se pregunta: solo si sobra capacidad, y con las cotizaciones en ⚠.
+
+## ADR-047 — Panel de revisión multimodelo (NAN) en lugar de revisión manual regla a regla
+2026-10-06 · aceptada (Daniel: no puede revisar cada regla; propone usar NAN, que ya
+paga) · Tres modelos de familias distintas (`deepseek-v4-flash`, `qwen3.8-flash`,
+`mimo-v2.6-flash`; `gemma4` de desempate; nada de `glm*`) revisan cada requisito
+con una tarea cerrada: ¿la condición codificada dice lo mismo que el extracto
+literal (ya garantizado por G4) y falta algún requisito en el párrafo? Agregación
+determinista: cualquier objeción ⇒ escala a Daniel. El panel se **calibra con
+errores inyectados** (≥ 95 % de detección, 100 % en falsos positivos, ≤ 20 % de
+falsas alarmas) antes de aprobar nada. La release `--strict` admite
+`humanReview: approved` **o** `panelReview: approved` con calibración vigente.
+Etiqueta pública: «revisada por un panel independiente». Nunca se presenta como
+revisión humana. La clave `NAN_API_KEY` solo está en el entorno local. Detalle:
+docs/17. Matiza ADR-040 (el muestreo humano pasa a ser de desacuerdos + 5 ítems
+al azar).
+
+## ADR-048 — uber/ADR no se incorpora
+2026-10-06 · aceptada · `uber/ADR` es un sistema de seguridad empresarial para
+detectar comportamiento de riesgo de agentes de IA (descubrimiento, telemetría,
+detección). No mejora la calidad de las reglas ni del producto, y su despliegue
+consumiría días. Los riesgos equivalentes aquí (secretos, escrituras en donantes,
+publicación sin revisión) ya los cubren reglas explícitas y gates (G12, ADR-044,
+prohibición de escribir en donantes, `NAN_API_KEY` fuera del repo).
