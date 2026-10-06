@@ -60,6 +60,7 @@ interface RunRecord {
 	cosmetic: string[];
 	stale: string[];
 	fetchErrors: string[];
+	skipped?: string[];
 	leads: number;
 	bundleDigest: string | null;
 	deployOk: boolean;
@@ -94,11 +95,25 @@ function excerptsForSource(sourceId: string): string[] {
 	return out;
 }
 
+// Dominios no verificables desde el entorno de CI (GitHub Actions):
+// seg-social.es devuelve desde IPs de datacenter una página de bloqueo
+// que llega con HTTP 200 y vocabulario plausible pero sin el contenido
+// real. Contarían como stale falsos; se verifican en corridas locales.
+const CI_UNREACHABLE_HOSTS = new Set([
+	"www.seg-social.es",
+	"prestaciones.seg-social.es",
+	"sede.seg-social.gob.es",
+]);
+const unreachableHosts = new Set(
+	process.env.FRESHNESS_LOCAL === "1" ? [] : [...CI_UNREACHABLE_HOSTS],
+);
+
 async function revalidateSources(): Promise<{
 	unchanged: number;
 	cosmetic: string[];
 	stale: string[];
 	fetchErrors: string[];
+	skipped: string[];
 }> {
 	const metas = readdirSync(SOURCES_DIR)
 		.filter((f) => f.endsWith(".json") && f !== "registry.json")
@@ -107,7 +122,12 @@ async function revalidateSources(): Promise<{
 	const cosmetic: string[] = [];
 	const stale: string[] = [];
 	const fetchErrors: string[] = [];
+	const skipped: string[] = [];
 	for (const meta of metas) {
+		if (unreachableHosts.has(new URL(meta.url).host)) {
+			skipped.push(meta.id);
+			continue;
+		}
 		try {
 			const { bytes, contentType } = await get(meta.url);
 			const newText = await extractText(bytes, contentType);
@@ -235,7 +255,7 @@ async function main() {
 	console.log(`[freshness] ${TODAY}${DRY ? " (dry-run)" : ""}`);
 	const res = await revalidateSources();
 	console.log(
-		`[freshness] fuentes: ${res.unchanged} iguales, ${res.cosmetic.length} cosméticas, ${res.stale.length} STALE, ${res.fetchErrors.length} errores`,
+		`[freshness] fuentes: ${res.unchanged} iguales, ${res.cosmetic.length} cosméticas, ${res.stale.length} STALE, ${res.fetchErrors.length} errores, ${res.skipped.length} no verificables desde este entorno`,
 	);
 	// En una corrida anómala (red degradada, bloqueos masivos de IP) no se
 	// toca el stale acumulado: el gate verifica contra el último estado
@@ -263,14 +283,15 @@ async function main() {
 		cosmetic: res.cosmetic,
 		stale: res.stale,
 		fetchErrors: res.fetchErrors,
+		skipped: res.skipped,
 		leads: leads.length,
 		bundleDigest: null,
 		deployOk: false,
 	};
 	if (!DRY) appendFileSync(join(FRESH_DIR, "runs.jsonl"), `${JSON.stringify(rec)}\n`);
-	// código de salida: stale o errores → 0 (informativo; el issue se crea en CI)
-	// el gate real es validate:full antes de hacer commit/push
-	if (res.fetchErrors.length > 10) {
+	// código de salida: anomalía → 2 (la corrida queda señalada); el gate
+	// real es validate:full antes de hacer commit/push
+	if (anomalous) {
 		console.error("[freshness] demasiados errores de red — run anómalo");
 		process.exitCode = 2;
 	}
