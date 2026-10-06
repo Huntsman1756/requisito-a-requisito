@@ -193,7 +193,7 @@ async function revalidateSources(): Promise<{
 		}
 		await sleep(400);
 	}
-	return { unchanged: unchanged.length, cosmetic, stale, fetchErrors };
+	return { unchanged: unchanged.length, cosmetic, stale, fetchErrors, skipped };
 }
 
 // ---------- descubrimiento de novedades (leads) ----------
