@@ -19,3 +19,8 @@ src/generated/
 
 # nombre reservado de Windows (accidentes de redirección)
 nul
+
+# Secretos locales: NUNCA al repo (es pÃºblico)
+.env
+.env.*
+!.env.example
