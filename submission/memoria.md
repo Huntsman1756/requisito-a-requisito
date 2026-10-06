@@ -16,8 +16,8 @@ cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada e
 cada afirmación.
 
 Números medidos (evidencia en el repositorio): **50 ayudas** comprobadas
-requisito a requisito · **167 fuentes oficiales** verificadas · **656 programas**
-del universo de Madrid catalogados · **288 pruebas** automáticas en verde ·
+requisito a requisito · **167 fuentes oficiales** verificadas · **421 programas**
+del universo de Madrid clasificados aptos para personas · **288 pruebas** automáticas en verde ·
 **114 enlaces** del producto verificados el 6/10 · el perfil **nunca sale del
 navegador**.
 
@@ -38,7 +38,7 @@ lectura por él y le lleva directamente al simulador o a la sede oficial.
 Un asistente estático (sin servidor, sin cuentas, sin registro) que:
 
 1. Pregunta lo mínimo (≤ 10 preguntas, con «No lo sé» y «Prefiero no decirlo»).
-2. Evalúa **50 ayudas comprobadas** y 74 fichas del catálogo en nivel 2.
+2. Evalúa **50 ayudas comprobadas** y 401 fichas del catálogo en nivel 2.
 3. Responde por ayuda: qué requisitos cumples (✓), cuáles no (✗), cuáles no se
    pueden saber sin más datos (?) y cuáles quedan fuera de alcance del
    cuestionario (⚠).
@@ -69,10 +69,13 @@ reusar el motor sin depender de este producto.
   la sede seguía mostrando «en plazo» pese a estar cerrada por el BOCM
   (ola 10: prima el boletín). El sistema se
   autoprotege: una regla defectuosa no llega a producción.
-- **656 programas** del universo de Madrid catalogados y clasificados
-  (descubrimiento: sede CM, BDNS, pipeline BOCM, semilla de permanentes);
-  74 fichas útiles en el nivel 2 (los programas con regla propia se
-  deduplican por URL oficial).
+- **421 programas** del universo de Madrid clasificados como aptos para
+  persona física (779 descartados con motivo documentado: ayudas a
+  entidades o empleadores, avisos administrativos; descubrimiento: sede
+  CM, BDNS, pipeline BOCM, semilla de permanentes). **401 fichas**
+  publicadas en el nivel 2 con su estado de acceso — las cerradas se
+  muestran como «Cerrada» y los programas con regla propia se deduplican
+  por URL oficial.
 - **167 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
 - **288 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,

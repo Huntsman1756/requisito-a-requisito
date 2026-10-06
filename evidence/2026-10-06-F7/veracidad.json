@@ -13,8 +13,8 @@
 			"ok": true
 		},
 		{
-			"texto": "656 programas del universo catalogados",
-			"evidencia": "data/universe/programs.json (656 tras el fix del clasificador «reintegro de gastos», +3 prestaciones SERMAS)",
+			"texto": "421 programas del universo clasificados aptos para persona física",
+			"evidencia": "data/universe/programs.json (421 tras endurecer el clasificador: 779 rechazadas con motivo documentado; falsos positivos de «universidad» corregidos)",
 			"ok": true
 		},
 		{
@@ -63,10 +63,9 @@
 			"ok": true
 		},
 		{
-			"texto": "74 fichas útiles en nivel 2",
-			"evidencia": "public/datos/elegibilidad/nivel-2.json (74 tras deduplicar por URL los programas con regla)",
-			"ok": true,
-			"nota": "el nivel-2 publicado es 90 tras excluir cerradas"
+			"texto": "401 fichas publicadas en nivel 2 con estado de acceso",
+			"evidencia": "public/datos/elegibilidad/nivel-2.json (401; las CLOSED se muestran con su estado, deduplicadas las que tienen regla)",
+			"ok": true
 		},
 		{
 			"texto": "Kit de piloto listo",

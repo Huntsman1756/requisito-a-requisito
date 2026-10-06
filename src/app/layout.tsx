@@ -57,8 +57,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 						</details>
 					</div>
 					<p className="pilot-banner" role="status">
-						Versión piloto — catálogo en crecimiento. Tus respuestas no salen
-						de tu navegador.
+						Demostración — versión preliminar; el catálogo crece cada semana.
+						Tus respuestas no salen de tu navegador. ·{" "}
+						<a
+							href="https://github.com/Huntsman1756/requisito-a-requisito"
+							rel="noopener noreferrer"
+						>
+							Código y reglas abiertos
+						</a>{" "}
+						· <Link href="/como-funciona">Cómo funciona</Link>
 					</p>
 				</header>
 				<main id="contenido">{children}</main>
