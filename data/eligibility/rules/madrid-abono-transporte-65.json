@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "madrid-abono-transporte-65",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -52,7 +52,7 @@
 		}
 	],
 	"parametersUsed": [
-		"IPREM_ANUAL_14P"
+		"IPREM_ANUAL_12P"
 	],
 	"requirements": [
 		{
@@ -93,7 +93,7 @@
 		{
 			"id": "renta-iprem",
 			"hard": false,
-			"label": "Rentas individuales anuales de 1×IPREM o menos (8.400 € en 2026); con cargas familiares el tope es mayor y lo comprueba el Ayuntamiento",
+			"label": "Rentas individuales anuales de 1×IPREM o menos (7.200 € en 2026, IPREM de 12 pagas: la norma dice «IPREM» sin cualificar y usamos el valor más estricto); con cargas familiares el tope es mayor y lo comprueba el Ayuntamiento",
 			"citation": {
 				"sourceId": "bocm-20110525-tarjeta-azul",
 				"locator": "Anexo, apartado A) Primera",
@@ -103,7 +103,7 @@
 			"condition": {
 				"field": "incomeAnnual",
 				"op": "lte",
-				"param": "IPREM_ANUAL_14P"
+				"param": "IPREM_ANUAL_12P"
 			}
 		}
 	],
@@ -292,5 +292,11 @@
 	],
 	"lifeEvents": [
 		"mayor_65"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-2.md"
+	}
 }

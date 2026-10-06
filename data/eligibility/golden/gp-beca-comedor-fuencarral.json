@@ -5,11 +5,41 @@
 	"profile": {
 		"catalogVersion": 1,
 		"answers": {
-			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
-			"familyType": { "state": "value", "value": "general" },
-			"dependents": { "state": "value", "value": [ { "age": { "min": 7, "max": 7, "maxExclusive": false } } ] },
-			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400, "maxExclusive": true } },
-			"disability": { "state": "declined" }
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 7,
+							"max": 7,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400,
+					"maxExclusive": true
+				}
+			},
+			"disability": {
+				"state": "declined"
+			}
 		}
 	},
 	"expectations": [
@@ -19,11 +49,25 @@
 			"verdict": "posible",
 			"deadlineState": "CLOSED_RECURRING",
 			"justification": [
-				{ "sourceId": "bocm-20240425-37-comedor-normas", "locator": "Anexo, art. 4.1", "reasoning": "Hijo de 7 años ⇒ edad de Primaria: requisito hard 'hijo-en-edad-escolar' = T (dependents con age ≤ 18 ≥ 1)." },
-				{ "sourceId": "bocm-20240425-37-comedor-normas", "locator": "Anexo, art. 5.2.c", "reasoning": "Ingresos del hogar < 8.400 €/año ⇒ la renta per cápita cumple el umbral con seguridad (rpc = ingresos/miembros ≤ ingresos): vía detectable T por la rama de renta del 'any'. Aun así la rpc exacta, la etapa/centro y la plaza de comedor quedan en uncoveredRequirements ⇒ el veredicto no puede ser 'probable'." },
-				{ "sourceId": "bocm-20260428-24-comedor-2627", "locator": "Apdo. Quinto (BOCM 28/04/2026)", "reasoning": "Plazo 20 días hábiles desde el 29/04/2026 ⇒ cerró el 28/05/2026. A 05/10/2026 está cerrado pero la convocatoria es anual con dos cursos anteriores citados (2025-2026: 18/06–15/07/2025; 2024-2025: 21/05–17/06/2024) ⇒ CLOSED_RECURRING." }
+				{
+					"sourceId": "bocm-20240425-37-comedor-normas",
+					"locator": "Anexo, art. 4.1",
+					"reasoning": "Hijo de 7 años ⇒ edad de Primaria: requisito hard 'hijo-en-edad-escolar' = T (dependents con age ≤ 18 ≥ 1)."
+				},
+				{
+					"sourceId": "bocm-20240425-37-comedor-normas",
+					"locator": "Anexo, art. 5.2.c",
+					"reasoning": "Ingresos del hogar < 8.400 €/año ⇒ la renta per cápita cumple el umbral con seguridad (rpc = ingresos/miembros ≤ ingresos): vía detectable T por la rama de renta del 'any'. Aun así la rpc exacta, la etapa/centro y la plaza de comedor quedan en uncoveredRequirements ⇒ el veredicto no puede ser 'probable'."
+				},
+				{
+					"sourceId": "bocm-20260428-24-comedor-2627",
+					"locator": "Apdo. Quinto (BOCM 28/04/2026)",
+					"reasoning": "Plazo 20 días hábiles desde el 29/04/2026 ⇒ cerró el 28/05/2026. A 05/10/2026 está cerrado pero la convocatoria es anual con dos cursos anteriores citados (2025-2026: 18/06–15/07/2025; 2024-2025: 21/05–17/06/2024) ⇒ CLOSED_RECURRING."
+				}
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

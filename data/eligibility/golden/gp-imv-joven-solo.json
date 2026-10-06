@@ -5,16 +5,60 @@
 	"profile": {
 		"catalogVersion": 1,
 		"answers": {
-			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28079" } },
-			"residenceSince": { "state": "value", "value": { "year": 2023, "month": 3 } },
-			"age": { "state": "value", "value": { "min": 21, "max": 21, "maxExclusive": false } },
-			"dependents": { "state": "value", "value": [] },
-			"familyType": { "state": "value", "value": "general" },
-			"employmentStatus": { "state": "value", "value": "desempleado" },
-			"studentStatus": { "state": "value", "value": "no" },
-			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
-			"disability": { "state": "value", "value": "no" },
-			"housingStatus": { "state": "value", "value": "alquiler" }
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2023,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 21,
+					"max": 21,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
 		}
 	},
 	"expectations": [
@@ -23,7 +67,9 @@
 			"rulesVersion": 1,
 			"verdict": "no_cumple",
 			"deadlineState": "ROLLING",
-			"blockers": ["edad-minima"],
+			"blockers": [
+				"edad-minima"
+			],
 			"justification": [
 				{
 					"sourceId": "boe-ley-19-2021-imv",
@@ -43,5 +89,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

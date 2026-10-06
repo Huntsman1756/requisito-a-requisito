@@ -7,26 +7,64 @@
 		"answers": {
 			"territory": {
 				"state": "value",
-				"value": { "ccaa": "13", "province": "28", "municipality": "28079" }
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
 			},
-			"residenceSince": { "state": "value", "value": { "year": 2005, "month": 3 } },
-			"age": { "state": "value", "value": { "min": 67, "max": 67, "maxExclusive": false } },
-			"dependents": { "state": "value", "value": [] },
-			"familyType": { "state": "value", "value": "general" },
-			"employmentStatus": { "state": "value", "value": "jubilado" },
-			"studentStatus": { "state": "value", "value": "no" },
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2005,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 67,
+					"max": 67,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "jubilado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
 			"incomeAnnual": {
 				"state": "value",
-				"value": { "min": 0, "max": 8400 }
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
 			},
-			"housingStatus": { "state": "value", "value": "propiedad" },
-			"disability": { "state": "value", "value": "no" }
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			}
 		}
 	},
 	"expectations": [
 		{
 			"benefitSlug": "madrid-abono-transporte-65",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],
@@ -59,5 +97,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

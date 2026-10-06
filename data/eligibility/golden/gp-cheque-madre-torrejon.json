@@ -5,11 +5,41 @@
 	"profile": {
 		"catalogVersion": 1,
 		"answers": {
-			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28148" } },
-			"familyType": { "state": "value", "value": "general" },
-			"dependents": { "state": "value", "value": [ { "age": { "min": 2, "max": 2, "maxExclusive": false } } ] },
-			"employmentStatus": { "state": "value", "value": "asalariado" },
-			"incomeAnnual": { "state": "value", "value": { "min": 16800, "max": 25200 } }
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28148"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 2,
+							"max": 2,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			}
 		}
 	},
 	"expectations": [
@@ -38,5 +68,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

@@ -184,6 +184,14 @@ export const ruleSetSchema = z.strictObject({
 	standalone: z.boolean().optional(),
 	rulesVersion: z.number().int().min(1),
 	verifiedAt: isoDate,
+	verification: z
+		.strictObject({
+			status: z.enum(["ok", "pending", "ko"]),
+			by: z.string().optional(),
+			at: isoDate.optional(),
+			report: z.string().optional(),
+		})
+		.optional(),
 	humanReview: z.strictObject({
 		status: z.enum(["pending", "approved", "rejected"]),
 		by: z.string().optional(),

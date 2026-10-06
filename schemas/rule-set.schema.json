@@ -36,6 +36,34 @@
       "type": "string",
       "format": "date"
     },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "description": "G12/ADR-044: una regla solo entra en el bundle público con status ok y un informe existente en evidence/.",
+      "properties": {
+        "status": {
+          "enum": [
+            "ok",
+            "pending",
+            "ko"
+          ]
+        },
+        "by": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string",
+          "format": "date"
+        },
+        "report": {
+          "type": "string",
+          "description": "Ruta relativa al informe en evidence/ (p. ej. evidence/2026-10-05-F3/verificacion-ola-1.md)."
+        }
+      }
+    },
     "humanReview": {
       "type": "object",
       "additionalProperties": false,

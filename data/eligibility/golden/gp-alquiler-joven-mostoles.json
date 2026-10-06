@@ -7,20 +7,57 @@
 		"answers": {
 			"territory": {
 				"state": "value",
-				"value": { "ccaa": "13", "province": "28", "municipality": "28092" }
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28092"
+				}
 			},
-			"residenceSince": { "state": "value", "value": { "year": 2023, "month": 1 } },
-			"age": { "state": "value", "value": { "min": 30, "max": 30, "maxExclusive": false } },
-			"dependents": { "state": "value", "value": [] },
-			"familyType": { "state": "value", "value": "general" },
-			"employmentStatus": { "state": "value", "value": "asalariado" },
-			"studentStatus": { "state": "value", "value": "no" },
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2023,
+					"month": 1
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 30,
+					"max": 30,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
 			"incomeAnnual": {
 				"state": "value",
-				"value": { "min": 16800, "max": 25200 }
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
 			},
-			"housingStatus": { "state": "value", "value": "alquiler" },
-			"disability": { "state": "declined" }
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			},
+			"disability": {
+				"state": "declined"
+			}
 		}
 	},
 	"expectations": [
@@ -64,5 +101,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

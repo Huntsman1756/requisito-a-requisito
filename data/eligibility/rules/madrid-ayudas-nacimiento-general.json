@@ -336,5 +336,11 @@
 	],
 	"lifeEvents": [
 		"tener_hijo"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-3.md"
+	}
 }

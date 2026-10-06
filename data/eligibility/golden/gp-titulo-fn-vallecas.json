@@ -7,28 +7,87 @@
 		"answers": {
 			"territory": {
 				"state": "value",
-				"value": { "ccaa": "13", "province": "28", "municipality": "28079" }
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
 			},
-			"residenceSince": { "state": "value", "value": { "year": 2010, "month": 3 } },
-			"age": { "state": "value", "value": { "min": 41, "max": 41, "maxExclusive": false } },
-			"birthYear": { "state": "value", "value": 1985 },
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2010,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 41,
+					"max": 41,
+					"maxExclusive": false
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": 1985
+			},
 			"dependents": {
 				"state": "value",
 				"value": [
-					{ "age": { "min": 12, "max": 12, "maxExclusive": false }, "disability": "no" },
-					{ "age": { "min": 9, "max": 9, "maxExclusive": false }, "disability": "no" },
-					{ "age": { "min": 5, "max": 5, "maxExclusive": false }, "disability": "no" }
+					{
+						"age": {
+							"min": 12,
+							"max": 12,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 9,
+							"max": 9,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 5,
+							"max": 5,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
 				]
 			},
-			"familyType": { "state": "value", "value": "familia-numerosa" },
-			"employmentStatus": { "state": "value", "value": "asalariado" },
-			"studentStatus": { "state": "value", "value": "no" },
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
 			"incomeAnnual": {
 				"state": "value",
-				"value": { "min": 16800, "max": 25200 }
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
 			},
-			"disability": { "state": "value", "value": "no" },
-			"housingStatus": { "state": "value", "value": "propiedad" }
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
 		}
 	},
 	"expectations": [
@@ -72,5 +131,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

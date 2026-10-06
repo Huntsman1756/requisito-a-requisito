@@ -7,27 +7,82 @@
 		"answers": {
 			"territory": {
 				"state": "value",
-				"value": { "ccaa": "13", "province": "28", "municipality": "28079" }
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
 			},
-			"residenceSince": { "state": "value", "value": { "year": 2015, "month": 6 } },
-			"age": { "state": "value", "value": { "min": 42, "max": 42, "maxExclusive": false } },
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2015,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 42,
+					"max": 42,
+					"maxExclusive": false
+				}
+			},
 			"dependents": {
 				"state": "value",
 				"value": [
-					{ "age": { "min": 3, "max": 5, "maxExclusive": false }, "disability": "no" },
-					{ "age": { "min": 6, "max": 11, "maxExclusive": false }, "disability": "no" },
-					{ "age": { "min": 12, "max": 15, "maxExclusive": false }, "disability": "no" }
+					{
+						"age": {
+							"min": 3,
+							"max": 5,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 6,
+							"max": 11,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					},
+					{
+						"age": {
+							"min": 12,
+							"max": 15,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
 				]
 			},
-			"familyType": { "state": "value", "value": "familia-numerosa" },
-			"employmentStatus": { "state": "value", "value": "asalariado" },
-			"studentStatus": { "state": "value", "value": "no" },
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
 			"incomeAnnual": {
 				"state": "value",
-				"value": { "min": 8400, "max": 16800 }
+				"value": {
+					"min": 8400,
+					"max": 16800
+				}
 			},
-			"housingStatus": { "state": "value", "value": "alquiler" },
-			"disability": { "state": "declined" }
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			},
+			"disability": {
+				"state": "declined"
+			}
 		}
 	},
 	"expectations": [
@@ -76,5 +131,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

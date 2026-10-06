@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "madrid-ayudas-urgencia-social",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -31,7 +31,7 @@
 		}
 	],
 	"parametersUsed": [
-		"IPREM_ANUAL_14P"
+		"IPREM_ANUAL_12P"
 	],
 	"requirements": [
 		{
@@ -76,7 +76,7 @@
 		{
 			"id": "sin-recursos-basicos",
 			"hard": false,
-			"label": "Carecer de recursos económicos para cubrir necesidades básicas en el momento de la intervención — la Cartera no publica umbral; como referencia orientativa usamos ingresos anuales por debajo de 1 × IPREM (8.400 €/año)",
+			"label": "Carecer de recursos económicos para cubrir necesidades básicas en el momento de la intervención — la Cartera no publica umbral; como referencia orientativa usamos ingresos anuales por debajo de 1 × IPREM (7.200 €/año (IPREM de 12 pagas))",
 			"citation": {
 				"sourceId": "bocm-20230801-18-cartera-ss",
 				"locator": "Anexo II, ficha 060502 — Requisitos para el acceso",
@@ -86,7 +86,7 @@
 			"condition": {
 				"field": "incomeAnnual",
 				"op": "lte",
-				"param": "IPREM_ANUAL_14P"
+				"param": "IPREM_ANUAL_12P"
 			}
 		}
 	],
@@ -206,5 +206,11 @@
 	"lifeEvents": [
 		"perder_empleo",
 		"ingresos_bajos"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-4.md"
+	}
 }

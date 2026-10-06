@@ -44,6 +44,15 @@ function ruleset(slug: string, good: boolean): Record<string, unknown> {
 		amount: null,
 	};
 	if (!good) rs.verifiedAt = "2020-01-01"; // G6
+	if (good) {
+		// G12/ADR-044: sin verification ok + informe existente, fuera del bundle
+		rs.verification = {
+			status: "ok",
+			by: "test",
+			at: "2026-10-08",
+			report: "evidence/2026-10-05-F3/verificacion-ola-1.md",
+		};
+	}
 	return rs;
 }
 
@@ -110,6 +119,22 @@ describe("eligibility-build", () => {
 		expect(report.included).toEqual(["test-ok"]);
 		expect(report.excluded[0].slug).toBe("test-mal");
 		expect(report.excluded[0].codes).toContain("ELIG_G6_STALE");
+	});
+
+	it("G12: sin verification ok (o informe inexistente) queda fuera del bundle", () => {
+		const { root, opts } = makeEnv();
+		roots.push(root);
+		const rs = ruleset("test-sin-verif", true);
+		delete (rs as Record<string, unknown>).verification;
+		writeFileSync(join(opts.rulesDir, "test-sin-verif.json"), JSON.stringify(rs));
+		writeFileSync(join(opts.catalogDir, "test-sin-verif.json"), "{}");
+		buildEligibility(opts);
+		const report = JSON.parse(readFileSync(join(opts.outDir, "eligibility-report.json"), "utf8"));
+		expect(report.included).not.toContain("test-sin-verif");
+		expect(
+			report.excluded.find((x: { slug: string }) => x.slug === "test-sin-verif")
+				?.codes,
+		).toContain("ELIG_G12_NO_VERIFICATION");
 	});
 
 	it("digest estable: dos builds con los mismos datos dan el mismo digest", () => {

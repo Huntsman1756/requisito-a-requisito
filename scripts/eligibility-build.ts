@@ -11,7 +11,7 @@
  */
 
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import {
 	parametersSchema,
@@ -53,14 +53,40 @@ export function buildEligibility(opts: BuildOptions): BuildResult {
 	}
 	// G1: ficheros que no parsean aparecen como errores con su nombre de fichero;
 	// no hay ruleset que incluir para ellos.
+	const g12 = (rs: (typeof v.rulesets)[number]): boolean => {
+		if (rs.verification?.status !== "ok") return false;
+		if (!rs.verification.report) return false;
+		// El informe debe existir en el repo (evidence/…).
+		try {
+			return existsSync(join(process.cwd(), rs.verification.report));
+		} catch {
+			return false;
+		}
+	};
 	const included = v.rulesets.filter(
-		(rs) => !errorsBySlug.has(rs.benefitSlug),
+		(rs) => !errorsBySlug.has(rs.benefitSlug) && g12(rs),
 	);
+	const g12Out = v.rulesets
+		.filter((rs) => !errorsBySlug.has(rs.benefitSlug) && !g12(rs))
+		.map((rs) => rs.benefitSlug);
+	if (g12Out.length > 0) {
+		console.log(
+			`eligibility:build · G12 fuera del bundle (sin verification ok): ${g12Out.join(", ")}`,
+		);
+	}
 	const excluded = [
-		...new Set([...errorsBySlug.keys()]),
+		...new Set([...errorsBySlug.keys(), ...g12Out]),
 	]
 		.sort()
-		.map((slug) => ({ slug, codes: [...new Set(errorsBySlug.get(slug) ?? [])].sort() }));
+		.map((slug) => ({
+			slug,
+			codes: [
+				...new Set([
+					...(errorsBySlug.get(slug) ?? []),
+					...(g12Out.includes(slug) ? ["ELIG_G12_NO_VERIFICATION"] : []),
+				]),
+			].sort(),
+		}));
 
 	const parameters = parametersSchema.parse(
 		JSON.parse(readFileSync(opts.parametersPath, "utf8")),
