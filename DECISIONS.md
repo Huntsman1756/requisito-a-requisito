@@ -323,3 +323,32 @@ la ola 3 se integró y desplegó **antes** de su verificación independiente (no
   Lo que Daniel no apruebe a tiempo no aparece en la versión de la memoria.
 - **Orden de integración:** autor ⇒ verificador ⇒ merge a main ⇒ deploy. Nunca se
   integra en main una ola sin su informe de verificación.
+
+## ADR-044 (enmienda 2026-10-06) — Merge antes de verificar, protegido por G12
+2026-10-06 · aceptada · La ola 5 se integró en main antes de su verificación. Como
+G12 ya impide que llegue al bundle público, se **acepta** integrar en main antes
+de verificar, siempre que G12 esté activo y el recibo de la ola lo diga. Lo que
+sigue prohibido es que una regla sin `verification: ok` llegue a producción.
+
+## ADR-045 — Vigencia del programa, no solo de los importes
+2026-10-06 · aceptada · Hallazgo de la 5.ª revisión de Claude: la ola 6 incluía la
+**Renta Activa de Inserción (RAI), derogada desde el 01/11/2024** por el RDL 2/2024
+(no admite solicitudes nuevas; solo régimen transitorio para quien ya la tenía).
+Regla: antes de escribir una regla, el autor comprueba en el BOE que **el programa
+admite solicitudes nuevas** (derogaciones, «Análisis → Posteriores», disposiciones
+transitorias). El verificador lo comprueba otra vez. Programas en régimen solo
+transitorio ⇒ fuera del nivel 1; en el nivel 2, con la nota «No admite nuevas
+solicitudes desde …». El universo (F0-U) marca `accessState: CLOSED` + `derogatedAt`.
+
+## ADR-046 — Equilibrio por administración en el nivel 1
+2026-10-06 · aceptada · De 31 reglas, ~17 son de la Comunidad, 14 del Estado y
+**prácticamente ninguna municipal**. La promesa del producto es «Estado + Comunidad
++ Ayuntamiento en una sola respuesta», y el premio es de Madrid. Las olas
+siguientes priorizan: (1) **Ayuntamiento de Madrid** (ayudas económicas de
+especial necesidad o emergencia social, ayudas a familias, escuelas infantiles
+municipales, becas municipales y ayudas a la vivienda del Ayuntamiento), (2)
+municipios grandes (Móstoles, Alcalá, Fuenlabrada, Leganés, Getafe), (3) programas
+de la CM aún sin regla (becas de FP, préstamo de libros (ACCEDE), discapacidad).
+Las pensiones contributivas del Estado (jubilación, incapacidad permanente,
+orfandad) aportan poco a un orientador, porque dependen de la vida laboral, que
+no se pregunta: solo si sobra capacidad, y con las cotizaciones en ⚠.
