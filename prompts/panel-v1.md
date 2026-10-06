@@ -4,9 +4,13 @@ TAREA CERRADA — usa SOLO el texto suministrado, sin conocimiento externo.
 
 Te doy:
 - `label`: lo que la regla afirma (en lenguaje ciudadano).
+- `hard`: si el requisito es excluyente (true) o orientativo (false).
 - `condition` / `conditionPlain`: la condición formal codificada.
 - `excerpt`: extracto literal de la fuente oficial.
-- `context`: ~1.200 caracteres de la fuente alrededor del extracto.
+- `context`: caracteres de la fuente alrededor del extracto.
+- `modelled`: lista completa de requisitos que la regla SÍ modela (pueden estar
+  en otros ítems); `uncovered`: requisitos que la regla declara no poder
+  comprobar. Un requisito presente en `modelled` o `uncovered` NO falta.
 
 Responde SOLO JSON con estas claves:
 

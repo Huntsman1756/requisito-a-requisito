@@ -3,6 +3,7 @@
  * Uso: npm run panel:ping   (carga .env si existe; ver docs/17)
  * Hace 1 llamada mínima por modelo del panel. Nunca imprime la clave.
  */
+export {};
 const ENDPOINT = "https://api.nan.builders/v1/chat/completions";
 const MODELS = ["deepseek-v4-flash", "qwen3.8-flash", "mimo-v2.6-flash", "gemma4"];
 

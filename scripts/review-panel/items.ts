@@ -4,7 +4,7 @@
  * más un ítem de completitud por regla.
  */
 
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Condition, RuleSet } from "../../src/lib/eligibility-engine/schema";
 
@@ -39,6 +39,10 @@ export function conditionPlain(c: Condition): string {
 	if ("any" in c) return `alguna: ${c.any.map(conditionPlain).join(" O ")}`;
 	if ("not" in c) return `no: ${conditionPlain(c.not)}`;
 	const v = c.value;
+	if (c.param)
+		return `${c.field} ${c.op} ${c.param}${c.multiplier ? ` × ${c.multiplier}` : ""}`;
+	if (c.op === "count_where_gte")
+		return `${c.field}: al menos ${c.count ?? 1} que cumplen (${c.where ? conditionPlain(c.where) : "?"})`;
 	if (Array.isArray(v) && v.length === 2 && typeof v[0] === "number")
 		return `${c.field} entre ${v[0]} y ${v[1]} (${c.op})`;
 	if (v && typeof v === "object" && "min" in (v as object)) {
@@ -66,6 +70,13 @@ export function extractItems(
 	readSource: (sourceId: string) => string,
 ): PanelItem[] {
 	const out: PanelItem[] = [];
+	// todos los ítems conocen la lista completa de requisitos modelados y
+	// declarados como no cubiertos: sin ella el panel marcaría como «falta»
+	// requisitos que sí están modelados en otros ítems
+	const modelledIds = rs.requirements.map(
+		(r) => `${r.id} (${r.hard ? "hard" : "soft"}): ${r.label}`,
+	);
+	const uncoveredIds = rs.uncoveredRequirements.map((u) => `${u.id}: ${u.label}`);
 	const pushCited = (
 		kind: PanelItem["kind"],
 		itemId: string,
@@ -73,7 +84,7 @@ export function extractItems(
 		citation: { sourceId: string; locator: string; excerpt: string } | undefined,
 		extra?: Partial<PanelItem>,
 	) => {
-		const it: PanelItem = { ruleSlug: rs.benefitSlug, itemId, kind, label, ...extra };
+		const it: PanelItem = { ruleSlug: rs.benefitSlug, itemId, kind, label, modelledIds, uncoveredIds, ...extra };
 		if (citation) {
 			it.sourceId = citation.sourceId;
 			it.locator = citation.locator;
@@ -113,21 +124,56 @@ export function extractItems(
 	for (const doc of rs.application.documents) {
 		if (doc.citation) pushCited("document", `doc:${doc.id}`, doc.label, doc.citation);
 	}
-	// ítem de completitud: la lista modelada + sección de requisitos de la fuente
-	out.push({
+	// ítem de completitud: la lista modelada + sección de requisitos de la fuente.
+	// El contexto cubre desde la primera hasta la última cita de la fuente
+	// dominante (requisitos + uncovered) para que el panel pueda verificar si
+	// falta algún requisito exigido al solicitante.
+	const comp: PanelItem = {
 		ruleSlug: rs.benefitSlug,
 		itemId: "completeness",
 		kind: "completeness",
 		label: "¿Falta algún requisito que la norma exija al solicitante?",
-		modelledIds: rs.requirements.map((r) => `${r.id} (${r.hard ? "hard" : "soft"}): ${r.label}`),
-		uncoveredIds: rs.uncoveredRequirements.map((u) => `${u.id}: ${u.label}`),
-	});
+		modelledIds,
+		uncoveredIds,
+	};
+	const cited = [...rs.requirements, ...rs.uncoveredRequirements]
+		.map((x) => x.citation)
+		.filter((c): c is NonNullable<typeof c> => Boolean(c));
+	const bySource = new Map<string, string[]>();
+	for (const c of cited) {
+		const list = bySource.get(c.sourceId) ?? [];
+		list.push(c.excerpt);
+		bySource.set(c.sourceId, list);
+	}
+	const [dominant, excerpts] =
+		[...bySource.entries()].sort((a, b) => b[1].length - a[1].length)[0] ?? [];
+	if (dominant && excerpts) {
+		const text = readSource(dominant);
+		if (text) {
+			const pos = excerpts
+				.map((e) => {
+					const i = text.indexOf(e);
+					return i < 0 ? null : ([i, i + e.length] as const);
+				})
+				.filter((p): p is readonly [number, number] => p !== null);
+			if (pos.length) {
+				const lo = Math.min(...pos.map((p) => p[0]));
+				const hi = Math.max(...pos.map((p) => p[1]));
+				const cap = 8000;
+				const start = Math.max(0, lo - 800);
+				const end = Math.min(text.length, Math.min(hi + 800, start + cap));
+				comp.sourceId = dominant;
+				comp.locator = "sección de requisitos (auto)";
+				comp.context = text.slice(start, end);
+			}
+		}
+	}
+	out.push(comp);
 	return out;
 }
 
 /** Reglas + fuentes desde disco (uso en CLI). */
 export function extractAll(root: string): PanelItem[] {
-	const { readdirSync } = require("node:fs") as typeof import("node:fs");
 	const rulesDir = join(root, "data/eligibility/rules");
 	const srcDir = join(root, "data/eligibility/sources");
 	const items: PanelItem[] = [];

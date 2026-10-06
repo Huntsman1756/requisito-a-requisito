@@ -1,11 +1,13 @@
 /**
  * review-panel/run.ts — ejecuta el panel multimodelo (docs/17).
  * Solo llamadas reales con NAN_API_KEY; los tests usan `callModel` inyectado.
+ * `reviewItems` devuelve el resultado por ítem; `runPanel` lo agrega por regla.
  */
 import { createHash } from "node:crypto";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
+import { extractJson, mapPool, NanClient } from "./client";
 import { extractAll, type PanelItem } from "./items";
 
 export const panelVerdictSchema = z.strictObject({
@@ -52,32 +54,75 @@ export function aggregate(item: PanelItem, verdicts: PanelVerdict[]): {
 
 const sha256 = (s: string) => createHash("sha256").update(s).digest("hex");
 
+/** Huella del contenido revisable del ítem (lo que ve el modelo). */
+export function itemFingerprint(item: PanelItem): string {
+	return sha256(
+		JSON.stringify({
+			label: item.label,
+			hard: item.hard,
+			condition: item.condition,
+			conditionPlain: item.conditionPlain,
+			excerpt: item.excerpt,
+			context: item.context,
+			modelled: item.modelledIds,
+			uncovered: item.uncoveredIds,
+		}),
+	).slice(0, 16);
+}
+
 export type CallModel = (input: {
 	model: string;
 	prompt: string;
 	item: PanelItem;
 }) => Promise<string>;
 
-async function defaultCall({ model, prompt, item }: { model: string; prompt: string; item: PanelItem }): Promise<string> {
+export interface CallResult {
+	raw: string;
+	ms?: number;
+	usage?: { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number };
+}
+
+type CallModelFull = (input: {
+	model: string;
+	prompt: string;
+	item: PanelItem;
+}) => Promise<CallResult>;
+
+let sharedClient: NanClient | null = null;
+
+const defaultCallFull: CallModelFull = async ({ model, prompt, item }) => {
 	const key = process.env.NAN_API_KEY;
 	if (!key) throw new Error("NAN_API_KEY no definida");
-	const r = await fetch("https://api.nan.builders/v1/chat/completions", {
-		method: "POST",
-		headers: { "content-type": "application/json", authorization: `Bearer ${key}` },
-		body: JSON.stringify({
-			model,
-			temperature: 0,
-			max_tokens: 600,
-			response_format: { type: "json_object" },
-			messages: [
-				{ role: "system", content: prompt },
-				{ role: "user", content: JSON.stringify({ label: item.label, condition: item.condition, conditionPlain: item.conditionPlain, excerpt: item.excerpt, context: item.context, modelled: item.modelledIds, uncovered: item.uncoveredIds }) },
-			],
+	sharedClient ??= new NanClient(key, { concurrency: 6, rpm: 50 });
+	const res = await sharedClient.call({
+		model,
+		system: prompt,
+		user: JSON.stringify({
+			label: item.label,
+			hard: item.hard,
+			condition: item.condition,
+			conditionPlain: item.conditionPlain,
+			excerpt: item.excerpt,
+			context: item.context,
+			modelled: item.modelledIds,
+			uncovered: item.uncoveredIds,
 		}),
 	});
-	if (!r.ok) throw new Error(`NAN ${r.status}`);
-	const j = (await r.json()) as { choices: { message: { content: string } }[] };
-	return j.choices[0].message.content;
+	return { raw: res.content, ms: res.latencyMs, usage: res.usage };
+};
+
+/** Veredicto de un modelo sobre un ítem. */
+export interface ModelVerdict {
+	model: string;
+	verdict: PanelVerdict;
+	/** false si la salida no pasó el Zod ni en el reintento */
+	valid: boolean;
+}
+
+export interface ItemResult {
+	item: PanelItem;
+	verdicts: ModelVerdict[];
+	agg: { result: Aggregate; reason?: string };
 }
 
 export interface RunOptions {
@@ -89,67 +134,104 @@ export interface RunOptions {
 	concurrency?: number;
 }
 
-export async function runPanel(
-	items: PanelItem[],
-	opts: RunOptions,
-): Promise<{ slug: string; status: "approved" | "escalated" }[]> {
+export function parseVerdict(raw: string): PanelVerdict | null {
+	const json = extractJson(raw);
+	if (!json) return null;
+	try {
+		const p = panelVerdictSchema.safeParse(JSON.parse(json));
+		return p.success ? p.data : null;
+	} catch {
+		return null;
+	}
+}
+
+const INVALID_VERDICT: PanelVerdict = {
+	fidelity: "cannot_tell",
+	hardness: "ok",
+	falseNegativeRisk: "none",
+	falsePositiveRisk: "none",
+	missingRequirements: [],
+	explanation: "salida inválida",
+};
+
+/**
+ * Revisa cada ítem con todos los modelos (pool acotado, caché por huella,
+ * registro crudo en outDir/raw/calls.jsonl). Devuelve un ItemResult por ítem,
+ * en el mismo orden de entrada.
+ */
+export async function reviewItems(items: PanelItem[], opts: RunOptions): Promise<ItemResult[]> {
 	mkdirSync(opts.cacheDir, { recursive: true });
 	mkdirSync(join(opts.outDir, "raw"), { recursive: true });
 	const prompt = readFileSync(
 		join(process.cwd(), `prompts/${opts.promptVersion}.md`),
 		"utf8",
 	);
-	const bySlug = new Map<string, { item: PanelItem; agg: ReturnType<typeof aggregate> }[]>();
-	for (const item of items) {
-		const verdicts: PanelVerdict[] = [];
-		for (const model of opts.models) {
-			const key = sha256(`${model}|${opts.promptVersion}|${item.ruleSlug}|${item.itemId}|${item.excerpt ?? ""}`);
-			const cacheFile = join(opts.cacheDir, `${key}.json`);
-			const parse = (s: string): PanelVerdict | null => {
-				try {
-					const p = panelVerdictSchema.safeParse(JSON.parse(s));
-					return p.success ? p.data : null;
-				} catch {
-					return null;
-				}
-			};
-			const record = (raw: string): void => {
-				writeFileSync(cacheFile, raw);
-				appendFileSync(
-					join(opts.outDir, "raw", "calls.jsonl"),
-					`${JSON.stringify({ model, item: `${item.ruleSlug}/${item.itemId}`, at: new Date().toISOString(), raw })}\n`,
-				);
-			};
-			// solo se cachea una respuesta válida; una inválida se reintenta y,
-			// si sigue mal, cuenta como cannot_tell sin ensuciar la caché
-			let v = existsSync(cacheFile)
-				? parse(readFileSync(cacheFile, "utf8"))
-				: null;
-			if (!v) {
-				const raw = await (opts.callModel ?? defaultCall)({ model, prompt, item });
-				v = parse(raw);
-				if (v) record(raw);
-				else {
-					const retry = await (opts.callModel ?? defaultCall)({ model, prompt, item });
-					v = parse(retry);
-					if (v) record(retry);
-				}
+	const promptHash = sha256(prompt).slice(0, 8);
+	const log = (entry: object) =>
+		appendFileSync(join(opts.outDir, "raw", "calls.jsonl"), `${JSON.stringify(entry)}\n`);
+
+	interface Task {
+		itemIndex: number;
+		model: string;
+	}
+	const tasks: Task[] = [];
+	items.forEach((_, itemIndex) => {
+		for (const model of opts.models) tasks.push({ itemIndex, model });
+	});
+
+	const verdictGrid: (ModelVerdict | null)[][] = items.map(() =>
+		opts.models.map(() => null),
+	);
+
+	const call: CallModelFull = opts.callModel
+		? async (i) => ({ raw: await opts.callModel!(i) })
+		: defaultCallFull;
+	await mapPool(tasks, opts.concurrency ?? 6, async ({ itemIndex, model }) => {
+		const item = items[itemIndex];
+		const modelIndex = opts.models.indexOf(model);
+		const key = sha256(`${model}|${opts.promptVersion}|${promptHash}|${item.ruleSlug}|${item.itemId}|${itemFingerprint(item)}`);
+		const cacheFile = join(opts.cacheDir, `${key}.json`);
+		const ref = `${item.ruleSlug}/${item.itemId}`;
+		let res: CallResult | null = existsSync(cacheFile)
+			? { raw: readFileSync(cacheFile, "utf8") }
+			: null;
+		let v = res ? parseVerdict(res.raw) : null;
+		if (res && !v) res = null; // la caché solo guarda respuestas válidas
+		for (let attempt = 0; !v && attempt < 2; attempt++) {
+			try {
+				res = await call({ model, prompt, item });
+			} catch (e) {
+				log({ model, item: ref, at: new Date().toISOString(), error: String(e) });
+				res = null;
+				continue;
 			}
-			verdicts.push(
-				v ?? {
-					fidelity: "cannot_tell",
-					hardness: "ok",
-					falseNegativeRisk: "none",
-					falsePositiveRisk: "none",
-					missingRequirements: [],
-					explanation: "salida inválida",
-				},
-			);
+			v = parseVerdict(res.raw);
+			if (v) {
+				writeFileSync(cacheFile, res.raw);
+				log({ model, item: ref, at: new Date().toISOString(), ms: res.ms, usage: res.usage, raw: res.raw });
+			} else {
+				log({ model, item: ref, at: new Date().toISOString(), ms: res.ms, valid: false, raw: res.raw });
+			}
 		}
-		const agg = aggregate(item, verdicts);
-		const list = bySlug.get(item.ruleSlug) ?? [];
-		list.push({ item, agg });
-		bySlug.set(item.ruleSlug, list);
+		verdictGrid[itemIndex][modelIndex] = { model, verdict: v ?? INVALID_VERDICT, valid: v !== null };
+	});
+
+	return items.map((item, i) => {
+		const verdicts = verdictGrid[i].filter((x): x is ModelVerdict => x !== null);
+		return { item, verdicts, agg: aggregate(item, verdicts.map((v) => v.verdict)) };
+	});
+}
+
+export async function runPanel(
+	items: PanelItem[],
+	opts: RunOptions,
+): Promise<{ slug: string; status: "approved" | "escalated" }[]> {
+	const results = await reviewItems(items, opts);
+	const bySlug = new Map<string, ItemResult[]>();
+	for (const r of results) {
+		const list = bySlug.get(r.item.ruleSlug) ?? [];
+		list.push(r);
+		bySlug.set(r.item.ruleSlug, list);
 	}
 	return [...bySlug.entries()].map(([slug, rows]) => ({
 		slug,
