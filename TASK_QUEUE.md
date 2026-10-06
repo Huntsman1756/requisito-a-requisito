@@ -67,14 +67,14 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F2-COV | Cobertura del motor con `@vitest/coverage-v8` (≥ 95 %) | agente | 08/10 | — | HECHO (2026-10-05 · motor 95,5% lineas / 99,3% funciones) | |
 | F3 lotes | Reglas citadas del vertical (lotes de 4–6) | agente | 10/10 | F1, F0-5 | EN CURSO (2026-10-05 · lote 1: 6/6 ayudas, 0 errores, 20 tests frontera, 340 perfiles exhaustivos 0 violaciones) | evidence/2026-10-05-F3/lote-1.md **pendiente revisión Daniel (G10)** |
 | F3-R | Revisión de lotes de reglas | **Daniel** | por lote | F3 lote | TODO | |
-| F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | TODO | |
-| F3-M | Mutación: 0 supervivientes | agente | 10/10 | F3-G | TODO | |
+| F3-G | ≥ 12 personas golden + revisión | agente + **Daniel** | 10/10 | F3 lotes | EN CURSO | 44 personas golden evaluadas con el motor real en verde; revisión de Daniel pendiente (review.status por golden) |
+| F3-M | Mutación: 0 supervivientes | agente | 10/10 | F3-G | HECHO (433b12b) | eligibility:mutate: 238 mutantes × dominio exhaustivo, 0 sin explicar; 2 equivalentes pinneados (hard-flags.test.ts); gap del dominio month_year corregido |
 | F4-1..12 | Diseño y frontend | agente | 11/10 | F2 | EN CURSO — núcleo HECHO (2026-10-05): /comprobar completo + resultados + nivel 2 + /ayudas/[slug] + datos abiertos + revisión visual independiente aplicada (2 commits) | Pendiente: wireframes formales, matriz de proyectos, opt-in profile, en |
 | F4-W | Vistazo a las capturas de diseño (no bloqueante) | **Daniel** | 09/10 | F4-2 | LISTO PARA VER — `evidence/2026-10-05-F4/capturas/` (16 PNG, 375/1366) | |
 | F5-1..11 | QA transversal (10 proyectos, a11y, visual, rendimiento, privacidad, full) | agente | 12/10 | F4 | HECHO (2026-10-06 · evidence/2026-10-06-F5/qa-report.md) | 45/45 e2e en 9/10 proyectos; axe 0 serious/critical tras fix de contraste oscuro; 114 URLs 0 fallidas; Firefox no arranca en este equipo (limitación de entorno documentada) |
 | F5-M | Checklist manual en dispositivos reales | **Daniel** | 12/10 | F5-2 | TODO | |
 | D-3 | Demo desplegada | Claude (delegado) | — | — | HECHO (ADR-030) | GitHub Pages; dominio propio más adelante |
-| F6-1..5 | Vídeo, capturas, (demo), comprobaciones posteriores | agente | 13/10 | F5 | TODO | |
+| F6-1..5 | Vídeo, capturas, (demo), comprobaciones posteriores | agente | 13/10 | F5 | EN CURSO (2026-10-06) | F6-1/2: 24 capturas + 2 vídeos en submission/anexos (fd57032); F6-5 banner «Demostración — versión preliminar» en producción; F6-4: 200 en todas las rutas, 52 rulesets servidos, HSTS OK; F6-3 nginx N/A (demo = GitHub Pages) |
 | D-2 | Categoría definitiva | **Daniel** | — | — | HECHO (ADR-028) | Impact |
 | D-7 | Contador de uso | Claude (delegado) | — | — | HECHO (ADR-032) | No; impacto por sesiones y testimonios |
 | D-8 | Cobertura | Claude (delegado) | — | — | HECHO (ADR-033) | `@vitest/coverage-v8` autorizado |
