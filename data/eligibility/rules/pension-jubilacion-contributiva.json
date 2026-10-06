@@ -1,0 +1,378 @@
+{
+	"benefitSlug": "pension-jubilacion-contributiva",
+	"standalone": true,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-6.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 205–215 y disposición transitoria séptima (jubilación contributiva del Régimen General; texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026 — revalorización, límite de la cuantía inicial y cuantías mínimas de pensiones 2026"
+		},
+		{
+			"id": "segss-jubilacion-gestion",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28482?changeLanguage=es",
+			"title": "Seguridad Social — Jubilación ordinaria (Régimen General): gestión, solicitudes y documentación"
+		},
+		{
+			"id": "sede-segss-pensiones",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Pensiones",
+			"title": "Sede electrónica de la Seguridad Social — Ciudadanos › Pensiones: servicio «Jubilación nacional» y «Simulador de Jubilación»"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-minima-52",
+			"hard": true,
+			"timeDependent": "increasing",
+			"label": "Tener 52 años cumplidos: por debajo la ley no permite jubilarse ni siquiera por la vía reducida por discapacidad, y la ordinaria y las anticipadas exigen bastante más; solo colectivos con coeficientes por penosidad (minería y similares) pueden rebajarla aún más — ver ⚠. Ten en cuenta que la edad real que te corresponde suele ser bastante mayor: en 2026 la ordinaria son 66 años y 10 meses, o 65 si acreditas 38 años y 3 meses cotizados (en el Régimen General; los regímenes especiales mineros/mar tienen coeficientes propios que aquí no evaluamos)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Disposición transitoria séptima, cuadro (año 2026)",
+				"excerpt": "2026 38 años y 3 meses o más. 65 años. Menos de 38 años y 3 meses. 66 años y 10 meses.",
+				"excerptSha256": "dbd5c3b0a6282d1f4191e61ca82247d18bcfadddaf05554e544721edfdaed9fc"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 52,
+				"citation": {
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 206 bis.2",
+					"excerpt": "en ningún caso dará lugar a que el interesado pueda acceder a la pensión de jubilación con una edad inferior a la de cincuenta y dos años",
+					"excerptSha256": "a098dee40c0c969dd87e3f368059ee7d109c5175d38d88544a2eedf95e3f44eb"
+				}
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "cotizacion-15-anos",
+			"label": "Haber cotizado al menos 15 años a la Seguridad Social, de los cuales al menos 2 deben estar dentro de los 15 años inmediatamente anteriores al momento de causar el derecho — se comprueba con el informe de vida laboral, que no podemos pedirte aquí",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 205.1.b",
+				"excerpt": "Tener cubierto un período mínimo de cotización de quince años, de los cuales al menos dos deberán estar comprendidos dentro de los quince años inmediatamente anteriores al momento de causar el derecho",
+				"excerptSha256": "711b3eb7e8a35b4fe805ceaf1a9df1982cd3707635e03e510c0808589fd8a66c"
+			}
+		},
+		{
+			"id": "edad-ordinaria-exigible",
+			"label": "La edad ordinaria que te toca según lo que hayas cotizado: en 2026 son 66 años y 10 meses (o 65 con 38 años y 3 meses cotizados); desde 2027 serán 67 (o 65 con 38 años y 6 meses). Como no te preguntamos los años cotizados, no podemos decirte cuál te corresponde — el simulador oficial te la calcula con tu vida laboral",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Disposición transitoria séptima, cuadro (años 2026 y 2027)",
+				"excerpt": "2026 38 años y 3 meses o más. 65 años. Menos de 38 años y 3 meses. 66 años y 10 meses. A partir del año 2027 38 años y 6 meses o más. 65 años. Menos de 38 años y 6 meses. 67 años.",
+				"excerptSha256": "1b6753491ef3a5b2c78c1ec55c9c59156234be58cbfa7af4563f44f18c2f46c6"
+			}
+		},
+		{
+			"id": "alta-o-situacion-asimilada",
+			"label": "Estar en alta o en situación asimilada a la de alta (desempleo, excedencia forzosa, convenio especial, incapacidad temporal…), aunque la pensión también puede causarse sin estar de alta si reúnes la edad y la cotización exigidas",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 205.3",
+				"excerpt": "la pensión de jubilación podrá causarse, aunque los interesados no se encuentren en el momento del hecho causante en alta o situación asimilada a la de alta, siempre que reúnan los requisitos de edad y cotización",
+				"excerptSha256": "c7fbdb2d8f354501c808d745753f51aaf613ab51f2ecefadd7c2d42f47d1073e"
+			}
+		},
+		{
+			"id": "regimen-cotizacion",
+			"label": "Estar encuadrado en un régimen del sistema de la Seguridad Social con cotizaciones suficientes: esta ficha describe el Régimen General; autónomos (RETA), trabajadores del mar (REM) y funcionarios de carrera (Clases Pasivas, MUGEJU, ISFAS) tienen normas propias análogas",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 205.1",
+				"excerpt": "las personas incluidas en el Régimen General que, además de la general exigida en el artículo 165.1, reúnan las siguientes condiciones",
+				"excerptSha256": "67f6e83de886fe97046a9b352ccd7a97e94378d892c2097dd447ec62742599bf"
+			}
+		},
+		{
+			"id": "residencia-legal-extranjeros",
+			"label": "Si no eres español: residir o encontrarte legalmente en España y haber cotizado aquí; los períodos cotizados en la UE o en países con convenio pueden sumar",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 2.1",
+				"excerpt": "los españoles que residan en España y los extranjeros que residan o se encuentren legalmente en España, siempre que, en ambos supuestos, ejerzan su actividad en territorio nacional",
+				"excerptSha256": "1eb881528432fc5ed48fc249ed3a47f816896b229ab109355f239864b529cbb0"
+			}
+		},
+		{
+			"id": "anticipada-involuntaria",
+			"label": "Jubilación anticipada involuntaria: si perdiste el empleo por una causa no imputable a ti (despido colectivo u objetivo, resolución judicial, fuerza mayor, muerte/jubilación/incapacidad del empresario individual, violencia de género…), puedes jubilarte hasta 4 años antes de tu edad ordinaria si acreditas 33 años cotizados y al menos 6 meses inscrito como demandante de empleo antes de solicitarla",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 207.1.a-c",
+				"excerpt": "Tener cumplida una edad que sea inferior en cuatro años, como máximo, a la edad que en cada caso resulte de aplicación según lo establecido en el artículo 205.1.a) sin que a estos efectos resulten de aplicación los coeficientes reductores a que se refieren los artículos 206 y 206 bis. b) Encontrarse inscrito en las oficinas de empleo como demandante de empleo durante un plazo de, al menos, seis meses inmediatamente anteriores a la fecha de la solicitud de la jubilación. c) Acreditar un período mínimo de cotización efectiva de 33 años",
+				"excerptSha256": "662d99a626469f95d838e474e4ca53c4eb6ba5e2adcdca5f6038db915ae1ad26"
+			}
+		},
+		{
+			"id": "causa-cese-involuntario",
+			"label": "Para la anticipada involuntaria el cese debe estar tasado: despido colectivo u objetivo, resolución judicial por concurso, muerte/jubilación/incapacidad del empresario individual, fuerza mayor, violencia de género o fin de contrato temporal — la dimisión voluntaria no vale",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 207.1.d",
+				"excerpt": "Que el cese en el trabajo se haya producido por alguna de las causas siguientes: 1.ª El despido colectivo por causas económicas, técnicas, organizativas o de producción",
+				"excerptSha256": "676348574c1c9f81d4ba639c32e5d73eb64369e65f08a6993ae2f57c77a4f072"
+			}
+		},
+		{
+			"id": "anticipada-voluntaria",
+			"label": "Jubilación anticipada voluntaria: puedes jubilarte hasta 2 años antes de tu edad ordinaria si acreditas al menos 35 años cotizados y la pensión que te resulte supera la cuantía mínima que te correspondería a los 65 — los coeficientes reductores recortan la cuantía por cada mes de anticipación",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 208.1.a-c",
+				"excerpt": "Tener cumplida una edad que sea inferior en dos años, como máximo, a la edad que en cada caso resulte de aplicación según lo establecido en el artículo 205.1.a), sin que a estos efectos resulten de aplicación los coeficientes reductores a que se refieren los artículos 206 y 206 bis. b) Acreditar un período mínimo de cotización efectiva de treinta y cinco años",
+				"excerptSha256": "305378bf87d30161198ecd88a391860d116453858990085a0c39b537854228c0"
+			}
+		},
+		{
+			"id": "anticipada-discapacidad",
+			"label": "Con discapacidad la edad puede reducirse con coeficientes: grado ≥ 65 % según el baremo, o ≥ 45 % si es una de las patologías tasadas del RD 1851/2009 que reducen la esperanza de vida — en ningún caso por debajo de los 52 años",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 206 bis.1",
+				"excerpt": "podrá ser reducida en el caso de personas con discapacidad en un grado igual o superior al 65 por ciento, en los términos contenidos en el correspondiente real decreto acordado a propuesta del titular del Ministerio de Inclusión, Seguridad Social y Migraciones, o también en un grado de discapacidad igual o superior al 45 por ciento, siempre que, en este último supuesto, se trate de discapacidades reglamentariamente determinadas respecto de las que existan evidencias contrastadas que determinan de forma generalizada una reducción significativa de la esperanza de vida",
+				"excerptSha256": "f43b72fd254edc5ca33bb049a604dacf387b65ea018205a67e9f16852d5f17d1"
+			}
+		},
+		{
+			"id": "colectivos-penosos",
+			"label": "Colectivos con coeficientes reductores por penosidad o peligrosidad (minería, personal de vuelo, ferroviarios, artistas, profesionales taurinos, bomberos, Ertzaintza…): la edad mínima se rebaja por real decreto según la actividad y puede quedar por debajo incluso de los 52 años",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 206.1",
+				"excerpt": "podrá ser rebajada por real decreto, a propuesta del titular del Ministerio de Inclusión, Seguridad Social y Migraciones, en aquellos grupos o actividades profesionales cuyos trabajos sean de naturaleza excepcionalmente penosa, tóxica, peligrosa o insalubre",
+				"excerptSha256": "2ba7a14741f94fb5bfef4be2a09ecde4534858e555c96eaafc03348771d802f5"
+			}
+		},
+		{
+			"id": "jubilacion-demorada",
+			"label": "Si te jubilas por encima de la edad ordinaria teniendo ya la cotización mínima (jubilación demorada), la pensión suma un complemento a tu elección: +4 % por cada año completo cotizado desde que cumpliste la edad, un cheque único por año de demora, o una fórmula mixta",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 210.2.a",
+				"excerpt": "se reconocerá al interesado un complemento económico que se abonará de alguna de las siguientes maneras, a elección del interesado. a) Un porcentaje adicional de un 4 por ciento por cada año completo cotizado",
+				"excerptSha256": "45517120499a38477e14b3b8c6f15848bb88d5e9377598f50d31b1814ced05de"
+			}
+		},
+		{
+			"id": "incompatible-con-trabajo",
+			"label": "La pensión es incompatible con trabajar, salvo las excepciones que prevén la jubilación activa, la parcial y el trabajo a tiempo parcial compatibilizado",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 213.1",
+				"excerpt": "El disfrute de la pensión de jubilación será incompatible con el trabajo del pensionista, con las salvedades y en los términos que legal o reglamentariamente se determinen",
+				"excerptSha256": "6bb32ce2ced5acb5d59641dfe2208835d1599bf03351387cd371bea645bd2562"
+			}
+		},
+		{
+			"id": "jubilacion-activa",
+			"label": "Jubilación activa: si ya cumpliste la edad ordinaria hace al menos un año y tenías el mínimo de cotización, puedes compatibilizar la pensión con un trabajo por cuenta ajena o propia, a jornada completa o parcial",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 214.1",
+				"excerpt": "la percepción de la pensión de jubilación, en su modalidad contributiva, será compatible con la realización de cualquier trabajo por cuenta ajena, a tiempo completo o a tiempo parcial, o por cuenta propia del pensionista",
+				"excerptSha256": "b8775a5510bcde6cd187530959a84b65c0527dfb71a58d9fc4dbcde78dc4c581"
+			}
+		},
+		{
+			"id": "pension-minima-2026",
+			"label": "Pensión mínima garantizada en 2026 (complemento a mínimos): titular de 65 años o más — 17.592,40 €/año con cónyuge a cargo, 13.106,80 €/año en unidad unipersonal, 12.441,80 €/año con cónyuge no a cargo; menor de 65 — 17.592,40 / 12.262,60 / 11.590,60 €/año; procedente de gran incapacidad — hasta 26.385,80 €/año",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Anexo I, cuadro de cuantías mínimas (Jubilación)",
+				"excerpt": "Jubilación Titular con sesenta y cinco años. 17.592,40 13.106,80 12.441,80 Titular menor de sesenta y cinco años. 17.592,40 12.262,60 11.590,60",
+				"excerptSha256": "61fcb445afe5c985d835135fdfb5b3c73f8d14e5d7a26afa5b7f8388e2ba2561"
+			}
+		},
+		{
+			"id": "complemento-minimos-rentas",
+			"label": "El complemento a mínimos exige carencia de rentas: los rendimientos tuyos y de tu cónyuge (si está a tu cargo) deben quedar por debajo de 11.013,00 € al año en 2026, y residir en territorio español",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Art. 10.1.b (límite de rentas) y 10.4 (residencia)",
+				"excerpt": "Que los rendimientos por cualquier naturaleza de la persona pensionista y de su cónyuge, computados en la forma señalada en el artículo 9.2, resulten inferiores a 11.013,00 euros anuales",
+				"excerptSha256": "2e7900ae1c251e764a54a80e071b3aa79a964a653b21553eb0ad3313aef8137e"
+			}
+		},
+		{
+			"id": "pension-maxima-2026",
+			"label": "La pensión inicial máxima en 2026 es 3.359,60 € al mes (47.034,40 € al año con pagas extraordinarias incluidas)",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Art. 3.1",
+				"excerpt": "no podrá superar la cuantía íntegra mensual de 3.359,60 euros mensuales o 47.034,40 euros anuales, incluidas las pagas extraordinarias que pudieran corresponder a su titular",
+				"excerptSha256": "c3b27255246a7ba2bb184039c2db2a522d9593dd9f4989092138d1e93feb1472"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 212",
+				"excerpt": "El derecho al reconocimiento de la pensión de jubilación es imprescriptible, sin perjuicio de que, en los supuestos de jubilación en situación de alta, los efectos de tal reconocimiento se produzcan a partir de los tres meses anteriores a la fecha en que se presente la correspondiente solicitud",
+				"excerptSha256": "f1021f2b318707effcb4cd066e5b2802b69c003513aaa3fdfe58fe5d14b7e387"
+			}
+		},
+		"officialSimulator": {
+			"url": "https://prestaciones.seg-social.es/simulador-servicio/simulador-pension-jubilacion.html",
+			"label": "Simulador de Jubilación de la Seguridad Social — calcula tu edad y cuantía con tu vida laboral real",
+			"citation": {
+				"sourceId": "sede-segss-pensiones",
+				"locator": "Ciudadanos › Pensiones › «Simulador de Jubilación»",
+				"excerpt": "Simulador de Jubilación Este servicio permite simular la edad con la que se puede jubilar y la cuantía aproximada. Permite simular situaciones futuras teniendo en cuenta los datos y cotizaciones realizadas hasta el día de hoy.",
+				"excerptSha256": "a09155d07defe40898dc3b35a4d7949036422f2e5f8eccf3f0dba302b8d96e54"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) si perteneces al Régimen Especial del Mar",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-jubilacion-gestion",
+				"locator": "Apartado «Gestión / Solicitudes» › Gestión y reconocimiento del derecho",
+				"excerpt": "La gestión y el reconocimiento del derecho corresponden al Instituto Nacional de la Seguridad Social (INSS) o, si se trata de trabajadores incluidos en el campo de aplicación del Régimen Especial del Mar, al Instituto Social de la Marina (ISM).",
+				"excerptSha256": "68f4c44bf964a9bab9b8cd19b45da42eb014283b8a8f98f414fb96eb1c994d54"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud de la pensión de jubilación («Jubilación nacional» en la sede electrónica), que puede presentarse en nombre propio, por representación o por apoderamiento registrado",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-segss-pensiones",
+					"locator": "Ciudadanos › Pensiones › «Jubilación nacional»",
+					"excerpt": "Jubilación nacional Este servicio permite solicitar la pensión de jubilación nacional en nombre propio, mediante representación o mediante apoderamiento inscrito en el registro electrónico de apoderamientos.",
+					"excerptSha256": "9240121fbedcfd2410817466946355efe66c9f68e31ca3db606897b820fcf4f5"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad en vigor del solicitante (y del representante legal si lo hay): DNI si eres español; pasaporte o documento vigente del país de origen y NIE si eres extranjero — basta exhibir el original",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › En todos los casos",
+					"excerpt": "EN TODOS LOS CASOS: Acreditación de la identidad del solicitante y representante legal mediante la siguiente documentación en vigor: Españoles: Documento Nacional de Identidad (DNI). Extranjeros residentes o no residentes en España: pasaporte o, en su caso, documento de identidad vigente en su país y NIE (Número de Identificación de Extranjero) exigido por la AEAT a efectos de pago.",
+					"excerptSha256": "5031db2a4a83e686230264ed257f24b6101ffbf5f62f15e6bf94a8a406a62cc4"
+				}
+			},
+			{
+				"id": "doc-representacion",
+				"label": "Si la solicitud la firma otra persona: acreditación de la representación legal (los apoderados inscritos en el registro electrónico de apoderamientos no necesitan documento)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › En todos los casos",
+					"excerpt": "Documentación acreditativa de la representación legal, en su caso.",
+					"excerptSha256": "c9e0ea97fdf27d2fbc99259213357fa2ea3201b77f53ec4fff3beaa335ea16ed"
+				}
+			},
+			{
+				"id": "doc-anticipada-bonificacion",
+				"label": "Solo si pides anticipada con bonificación de edad por actividad penosa: certificado de la empresa con la categoría profesional y los períodos trabajados en el puesto (o cartilla de embarque y desembarque en el Régimen del Mar)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › En jubilación anticipada",
+					"excerpt": "Si ha trabajado en alguna actividad que tenga reconocida bonificación de edad: certificado de la empresa o empresas donde consten la categoría profesional y los períodos trabajados en ese puesto",
+					"excerptSha256": "6a9b14aa4986fd18174f2e6a9d4489c98a079e1ce8adb0e1683f8a9e8b2a4887"
+				}
+			},
+			{
+				"id": "doc-anticipada-discapacidad",
+				"label": "Solo si pides anticipada por discapacidad ≥ 65 % o por patología del RD 1851/2009: informe médico de la patología con fecha de inicio y certificado del grado de discapacidad del IMSERSO u organismo competente",
+				"mandatory": false,
+				"condition": {
+					"field": "disability",
+					"op": "neq",
+					"value": "no"
+				},
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › En jubilación anticipada",
+					"excerpt": "Informe médico en el que conste la afectación de la persona trabajadora por alguna de las patologías generadoras de discapacidad a las que se refiere el Real Decreto 1851/2009",
+					"excerptSha256": "dcb0ca2694d0e82cff6e6e01022c25b682371f3cae56c2ce8f0b1d6c2a44f583"
+				}
+			},
+			{
+				"id": "doc-anticipada-involuntaria",
+				"label": "Solo si pides anticipada involuntaria: documentación que acredite que el cese en el trabajo fue involuntario (y, en despido colectivo u objetivo, la indemnización percibida o la demanda judicial interpuesta si no la hubo)",
+				"mandatory": false,
+				"condition": {
+					"field": "employmentStatus",
+					"op": "eq",
+					"value": "desempleado"
+				},
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › En jubilación anticipada › Involuntaria",
+					"excerpt": "Involuntaria: Documentación que acredite que el tipo de cese ha sido involuntario.",
+					"excerptSha256": "546b922b5d997db2144e41d7369659ed81e0c57f33d2cb57a282bdef0b6afb15"
+				}
+			},
+			{
+				"id": "doc-minimos-extranjeros",
+				"label": "Solo si pides el complemento a mínimos siendo extranjero residente: certificado de inscripción en el Registro Central de Extranjeros o TIE, y libro de familia o actas del Registro Civil si tienes cónyuge a cargo",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Apartado «Gestión / Solicitudes» › Documentos › A efectos de complementos para pensiones inferiores a la mínima",
+					"excerpt": "En el caso de extranjeros residentes en España: certificado de inscripción en el Registro Central de Extranjeros o Tarjeta de Identidad de Extranjeros.",
+					"excerptSha256": "1a89d0302efe7f1f7a0864c400a6f739b1db51b3ce6a2293215a825863e15ae6"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 210.1",
+			"excerpt": "La cuantía de la pensión de jubilación se determinará aplicando a la base reguladora, calculada conforme a lo dispuesto en el artículo precedente, los porcentajes siguientes: a) Por los primeros quince años cotizados, el 50 por ciento.",
+			"excerptSha256": "07cfcc131993f0c1a6ff9993f1b3838042dc7b7acc06d7e5587b463ba3e2b066"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 4
+	},
+	"themes": [
+		"mayores",
+		"empleo"
+	],
+	"lifeEvents": [
+		"mayor_65",
+		"perder_empleo",
+		"discapacidad"
+	]
+}

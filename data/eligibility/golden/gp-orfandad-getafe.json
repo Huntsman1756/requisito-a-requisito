@@ -1,0 +1,92 @@
+{
+	"id": "gp-orfandad-getafe",
+	"description": "Joven de 19 años empadronada en Getafe (28065) desde su nacimiento, estudiante sin trabajo lucrativo, cuyo padre (asalariado) falleció este año; convive con su madre. Es el caso directo del beneficiario: la soft «edad-en-fallecimiento» queda en T (19 < 25), pero las condiciones decisivas —filiación, muerte del causante, su alta/cotización y la fecha real del fallecimiento frente a la edad— no se preguntan ⇒ veredicto posible, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2007,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 19,
+					"max": 19,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "unasked"
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "general"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "si"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-orfandad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 224.1 y 224.3",
+					"reasoning": "age = 19 < 25 ⇒ la soft «edad-en-fallecimiento» queda en T: a los 19 cabe tanto la vía general (<21) como la de <25 sin trabajo lucrativo o con ingresos < SMI. Es soft: un F aquí no excluiría, solo avisa; la edad legal se mide en la fecha del fallecimiento, que no se pregunta."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 219.1, 224.1, 224.3 y 224.4",
+					"reasoning": "El catálogo no pregunta el fallecimiento del progenitor, la filiación, la situación de alta/cotización del causante (500 días/5 años en alta, 15 años fuera de ella, nada si accidente o EP) ni la fecha de la muerte ⇒ todo queda en uncoveredRequirements: 0 hard F, 0 hard U, uncoveredCount > 0 ⇒ posible."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 230",
+					"reasoning": "El derecho al reconocimiento de las prestaciones por muerte y supervivencia es imprescriptible (efectos retroactivos máximo 3 meses) ⇒ no hay convocatoria: deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

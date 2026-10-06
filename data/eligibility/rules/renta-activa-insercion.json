@@ -1,0 +1,309 @@
+{
+	"benefitSlug": "renta-activa-insercion",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-6.md"
+	},
+	"referenceDate": "application",
+	"parametersUsed": [
+		"SMI_MENSUAL"
+	],
+	"sources": [
+		{
+			"id": "boe-rd-1369-2006-rai",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2006/11/24/1369/con",
+			"title": "Real Decreto 1369/2006, de 24 de noviembre — programa de renta activa de inserción (texto consolidado; derogado con efectos del 01/11/2024, sigue aplicándose a los derechos conservados)"
+		},
+		{
+			"id": "boe-rdl-2-2024-asistencial",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdl/2024/05/21/2/con",
+			"title": "Real Decreto-ley 2/2024, de 21 de mayo — reforma del nivel asistencial por desempleo; deroga el RD 1369/2006 (disposición derogatoria única.4) y fija el régimen transitorio (DT 3.ª)"
+		},
+		{
+			"id": "sepe-rai-anterior-noviembre-2024",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.sepe.es/HomeSepe/prestaciones-desempleo/si-tengo-subsidio-rai-antes-noviembre-2024",
+			"title": "SEPE — Información de los subsidios y de la renta activa de inserción (RAI) anteriores al 1 de noviembre de 2024"
+		}
+	],
+	"requirements": [
+		{
+			"id": "desempleo",
+			"hard": false,
+			"label": "Estar desempleado/a: el programa estaba dirigido a trabajadores desempleados; la renta es incompatible con el trabajo a tiempo completo",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1",
+				"excerpt": "Podrán ser beneficiarios del programa los trabajadores desempleados menores de 65 años que, a la fecha de solicitud de incorporación, reúnan los siguientes requisitos",
+				"excerptSha256": "f3584a94528a7f252193a30b70aded91a2ddf0e5d5d6699ed2a672b13f06b207"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "desempleado",
+				"label": "estás en desempleo"
+			}
+		},
+		{
+			"id": "edad-menor-65",
+			"hard": false,
+			"label": "Tener menos de 65 años en la fecha de la solicitud de incorporación (quien ya percibe o tiene suspendida la renta conserva el derecho reconocido en su día aunque hoy tenga 65 o más)",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1",
+				"excerpt": "trabajadores desempleados menores de 65 años que, a la fecha de solicitud de incorporación",
+				"excerptSha256": "dae60c9ea4b5d22f89ad9dcf8d077c813cede4da5b4fa17542a21b0112fa1d67"
+			},
+			"condition": {
+				"field": "age",
+				"op": "lt",
+				"value": 65,
+				"label": "tienes menos de 65 años"
+			}
+		},
+		{
+			"id": "colectivo",
+			"hard": false,
+			"label": "Pertenecer a uno de los colectivos: parada/o de larga duración mayor de 45 años, persona con discapacidad igual o superior al 33 %, emigrante retornado o víctima de violencia de género, o doméstica (los dos últimos colectivos no se pueden comprobar con nuestras preguntas: ver ⚠)",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1.a) y 2.2",
+				"excerpt": "Ser mayor de 45 años",
+				"excerptSha256": "e4c0b91656ac3002d50daf0e76c2caa1e04279bba1c30b7d0a24d4f905bbda2f"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 45,
+						"label": "tienes 45 años o más",
+						"citation": {
+							"sourceId": "boe-rd-1369-2006-rai",
+							"locator": "Art. 2.1.a)",
+							"excerpt": "Ser mayor de 45 años",
+							"excerptSha256": "e4c0b91656ac3002d50daf0e76c2caa1e04279bba1c30b7d0a24d4f905bbda2f"
+						}
+					},
+					{
+						"field": "disability",
+						"op": "eq",
+						"value": "gte33",
+						"label": "tienes una discapacidad reconocida del 33 % o más",
+						"citation": {
+							"sourceId": "boe-rd-1369-2006-rai",
+							"locator": "Art. 2.2.a)",
+							"excerpt": "Acreditar una minusvalía en grado igual o superior al 33 por ciento",
+							"excerptSha256": "549a23cdbdb6f389e0fa7ba54b7367657ccef9340015d73adb77495317a18940"
+						}
+					}
+				],
+				"label": "encajas en al menos un colectivo comprobable"
+			}
+		},
+		{
+			"id": "carencia-rentas",
+			"hard": false,
+			"label": "Carencia de rentas propias: tus rentas mensuales no pueden superar el 75 % del SMI sin pagas extra (915,75 €/mes en 2026; proxy anual ≈ 10.989 €/año). Si tienes cónyuge o hijos a cargo, el límite se aplica a la renta per cápita de la unidad familiar: ver ⚠",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1.d)",
+				"excerpt": "Carecer de rentas, de cualquier naturaleza, superiores en cómputo mensual al 75 por ciento del salario mínimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias",
+				"excerptSha256": "5d05be021d18f41f25ed70dfcdd480f45f50669b8e3267b908ac272ec3d7a8f9"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "SMI_MENSUAL",
+				"multiplier": 9,
+				"label": "tus ingresos anuales están por debajo del umbral orientativo"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "derechos-conservados",
+			"label": "REQUISITO DECISIVO: el programa está cerrado a nuevas incorporaciones desde el 1 de noviembre de 2024. Solo conserva derechos quien a esa fecha ya la había solicitado, la estaba percibiendo o la tenía suspendida (solicitudes de reincorporación incluidas); para cualquier otra persona ya no puede pedirse",
+			"citation": {
+				"sourceId": "boe-rdl-2-2024-asistencial",
+				"locator": "Disposición transitoria tercera, apartado 1",
+				"excerpt": "Las personas que, a 1 de noviembre de 2024, hubieran solicitado, fueran beneficiarios o tuvieran suspendidos cualquiera de los subsidios por desempleo existentes en el momento de la entrada en vigor de este real decreto-ley, incluido el subsidio extraordinario por desempleo, o la renta activa de inserción, seguirán rigiéndose por la normativa anterior a este real decreto-ley hasta la extinción del derecho actual",
+				"excerptSha256": "9c4675861b01d579179cf12ce7dccf52757db6348ab818645b4e998b5ec54cc1"
+			}
+		},
+		{
+			"id": "inscripcion-12-meses",
+			"label": "Si accedes como parada/o de larga duración mayor de 45 años: haber estado inscrito/a ininterrumpidamente como demandante de empleo durante 12 o más meses (con búsqueda activa de empleo; hay reglas sobre interrupciones y salidas al extranjero)",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1.b)",
+				"excerpt": "Ser demandante de empleo inscrito ininterrumpidamente como desempleado en la oficina de empleo durante 12 o más meses",
+				"excerptSha256": "eeb1760c535a5a28fc908ef7ce712794f786a06792f502137f7a9603a04f5e1a"
+			}
+		},
+		{
+			"id": "emigrante-retornado",
+			"label": "Si accedes como emigrante retornado/a: haber vuelto a España en los 12 meses anteriores a la solicitud, haber trabajado al menos 6 meses en el extranjero desde tu última salida y estar inscrito/a como demandante de empleo",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.2.b)",
+				"excerpt": "Ser trabajador emigrante que, tras haber retornado del extranjero en los 12 meses anteriores a la solicitud, hubiera trabajado, como mínimo, seis meses en el extranjero desde su última salida de España y esté inscrito como demandante de empleo",
+				"excerptSha256": "8f999fd881e6de1a3640ed102965fc9368bc5b657256d437e9942dfd442623ee"
+			}
+		},
+		{
+			"id": "victima-violencia",
+			"label": "Si accedes como víctima: tener acreditada por la Administración competente la condición de víctima de violencia de género o doméstica (la sede del SEPE incluye también la violencia de género o doméstica), sin convivir con el agresor, y estar inscrita como demandante de empleo",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.2.c)",
+				"excerpt": "Tener acreditada por la Administración competente la condición de víctima de violencia de género o doméstica, salvo cuando conviva con el agresor, y estar inscrita como demandante de empleo",
+				"excerptSha256": "3c3b3440238f66900b82b775df9d89a260481b7f3e5f9d59ef7b1e1765b022a0"
+			}
+		},
+		{
+			"id": "extincion-proteccion",
+			"label": "Haber extinguido la prestación contributiva y/o el subsidio por desempleo (salvo por sanción) y no tener derecho a esa protección; no se exige en las vías de discapacidad ni de víctima de violencia",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1.c)",
+				"excerpt": "Haber extinguido la prestación por desempleo de nivel contributivo y/o el subsidio por desempleo de nivel asistencial establecidos en el Título Tercero del texto refundido de la Ley General de la Seguridad Social, salvo cuando la extinción se hubiera producido por imposición de sanción, y no tener derecho a la protección por dicha contingencia",
+				"excerptSha256": "74566abcbe52a80f978ac25b0911a88d39361991a3519ddd85124abcc5801b99"
+			}
+		},
+		{
+			"id": "carencia-rentas-unidad",
+			"label": "Con cónyuge y/o hijos menores de 26 años (o mayores incapacitados o acogidos): la carencia de rentas se comprueba por unidad familiar —la suma de las rentas de todos sus miembros dividida entre ellos no puede superar el 75 % del SMI—; no preguntamos las rentas del resto de la unidad",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.1.d), segundo párrafo",
+				"excerpt": "la suma de las rentas de todos los integrantes de la unidad familiar así constituida, incluido el solicitante, dividida por el número de miembros que la componen, no supere el 75 por ciento del salario mínimo interprofesional",
+				"excerptSha256": "27bf22e16edbe4350dfca189130f36d2db39842ad1e6fb1b4204d35dd417b550"
+			}
+		},
+		{
+			"id": "compromiso-actividad",
+			"label": "Suscribir el compromiso de actividad en la fecha de la solicitud y cumplir el plan personal de inserción (participar en acciones de inserción, aceptar colocación adecuada, renovar la demanda de empleo)",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 3.1",
+				"excerpt": "deberán solicitarlo y suscribir el compromiso de actividad",
+				"excerptSha256": "375ff6333e13f8081a77ca1995d7081bd4c7a81bb46c047ede4b814b4f4ef54a"
+			}
+		},
+		{
+			"id": "limites-derechos",
+			"label": "Límites históricos: no haber sido beneficiario de la RAI en los 365 días anteriores a la solicitud (salvo discapacidad ≥33 % o víctima de violencia) y no haber agotado tres derechos al programa",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 2.4",
+				"excerpt": "No haber sido beneficiario de tres derechos al programa de renta activa de inserción anteriores aunque no se hubieran disfrutado por el periodo de duración máxima de la renta",
+				"excerptSha256": "89687aab952a80ccd54034d076df8fb073dbac3357b03155352579da88dbc650"
+			}
+		},
+		{
+			"id": "reincorporacion",
+			"label": "Si la tienes suspendida: la reincorporación se pide en los 15 días siguientes al cese o al retorno del extranjero (fuera de plazo se consumen días de renta); por cese en trabajo a tiempo completo la percepción se recupera de oficio si sigues inscrito/a como demandante",
+			"citation": {
+				"sourceId": "boe-rd-1369-2006-rai",
+				"locator": "Art. 9.4-5",
+				"excerpt": "La solicitud de reincorporación al programa fuera del plazo de 15 días señalado en los párrafos b) y d) del apartado anterior supondrá la pérdida de tantos días de renta",
+				"excerptSha256": "a6a5e91bfd46261e2f005937f3308c0df07337084d0bb8dcd72214be2e0c220b"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": false,
+			"closesAt": "2024-10-31",
+			"recurrence": "none",
+			"citation": {
+				"sourceId": "boe-rdl-2-2024-asistencial",
+				"locator": "Disposición derogatoria única.4, en vigor el 01/11/2024 (disposición final decimocuarta.2)",
+				"excerpt": "Queda derogado el Real Decreto 1369/2006, de 24 de noviembre, por el que se regula el programa de renta activa de inserción para desempleados con especiales necesidades económicas y dificultad para encontrar empleo",
+				"excerptSha256": "4f9ff18f05461e36a49c4a20f1cf276e2acf6b638c1743825522c0ee8c15a460"
+			}
+		},
+		"channel": {
+			"managingBody": "Servicio Público de Empleo Estatal (SEPE)",
+			"url": "https://sede.sepe.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "sepe-rai-anterior-noviembre-2024",
+				"locator": "Pie de página de trámites",
+				"excerpt": "Realiza tu trámite Presencial Solicita cita para tu oficina de prestaciones",
+				"excerptSha256": "7155d0734240bc86c0b68c806c22d918f32d340dcc80da6dc784129dd6908e69"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud-compromiso",
+				"label": "Solicitud en el modelo oficial que incluye el compromiso de actividad (para derechos conservados: solicitud de reincorporación dentro de los 15 días tras el hecho causante)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1369-2006-rai",
+					"locator": "Art. 11.1",
+					"excerpt": "La solicitud de admisión al programa de renta activa de inserción, que incluirá el compromiso de actividad, deberá presentarse en la oficina de empleo que corresponda al trabajador, junto con la documentación acreditativa de reunir los requisitos establecidos en el artículo 2",
+					"excerptSha256": "6a42dd8a9eb39ebc8eab77d4ef958042d4330f90e079d01effae48e10a543ff2"
+				}
+			},
+			{
+				"id": "doc-rentas-unidad",
+				"label": "Declaración de los miembros de tu unidad familiar y de sus rentas, para acreditar la carencia de rentas",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1369-2006-rai",
+					"locator": "Art. 11.1",
+					"excerpt": "El requisito de carencia de rentas deberá acreditarse mediante la presentación por el solicitante de la declaración de los miembros que componen su unidad familiar y de las rentas",
+					"excerptSha256": "229d3cfcc16e29e2bcda9c5dff3db47866e49ad066e3334a5cda8f5583ed4f01"
+				}
+			},
+			{
+				"id": "doc-colectivo",
+				"label": "Acreditación del colectivo: certificado de discapacidad ≥33 %, documentación del retorno y trabajo en el extranjero, o acreditación de la Administración competente de la condición de víctima de violencia de género, o doméstica",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-rd-1369-2006-rai",
+					"locator": "Art. 2.2.a) y c)",
+					"excerpt": "Tener acreditada por la Administración competente la condición de víctima de violencia de género o doméstica, salvo cuando conviva con el agresor",
+					"excerptSha256": "5b3a3ff9e90d5460a9d8bee94ee6fec1ff54e409874288b0553402986000e664"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-rd-1369-2006-rai",
+			"locator": "Art. 4.2",
+			"excerpt": "La cuantía de la renta será igual al 80 por ciento del indicador público de renta de efectos múltiples (IPREM) mensual vigente en cada momento",
+			"excerptSha256": "2314ab7a3f5989792747ce45619998eb572bbe78b6c73f23f0e3de78260f0be0"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"empleo",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
+}

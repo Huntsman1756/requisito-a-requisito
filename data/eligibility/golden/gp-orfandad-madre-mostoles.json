@@ -1,0 +1,102 @@
+{
+	"id": "gp-orfandad-madre-mostoles",
+	"description": "Mujer de 43 años empadronada en Móstoles (28092) desde 2005, asalariada, con un hijo de 14 años a su cargo cuyo padre falleció. La beneficiaria en potencia es la hija/hijo menor: la soft «edad-en-fallecimiento» queda en T por la rama de personas a cargo (dependiente < 25), no por la edad de la madre. La filiación, el fallecimiento y la cotización del causante no se preguntan ⇒ posible.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28092"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2005,
+					"month": 9
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 43,
+					"max": 43,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 14,
+							"max": 14,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "monoparental"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-orfandad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 224.1, 224.3 y 224.4",
+					"reasoning": "La edad de la respondente (43 ≥ 25) no vale, pero hay 1 persona a cargo de 14 años < 25 ⇒ la soft «edad-en-fallecimiento» queda en T por la rama dependents: el menor podría ser beneficiario y ella (o quien lo tenga a su cargo) solicitaría la pensión (art. 224.4)."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 219.1 y 224.1",
+					"reasoning": "Que el menor sea hijo del causante, la fecha del fallecimiento y la situación de alta/cotización del progenitor fallecido quedan sin preguntar ⇒ 0 hard F, 0 hard U, uncoveredCount > 0 ⇒ posible."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 230",
+					"reasoning": "Imprescriptibilidad de las prestaciones por muerte y supervivencia (retroactividad máxima de 3 meses desde la solicitud) ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

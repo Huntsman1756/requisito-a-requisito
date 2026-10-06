@@ -1,0 +1,92 @@
+{
+	"id": "gp-cese-autonomo-leganes",
+	"description": "Persona autónoma de 44 años en Leganés que ha cerrado su comercio por pérdidas y quiere saber si puede pedir la prestación por cese de actividad («paro de autónomos»). Caso positivo con advertencias: el único requisito comprobable (ser autónomo/a, proxy por employmentStatus) queda en T, pero los requisitos decisivos —12 meses cotizados por cese en los 24 meses previos, causa legal del cese, estar al corriente de cuotas y solicitud ante la mutua— no son comprobables con nuestras preguntas ⇒ veredicto posible, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28074"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2010,
+					"month": 4
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 44,
+					"max": 44,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "autonomo"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "cese-actividad-autonomos",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 330.1.a",
+					"reasoning": "employmentStatus = «autonomo» ⇒ el requisito de estar afiliada y en alta en el RETA queda en T por proxy (la condición es soft porque el alta efectiva en RETA y la situación legal de cese no se pueden comprobar con la pregunta; una persona autónoma que ya cesó puede responder «desempleado» y no se le puede excluir: UNKNOWN ≠ NO)."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 330.1.b y 338.1",
+					"reasoning": "El requisito decisivo —12 meses de cotización por cese de actividad en los 24 meses inmediatamente anteriores (dentro de la ventana de 48)— es un dato de vida laboral que no preguntamos ⇒ queda en uncovered; con hard = ∅ en F/U y uncoveredCount > 0, el veredicto es posible y no probable."
+				},
+				{
+					"sourceId": "segss-cese-actividad",
+					"locator": "Apartado «¿Dónde debe presentar la solicitud y en qué plazo?»",
+					"reasoning": "Prestación permanente gestionada por la mutua: se solicita hasta el último día del mes siguiente al cese y fuera de plazo solo se descuentan días (art. 337.4-5 LGSS) ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

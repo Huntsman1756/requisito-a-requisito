@@ -1,0 +1,98 @@
+{
+	"id": "gp-incapacidad-alcala",
+	"description": "Mujer de 70 años empadronada en Alcalá de Henares (28005) desde 1990, jubilada, con discapacidad reconocida ≥33 %. Caso UNKNOWN≠NO: el requisito soft de edad evalúa F (≥67 años), pero a los 70 solo se descarta la incapacidad por contingencias comunes SI además reúne los requisitos de jubilación (y por AT/EP no hay límite de edad) ⇒ el aviso no excluye: «posible».",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28005"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 1990,
+					"month": 1
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 70,
+					"max": 70,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "jubilado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 8400,
+					"max": 16800
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "gte33"
+			},
+			"dependency": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-incapacidad-permanente",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 195.1, párrafo segundo",
+					"reasoning": "age [70,70] ⇒ la condición age<67 evalúa F, pero el requisito es hard:false ⇒ aviso, no exclusión: la norma solo cierra la IP por contingencias comunes a quien tiene la edad del 205.1.a) Y reúne los requisitos de jubilación (conjunción); lo segundo no se puede saber con nuestras preguntas (uncovered «no-jubilacion-comunes») y por AT/EP no hay límite de edad."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 200.4",
+					"reasoning": "Además, a los 67 años las pensiones de IP pasan a denominarse de jubilación sin cambiar condiciones: quien ya cobra una IP la conserva. Veredicto «posible»: 0 hard F, 0 hard U, uncovered > 0."
+				},
+				{
+					"sourceId": "segss-ip-beneficiarios",
+					"locator": "«Hecho causante / Efectos económicos»",
+					"reasoning": "Solicitud a instancia de parte ⇒ ROLLING; sin campos por responder ⇒ missingFields []."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

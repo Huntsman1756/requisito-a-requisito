@@ -1,0 +1,92 @@
+{
+	"id": "gp-orfandad-trabajador-parla",
+	"description": "Hombre de 30 años empadronado en Parla (28106) desde 2010, asalariado con ingresos altos, sin responder a personas a cargo ni discapacidad declarada; su madre falleció cuando él tenía 16 años. Ejercita UNKNOWN ≠ NO en la soft «edad-en-fallecimiento»: edad ≥ 25 (F) y discapacidad «no» (F), pero dependents sin responder (U) ⇒ la soft queda en U (ni siquiera el aviso se afirma). Además la edad legal se mide en la fecha del fallecimiento —desconocida— y una solicitud tardía con derecho en el hecho causante puede dar un pago único de hasta 12 mensualidades ⇒ el veredicto sigue siendo posible.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28106"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2010,
+					"month": 1
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 30,
+					"max": 30,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "unasked"
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 25200,
+					"max": null
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "general"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-orfandad",
+			"rulesVersion": 1,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 224.1 y 224.3",
+					"reasoning": "age = 30 ≥ 25 ⇒ rama 1 en F; disability = «no» ⇒ rama 2 en F; dependents sin responder ⇒ rama 3 en U; el any queda en U (Kleene: F ∨ F ∨ U = U). La soft es aviso y nunca excluye; y la condición de edad se evalúa en la fecha del fallecimiento (podría haber tenido derecho con 16 años), sin que la banda gruesa de discapacidad descarte una incapacidad para el trabajo."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 219.1 y 224.1",
+					"reasoning": "Filiación, muerte del causante y su cotización quedan en uncoveredRequirements; no hay ningún requisito hard evaluable que pueda excluir ⇒ 0 hard F, 0 hard U, uncoveredCount > 0 ⇒ posible."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 230",
+					"reasoning": "Imprescriptibilidad del derecho de reconocimiento con retroactividad máxima de 3 meses ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

@@ -1,0 +1,338 @@
+{
+	"benefitSlug": "pension-orfandad",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 217, 219.1, 224–225 y 229–230 (texto consolidado)"
+		},
+		{
+			"id": "boe-decreto-3158-1966-orfandad",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/d/1966/12/23/3158/con",
+			"title": "Decreto 3158/1966 — Reglamento General de cuantía de prestaciones del Régimen General, sección 4.ª (arts. 36–38, orfandad)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026 — revalorización y cuantías mínimas de pensiones 2026"
+		},
+		{
+			"id": "segss-orfandad-solicitud",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/28498?changeLanguage=es",
+			"title": "Seguridad Social — Muerte y supervivencia: solicitudes y documentación (página común a orfandad)"
+		},
+		{
+			"id": "segss-orfandad-gestion",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/29611?changeLanguage=es",
+			"title": "Seguridad Social — Muerte y supervivencia: gestión y pago INSS/ISM (página común a orfandad)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-en-fallecimiento",
+			"hard": false,
+			"label": "Edad del huérfano en la fecha del fallecimiento del causante: menor de 21 años en general o incapacitado para el trabajo sin límite de edad; hasta los 25 años si no trabaja o sus ingresos anuales son inferiores al SMI (si cumple 25 durante el curso escolar, se mantiene hasta el inicio del siguiente curso)",
+			"timeDependent": "decreasing",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.1 y 224.3",
+				"excerpt": "siempre que, en el momento de la muerte, sean menores de veintiún años o estén incapacitados para el trabajo",
+				"excerptSha256": "47661149772bdc2378c983e827409e5a8227a006647d7821d1cb3304e4c7e103"
+			},
+			"condition": {
+				"any": [
+					{
+						"field": "age",
+						"op": "lt",
+						"value": 25
+					},
+					{
+						"field": "disability",
+						"op": "neq",
+						"value": "no"
+					},
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 1,
+						"where": {
+							"any": [
+								{
+									"field": "age",
+									"op": "lt",
+									"value": 25
+								},
+								{
+									"field": "disability",
+									"op": "eq",
+									"value": "yes"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "filiacion-causante",
+			"label": "Ser hijo o hija del causante fallecido, cualquiera que sea la naturaleza de la filiación; cada huérfano con derecho percibe la pensión en régimen de igualdad",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.1",
+				"excerpt": "cada uno de los hijos e hijas del causante o de la causante fallecida, cualquiera que sea la naturaleza de su filiación",
+				"excerptSha256": "dced1cc8c1e35d6fe200e7d4b29be91c12b6051a5201d2a283f8cd49d36a1c0c"
+			}
+		},
+		{
+			"id": "situacion-causante",
+			"label": "El causante debía estar en alta o en situación asimilada al alta en la fecha del fallecimiento, o ser pensionista de jubilación o incapacidad permanente",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.1",
+				"excerpt": "y que el causante se encontrase en alta o situación asimilada a la de alta, o fuera pensionista en los términos del artículo 217.1.c)",
+				"excerptSha256": "7ec23ba56301a17c5b7ab1b6feb19760ca9cc1247e6ec3faef7f2fc5b3d2acb6"
+			}
+		},
+		{
+			"id": "cotizacion-causante",
+			"label": "Cotización del causante (se aplica lo previsto para viudedad): si estaba en alta o asimilada, 500 días cotizados en los 5 años anteriores; si no estaba en alta, 15 años cotizados; ninguna cotización si la muerte fue por accidente, sea o no de trabajo, o por enfermedad profesional",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Arts. 224.1 y 219.1",
+				"excerpt": "Será de aplicación, asimismo, a las pensiones de orfandad lo previsto en el segundo párrafo del artículo 219.1.",
+				"excerptSha256": "ceb9d98b18c078dec2ae96bc0916443c1ed06518d55c365113ad8d9edacfbaea"
+			}
+		},
+		{
+			"id": "tramo-21-25-trabajo-ingresos",
+			"label": "Si el huérfano tenía entre 21 y 24 años en la fecha del fallecimiento: solo tiene derecho si no efectuaba un trabajo lucrativo por cuenta ajena o propia, o si trabajaba con ingresos anuales inferiores al SMI anual; cursando estudios, cumplir 25 en mitad del curso prolonga el percibo hasta el día 1 del mes posterior al inicio del siguiente curso",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.3",
+				"excerpt": "Podrá ser beneficiario de la pensión de orfandad o de la prestación de orfandad, siempre que en la fecha del fallecimiento del causante fuera menor de veinticinco años, el hijo del causante que no efectúe un trabajo lucrativo por cuenta ajena o propia, o cuando realizándolo, los ingresos que obtenga resulten inferiores, en cómputo anual, a la cuantía vigente para el salario mínimo interprofesional, también en cómputo anual",
+				"excerptSha256": "ef1e7e65e7afea994c64c5f730e97f52de17c653093caf62d27b93d8e3d9c19d"
+			}
+		},
+		{
+			"id": "quien-solicita",
+			"label": "Si el huérfano es menor de edad, la pensión la pide y la cobra quien tenga al beneficiario a su cargo (tutor o guardador); el huérfano mayor o emancipado la solicita él mismo",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.4",
+				"excerpt": "La pensión de orfandad y la prestación de orfandad se abonará a quien tenga a su cargo a los beneficiarios según determinación reglamentaria",
+				"excerptSha256": "2935200355922d9b5cdb9657715a0bd9c7c1d7a8c86a3c4837684c26bbb462ff"
+			}
+		},
+		{
+			"id": "orfandad-absoluta-incremento",
+			"label": "Orfandad absoluta (sin progenitor superviviente; se asimila el huérfano de un solo progenitor conocido): la pensión se incrementa con la cuantía de pensión de viudedad que correspondería — si no hay beneficiario de viudedad, +52 % de la base reguladora — repartida a partes iguales entre los huérfanos con derecho",
+			"citation": {
+				"sourceId": "boe-decreto-3158-1966-orfandad",
+				"locator": "Decreto 3158/1966, art. 38.1.º y 2",
+				"excerpt": "Cuando a la muerte del causante no exista beneficiario de la pensión de viudedad, la cuantía de la pensión de orfandad que se reconozca al huérfano se incrementará en el importe resultante de aplicar a la base reguladora el 52 por ciento",
+				"excerptSha256": "0de21c1638175859dc813467c1aa8c1bef6c319a163810bfe80f3858213952e9"
+			}
+		},
+		{
+			"id": "prestacion-violencia-mujer",
+			"label": "Prestación de orfandad (prestación distinta de la pensión): si la causante falleció por violencia contra la mujer y los hijos están en circunstancias equiparables a orfandad absoluta sin reunir los requisitos de la pensión, hay una prestación del 70 % de la base reguladora con un límite de rendimientos de la unidad de convivencia del 75 % del SMI",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 224.1, tercer párrafo",
+				"excerpt": "no reúnan los requisitos necesarios para causar una pensión de orfandad. La cuantía de esta prestación será el 70 por ciento de su base reguladora",
+				"excerptSha256": "dc0e1f4a7edd7f02c1df8b354adfe8edb9301961c3c885efb8f49d32b9aa9dad"
+			}
+		},
+		{
+			"id": "compatibilidad-trabajo",
+			"label": "La pensión es compatible con cualquier renta de trabajo del huérfano menor de 21 años o incapacitado; entre 21 y 25 años solo se mantiene si no trabaja o gana menos del SMI anual",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 225.1",
+				"excerpt": "la pensión o prestación de orfandad será compatible con cualquier renta del trabajo de quien sea o haya sido cónyuge del causante, o del propio huérfano",
+				"excerptSha256": "2805a1332937df0d6cb4ec89e0027ee5867b88c18a3355c150423c9808a4b8a3"
+			}
+		},
+		{
+			"id": "complemento-minimos",
+			"label": "Si la pensión queda por debajo del mínimo anual de tu tramo (2026: 4.011,00 €/año por beneficiario; 7.882,00 €/año si es menor de 18 con discapacidad ≥ 65 %; en orfandad absoluta el mínimo se incrementa en 9.931,60 €/año repartidos entre los beneficiarios) puedes pedir el complemento a mínimos, sujeto a límite de ingresos",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Anexo I, cuadro de cuantías mínimas (Orfandad)",
+				"excerpt": "Orfandad Por persona beneficiaria. 4.011,00 Por persona beneficiaria menor de dieciocho años con una discapacidad en grado igual o superior al 65 por 100. 7.882,00 En la orfandad absoluta el mínimo se incrementará en 9.931,60 euros/año distribuidos, en su caso, entre las personas beneficiarias.",
+				"excerptSha256": "b3c4d5a37818c1ce8cd8a7a546e2b8532800df0cfc7b7feaf28c5825d971b562"
+			}
+		},
+		{
+			"id": "limite-muerte-supervivencia",
+			"label": "Límite conjunto: la suma de las pensiones por muerte y supervivencia no puede superar el 100 % de la base reguladora (las de orfandad tienen preferencia sobre las de otros familiares)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 229.1 y 2",
+				"excerpt": "La suma de las cuantías de las pensiones por muerte y supervivencia no podrá exceder del importe de la base reguladora que corresponda",
+				"excerptSha256": "daa54ed73da5d8837becbe6402aaaf38869fe204c6655efe9d76be9d9ce39f39"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 230",
+				"excerpt": "El derecho al reconocimiento de las prestaciones por muerte y supervivencia, con excepción del auxilio por defunción, será imprescriptible, sin perjuicio de que los efectos de tal reconocimiento se produzcan a partir de los tres meses anteriores a la fecha en que se presente la correspondiente solicitud",
+				"excerptSha256": "4574c880181b3d9d5cee188cf4aed80ff1dd189ecd10f2c25d1e72a9f8f4218c"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) en el Régimen Especial del Mar",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-orfandad-gestion",
+				"locator": "Apartado «Gestión / Pago»",
+				"excerpt": "Gestión: El Instituto Nacional de la Seguridad Social (INSS), con carácter general.",
+				"excerptSha256": "7110442d71e63ab8f7713dc4cc1796967528be521375946c437655bf07d94762"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial (sede electrónica de la Seguridad Social o formulario presencial)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Presentación de la solicitud",
+					"excerpt": "Presentación de la solicitud Formulario de solicitud",
+					"excerptSha256": "2ae9e6c59ed34363c017d768bd9126216da5bcb81d6100ee789fe096a4d895d7"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad en vigor del solicitante, del representante legal y de las demás personas que figuren en la solicitud (DNI; pasaporte/documento del país de origen y NIE si es extranjero)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › En todos los casos",
+					"excerpt": "Acreditación de identidad del solicitante, representante legal y demás personas que figuran en la solicitud",
+					"excerptSha256": "ffe240529bb7a9749c088657c473b7bca778c2032ad5e81df4f7336062222b31"
+				}
+			},
+			{
+				"id": "doc-defuncion",
+				"label": "Certificación del acta de defunción del causante",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › En todos los casos",
+					"excerpt": "Certificación del Acta de Defunción del causante fallecido",
+					"excerptSha256": "248ef46a103c9257819cd9ec44f30ef53bec88a2d098475d3d7bb11547f3b420"
+				}
+			},
+			{
+				"id": "doc-filiacion",
+				"label": "Libro de familia o actas de nacimiento de los hijos (o documento extranjero equivalente) que acrediten la filiación con el causante",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Si se solicita pensión de orfandad",
+					"excerpt": "SI SE SOLICITA PENSIÓN DE ORFANDAD: Libro de Familia o Acta/s de nacimiento de los hijos o documento extranjero equivalente",
+					"excerptSha256": "c0db913503d2fddfd3b624c1f68493c1b5149b46bae0b9b8084c107530a72322"
+				}
+			},
+			{
+				"id": "doc-orfandad-absoluta",
+				"label": "Si se pide orfandad absoluta (huérfanos de padre y madre): acta de defunción del otro cónyuge",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Para acreditar otras circunstancias",
+					"excerpt": "Acta de defunción del otro cónyuge si se solicita orfandad absoluta (para huérfanos de padre y madre)",
+					"excerptSha256": "ae53fb8393aff17c683659fb90cf16c242190405646c04632d953e5ca298bde0"
+				}
+			},
+			{
+				"id": "doc-matricula-estudiante",
+				"label": "Si el huérfano estudia y tiene 24 o más años: resguardo de matriculación en un centro de estudios oficialmente reconocido",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Para acreditar otras circunstancias",
+					"excerpt": "Resguardo de matriculación en un centro de estudios oficialmente reconocido, en el caso de huérfanos estudiantes de 24 o más años",
+					"excerptSha256": "5d72c6fca0191b94b75e70c63e931aa19f5809eee795b990271034adf7156b5d"
+				}
+			},
+			{
+				"id": "doc-violencia-genero",
+				"label": "Si el fallecimiento fue por violencia contra la mujer: documentos acreditativos de la circunstancia (sentencia firme, resolución judicial o informe del Ministerio Fiscal)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Si se solicita pensión de orfandad",
+					"excerpt": "Documentos acreditativos de dicha circunstancia: sentencia firme, resolución judicial (autos, providencias o sentencias no firmes) de la que se desprendan indicios de que el delito investigado es por violencia contra la mujer o informe del Ministerio Fiscal en el mismo sentido",
+					"excerptSha256": "f463f36b1e66b095ff198769c69909620097c9d2cb3fdbe65d312bb23217d006"
+				}
+			},
+			{
+				"id": "doc-extranjeros",
+				"label": "Solo extranjeros residentes en España (posible prestación de orfandad): certificado de inscripción en el Registro Central de Extranjeros o Tarjeta de Identidad de Extranjeros",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-orfandad-solicitud",
+					"locator": "Apartado «Solicitudes» › Si se solicita pensión de orfandad",
+					"excerpt": "certificado de inscripción en el Registro Central de Extranjeros o Tarjeta de Identidad de Extranjeros",
+					"excerptSha256": "f18f89b7eb68b0d40ca2de18f1210aca3e775f774577e8870ce812c6e4cfab82"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-decreto-3158-1966-orfandad",
+			"locator": "Decreto 3158/1966, art. 36.1",
+			"excerpt": "será para cada huérfano la equivalente al veinte por ciento de la base reguladora del causante",
+			"excerptSha256": "d9e7600d20e51afba611b8843f272d6162519299fd0fbe2d984f63bf90ec6eaf"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"familia_infancia",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"estudiar",
+		"discapacidad",
+		"ingresos_bajos"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-6.md"
+	}
+}

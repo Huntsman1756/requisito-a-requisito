@@ -1,0 +1,380 @@
+{
+	"benefitSlug": "pension-incapacidad-permanente",
+	"standalone": true,
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), arts. 165.1 y 194–200 y DT 26.ª (texto consolidado)"
+		},
+		{
+			"id": "boe-orden-15041969-invalidez",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/o/1969/04/15/(1)/con",
+			"title": "Orden de 15 de abril de 1969 — normas de aplicación y desarrollo de las prestaciones por invalidez en el Régimen General, arts. 15.2 y 17 (texto consolidado)"
+		},
+		{
+			"id": "boe-decreto-1646-1972-incapacidad",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/d/1972/06/23/1646/con",
+			"title": "Decreto 1646/1972 — aplicación de la Ley 24/1972 en prestaciones del Régimen General, art. 9 (indemnización de la incapacidad permanente parcial) (texto consolidado)"
+		},
+		{
+			"id": "boe-rd-241-2026-pensiones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2026/03/25/241",
+			"title": "Real Decreto 241/2026 — revalorización y cuantías mínimas de pensiones 2026 (Anexo I)"
+		},
+		{
+			"id": "segss-ip-beneficiarios",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28700/28703?changeLanguage=es",
+			"title": "Seguridad Social — Incapacidad permanente total: beneficiarios/requisitos, hecho causante y efectos económicos"
+		},
+		{
+			"id": "segss-ip-solicitud",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28700/28754?changeLanguage=es",
+			"title": "Seguridad Social — Incapacidad permanente: solicitudes y documentos que deben acompañarla"
+		},
+		{
+			"id": "segss-ip-gestion",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10960/28750/28680/28700/32454?changeLanguage=es",
+			"title": "Seguridad Social — Incapacidad permanente: gestión y pago (INSS/ISM/Mutua)"
+		},
+		{
+			"id": "sede-incapacidad-permanente",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Incapacidad/201979?changeLanguage=es",
+			"title": "Sede electrónica de la Seguridad Social — Prestación de incapacidad permanente nacional (solicitud por registro electrónico)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "edad-inferior-jubilacion-comunes",
+			"hard": false,
+			"label": "Si la incapacidad deriva de enfermedad común o accidente no laboral: no tener la edad de la pensión de jubilación (67 años, o 65 con 38 años y 6 meses cotizados) o no reunir los requisitos para jubilarte — a esa edad la incapacidad permanente por contingencias comunes ya no procede, aunque sí por accidente de trabajo o enfermedad profesional a cualquier edad",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.1, párrafo segundo",
+				"excerpt": "No se reconocerá el derecho a las prestaciones de incapacidad permanente derivada de contingencias comunes cuando el beneficiario, en la fecha del hecho causante, tenga la edad prevista en el artículo 205.1.a) y reúna los requisitos para acceder a la pensión de jubilación",
+				"excerptSha256": "2c94f846aed87cc656785e22b5d499f986f15b580c9bfbf42db7f3e39a9f5357"
+			},
+			"condition": {
+				"field": "age",
+				"op": "lt",
+				"value": 67,
+				"label": "tienes menos de 67 años"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "grado-declarado-inss",
+			"label": "La incapacidad permanente y su grado (parcial para la profesión habitual, total para la profesión habitual, absoluta para todo trabajo o gran incapacidad) solo los declara el Instituto Nacional de la Seguridad Social, con dictamen del Equipo de Valoración de Incapacidades — no se puede autodeclarar ni saber con un cuestionario",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 200.1",
+				"excerpt": "Corresponde al Instituto Nacional de la Seguridad Social, a través de los órganos que reglamentariamente se establezcan y en todas las fases del procedimiento, declarar la situación de incapacidad permanente",
+				"excerptSha256": "34a43f39f2b4659f10ec642329bacab8d6528bfc9d59f3245494c48212a4e764"
+			}
+		},
+		{
+			"id": "alta-o-asimilada",
+			"label": "Estar afiliado/a y en alta (o en situación asimilada: paro, incapacidad temporal, excedencia con reserva…) en el momento de la contingencia — se comprueba con tu vida laboral; en accidente de trabajo o enfermedad profesional te consideran de pleno derecho en alta, y la absoluta o gran incapacidad por contingencias comunes puede reconocerse sin alta si acumulas 15 años cotizados",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 165.1",
+				"excerpt": "estar afiliadas y en alta en dicho Régimen o en situación asimilada a la de alta al sobrevenir la contingencia o situación protegida",
+				"excerptSha256": "cdb909f12d71a51a5d0e30a1cde929f637906f7f57fb960fcf82bc1738c89c65"
+			}
+		},
+		{
+			"id": "cotizacion-pensiones",
+			"label": "Cotización mínima para las pensiones (total, absoluta, gran incapacidad) por contingencias comunes: si tienes menos de 31 años, un tercio del tiempo desde los 16; si tienes 31 o más, un cuarto del tiempo desde los 20, con un mínimo de 5 años y al menos una quinta parte dentro de los 10 años anteriores al hecho causante",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.3",
+				"excerpt": "la cuarta parte del tiempo transcurrido entre la fecha en que cumplió los veinte años y la del hecho causante de la pensión, con un mínimo, en todo caso, de cinco años",
+				"excerptSha256": "2afa21527cb0a6972d2ff26777e966549ca048f3c680d29f4b5b2dd58fd1bb9b"
+			}
+		},
+		{
+			"id": "cotizacion-parcial-1800",
+			"label": "Para la incapacidad permanente parcial (indemnización a tanto alzado) por contingencias comunes: 1.800 días cotizados dentro de los 10 años anteriores a la extinción de la incapacidad temporal de la que derive",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.2",
+				"excerpt": "el período mínimo de cotización exigible será de mil ochocientos días, que han de estar comprendidos en los diez años inmediatamente anteriores a la fecha en la que se haya extinguido la incapacidad temporal",
+				"excerptSha256": "d30cbbae36c82039cfd984c98462675b9bb65fb66fc804dae6707060beaa06da"
+			}
+		},
+		{
+			"id": "sin-cotizacion-atep",
+			"label": "Si la incapacidad deriva de accidente (de trabajo o no) o de enfermedad profesional, no se exige ningún período previo de cotización",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.1",
+				"excerpt": "salvo que aquella sea debida a accidente, sea o no laboral, o a enfermedad profesional, en cuyo caso no será exigido ningún período previo de cotización",
+				"excerptSha256": "f7a38ee945ca01df755b51f789cc5e25f3041bfed603982e4a93940a4ae965f6"
+			}
+		},
+		{
+			"id": "sin-alta-absoluta-gi-15y",
+			"label": "La incapacidad permanente absoluta o la gran incapacidad por contingencias comunes pueden reconocerse aunque no estés en alta ni asimilada al sobrevenir la contingencia, pero entonces se exigen 15 años cotizados (con la misma distribución del período específico)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.4",
+				"excerpt": "podrán causarse aunque los interesados no se encuentren en el momento del hecho causante en alta o situación asimilada a la de alta. En tales supuestos, el período mínimo de cotización exigible será, en todo caso, de quince años",
+				"excerptSha256": "10b52b2bd93ae554d5736c287eeb613181565b61f660561d1503e2bdedd1d83d"
+			}
+		},
+		{
+			"id": "no-jubilacion-comunes",
+			"label": "La otra mitad del requisito de edad: si en la fecha del hecho causante ya tienes la edad legal de jubilación (67 años, o 65 con 38 años y 6 meses cotizados) la incapacidad permanente por contingencias comunes solo procede si NO reúnes los requisitos para la pensión de jubilación — y eso depende de tu vida laboral",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 195.1, párrafo segundo",
+				"excerpt": "tenga la edad prevista en el artículo 205.1.a) y reúna los requisitos para acceder a la pensión de jubilación",
+				"excerptSha256": "7b7db5c8f45fc35571c3f2a669b814be05f3b332ba679fdf5b2471750a3911df"
+			}
+		},
+		{
+			"id": "cuantia-parcial-24",
+			"label": "Cuantía según el grado — parcial: una indemnización a tanto alzado de 24 mensualidades de la base reguladora que sirvió para la incapacidad temporal de la que derive (o la que hubiera correspondido)",
+			"citation": {
+				"sourceId": "boe-decreto-1646-1972-incapacidad",
+				"locator": "Art. 9",
+				"excerpt": "percibirán una cantidad a tanto alzado equivalente a veinticuatro mensualidades de la base reguladora que haya servido para determinar la prestación económica por incapacidad laboral transitoria",
+				"excerptSha256": "a8ea48f0cc009ed95a86567a557513f6e791b9a4ddbf80379ba959049f720e29"
+			}
+		},
+		{
+			"id": "cuantia-total-55",
+			"label": "Cuantía — total: pensión vitalicia del 55 % de la base reguladora (puede sustituirse excepcionalmente por una indemnización a tanto alzado si eres menor de 60 años), incrementable con un porcentaje adicional para (el dato de «mayores de 55 años» lo confirma la sede de la Seguridad Social; en el texto de la Orden se habla de dificultad de actividad) cuando se presuma la dificultad de obtener otro empleo (incapacidad permanente total cualificada)",
+			"citation": {
+				"sourceId": "boe-orden-15041969-invalidez",
+				"locator": "Art. 15.2",
+				"excerpt": "que les sea reconocido el derecho a una pensión vitalicia de cuantía equivalente al 55 por 100 de la base reguladora",
+				"excerptSha256": "53b5f8f4fb13401bcf29f3e0d0dfa47c38687c75c036dfbce4c07d4758251279"
+			}
+		},
+		{
+			"id": "cuantia-absoluta-100",
+			"label": "Cuantía — absoluta: pensión vitalicia por el 100 % de la base reguladora (la norma de desarrollo habla de «salario real», computado con las reglas de la base reguladora)",
+			"citation": {
+				"sourceId": "boe-orden-15041969-invalidez",
+				"locator": "Art. 17",
+				"excerpt": "a una pensión vitalicia equivalente al 100 por 100 del salario real del trabajador",
+				"excerptSha256": "3da79060dfd1341d9b6f14984ebf23c4b1222e14ff2f87998adef9885a929060"
+			}
+		},
+		{
+			"id": "cuantia-gi-complemento",
+			"label": "Cuantía — gran incapacidad: la pensión vitalicia más un complemento para remunerar a la persona que te atiende, equivalente al 45 % de la base mínima de cotización vigente más el 30 % de tu última base de cotización (nunca inferior al 45 % de la pensión)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 196.4",
+				"excerpt": "el 45 por ciento de la base mínima de cotización vigente en el momento del hecho causante y el 30 por ciento de la última base de cotización del trabajador",
+				"excerptSha256": "f297c5934a81011f811e312e91d21f3b0aef0c9a8597b37863258ebcf46add8f"
+			}
+		},
+		{
+			"id": "base-reguladora",
+			"label": "La base reguladora se calcula con tus bases de cotización: en enfermedad común, el cociente de las bases de los 96 meses previos entre 112, con porcentaje por años cotizados según la escala de jubilación contando como cotizados los años que te falten hasta la edad ordinaria (mínimo 50 %); en contingencias profesionales se calcula con las retribuciones reales — todo ello con tu vida laboral",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 197.1.a",
+				"excerpt": "Se hallará el cociente que resulte de dividir por 112 las bases de cotización del interesado durante los 96 meses anteriores al mes previo al del hecho causante",
+				"excerptSha256": "d0ab82883adc570f264f8204530f75ad39ba27cacb40ce24344f3dc3cabbe921"
+			}
+		},
+		{
+			"id": "minimos-2026",
+			"label": "Cuantías mínimas 2026 (anuales, según cónyuge a cargo): gran incapacidad 26.385,80/19.660,20/18.662,00 €; absoluta y total ≥65 años 17.592,40/13.106,80/12.441,80 €; total 60–64 años 17.592,40/12.262,60/11.590,60 €; total por enfermedad común <60 años 9.662,80/9.662,80/9.580,20 € — se completan a mínimos si no superas el límite de rentas",
+			"citation": {
+				"sourceId": "boe-rd-241-2026-pensiones",
+				"locator": "Anexo I, cuadro de cuantías mínimas (Incapacidad Permanente)",
+				"excerpt": "Total: Derivada de enfermedad común menor de sesenta años. 9.662,80 9.662,80 9.580,20",
+				"excerptSha256": "cd1d7d2aaa95a37d8a0927c493c827b049bd3ffeda076d8f2e2b28122e9ba377"
+			}
+		},
+		{
+			"id": "compatibilidad-trabajo",
+			"label": "Compatibilidad con el trabajo: la pensión de total es compatible con un salario en trabajos cuyas funciones no coincidan con las que dieron lugar a la incapacidad; la absoluta y la gran incapacidad admiten actividades compatibles con tu estado, pero la entidad gestora suspende el pago si te incorporas a un régimen de la Seguridad Social",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 198.1",
+				"excerpt": "será compatible con el salario que pueda percibir el trabajador en la misma empresa o en otra distinta, siempre y cuando las funciones no coincidan con aquellas que dieron lugar a la incapacidad permanente total",
+				"excerptSha256": "1e6a2430cff32df5e89ae60a026ec441a479f388f7957670a2525c6d701b733d"
+			}
+		},
+		{
+			"id": "efectos-hecho-causante",
+			"label": "Hecho causante y efectos: la solicitud se presenta a instancia de parte y la prestación se hace efectiva en la cuantía y condiciones que determinen las normas de desarrollo; la fecha del hecho causante y de los efectos económicos la fija la resolución del INSS, según la incapacidad derive de una incapacidad temporal o no (el detalle está en la ficha oficial de la Seguridad Social)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 196.6",
+				"excerpt": "se harán efectivas en la cuantía y condiciones que se determinen en las normas de desarrollo de esta ley",
+				"excerptSha256": "72a5b95c458699382859e155ed967c67ba003448939089847f6d9716e29b75f3"
+			}
+		},
+		{
+			"id": "revision-y-67",
+			"label": "La pensión es revisable por agravación, mejoría o error de diagnóstico mientras no cumplas la edad mínima de jubilación; al cumplir 67 años pasa a denominarse pensión de jubilación sin cambiar sus condiciones",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Arts. 200.2 y 200.4",
+				"excerpt": "Las pensiones de incapacidad permanente, cuando sus beneficiarios cumplan la edad de sesenta y siete años, pasarán a denominarse pensiones de jubilación",
+				"excerptSha256": "ae1acb7614f6d194bbef336c2006623ab0e6f8cefa201e312f047b2e99a5fd06"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "segss-ip-beneficiarios",
+				"locator": "«Hecho causante / Efectos económicos»",
+				"excerpt": "Los efectos económicos se fijan en el momento de la calificación, es decir, en la fecha de la resolución del Director Provincial del INSS",
+				"excerptSha256": "237cf79e51a00f53970ded5146099e82848b948cb3b4ff68826d2ff6174a3713"
+			}
+		},
+		"channel": {
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) en el Régimen Especial del Mar; el pago puede corresponder a la Mutua colaboradora en contingencias profesionales",
+			"url": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Incapacidad/201979?changeLanguage=es",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-ip-gestion",
+				"locator": "«Gestión / Pago»",
+				"excerpt": "La gestión se efectúa por: El Instituto Nacional de la Seguridad Social (INSS), con carácter general",
+				"excerptSha256": "5ba16a65d8d0324ef66bbf6df67a9e9f1395af7c5df44e9ba58c6161ecf956e4"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Modelo oficial de solicitud de incapacidad permanente (se descarga en la sede electrónica de la Seguridad Social o se cumplimenta en el registro electrónico)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "sede-incapacidad-permanente",
+					"locator": "«Qué permite realizar»",
+					"excerpt": "Cumplimentar y anexar el modelo de solicitud",
+					"excerptSha256": "e2618923aeac29a364189078d5c098a6514944c908721ea5a16a217b1de5ead8"
+				}
+			},
+			{
+				"id": "doc-identidad",
+				"label": "Documento de identidad en vigor del interesado (y del representante legal, si lo hay): DNI para españoles; pasaporte o documento del país de origen y NIE para extranjeros",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos que deben acompañar a la solicitud» — En todos los casos",
+					"excerpt": "Acreditación de identidad del interesado, representante legal y demás personas que figuran en la solicitud",
+					"excerptSha256": "576d91134f559a385b019fe656e0cb5882a9715ece7802a9bf8699d1bee978e5"
+				}
+			},
+			{
+				"id": "doc-representacion",
+				"label": "Si firma otra persona: documentación acreditativa de la representación legal o, en menores, de la emancipación",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos» — En todos los casos",
+					"excerpt": "Documentación acreditativa de la representación legal",
+					"excerptSha256": "ed138bb67931414b4336ba0b756bec693e0dcc8479c23b0773c9ab9787e95dce"
+				}
+			},
+			{
+				"id": "doc-cotizaciones-3m",
+				"label": "Solo si la incapacidad deriva de enfermedad común y tú eras el obligado a ingresar las cotizaciones: justificantes de pago de los últimos 3 meses",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos» — En caso de enfermedad común",
+					"excerpt": "Justificantes de pago de cotizaciones de los últimos 3 meses",
+					"excerptSha256": "404e752c4f1253dfc15171d4cb810523a643485d109c54ccc1ea76a2c94349c7"
+				}
+			},
+			{
+				"id": "doc-parte-atep",
+				"label": "Solo si deriva de accidente de trabajo o enfermedad profesional: parte administrativo del accidente o de la enfermedad profesional",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos» — En caso de accidente de trabajo o enfermedad profesional",
+					"excerpt": "Parte administrativo de accidente de trabajo o enfermedad profesional",
+					"excerptSha256": "4287546291e44f30a98feae53c371f2ed336518d207e86069117dc4529ce7747"
+				}
+			},
+			{
+				"id": "doc-certificado-salarios",
+				"label": "Solo si deriva de contingencias profesionales: certificado empresarial de salarios reales del año anterior",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos» — En caso de accidente de trabajo o enfermedad profesional",
+					"excerpt": "Certificado empresarial de salarios reales del año anterior",
+					"excerptSha256": "1d18fa9425d8c62c79113f754dcce12a175526c3c0b286062463e91e26990135"
+				}
+			},
+			{
+				"id": "doc-historial-clinico",
+				"label": "Si está en tu poder: historial clínico del servicio público de salud de tu comunidad o informe de su Inspección Médica (facilita la valoración, no es imprescindible)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "segss-ip-solicitud",
+					"locator": "«Documentos» — Otros documentos",
+					"excerpt": "Historial clínico elaborado por el Servicio Público de Salud competente",
+					"excerptSha256": "f801d96d5d600806af31f114ddafe8c7b3f00a9b4b283e9f6838f75a892caadc"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 196.2",
+			"excerpt": "La prestación económica correspondiente a la incapacidad permanente total consistirá en una pensión vitalicia, que podrá excepcionalmente ser sustituida por una indemnización a tanto alzado cuando el beneficiario fuese menor de sesenta años",
+			"excerptSha256": "46c0e63f4feb25677d766b5aff593eefeed0189e7ec82de36579aa090b6a22df"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"dependencia_discapacidad",
+		"salud",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"discapacidad",
+		"ingresos_bajos"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-6.md"
+	}
+}

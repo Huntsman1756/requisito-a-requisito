@@ -1,0 +1,97 @@
+{
+	"id": "gp-rai-mostoles",
+	"description": "Persona de 54 años en Móstoles, desempleada de larga duración, empadronada desde 2011, sin personas a cargo e ingresos en la banda más baja. Caso de programa cerrado: los cuatro requisitos comprobables (desempleo, menor de 65, colectivo por edad ≥45 y carencia de rentas por proxy del 75 % SMI mensual ≈ 10.989 €/año) quedan en T, pero la RAI está derogada desde el 01/11/2024 y el requisito decisivo —haberla solicitado, percibirla o tenerla suspendida a 31/10/2024— no es comprobable con nuestras preguntas ⇒ veredicto posible con plazo CLOSED, no probable.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28092"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2011,
+					"month": 6
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 54,
+					"max": 54,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "renta-activa-insercion",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"deadlineState": "CLOSED",
+			"justification": [
+				{
+					"sourceId": "boe-rdl-2-2024-asistencial",
+					"locator": "Disposición derogatoria única.4 + disposición final decimocuarta.2",
+					"reasoning": "El RD 1369/2006 está derogado con efectos del 01/11/2024 ⇒ window closesAt 2024-10-31 sin recurrencia ⇒ deadlineState CLOSED definitivo (no CLOSED_RECURRING: no habrá convocatoria nueva, no es una ventana anual cerrada a la espera de la siguiente)."
+				},
+				{
+					"sourceId": "boe-rd-1369-2006-rai",
+					"locator": "Art. 2.1",
+					"reasoning": "employmentStatus = «desempleado» ⇒ desempleo en T; edad 54 ⇒ menor de 65 en T y ≥45 ⇒ el colectivo de larga duración queda en T por la pata de edad (la inscripción ininterrumpida de 12 meses es uncovered); ambas condiciones son soft porque una F tampoco excluiría con seguridad a quien conserva un derecho suspendido."
+				},
+				{
+					"sourceId": "boe-rd-1369-2006-rai",
+					"locator": "Art. 2.1.d)",
+					"reasoning": "incomeAnnual = banda 0–8.400 ⇒ proxy anual del 75 % del SMI mensual sin pagas extra (915,75 €/mes ×12 ≈ 10.989 €/año) en T: todo el intervalo queda por debajo del umbral. Soft porque la variante per cápita de la unidad familiar no es comprobable."
+				},
+				{
+					"sourceId": "boe-rdl-2-2024-asistencial",
+					"locator": "Disposición transitoria tercera, apartado 1",
+					"reasoning": "El requisito decisivo —haber solicitado, estar percibiendo o tener suspendida la RAI a 01/11/2024— es un dato histórico que no se pregunta ⇒ uncovered; con 0 hard en F/U y uncoveredCount = 9 el veredicto es posible y no probable."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

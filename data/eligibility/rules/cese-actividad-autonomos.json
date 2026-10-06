@@ -1,0 +1,242 @@
+{
+	"benefitSlug": "cese-actividad-autonomos",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-05",
+	"humanReview": {
+		"status": "pending"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "boe-lgss-prestacion-familia",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rdlg/2015/10/30/8/con",
+			"title": "Ley General de la Seguridad Social (RDL 8/2015), Título V «Protección por cese de actividad» de trabajadores autónomos (arts. 327–350) — texto consolidado"
+		},
+		{
+			"id": "segss-cese-actividad",
+			"rank": 3,
+			"documentType": "procedure_page",
+			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/10538/2277",
+			"title": "Seguridad Social — Protección por cese de actividad de los trabajadores autónomos (requisitos, plazo de solicitud, gestión por la mutua y modelos oficiales)"
+		}
+	],
+	"requirements": [
+		{
+			"id": "autonomo-alta-reta",
+			"hard": false,
+			"label": "Ser trabajador/a autónomo/a afiliado/a y en alta en el RETA (o en el Régimen Especial de los Trabajadores del Mar), incluidos SETA, TRADE, socios de cooperativas de trabajo asociado y autónomos societarios",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 330.1.a",
+				"excerpt": "Estar afiliadas y en alta en el Régimen Especial de Trabajadores por Cuenta Propia o Autónomos o en el Régimen Especial de los Trabajadores del Mar, en su caso",
+				"excerptSha256": "b531fce97a5a4df984e029cc9fe7f81abe0c90527ea5cde68df6cda4f108ef5a"
+			},
+			"condition": {
+				"field": "employmentStatus",
+				"op": "eq",
+				"value": "autonomo",
+				"label": "eres autónomo/a"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "cotizacion-minima-12m",
+			"label": "Haber cotizado por cese de actividad un mínimo de 12 meses, comprendidos en los 24 meses inmediatamente anteriores al cese (las cotizaciones computables se buscan dentro de los 48 meses anteriores y no valen las ya usadas para un derecho anterior)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Arts. 330.1.b y 338.1",
+				"excerpt": "períodos de cotización efectuados dentro de los cuarenta y ocho meses anteriores a la situación legal de cese de actividad de los que, al menos, doce meses deben estar comprendidos en los veinticuatro meses inmediatamente anteriores a dicha situación de cese",
+				"excerptSha256": "715bd683eb48a7cc9525ccfd44267149aa850ad316520dfbbd3d89ae08a52b7f"
+			}
+		},
+		{
+			"id": "situacion-legal-cese",
+			"label": "Que el cese encaje en una causa legal: inviabilidad por motivos económicos, técnicos, productivos u organizativos (pérdidas > 10 % de ingresos en un año completo, ejecuciones ≥ 30 %, concurso, reducción de jornada o deuda del 150 % con caída de ventas del 75 %), fuerza mayor, pérdida forzosa de la licencia administrativa, violencia de género o sexual, o divorcio/separación con ayuda familiar en el negocio del excónyuge; también TRADE, socios de cooperativas y societarios con sus reglas propias (arts. 333–336)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 331.1",
+				"excerpt": "se encontrarán en situación legal de cese de actividad todos aquellos trabajadores autónomos que cesen en el ejercicio de su actividad por alguna de las causas siguientes",
+				"excerptSha256": "55016492bf5dea2b395f481a34511956fcc137218eea183b96227ff3099aa831"
+			}
+		},
+		{
+			"id": "cese-involuntario",
+			"label": "El cese no puede ser voluntario: quien cesa o interrumpe la actividad por voluntad propia queda fuera, salvo el supuesto del autónomo económicamente dependiente (art. 333.1.b)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 331.2.a",
+				"excerpt": "A aquellos que cesen o interrumpan voluntariamente su actividad",
+				"excerptSha256": "e9c9dd3b08aea23bb69f4da1073fe29aa52be0e7eb125926a94688a7adab020b"
+			}
+		},
+		{
+			"id": "acuerdo-actividad-disponibilidad",
+			"label": "Suscribir el acuerdo de actividad (Ley 3/2023, de Empleo) y acreditar activa disponibilidad para la reincorporación al mercado de trabajo: acudir a las actividades formativas, de orientación y de promoción emprendedora a las que te convoque el servicio público de empleo de la Comunidad de Madrid",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 330.1.c",
+				"excerpt": "suscribir el acuerdo de actividad al que se refiere el artículo 3 de la Ley 3/2023, de 28 de febrero, de Empleo, y acreditar activa disponibilidad para la reincorporación al mercado de trabajo",
+				"excerptSha256": "1ca76e15d19bbce6100661aebb6363571e6e048cd196c154622c5de428782073"
+			}
+		},
+		{
+			"id": "corriente-cuotas",
+			"label": "Estar al corriente en el pago de las cuotas a la Seguridad Social; si en la fecha del cese no lo estás, el órgano gestor te invitará al pago y tienes 30 días naturales improrrogables para regularizar con plenos efectos",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 330.1.e",
+				"excerpt": "Hallarse al corriente en el pago de las cuotas a la Seguridad Social",
+				"excerptSha256": "06de99b96638b4d16e35a3e082ace180409377f534f7822a9d1753eb6cb875af"
+			}
+		},
+		{
+			"id": "edad-jubilacion-cese-definitivo",
+			"label": "Si el cese es definitivo, no haber cumplido la edad ordinaria para la pensión contributiva de jubilación, salvo que no tengas acreditado el período de cotización necesario para jubilarte",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 330.1.d",
+				"excerpt": "En el supuesto de cese definitivo, no haber cumplido la edad ordinaria para causar derecho a la pensión contributiva de jubilación, salvo que el trabajador autónomo no tuviera acreditado el período de cotización requerido para ello",
+				"excerptSha256": "48e1b4484ca33bf139d7ad146696dee896c80406065cf9deb18f70c8690ce927"
+			}
+		},
+		{
+			"id": "solicitud-mutua",
+			"label": "Pedirlo a la mutua colaboradora con la Seguridad Social a la que estés adherido/a (la que cubre tus contingencias profesionales) o, en su caso, a la entidad gestora que tengas por ellas; en el Régimen del Mar, al Instituto Social de la Marina si es quien las cubre",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 337.1",
+				"excerpt": "deberán solicitar a la mutua colaboradora con la Seguridad Social a la que se encuentren adheridos o a la entidad gestora con la que tengan cubierta la protección dispensada por contingencias derivadas de accidentes de trabajo y enfermedades profesionales",
+				"excerptSha256": "3b3abdd39217ea6f5acd777b229f84408a3da1a13f55574420590cf6bb2f1624"
+			}
+		},
+		{
+			"id": "plazo-solicitud",
+			"label": "Solicitarlo hasta el último día del mes siguiente al del cese (en ceses por motivos económicos, fuerza mayor, violencia, voluntad del cliente o muerte/incapacidad/jubilación del cliente, el plazo cuenta desde la fecha del documento acreditativo); si lo presentas tarde no pierdes el derecho, pero te descuentan los días de retraso",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 337.4-5",
+				"excerpt": "El reconocimiento de la situación legal de cese de actividad se podrá solicitar hasta el último día del mes siguiente al que se produjo el cese de actividad",
+				"excerptSha256": "95af046a296fd61e292198165c4521ce6eed11105edb081c13ccf548517cb731"
+			}
+		},
+		{
+			"id": "duracion-escala",
+			"label": "La duración depende de los meses cotizados por cese en los 48 anteriores: de 12 a 17 meses dan 4 meses de prestación, hasta 24 meses con 48 o más cotizados",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 338.1 (escala)",
+				"excerpt": "De doce a diecisiete. 4 De dieciocho a veintitrés. 6 De veinticuatro a veintinueve. 8 De treinta a treinta y cinco. 10 De treinta y seis a cuarenta y dos. 12 De cuarenta y tres a cuarenta y siete. 16 De cuarenta y ocho en adelante. 24",
+				"excerptSha256": "83a4028a9f418d5158927455689d2d4af45672380459625f38d22ea8f2ffecdd"
+			}
+		},
+		{
+			"id": "garantias-laborales-trabajadores",
+			"label": "Si tienes personas trabajadoras a tu cargo, antes del cese debes haber cumplido las garantías, obligaciones y procedimientos de la legislación laboral (p. ej. extinción de contratos conforme al ET)",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 330.2",
+				"excerpt": "será requisito previo al cese de actividad el cumplimiento de las garantías, obligaciones y procedimientos regulados en la legislación laboral",
+				"excerptSha256": "8275d4db8a65d0a0f106d895f0039e0cb810188a5b8edcc361c0137e32f45819"
+			}
+		},
+		{
+			"id": "incompatibilidades",
+			"label": "Es incompatible con trabajar por cuenta propia o ajena —salvo los supuestos del art. 331.1.a).4.º-5.º y la suspensión parcial por fuerza mayor, o la pluriactividad por cuenta ajena con tope del SMI— y con pensiones o prestaciones de la Seguridad Social que no fueran compatibles con tu actividad",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 342.1",
+				"excerpt": "La percepción de la prestación económica por cese de actividad es incompatible con el trabajo por cuenta propia",
+				"excerptSha256": "70abadc7fc291e31a5f918dc9fab444d029f74334e3f58bf0796e9d61d224df4"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"businessDays": false,
+			"citation": {
+				"sourceId": "segss-cese-actividad",
+				"locator": "Apartado «¿Dónde debe presentar la solicitud y en qué plazo?»",
+				"excerpt": "La solicitud se podrá presentar hasta el último día del mes siguiente al que se produjo el cese de actividad",
+				"excerptSha256": "fb7afcd8d21c65e0f67c00fb6febf9df7717bd03293d321236be288d1949ed69"
+			}
+		},
+		"channel": {
+			"managingBody": "Mutua colaboradora con la Seguridad Social que cubre tus contingencias profesionales (o Instituto Social de la Marina si es quien las cubre)",
+			"url": "https://sede.seg-social.gob.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "segss-cese-actividad",
+				"locator": "Apartado «¿Dónde debe presentar la solicitud y en qué plazo?»",
+				"excerpt": "La solicitud de prestación por cese de actividad será presentada ante la Mutua con la que el trabajador tenga cubiertas las contingencias profesionales o ante el Instituto Social de la Marina si es la entidad que cubre dichas contingencias profesionales",
+				"excerptSha256": "49fe2343b57735ba8711e06e653c939dbf0671cb6c027c02a1b54da491659616"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-solicitud",
+				"label": "Solicitud en el modelo oficial «Solicitud Cese de Actividad», firmada, con el tipo de cese (definitivo, temporal total o temporal parcial) y el motivo",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "segss-cese-actividad",
+					"locator": "Tabla «Documentos»",
+					"excerpt": "Solicitud Cese de Actividad (PDF,2947 KB)",
+					"excerptSha256": "6433158bf41c0fe810e13ef5835182d931ddb62bef74fc8b1fe20fc67626f7c1"
+				}
+			},
+			{
+				"id": "doc-declaracion-jurada",
+				"label": "Declaración jurada con el motivo o motivos del cese y su fecha de efectos (hay modelo oficial)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 332.1",
+					"excerpt": "se acreditarán mediante declaración jurada del solicitante, en la que se consignará el motivo o motivos concurrentes y la fecha de efectos del cese",
+					"excerptSha256": "ec4cf6eb87309a41878a1886228cef2e7f427f8f45dcaf7d86c361a75aa3724d"
+				}
+			},
+			{
+				"id": "doc-acreditacion-causa",
+				"label": "Documentos que acrediten la causa: en ceses por motivos económicos, documentos contables, profesionales, fiscales, administrativos o judiciales de la inviabilidad, más el cierre del establecimiento (si lo hay), la baja censal y la baja en el RETA; en los demás supuestos, los documentos propios de cada causa",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 332.1.1.a",
+					"excerpt": "los documentos contables, profesionales, fiscales, administrativos o judiciales que justifiquen la falta de viabilidad de la actividad",
+					"excerptSha256": "e37c8407f8aab1e7651c67b64541a0b565a7b922432580c398e547969e9469d6"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "boe-lgss-prestacion-familia",
+			"locator": "Art. 339.1-2",
+			"excerpt": "se determinará aplicando a la base reguladora el 70 por ciento",
+			"excerptSha256": "cee48837ba55fe2ff2a2bd5e1b62f653f44503fbcacd0303d049e4ab87d02405"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 3
+	},
+	"themes": [
+		"empleo"
+	],
+	"lifeEvents": [
+		"perder_empleo"
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-6.md"
+	}
+}

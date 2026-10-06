@@ -1,0 +1,94 @@
+{
+	"id": "gp-jubilacion-leganes",
+	"description": "Hombre de 66 años empadronado en Leganés (28074) desde 1998, asalariado en activo con larga trayectoria, sin personas a cargo, ingresos en banda media (16.800–25.200 €), sin discapacidad. Caso típico de quien se plantea jubilarse: el único requisito comprobable (edad ≥ 52 — suelo absoluto de cualquier vía reducida) queda en T; los decisivos —15 años cotizados con 2 dentro de los 15 previos (art. 205.1.b LGSS), si en 2026 le corresponden 66a10m o 65 años según sus ≥38a3m cotizados (DT 7ª), alta/asimilada y la modalidad (ordinaria, anticipada involuntaria/voluntaria, coeficientes)— no se pueden preguntar ⇒ veredicto posible, no probable. El trámite es permanente ⇒ ROLLING.",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28074"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 1998,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 66,
+					"max": 66,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "propiedad"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-jubilacion-contributiva",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "DT 7ª (cuadro, año 2026) y art. 206 bis.2",
+					"reasoning": "age = {66,66} ≥ 52 ⇒ el único hard «edad-minima-52» queda en T (66 ≥ 52 con certeza: intervalo de un punto). En 2026 la edad ordinaria es 66a10m (o 65 con ≥38a3m cotizados): con 66 años podría jubilarse ya si lleva ≥38a3m, y en todo caso a los 66a10m — pero los años cotizados no se preguntan, así que solo el suelo de 52 puede afirmarse."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 205.1, 205.1.b, 205.3, 206–208 y 206 bis",
+					"reasoning": "Los requisitos decisivos —15 años cotizados con 2 dentro de los 15 previos, la edad ordinaria exigible según cotizaciones (65/66a10m en 2026), estar en alta o asimilada (o reunir edad y cotización sin estarlo), la modalidad de anticipada (involuntaria −4a con 33a + 6m de demanda de empleo + cese tasado; voluntaria −2a con 35a y pensión resultante > mínima; coeficientes por discapacidad/penosidad)— no tienen pregunta en el catálogo ⇒ uncoveredRequirements. 0 hard F, 0 hard U, uncoveredCount > 0 ⇒ posible."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 212",
+					"reasoning": "El derecho al reconocimiento es imprescriptible (los efectos solo se retrotraen hasta 3 meses desde la solicitud si se pide estando en alta) ⇒ no hay convocatoria: deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

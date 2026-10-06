@@ -1,0 +1,98 @@
+{
+	"id": "gp-incapacidad-getafe",
+	"description": "Hombre de 44 años empadronado en Getafe (28065) desde 2008, asalariado, con discapacidad reconocida ≥33 %, ingresos medios. Caso típico de la ola 6: todo lo decisivo (grado declarado por el INSS, alta/cotización, contingencia) no se puede saber con ≤10 preguntas ⇒ «posible», no «probable».",
+	"today": "2026-10-05",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28065"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2008,
+					"month": 3
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 44,
+					"max": 44,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 16800,
+					"max": 25200
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "gte33"
+			},
+			"dependency": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "pension-incapacidad-permanente",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"deadlineState": "ROLLING",
+			"blockers": [],
+			"missingFields": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 195.1",
+					"reasoning": "El único requisito evaluable es soft («edad-inferior-jubilacion-comunes»): age [44,44] < 67 ⇒ T. No hay ningún requisito hard que pueda dar F con nuestras preguntas: la declaración del grado corresponde al INSS (art. 200.1) y la cotización y el alta (arts. 165.1, 195.2-4) dependen de la vida laboral."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Arts. 195.1 y 200.1",
+					"reasoning": "0 hard F, 0 hard U y uncoveredRequirements > 0 ⇒ veredicto «posible» (nunca «probable»: lo nuclear — grado declarado, contingencia, carencia de cotización — queda en ⚠). La discapacidad reconocida ≥33 % no acredita ni descarta la incapacidad permanente: son instrumentos distintos."
+				},
+				{
+					"sourceId": "segss-ip-beneficiarios",
+					"locator": "«Hecho causante / Efectos económicos»",
+					"reasoning": "Prestación a instancia de parte, sin convocatoria: los efectos económicos se fijan en la resolución del Director Provincial del INSS ⇒ deadlineState ROLLING."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}
