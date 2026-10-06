@@ -64,7 +64,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "imv",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "no_cumple",
 			"deadlineState": "ROLLING",
 			"blockers": [

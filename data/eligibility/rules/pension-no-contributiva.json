@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "pension-no-contributiva",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -54,7 +54,7 @@
 	"requirements": [
 		{
 			"id": "reside-cm",
-			"hard": true,
+			"hard": false,
 			"label": "Vivir en la Comunidad de Madrid (la gestión es autonómica: en otra comunidad autónoma la solicitas ante tu administración — la pensión existe en todo el Estado)",
 			"citation": {
 				"sourceId": "bocm-20230801-18-cartera-ss",
@@ -126,7 +126,7 @@
 		},
 		{
 			"id": "residencia-espana-2y",
-			"hard": true,
+			"hard": false,
 			"label": "Residir legalmente en España y haberlo hecho durante los 2 años seguidos e inmediatamente anteriores a la solicitud — además hay un total de años exigido que varía por modalidad (10 desde los 16 en jubilación, 5 en incapacidad; ver ⚠)",
 			"timeDependent": "increasing",
 			"citation": {
@@ -205,7 +205,7 @@
 		},
 		{
 			"id": "declaracion-anual-ingresos",
-			"label": "Ya como pensionista: hay que presentar la declaración anual de ingresos antes del 1 de abril cada año y comunicar cualquier cambio de convivencia o ingresos en 30 días — si no, suspenden el pago de forma preventiva",
+			"label": "Los pensionistas deben presentar una declaración anual de ingresos ante el organismo gestor competente, que comprobará que se siguen cumpliendo los requisitos económicos",
 			"citation": {
 				"sourceId": "bocm-20230801-18-cartera-ss",
 				"locator": "Ficha 020101, «Causas de suspensión», pág. 127",
@@ -394,5 +394,11 @@
 		"mayor_65",
 		"discapacidad",
 		"ingresos_bajos"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-5.md"
+	}
 }

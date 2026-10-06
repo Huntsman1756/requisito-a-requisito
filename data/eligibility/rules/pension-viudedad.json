@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "pension-viudedad",
 	"standalone": true,
-	"rulesVersion": 2,
+	"rulesVersion": 3,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -62,6 +62,12 @@
 			"documentType": "procedure_page",
 			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10964/10966/28489/29611?changeLanguage=es",
 			"title": "Seguridad Social — Pensión de viudedad: gestión y pago (INSS/ISM)"
+		},
+		{
+			"id": "boe-rd-900-2018-viudedad-60",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.boe.es/eli/es/rd/2018/07/20/900/con"
 		}
 	],
 	"requirements": [
@@ -71,10 +77,10 @@
 			"label": "Tener 65 años o más: la cuantía general es el 52 % de la base reguladora, pero desde los 65 puede subir al 60 % si además no tienes otra pensión pública, no trabajas y tus rentas no superan el límite",
 			"timeDependent": "increasing",
 			"citation": {
-				"sourceId": "boe-decreto-3158-1966-viudedad",
-				"locator": "Decreto 3158/1966, art. 31",
-				"excerpt": "respondiente base reguladora para la determinación de la cuantía de la pensión de viudedad será del 52 por ciento. 2. Cuando la pensión de viudedad constituya la principal o única fuente de ingresos del pensionista",
-				"excerptSha256": "8c6f153b811eed3990330116bab4d5fd60da21d28fd9c4a75512221f8952cfab"
+				"sourceId": "boe-rd-900-2018-viudedad-60",
+				"locator": "RD 900/2018, art. 2.a",
+				"excerpt": "Lo dispuesto en este real decreto se aplicará a las personas beneficiarias de la pensión de viudedad del sistema de la Seguridad Social que cumplan los siguientes requisitos: a) Haber cumplido una edad igual o superior a los 65 años",
+				"excerptSha256": "d01947858fe5d307e6e2a55ee2e6ea75146792abb1ba49da334d809b4fb65f82"
 			},
 			"condition": {
 				"field": "age",
@@ -286,5 +292,11 @@
 	"lifeEvents": [
 		"mayor_65",
 		"ingresos_bajos"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-5.md"
+	}
 }

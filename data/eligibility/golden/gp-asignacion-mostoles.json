@@ -73,7 +73,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "asignacion-hijo-a-cargo",
-			"rulesVersion": 1,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

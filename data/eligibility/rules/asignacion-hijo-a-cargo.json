@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "asignacion-hijo-a-cargo",
 	"standalone": true,
-	"rulesVersion": 3,
+	"rulesVersion": 5,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -40,8 +40,8 @@
 	"requirements": [
 		{
 			"id": "causante-con-discapacidad",
-			"hard": true,
-			"label": "Tener a tu cargo un hijo o menor acogido (en acogimiento familiar permanente o guarda con fines de adopción) con discapacidad reconocida: ≥33 % si tiene menos de 18 años, ≥65 % si tiene 18 o más. Desde el 1/06/2020 no se admiten solicitudes nuevas por hijos sin discapacidad o con discapacidad <33 % (esa asignación quedó a extinguir — ver ⚠)",
+			"hard": false,
+			"label": "Tener a tu cargo un hijo o menor acogido (en acogimiento familiar permanente o guarda con fines de adopción) con discapacidad reconocida: ≥33 % si tiene menos de 18 años, ≥65 % si tiene 18 o más. Desde el 1/06/2020 no se admiten solicitudes nuevas por hijos sin discapacidad o con discapacidad <33 % (esa asignación quedó a extinguir — ver ⚠) (los huérfanos absolutos <18 años con discapacidad ≥33 % son beneficiarios directos: esa vía no la podemos comprobar aquí)",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 351.a",
@@ -127,7 +127,7 @@
 		},
 		{
 			"id": "limite-ingresos",
-			"label": "Límite de ingresos: para solicitudes nuevas por hijo o menor con discapacidad NO se exige límite de ingresos del beneficiario. El límite vigente de 15.356,00 €/año (23.109,00 € para familias numerosas, +3.745,00 € por cada hijo a cargo a partir del cuarto, este incluido) solo sigue aplicándose al régimen transitorio de la asignación sin discapacidad o con discapacidad <33 %",
+			"label": "Límite de ingresos del beneficiario: 15.356,00 €/año (23.109,00 € en familia numerosa general y 27.860,00 € en especial, +3.745,00 € por hijo desde el cuarto). Ojo: para hijos con discapacidad las instrucciones del INSS no exigen ese límite, pero nosotros no lo podemos comprobar con fuente normativa aquí — te lo confirmarán al tramitar",
 			"citation": {
 				"sourceId": "boe-rd-241-2026-pensiones",
 				"locator": "Art. 24.2",
@@ -177,7 +177,7 @@
 		},
 		{
 			"id": "efectos-y-variaciones",
-			"label": "El derecho nace el primer día del trimestre natural siguiente a la solicitud y la resolución debe notificarse en un máximo de 45 días; una vez concedida hay que comunicar al INSS en 30 días cualquier variación familiar que afecte al derecho (nace, se modifica o se extingue por trimestres)",
+			"label": "El abono se paga por mensualidades (art. 356) y hay que declarar ante la entidad gestora cualquier variación familiar que afecte al derecho (cambio de domicilio, ingresos, custodia) — el plazo exacto de resolución lo fija la norma de desarrollo",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "LGSS art. 355.1",
@@ -269,5 +269,11 @@
 		"tener_hijo",
 		"discapacidad",
 		"ingresos_bajos"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-5.md"
+	}
 }

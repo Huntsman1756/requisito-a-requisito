@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "madrid-ayudas-alquiler-plan-estatal",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -41,7 +41,7 @@
 			"rank": 1,
 			"documentType": "extract",
 			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2023/10/16/BOCM-20231016-8.PDF",
-			"title": "Extracto de la Orden de 11 de octubre de 2023 — convocatoria 2023 de las ayudas al alquiler y a personas jóvenes (BOCM n.º 245, 16/10/2023; BDNS 721190)"
+			"title": "Extracto de la Orden de 11 de octubre de 2023 — convocatoria 2023 de las ayudas al alquiler y a personas jóvenes (BOCM n.º 246, 16/10/2023; BDNS 721190)"
 		},
 		{
 			"id": "sede-ayudas-alquiler-2025",
@@ -546,5 +546,11 @@
 	"lifeEvents": [
 		"independizarse_vivienda",
 		"ingresos_bajos"
-	]
+	],
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-05",
+		"report": "evidence/2026-10-05-F3/verificacion-ola-5.md"
+	}
 }

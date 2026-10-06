@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "imv",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -75,7 +75,7 @@
 		},
 		{
 			"id": "residencia-espana-1a",
-			"hard": true,
+			"hard": false,
 			"label": "Residir legal y efectivamente en España, de forma continuada, durante al menos el año anterior a la solicitud",
 			"timeDependent": "increasing",
 			"citation": {
