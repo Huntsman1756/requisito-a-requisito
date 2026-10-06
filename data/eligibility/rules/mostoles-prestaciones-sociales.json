@@ -1,256 +1,256 @@
 {
- "benefitSlug": "mostoles-prestaciones-sociales",
- "standalone": true,
- "rulesVersion": 1,
- "verifiedAt": "2026-10-06",
- "humanReview": {
-  "status": "pending"
- },
- "verification": {
-  "status": "ok",
-  "by": "verificador-independiente",
-  "at": "2026-10-06",
-  "report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
- },
- "referenceDate": "application",
- "sources": [
-  {
-   "id": "bocm-20220223-mostoles-ordenanza-prestaciones",
-   "rank": 1,
-   "documentType": "regulatory_base",
-   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/02/23/BOCM-20220223-56.PDF",
-   "title": "Acuerdo del Pleno del Ayuntamiento de Móstoles, de 28 de octubre de 2021, por el que se aprueba la modificación de la Ordenanza reguladora del procedimiento de concesión de prestaciones sociales individuales de carácter económico y material (BOCM n.º 46, de 23 de febrero de 2022, doc. 56)"
-  }
- ],
- "parametersUsed": [
-  "IPREM_ANUAL_12P"
- ],
- "requirements": [
-  {
-   "id": "mayor-edad",
-   "hard": true,
-   "timeDependent": "increasing",
-   "label": "Ser mayor de dieciocho años o menor emancipado; la condición de menor emancipado no podemos comprobarla aquí",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1.a",
-    "excerpt": "Ser mayor de dieciocho años o menor emancipado.",
-    "excerptSha256": "d21bbc99f0a4000ad3c49f180623c0e328237d9a550c66b0dd613bb419a8c127"
-   },
-   "condition": {
-    "field": "age",
-    "op": "gte",
-    "value": 18
-   }
-  },
-  {
-   "id": "empadronado-mostoles",
-   "hard": true,
-   "label": "Estar empadronado/a en el municipio de Móstoles y residir en él de forma efectiva. Se exceptúa a víctimas de violencia doméstica o de género, a los supuestos de la Ley 1/1996 de Protección Jurídica del Menor y a las prestaciones dirigidas a personas en situación de calle",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1.b",
-    "excerpt": "Estar empadronado en el Municipio de Móstoles y residir de forma efectiva, con- forme a lo especificado en el artículo 15 de la Ley 7/1985, de 2 de abril, Regula- dora de las Bases de Régimen Local.",
-    "excerptSha256": "f9de9af9e4bcb8aa965179e35bbd72d2adabee0bfef4c97eeefa4242ecf17b01"
-   },
-   "condition": {
-    "field": "territory",
-    "op": "within_territory",
-    "value": {
-     "municipality": "28092"
-    },
-    "label": "estás empadronado/a en Móstoles (28092)"
-   }
-  },
-  {
-   "id": "carencia-ingresos",
-   "hard": false,
-   "label": "Carecer de ingresos o rentas suficientes: el límite de ingresos anuales de la unidad familiar de convivencia depende de su tamaño (1×IPREM para 1-2 miembros; 1,5×IPREM para 3; 1,8× para 4; 2× para 5; 2,2× para 6 o más; las unidades unipersonales computan 1,5 miembros y las personas con discapacidad ≥65 % o dependencia grado II o superior computan doble). Como referencia orientativa usamos ingresos por debajo de 1 × IPREM",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1.c",
-    "excerpt": "Carecer de ingresos o rentas suficientes y encontrarse en situación de necesidad: Se considera esta situación cuando la persona física o la unidad familiar de convi- vencia no obtiene unos ingresos económicos superiores a los recogidos en la pre- sente ordenanza.",
-    "excerptSha256": "bddd6e14d77d2a6476cfd627512e08de67898bab51a17cb996fd3c8604de83d2"
-   },
-   "condition": {
-    "field": "incomeAnnual",
-    "op": "lte",
-    "param": "IPREM_ANUAL_12P"
-   }
-  }
- ],
- "uncoveredRequirements": [
-  {
-   "id": "sin-recurso-en-otras-administraciones",
-   "label": "No poder solicitar la ayuda a otros organismos para atender la necesidad: por tratarse de supuestos excluidos de prestaciones normalizadas, de convocatorias con plazo vencido o porque la ayuda de otro organismo resultó insuficiente",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1.d",
-    "excerpt": "No poder solicitar la ayuda de otros organismos para atender la necesidad",
-    "excerptSha256": "5ce281644d1d24de9cf491cd82076c0eccb1c101f357af522893ec91e9a35fc4"
-   }
-  },
-  {
-   "id": "excepciones-empadronamiento",
-   "label": "El requisito de empadronamiento se exceptúa para las víctimas de violencia doméstica o de género (acreditada por sentencia o, si procede, por el art. 4.1.b), para los supuestos de los arts. 10.3 y 11.1 de la Ley 1/1996 y para las prestaciones dirigidas a personas en situación de calle",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1.b, segundo y tercer párrafos",
-    "excerpt": "Se exceptúa este requisito a las prestaciones di- rigidas a personas en situación de calle, condición que hará constar en el informe el técnico proponente de la misma.",
-    "excerptSha256": "e2ba16dcd71fc331b35da1c626d98b2f3b5a19a232c0f24b725c58b27ae71489"
-   }
-  },
-  {
-   "id": "extranjeria-lo-4-2000",
-   "label": "Las personas sin nacionalidad española se rigen por la L.O. 4/2000, los tratados internacionales y los convenios con el país de origen: en situación de irregularidad se aplica su art. 14.3 (derecho a servicios sociales básicos)",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1, último párrafo, y art. 13.2.a",
-    "excerpt": "En el supuesto de situación de irregularidad, se aplicará lo previsto en el artícu- lo 14.3 de la Ley 4/2000 de 11 de enero, sobre Derechos y Libertades de los Ex- tranjeros en España y su integración social.",
-    "excerptSha256": "5f9bbb96e864492476ad4587fd87077de6d9ac468a01ac8897ec998cd662e06c"
-   }
-  },
-  {
-   "id": "no-condena-perdida-subvenciones",
-   "label": "No haber sido condenado por sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1, in fine",
-    "excerpt": "no podrá haber sido condenado mediante sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas.",
-    "excerptSha256": "58b4255cdd413f98a7ec6890038a79dbb1f9e58233e6f59a276a311bb481d77b"
-   }
-  },
-  {
-   "id": "apoyo-intervencion-social",
-   "label": "La prestación es un apoyo a la intervención social consensuada con el/la trabajador/a social: la concesión depende de la valoración técnica, no es un derecho subjetivo automático",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 3",
-    "excerpt": "Podrán ser beneficiarios/as de estas prestaciones las per- sonas o unidades familiares de convivencia en las que concurran factores de riesgo que den lugar a situaciones de grave necesidad y/o extrema urgencia",
-    "excerptSha256": "935b7722e4b6b54851f34f64b61ea5c315a805bbb19385f8ea40b5166251914b"
-   }
-  },
-  {
-   "id": "requisitos-especificos-prestacion",
-   "label": "Cada modalidad (ayuda a domicilio, teleasistencia, habitabilidad, comedor escolar, suministros, gafas…) tiene requisitos específicos adicionales: p. ej. para habitabilidad se exige que el domicilio sea la vivienda habitual y que el 50 % de los convivientes esté empadronado en Móstoles",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.2.d",
-    "excerpt": "Para la solicitud de prestación de carácter económico en concepto de habitabilidad se requiere: — Que el domicilio donde se vaya a efectua",
-    "excerptSha256": "3231b57648e3f16e528dab17318dfad42349069b4b64aeaf8b4f6d14ba38b074"
-   }
-  },
-  {
-   "id": "incompatibilidad-seis-meses-incumplimiento",
-   "label": "Incumplir las obligaciones (no justificar la prestación, destinarla a otro fin…) impide solicitar de nuevo durante seis meses, y obliga a reintegrar el importe en el plazo máximo de un año",
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, arts. 10-11",
-    "excerpt": "no poder solicitar nuevamente prestaciones en el plazo de seis meses desde la notificación del incumplimiento",
-    "excerptSha256": "f2e44536cc52046ec6a3dce302f08c88e9816c6c84b4c9a99cd0d957d04dfc31"
-   }
-  }
- ],
- "application": {
-  "window": {
-   "rolling": true,
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 13.1",
-    "excerpt": "El procedimiento para la concesión de las prestacio- nes sociales podrá iniciarse de oficio o a instancia de persona interesada.",
-    "excerptSha256": "8734905323b6fe862798e4f1d14008a12875b04440035c426c96e2c9033e5a55"
-   }
-  },
-  "channel": {
-   "managingBody": "Ayuntamiento de Móstoles — Área de Bienestar Social (Servicios Sociales de Base y Especializados)",
-   "url": "https://www.mostoles.es/SEDE_ELECTRONICA/es/tramites-gestiones/ayudas-subvenciones/prestaciones-sociales-individuales-caracter-economico-mater",
-   "online": true,
-   "inPerson": true,
-   "citation": {
-    "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 13.1.b",
-    "excerpt": "debe presentar la solicitud de la prestación en el Registro General de Entrada del Ayuntamiento, en los Registros Auxiliares o en cualquiera de los lugares a los que se refiere la legislación vigente y normativa de desarrollo en materia de proce- dimiento administrativo.",
-    "excerptSha256": "7146116afa41d841485db226bd9536871179501a2ba27d6a13eb931749674bfa"
-   }
-  },
-  "documents": [
-   {
-    "id": "doc-identidad",
-    "label": "Fotocopia del DNI de la persona solicitante (o del representante legal); si no es española, documento acreditativo de identidad (NIE o pasaporte)",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 13.2.a",
-     "excerpt": "Caso de ser español/a fotocopia Documento Nacional de Identidad (DNI) de la persona solicitante o en su caso del representante legal.",
-     "excerptSha256": "f444cdd3bcec5441e970743b4faedf6b9d59a681418ce405e609abe4229d65b2"
-    }
-   },
-   {
-    "id": "doc-libro-familia",
-    "label": "Fotocopia del libro de familia o certificado de nacimiento de los menores de la unidad familiar de convivencia",
-    "mandatory": false,
-    "citation": {
-     "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 13.2.b",
-     "excerpt": "Fotocopia del libro de familia o certificado de nacimiento de los menores de edad de la unidad familiar de convivencia.",
-     "excerptSha256": "4f35cecdf3245dc23de752761ba899f467ee7cc11bf709cf17e81c31d304c89a"
-    }
-   },
-   {
-    "id": "doc-ingresos",
-    "label": "Acreditación de los ingresos de todos los miembros de la unidad familiar: nóminas de los mayores de 16 años, certificado de prestaciones del INSS o del INEM, certificados bancarios de capitales o, si no hay documento, declaración responsable del importe y origen",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 13.2.c",
-     "excerpt": "Acreditación de los ingresos de todos los miembros de la unidad familiar de convi- vencia",
-     "excerptSha256": "c9f0ef00ac6c25a9b6ed535ce2795b9c454b8b9c7cd594c0fd12e1a679fc1c27"
-    }
-   },
-   {
-    "id": "doc-informe-medico",
-    "label": "Informe médico cuando lo exija la modalidad de prestación (imprescindible en ayuda a domicilio, teleasistencia, habitabilidad, gastos farmacéuticos, odontológicos, alimentaciones especiales, gafas u otros gastos médicos extraordinarios)",
-    "mandatory": false,
-    "citation": {
-     "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 13.2.d",
-     "excerpt": "Informe médico cuando proceda por la tipología de la prestación.",
-     "excerptSha256": "6129307eefbf8fecf9c85033164be4f7e96e76f91c98690e82bd5e32b2164f56"
-    }
-   },
-   {
-    "id": "doc-recibos-gastos",
-    "label": "Fotocopias de los recibos que acrediten los gastos (agua, luz, gas, teléfono, hipoteca, alquiler y otros pertinentes)",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 13.2.e",
-     "excerpt": "Fotocopias de los recibos para la acreditación de los gastos (agua, luz, gas, teléfo- no, hipoteca / alquiler y aquellos otros que se estimen oportunos).",
-     "excerptSha256": "7d172651117e647484532ca5bcb1c56b2093288d1498a24df106afdf044e8b34"
-    }
-   }
-  ]
- },
- "amount": {
-  "type": "variable",
-  "period": "one_off",
-  "citation": {
-   "sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
-   "locator": "Ordenanza, art. 3 (las cuantías de cada modalidad se fijan en la resolución e informe técnico)",
-   "excerpt": "Podrán ser beneficiarios/as de estas prestaciones las per- sonas o unidades familiares de convivencia en las que concurran factores de riesgo que den lugar a situaciones de grave necesidad y/o extrema urgencia",
-   "excerptSha256": "935b7722e4b6b54851f34f64b61ea5c315a805bbb19385f8ea40b5166251914b"
-  }
- },
- "effortInputs": {
-  "requiresCertificate": true,
-  "formPages": 1
- },
- "themes": [
-  "ingresos_minimos",
-  "vivienda"
- ],
- "lifeEvents": [
-  "perder_empleo",
-  "ingresos_bajos"
- ]
+	"benefitSlug": "mostoles-prestaciones-sociales",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20220223-mostoles-ordenanza-prestaciones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/02/23/BOCM-20220223-56.PDF",
+			"title": "Acuerdo del Pleno del Ayuntamiento de Móstoles, de 28 de octubre de 2021, por el que se aprueba la modificación de la Ordenanza reguladora del procedimiento de concesión de prestaciones sociales individuales de carácter económico y material (BOCM n.º 46, de 23 de febrero de 2022, doc. 56)"
+		}
+	],
+	"parametersUsed": [
+		"IPREM_ANUAL_12P"
+	],
+	"requirements": [
+		{
+			"id": "mayor-edad",
+			"hard": true,
+			"timeDependent": "increasing",
+			"label": "Ser mayor de dieciocho años o menor emancipado; la condición de menor emancipado no podemos comprobarla aquí",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1.a",
+				"excerpt": "Ser mayor de dieciocho años o menor emancipado.",
+				"excerptSha256": "d21bbc99f0a4000ad3c49f180623c0e328237d9a550c66b0dd613bb419a8c127"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 18
+			}
+		},
+		{
+			"id": "empadronado-mostoles",
+			"hard": true,
+			"label": "Estar empadronado/a en el municipio de Móstoles y residir en él de forma efectiva. Se exceptúa a víctimas de violencia doméstica o de género, a los supuestos de la Ley 1/1996 de Protección Jurídica del Menor y a las prestaciones dirigidas a personas en situación de calle",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1.b",
+				"excerpt": "Estar empadronado en el Municipio de Móstoles y residir de forma efectiva, con- forme a lo especificado en el artículo 15 de la Ley 7/1985, de 2 de abril, Regula- dora de las Bases de Régimen Local.",
+				"excerptSha256": "f9de9af9e4bcb8aa965179e35bbd72d2adabee0bfef4c97eeefa4242ecf17b01"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28092"
+				},
+				"label": "estás empadronado/a en Móstoles (28092)"
+			}
+		},
+		{
+			"id": "carencia-ingresos",
+			"hard": false,
+			"label": "Carecer de ingresos o rentas suficientes: el límite de ingresos anuales de la unidad familiar de convivencia depende de su tamaño (1×IPREM para 1-2 miembros; 1,5×IPREM para 3; 1,8× para 4; 2× para 5; 2,2× para 6 o más; las unidades unipersonales computan 1,5 miembros y las personas con discapacidad ≥65 % o dependencia grado II o superior computan doble). Como referencia orientativa usamos ingresos por debajo de 1 × IPREM",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1.c",
+				"excerpt": "Carecer de ingresos o rentas suficientes y encontrarse en situación de necesidad: Se considera esta situación cuando la persona física o la unidad familiar de convi- vencia no obtiene unos ingresos económicos superiores a los recogidos en la pre- sente ordenanza.",
+				"excerptSha256": "bddd6e14d77d2a6476cfd627512e08de67898bab51a17cb996fd3c8604de83d2"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "IPREM_ANUAL_12P"
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "sin-recurso-en-otras-administraciones",
+			"label": "No poder solicitar la ayuda a otros organismos para atender la necesidad: por tratarse de supuestos excluidos de prestaciones normalizadas, de convocatorias con plazo vencido o porque la ayuda de otro organismo resultó insuficiente",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1.d",
+				"excerpt": "No poder solicitar la ayuda de otros organismos para atender la necesidad",
+				"excerptSha256": "5ce281644d1d24de9cf491cd82076c0eccb1c101f357af522893ec91e9a35fc4"
+			}
+		},
+		{
+			"id": "excepciones-empadronamiento",
+			"label": "El requisito de empadronamiento se exceptúa para las víctimas de violencia doméstica o de género (acreditada por sentencia o, si procede, por el art. 4.1.b), para los supuestos de los arts. 10.3 y 11.1 de la Ley 1/1996 y para las prestaciones dirigidas a personas en situación de calle",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1.b, segundo y tercer párrafos",
+				"excerpt": "Se exceptúa este requisito a las prestaciones di- rigidas a personas en situación de calle, condición que hará constar en el informe el técnico proponente de la misma.",
+				"excerptSha256": "e2ba16dcd71fc331b35da1c626d98b2f3b5a19a232c0f24b725c58b27ae71489"
+			}
+		},
+		{
+			"id": "extranjeria-lo-4-2000",
+			"label": "Las personas sin nacionalidad española se rigen por la L.O. 4/2000, los tratados internacionales y los convenios con el país de origen: en situación de irregularidad se aplica su art. 14.3 (derecho a servicios sociales básicos)",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1, último párrafo, y art. 13.2.a",
+				"excerpt": "En el supuesto de situación de irregularidad, se aplicará lo previsto en el artícu- lo 14.3 de la Ley 4/2000 de 11 de enero, sobre Derechos y Libertades de los Ex- tranjeros en España y su integración social.",
+				"excerptSha256": "5f9bbb96e864492476ad4587fd87077de6d9ac468a01ac8897ec998cd662e06c"
+			}
+		},
+		{
+			"id": "no-condena-perdida-subvenciones",
+			"label": "No haber sido condenado por sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1, in fine",
+				"excerpt": "no podrá haber sido condenado mediante sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas.",
+				"excerptSha256": "58b4255cdd413f98a7ec6890038a79dbb1f9e58233e6f59a276a311bb481d77b"
+			}
+		},
+		{
+			"id": "apoyo-intervencion-social",
+			"label": "La prestación es un apoyo a la intervención social consensuada con el/la trabajador/a social: la concesión depende de la valoración técnica, no es un derecho subjetivo automático",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 3",
+				"excerpt": "Podrán ser beneficiarios/as de estas prestaciones las per- sonas o unidades familiares de convivencia en las que concurran factores de riesgo que den lugar a situaciones de grave necesidad y/o extrema urgencia",
+				"excerptSha256": "935b7722e4b6b54851f34f64b61ea5c315a805bbb19385f8ea40b5166251914b"
+			}
+		},
+		{
+			"id": "requisitos-especificos-prestacion",
+			"label": "Cada modalidad (ayuda a domicilio, teleasistencia, habitabilidad, comedor escolar, suministros, gafas…) tiene requisitos específicos adicionales: p. ej. para habitabilidad se exige que el domicilio sea la vivienda habitual y que el 50 % de los convivientes esté empadronado en Móstoles",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.2.d",
+				"excerpt": "Para la solicitud de prestación de carácter económico en concepto de habitabilidad se requiere: — Que el domicilio donde se vaya a efectua",
+				"excerptSha256": "3231b57648e3f16e528dab17318dfad42349069b4b64aeaf8b4f6d14ba38b074"
+			}
+		},
+		{
+			"id": "incompatibilidad-seis-meses-incumplimiento",
+			"label": "Incumplir las obligaciones (no justificar la prestación, destinarla a otro fin…) impide solicitar de nuevo durante seis meses, y obliga a reintegrar el importe en el plazo máximo de un año",
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, arts. 10-11",
+				"excerpt": "no poder solicitar nuevamente prestaciones en el plazo de seis meses desde la notificación del incumplimiento",
+				"excerptSha256": "f2e44536cc52046ec6a3dce302f08c88e9816c6c84b4c9a99cd0d957d04dfc31"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 13.1",
+				"excerpt": "El procedimiento para la concesión de las prestacio- nes sociales podrá iniciarse de oficio o a instancia de persona interesada.",
+				"excerptSha256": "8734905323b6fe862798e4f1d14008a12875b04440035c426c96e2c9033e5a55"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Móstoles — Área de Bienestar Social (Servicios Sociales de Base y Especializados)",
+			"url": "https://www.mostoles.es/SEDE_ELECTRONICA/es/tramites-gestiones/ayudas-subvenciones/prestaciones-sociales-individuales-caracter-economico-mater",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 13.1.b",
+				"excerpt": "debe presentar la solicitud de la prestación en el Registro General de Entrada del Ayuntamiento, en los Registros Auxiliares o en cualquiera de los lugares a los que se refiere la legislación vigente y normativa de desarrollo en materia de proce- dimiento administrativo.",
+				"excerptSha256": "7146116afa41d841485db226bd9536871179501a2ba27d6a13eb931749674bfa"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad",
+				"label": "Fotocopia del DNI de la persona solicitante (o del representante legal); si no es española, documento acreditativo de identidad (NIE o pasaporte)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 13.2.a",
+					"excerpt": "Caso de ser español/a fotocopia Documento Nacional de Identidad (DNI) de la persona solicitante o en su caso del representante legal.",
+					"excerptSha256": "f444cdd3bcec5441e970743b4faedf6b9d59a681418ce405e609abe4229d65b2"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Fotocopia del libro de familia o certificado de nacimiento de los menores de la unidad familiar de convivencia",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 13.2.b",
+					"excerpt": "Fotocopia del libro de familia o certificado de nacimiento de los menores de edad de la unidad familiar de convivencia.",
+					"excerptSha256": "4f35cecdf3245dc23de752761ba899f467ee7cc11bf709cf17e81c31d304c89a"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Acreditación de los ingresos de todos los miembros de la unidad familiar: nóminas de los mayores de 16 años, certificado de prestaciones del INSS o del INEM, certificados bancarios de capitales o, si no hay documento, declaración responsable del importe y origen",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 13.2.c",
+					"excerpt": "Acreditación de los ingresos de todos los miembros de la unidad familiar de convi- vencia",
+					"excerptSha256": "c9f0ef00ac6c25a9b6ed535ce2795b9c454b8b9c7cd594c0fd12e1a679fc1c27"
+				}
+			},
+			{
+				"id": "doc-informe-medico",
+				"label": "Informe médico cuando lo exija la modalidad de prestación (imprescindible en ayuda a domicilio, teleasistencia, habitabilidad, gastos farmacéuticos, odontológicos, alimentaciones especiales, gafas u otros gastos médicos extraordinarios)",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 13.2.d",
+					"excerpt": "Informe médico cuando proceda por la tipología de la prestación.",
+					"excerptSha256": "6129307eefbf8fecf9c85033164be4f7e96e76f91c98690e82bd5e32b2164f56"
+				}
+			},
+			{
+				"id": "doc-recibos-gastos",
+				"label": "Fotocopias de los recibos que acrediten los gastos (agua, luz, gas, teléfono, hipoteca, alquiler y otros pertinentes)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 13.2.e",
+					"excerpt": "Fotocopias de los recibos para la acreditación de los gastos (agua, luz, gas, teléfo- no, hipoteca / alquiler y aquellos otros que se estimen oportunos).",
+					"excerptSha256": "7d172651117e647484532ca5bcb1c56b2093288d1498a24df106afdf044e8b34"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
+			"locator": "Ordenanza, art. 3 (las cuantías de cada modalidad se fijan en la resolución e informe técnico)",
+			"excerpt": "Podrán ser beneficiarios/as de estas prestaciones las per- sonas o unidades familiares de convivencia en las que concurran factores de riesgo que den lugar a situaciones de grave necesidad y/o extrema urgencia",
+			"excerptSha256": "935b7722e4b6b54851f34f64b61ea5c315a805bbb19385f8ea40b5166251914b"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"ingresos_minimos",
+		"vivienda"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
 }

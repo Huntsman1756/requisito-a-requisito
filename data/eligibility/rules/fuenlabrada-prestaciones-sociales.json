@@ -1,230 +1,230 @@
 {
- "benefitSlug": "fuenlabrada-prestaciones-sociales",
- "standalone": true,
- "rulesVersion": 1,
- "verifiedAt": "2026-10-06",
- "humanReview": {
-  "status": "pending"
- },
- "verification": {
-  "status": "ok",
-  "by": "verificador-independiente",
-  "at": "2026-10-06",
-  "report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
- },
- "referenceDate": "application",
- "sources": [
-  {
-   "id": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-   "rank": 1,
-   "documentType": "regulatory_base",
-   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2013/09/20/BOCM-20130920-45.PDF",
-   "title": "Ordenanza municipal reguladora del reconocimiento del derecho y concesión de prestaciones sociales individuales de carácter económico o material del Ayuntamiento de Fuenlabrada (modificaciones aprobadas en pleno de 10 de mayo y 6 de junio de 2013; texto íntegro en BOCM n.º 224, de 20 de septiembre de 2013, doc. 45)"
-  },
-  {
-   "id": "fuenlabrada-ordenanza-prestaciones",
-   "rank": 2,
-   "documentType": "informational",
-   "url": "https://transparencia.ayto-fuenlabrada.es/wp-content/uploads/2020/09/Ordenanza-de-Servicios-Sociales.pdf",
-   "title": "Texto consolidado de la ordenanza de prestaciones sociales individuales en la web de transparencia municipal (mismo contenido que la publicación del BOCM n.º 224 de 2013)"
-  }
- ],
- "parametersUsed": [],
- "requirements": [
-  {
-   "id": "mayor-edad",
-   "hard": true,
-   "timeDependent": "increasing",
-   "label": "Ser mayor de edad (para comedor de mayores se exige ser mayor de sesenta años o pensionista; para habitabilidad de la vivienda habitual de mayores, sesenta y cinco años o sesenta con limitaciones)",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.1",
-    "excerpt": "Ser mayor de edad.",
-    "excerptSha256": "01f7044801ae50d59583297f5d0e19ffb67c0d3a25b717ccc5e05a52b5332598"
-   },
-   "condition": {
-    "field": "age",
-    "op": "gte",
-    "value": 18
-   }
-  },
-  {
-   "id": "empadronado-fuenlabrada",
-   "hard": true,
-   "label": "Estar empadronado/a en el municipio de Fuenlabrada. Se exceptúa a las prestaciones dirigidas a personas transeúntes, a las mujeres que han sufrido o están sufriendo violencia de género en el último año y a los supuestos de los arts. 10.3 y 11.1 de la L.O. 1/1996",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.2",
-    "excerpt": "Estar empadronado en el municipio de Fuenlabrada: se exceptúa este requisito para las prestaciones dirigidas a transeúntes, mujeres que han sufrido o están sufriendo en el último año violencia de género",
-    "excerptSha256": "88e0c4eaa2e2c89fe682d7bb07f842cb17e046771518770f424fd3c4c3db817e"
-   },
-   "condition": {
-    "field": "territory",
-    "op": "within_territory",
-    "value": {
-     "municipality": "28058"
-    },
-    "label": "estás empadronado/a en Fuenlabrada (28058)"
-   }
-  },
-  {
-   "id": "carencia-ingresos",
-   "hard": false,
-   "label": "Carecer de ingresos o rentas suficientes: el límite de ingresos netos mensuales depende del tamaño de la unidad familiar (baremo del art. 7: persona sola hasta 665,33 €/mes; unidad de 2 hasta 754,71 €; de 3 hasta 845,45 €; de 4 hasta 937,55 €; de 5 hasta 1.006,47 €; de 6 hasta 1.089,25 €; de 7 o más hasta 1.147,95 €/mes, con cobertura porcentual decreciente). Como referencia orientativa usamos el límite de persona sola: 7.984 €/año",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.3",
-    "excerpt": "Carecer de ingresos o rentas suficientes: se considera que se carece de ingresos o rentas suficientes cuando la persona física o la unidad familiar que se encuentra en situa- ción acreditada de grave necesidad, en su caso, no obtengan unos ingresos netos mensuales superiores, por todos los conceptos, al baremo establecido en el artículo 7, apartado 1.",
-    "excerptSha256": "99afdc3220495234f1897f5624373396d46908042c4fb54f8dbb6bcaf5e02c81"
-   },
-   "condition": {
-    "field": "incomeAnnual",
-    "op": "lte",
-    "value": 6400
-   }
-  }
- ],
- "uncoveredRequirements": [
-  {
-   "id": "grave-necesidad-valoracion",
-   "label": "La situación de grave necesidad individual o familiar la acredita la valoración del trabajador social: las prestaciones son siempre un apoyo a la intervención social, no un derecho subjetivo automático",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.3",
-    "excerpt": "se encuentra en situa- ción acreditada de grave necesidad",
-    "excerptSha256": "116f832fded4d00ae2ef42c7b37b9a8f08a58527b42f5b18aef4d081c66afe5d"
-   }
-  },
-  {
-   "id": "excepcion-violencia-genero",
-   "label": "Con carácter excepcional pueden ser beneficiarias las mujeres en situación de grave necesidad que, aun no cumpliendo los requisitos, han padecido o padecen violencia de género en el último año y pueden acreditarlo",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4, párrafo excepcional",
-    "excerpt": "podrán ser beneficiarias de estas prestaciones aquellas mu- jeres que constituyendo o no unidades familiares se encuentren en situación de grave nece- sidad y que, aun no cumpliendo los requisitos aquí exigidos, han padecido o están padecien- do en el último año violencia de género y este hecho pueda ser acreditado.",
-    "excerptSha256": "686ec5bb9732c0a795b5ef95fec801bbe77d2f637188e33aeeeeed83ddf5fc4f"
-   }
-  },
-  {
-   "id": "justificacion-prestacion-anterior",
-   "label": "Si fuiste beneficiario antes, debes haber justificado el gasto de la prestación anterior para el fin pretendido y en el plazo previsto",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4.5",
-    "excerpt": "Si ha sido beneficiario, anteriormente, de una prestación, haber justificado su gas- to para el fin pretendido, en el tiempo establecido en el artículo 11 de la presente ordenan- za.",
-    "excerptSha256": "162450c2fc5b264f3a674f6f1593ffb85169079fc4c1d179e6b7c4e02986a8b8"
-   }
-  },
-  {
-   "id": "extranjeria-lo-4-2000",
-   "label": "Las personas sin nacionalidad española se rigen por la L.O. 4/2000 y los tratados internacionales; el acceso se acredita con tarjeta de residente, de asilo o refugio u otro documento de estancia legal",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 4, in fine, y art. 5.1",
-    "excerpt": "en el supuesto de extranjeros, tarjeta de residente, de asilo o refugio o cualquier otro documento que permita su estancia legal en el país.",
-    "excerptSha256": "1e5c0c2f3c5064347a6cc2f1d2c8842b66847d9965d69ac661f444d494e32d02"
-   }
-  },
-  {
-   "id": "nueva-ordenanza-en-tramite",
-   "label": "Vigencia: en mayo de 2025 la Junta de Gobierno Local aprobó el proyecto de una nueva ordenanza de prestaciones sociales individuales (expediente 2025/GPR_01/003828) que, al entrar en vigor, derogará los artículos de esta ordenanza que determine; hasta entonces sigue vigente el texto de 2013",
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, disposición final y pie de publicación (BOCM n.º 224, de 20 de septiembre de 2013)",
-    "excerpt": "quedan definitivamente aprobadas las citadas modificaciones, que entra- rán en vigor al día siguiente de la publicación del texto íntegro que se acompaña.",
-    "excerptSha256": "d8c1ceec1c5dda66aeb6978024228d94b7fc229431d3ebf9282706bc87df852a"
-   }
-  }
- ],
- "application": {
-  "window": {
-   "rolling": true,
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 10",
-    "excerpt": "La petición se realizará en el Registro Públi- co de Servicios Sociales mediante modelo normalizado de solicitud",
-    "excerptSha256": "9bbf18a9bfab36e9743c1a3ef8c9a04c1690a38f07e9dec1182980d98e7f1f4f"
-   }
-  },
-  "channel": {
-   "managingBody": "Ayuntamiento de Fuenlabrada — Servicios Sociales (Registro Público de Servicios Sociales)",
-   "url": "https://transparencia.ayto-fuenlabrada.es/",
-   "online": true,
-   "inPerson": true,
-   "citation": {
-    "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-    "locator": "Ordenanza, art. 10",
-    "excerpt": "La petición se realizará en el Registro Públi- co de Servicios Sociales mediante modelo normalizado de solicitud, adjuntando la docu- mentación requerida en el artículo 5 y, en su caso, la establecida en el artículo 6.",
-    "excerptSha256": "11c85b92501274a7003a399d7e6206865d65446c8ae44ec0fee7934ce2d47aed"
-   }
-  },
-  "documents": [
-   {
-    "id": "doc-identidad",
-    "label": "Fotocopia del DNI de los miembros de la unidad familiar que lo posean; para extranjeros, tarjeta de residente, de asilo o refugio u otro documento de estancia legal",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 5.1",
-     "excerpt": "Fotocopia del documento nacional de identidad de los miembros de la unidad fa- miliar que lo posean",
-     "excerptSha256": "77131adaa5e8cafdb0a689e2354279e49f4eafaa9b7bfb9b7932c6f46723cc79"
-    }
-   },
-   {
-    "id": "doc-libro-familia",
-    "label": "Fotocopia del libro de familia",
-    "mandatory": false,
-    "citation": {
-     "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 5.2",
-     "excerpt": "Fotocopia del libro de familia.",
-     "excerptSha256": "9f6c443b1568f8bfbc89566680f8c5fd1d73ed561f4a42c0cef2eaf28b7c064f"
-    }
-   },
-   {
-    "id": "doc-ingresos",
-    "label": "Acreditación de los ingresos económicos de todos los miembros en edad laboral: nóminas, recibos o justificantes de pensiones, certificados del SPEE de demanda de empleo y de prestaciones, u otro documento de ingresos",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 5.3",
-     "excerpt": "Acreditación de los ingresos económicos de todos los miembros en edad laboral de la unidad familiar",
-     "excerptSha256": "ece76c3357854d1b678171dda8dc582386dbe5e08c4bb73e57353432c4c3e3bc"
-    }
-   },
-   {
-    "id": "doc-declaracion-jurada",
-    "label": "Excepcionalmente, si no puedes aportar la documentación, declaración jurada o promesa de carencia absoluta de rentas familiares",
-    "mandatory": false,
-    "citation": {
-     "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-     "locator": "Ordenanza, art. 5, in fine",
-     "excerpt": "se aportará declaración jurada o promesa del interesado en la que se haga constar la carencia absoluta de rentas familiares",
-     "excerptSha256": "f6333b1641ab8d8dc873d8ed4537f8d689e859062dd00fca43bbda029008058a"
-    }
-   }
-  ]
- },
- "amount": {
-  "type": "variable",
-  "period": "monthly",
-  "citation": {
-   "sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
-   "locator": "Ordenanza, art. 7.1 (baremo por ingresos y tamaño de unidad familiar)",
-   "excerpt": "El importe de las distintas ayudas económicas, y dentro de las disponibilidades presupuestarias, estará en función de tres aspectos",
-   "excerptSha256": "9a2bc10f72eab2ddf04a614e6f2286878cfac2f642643f01fdb0ea57d7995845"
-  }
- },
- "effortInputs": {
-  "requiresCertificate": true,
-  "formPages": 1
- },
- "themes": [
-  "ingresos_minimos",
-  "vivienda"
- ],
- "lifeEvents": [
-  "perder_empleo",
-  "ingresos_bajos"
- ]
+	"benefitSlug": "fuenlabrada-prestaciones-sociales",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2013/09/20/BOCM-20130920-45.PDF",
+			"title": "Ordenanza municipal reguladora del reconocimiento del derecho y concesión de prestaciones sociales individuales de carácter económico o material del Ayuntamiento de Fuenlabrada (modificaciones aprobadas en pleno de 10 de mayo y 6 de junio de 2013; texto íntegro en BOCM n.º 224, de 20 de septiembre de 2013, doc. 45)"
+		},
+		{
+			"id": "fuenlabrada-ordenanza-prestaciones",
+			"rank": 2,
+			"documentType": "informational",
+			"url": "https://transparencia.ayto-fuenlabrada.es/wp-content/uploads/2020/09/Ordenanza-de-Servicios-Sociales.pdf",
+			"title": "Texto consolidado de la ordenanza de prestaciones sociales individuales en la web de transparencia municipal (mismo contenido que la publicación del BOCM n.º 224 de 2013)"
+		}
+	],
+	"parametersUsed": [],
+	"requirements": [
+		{
+			"id": "mayor-edad",
+			"hard": true,
+			"timeDependent": "increasing",
+			"label": "Ser mayor de edad (para comedor de mayores se exige ser mayor de sesenta años o pensionista; para habitabilidad de la vivienda habitual de mayores, sesenta y cinco años o sesenta con limitaciones)",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.1",
+				"excerpt": "Ser mayor de edad.",
+				"excerptSha256": "01f7044801ae50d59583297f5d0e19ffb67c0d3a25b717ccc5e05a52b5332598"
+			},
+			"condition": {
+				"field": "age",
+				"op": "gte",
+				"value": 18
+			}
+		},
+		{
+			"id": "empadronado-fuenlabrada",
+			"hard": true,
+			"label": "Estar empadronado/a en el municipio de Fuenlabrada. Se exceptúa a las prestaciones dirigidas a personas transeúntes, a las mujeres que han sufrido o están sufriendo violencia de género en el último año y a los supuestos de los arts. 10.3 y 11.1 de la L.O. 1/1996",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.2",
+				"excerpt": "Estar empadronado en el municipio de Fuenlabrada: se exceptúa este requisito para las prestaciones dirigidas a transeúntes, mujeres que han sufrido o están sufriendo en el último año violencia de género",
+				"excerptSha256": "88e0c4eaa2e2c89fe682d7bb07f842cb17e046771518770f424fd3c4c3db817e"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"municipality": "28058"
+				},
+				"label": "estás empadronado/a en Fuenlabrada (28058)"
+			}
+		},
+		{
+			"id": "carencia-ingresos",
+			"hard": false,
+			"label": "Carecer de ingresos o rentas suficientes: el límite de ingresos netos mensuales depende del tamaño de la unidad familiar (baremo del art. 7: persona sola hasta 665,33 €/mes; unidad de 2 hasta 754,71 €; de 3 hasta 845,45 €; de 4 hasta 937,55 €; de 5 hasta 1.006,47 €; de 6 hasta 1.089,25 €; de 7 o más hasta 1.147,95 €/mes, con cobertura porcentual decreciente). Como referencia orientativa usamos el límite de persona sola: 7.984 €/año",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.3",
+				"excerpt": "Carecer de ingresos o rentas suficientes: se considera que se carece de ingresos o rentas suficientes cuando la persona física o la unidad familiar que se encuentra en situa- ción acreditada de grave necesidad, en su caso, no obtengan unos ingresos netos mensuales superiores, por todos los conceptos, al baremo establecido en el artículo 7, apartado 1.",
+				"excerptSha256": "99afdc3220495234f1897f5624373396d46908042c4fb54f8dbb6bcaf5e02c81"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"value": 6400
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "grave-necesidad-valoracion",
+			"label": "La situación de grave necesidad individual o familiar la acredita la valoración del trabajador social: las prestaciones son siempre un apoyo a la intervención social, no un derecho subjetivo automático",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.3",
+				"excerpt": "se encuentra en situa- ción acreditada de grave necesidad",
+				"excerptSha256": "116f832fded4d00ae2ef42c7b37b9a8f08a58527b42f5b18aef4d081c66afe5d"
+			}
+		},
+		{
+			"id": "excepcion-violencia-genero",
+			"label": "Con carácter excepcional pueden ser beneficiarias las mujeres en situación de grave necesidad que, aun no cumpliendo los requisitos, han padecido o padecen violencia de género en el último año y pueden acreditarlo",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4, párrafo excepcional",
+				"excerpt": "podrán ser beneficiarias de estas prestaciones aquellas mu- jeres que constituyendo o no unidades familiares se encuentren en situación de grave nece- sidad y que, aun no cumpliendo los requisitos aquí exigidos, han padecido o están padecien- do en el último año violencia de género y este hecho pueda ser acreditado.",
+				"excerptSha256": "686ec5bb9732c0a795b5ef95fec801bbe77d2f637188e33aeeeeed83ddf5fc4f"
+			}
+		},
+		{
+			"id": "justificacion-prestacion-anterior",
+			"label": "Si fuiste beneficiario antes, debes haber justificado el gasto de la prestación anterior para el fin pretendido y en el plazo previsto",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4.5",
+				"excerpt": "Si ha sido beneficiario, anteriormente, de una prestación, haber justificado su gas- to para el fin pretendido, en el tiempo establecido en el artículo 11 de la presente ordenan- za.",
+				"excerptSha256": "162450c2fc5b264f3a674f6f1593ffb85169079fc4c1d179e6b7c4e02986a8b8"
+			}
+		},
+		{
+			"id": "extranjeria-lo-4-2000",
+			"label": "Las personas sin nacionalidad española se rigen por la L.O. 4/2000 y los tratados internacionales; el acceso se acredita con tarjeta de residente, de asilo o refugio u otro documento de estancia legal",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 4, in fine, y art. 5.1",
+				"excerpt": "en el supuesto de extranjeros, tarjeta de residente, de asilo o refugio o cualquier otro documento que permita su estancia legal en el país.",
+				"excerptSha256": "1e5c0c2f3c5064347a6cc2f1d2c8842b66847d9965d69ac661f444d494e32d02"
+			}
+		},
+		{
+			"id": "nueva-ordenanza-en-tramite",
+			"label": "Vigencia: en mayo de 2025 la Junta de Gobierno Local aprobó el proyecto de una nueva ordenanza de prestaciones sociales individuales (expediente 2025/GPR_01/003828) que, al entrar en vigor, derogará los artículos de esta ordenanza que determine; hasta entonces sigue vigente el texto de 2013",
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, disposición final y pie de publicación (BOCM n.º 224, de 20 de septiembre de 2013)",
+				"excerpt": "quedan definitivamente aprobadas las citadas modificaciones, que entra- rán en vigor al día siguiente de la publicación del texto íntegro que se acompaña.",
+				"excerptSha256": "d8c1ceec1c5dda66aeb6978024228d94b7fc229431d3ebf9282706bc87df852a"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 10",
+				"excerpt": "La petición se realizará en el Registro Públi- co de Servicios Sociales mediante modelo normalizado de solicitud",
+				"excerptSha256": "9bbf18a9bfab36e9743c1a3ef8c9a04c1690a38f07e9dec1182980d98e7f1f4f"
+			}
+		},
+		"channel": {
+			"managingBody": "Ayuntamiento de Fuenlabrada — Servicios Sociales (Registro Público de Servicios Sociales)",
+			"url": "https://transparencia.ayto-fuenlabrada.es/",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+				"locator": "Ordenanza, art. 10",
+				"excerpt": "La petición se realizará en el Registro Públi- co de Servicios Sociales mediante modelo normalizado de solicitud, adjuntando la docu- mentación requerida en el artículo 5 y, en su caso, la establecida en el artículo 6.",
+				"excerptSha256": "11c85b92501274a7003a399d7e6206865d65446c8ae44ec0fee7934ce2d47aed"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-identidad",
+				"label": "Fotocopia del DNI de los miembros de la unidad familiar que lo posean; para extranjeros, tarjeta de residente, de asilo o refugio u otro documento de estancia legal",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 5.1",
+					"excerpt": "Fotocopia del documento nacional de identidad de los miembros de la unidad fa- miliar que lo posean",
+					"excerptSha256": "77131adaa5e8cafdb0a689e2354279e49f4eafaa9b7bfb9b7932c6f46723cc79"
+				}
+			},
+			{
+				"id": "doc-libro-familia",
+				"label": "Fotocopia del libro de familia",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 5.2",
+					"excerpt": "Fotocopia del libro de familia.",
+					"excerptSha256": "9f6c443b1568f8bfbc89566680f8c5fd1d73ed561f4a42c0cef2eaf28b7c064f"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Acreditación de los ingresos económicos de todos los miembros en edad laboral: nóminas, recibos o justificantes de pensiones, certificados del SPEE de demanda de empleo y de prestaciones, u otro documento de ingresos",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 5.3",
+					"excerpt": "Acreditación de los ingresos económicos de todos los miembros en edad laboral de la unidad familiar",
+					"excerptSha256": "ece76c3357854d1b678171dda8dc582386dbe5e08c4bb73e57353432c4c3e3bc"
+				}
+			},
+			{
+				"id": "doc-declaracion-jurada",
+				"label": "Excepcionalmente, si no puedes aportar la documentación, declaración jurada o promesa de carencia absoluta de rentas familiares",
+				"mandatory": false,
+				"citation": {
+					"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+					"locator": "Ordenanza, art. 5, in fine",
+					"excerpt": "se aportará declaración jurada o promesa del interesado en la que se haga constar la carencia absoluta de rentas familiares",
+					"excerptSha256": "f6333b1641ab8d8dc873d8ed4537f8d689e859062dd00fca43bbda029008058a"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "monthly",
+		"citation": {
+			"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+			"locator": "Ordenanza, art. 7.1 (baremo por ingresos y tamaño de unidad familiar)",
+			"excerpt": "El importe de las distintas ayudas económicas, y dentro de las disponibilidades presupuestarias, estará en función de tres aspectos",
+			"excerptSha256": "9a2bc10f72eab2ddf04a614e6f2286878cfac2f642643f01fdb0ea57d7995845"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"ingresos_minimos",
+		"vivienda"
+	],
+	"lifeEvents": [
+		"perder_empleo",
+		"ingresos_bajos"
+	]
 }

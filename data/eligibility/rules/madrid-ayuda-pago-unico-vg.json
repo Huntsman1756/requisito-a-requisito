@@ -1,187 +1,187 @@
 {
- "benefitSlug": "madrid-ayuda-pago-unico-vg",
- "standalone": true,
- "rulesVersion": 1,
- "verifiedAt": "2026-10-06",
- "humanReview": {
-  "status": "pending"
- },
- "verification": {
-  "status": "ok",
-  "by": "verificador-independiente",
-  "at": "2026-10-06",
-  "report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
- },
- "referenceDate": "application",
- "sources": [
-  {
-   "id": "bocm-20221202-orden-2739-vg",
-   "rank": 1,
-   "documentType": "regulatory_base",
-   "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/12/02/BOCM-20221202-22.PDF",
-   "title": "Orden 2739/2022, de 28 de noviembre, de la Consejería de Familia, Juventud y Política Social, por la que se aprueban las normas reguladoras para la concesión directa de las ayudas económicas de pago único recogidas en el artículo 27 de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género (BOCM n.º 287, de 2 de diciembre de 2022, doc. 22)"
-  }
- ],
- "parametersUsed": [
-  "SMI_MENSUAL"
- ],
- "requirements": [
-  {
-   "id": "residente-cm",
-   "hard": true,
-   "label": "Ser residente en cualquier municipio de la Comunidad de Madrid",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 3.c",
-    "excerpt": "c) Ser residente en cualquier municipio de la Comunidad de Madrid.",
-    "excerptSha256": "ac0f7ad025df24effe3067e5f440f4348ddfe2b1a5af76b1219cd1d01c8f9bee"
-   },
-   "condition": {
-    "field": "territory",
-    "op": "within_territory",
-    "value": {
-     "ccaa": "13"
-    },
-    "label": "eres residente en la Comunidad de Madrid (13)"
-   }
-  },
-  {
-   "id": "renta-75-smi",
-   "hard": false,
-   "label": "No tener rentas mensuales que superen el 75 % del SMI excluida la parte proporcional de dos pagas extraordinarias (915,75 €/mes en 2026, es decir, 10.989 €/año). Si tienes responsabilidades familiares, se cumple cuando la renta mensual de la unidad familiar dividida por el número de miembros no supera ese límite",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 3.d y art. 5.2",
-    "excerpt": "Carecer de rentas que, en cómputo mensual, superen el 75 por 100 del salario mí- nimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias.",
-    "excerptSha256": "27479c82f716e49404e7184b51d4cbd32b8ce75787f1a2254295bfc2cc0986f6"
-   },
-   "condition": {
-    "field": "incomeAnnual",
-    "op": "lte",
-    "param": "SMI_MENSUAL",
-    "multiplier": 9
-   }
-  }
- ],
- "uncoveredRequirements": [
-  {
-   "id": "titulo-vg-vigente",
-   "label": "Tener vigente el título que acredita la situación de violencia de género: sentencia condenatoria, orden de protección, medida cautelar a favor, informe del Ministerio Fiscal con indicios, acreditación administrativa del art. 23 de la L.O. 1/2004 o título habilitante del art. 31 de la Ley 5/2005",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 3.b y art. 4",
-    "excerpt": "b) Tener vigente el título que acredita la situación de violencia de género.",
-    "excerptSha256": "941797e3ffca13b3083313c31bd922ed788adc9fe0e5940ac5679eb3395cb30e"
-   }
-  },
-  {
-   "id": "no-beneficiaria-anterior",
-   "label": "No haber sido beneficiaria anteriormente de esta misma ayuda, aunque puedas aportar nueva acreditación de una situación de violencia de género",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 3.a",
-    "excerpt": "a) No haber sido beneficiaria anteriormente de esta misma ayuda, aun en el caso de que la solicitante pudiera aportar nueva acreditación de una situación de violencia de género.",
-    "excerptSha256": "ad7bfd52d24994d6d3c5b39b839a0183a714b1a574eaa355eb70532085ef68a6"
-   }
-  },
-  {
-   "id": "dificultades-empleo-spe",
-   "label": "Tener especiales dificultades para obtener un empleo, que se acreditan con un informe del Servicio Público de Empleo conforme a los requisitos del art. 6 (antigüedad de la situación, desempleo, formación, discapacidad reconocida y otras circunstancias de empleabilidad)",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 3.e",
-    "excerpt": "e) Tener especiales dificultades para obtener un empleo, que se acreditará a través de un Informe del Servicio Público de Empleo",
-    "excerptSha256": "6bad6e06b7483ebb1ac2691759e3b71619c1f8f34d9fdcfe57d79b56d07a17a1"
-   }
-  },
-  {
-   "id": "cuantia-por-responsabilidades",
-   "label": "La cuantía escala con las responsabilidades familiares y la discapacidad ≥33 % o ≥65 % de la víctima o de los familiares a cargo: 12, 18 o 24 meses de subsidio de desempleo; un hijo nacido dentro de los 300 días siguientes a la solicitud permite revisar la cuantía",
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 8.2-6",
-    "excerpt": "Cuando la víctima de violencia de género tuviera reconocido oficialmente un gra- do de discapacidad igual o superior al 33 por 100, el importe de la ayuda será equivalente a:",
-    "excerptSha256": "2505477edf2acc6426910f7a011ae9ea4a1481293a5efbd7ffb09ffc722739a4"
-   }
-  }
- ],
- "application": {
-  "window": {
-   "rolling": true,
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, art. 1.2 (vigencia indefinida; la sede marca «en plazo: permanente»)",
-    "excerpt": "La presente Orden tendrá una vigencia indefinida, mientras no se produzca una modificación de la normativa estatal o autonómica de referencia",
-    "excerptSha256": "3c2ab52bfc75f6a16af9b06f1baf24fd4cd9fdf5935263b7f5def6bbbcebf033"
-   }
-  },
-  "channel": {
-   "managingBody": "Comunidad de Madrid — Consejería competente en materia de Igualdad (Dirección General de Igualdad)",
-   "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia",
-   "online": true,
-   "inPerson": true,
-   "citation": {
-    "sourceId": "bocm-20221202-orden-2739-vg",
-    "locator": "Orden, normas reguladoras, art. 10.2",
-    "excerpt": "la solicitud se podrá presentar a través del registro electrónico de la Consejería competente en materia de Igualdad o en los restantes registros electrónicos de cualquiera de los sujetos a los que se refiere el artículo 2.1 de la Ley 39/2015",
-    "excerptSha256": "300ab13ede91dadff9ab9bede2492f2031f6ea5ae4e709c1b86f166d46da3244"
-   }
-  },
-  "documents": [
-   {
-    "id": "doc-acreditacion-vg",
-    "label": "Acreditación de la situación de violencia de género (sentencia, orden de protección, medida cautelar, informe del Ministerio Fiscal, acreditación administrativa o título habilitante)",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20221202-orden-2739-vg",
-     "locator": "Orden, normas reguladoras, art. 4",
-     "excerpt": "se acreditarán por la víctima, a través de cualquiera de los siguientes medios: a) Sentencia condenatoria por un delito de violencia de género.",
-     "excerptSha256": "862a72afb8c92c2da0fd06f24c552b811802cbead37062e5246cadfb78ea6aba"
-    }
-   },
-   {
-    "id": "doc-ingresos",
-    "label": "Justificantes de ingresos mensuales (nómina, certificado de pensión o declaración jurada de ingresos) de la solicitante y de los familiares a cargo, en su caso",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20221202-orden-2739-vg",
-     "locator": "Orden, normas reguladoras, art. 10 y anexo",
-     "excerpt": "o declaración jurada de ingresos) de la persona solicitante y de los familiares a cargo, en su caso.",
-     "excerptSha256": "36563a468c28103db774ba3d88923d0ef7abc9d51273f92ea464aaea042efe92"
-    }
-   },
-   {
-    "id": "doc-certificado-catastro",
-    "label": "Certificado de la Dirección General del Catastro sobre titularidad o no titularidad de bienes inmuebles de la solicitante",
-    "mandatory": true,
-    "citation": {
-     "sourceId": "bocm-20221202-orden-2739-vg",
-     "locator": "Orden, normas reguladoras, art. 10.i",
-     "excerpt": "Certificado expedido por la Dirección General del Catastro que acredite la titulari- dad o no titularidad de bienes inmuebles de la solicitante.",
-     "excerptSha256": "c5f77c0656a7ea9a6fd7ebec602a491a73840dc229f86953e0cee98b233ecd3b"
-    }
-   }
-  ]
- },
- "amount": {
-  "type": "variable",
-  "period": "one_off",
-  "citation": {
-   "sourceId": "bocm-20221202-orden-2739-vg",
-   "locator": "Orden, normas reguladoras, art. 8.1",
-   "excerpt": "El importe de la ayuda será, con carácter general, equivalente al de seis meses de subsidio por desempleo.",
-   "excerptSha256": "5afd6c01384f65a9d6c1158e7161cf65519213715577d1fff06b78a8685d56a0"
-  }
- },
- "effortInputs": {
-  "requiresCertificate": true,
-  "formPages": 1
- },
- "themes": [
-  "violencia_genero",
-  "ingresos_minimos"
- ],
- "lifeEvents": [
-  "ingresos_bajos"
- ]
+	"benefitSlug": "madrid-ayuda-pago-unico-vg",
+	"standalone": true,
+	"rulesVersion": 1,
+	"verifiedAt": "2026-10-06",
+	"humanReview": {
+		"status": "pending"
+	},
+	"verification": {
+		"status": "ok",
+		"by": "verificador-independiente",
+		"at": "2026-10-06",
+		"report": "evidence/2026-10-06-F3/verificacion-ola-8.md"
+	},
+	"referenceDate": "application",
+	"sources": [
+		{
+			"id": "bocm-20221202-orden-2739-vg",
+			"rank": 1,
+			"documentType": "regulatory_base",
+			"url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/12/02/BOCM-20221202-22.PDF",
+			"title": "Orden 2739/2022, de 28 de noviembre, de la Consejería de Familia, Juventud y Política Social, por la que se aprueban las normas reguladoras para la concesión directa de las ayudas económicas de pago único recogidas en el artículo 27 de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género (BOCM n.º 287, de 2 de diciembre de 2022, doc. 22)"
+		}
+	],
+	"parametersUsed": [
+		"SMI_MENSUAL"
+	],
+	"requirements": [
+		{
+			"id": "residente-cm",
+			"hard": true,
+			"label": "Ser residente en cualquier municipio de la Comunidad de Madrid",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 3.c",
+				"excerpt": "c) Ser residente en cualquier municipio de la Comunidad de Madrid.",
+				"excerptSha256": "ac0f7ad025df24effe3067e5f440f4348ddfe2b1a5af76b1219cd1d01c8f9bee"
+			},
+			"condition": {
+				"field": "territory",
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				},
+				"label": "eres residente en la Comunidad de Madrid (13)"
+			}
+		},
+		{
+			"id": "renta-75-smi",
+			"hard": false,
+			"label": "No tener rentas mensuales que superen el 75 % del SMI excluida la parte proporcional de dos pagas extraordinarias (915,75 €/mes en 2026, es decir, 10.989 €/año). Si tienes responsabilidades familiares, se cumple cuando la renta mensual de la unidad familiar dividida por el número de miembros no supera ese límite",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 3.d y art. 5.2",
+				"excerpt": "Carecer de rentas que, en cómputo mensual, superen el 75 por 100 del salario mí- nimo interprofesional, excluida la parte proporcional de dos pagas extraordinarias.",
+				"excerptSha256": "27479c82f716e49404e7184b51d4cbd32b8ce75787f1a2254295bfc2cc0986f6"
+			},
+			"condition": {
+				"field": "incomeAnnual",
+				"op": "lte",
+				"param": "SMI_MENSUAL",
+				"multiplier": 9
+			}
+		}
+	],
+	"uncoveredRequirements": [
+		{
+			"id": "titulo-vg-vigente",
+			"label": "Tener vigente el título que acredita la situación de violencia de género: sentencia condenatoria, orden de protección, medida cautelar a favor, informe del Ministerio Fiscal con indicios, acreditación administrativa del art. 23 de la L.O. 1/2004 o título habilitante del art. 31 de la Ley 5/2005",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 3.b y art. 4",
+				"excerpt": "b) Tener vigente el título que acredita la situación de violencia de género.",
+				"excerptSha256": "941797e3ffca13b3083313c31bd922ed788adc9fe0e5940ac5679eb3395cb30e"
+			}
+		},
+		{
+			"id": "no-beneficiaria-anterior",
+			"label": "No haber sido beneficiaria anteriormente de esta misma ayuda, aunque puedas aportar nueva acreditación de una situación de violencia de género",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 3.a",
+				"excerpt": "a) No haber sido beneficiaria anteriormente de esta misma ayuda, aun en el caso de que la solicitante pudiera aportar nueva acreditación de una situación de violencia de género.",
+				"excerptSha256": "ad7bfd52d24994d6d3c5b39b839a0183a714b1a574eaa355eb70532085ef68a6"
+			}
+		},
+		{
+			"id": "dificultades-empleo-spe",
+			"label": "Tener especiales dificultades para obtener un empleo, que se acreditan con un informe del Servicio Público de Empleo conforme a los requisitos del art. 6 (antigüedad de la situación, desempleo, formación, discapacidad reconocida y otras circunstancias de empleabilidad)",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 3.e",
+				"excerpt": "e) Tener especiales dificultades para obtener un empleo, que se acreditará a través de un Informe del Servicio Público de Empleo",
+				"excerptSha256": "6bad6e06b7483ebb1ac2691759e3b71619c1f8f34d9fdcfe57d79b56d07a17a1"
+			}
+		},
+		{
+			"id": "cuantia-por-responsabilidades",
+			"label": "La cuantía escala con las responsabilidades familiares y la discapacidad ≥33 % o ≥65 % de la víctima o de los familiares a cargo: 12, 18 o 24 meses de subsidio de desempleo; un hijo nacido dentro de los 300 días siguientes a la solicitud permite revisar la cuantía",
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 8.2-6",
+				"excerpt": "Cuando la víctima de violencia de género tuviera reconocido oficialmente un gra- do de discapacidad igual o superior al 33 por 100, el importe de la ayuda será equivalente a:",
+				"excerptSha256": "2505477edf2acc6426910f7a011ae9ea4a1481293a5efbd7ffb09ffc722739a4"
+			}
+		}
+	],
+	"application": {
+		"window": {
+			"rolling": true,
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, art. 1.2 (vigencia indefinida; la sede marca «en plazo: permanente»)",
+				"excerpt": "La presente Orden tendrá una vigencia indefinida, mientras no se produzca una modificación de la normativa estatal o autonómica de referencia",
+				"excerptSha256": "3c2ab52bfc75f6a16af9b06f1baf24fd4cd9fdf5935263b7f5def6bbbcebf033"
+			}
+		},
+		"channel": {
+			"managingBody": "Comunidad de Madrid — Consejería competente en materia de Igualdad (Dirección General de Igualdad)",
+			"url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia",
+			"online": true,
+			"inPerson": true,
+			"citation": {
+				"sourceId": "bocm-20221202-orden-2739-vg",
+				"locator": "Orden, normas reguladoras, art. 10.2",
+				"excerpt": "la solicitud se podrá presentar a través del registro electrónico de la Consejería competente en materia de Igualdad o en los restantes registros electrónicos de cualquiera de los sujetos a los que se refiere el artículo 2.1 de la Ley 39/2015",
+				"excerptSha256": "300ab13ede91dadff9ab9bede2492f2031f6ea5ae4e709c1b86f166d46da3244"
+			}
+		},
+		"documents": [
+			{
+				"id": "doc-acreditacion-vg",
+				"label": "Acreditación de la situación de violencia de género (sentencia, orden de protección, medida cautelar, informe del Ministerio Fiscal, acreditación administrativa o título habilitante)",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, art. 4",
+					"excerpt": "se acreditarán por la víctima, a través de cualquiera de los siguientes medios: a) Sentencia condenatoria por un delito de violencia de género.",
+					"excerptSha256": "862a72afb8c92c2da0fd06f24c552b811802cbead37062e5246cadfb78ea6aba"
+				}
+			},
+			{
+				"id": "doc-ingresos",
+				"label": "Justificantes de ingresos mensuales (nómina, certificado de pensión o declaración jurada de ingresos) de la solicitante y de los familiares a cargo, en su caso",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, art. 10 y anexo",
+					"excerpt": "o declaración jurada de ingresos) de la persona solicitante y de los familiares a cargo, en su caso.",
+					"excerptSha256": "36563a468c28103db774ba3d88923d0ef7abc9d51273f92ea464aaea042efe92"
+				}
+			},
+			{
+				"id": "doc-certificado-catastro",
+				"label": "Certificado de la Dirección General del Catastro sobre titularidad o no titularidad de bienes inmuebles de la solicitante",
+				"mandatory": true,
+				"citation": {
+					"sourceId": "bocm-20221202-orden-2739-vg",
+					"locator": "Orden, normas reguladoras, art. 10.i",
+					"excerpt": "Certificado expedido por la Dirección General del Catastro que acredite la titulari- dad o no titularidad de bienes inmuebles de la solicitante.",
+					"excerptSha256": "c5f77c0656a7ea9a6fd7ebec602a491a73840dc229f86953e0cee98b233ecd3b"
+				}
+			}
+		]
+	},
+	"amount": {
+		"type": "variable",
+		"period": "one_off",
+		"citation": {
+			"sourceId": "bocm-20221202-orden-2739-vg",
+			"locator": "Orden, normas reguladoras, art. 8.1",
+			"excerpt": "El importe de la ayuda será, con carácter general, equivalente al de seis meses de subsidio por desempleo.",
+			"excerptSha256": "5afd6c01384f65a9d6c1158e7161cf65519213715577d1fff06b78a8685d56a0"
+		}
+	},
+	"effortInputs": {
+		"requiresCertificate": true,
+		"formPages": 1
+	},
+	"themes": [
+		"violencia_genero",
+		"ingresos_minimos"
+	],
+	"lifeEvents": [
+		"ingresos_bajos"
+	]
 }
