@@ -140,10 +140,8 @@ const level2 = universe
 			skipped.push({ f: p.id, reason: "ya tiene regla (deduplicado por URL oficial)" });
 			return false;
 		}
-		if (p.accessState === "CLOSED") {
-			skipped.push({ f: p.id, reason: "CLOSED (convocatoria única o sin recurrente acreditado)" });
-			return false;
-		}
+		// L2-ALL: todo el universo apto se publica, incluidas las CLOSED — el
+		// explorador las muestra con su estado («Cerrada») y las ordena al final.
 		return true;
 	})
 	.map((p) => {

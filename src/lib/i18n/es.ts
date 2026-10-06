@@ -177,6 +177,7 @@ export const es = {
 	"level2.state.ROLLING": "Plazo continuo",
 	"level2.state.UPCOMING": "Próxima",
 	"level2.state.CLOSED_RECURRING": "Se convoca cada año",
+	"level2.state.CLOSED": "Cerrada",
 	"level2.state.UNKNOWN": "Plazo por confirmar",
 
 	"card.youGet": "Puedes recibir",

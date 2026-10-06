@@ -40,6 +40,7 @@ const STATES: [string, string][] = [
 	["ROLLING", "Plazo continuo"],
 	["UPCOMING", "Próxima"],
 	["CLOSED_RECURRING", "Se convoca cada año"],
+	["CLOSED", "Cerrada"],
 	["UNKNOWN", "Plazo por confirmar"],
 ];
 
@@ -64,7 +65,7 @@ export function Explorer() {
 	const filtered = useMemo(() => {
 		if (!items) return [];
 		const nq = norm(q);
-		const order = { OPEN: 0, ROLLING: 1, UPCOMING: 2, UNKNOWN: 3 } as const;
+		const order = { OPEN: 0, ROLLING: 1, UPCOMING: 2, UNKNOWN: 3, CLOSED: 4, CLOSED_RECURRING: 4 } as const;
 		return items
 			.filter((i) => {
 			if (theme && !(i.themes ?? []).includes(theme)) return false;
