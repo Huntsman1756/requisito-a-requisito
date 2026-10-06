@@ -127,6 +127,24 @@ async function revalidateSources(): Promise<{
 				);
 				continue;
 			}
+			// Segunda guard: el texto nuevo debe compartir el vocabulario propio
+			// del snapshot. Una WAF/página de bloqueo con 200 (p. ej. segss.es
+			// desde IPs del CI) tiene tamaño plausible pero vocabulario ajeno;
+			// una reforma real conserva casi todo el léxico de la norma.
+			const longWords = new Set(
+				oldText.toLowerCase().split(/\s+/).filter((w) => w.length > 12),
+			);
+			if (longWords.size > 0) {
+				const lower = newText.toLowerCase();
+				let hits = 0;
+				for (const w of longWords) if (lower.includes(w)) hits++;
+				if (hits / longWords.size < 0.3) {
+					fetchErrors.push(
+						`${meta.id}: contenido inverosímil (vocabulario ${hits}/${longWords.size})`,
+					);
+					continue;
+				}
+			}
 			// texto distinto: ¿siguen presentes los extractos citados?
 			const missing = excerptsForSource(meta.id).filter(
 				(ex) => !newText.includes(ex),
@@ -219,7 +237,11 @@ async function main() {
 	console.log(
 		`[freshness] fuentes: ${res.unchanged} iguales, ${res.cosmetic.length} cosméticas, ${res.stale.length} STALE, ${res.fetchErrors.length} errores`,
 	);
-	if (!DRY) {
+	// En una corrida anómala (red degradada, bloqueos masivos de IP) no se
+	// toca el stale acumulado: el gate verifica contra el último estado
+	// fiable, no contra una lista fabricada por una corrida rota.
+	const anomalous = res.fetchErrors.length > 10;
+	if (!DRY && !anomalous) {
 		mkdirSync(FRESH_DIR, { recursive: true });
 		// stale.json: el build las excluirá (fail-closed vía G12/stale)
 		writeFileSync(
