@@ -7,7 +7,7 @@
 	"engines": {
 		"node": ">=22.6"
 	},
-	"description": "Orientador de ayudas p\u00fablicas de la Comunidad de Madrid con fuente oficial verificable",
+	"description": "Orientador de ayudas públicas de la Comunidad de Madrid con fuente oficial verificable",
 	"scripts": {
 		"dev": "next dev",
 		"build": "npm run eligibility:build && npm run datos:public && next build",
@@ -30,7 +30,8 @@
 		"rules:fill-hashes": "tsx ./scripts/ruleset-fill-hashes.ts",
 		"datos:public": "tsx ./scripts/publish-public-data.ts",
 		"coverage:engine": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/lib/eligibility-engine/**' --coverage.reporter=text",
-		"universe:build": "tsx scripts/universe/build.ts"
+		"universe:build": "tsx scripts/universe/build.ts",
+		"freshness": "tsx scripts/freshness.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",

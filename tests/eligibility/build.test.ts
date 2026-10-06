@@ -137,6 +137,20 @@ describe("eligibility-build", () => {
 		).toContain("ELIG_G12_NO_VERIFICATION");
 	});
 
+	it("F9: una fuente stale (extracto ya no presente) expulsa la regla", () => {
+		const { root, opts } = makeEnv();
+		roots.push(root);
+		mkdirSync(join(root, "x"), { recursive: true });
+		writeFileSync(
+			join(root, "freshness-stale.json"),
+			JSON.stringify({ date: "2026-10-08", stale: ["bocm-conv"] }),
+		);
+		buildEligibility(opts);
+		const report = JSON.parse(readFileSync(join(opts.outDir, "eligibility-report.json"), "utf8"));
+		// todas las reglas citan bocm-conv → todas excluidas
+		expect(report.included).toEqual([]);
+	});
+
 	it("digest estable: dos builds con los mismos datos dan el mismo digest", () => {
 		const a = makeEnv();
 		const b = makeEnv();

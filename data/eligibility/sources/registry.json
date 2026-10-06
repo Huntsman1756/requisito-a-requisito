@@ -119,6 +119,11 @@
 			"host": "crtm.es",
 			"maxRank": 3,
 			"label": "CRTM — Consorcio Regional de Transportes de Madrid (órgano gestor)"
+		},
+		{
+			"host": "prestaciones.seg-social.es",
+			"maxRank": 3,
+			"label": "Sede electrónica de la Seguridad Social (prestaciones.seg-social.es)"
 		}
 	]
 }

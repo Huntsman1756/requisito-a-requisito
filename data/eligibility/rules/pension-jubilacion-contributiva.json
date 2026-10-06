@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "pension-jubilacion-contributiva",
 	"standalone": true,
-	"rulesVersion": 2,
+	"rulesVersion": 3,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -34,13 +34,6 @@
 			"documentType": "procedure_page",
 			"url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28482?changeLanguage=es",
 			"title": "Seguridad Social — Jubilación ordinaria (Régimen General): gestión, solicitudes y documentación"
-		},
-		{
-			"id": "sede-segss-pensiones",
-			"rank": 3,
-			"documentType": "procedure_page",
-			"url": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Pensiones",
-			"title": "Sede electrónica de la Seguridad Social — Ciudadanos › Pensiones: servicio «Jubilación nacional» y «Simulador de Jubilación»"
 		}
 	],
 	"requirements": [
@@ -240,18 +233,8 @@
 				"excerptSha256": "f1021f2b318707effcb4cd066e5b2802b69c003513aaa3fdfe58fe5d14b7e387"
 			}
 		},
-		"officialSimulator": {
-			"url": "https://prestaciones.seg-social.es/simulador-servicio/simulador-pension-jubilacion.html",
-			"label": "Simulador de Jubilación de la Seguridad Social — calcula tu edad y cuantía con tu vida laboral real",
-			"citation": {
-				"sourceId": "sede-segss-pensiones",
-				"locator": "Ciudadanos › Pensiones › «Simulador de Jubilación»",
-				"excerpt": "Simulador de Jubilación Este servicio permite simular la edad con la que se puede jubilar y la cuantía aproximada. Permite simular situaciones futuras teniendo en cuenta los datos y cotizaciones realizadas hasta el día de hoy.",
-				"excerptSha256": "a09155d07defe40898dc3b35a4d7949036422f2e5f8eccf3f0dba302b8d96e54"
-			}
-		},
 		"channel": {
-			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) si perteneces al Régimen Especial del Mar",
+			"managingBody": "Instituto Nacional de la Seguridad Social (INSS) — Instituto Social de la Marina (ISM) si perteneces al Régimen Especial del Mar — simulador oficial en prestaciones.seg-social.es (vía de autocálculo, se abre desde la sede)",
 			"url": "https://sede.seg-social.gob.es/",
 			"online": true,
 			"inPerson": true,
@@ -268,10 +251,10 @@
 				"label": "Solicitud de la pensión de jubilación («Jubilación nacional» en la sede electrónica), que puede presentarse en nombre propio, por representación o por apoderamiento registrado",
 				"mandatory": true,
 				"citation": {
-					"sourceId": "sede-segss-pensiones",
-					"locator": "Ciudadanos › Pensiones › «Jubilación nacional»",
-					"excerpt": "Jubilación nacional Este servicio permite solicitar la pensión de jubilación nacional en nombre propio, mediante representación o mediante apoderamiento inscrito en el registro electrónico de apoderamientos.",
-					"excerptSha256": "9240121fbedcfd2410817466946355efe66c9f68e31ca3db606897b820fcf4f5"
+					"sourceId": "segss-jubilacion-gestion",
+					"locator": "Jubilación ordinaria › Gestión / Solicitudes",
+					"excerpt": "Documentos que deben acompañar a la solicitud Presentación de la solicitud Formulario de solicitud",
+					"excerptSha256": "79d2c3f0152bbfd67590fbf902a6e54429baf84b474a72b56aef3f3c60623d23"
 				}
 			},
 			{

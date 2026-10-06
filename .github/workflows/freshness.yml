@@ -1,0 +1,71 @@
+name: Freshness diario (F9)
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # 06:00 Europe/Madrid (CET)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: freshness
+  cancel-in-progress: false
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Revalidar fuentes y descubrir leads
+        id: fresh
+        run: npx tsx scripts/freshness.ts | tee freshness-log.txt
+
+      - name: Aviso por fuente stale
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          try:
+              stale = json.load(open("data/freshness/stale.json")).get("stale", [])
+          except Exception:
+              stale = []
+          for sid in stale:
+              title = f"Revisar fuente: {sid} ha cambiado y sus extractos ya no están presentes"
+              body = (
+                  f"La revalidación diaria detectó que `{sid}` cambió y al menos "
+                  "un extracto citado ya no aparece en el texto nuevo. Las reglas "
+                  "que la citan salen del bundle (fail-closed) hasta revisión manual.\n\n"
+                  "_Generado por el job de frescura._"
+              )
+              subprocess.run(
+                  ["gh", "issue", "create", "--title", title, "--body", body, "--label", "freshness"],
+                  env={**os.environ, "GH_TOKEN": os.environ.get("GITHUB_TOKEN", "")},
+                  check=False,
+              )
+          PY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Gate completo antes de publicar
+        id: gate
+        run: npm run validate:full
+
+      - name: Commit freshness
+        if: steps.gate.outcome == 'success'
+        run: |
+          git config user.name "requisito-bot"
+          git config user.email "requisito-bot@users.noreply.github.com"
+          git add data/eligibility/sources data/freshness data/catalog/leads-new.json
+          if git diff --cached --quiet; then
+            echo "sin cambios que commitear"
+          else
+            git commit -m "chore(freshness): revalidación diaria de fuentes"
+            git push
+          fi

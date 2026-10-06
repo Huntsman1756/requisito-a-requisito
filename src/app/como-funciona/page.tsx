@@ -41,6 +41,13 @@ export default function ComoFunciona() {
 				solo se toman de normas y convocatorias; las webs informativas se
 				usan solo para saber dónde y cómo solicitar.
 			</p>
+			<h2>Frescura</h2>
+			<p>
+				Revisamos las fuentes cada día: si una fuente cambia y un extracto
+				citado ya no aparece, la ayuda afectada se retira automáticamente de la
+				lista hasta que la revisamos de nuevo. Nunca mostramos un dato
+				desactualizado como vigente.
+			</p>
 			<h2>Privacidad</h2>
 			<p>
 				La web es estática: no hay servidor ni cuentas. Tus respuestas se

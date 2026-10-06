@@ -53,7 +53,19 @@ export function buildEligibility(opts: BuildOptions): BuildResult {
 	}
 	// G1: ficheros que no parsean aparecen como errores con su nombre de fichero;
 	// no hay ruleset que incluir para ellos.
+	// F9: fuentes marcadas stale (extracto ausente tras re-descarga) ⇒
+	// fuera del bundle, fail-closed.
+	// rulesDir = <root>/data/eligibility/rules → stale.json en data/freshness
+	const staleFile = join(opts.rulesDir, "..", "freshness-stale.json");
+	const staleSources = new Set<string>(
+		existsSync(staleFile)
+			? (JSON.parse(readFileSync(staleFile, "utf8")).stale ?? [])
+			: [],
+	);
+	const staleSet = (rs: (typeof v.rulesets)[number]): boolean =>
+		rs.sources.some((s) => staleSources.has(s.id));
 	const g12 = (rs: (typeof v.rulesets)[number]): boolean => {
+		if (staleSet(rs)) return false;
 		if (rs.verification?.status !== "ok") return false;
 		if (!rs.verification.report) return false;
 		// El informe debe existir en el repo (evidence/…).
