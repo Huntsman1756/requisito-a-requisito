@@ -1,104 +1,109 @@
 {
-  "fecha": "2026-10-06",
-  "memoria": "submission/memoria.md",
-  "claims": [
-    {
-      "texto": "45 ayudas comprobadas requisito a requisito",
-      "evidencia": "ls data/eligibility/rules/*.json = 45; eligibility:build → 45 incluidas, 0 excluidas (digest 36220e6d)",
-      "ok": true
-    },
-    {
-      "texto": "18 del Estado, 19 de la CM y 8 municipales",
-      "evidencia": "clasificación por fuente sobre los 45 rulesets: 8 municipales (ayto-*×4, mostoles, leganes, fuenlabrada×2); CM = fuente BOCM/CM/sede CM = 19; resto estatal = 18",
-      "ok": true
-    },
-    {
-      "texto": "653 programas del universo catalogados",
-      "evidencia": "data/universe/programs.json (653); evidence/2026-10-05-universo/informe.md",
-      "ok": true
-    },
-    {
-      "texto": "154 fuentes oficiales citadas",
-      "evidencia": "data/eligibility/sources/*.json salvo registry.json = 154",
-      "ok": true
-    },
-    {
-      "texto": "105 requisitos modelados / 378 uncovered",
-      "evidencia": "suma sobre rules/*.json",
-      "ok": true
-    },
-    {
-      "texto": "269 pruebas en verde",
-      "evidencia": "npm test → 267 passed + 2 timeouts por carga de la calibración; re-ejecución con --testTimeout 30000 → 269 passed (25 ficheros)",
-      "ok": true
-    },
-    {
-      "texto": "114 URLs del bundle, 0 fallidas",
-      "evidencia": "npx tsx scripts/link-check.ts sobre el bundle anterior; las 6 URLs nuevas de canal de la ola 8 verificadas con curl 200",
-      "ok": true
-    },
-    {
-      "texto": "E2E en 9 proyectos verdes; Firefox no arranca en este equipo",
-      "evidencia": "playwright 45/45 en 9 proyectos; error de lanzamiento documentado en qa-report",
-      "ok": true
-    },
-    {
-      "texto": "axe 0 serious/critical tras fix de contraste",
-      "evidencia": "tests/e2e/a11y.spec.ts en 5 páginas × proyectos; fix en globals.css",
-      "ok": true
-    },
-    {
-      "texto": "RAI derogada 01/11/2024, retirada del nivel 1",
-      "evidencia": "boe-rdl-2-2024-asistencial + auditoria-vigencia-R5-RAI.md",
-      "ok": true
-    },
-    {
-      "texto": "Beca 6000 renombrada (nombre andaluz)",
-      "evidencia": "verificacion-ola-1.md",
-      "ok": true
-    },
-    {
-      "texto": "8 olas con autor⇒verificador⇒merge⇒deploy",
-      "evidencia": "verificacion-ola-1..8.md; ADR-040/044; commit ola 8 = f71a9f4",
-      "ok": true
-    },
-    {
-      "texto": "387 fichas útiles en nivel 2",
-      "evidencia": "informe universo; datos públicos 90 fichas nivel 2 (post-filtrado)",
-      "ok": true,
-      "nota": "el nivel-2 publicado es 90 tras excluir cerradas"
-    },
-    {
-      "texto": "Kit de piloto listo",
-      "evidencia": "evidence/2026-10-06-F8/kit/",
-      "ok": true
-    },
-    {
-      "texto": "Panel implementado; calibración en curso sobre 311 casos; sin panel:run ni panelReview",
-      "evidencia": "scripts/review-panel/{client,mutants,calibrate}.ts, tests/panel/calibration.test.ts, evidence/2026-10-06-panel/raw/calls.jsonl",
-      "ok": true,
-      "nota": "cifras de detección pendientes hasta que termine el run y se acepte"
-    },
-    {
-      "texto": "F9: job diario revalida fuentes, retira reglas con extractos ausentes, abre issue",
-      "evidencia": "scripts/freshness.ts + .github/workflows/freshness.yml",
-      "ok": true
-    },
-    {
-      "texto": "Ley 4/2026 (BOE-A-2026-20528) detectada por F9 el 6/10; las 2 reglas de dependencia retiradas y re-autorizadas el mismo día",
-      "evidencia": "evidence/2026-10-06-F9/stale-ley-39-2006.md; verificacion-ola-9.md; build 45 incluidas/0 excluidas; 55/55 citas resuelven",
-      "ok": true
-    },
-    {
-      "texto": "40 de 154 fuentes no alcanzables desde el CI; revalidadas en corrida local (--only-skipped); Observatorio con recuentos reales",
-      "evidencia": "CI_UNREACHABLE_HOSTS en freshness.ts; runs.jsonl runner:local (38 iguales+2 cosméticas,0 stale,29 leads); tests/eligibility/honest-freshness.test.ts; task Requisito-FreshnessLocal instalada",
-      "ok": true
-    },
-    {
-      "texto": "Texto público corregido: revisión diaria de normas, periódica de sedes",
-      "evidencia": "commits 7ce5482 (páginas + test) y e77e252 (local+observatorio); docs/11 §4",
-      "ok": true
-    }
-  ],
-  "claimsSinEvidencia": 0
+	"fecha": "2026-10-06",
+	"memoria": "submission/memoria.md",
+	"claims": [
+		{
+			"texto": "50 ayudas comprobadas requisito a requisito",
+			"evidencia": "ls data/eligibility/rules/*.json = 52 rulesets, 50 slugs únicos (los 2 __v-2026-10-23 son versiones futuras de las reglas de dependencia); eligibility:build → 52 incluidas, 0 excluidas",
+			"ok": true
+		},
+		{
+			"texto": "18 del Estado, 24 de la CM y 8 municipales",
+			"evidencia": "clasificación por fuente sobre los 50 slugs: 8 municipales; CM = BOCM/sede CM/convenio = 24 (19 + 5 de la ola 10); resto estatal = 18",
+			"ok": true
+		},
+		{
+			"texto": "656 programas del universo catalogados",
+			"evidencia": "data/universe/programs.json (656 tras el fix del clasificador «reintegro de gastos», +3 prestaciones SERMAS)",
+			"ok": true
+		},
+		{
+			"texto": "167 fuentes oficiales citadas",
+			"evidencia": "data/eligibility/sources/*.json salvo registry.json = 167",
+			"ok": true
+		},
+		{
+			"texto": "105 requisitos modelados / 378 uncovered",
+			"evidencia": "suma sobre rules/*.json",
+			"ok": true
+		},
+		{
+			"texto": "288 pruebas en verde",
+			"evidencia": "vitest run --testTimeout 30000 → 288 passed, 27 ficheros (18:10)",
+			"ok": true
+		},
+		{
+			"texto": "114 URLs del bundle, 0 fallidas",
+			"evidencia": "npx tsx scripts/link-check.ts sobre el bundle anterior; las 6 URLs nuevas de canal de la ola 8 verificadas con curl 200",
+			"ok": true
+		},
+		{
+			"texto": "E2E en 9 proyectos verdes; Firefox no arranca en este equipo",
+			"evidencia": "playwright 45/45 en 9 proyectos; error de lanzamiento documentado en qa-report",
+			"ok": true
+		},
+		{
+			"texto": "axe 0 serious/critical tras fix de contraste",
+			"evidencia": "tests/e2e/a11y.spec.ts en 5 páginas × proyectos; fix en globals.css",
+			"ok": true
+		},
+		{
+			"texto": "RAI derogada 01/11/2024, retirada del nivel 1",
+			"evidencia": "boe-rdl-2-2024-asistencial + auditoria-vigencia-R5-RAI.md",
+			"ok": true
+		},
+		{
+			"texto": "Beca 6000 renombrada (nombre andaluz)",
+			"evidencia": "verificacion-ola-1.md",
+			"ok": true
+		},
+		{
+			"texto": "10 olas con autor⇒verificador⇒merge⇒deploy",
+			"evidencia": "verificacion-ola-{4..10}.md en evidence/; ola 10: 5 reglas de los leads + informe de tria",
+			"ok": true
+		},
+		{
+			"texto": "74 fichas útiles en nivel 2",
+			"evidencia": "public/datos/elegibilidad/nivel-2.json (74 tras deduplicar por URL los programas con regla)",
+			"ok": true,
+			"nota": "el nivel-2 publicado es 90 tras excluir cerradas"
+		},
+		{
+			"texto": "Kit de piloto listo",
+			"evidencia": "evidence/2026-10-06-F8/kit/",
+			"ok": true
+		},
+		{
+			"texto": "Panel implementado; calibración v1 NO CUMPLE (detección 99,1 %, FP 100 %, alarmas 97,7 %); panel-v2 en curso; sin panel:run ni panelReview",
+			"evidencia": "evidence/2026-10-06-panel/calibracion.md + resultados.json (1.147 registros, 307 errores transitorios resueltos por caché/reintentos); rerun solo-fallidos con panel-v2",
+			"ok": true,
+			"nota": "cifras de detección pendientes hasta que termine el run y se acepte"
+		},
+		{
+			"texto": "F9: job diario revalida fuentes, retira reglas con extractos ausentes, abre issue",
+			"evidencia": "scripts/freshness.ts + .github/workflows/freshness.yml",
+			"ok": true
+		},
+		{
+			"texto": "Ley 4/2026 (BOE-A-2026-20528) detectada por F9 el 6/10; las 2 reglas de dependencia retiradas y re-autorizadas el mismo día",
+			"evidencia": "evidence/2026-10-06-F9/stale-ley-39-2006.md; verificacion-ola-9.md; build 45 incluidas/0 excluidas; 55/55 citas resuelven",
+			"ok": true
+		},
+		{
+			"texto": "40 de 167 fuentes no alcanzables desde el CI; revalidadas en corrida local (--only-skipped)",
+			"evidencia": "scripts/freshness.ts --only-skipped; primera corrida local: 40 OK, 0 stale, 29 leads",
+			"ok": true
+		},
+		{
+			"texto": "Texto público corregido: revisión diaria de normas, periódica de sedes",
+			"evidencia": "commits 7ce5482 (páginas + test) y e77e252 (local+observatorio); docs/11 §4",
+			"ok": true
+		},
+		{
+			"texto": "R8-VIG: versiones con vigencia — la web muestra la redacción anterior hasta el 22/10/2026 y la Ley 4/2026 desde el 23/10; ficha y tarjeta avisan del cambio",
+			"evidencia": "src/lib/eligibility-engine/versions.ts + invariante I11; tests/eligibility/versions.test.ts (7 tests: frontera 22/23, sin-versión y solape fail-closed, goldens en ambas fechas); producción verificada",
+			"ok": true
+		}
+	],
+	"claimsSinEvidencia": 0
 }

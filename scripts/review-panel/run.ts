@@ -43,6 +43,14 @@ export function aggregate(item: PanelItem, verdicts: PanelVerdict[]): {
 			return { result: "escalate", reason: "falso negativo" };
 	}
 	for (const v of clean) {
+		// En ítems de completitud no hay condición/extracto que juzgar: solo
+		// escala un requisito ausente declarado por el modelo (la quote se ha
+		// validado contra el contexto arriba).
+		if (item.kind === "completeness") {
+			if (v.missingRequirements.length > 0)
+				return { result: "escalate", reason: "missingRequirements" };
+			continue;
+		}
 		if (v.fidelity === "wrong" || v.fidelity === "cannot_tell")
 			return { result: "escalate", reason: `fidelity=${v.fidelity}` };
 		if (v.hardness !== "ok") return { result: "escalate", reason: `hardness=${v.hardness}` };

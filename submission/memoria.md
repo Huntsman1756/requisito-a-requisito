@@ -15,9 +15,9 @@ se pierden. **Requisito a Requisito** convierte la norma en una conversación de
 cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada en
 cada afirmación.
 
-Números medidos (evidencia en el repositorio): **45 ayudas** comprobadas
-requisito a requisito · **154 fuentes oficiales** verificadas · **653 programas**
-del universo de Madrid catalogados · **269 pruebas** automáticas en verde ·
+Números medidos (evidencia en el repositorio): **50 ayudas** comprobadas
+requisito a requisito · **167 fuentes oficiales** verificadas · **656 programas**
+del universo de Madrid catalogados · **288 pruebas** automáticas en verde ·
 **114 enlaces** del producto verificados el 6/10 · el perfil **nunca sale del
 navegador**.
 
@@ -38,7 +38,7 @@ lectura por él y le lleva directamente al simulador o a la sede oficial.
 Un asistente estático (sin servidor, sin cuentas, sin registro) que:
 
 1. Pregunta lo mínimo (≤ 10 preguntas, con «No lo sé» y «Prefiero no decirlo»).
-2. Evalúa **45 ayudas comprobadas** y 653 fichas del catálogo.
+2. Evalúa **50 ayudas comprobadas** y 74 fichas del catálogo en nivel 2.
 3. Responde por ayuda: qué requisitos cumples (✓), cuáles no (✗), cuáles no se
    pueden saber sin más datos (?) y cuáles quedan fuera de alcance del
    cuestionario (⚠).
@@ -57,22 +57,25 @@ reusar el motor sin depender de este producto.
 
 ### Medido (con evidencia)
 
-- **45 reglas verificadas** en el nivel 1 tras autor ⇒ verificador
+- **50 reglas verificadas** en el nivel 1 tras autor ⇒ verificador
   independiente ⇒ corrección ⇒ merge ⇒ despliegue (ADR-040): 18 del Estado,
-  19 de la Comunidad de Madrid y 8 municipales (Madrid, Móstoles, Leganés y
-  Fuenlabrada). De las 8 olas, el verificador detectó y se corrigieron: un
+  24 de la Comunidad de Madrid y 8 municipales (Madrid, Móstoles, Leganés y
+  Fuenlabrada). De las 10 olas, el verificador detectó y se corrigieron: un
   nombre de programa que no existe en Madrid («Beca 6000» es andaluza →
   renombrada al programa real de la CM), la RAI incluida aunque está
   **derogada desde 01/11/2024** (retirada del nivel 1, documentada en el
-  universo), 3 falsos negativos de la ola 4 corregidos antes de publicar y
-  dos códigos INE municipales erróneos en la ola 8. El sistema se
+  universo), 3 falsos negativos de la ola 4 corregidos antes de publicar,
+  dos códigos INE municipales erróneos en la ola 8 y una convocatoria que
+  la sede seguía mostrando «en plazo» pese a estar cerrada por el BOCM
+  (ola 10: prima el boletín). El sistema se
   autoprotege: una regla defectuosa no llega a producción.
-- **653 programas** del universo de Madrid catalogados y clasificados
+- **656 programas** del universo de Madrid catalogados y clasificados
   (descubrimiento: sede CM, BDNS, pipeline BOCM, semilla de permanentes);
-  387 fichas útiles en el nivel 2.
-- **154 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
+  74 fichas útiles en el nivel 2 (los programas con regla propia se
+  deduplican por URL oficial).
+- **167 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
-- **269 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
+- **288 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
   WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
   reducido). El navegador Firefox no arranca en este equipo (limitación
   documentada del entorno, no del producto).
@@ -86,7 +89,7 @@ reusar el motor sin depender de este producto.
   envío. El job diario de frescura (F9) re-descarga cada día las normas
   oficiales, compara extractos y retira automáticamente la regla afectada
   si la fuente cambia — nunca reescribe una regla. Las páginas de las sedes
-  electrónicas que bloquean el acceso automatizado (40 de las 154 fuentes)
+  electrónicas que bloquean el acceso automatizado (40 de las 167 fuentes)
   se revalidan periódicamente en una corrida local con la misma regla
   fail-closed; el Observatorio muestra los recuentos reales de cada ciclo.
 - **Detección real (6/10/2026)**: el job marcó cambiada la Ley 39/2006 de
@@ -96,12 +99,28 @@ reusar el motor sin depender de este producto.
   qué cambió en sustancia (no solo citas: parentesco, incompatibilidades,
   plazo suspensivo) y se re-autorizaron contra la nueva redacción el mismo
   día (evidencia en `evidence/2026-10-06-F9/` y `-F3/verificacion-ola-9.md`).
+- **Vigencia de la redacción (R8-VIG)**: la reforma está publicada pero
+  entra en vigor el 23/10/2026 — el sistema no puede mostrar la norma
+  futura como vigente. Cada regla admite `validFrom`/`validUntil`, el motor
+  elige la única versión vigente en la fecha de consulta (y si no hay
+  exactamente una, la ayuda dice «No podemos evaluar»), y las fichas de las
+  dos ayudas de dependencia muestran hoy la redacción anterior con el aviso
+  «Esta ayuda cambia el 23 de octubre de 2026 (Ley 4/2026)» enlazando ambos
+  textos. La invariante I11 lo comprueba antes de cada veredicto
+  (`verificacion-r8vig.md`, tests de frontera 22/23 de octubre).
 - Panel de revisión multimodelo implementado (extracción de ítems, prompt
   versionado, agregación determinista, caché por huella, límite de
-  concurrencia y de llamadas por minuto): **calibración en curso** sobre un
-  conjunto determinista de 311 casos (mutantes de reglas verificadas,
-  controles y casos históricos); el panel no se ejecuta sobre las reglas ni
-  se escribe `panelReview` hasta que la calibración sea aceptada por el
+  concurrencia y de llamadas por minuto): **calibración v1 completada**
+  sobre un conjunto determinista de 311 casos (mutantes de reglas
+  verificadas, controles y casos históricos): detección del **99,1 %** y
+  **100 %** en mutantes de falso positivo, pero **97,7 % de falsas alarmas**
+  sobre controles — fuera del umbral del 20 % (informe
+  `evidence/2026-10-06-panel/calibracion.md`). El análisis separa dos
+  causas: ítems de completitud sin material suficiente para juzgar
+  (`cannot_tell`, corregido en panel-v2) y **defectos reales de modelado**
+  que el panel detecta legítimamente (por ejemplo, exigir un umbral donde
+  la norma no lo fija). El panel no se ejecuta sobre las reglas ni se
+  escribe `panelReview` hasta que la calibración sea aceptada por el
   revisor.
 
 ### Piloto (en curso, 10–13/10)

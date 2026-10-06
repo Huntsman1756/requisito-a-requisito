@@ -12,7 +12,7 @@
  *
  * Este script NO escribe panelReview en ninguna regla ni lanza panel:run.
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { buildCalibrationSet, type CalibCase } from "./mutants";
 import type { PanelItem } from "./items";
@@ -23,17 +23,20 @@ const MIN_DETECTION = 0.95;
 const MAX_FALSE_ALARM = 0.2;
 
 const args = process.argv.slice(2);
-const opt = (name: string, dflt: string) => {
+const opt = (name: string, dflt?: string) => {
 	const i = args.indexOf(`--${name}`);
 	return i >= 0 ? args[i + 1] : dflt;
 };
 const PROMPT = opt("prompt", "panel-v1");
 const DATE = opt("date", new Date().toISOString().slice(0, 10));
-const OUT = opt("out", join(process.cwd(), `evidence/${DATE}-panel`));
+const OUT = opt("out") ?? join(process.cwd(), `evidence/${DATE}-panel`);
 
 /** ¿Este veredicto individual levantaría una objeción (misma lógica que aggregate)? */
 function flagged(item: PanelItem, v: PanelVerdict): boolean {
 	const miss = (v.missingRequirements ?? []).filter((m) => item.context?.includes(m.quote));
+	// Completitud: sin condición/extracto que juzgar, solo cuenta un requisito
+	// ausente citado literalmente del contexto.
+	if (item.kind === "completeness") return miss.length > 0;
 	return (
 		v.fidelity !== "exact" ||
 		v.hardness !== "ok" ||
@@ -65,7 +68,19 @@ const pct = (n: number, d: number) => (d ? `${((n / d) * 100).toFixed(1)} %` : "
 async function main() {
 	const root = process.cwd();
 	mkdirSync(join(OUT, "raw"), { recursive: true });
-	const cases = buildCalibrationSet(root);
+	let cases = buildCalibrationSet(root);
+	// --only-failed <resultados.json>: repite solo los casos que escalaron en
+	// la corrida indicada (rerun barato gracias a la caché por huella).
+	const onlyFailed = opt("only-failed");
+	if (onlyFailed) {
+		const prev = JSON.parse(readFileSync(onlyFailed, "utf8")) as {
+			caseId: string;
+			panel: { result: string };
+		}[];
+		const failed = new Set(prev.filter((r) => r.panel.result === "escalate").map((r) => r.caseId));
+		cases = cases.filter((c) => failed.has(c.caseId));
+		console.log(`--only-failed: ${cases.length} casos escalan en la corrida anterior`);
+	}
 	const mutants = cases.filter((c) => c.expected === "escalate");
 	const controls = cases.filter((c) => c.expected === "pass");
 	console.log(
@@ -93,7 +108,7 @@ async function main() {
 		cases.map((c) => c.item),
 		{
 			models: MODELS,
-			promptVersion: PROMPT,
+			promptVersion: PROMPT ?? "panel-v1",
 			outDir: OUT,
 			cacheDir: join(root, ".cache/panel"),
 			concurrency: 6,
