@@ -103,7 +103,7 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | F10-INF-2 | URL vigente de `cm-pensiones-no-contributivas` (404 en el CI del 06/10) | agente | 10/10 | — | HECHO (08/10 · 3df9a02) | URL trasladada a `/asuntos-sociales/pensiones-no-contributivas` (301→200, re-snapshot); el 404 de emergencia-social era artefacto del WAF de CI |
 | F10-REL-1 | Ensayo en local de la release `--strict` (recuento ≥ 20 programas) | agente | 10/10 | F10-REV-2 | HECHO parcial (08/10, F10-FIAB-D) | El mecanismo strict funciona (52 con simulación); el recuento real ≥20 queda pendiente del muestreo de Daniel — si el 12/10 hay < 20 ⇒ D-12 |
 | F10-QA-1..5 | validate:full; e2e, axe y privacidad sobre el build estricto; Firefox en CI; F5-M | agente + **Daniel** | 13/10 | F10-REL-1 | TODO | |
-| F10-MEM-1 | Memoria sin el piloto, alineada con el art. 16.2 (50/30/20) | agente | 11/10 | F10-DEV-1 | TODO | |
+| F10-MEM-1 | Memoria sin el piloto, alineada con el art. 16.2 (50/30/20) | agente | 11/10 | F10-DEV-1 | HECHO (08/10) | Cifras actualizadas desde `memoria:cifras` (479 tests, 155 URLs, 166 fuentes) + nuevos puntos: auditoría de fiabilidad y release `fail-closed`. `veracidad.json` nuevo en `evidence/2026-10-08-F10/`; PDF regenerado |
 | F10-MEM-2 | Memoria final con el piloto + PDF + veracidad | agente | 13/10 | F8-5 | TODO | |
 | F10-REL-2 | Deploy de la release estricta en Pages | agente | 14/10 | F10-QA | TODO | ADR-050. No antes del 14/10 |
 | F10-MEM-3 | Paquete, anexos regenerados, recibo y handoff | agente | 14/10 | F10-REL-2 | TODO | |

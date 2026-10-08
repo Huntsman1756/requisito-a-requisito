@@ -16,9 +16,9 @@ cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada e
 cada afirmación.
 
 Números medidos (evidencia en el repositorio): **50 ayudas** comprobadas
-requisito a requisito · **167 fuentes oficiales** verificadas · **421 programas**
-del universo de Madrid clasificados aptos para personas · **405 pruebas** automáticas en verde ·
-**114 enlaces** del producto verificados el 6/10 · el perfil **nunca sale del
+requisito a requisito · **166 fuentes oficiales** verificadas · **421 programas**
+del universo de Madrid clasificados aptos para personas · **479 pruebas** automáticas en verde ·
+**155 enlaces** del producto verificados el 8/10 · el perfil **nunca sale del
 navegador**.
 
 ## 2. El problema
@@ -76,13 +76,27 @@ reusar el motor sin depender de este producto.
   publicadas en el nivel 2 con su estado de acceso — las cerradas se
   muestran como «Cerrada» y los programas con regla propia se deduplican
   por URL oficial.
-- **167 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
+- **166 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
-- **405 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
+- **479 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
   WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
   reducido). El navegador Firefox no arranca en este equipo (limitación
   documentada del entorno, no del producto).
-- **114 URLs** del bundle verificadas (link-check, 0 fallidas).
+- **155 URLs** del bundle verificadas el 8/10 (link-check, 0 fallidas).
+- **Auditoría de fiabilidad (8/10)**: se midió la web como producto, no solo
+  el motor: vigencia de plazos contra la fecha, frescura de fuentes, muestra
+  determinista de 40 fichas del nivel 2 contrastada con su sede, parámetros
+  vigentes y privacidad en producción. Encontró un **fallo bloqueante** —el
+  asistente no cargaba datos en Pages por el prefijo de ruta— corregido y
+  reverificado el mismo día, junto a tarjetas «no cumple» que ahora muestran
+  el requisito fallado con su cita literal. Veredicto documentado:
+  **«fiable»** (`evidence/2026-10-08-F10/fiabilidad.md`).
+- **Release verificable**: la versión para el jurado solo incluye reglas con
+  aprobación humana registrada (`--strict`, ADR-050). El ensayo en copia
+  local demuestra: sin aprobaciones, el build sale **vacío** (0 de 52) en
+  lugar de vender lo no revisado; con las hojas de muestreo aplicadas por
+  `npm run review:apply`, las 52 pasan. El cierre no es una promesa: es un
+  gate que falla cerrado.
 - **Mutación dirigida**: 238 mutantes de las reglas (umbral ±1, dureza
   invertida) — **0 supervivientes** sin explicar; y barrido exhaustivo de
   175.451 perfiles sin violación de invariantes, monotonía ni determinismo
@@ -96,7 +110,7 @@ reusar el motor sin depender de este producto.
   envío. El job diario de frescura (F9) re-descarga cada día las normas
   oficiales, compara extractos y retira automáticamente la regla afectada
   si la fuente cambia — nunca reescribe una regla. Las páginas de las sedes
-  electrónicas que bloquean el acceso automatizado (40 de las 167 fuentes)
+  electrónicas que bloquean el acceso automatizado (45 de las 166 fuentes)
   se revalidan periódicamente en una corrida local con la misma regla
   fail-closed; el Observatorio muestra los recuentos reales de cada ciclo.
 - **Detección real (6/10/2026)**: el job marcó cambiada la Ley 39/2006 de
@@ -138,10 +152,16 @@ reusar el motor sin depender de este producto.
 
 ### Piloto (en curso, 10–13/10)
 
-Kit de sesión preparado (`evidence/2026-10-06-F8/kit/`): guion de 10 min, hoja
-de observación sin datos personales, texto de consentimiento y mensaje de
-difusión. El objetivo son 3–10 sesiones observadas con personas reales de
-Madrid; los resultados se consolidarán en `piloto.json` antes de la entrega.
+Kit de sesión preparado (`evidence/2026-10-06-F8/kit/`): guion con tarea
+medida («encuentra una ayuda para tu situación y dime qué requisito no sabes
+si cumples», tiempo y si la completa sola), contraste opcional de 3 minutos
+con la web oficial y escala de comprensión 1–5; hoja de observación sin datos
+personales, texto de consentimiento y mensaje de difusión. El objetivo son
+3–10 sesiones observadas con personas reales de Madrid; los resultados se
+consolidarán en `piloto.json` (plantilla y agregados ya preparados:
+`scripts/piloto-agregados.ts`) antes de la entrega. Por decisión del titular,
+el piloto se realizó **después de la auditoría de fiabilidad** del 8/10 —
+primero que sea fiable, luego que se pruebe.
 
 ## 5. Contribución al ecosistema (30 %)
 

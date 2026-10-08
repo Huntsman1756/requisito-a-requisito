@@ -1,0 +1,57 @@
+{
+	"fecha": "2026-10-08",
+	"memoria": "submission/memoria.md",
+	"comentario": "Actualización F10-MEM-1 tras la sesión de fiabilidad. Las cifras cambiadas se miden con `npm run memoria:cifras` (submission/cifras.json) o con los comandos indicados.",
+	"claims": [
+		{
+			"texto": "50 ayudas comprobadas requisito a requisito",
+			"evidencia": "cifras.json: rulesetsEnBundle=52, programasNivel1=50 (los 2 __v-2026-10-23 son versiones futuras de dependencia); eligibility:build → 52 incluidas, 0 excluidas",
+			"ok": true
+		},
+		{
+			"texto": "166 fuentes oficiales verificadas/citadas",
+			"evidencia": "cifras.json: fuentesRegistradas=166 (data/eligibility/sources/*.json salvo registry.json); fuentesEnBundle=145",
+			"ok": true
+		},
+		{
+			"texto": "421 programas aptos para persona física, 779 rechazados con motivo",
+			"evidencia": "cifras.json: universoAptos=421, universoRechazados=779 (data/universe/)",
+			"ok": true
+		},
+		{
+			"texto": "401 fichas publicadas en el nivel 2",
+			"evidencia": "cifras.json: fichasNivel2=401 (public/datos/elegibilidad/nivel-2.json)",
+			"ok": true
+		},
+		{
+			"texto": "479 pruebas automáticas en verde",
+			"evidencia": "cifras.json: testsTotal=479 testsPassed=479 en 31 ficheros (vitest run --reporter=json)",
+			"ok": true
+		},
+		{
+			"texto": "155 enlaces del producto verificados el 8/10",
+			"evidencia": "npm run link-check → 155 URL, 0 fallidas (08/10); cifras.json urlsCitadasEnBundle=155",
+			"ok": true
+		},
+		{
+			"texto": "175.451 perfiles sin violación de invariantes/monotonía/determinismo",
+			"evidencia": "npm run eligibility:exhaustive sobre el bundle (local y desplegado), 08/10",
+			"ok": true
+		},
+		{
+			"texto": "fallo bloqueante en Pages corregido y reverificado el mismo día",
+			"evidencia": "evidence/2026-10-08-F10/fiabilidad.md §4 y §7; commits 4dcaac4/a26c8db; fiabilidad.spec.ts 3/3 contra producción tras el deploy",
+			"ok": true
+		},
+		{
+			"texto": "release strict: 0 de 52 sin aprobaciones; 52 con las hojas aplicadas",
+			"evidencia": "fiabilidad.md §8 — ensayo en F:\\Temp\\datawardsmadrid-fiabilidad\\{strict-real,strict-sim}",
+			"ok": true
+		},
+		{
+			"texto": "45 de las 166 fuentes bloquean CI y se revalidan en local",
+			"evidencia": "data/freshness/runs.jsonl — corrida CI 07/10: 121 comprobadas, 45 saltadas, 0 errores",
+			"ok": true
+		}
+	]
+}
