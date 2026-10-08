@@ -83,10 +83,9 @@ jobs:
               # se resuelve concatenando; cualquier otro aborta limpio en rojo.
               if git status --porcelain | grep -q "^UU data/freshness/runs.jsonl$" \
                 && ! git status --porcelain | grep "^UU" | grep -vq "runs.jsonl"; then
-                # Concatenar ambos lados (cada uno es append-only) — sin marcadores.
-                git show ":2:data/freshness/runs.jsonl" > /tmp/runs-ours.jsonl
-                git show ":3:data/freshness/runs.jsonl" > /tmp/runs-theirs.jsonl
-                cat /tmp/runs-ours.jsonl /tmp/runs-theirs.jsonl | sort -u > data/freshness/runs.jsonl
+                # JSONL append-only: :2: (origin) primero y las líneas nuevas de
+                # :3: después — sin reordenar (scripts/merge-jsonl.mjs).
+                node scripts/merge-jsonl.mjs . data/freshness/runs.jsonl
                 git add data/freshness/runs.jsonl
                 git rebase --continue
               else

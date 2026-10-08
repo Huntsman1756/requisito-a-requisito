@@ -56,7 +56,38 @@ try {
 		exit 0
 	}
 
-	# 2. Pull fast-forward only. Si no avanza limpio, se aborta.
+	# 2. Si la rama local va por delante de origin (commit de frescura que no
+	# subió ayer), intentar rebase + push ANTES de revalidar; si no puede,
+	# se registra y se para (no se acumulan más commits locales).
+	git fetch origin main 2>&1 | Out-Null
+	$ahead = [int](git rev-list --count "origin/main..HEAD")
+	if ($ahead -gt 0) {
+		Log "rama local adelantada $ahead — intento de rebase + push previo"
+		git rebase origin/main 2>&1 | Out-Null
+		if ($LASTEXITCODE -ne 0) {
+			$conflictos = git status --porcelain | Select-String "^UU "
+			if ($conflictos -and ($conflictos | Select-String -NotMatch "runs\.jsonl").Count -eq 0) {
+				node scripts/merge-jsonl.mjs . data/freshness/runs.jsonl 2>&1 | Out-Null
+				git add data/freshness/runs.jsonl | Out-Null
+				git -c core.editor=true rebase --continue 2>&1 | Out-Null
+			}
+			if ($LASTEXITCODE -ne 0) {
+				git rebase --abort 2>&1 | Out-Null
+				Log "rebase previo no resoluble — sin tocar nada (commit local pendiente)"
+				Pop-Location
+				exit 1
+			}
+		}
+		git push 2>&1 | Out-Null
+		if ($LASTEXITCODE -ne 0) {
+			Log "push previo falló — sin tocar nada (commit local pendiente)"
+			Pop-Location
+			exit 1
+		}
+		Log "commit local pendiente ya subido"
+		$ahead = 0
+	}
+	# Pull fast-forward only. Si no avanza limpio, se aborta.
 	git pull --ff-only 2>&1 | Out-Null
 	if ($LASTEXITCODE -ne 0) {
 		Log "git pull --ff-only no posible — sin tocar nada"
@@ -96,13 +127,11 @@ try {
 		git fetch origin main 2>&1 | Out-Null
 		git rebase origin/main 2>&1 | Out-Null
 		if ($LASTEXITCODE -ne 0) {
-			# Único conflicto admisible: runs.jsonl (append en ambos lados).
+			# Único conflicto admisible: runs.jsonl (append en ambos lados) —
+			# se resuelve en UTF-8 y sin reordenar con scripts/merge-jsonl.mjs.
 			$conflictos = git status --porcelain | Select-String "^UU "
 			if ($conflictos -and ($conflictos | Select-String -NotMatch "runs\.jsonl").Count -eq 0) {
-				git show ":2:data/freshness/runs.jsonl" | Set-Content "$env:TEMP\runs-ours.jsonl"
-				git show ":3:data/freshness/runs.jsonl" | Set-Content "$env:TEMP\runs-theirs.jsonl"
-				Get-Content "$env:TEMP\runs-ours.jsonl", "$env:TEMP\runs-theirs.jsonl" |
-					Sort-Object -Unique | Set-Content data/freshness/runs.jsonl
+				node scripts/merge-jsonl.mjs . data/freshness/runs.jsonl 2>&1 | Out-Null
 				git add data/freshness/runs.jsonl | Out-Null
 				git -c core.editor=true rebase --continue 2>&1 | Out-Null
 				if ($LASTEXITCODE -ne 0) {

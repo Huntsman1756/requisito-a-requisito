@@ -7,5 +7,9 @@ export default defineConfig({
 		// validate.test.ts corre validateEligibility completo por gate; con la
 		// suite ampliada (goldens en npm test) 5s no bastan en máquinas cargadas.
 		testTimeout: 20000,
+		// F10-B0.1: los afterAll que borran directorios de test (repos git y 52
+		// rulesets copiados en %TEMP%) agotan los 10 s por defecto bajo
+		// Defender/antivirus en este equipo — el test es I/O lenta, no un fallo.
+		hookTimeout: 120_000,
 	},
 });

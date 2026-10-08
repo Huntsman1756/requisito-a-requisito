@@ -137,7 +137,9 @@ describe("muestreo-indice sobre datos reales (F10-FIX-1)", () => {
 		}
 	});
 
-	it("todas las hojas aplicadas en copia ⇒ build --strict incluye los 50 programas", () => {
+	it("todas las hojas aplicadas en copia ⇒ build --strict incluye los 50 programas", {
+		timeout: 180_000,
+	}, () => {
 		const rulesDir = cloneRules();
 		for (const h of indice.hojas) {
 			const text = markFirstN(readFileSync(join(root, h.sheet), "utf8"), 2);
