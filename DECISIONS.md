@@ -384,3 +384,51 @@ misma lógica fail-closed que F9 y push del resultado. Si el PC está apagado, e
 día no hay revisión de esas fuentes: el Observatorio muestra la fecha real de la
 última revisión de cada grupo (R7-HONEST). Migración posterior a un VPS de Daniel
 (R7-VPS), comprobando antes que esas sedes responden desde su IP.
+
+## ADR-050 — El panel NAN no se acepta; la release del jurado se apoya en el muestreo humano
+2026-10-08 · aceptada (Claude, por delegación ADR-036; no relaja ningún criterio) ·
+La calibración v2 tampoco cumple el criterio: 94,0 % de detección, 91,8 % en
+mutantes de falso positivo y 75,0 % de falsas alarmas. Al reagregar offline los
+veredictos guardados (`evidence/2026-10-06-panel-v2/agregacion-alternativas.md`)
+se ve que ninguna regla de agregación cumple los tres umbrales a la vez, y que
+parte de la detección viene de salidas inválidas que escalan. **Decisión:**
+- R6-CALIB se cierra con NO CUMPLE. R6-RUN se cancela. No se escribe
+  `panelReview` ni se muestra la etiqueta «revisada por un panel».
+- Se restablece el muestreo de ADR-040 tal como era antes de ADR-047: Daniel
+  revisa 2 reglas de cada ola con las hojas `muestreo-ola-*.md` (y lote-1). Si
+  todo está OK, `humanReview: approved` para toda la ola. Cualquier KO obliga a
+  revisar la ola completa.
+- **Release del jurado (14/10) = build `--strict`** (ADR-044), y es lo que sirve
+  Pages desde ese día. Las reglas de olas sin aprobar salen del nivel 1 y siguen
+  en el nivel 2. Mínimo: 20 programas (ADR-040). Si no se llega, se publican las
+  olas aprobadas y la memoria dice cuántas son.
+- La calibración se cuenta en la memoria como resultado negativo medido.
+- Una futura v3, después del 16/10, exigiría modelos más capaces y un conjunto de
+  validación separado por slug. No se ajusta la agregación sobre el mismo
+  conjunto con el que se mide.
+
+## ADR-051 — Investigación externa del 08/10: qué se adopta y qué no
+2026-10-08 · aceptada (Claude) · Daniel recibió un informe externo con las bases,
+referencias de GitHub y hackatones, y cuatro ideas de proyecto.
+- **Ya estaba cubierto:**
+  - persona física en Impact (confirmado por la Subdirección,
+    `evidence/2026-10-05-consulta/`);
+  - una sola candidatura (art. 11.5, docs/00);
+  - 50 % impacto (docs/01);
+  - exclusión de las fichas fiscales de la auditoría del 27/09 (ADR-004:
+    comprobado el 08/10, 0 `tax_deduction` en `data/catalog`);
+  - nada de perfil en la URL (ADR-007);
+  - sin LLM que decida (ADR-003).
+- **No se adopta:**
+  - Cambiar de producto (mapa bancario, umbrales de ingresos o mapa ambiental) o
+    volver a la-ayuda. Contradice ADR-022 y ADR-029, y con 8 días de plazo
+    significaría empezar de cero.
+  - Una nueva consulta a la Consejería: ya está respondida.
+- **Se adopta:**
+  - (a) El piloto mide tareas completadas, errores y tiempo, y añade una tarea de
+    contraste con la web oficial, sin presentarlo como muestra representativa
+    (F10-IMP).
+  - (b) Explicación de exclusión «por qué no y qué alternativa», al estilo de
+    ClaimIt, solo si el motor ya lo da con citas (F10-FRONT, Should).
+  - (c) Las referencias nuevas se anotan como patrones en docs/04, sin copiar
+    código. OpenFisca es AGPL y solo se estudia su arquitectura.
