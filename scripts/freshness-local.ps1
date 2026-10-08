@@ -88,14 +88,46 @@ try {
 		exit 0
 	}
 
-	# 5. Commit de frescura y push.
+	# 5. Commit de frescura y push (con pull --rebase antes, sin force).
 	git commit -m "chore(freshness-local): revalidación periódica de fuentes saltadas" | Out-Null
 	if ($LASTEXITCODE -ne 0) { throw "git commit falló" }
-	git push 2>&1 | Out-Null
-	if ($LASTEXITCODE -ne 0) {
-		Log "commit hecho pero push falló (se reintenta en la próxima corrida)"
+	$pushed = $false
+	foreach ($i in 1..3) {
+		git fetch origin main 2>&1 | Out-Null
+		git rebase origin/main 2>&1 | Out-Null
+		if ($LASTEXITCODE -ne 0) {
+			# Único conflicto admisible: runs.jsonl (append en ambos lados).
+			$conflictos = git status --porcelain | Select-String "^UU "
+			if ($conflictos -and ($conflictos | Select-String -NotMatch "runs\.jsonl").Count -eq 0) {
+				git show ":2:data/freshness/runs.jsonl" | Set-Content "$env:TEMP\runs-ours.jsonl"
+				git show ":3:data/freshness/runs.jsonl" | Set-Content "$env:TEMP\runs-theirs.jsonl"
+				Get-Content "$env:TEMP\runs-ours.jsonl", "$env:TEMP\runs-theirs.jsonl" |
+					Sort-Object -Unique | Set-Content data/freshness/runs.jsonl
+				git add data/freshness/runs.jsonl | Out-Null
+				git -c core.editor=true rebase --continue 2>&1 | Out-Null
+				if ($LASTEXITCODE -ne 0) {
+					Log "rebase --continue falló tras resolver runs.jsonl — aborto limpio"
+					git rebase --abort 2>&1 | Out-Null
+					Pop-Location
+					exit 1
+				}
+			}
+			else {
+				Log "rebase con conflicto no resoluble — sin tocar; el commit queda local"
+				git rebase --abort 2>&1 | Out-Null
+				Pop-Location
+				exit 1
+			}
+		}
+		git push 2>&1 | Out-Null
+		if ($LASTEXITCODE -eq 0) { $pushed = $true; break }
+		Log "push rechazado (intento $i) — reintento"
+		Start-Sleep -Seconds (20 * $i)
+	}
+	if (-not $pushed) {
+		Log "push rechazado tras 3 intentos — el commit queda local, se reintenta mañana"
 		Pop-Location
-		exit 0
+		exit 1
 	}
 	Log "fin ok — commit y push de frescura"
 	Pop-Location

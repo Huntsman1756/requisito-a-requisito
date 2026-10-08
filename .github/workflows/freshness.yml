@@ -61,6 +61,8 @@ jobs:
 
       - name: Commit freshness
         if: steps.gate.outcome == 'success'
+        env:
+          GIT_EDITOR: "true" # rebase --continue sin editor interactivo
         run: |
           git config user.name "requisito-bot"
           git config user.email "requisito-bot@users.noreply.github.com"
@@ -69,7 +71,36 @@ jobs:
           done
           if git diff --cached --quiet; then
             echo "sin cambios que commitear"
-          else
-            git commit -m "chore(freshness): revalidación diaria de fuentes"
-            git push
+            exit 0
           fi
+          git commit -m "chore(freshness): revalidación diaria de fuentes"
+          # Carrera: otro commit puede haber entrado mientras corría el job
+          # (ocurrió el 08/10). Integrar y reintentar hasta 3 veces; nunca force.
+          for i in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              # Único conflicto admisible: runs.jsonl (append en ambos lados) —
+              # se resuelve concatenando; cualquier otro aborta limpio en rojo.
+              if git status --porcelain | grep -q "^UU data/freshness/runs.jsonl$" \
+                && ! git status --porcelain | grep "^UU" | grep -vq "runs.jsonl"; then
+                # Concatenar ambos lados (cada uno es append-only) — sin marcadores.
+                git show ":2:data/freshness/runs.jsonl" > /tmp/runs-ours.jsonl
+                git show ":3:data/freshness/runs.jsonl" > /tmp/runs-theirs.jsonl
+                cat /tmp/runs-ours.jsonl /tmp/runs-theirs.jsonl | sort -u > data/freshness/runs.jsonl
+                git add data/freshness/runs.jsonl
+                git rebase --continue
+              else
+                echo "::error::rebase con conflicto no resoluble — job en rojo a propósito"
+                git rebase --abort || true
+                exit 1
+              fi
+            fi
+            if git push; then
+              echo "push OK en intento $i"
+              exit 0
+            fi
+            echo "push rechazado (intento $i) — reintento tras espera"
+            sleep $((i * 20))
+          done
+          echo "::error::push rechazado tras 3 intentos — la revalidación de hoy queda pendiente"
+          exit 1
