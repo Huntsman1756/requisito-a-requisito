@@ -117,18 +117,24 @@ reusar el motor sin depender de este producto.
   (`verificacion-r8vig.md`, tests de frontera 22/23 de octubre).
 - Panel de revisión multimodelo implementado (extracción de ítems, prompt
   versionado, agregación determinista, caché por huella, límite de
-  concurrencia y de llamadas por minuto): **calibración v1 completada**
-  sobre un conjunto determinista de 311 casos (mutantes de reglas
-  verificadas, controles y casos históricos): detección del **99,1 %** y
-  **100 %** en mutantes de falso positivo, pero **97,7 % de falsas alarmas**
-  sobre controles — fuera del umbral del 20 % (informe
-  `evidence/2026-10-06-panel/calibracion.md`). El análisis separa dos
-  causas: ítems de completitud sin material suficiente para juzgar
-  (`cannot_tell`, corregido en panel-v2) y **defectos reales de modelado**
-  que el panel detecta legítimamente (por ejemplo, exigir un umbral donde
-  la norma no lo fija). El panel no se ejecuta sobre las reglas ni se
-  escribe `panelReview` hasta que la calibración sea aceptada por el
-  revisor.
+  concurrencia y de llamadas por minuto), **calibrado con errores
+  inyectados antes de confiar en él y descartado al no superar la
+  calibración**:
+  - **v1**, sobre un conjunto determinista de 311 casos (mutantes de reglas
+    verificadas, controles y casos históricos): detectó el **99,1 %** de los
+    errores, pero dio **97,7 % de falsas alarmas** sobre los controles,
+    cuando el umbral es del 20 % (`evidence/2026-10-06-panel/calibracion.md`).
+  - **v2**, con un prompt corregido, sobre los 327 casos que escalaron en la
+    v1: **94,0 %** de detección, **91,8 %** en mutantes de falso positivo y
+    **75,0 %** de falsas alarmas (`evidence/2026-10-06-panel-v2/calibracion.md`).
+  - Reagregando offline esos mismos veredictos, **ninguna regla de agregación
+    cumple a la vez los tres umbrales** (`agregacion-alternativas.md`).
+  - **Decisión (ADR-050):** el panel no aprueba ninguna regla. El criterio no
+    se relaja. La revisión final de las reglas es humana, por muestreo de
+    cada ola (ADR-040).
+
+  Medir un control automático y descartarlo cuando no alcanza el nivel exigido
+  forma parte del método. Por eso este resultado negativo se incluye aquí.
 
 ### Piloto (en curso, 10–13/10)
 
