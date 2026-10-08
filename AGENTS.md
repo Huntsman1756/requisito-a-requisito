@@ -35,7 +35,8 @@ pendientes de Daniel y la lista de lo que NO se hace.
 - **El panel NAN está cerrado** (ADR-050). Nada de `panel:run` ni `panelReview`.
 - **No se reabre** el producto, la categoría ni la elegibilidad (ADR-051): la
   Subdirección ya confirmó que una persona física puede concurrir a Impact.
-- Al cerrar cada sesión: evidencia commiteada, fila de TASK_QUEUE y handoff.
+- **Antes de que Daniel marque las hojas**, `review:apply` tiene que estar corregido (F10-FIX-1): la versión del 08/10 deriva mal la pertenencia a cada ola.
+- Al cerrar cada sesión: evidencia commiteada, fila de TASK_QUEUE, handoff y `gh run list` sin jobs en rojo sin explicar.
 
 ## 1. Orden de lectura (al empezar cada sesión)
 
@@ -113,6 +114,27 @@ Para leer un donante sin depender de su working tree:
 10. Validación: `npm run check`, `npm run lint`, `npm test` y `npm run build`, en
     secuencia (y `npm run validate:full` al cerrar una fase). Windows + Node/npm, sin Bun. Commits pequeños por unidad, sin
     `git add .`, `reset --hard` ni `clean`.
+11. **Herramientas que escriben aprobaciones o datos públicos** (`review:apply`,
+    el build del bundle, el deploy, los generadores de nivel 2 y de cifras)
+    llevan, además de los tests con fixtures, **un test sobre los datos reales
+    del repo** que compruebe el invariante de negocio. Ejemplo: cada regla del
+    bundle pertenece a exactamente una hoja de muestreo vigente. Que pasen los
+    tests sintéticos no basta (lección del 08/10: `review:apply` pasaba 8 tests
+    y con las hojas reales dejaba 14 reglas sin ola).
+12. **Un resultado se mide por la ruta real.** Si para un ensayo se simula un
+    paso (por ejemplo, aprobaciones escritas a mano en una copia), el informe lo
+    dice explícitamente («simulado, sin pasar por X») y **no** se presenta como
+    lo que ocurrirá. Las afirmaciones del tipo «con las hojas aplicadas entran N»
+    exigen ejecutar la herramienta real.
+13. **Cada cifra de la memoria** sale de `submission/cifras.json`
+    (`npm run memoria:cifras`) o de un informe de `evidence/`, y tiene su
+    entrada en el `veracidad.json` vigente, que acumula todas las cifras (no
+    solo las nuevas). Hay que usar el nombre exacto de la medida: «registradas»
+    no es «citadas», ni «RuleSets» es «programas».
+14. **Push y CI:** los workflows que hacen commit en `main` (frescura) integran
+    antes de subir (`git pull --rebase` + reintento). Un agente que vea un job
+    del CI en rojo lo investiga en esa misma sesión y no lo da por bueno porque
+    el deploy esté en verde.
 
 ## 5. Cerrar tarea y fase
 
