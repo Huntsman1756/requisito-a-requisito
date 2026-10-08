@@ -12,7 +12,12 @@ const nextConfig: NextConfig = {
 		unoptimized: true,
 	},
 	distDir: ".next",
-	env: {},
+	env: {
+		// basePath también en cliente: los fetch a /datos/* los hace el navegador
+		// (el asistente carga el bundle en runtime; sin esto, en Pages pedían
+		// /datos/… en la raíz del dominio → 404 → «No hemos podido cargar»).
+		NEXT_PUBLIC_BASE_PATH: process.env.BASE_PATH ?? "",
+	},
 };
 
 export default nextConfig;

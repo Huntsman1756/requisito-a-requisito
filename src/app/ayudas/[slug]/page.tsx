@@ -212,9 +212,9 @@ export default async function Ficha({
 			<p className="legal">
 				Esto no determina tu derecho a la ayuda. La decisión corresponde al
 				organismo competente. Datos abiertos:{" "}
-				<a href="/datos/elegibilidad/manifest.json" rel="noopener noreferrer">
+				<Link href="/datos/elegibilidad/manifest.json" rel="noopener noreferrer">
 					datos abiertos del sitio
-				</a>
+				</Link>
 				.
 			</p>
 			<p>

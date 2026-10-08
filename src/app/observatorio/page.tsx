@@ -133,7 +133,7 @@ export default function Observatorio() {
 			</ul>
 
 			<p className="note" style={{ marginTop: "1.6rem" }}>
-				<a href="/datos/elegibilidad/manifest.json">Manifiesto del bundle</a> ·{" "}
+				<Link href="/datos/elegibilidad/manifest.json">Manifiesto del bundle</Link> ·{" "}
 				<Link href="/explorar">Explorar el catálogo</Link> ·{" "}
 				<Link href="/datos/elegibilidad/nivel-2.json">Datos abiertos (JSON)</Link>
 			</p>

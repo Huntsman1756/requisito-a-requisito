@@ -52,7 +52,10 @@ export interface CheckData {
 	manifestDigest: string;
 }
 
-const BASE = (process.env.BASE_PATH ?? "") || "";
+// BASE_PATH no se inyecta en el bundle del cliente (solo NEXT_PUBLIC_*); sin
+// él, en Pages (…/requisito-a-requisito/) las peticiones a /datos/* iban a la
+// raíz del dominio y el asistente no cargaba. Hallazgo F10-FIAB-A.
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 async function get<T>(path: string): Promise<T> {
 	const r = await fetch(`${BASE}${path}`);
