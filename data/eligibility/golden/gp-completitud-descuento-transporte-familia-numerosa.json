@@ -1,0 +1,40 @@
+{
+	"id": "gp-completitud-descuento-transporte-familia-numerosa",
+	"description": "Perfil ficticio positivo de cobertura para descuento-transporte-familia-numerosa. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "descuento-transporte-familia-numerosa",
+			"rulesVersion": 3,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-rd-1621-2005-reglamento-fn",
+					"locator": "Art. 11.4",
+					"reasoning": "Ser titular de familia numerosa (si eres monoparental con el título, responde «familia monoparental»). Condición {\"field\":\"familyType\",\"op\":\"in\",\"value\":[\"familia-numerosa\",\"monoparental\"],\"label\":\"tienes el título de familia numerosa — aunque seas monoparental o vivas solo/a\"}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"familyType\":{\"state\":\"value\",\"value\":\"familia-numerosa\"}}. Extracto de la norma: los interesados deberán presentar, cuando se les solicite, el correspondiente título oficial de familia numerosa o documento que acredite fehacientemente tal condición. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

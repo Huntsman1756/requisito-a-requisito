@@ -205,14 +205,14 @@ export function profileCombos(
 	catalog: QuestionCatalog,
 	maxProfiles = MAX_PROFILES,
 	today?: string,
-): { fields: string[]; combos: Answer[][] } {
+): { fields: string[]; combos: Answer[][]; strategy: "cartesian" | "pairs+boundary"; truncated: boolean } {
 	const fields = fieldsOf(rs);
 	const thresholds = thresholdsOf(rs);
 	const domains = fields.map((f) =>
 		domainFor(f, catalog, thresholds.get(f) ?? [], today),
 	);
 	const total = domains.reduce((acc, d) => acc * Math.max(1, d.length), 1);
-	if (total <= maxProfiles) return { fields, combos: cartesian(domains) };
+	if (total <= maxProfiles) return { fields, combos: cartesian(domains), strategy: "cartesian", truncated: false };
 
 	const combos: Answer[][] = [];
 	const base = domains.map((d) => d[0]);
@@ -234,7 +234,7 @@ export function profileCombos(
 			}
 		}
 	}
-	return { fields, combos };
+	return { fields, combos, strategy: "pairs+boundary", truncated: true };
 }
 
 export function runExhaustive(

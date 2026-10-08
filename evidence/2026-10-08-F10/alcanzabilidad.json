@@ -1,0 +1,2395 @@
+{
+  "date": "2026-10-08",
+  "rows": [
+    {
+      "slug": "anticipos-docentes-cm",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 11,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 2,
+        "no_cumple": 7,
+        "insuficiente": 2
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 2,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "employmentStatus": {
+            "state": "value",
+            "value": "empleado-publico"
+          }
+        }
+      }
+    },
+    {
+      "slug": "asignacion-hijo-a-cargo",
+      "version": 6,
+      "today": "2026-10-08",
+      "profiles": 200,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 200,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 200,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          }
+        }
+      }
+    },
+    {
+      "slug": "ayto-emergencia-social",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 100,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 100,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 40,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "ayto-escuela-infantil",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 200,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 200,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 80,
+      "validPositive": 120,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 2,
+              "max": 2,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 100,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 18,
+        "no_cumple": 64,
+        "insuficiente": 18
+      },
+      "invalid": 0,
+      "invalidProfiles": 40,
+      "validPositive": 8,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "familyType": {
+            "state": "value",
+            "value": "familia-numerosa"
+          },
+          "housingStatus": {
+            "state": "value",
+            "value": "propiedad"
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 5500,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 703,
+        "no_cumple": 3313,
+        "insuficiente": 1484
+      },
+      "invalid": 0,
+      "invalidProfiles": 2200,
+      "validPositive": 230,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "becas-generales-mefp-2026-2027",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 3,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 3,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 3,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "studentStatus": {
+            "state": "value",
+            "value": "si"
+          }
+        }
+      }
+    },
+    {
+      "slug": "bono-cultural-joven",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 6,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 1,
+        "no_cumple": 2,
+        "insuficiente": 3
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 1,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "birthYear": {
+            "state": "value",
+            "value": {
+              "min": 2008,
+              "max": 2008,
+              "maxExclusive": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "bono-social-electrico",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 16,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 16,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 16,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "bono-social-termico",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 80,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 48,
+        "no_cumple": 32,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 32,
+      "validPositive": 32,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "cese-actividad-autonomos",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 11,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 11,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 11,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "cm-reintegro-accidentes-trabajo",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 11,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 2,
+        "no_cumple": 7,
+        "insuficiente": 2
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 2,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "employmentStatus": {
+            "state": "value",
+            "value": "empleado-publico"
+          }
+        }
+      }
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 432,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 240,
+        "no_cumple": 72,
+        "insuficiente": 120
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 240,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 18,
+              "max": 18,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2025,
+              "month": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "descuento-transporte-familia-numerosa",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 4,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 2,
+        "no_cumple": 1,
+        "insuficiente": 1
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 2,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "familyType": {
+            "state": "value",
+            "value": "familia-numerosa"
+          }
+        }
+      }
+    },
+    {
+      "slug": "fuenlabrada-fuenlacarenet-2026",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 200,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 60,
+        "no_cumple": 130,
+        "insuficiente": 10
+      },
+      "invalid": 0,
+      "invalidProfiles": 80,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "fuenlabrada-prestaciones-sociales",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 150,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 60,
+        "no_cumple": 30,
+        "insuficiente": 60
+      },
+      "invalid": 0,
+      "invalidProfiles": 60,
+      "validPositive": 36,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 18,
+              "max": 18,
+              "maxExclusive": false
+            }
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 7983,
+              "max": 7983,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "imv",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 10368,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 10368,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 10368,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 8802.2,
+              "max": 8802.2,
+              "maxExclusive": false
+            }
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2025,
+              "month": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "leganes-prestaciones-especial-necesidad",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 120,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 120,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 48,
+      "validPositive": 72,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2026,
+              "month": 6
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-abono-transporte-65",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 79200,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 27040,
+        "no_cumple": 39360,
+        "insuficiente": 12800
+      },
+      "invalid": 0,
+      "invalidProfiles": 31680,
+      "validPositive": 13760,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-abono-transporte-infantil",
+      "version": 4,
+      "today": "2026-10-08",
+      "profiles": 360,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 270,
+        "no_cumple": 45,
+        "insuficiente": 45
+      },
+      "invalid": 0,
+      "invalidProfiles": 144,
+      "validPositive": 162,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 6,
+              "max": 6,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-abono-transporte-joven",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 45,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 25,
+        "no_cumple": 15,
+        "insuficiente": 5
+      },
+      "invalid": 0,
+      "invalidProfiles": 18,
+      "validPositive": 15,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 15,
+              "max": 15,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-accede-prestamo-libros",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 3,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 3,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 3,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "studentStatus": {
+            "state": "value",
+            "value": "si"
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-ayuda-pago-unico-vg",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 20,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 12,
+        "no_cumple": 8,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 8,
+      "validPositive": 8,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 144000,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 48000,
+        "no_cumple": 86400,
+        "insuficiente": 9600
+      },
+      "invalid": 0,
+      "invalidProfiles": 57600,
+      "validPositive": 32000,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 18,
+              "max": 18,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "housingStatus": {
+            "state": "value",
+            "value": "alquiler"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 240,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 144,
+        "no_cumple": 96,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 96,
+      "validPositive": 96,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 1,
+                  "max": 1,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 29999,
+              "max": 29999,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-general",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 900,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 432,
+        "no_cumple": 468,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 360,
+      "validPositive": 288,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 29,
+              "max": 29,
+              "maxExclusive": false
+            }
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 29999,
+              "max": 29999,
+              "maxExclusive": false
+            }
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2021,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-ayudas-urgencia-social",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 20,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 8,
+        "no_cumple": 4,
+        "insuficiente": 8
+      },
+      "invalid": 0,
+      "invalidProfiles": 8,
+      "validPositive": 4,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "09"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-beca-comedor-escolar",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 4800,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 3600,
+        "no_cumple": 600,
+        "insuficiente": 600
+      },
+      "invalid": 0,
+      "invalidProfiles": 1920,
+      "validPositive": 2160,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 8399,
+              "max": 8399,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-becas-bachillerato-centros-privados",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 18,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 18,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 18,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 35912,
+              "max": 35912,
+              "maxExclusive": false
+            }
+          },
+          "studentStatus": {
+            "state": "value",
+            "value": "si"
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 900,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 350,
+        "no_cumple": 375,
+        "insuficiente": 175
+      },
+      "invalid": 0,
+      "invalidProfiles": 360,
+      "validPositive": 210,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 18,
+              "max": 18,
+              "maxExclusive": false
+            }
+          },
+          "housingStatus": {
+            "state": "value",
+            "value": "alquiler"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-cheque-escuela-infantil",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 240,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 240,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 240,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 2,
+              "max": 2,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 35912,
+              "max": 35912,
+              "maxExclusive": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 1495,
+      "strategy": "pairs+boundary",
+      "truncated": true,
+      "counts": {
+        "probable": 0,
+        "posible": 1387,
+        "no_cumple": 108,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 108,
+      "validPositive": 1333,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          },
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 5638.16,
+              "max": 5638.16,
+              "maxExclusive": false
+            }
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2025,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "madrid-titulo-familia-numerosa",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 4500,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 1350,
+        "no_cumple": 3150,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 1800,
+      "validPositive": 900,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 20,
+              "max": 20,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              },
+              {
+                "age": {
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "mostoles-prestaciones-sociales",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 100,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 100,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 40,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "pension-incapacidad-permanente",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 5,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 5,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 5,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 66,
+              "max": 66,
+              "maxExclusive": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "pension-jubilacion-contributiva",
+      "version": 4,
+      "today": "2026-10-08",
+      "profiles": 275,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 110,
+        "no_cumple": 55,
+        "insuficiente": 110
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 110,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 52,
+              "max": 52,
+              "maxExclusive": false
+            }
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "pension-no-contributiva",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 1350,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 390,
+        "no_cumple": 390,
+        "insuficiente": 570
+      },
+      "invalid": 0,
+      "invalidProfiles": 540,
+      "validPositive": 234,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 18,
+              "max": 18,
+              "maxExclusive": false
+            }
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2024,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "pension-orfandad",
+      "version": 1,
+      "today": "2026-10-08",
+      "profiles": 200,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 200,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 200,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 24,
+              "max": 24,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          }
+        }
+      }
+    },
+    {
+      "slug": "pension-viudedad",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 360,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 360,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 360,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 25,
+              "max": 25,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-cuidado-menor-enfermedad-grave",
+      "version": 4,
+      "today": "2026-10-08",
+      "profiles": 792,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 423,
+        "no_cumple": 351,
+        "insuficiente": 18
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 423,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 150,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 90,
+        "no_cumple": 60,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 60,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2024,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "version": 3,
+      "today": "2026-10-23",
+      "profiles": 150,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 90,
+        "no_cumple": 60,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 60,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2024,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-desempleo-contributiva",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 88,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 88,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 88,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 800,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 600,
+        "no_cumple": 40,
+        "insuficiente": 160
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 600,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 1,
+                  "max": 1,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "disability": {
+            "state": "value",
+            "value": "gte33"
+          },
+          "familyType": {
+            "state": "value",
+            "value": "general"
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestacion-nacimiento-cuidado-menor",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 440,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 330,
+        "no_cumple": 55,
+        "insuficiente": 55
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 330,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 17,
+              "max": 17,
+              "maxExclusive": false
+            }
+          },
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 150,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 90,
+        "no_cumple": 60,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 60,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2024,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "version": 3,
+      "today": "2026-10-23",
+      "profiles": 150,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 90,
+        "no_cumple": 60,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 60,
+      "validPositive": 60,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependency": {
+            "state": "value",
+            "value": "reconocida"
+          },
+          "residenceSince": {
+            "state": "value",
+            "value": {
+              "year": 2024,
+              "month": 12
+            }
+          },
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "prestamos-personal-publico-cm",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 11,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 11,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 11,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    },
+    {
+      "slug": "sermas-ortoprotesica-desplazamiento",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 5,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 5,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 2,
+      "validPositive": 3,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "sermas-reintegro-gastos-sanitarios",
+      "version": 2,
+      "today": "2026-10-08",
+      "profiles": 5,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 5,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 2,
+      "validPositive": 3,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "territory": {
+            "state": "value",
+            "value": {
+              "ccaa": "13"
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "subsidio-desempleo",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 352,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 352,
+        "no_cumple": 0,
+        "insuficiente": 0
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 352,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "dependents": {
+            "state": "value",
+            "value": [
+              {
+                "age": {
+                  "min": 0,
+                  "max": 0,
+                  "maxExclusive": false
+                }
+              }
+            ]
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          },
+          "incomeAnnual": {
+            "state": "value",
+            "value": {
+              "min": 0,
+              "max": 0,
+              "maxExclusive": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "slug": "subsidio-mayores-52",
+      "version": 3,
+      "today": "2026-10-08",
+      "profiles": 55,
+      "strategy": "cartesian",
+      "truncated": false,
+      "counts": {
+        "probable": 0,
+        "posible": 22,
+        "no_cumple": 11,
+        "insuficiente": 22
+      },
+      "invalid": 0,
+      "invalidProfiles": 0,
+      "validPositive": 22,
+      "witness": {
+        "catalogVersion": 1,
+        "answers": {
+          "age": {
+            "state": "value",
+            "value": {
+              "min": 52,
+              "max": 52,
+              "maxExclusive": false
+            }
+          },
+          "employmentStatus": {
+            "state": "value",
+            "value": "asalariado"
+          }
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "slug": "anticipos-docentes-cm",
+      "golden": "gp-ola10-docente"
+    },
+    {
+      "slug": "asignacion-hijo-a-cargo",
+      "golden": "gp-asignacion-mostoles"
+    },
+    {
+      "slug": "ayto-emergencia-social",
+      "golden": "gp-emergencia-madrid"
+    },
+    {
+      "slug": "ayto-escuela-infantil",
+      "golden": "gp-escuela-infantil-madrid"
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "golden": "gp-ibi-fn-madrid"
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "golden": "gp-tarjeta-azul-vallecas"
+    },
+    {
+      "slug": "becas-generales-mefp-2026-2027",
+      "golden": "gp-beca-mec-alcala"
+    },
+    {
+      "slug": "bono-cultural-joven",
+      "golden": "gp-completitud-bono-cultural-joven"
+    },
+    {
+      "slug": "bono-social-electrico",
+      "golden": "gp-completitud-bono-social-electrico"
+    },
+    {
+      "slug": "bono-social-termico",
+      "golden": "gp-termico-getafe"
+    },
+    {
+      "slug": "cese-actividad-autonomos",
+      "golden": "gp-cese-autonomo-leganes"
+    },
+    {
+      "slug": "cm-reintegro-accidentes-trabajo",
+      "golden": "gp-ola10-empleado-publico"
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "golden": "gp-cai-madre-getafe"
+    },
+    {
+      "slug": "descuento-transporte-familia-numerosa",
+      "golden": "gp-completitud-descuento-transporte-familia-numerosa"
+    },
+    {
+      "slug": "fuenlabrada-fuenlacarenet-2026",
+      "golden": "gp-fuenlabrada-prestaciones"
+    },
+    {
+      "slug": "fuenlabrada-prestaciones-sociales",
+      "golden": "gp-fuenlabrada-prestaciones"
+    },
+    {
+      "slug": "imv",
+      "golden": "gp-imv-joven-solo"
+    },
+    {
+      "slug": "leganes-prestaciones-especial-necesidad",
+      "golden": "gp-leganes-prestaciones"
+    },
+    {
+      "slug": "madrid-abono-transporte-65",
+      "golden": "gp-abono-65-carabanchel"
+    },
+    {
+      "slug": "madrid-abono-transporte-infantil",
+      "golden": "gp-abono-infantil-getafe"
+    },
+    {
+      "slug": "madrid-abono-transporte-joven",
+      "golden": "gp-abono-estudiante-alcala"
+    },
+    {
+      "slug": "madrid-accede-prestamo-libros",
+      "golden": "gp-accede-estudiante"
+    },
+    {
+      "slug": "madrid-ayuda-pago-unico-vg",
+      "golden": "gp-vg-pago-unico"
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "golden": "gp-alquiler-vallecas"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+      "golden": "gp-completitud-madrid-ayudas-nacimiento-adopcion-multiple"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-general",
+      "golden": "gp-nacimiento-getafe"
+    },
+    {
+      "slug": "madrid-ayudas-urgencia-social",
+      "golden": "gp-urgencia-mostoles"
+    },
+    {
+      "slug": "madrid-beca-comedor-escolar",
+      "golden": "gp-beca-comedor-fuencarral"
+    },
+    {
+      "slug": "madrid-becas-bachillerato-centros-privados",
+      "golden": "gp-beca-6000-parla"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "golden": "gp-alquiler-joven-mostoles"
+    },
+    {
+      "slug": "madrid-cheque-escuela-infantil",
+      "golden": "gp-cheque-madre-torrejon"
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "golden": "gp-rmi-getafe"
+    },
+    {
+      "slug": "madrid-titulo-familia-numerosa",
+      "golden": "gp-titulo-fn-vallecas"
+    },
+    {
+      "slug": "mostoles-prestaciones-sociales",
+      "golden": "gp-mostoles-prestaciones"
+    },
+    {
+      "slug": "pension-incapacidad-permanente",
+      "golden": "gp-incapacidad-alcala"
+    },
+    {
+      "slug": "pension-jubilacion-contributiva",
+      "golden": "gp-jubilacion-leganes"
+    },
+    {
+      "slug": "pension-no-contributiva",
+      "golden": "gp-pnc-carabanchel"
+    },
+    {
+      "slug": "pension-orfandad",
+      "golden": "gp-orfandad-getafe"
+    },
+    {
+      "slug": "pension-viudedad",
+      "golden": "gp-viuda-vallecas"
+    },
+    {
+      "slug": "prestacion-cuidado-menor-enfermedad-grave",
+      "golden": "gp-cancer-padre-vallecas"
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "golden": "gp-cuidadora-64-carabanchel"
+    },
+    {
+      "slug": "prestacion-desempleo-contributiva",
+      "golden": "gp-paro-alcala"
+    },
+    {
+      "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+      "golden": "gp-completitud-prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad"
+    },
+    {
+      "slug": "prestacion-nacimiento-cuidado-menor",
+      "golden": "gp-permiso-madre-parla"
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "golden": "gp-dependencia-cuidadora"
+    },
+    {
+      "slug": "prestamos-personal-publico-cm",
+      "golden": "gp-ola10-empleado-publico"
+    },
+    {
+      "slug": "sermas-ortoprotesica-desplazamiento",
+      "golden": "gp-ola10-paciente-sermas"
+    },
+    {
+      "slug": "sermas-reintegro-gastos-sanitarios",
+      "golden": "gp-ola10-paciente-sermas"
+    },
+    {
+      "slug": "subsidio-desempleo",
+      "golden": "gp-subsidio-getafe"
+    },
+    {
+      "slug": "subsidio-mayores-52",
+      "golden": "gp-completitud-subsidio-mayores-52"
+    }
+  ]
+}

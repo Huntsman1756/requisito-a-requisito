@@ -1,0 +1,48 @@
+{
+	"id": "gp-completitud-bono-social-electrico",
+	"description": "Perfil ficticio positivo de cobertura para bono-social-electrico. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "familia-numerosa"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 0,
+					"maxExclusive": false
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "bono-social-electrico",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-rd-897-2017-bono-social",
+					"locator": "Art. 3.2",
+					"reasoning": "Cumplir alguna vía de «consumidor vulnerable». Condición {\"any\":[{\"field\":\"familyType\",\"op\":\"eq\",\"value\":\"familia-numerosa\",\"label\":\"Tener título de familia numerosa\",\"citation\":{\"sourceId\":\"boe-rd-897-2017-bono-social\",\"locator\":\"Art. 3.2.b\",\"excerpt\":\"Estar en posesión del título de familia numerosa\",\"excerptSha256\":\"2f095e398bec039032030692c250510c473a0819a3d35136d774ebaa3f196b72\"}},{\"field\":\"incomeAnnual\",\"op\":\"lte\",\"param\":\"IPREM_ANUAL_14P\",\"multiplier\":1.5,\"label\":\"Renta conjunta anual ≤ 1,5 veces el IPREM de 14 pagas\",\"citation\":{\"sourceId\":\"boe-rd-897-2017-bono-social\",\"locator\":\"Art. 3.2.a\",\"excerpt\":\"sea igual o inferior a 1,5 veces el Indicador Público de Renta de Efectos Múltiples (IPREM) de 14 pagas\",\"excerptSha256\":\"e1828ae66d7e3dc3280bc2c8ca30b219f1b775393f82bbf6c8d2dda37726370d\"}}]}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"familyType\":{\"state\":\"value\",\"value\":\"familia-numerosa\"},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}}. Extracto de la norma: deberá cumplir alguno de los requisitos siguientes. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"id": "gp-completitud-prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+	"description": "Perfil ficticio positivo de cobertura para prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"familyType": {
+				"state": "value",
+				"value": "monoparental"
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 0,
+							"max": 0,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 0,
+					"maxExclusive": false
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 357.1",
+					"reasoning": "Pertenecer a una de estas situaciones: familia numerosa, monoparental, o madre/padre con discapacidad. Condición {\"any\":[{\"field\":\"familyType\",\"op\":\"eq\",\"value\":\"familia-numerosa\",\"label\":\"Familia numerosa\",\"citation\":{\"sourceId\":\"boe-lgss-prestacion-familia\",\"locator\":\"Art. 357.1\",\"excerpt\":\"en una familia numerosa\",\"excerptSha256\":\"6fdc9ac656a2ccb1f81db7aa946a6973868192fc94f1c29d99289433674cae4c\"}},{\"field\":\"familyType\",\"op\":\"eq\",\"value\":\"monoparental\",\"label\":\"Familia monoparental\",\"citation\":{\"sourceId\":\"boe-lgss-prestacion-familia\",\"locator\":\"Art. 357.2\",\"excerpt\":\"Se entenderá por familia monoparental la constituida por un solo progenitor con el que convive el hijo nacido o adoptado\",\"excerptSha256\":\"5e29ce70ffc7cdef5d00950afc026b32e36435ca88014bb15083a118d64f771d\"}},{\"field\":\"disability\",\"op\":\"eq\",\"value\":\"gte33\",\"label\":\"Madre o padre con discapacidad reconocida\",\"citation\":{\"sourceId\":\"boe-lgss-prestacion-familia\",\"locator\":\"Art. 357.1\",\"excerpt\":\"un grado de discapacidad igual o superior al 65 por ciento\",\"excerptSha256\":\"2305a42173b82acb0c8187a59b5c4a746fa98b66375df5637a71f94ec26f2283\"}},{\"field\":\"dependents\",\"op\":\"count_where_gte\",\"where\":{\"field\":\"age\",\"op\":\"lt\",\"value\":18},\"count\":2,\"label\":\"con este nacimiento/adopción tu familia adquiere la condición (2+ menores ya a cargo)\"}]}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"familyType\":{\"state\":\"value\",\"value\":\"monoparental\"},\"dependents\":{\"state\":\"value\",\"value\":[{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}]},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}}. Extracto de la norma: en una familia numerosa o que, con tal motivo, adquiera dicha condición, en una familia monoparental o en los supuestos de madres o padres que tengan reconocido un grado de discapacidad igual o superior al 65 por ciento se tendrá derecho a una prestación económica. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

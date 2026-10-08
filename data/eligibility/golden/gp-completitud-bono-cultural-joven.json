@@ -1,0 +1,52 @@
+{
+	"id": "gp-completitud-bono-cultural-joven",
+	"description": "Perfil ficticio positivo de cobertura para bono-cultural-joven. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"birthYear": {
+				"state": "value",
+				"value": {
+					"min": 2008,
+					"max": 2008,
+					"maxExclusive": false
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 18,
+					"max": 18,
+					"maxExclusive": false
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "bono-cultural-joven",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-bono-cultural-2026",
+					"locator": "Extracto, apartado «Primero. Beneficiarios»",
+					"reasoning": "Haber nacido en 2008 (cumplir 18 años durante 2026). Condición {\"field\":\"birthYear\",\"op\":\"between\",\"value\":[2008,2008],\"inclusive\":[true,true]}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"birthYear\":{\"state\":\"value\",\"value\":{\"min\":2008,\"max\":2008,\"maxExclusive\":false}},\"age\":{\"state\":\"value\",\"value\":{\"min\":18,\"max\":18,\"maxExclusive\":false}}}. Extracto de la norma: Podrán ser beneficiarias las personas jóvenes que cumplan 18 años en 2026. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

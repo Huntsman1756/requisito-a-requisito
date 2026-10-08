@@ -1,0 +1,73 @@
+{
+	"id": "gp-completitud-madrid-ayudas-nacimiento-adopcion-multiple",
+	"description": "Perfil ficticio positivo de cobertura para madrid-ayudas-nacimiento-adopcion-multiple. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 0,
+							"max": 0,
+							"maxExclusive": false
+						}
+					},
+					{
+						"age": {
+							"min": 0,
+							"max": 0,
+							"maxExclusive": false
+						}
+					}
+				]
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 12000,
+					"max": 12000,
+					"maxExclusive": false
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "madrid-ayudas-nacimiento-adopcion-multiple",
+			"rulesVersion": 2,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "bocm-20231228-18-nacimiento-multiple",
+					"locator": "Art. 6.b",
+					"reasoning": "Estar empadronado en la Comunidad de Madrid. Condición {\"field\":\"territory\",\"op\":\"within_territory\",\"value\":{\"ccaa\":\"13\"}}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"dependents\":{\"state\":\"value\",\"value\":[{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}},{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}]},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":12000,\"max\":12000,\"maxExclusive\":false}}}. Extracto de la norma: Estar empadronado en la Comunidad de Madrid. No se afirma que los requisitos no comprobables se cumplan."
+				},
+				{
+					"sourceId": "bocm-20231228-18-nacimiento-multiple",
+					"locator": "Art. 5.1",
+					"reasoning": "Tener dos o más hijas o hijos de un mismo nacimiento o adopción (parto múltiple) — medimos las personas a tu cargo declaradas. Condición {\"field\":\"dependents\",\"op\":\"count_where_gte\",\"count\":2}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"dependents\":{\"state\":\"value\",\"value\":[{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}},{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}]},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":12000,\"max\":12000,\"maxExclusive\":false}}}. Extracto de la norma: los progenitores que hayan tenido dos o más hijos de nacimiento o adopción múltiple. No se afirma que los requisitos no comprobables se cumplan."
+				},
+				{
+					"sourceId": "bocm-20231228-18-nacimiento-multiple",
+					"locator": "Art. 6.c",
+					"reasoning": "Ingresos anuales por debajo de 30.000 €. Condición {\"field\":\"incomeAnnual\",\"op\":\"lt\",\"value\":30000}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"dependents\":{\"state\":\"value\",\"value\":[{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}},{\"age\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}]},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":12000,\"max\":12000,\"maxExclusive\":false}}}. Extracto de la norma: La renta per cápita de la unidad familiar no podrá ser igual o superior al límite de 30.000 euros. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}

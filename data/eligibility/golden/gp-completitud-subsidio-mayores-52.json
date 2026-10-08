@@ -1,0 +1,61 @@
+{
+	"id": "gp-completitud-subsidio-mayores-52",
+	"description": "Perfil ficticio positivo de cobertura para subsidio-mayores-52. Derivado de requisitos citados; no acredita derecho ni aprobación humana. Ver hoja de goldens de completitud.",
+	"today": "2026-10-08",
+	"profile": {
+		"catalogVersion": 1,
+		"answers": {
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28079"
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 55,
+					"max": 55,
+					"maxExclusive": false
+				}
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 0,
+					"maxExclusive": false
+				}
+			}
+		}
+	},
+	"expectations": [
+		{
+			"benefitSlug": "subsidio-mayores-52",
+			"rulesVersion": 3,
+			"verdict": "posible",
+			"blockers": [],
+			"justification": [
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 280.1",
+					"reasoning": "Tener 52 años cumplidos en el momento del hecho que da lugar al subsidio. Condición {\"field\":\"age\",\"op\":\"gte\",\"value\":52}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"age\":{\"state\":\"value\",\"value\":{\"min\":55,\"max\":55,\"maxExclusive\":false}},\"employmentStatus\":{\"state\":\"value\",\"value\":\"desempleado\"},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}}. Extracto de la norma: Podrán acceder al subsidio para mayores de cincuenta y dos años los trabajadores que, en la fecha en que se encuentren en el supuesto previsto en el artículo 274.1 tengan cumplida dicha edad. No se afirma que los requisitos no comprobables se cumplan."
+				},
+				{
+					"sourceId": "boe-lgss-prestacion-familia",
+					"locator": "Art. 274.1.b",
+					"reasoning": "Estar en desempleo total o trabajando a tiempo parcial. Condición {\"field\":\"employmentStatus\",\"op\":\"eq\",\"value\":\"desempleado\"}; perfil {\"territory\":{\"state\":\"value\",\"value\":{\"ccaa\":\"13\",\"province\":\"28\",\"municipality\":\"28079\"}},\"age\":{\"state\":\"value\",\"value\":{\"min\":55,\"max\":55,\"maxExclusive\":false}},\"employmentStatus\":{\"state\":\"value\",\"value\":\"desempleado\"},\"incomeAnnual\":{\"state\":\"value\",\"value\":{\"min\":0,\"max\":0,\"maxExclusive\":false}}}. Extracto de la norma: Podrán acceder a estos subsidios quienes mantengan uno o varios contratos a tiempo parcial, siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa. No se afirma que los requisitos no comprobables se cumplan."
+				}
+			]
+		}
+	],
+	"review": {
+		"status": "pending"
+	}
+}
