@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-bono-alquiler-joven",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -70,8 +70,8 @@
 		},
 		{
 			"id": "vivienda-en-madrid",
-			"hard": true,
-			"label": "Vivir en la Comunidad de Madrid (la vivienda alquilada debe ser tu residencia habitual en la región)",
+			"hard": false,
+			"label": "Vivir o ir a vivir en la Comunidad de Madrid: la vivienda alquilada debe ser —o ir a ser— tu domicilio habitual en la región",
 			"citation": {
 				"sourceId": "bocm-20250110-20-bono-alquiler",
 				"locator": "Extracto, título del Acuerdo",
@@ -241,8 +241,8 @@
 		"documents": [
 			{
 				"id": "contrato",
-				"label": "Copia del contrato de arrendamiento o cesión de vivienda o habitación",
-				"mandatory": true,
+				"label": "Copia del contrato de arrendamiento o cesión de vivienda o habitación — si aún no lo has firmado, la vía «en condiciones de suscribir» te lo permite presentar después",
+				"mandatory": false,
 				"citation": {
 					"sourceId": "sede-bono-alquiler-joven",
 					"locator": "Documentación, punto 2",

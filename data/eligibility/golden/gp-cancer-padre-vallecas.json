@@ -72,7 +72,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
-			"rulesVersion": 3,
+			"rulesVersion": 4,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

@@ -45,7 +45,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "ayto-escuela-infantil",
-			"rulesVersion": 2,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "OPEN",
 			"justification": [

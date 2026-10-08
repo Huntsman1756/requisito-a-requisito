@@ -45,7 +45,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "madrid-cheque-escuela-infantil",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "CLOSED_RECURRING",
 			"blockers": [],

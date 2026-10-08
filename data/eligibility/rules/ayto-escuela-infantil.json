@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "ayto-escuela-infantil",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -79,8 +79,8 @@
 		},
 		{
 			"id": "hijo-primer-ciclo",
-			"hard": true,
-			"label": "Tener a cargo una niña o niño en edad de primer ciclo de Educación Infantil (nacidos en 2024, 2025 o 2026; los de 2023 solo con permanencia acreditada, y los «no nacidos» con parto previsto antes del 01/01/2027 — ver ⚠)",
+			"hard": false,
+			"label": "Tener a cargo una niña o niño en edad de primer ciclo (nacidos en 2024, 2025 o 2026; los de 2023 con permanencia acreditada, y también si el nacimiento está previsto antes del 1/1/2027)",
 			"citation": {
 				"sourceId": "boam-20260324-bases-eim-2627",
 				"locator": "Bases, apdo. 2.1 (Destinatarios)",

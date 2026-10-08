@@ -101,7 +101,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "ayto-ibi-familia-numerosa",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

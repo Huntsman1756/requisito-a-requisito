@@ -5,24 +5,75 @@
 	"profile": {
 		"catalogVersion": 1,
 		"answers": {
-			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28058" } },
-			"residenceSince": { "state": "value", "value": { "year": 2016, "month": 4 } },
-			"age": { "state": "value", "value": { "min": 50, "max": 50, "maxExclusive": false } },
-			"dependents": { "state": "value", "value": [
-				{ "age": { "min": 10, "max": 10, "maxExclusive": false }, "disability": "no" }
-			] },
-			"familyType": { "state": "value", "value": "monoparental" },
-			"employmentStatus": { "state": "value", "value": "desempleado" },
-			"studentStatus": { "state": "value", "value": "no" },
-			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
-			"disability": { "state": "value", "value": "no" },
-			"housingStatus": { "state": "value", "value": "alquiler" }
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28058"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2016,
+					"month": 4
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 50,
+					"max": 50,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": [
+					{
+						"age": {
+							"min": 10,
+							"max": 10,
+							"maxExclusive": false
+						},
+						"disability": "no"
+					}
+				]
+			},
+			"familyType": {
+				"state": "value",
+				"value": "monoparental"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "desempleado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
 		}
 	},
 	"expectations": [
 		{
 			"benefitSlug": "fuenlabrada-prestaciones-sociales",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"justification": [
@@ -62,5 +113,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

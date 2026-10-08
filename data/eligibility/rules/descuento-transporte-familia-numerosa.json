@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "descuento-transporte-familia-numerosa",
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -26,7 +26,7 @@
 		{
 			"id": "titulo-familia-numerosa",
 			"hard": true,
-			"label": "Ser titular de familia numerosa",
+			"label": "Ser titular de familia numerosa (si eres monoparental con el título, responde «familia monoparental»)",
 			"citation": {
 				"sourceId": "boe-rd-1621-2005-reglamento-fn",
 				"locator": "Art. 11.4",
@@ -35,8 +35,12 @@
 			},
 			"condition": {
 				"field": "familyType",
-				"op": "eq",
-				"value": "familia-numerosa"
+				"op": "in",
+				"value": [
+					"familia-numerosa",
+					"monoparental"
+				],
+				"label": "tienes el título de familia numerosa — aunque seas monoparental o vivas solo/a"
 			}
 		}
 	],

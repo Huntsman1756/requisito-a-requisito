@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-cheque-escuela-infantil",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -47,8 +47,8 @@
 	"requirements": [
 		{
 			"id": "hijo-menor-3",
-			"hard": true,
-			"label": "Tener un hijo o hija menor de 3 años (el primer ciclo es de 0 a 3 años; la convocatoria 2026-2027 exige nacido o previsto antes del 1 de enero de 2027 — ver ⚠)",
+			"hard": false,
+			"label": "Tener un hijo o hija en primer ciclo de Educación Infantil (nacidos en 2024-2026; también >3 si repite por NEE, y nacimientos previstos antes del 1/1/2027)",
 			"citation": {
 				"sourceId": "bocm-20260518-39-infantil-2026-2027",
 				"locator": "Extracto, Segundo (Beneficiarios)",

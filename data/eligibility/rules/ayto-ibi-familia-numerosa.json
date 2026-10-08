@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "ayto-ibi-familia-numerosa",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -66,7 +66,7 @@
 		{
 			"id": "titulo-familia-numerosa",
 			"hard": true,
-			"label": "Ser titular de familia numerosa — el título debe estar vigente en el momento del devengo del impuesto (1 de enero del ejercicio del recibo)",
+			"label": "Ser titular de familia numerosa — el título debe estar vigente en el momento del devengo del impuesto (1 de enero del ejercicio del recibo) (si eres monoparental con el título, responde «familia monoparental»)",
 			"citation": {
 				"sourceId": "bocm-20231228-42-ibi",
 				"locator": "Art. 12.1 (redacción dada por la Ordenanza 5/2023, art. único.Dos)",
@@ -75,8 +75,12 @@
 			},
 			"condition": {
 				"field": "familyType",
-				"op": "eq",
-				"value": "familia-numerosa"
+				"op": "in",
+				"value": [
+					"familia-numerosa",
+					"monoparental"
+				],
+				"label": "tienes el título de familia numerosa — aunque seas monoparental o vivas solo/a"
 			}
 		},
 		{

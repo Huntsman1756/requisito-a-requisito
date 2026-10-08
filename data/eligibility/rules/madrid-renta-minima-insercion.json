@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-renta-minima-insercion",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -58,8 +58,8 @@
 		},
 		{
 			"id": "residencia-un-ano",
-			"hard": true,
-			"label": "Llevar residiendo de forma efectiva e ininterrumpida en la Comunidad de Madrid al menos el año inmediatamente anterior a la solicitud (proxy: antigüedad en el empadronamiento)",
+			"hard": false,
+			"label": "Residir de forma efectiva e ininterrumpida en la Comunidad de Madrid el año inmediatamente anterior (aquí medimos meses empadronado en tu municipio actual; hay cómputos especiales por prisión, VG, centros)",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "boe-ley-15-2001-rmi",
@@ -75,8 +75,8 @@
 		},
 		{
 			"id": "edad-25-65",
-			"hard": true,
-			"label": "Ser mayor de 25 años y menor de 65 — salvo si tienes menores o personas con discapacidad a cargo (válido a cualquier edad adulta) u otras vías de 18–25 y +65 años (ver ⚠)",
+			"hard": false,
+			"label": "Tener entre 25 y 65 años — salvo vías tasadas: 18-24 años en situaciones protegidas, mayores de 65 sin pensión, menores emancipados",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "boe-ley-15-2001-rmi",

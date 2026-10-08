@@ -73,7 +73,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "madrid-renta-minima-insercion",
-			"rulesVersion": 1,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"justification": [

@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-titulo-familia-numerosa",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -81,8 +81,8 @@
 		},
 		{
 			"id": "edad-hijos",
-			"hard": true,
-			"label": "Que al menos 2 de tus hijos estén en edad de computar: menores de 21 años —o hasta 25 incluidos si cursan estudios—; los hijos con discapacidad o incapacidad para trabajar computan a cualquier edad",
+			"hard": false,
+			"label": "Que al menos 2 hijos estén en edad de computar (menores de 21, hasta 25 si estudian, discapacidad sin límite) — también computan unidades de 3+ hermanos huérfanos adultos",
 			"timeDependent": "decreasing",
 			"citation": {
 				"sourceId": "boe-ley-40-2003-fn",

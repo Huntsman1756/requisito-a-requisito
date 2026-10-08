@@ -63,7 +63,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "madrid-bono-alquiler-joven",
-			"rulesVersion": 1,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

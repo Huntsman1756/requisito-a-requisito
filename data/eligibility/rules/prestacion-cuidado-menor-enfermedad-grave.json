@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
 	"standalone": false,
-	"rulesVersion": 3,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 4,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -71,7 +71,7 @@
 		{
 			"id": "trabajadora-afiliada-alta",
 			"hard": true,
-			"label": "Trabajar (por cuenta ajena o por cuenta propia), estando afiliada/o y en alta en un régimen de la Seguridad Social",
+			"label": "Trabajar (por cuenta ajena o por cuenta propia), estando afiliada/o y en alta en un régimen de la Seguridad Social — los funcionarios de régimen propio quedan fuera (el personal laboral público sí cotiza)",
 			"citation": {
 				"sourceId": "boe-rd-1148-2011-cancer",
 				"locator": "Art. 4.1",
@@ -85,7 +85,8 @@
 					"asalariado",
 					"autonomo",
 					"docente",
-					"investigador"
+					"investigador",
+					"empleado-publico"
 				]
 			}
 		}

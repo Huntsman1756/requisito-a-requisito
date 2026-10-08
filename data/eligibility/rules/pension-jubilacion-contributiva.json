@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "pension-jubilacion-contributiva",
 	"standalone": true,
-	"rulesVersion": 3,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 4,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -41,7 +41,7 @@
 			"id": "edad-minima-52",
 			"hard": true,
 			"timeDependent": "increasing",
-			"label": "Tener 52 años cumplidos: por debajo la ley no permite jubilarse ni siquiera por la vía reducida por discapacidad, y la ordinaria y las anticipadas exigen bastante más; solo colectivos con coeficientes por penosidad (minería y similares) pueden rebajarla aún más — ver ⚠. Ten en cuenta que la edad real que te corresponde suele ser bastante mayor: en 2026 la ordinaria son 66 años y 10 meses, o 65 si acreditas 38 años y 3 meses cotizados (en el Régimen General; los regímenes especiales mineros/mar tienen coeficientes propios que aquí no evaluamos)",
+			"label": "Tener 52 años cumplidos: por debajo la ley no permite jubilarse; los coeficientes reductores por penosidad no pueden bajar de 52 (art. 206.6 LGSS)",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Disposición transitoria séptima, cuadro (año 2026)",

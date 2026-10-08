@@ -69,7 +69,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "ayto-tarjeta-azul-discapacidad",
-			"rulesVersion": 2,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"justification": [

@@ -140,7 +140,13 @@ describe("frontera: prestacion-nacimiento-fn-monoparental-discapacidad", () => {
 		expect(ev.uncovered.some((u) => u.includes("≥65 %"))).toBe(true);
 	});
 	it("sin ninguna vía ⇒ F ⇒ no_cumple", () => {
-		const ev = verdictOf(slug, { familyType: val("general"), disability: val("no") });
+		// dependents respondido ([]) para que la rama «adquiere la condición»
+		// evalúe F y no U (UNKNOWN ≠ NO).
+		const ev = verdictOf(slug, {
+			familyType: val("general"),
+			disability: val("no"),
+			dependents: val([]),
+		});
 		expect(ev.requirements[0].status).toBe("F");
 		expect(ev.verdict).toBe("no_cumple");
 	});

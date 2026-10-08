@@ -5,22 +5,66 @@
 	"profile": {
 		"catalogVersion": 1,
 		"answers": {
-			"territory": { "state": "value", "value": { "ccaa": "13", "province": "28", "municipality": "28074" } },
-			"residenceSince": { "state": "value", "value": { "year": 2020, "month": 1 } },
-			"age": { "state": "value", "value": { "min": 38, "max": 38, "maxExclusive": false } },
-			"dependents": { "state": "value", "value": [] },
-			"familyType": { "state": "value", "value": "general" },
-			"employmentStatus": { "state": "value", "value": "asalariado" },
-			"studentStatus": { "state": "value", "value": "no" },
-			"incomeAnnual": { "state": "value", "value": { "min": 0, "max": 8400 } },
-			"disability": { "state": "value", "value": "no" },
-			"housingStatus": { "state": "value", "value": "alquiler" }
+			"territory": {
+				"state": "value",
+				"value": {
+					"ccaa": "13",
+					"province": "28",
+					"municipality": "28074"
+				}
+			},
+			"residenceSince": {
+				"state": "value",
+				"value": {
+					"year": 2020,
+					"month": 1
+				}
+			},
+			"age": {
+				"state": "value",
+				"value": {
+					"min": 38,
+					"max": 38,
+					"maxExclusive": false
+				}
+			},
+			"dependents": {
+				"state": "value",
+				"value": []
+			},
+			"familyType": {
+				"state": "value",
+				"value": "general"
+			},
+			"employmentStatus": {
+				"state": "value",
+				"value": "asalariado"
+			},
+			"studentStatus": {
+				"state": "value",
+				"value": "no"
+			},
+			"incomeAnnual": {
+				"state": "value",
+				"value": {
+					"min": 0,
+					"max": 8400
+				}
+			},
+			"disability": {
+				"state": "value",
+				"value": "no"
+			},
+			"housingStatus": {
+				"state": "value",
+				"value": "alquiler"
+			}
 		}
 	},
 	"expectations": [
 		{
 			"benefitSlug": "leganes-prestaciones-especial-necesidad",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"justification": [
@@ -37,5 +81,7 @@
 			]
 		}
 	],
-	"review": { "status": "pending" }
+	"review": {
+		"status": "pending"
+	}
 }

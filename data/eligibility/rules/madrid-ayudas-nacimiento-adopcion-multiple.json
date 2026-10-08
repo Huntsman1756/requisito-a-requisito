@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "madrid-ayudas-nacimiento-adopcion-multiple",
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -43,8 +43,8 @@
 		},
 		{
 			"id": "dos-o-mas-personas-cargo",
-			"hard": true,
-			"label": "Tener al menos dos hijas o hijos a cargo",
+			"hard": false,
+			"label": "Tener dos o más hijas o hijos de un mismo nacimiento o adopción (parto múltiple) — medimos las personas a tu cargo declaradas",
 			"citation": {
 				"sourceId": "bocm-20231228-18-nacimiento-multiple",
 				"locator": "Art. 5.1",

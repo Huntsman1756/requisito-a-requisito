@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "subsidio-mayores-52",
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -126,6 +126,16 @@
 				"locator": "Art. 280.1",
 				"excerpt": "las personas que hayan percibido o agotado la Renta Activa de Inserción regulada en el Real Decreto 1369/2006",
 				"excerptSha256": "5527e9370c1a6b16afbffae3acb8e2e70301ba05ac1d8ab37dd0e09bc7dd0ef0"
+			}
+		},
+		{
+			"id": "acceso-diferido-52",
+			"label": "Acceso diferido: también pueden acceder quienes no llegan a 52 en la fecha del hecho causante si llegan mientras tienen derecho a reanudar un subsidio o durante su percepción, manteniendo la inscripción ininterrumpida",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 280.1",
+				"excerpt": "derecho a reanudar cualquier subsidio, así como quienes, reuniendo dichos requisitos, cumplan la edad de cincuenta y dos años durante la percepción de cualquiera de los subsidios previstos en el artículo 274",
+				"excerptSha256": "aaabb5a3182f4ecf81ec99ba288a9e5eb5b18c10c04bbb7f9cc2f2a781045bb5"
 			}
 		}
 	],

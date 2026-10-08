@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "sermas-ortoprotesica-desplazamiento",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -42,8 +42,11 @@
 			},
 			"condition": {
 				"field": "territory",
-				"op": "eq",
-				"value": "cm"
+				"op": "within_territory",
+				"value": {
+					"ccaa": "13"
+				},
+				"label": "eres residente en la Comunidad de Madrid"
 			}
 		}
 	],

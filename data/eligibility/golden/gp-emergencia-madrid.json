@@ -73,7 +73,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "ayto-emergencia-social",
-			"rulesVersion": 1,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"justification": [

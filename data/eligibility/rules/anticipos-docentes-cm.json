@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "anticipos-docentes-cm",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -42,8 +42,12 @@
 			},
 			"condition": {
 				"field": "employmentStatus",
-				"op": "eq",
-				"value": "docente"
+				"op": "in",
+				"value": [
+					"docente",
+					"empleado-publico"
+				],
+				"label": "eres funcionario/a docente (marca «Docencia» o «Empleo público»)"
 			}
 		}
 	],

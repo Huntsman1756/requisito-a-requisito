@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "leganes-prestaciones-especial-necesidad",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -28,8 +28,8 @@
 	"requirements": [
 		{
 			"id": "empadronado-leganes-6m",
-			"hard": true,
-			"label": "Estar empadronado/a en Leganés de forma ininterrumpida al menos 6 meses antes de la solicitud. Se exceptúa a las víctimas de violencia de género o intrafamiliar, a los supuestos de protección del menor (arts. 10.3 y 11.1 de la Ley 1/1996) y a las prestaciones para personas transeúntes",
+			"hard": false,
+			"label": "Estar empadronado/a en Leganés — excepto víctimas de VG/intrafamiliar, protección de menores y transeúntes, que aquí no podemos comprobar",
 			"citation": {
 				"sourceId": "bocm-20230328-leganes-ordenanza-prestaciones",
 				"locator": "Ordenanza, art. 3.a",

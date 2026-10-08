@@ -101,6 +101,13 @@ describe("muestreo-indice sobre datos reales (F10-FIX-1)", () => {
 
 	it("ninguna hoja vigente tiene 0 reglas", () => {
 		for (const h of indice.hojas) {
+			// Una hoja puede quedar sin vigentes si una hoja posterior las
+			// cubre todas (re-muestreo tras corrección, p. ej. ola-12): sigue
+			// en el índice por trazabilidad pero aprueba «nothing» y no se aplica.
+			if (h.vigenteSlugs.length === 0) {
+				expect(h.slugs.length, `${h.sheet} sin filas`).toBeGreaterThan(0);
+				continue;
+			}
 			expect(
 				h.vigenteSlugs.length,
 				`${h.sheet} no aprueba ninguna regla`,
@@ -112,6 +119,7 @@ describe("muestreo-indice sobre datos reales (F10-FIX-1)", () => {
 		timeout: 180_000,
 	}, () => {
 		for (const h of indice.hojas) {
+			if (h.vigenteSlugs.length === 0) continue;
 			const rulesDir = cloneRules();
 			const text = markFirstN(
 				readFileSync(join(root, h.sheet), "utf8"),
@@ -142,6 +150,7 @@ describe("muestreo-indice sobre datos reales (F10-FIX-1)", () => {
 	}, () => {
 		const rulesDir = cloneRules();
 		for (const h of indice.hojas) {
+			if (h.vigenteSlugs.length === 0) continue;
 			const text = markFirstN(readFileSync(join(root, h.sheet), "utf8"), 2);
 			const r = applySheet(join(root, h.sheet), {
 				rulesDirs: [rulesDir],

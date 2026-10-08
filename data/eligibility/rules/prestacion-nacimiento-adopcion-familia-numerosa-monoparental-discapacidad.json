@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -70,6 +70,17 @@
 						"field": "disability",
 						"op": "eq",
 						"value": "gte33"
+					},
+					{
+						"field": "dependents",
+						"op": "count_where_gte",
+						"count": 2,
+						"where": {
+							"field": "age",
+							"op": "lt",
+							"value": 18
+						},
+						"label": "con este nacimiento/adopción tu familia adquiere la condición (2+ menores ya a cargo)"
 					}
 				]
 			}

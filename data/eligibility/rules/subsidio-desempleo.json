@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "subsidio-desempleo",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -54,7 +54,7 @@
 		{
 			"id": "carencia-rentas",
 			"hard": false,
-			"label": "Carencia de rentas propias: tus rentas del mes anterior a la solicitud no pueden superar el 75 % del SMI sin pagas extra (915,75 €/mes en 2026; proxy anual ≈ 10.989 €/año). Vía alternativa si tienes responsabilidades familiares: ver ⚠",
+			"label": "Carencia de rentas propias: tus rentas del mes anterior a la solicitud no pueden superar el 75 % del SMI sin pagas extra (915,75 €/mes en 2026; proxy anual ≈ 10.989 €/año). Vía alternativa si tienes responsabilidades familiares: ver ⚠ (la norma mide las rentas del mes natural anterior; aquí solo comprobamos tu renta anual como referencia)",
 			"citation": {
 				"sourceId": "boe-lgss-prestacion-familia",
 				"locator": "Art. 275.1",

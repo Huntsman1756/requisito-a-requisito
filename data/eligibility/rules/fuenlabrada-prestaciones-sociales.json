@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "fuenlabrada-prestaciones-sociales",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -50,8 +50,8 @@
 		},
 		{
 			"id": "empadronado-fuenlabrada",
-			"hard": true,
-			"label": "Estar empadronado/a en el municipio de Fuenlabrada. Se exceptúa a las prestaciones dirigidas a personas transeúntes, a las mujeres que han sufrido o están sufriendo violencia de género en el último año y a los supuestos de los arts. 10.3 y 11.1 de la L.O. 1/1996",
+			"hard": false,
+			"label": "Estar empadronado/a en Fuenlabrada — excepto transeúntes, mujeres con violencia de género en el último año y supuestos de la LO 1/1996, que aquí no podemos comprobar",
 			"citation": {
 				"sourceId": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
 				"locator": "Ordenanza, art. 4.2",
@@ -80,7 +80,8 @@
 			"condition": {
 				"field": "incomeAnnual",
 				"op": "lte",
-				"value": 6400
+				"value": 7984,
+				"label": "tus ingresos anuales están por debajo de ~7.984 € (665,33 € × 12 meses del baremo)"
 			}
 		}
 	],

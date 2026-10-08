@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-ayudas-urgencia-social",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -36,8 +36,8 @@
 	"requirements": [
 		{
 			"id": "ambito-territorial-cm",
-			"hard": true,
-			"label": "La prestación cubre el territorio de la Comunidad de Madrid: debes vivir (o encontrarte) en un municipio de la CM",
+			"hard": false,
+			"label": "Vivir o encontrarte en la Comunidad de Madrid en el momento de la urgencia — medimos empadronamiento, pero la norma pide presencia",
 			"citation": {
 				"sourceId": "bocm-20230801-18-cartera-ss",
 				"locator": "Anexo II, ficha 060502 — Ámbito territorial de atención",

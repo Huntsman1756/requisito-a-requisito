@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "imv",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -33,8 +33,8 @@
 	"requirements": [
 		{
 			"id": "edad-minima",
-			"hard": true,
-			"label": "Tener al menos 23 años, o ser mayor de edad con hijos o menores a cargo",
+			"hard": false,
+			"label": "Tener 23 años o más, o ser mayor de edad con hijos o menores a cargo — con excepciones tasadas (extutelados, liberados de prisión >6 meses, víctimas de VG/trata, huérfanos absolutos solos) que aquí no podemos comprobar",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "boe-ley-19-2021-imv",

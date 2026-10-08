@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "prestaciones-dependencia-saad",
 	"standalone": false,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -113,7 +113,7 @@
 		},
 		{
 			"id": "residencia-regla-completa",
-			"label": "La regla de residencia completa: residir legalmente en España 5 años en total y 2 inmediatamente anteriores a la solicitud; en menores de 5 años el periodo se exige a quien ejerza su guarda y custodia; los españoles emigrantes retornados tienen condiciones de acceso propias",
+			"label": "La regla de residencia completa: residir legalmente en España 5 años en total y 2 inmediatamente anteriores a la solicitud; en menores de 5 años el periodo se exige a quien ejerza su guarda y custodia; los españoles emigrantes retornados tienen condiciones de acceso propias El nuevo art. 5.1.c exime de residencia y nacionalidad a solicitantes/beneficiarios de asilo, protección subsidiaria y protección temporal (y la DA 19.ª regula la unidad familiar en el extranjero).",
 			"citation": {
 				"sourceId": "boe-ley-39-2006-dependencia",
 				"locator": "Art. 5.1.c y 5.4",

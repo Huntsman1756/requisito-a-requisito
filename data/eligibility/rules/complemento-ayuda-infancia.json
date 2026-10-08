@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "complemento-ayuda-infancia",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -26,8 +26,8 @@
 	"requirements": [
 		{
 			"id": "menor-en-unidad",
-			"hard": true,
-			"label": "Al menos un menor de 18 años miembro de la unidad de convivencia (en la fecha de la solicitud)",
+			"hard": false,
+			"label": "Al menos un menor de 18 años miembro de tu unidad de convivencia — aunque no esté solo a tu cargo (lo medimos con las personas a tu cargo declaradas)",
 			"citation": {
 				"sourceId": "boe-ley-19-2021-imv",
 				"locator": "Art. 11.6",
@@ -48,8 +48,8 @@
 		},
 		{
 			"id": "residencia-espana-1a",
-			"hard": true,
-			"label": "Residir legal y efectivamente en España, de forma continuada, durante al menos el año anterior a la solicitud",
+			"hard": false,
+			"label": "Residir legal y efectivamente en España de forma continuada al menos el año anterior a la solicitud (aquí medimos los meses de empadronamiento en tu municipio como referencia; la norma tiene exenciones)",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "boe-ley-19-2021-imv",

@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "ayto-emergencia-social",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -42,8 +42,8 @@
 	"requirements": [
 		{
 			"id": "empadronado-madrid",
-			"hard": true,
-			"label": "Estar empadronado/a en el municipio de Madrid (en el distrito al que se dirija la solicitud). La ordenanza solo prevé excepciones justificadas en informe social municipal",
+			"hard": false,
+			"label": "Estar empadronado/a en el municipio de Madrid — salvo situaciones excepcionales justificadas en el informe social (art. 12.2), que aquí no podemos comprobar",
 			"citation": {
 				"sourceId": "bocm-20130704-64-ordenanza-presecon",
 				"locator": "Ordenanza, art. 12.2 (redacción de la modificación de 26/06/2013)",
@@ -61,9 +61,9 @@
 		},
 		{
 			"id": "mayor-edad",
-			"hard": true,
+			"hard": false,
 			"timeDependent": "increasing",
-			"label": "Ser mayor de edad. Los menores solo acceden si están emancipados, circunstancia que no podemos comprobar aquí",
+			"label": "Ser mayor de edad o menor emancipado — la emancipación no podemos comprobarla aquí",
 			"citation": {
 				"sourceId": "bocm-20130704-64-ordenanza-presecon",
 				"locator": "Ordenanza, art. 12.1 (redacción de la modificación de 26/06/2013)",

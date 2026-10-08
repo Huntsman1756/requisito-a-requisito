@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "mostoles-prestaciones-sociales",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -28,9 +28,9 @@
 	"requirements": [
 		{
 			"id": "mayor-edad",
-			"hard": true,
+			"hard": false,
 			"timeDependent": "increasing",
-			"label": "Ser mayor de dieciocho años o menor emancipado; la condición de menor emancipado no podemos comprobarla aquí",
+			"label": "Ser mayor de dieciocho años o menor emancipado — la emancipación no podemos comprobarla aquí",
 			"citation": {
 				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
 				"locator": "Ordenanza, art. 4.1.a",
@@ -45,8 +45,8 @@
 		},
 		{
 			"id": "empadronado-mostoles",
-			"hard": true,
-			"label": "Estar empadronado/a en el municipio de Móstoles y residir en él de forma efectiva. Se exceptúa a víctimas de violencia doméstica o de género, a los supuestos de la Ley 1/1996 de Protección Jurídica del Menor y a las prestaciones dirigidas a personas en situación de calle",
+			"hard": false,
+			"label": "Estar empadronado/a en Móstoles y residir en él — excepto víctimas de violencia doméstica, personas en situación de calle y supuestos de la Ley 1/1996, que aquí no podemos comprobar",
 			"citation": {
 				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
 				"locator": "Ordenanza, art. 4.1.b",
@@ -65,7 +65,7 @@
 		{
 			"id": "carencia-ingresos",
 			"hard": false,
-			"label": "Carecer de ingresos o rentas suficientes: el límite de ingresos anuales de la unidad familiar de convivencia depende de su tamaño (1×IPREM para 1-2 miembros; 1,5×IPREM para 3; 1,8× para 4; 2× para 5; 2,2× para 6 o más; las unidades unipersonales computan 1,5 miembros y las personas con discapacidad ≥65 % o dependencia grado II o superior computan doble). Como referencia orientativa usamos ingresos por debajo de 1 × IPREM",
+			"label": "Carecer de ingresos suficientes: el límite es el IPREM anual calculado a 14 pagas (8.400 € en 2026); aquí comprobamos solo tu renta anual declarada",
 			"citation": {
 				"sourceId": "bocm-20220223-mostoles-ordenanza-prestaciones",
 				"locator": "Ordenanza, art. 4.1.c",
@@ -75,7 +75,8 @@
 			"condition": {
 				"field": "incomeAnnual",
 				"op": "lte",
-				"param": "IPREM_ANUAL_12P"
+				"param": "IPREM_ANUAL_14P",
+				"label": "tus ingresos anuales están por debajo del IPREM a 14 pagas (8.400 €)"
 			}
 		}
 	],

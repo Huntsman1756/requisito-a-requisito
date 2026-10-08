@@ -20,6 +20,8 @@ const ALLOWED_14P = new Set([
 	// Resolución 2011 tarjeta azul: el cuadro oficial anualiza a 14 pagas
 	// (22.365,42 € = 42 × 532,51); citado en uncovered `iprem-14-pagas`
 	"ayto-tarjeta-azul-discapacidad",
+	// Ordenanza de Móstoles: «IPREM anual, calculado a 14 pagas» (literal).
+	"mostoles-prestaciones-sociales",
 ]);
 
 function* paramsOf(node: unknown): Generator<string> {

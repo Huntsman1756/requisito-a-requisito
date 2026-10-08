@@ -1,0 +1,23 @@
+# madrid-ayudas-alquiler-plan-estatal
+
+## Análisis
+
+Reglas evaluadas (`data/eligibility/rules/madrid-ayudas-alquiler-plan-estatal.json`, RD 42/2022 art. 27 + Orden 3479/2022 art. 6):
+
+- `mayoria-edad` (hard): `age gte 18`. Art. 27.1 RD 42/2022: «las personas físicas **mayores de edad** que reúnan todos y cada uno de los requisitos siguientes». Orden 3479/2022 art. 6.2: «las personas físicas mayores de edad incluidas en alguno de los sectores declarados preferentes». No hay excepción de emancipación en ninguna de las dos normas (la única mención a «menores de edad no emancipados» es dentro de la definición de familia monoparental, no como beneficiarios). Correcto.
+- `vivienda-en-madrid` (hard): `territory within ccaa 13`. La norma exige que la vivienda/habitación sea «residencia habitual y permanente de la persona arrendataria, lo que deberá acreditarse mediante certificado o volante de empadronamiento… a fecha de la solicitud» (art. 27.1.b). Quien no esté empadronado en un municipio de la CM no puede acreditar esa residencia habitual en la vivienda arrendada — el F es fiel. Borde teórico: quien acabe de firmar contrato en la CM sin trasladar aún el empadronamiento tampoco cumpliría hoy la norma (exige el volante «a fecha de la solicitud»). Correcto.
+- `ingresos-max-5iprem` (hard): `incomeAnnual lte IPREM_ANUAL_14P × 5` = 42.000 €. El label declara honestamente que el tope real es sobre la **suma de la unidad de convivencia** (3×/4×/5× IPREM) y que «aquí comprobamos solo que tus propios ingresos no superan el tope más alto». Dirección conservadora correcta: si tus ingresos propios ya superan el tope máximo, la suma de la unidad también lo supera → F válido. Además, `incomeAnnual` es un campo de **bandas** (0–8.400 / 8.400–16.800 / 16.800–25.200 / 25.200+): la banda 25.200+ cruza el umbral de 42.000 y da U (`range_straddles`), no F — en la práctica este requisito solo puede dar T o U. Aún más seguro frente a falsos negativos.
+- `sector-preferente` (soft): aunque en la Orden es requisito real («incluidas en alguno de los sectores declarados preferentes en el apartado 1», art. 6.2), se modela `hard: false` → nunca puede dar F. El `any` cubre a), b), e); los sectores c), d), f), g) (VG, terrorismo, todos desempleados con prestaciones agotadas, todos ≥65) están en `uncoveredRequirements` con la frase honesta «si es tu caso, sí puedes solicitarla». La rama monoparental (`familyType=monoparental` + ≥1 dependiente de <99 años) es más laxa que la norma (que exige hijos menores no emancipados o mayores incapacitados) — eso es un falso positivo potencial, no negativo.
+- `contrato-alquiler` (soft): `housingStatus in [alquiler, general]`. La norma exige contrato ya formalizado para esta línea (a diferencia de la de jóvenes): «Ser titular… de un contrato de arrendamiento de vivienda formalizado en los términos de la Ley 29/1994» (art. 27.1.a). «Otra situación» (`general`) queda incluida — quien viva en cesión de uso o habitación no cae en F. Soft → seguro.
+- `uncoveredRequirements` declara con honestidad: nacionalidad/residencia regular, titularidad del contrato, residencia habitual, límite sobre la suma de la unidad, ingreso mínimo 0,5×IPREM para algunos colectivos (art. 6.2.e), tope de renta 600 €/300 € con ampliaciones municipales, prohibición de propiedad/usufructo con sus excepciones (parte alícuota, separación/divorcio, inaccesibilidad — art. 27.2.a), parentesco con el arrendador (con excepción de cooperativas), incompatibilidades. Las excepciones de la norma están recogidas.
+- Fecha de referencia `application`: la norma evalúa «en el momento de la solicitud» (art. 27.1.b: «a fecha de la solicitud») — coherente.
+
+## Riesgos
+
+| requisito | riesgo (ninguno/bajo/alto/bloqueante) | cita | propuesta |
+|---|---|---|---|
+| mayoria-edad | ninguno | «las personas físicas mayores de edad» (art. 27.1) | — |
+| vivienda-en-madrid | ninguno | «residencia habitual y permanente… mediante certificado o volante de empadronamiento… a fecha de la solicitud» (art. 27.1.b) | — |
+| ingresos-max-5iprem | ninguno | «la suma total de las rentas anuales… iguales o inferiores a 3 veces el IPREM… 5 veces el IPREM» (art. 27.1.c); bandas → el F solo es posible si los ingresos propios superan 5×IPREM, que implica suma de unidad > tope | — |
+| sector-preferente | ninguno (soft) | «incluidas en alguno de los sectores declarados preferentes» (art. 6.2) — modelado soft, no puede dar F | — |
+| contrato-alquiler | bajo | «Ser titular… de un contrato de arrendamiento… formalizado» (art. 27.1.a) — «Otra situación» da T aunque sea cesión sin contrato formal; y es soft, no bloquea | — |

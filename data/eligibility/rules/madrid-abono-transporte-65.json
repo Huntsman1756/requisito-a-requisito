@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "madrid-abono-transporte-65",
 	"standalone": true,
-	"rulesVersion": 2,
-	"verifiedAt": "2026-10-05",
+	"rulesVersion": 3,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -58,7 +58,7 @@
 		{
 			"id": "edad-65",
 			"hard": true,
-			"label": "Tener 65 años cumplidos",
+			"label": "Tener 65 años o más, o ser pensionista o persona dependiente (otras categorías de la Tarjeta Azul)",
 			"timeDependent": "increasing",
 			"citation": {
 				"sourceId": "bocm-20110525-tarjeta-azul",
@@ -67,9 +67,26 @@
 				"excerptSha256": "011cd03336d9b5d1cd4a8675bcf83ffbde37f3e52e9b186c8c3580f370ae63cf"
 			},
 			"condition": {
-				"field": "age",
-				"op": "gte",
-				"value": 65
+				"any": [
+					{
+						"field": "age",
+						"op": "gte",
+						"value": 65,
+						"label": "tienes 65 años o más"
+					},
+					{
+						"field": "employmentStatus",
+						"op": "eq",
+						"value": "jubilado",
+						"label": "eres pensionista"
+					},
+					{
+						"field": "dependency",
+						"op": "eq",
+						"value": "reconocida",
+						"label": "eres persona dependiente"
+					}
+				]
 			}
 		},
 		{

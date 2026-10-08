@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "prestamos-personal-publico-cm",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -32,8 +32,8 @@
 	"requirements": [
 		{
 			"id": "personal-laboral-cm",
-			"hard": true,
-			"label": "Trabajar al servicio de la Administración de la Comunidad de Madrid (el Convenio regula este derecho para el personal laboral fijo; el funcionario dispone de acuerdos sectoriales propios)",
+			"hard": false,
+			"label": "Trabajar al servicio de la Administración de la Comunidad de Madrid: laboral fijo o temporal (contrato >3 meses) o funcionario de administración y servicios",
 			"citation": {
 				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
 				"locator": "Convenio, art. 139.1",
@@ -66,6 +66,16 @@
 				"locator": "Convenio, art. 139.4",
 				"excerpt": "Las dotaciones para préstamos y anticipos serán los que, en cada ejercicio presupuestario, sean consignados en los diferentes programas, de manera diferenciada respecto de los fondos del apartado anterior.",
 				"excerptSha256": "7a16f488acf018325c79fb6cec9a3dfaa3c69f5daec8351d7b8fd5a50be0d3cb"
+			}
+		},
+		{
+			"id": "catalogo-personal-convenio",
+			"label": "El Convenio cubre al personal laboral fijo y al temporal con contrato superior a tres meses (límite: una mensualidad, plazo = duración del contrato), y el fondo de préstamos es conjunto para personal laboral y funcionario de administración y servicios (art. 139.1, 139.2 y 139.4)",
+			"citation": {
+				"sourceId": "bocm-convenio-unico-laboral-2025-2028",
+				"locator": "Convenio, art. 139.2 y 139.4",
+				"excerpt": "fondo conjunto para personal laboral y funcionario de administración y servicios",
+				"excerptSha256": "805a61004997472badd8dfb5a1d1d2ebb52083756d31a91254957a063ec59341"
 			}
 		}
 	],

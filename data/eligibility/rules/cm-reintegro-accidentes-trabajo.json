@@ -1,8 +1,8 @@
 {
 	"benefitSlug": "cm-reintegro-accidentes-trabajo",
 	"standalone": true,
-	"rulesVersion": 1,
-	"verifiedAt": "2026-10-06",
+	"rulesVersion": 2,
+	"verifiedAt": "2026-10-08",
 	"humanReview": {
 		"status": "pending"
 	},
@@ -42,8 +42,12 @@
 			},
 			"condition": {
 				"field": "employmentStatus",
-				"op": "eq",
-				"value": "empleado-publico"
+				"op": "in",
+				"value": [
+					"empleado-publico",
+					"docente"
+				],
+				"label": "eres empleado/a público/a de la Comunidad de Madrid en el Régimen General (docentes incluidos)"
 			}
 		}
 	],

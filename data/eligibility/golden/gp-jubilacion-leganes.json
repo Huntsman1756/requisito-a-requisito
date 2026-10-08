@@ -64,7 +64,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "pension-jubilacion-contributiva",
-			"rulesVersion": 3,
+			"rulesVersion": 4,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],
