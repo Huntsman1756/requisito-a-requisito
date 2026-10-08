@@ -23,7 +23,13 @@ import { buildEligibility } from "./eligibility-build";
 import { applySheet, type MuestreoIndice } from "./review-apply";
 
 const root = process.cwd();
-const scratch = process.argv[2] ?? "F:/Temp/datawardsmadrid-cierre/strict";
+const positional = process.argv.filter((a) => !a.startsWith("--"));
+const scratch = positional[2] ?? "F:/Temp/datawardsmadrid-cierre/strict";
+// --ko=<fichero de hoja>: simula un KO en esa hoja (todas las demás reciben
+// 2 OK); el informe debe declararlo como simulado (regla 4.12).
+const koSheet = process.argv
+	.find((a) => a.startsWith("--ko="))
+	?.slice("--ko=".length);
 const rulesOut = join(scratch, "rules");
 const bundleOut = join(scratch, "bundle");
 
@@ -34,14 +40,18 @@ const indice = JSON.parse(
 cpSync(join(root, "data/eligibility/rules"), rulesOut, { recursive: true });
 
 // Igual que markFirstN del test: solo filas de tabla / cabeceras ##.
-function markTwo(text: string): string {
+function mark(text: string, ko: boolean): string {
 	let k = 0;
 	const out = text
 		.split("\n")
 		.map((line) => {
-			if (k < 2 && /^\|.*☐ OK ☐ KO/.test(line)) {
+			if (/^\|.*☐ OK ☐ KO/.test(line)) {
 				k += 1;
-				return line.replace("☐ OK ☐ KO", "☑ OK ☐ KO");
+				return ko && k === 1
+					? line.replace("☐ OK ☐ KO", "☐ OK ☑ KO")
+					: k <= 2
+						? line.replace("☐ OK ☐ KO", "☑ OK ☐ KO")
+						: line;
 			}
 			return line;
 		})
@@ -64,13 +74,18 @@ for (const h of indice.hojas) {
 		console.log(`${h.sheet}: sin vigentes — todos sus slugs mandan en otra hoja`);
 		continue;
 	}
-	const text = markTwo(readFileSync(join(root, h.sheet), "utf8"));
+	const isKo = koSheet !== undefined && h.sheet.endsWith(`/${koSheet}`);
+	const text = mark(readFileSync(join(root, h.sheet), "utf8"), isKo);
 	const r = applySheet(join(root, h.sheet), {
 		rulesDirs: [rulesOut],
 		today: "2026-10-08",
 		sheetsDirText: text,
 	});
 	if (r.action !== "approved") {
+		if (isKo) {
+			console.log(`${h.sheet}: ${r.action} — ${r.reason}`);
+			continue;
+		}
 		console.error(`${h.sheet}: ${r.action} — ${r.reason}`);
 		process.exit(1);
 	}
@@ -96,8 +111,11 @@ console.log(
 	`strict: ${res.included.length} incluidas, ${res.excluded.length} excluidas, digest ${res.bundleDigest.slice(0, 16)}…`,
 );
 if (res.excluded.length > 0) {
-	console.error(JSON.stringify(res.excluded, null, 2));
-	process.exit(1);
+	console.error(
+		`excluidas: ${res.excluded.map((e) => (typeof e === "string" ? e : (e as { slug?: string }).slug)).join(", ")}`,
+	);
+	// Con --ko se espera que la hoja KO deje sus reglas fuera: no es fallo.
+	if (!koSheet) process.exit(1);
 }
 mkdirSync(bundleOut, { recursive: true });
 console.log(`bundle → ${bundleOut}`);

@@ -19,19 +19,19 @@
       "deferredSlugs": [
         {
           "slug": "descuento-transporte-familia-numerosa",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         },
         {
           "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         },
         {
           "slug": "subsidio-mayores-52",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         }
       ]
     },
@@ -53,15 +53,15 @@
       "deferredSlugs": [
         {
           "slug": "imv",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "madrid-bono-alquiler-joven",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         },
         {
           "slug": "madrid-cheque-escuela-infantil",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         }
       ]
     },
@@ -82,19 +82,19 @@
       "deferredSlugs": [
         {
           "slug": "madrid-abono-transporte-65",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "madrid-renta-minima-insercion",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "prestacion-cuidado-menor-enfermedad-grave",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "prestaciones-dependencia-saad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         }
       ]
     },
@@ -117,11 +117,11 @@
       "deferredSlugs": [
         {
           "slug": "complemento-ayuda-infancia",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "madrid-titulo-familia-numerosa",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         }
       ]
     },
@@ -145,11 +145,11 @@
         },
         {
           "slug": "madrid-ayudas-urgencia-social",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "prestacion-cuidador-no-profesional",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         }
       ]
     },
@@ -176,7 +176,7 @@
         },
         {
           "slug": "subsidio-desempleo",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         }
       ]
     },
@@ -201,7 +201,7 @@
         },
         {
           "slug": "pension-jubilacion-contributiva",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         }
       ]
     },
@@ -219,19 +219,19 @@
       "deferredSlugs": [
         {
           "slug": "ayto-emergencia-social",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "ayto-escuela-infantil",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         },
         {
           "slug": "ayto-ibi-familia-numerosa",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "ayto-tarjeta-azul-discapacidad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         }
       ]
     },
@@ -255,15 +255,15 @@
       "deferredSlugs": [
         {
           "slug": "fuenlabrada-prestaciones-sociales",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         },
         {
           "slug": "leganes-prestaciones-especial-necesidad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12a.md"
         },
         {
           "slug": "mostoles-prestaciones-sociales",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         }
       ]
     },
@@ -279,11 +279,11 @@
       "deferredSlugs": [
         {
           "slug": "prestacion-cuidador-no-profesional",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         },
         {
           "slug": "prestaciones-dependencia-saad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         }
       ]
     },
@@ -302,23 +302,23 @@
       "deferredSlugs": [
         {
           "slug": "anticipos-docentes-cm",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "cm-reintegro-accidentes-trabajo",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "prestamos-personal-publico-cm",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12e.md"
         },
         {
           "slug": "sermas-ortoprotesica-desplazamiento",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         },
         {
           "slug": "sermas-reintegro-gastos-sanitarios",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         }
       ]
     },
@@ -344,15 +344,15 @@
       "deferredSlugs": [
         {
           "slug": "ayto-escuela-infantil",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12c.md"
         },
         {
           "slug": "ayto-tarjeta-azul-discapacidad",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12b.md"
         },
         {
           "slug": "subsidio-desempleo",
-          "a": "evidence/2026-10-08-F10/muestreo-ola-12.md"
+          "a": "evidence/2026-10-08-F10/muestreo-ola-12d.md"
         }
       ]
     },
@@ -360,66 +360,114 @@
       "sheet": "evidence/2026-10-08-F10/muestreo-ola-12.md",
       "wave": "ola-12",
       "order": 12,
+      "slugs": [],
+      "vigenteSlugs": [],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
+      "wave": "ola-12a",
+      "order": 12,
+      "slugs": [
+        "ayto-emergencia-social",
+        "complemento-ayuda-infancia",
+        "imv",
+        "leganes-prestaciones-especial-necesidad",
+        "madrid-ayudas-urgencia-social",
+        "madrid-renta-minima-insercion"
+      ],
+      "vigenteSlugs": [
+        "ayto-emergencia-social",
+        "complemento-ayuda-infancia",
+        "imv",
+        "leganes-prestaciones-especial-necesidad",
+        "madrid-ayudas-urgencia-social",
+        "madrid-renta-minima-insercion"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+      "wave": "ola-12b",
+      "order": 12,
       "slugs": [
         "anticipos-docentes-cm",
-        "ayto-emergencia-social",
-        "ayto-escuela-infantil",
         "ayto-ibi-familia-numerosa",
         "ayto-tarjeta-azul-discapacidad",
         "cm-reintegro-accidentes-trabajo",
-        "complemento-ayuda-infancia",
         "descuento-transporte-familia-numerosa",
-        "fuenlabrada-prestaciones-sociales",
-        "imv",
-        "leganes-prestaciones-especial-necesidad",
         "madrid-abono-transporte-65",
-        "madrid-ayudas-nacimiento-adopcion-multiple",
-        "madrid-ayudas-urgencia-social",
-        "madrid-bono-alquiler-joven",
-        "madrid-cheque-escuela-infantil",
-        "madrid-renta-minima-insercion",
-        "madrid-titulo-familia-numerosa",
-        "mostoles-prestaciones-sociales",
-        "pension-jubilacion-contributiva",
-        "prestacion-cuidado-menor-enfermedad-grave",
-        "prestacion-cuidador-no-profesional",
-        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
-        "prestaciones-dependencia-saad",
-        "prestamos-personal-publico-cm",
-        "sermas-ortoprotesica-desplazamiento",
-        "sermas-reintegro-gastos-sanitarios",
-        "subsidio-desempleo",
-        "subsidio-mayores-52"
+        "prestacion-cuidado-menor-enfermedad-grave"
       ],
       "vigenteSlugs": [
         "anticipos-docentes-cm",
-        "ayto-emergencia-social",
-        "ayto-escuela-infantil",
         "ayto-ibi-familia-numerosa",
         "ayto-tarjeta-azul-discapacidad",
         "cm-reintegro-accidentes-trabajo",
-        "complemento-ayuda-infancia",
         "descuento-transporte-familia-numerosa",
-        "fuenlabrada-prestaciones-sociales",
-        "imv",
-        "leganes-prestaciones-especial-necesidad",
         "madrid-abono-transporte-65",
+        "prestacion-cuidado-menor-enfermedad-grave"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+      "wave": "ola-12c",
+      "order": 12,
+      "slugs": [
+        "ayto-escuela-infantil",
         "madrid-ayudas-nacimiento-adopcion-multiple",
-        "madrid-ayudas-urgencia-social",
         "madrid-bono-alquiler-joven",
         "madrid-cheque-escuela-infantil",
-        "madrid-renta-minima-insercion",
         "madrid-titulo-familia-numerosa",
+        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad"
+      ],
+      "vigenteSlugs": [
+        "ayto-escuela-infantil",
+        "madrid-ayudas-nacimiento-adopcion-multiple",
+        "madrid-bono-alquiler-joven",
+        "madrid-cheque-escuela-infantil",
+        "madrid-titulo-familia-numerosa",
+        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
+      "wave": "ola-12d",
+      "order": 12,
+      "slugs": [
+        "fuenlabrada-prestaciones-sociales",
         "mostoles-prestaciones-sociales",
-        "pension-jubilacion-contributiva",
-        "prestacion-cuidado-menor-enfermedad-grave",
-        "prestacion-cuidador-no-profesional",
-        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
-        "prestaciones-dependencia-saad",
-        "prestamos-personal-publico-cm",
         "sermas-ortoprotesica-desplazamiento",
         "sermas-reintegro-gastos-sanitarios",
-        "subsidio-desempleo",
+        "subsidio-desempleo"
+      ],
+      "vigenteSlugs": [
+        "fuenlabrada-prestaciones-sociales",
+        "mostoles-prestaciones-sociales",
+        "sermas-ortoprotesica-desplazamiento",
+        "sermas-reintegro-gastos-sanitarios",
+        "subsidio-desempleo"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
+      "wave": "ola-12e",
+      "order": 12,
+      "slugs": [
+        "pension-jubilacion-contributiva",
+        "prestacion-cuidador-no-profesional",
+        "prestaciones-dependencia-saad",
+        "prestamos-personal-publico-cm",
+        "subsidio-mayores-52"
+      ],
+      "vigenteSlugs": [
+        "pension-jubilacion-contributiva",
+        "prestacion-cuidador-no-profesional",
+        "prestaciones-dependencia-saad",
+        "prestamos-personal-publico-cm",
         "subsidio-mayores-52"
       ],
       "deferredSlugs": []
@@ -428,53 +476,53 @@
   "vigente": {
     "bono-cultural-joven": "evidence/2026-10-05-F3/lote-1.md",
     "bono-social-electrico": "evidence/2026-10-05-F3/lote-1.md",
-    "descuento-transporte-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "madrid-ayudas-nacimiento-adopcion-multiple": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "subsidio-mayores-52": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "imv": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "descuento-transporte-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+    "madrid-ayudas-nacimiento-adopcion-multiple": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+    "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+    "subsidio-mayores-52": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
+    "imv": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
     "madrid-beca-comedor-escolar": "evidence/2026-10-05-F3/muestreo-ola-1.md",
     "madrid-becas-bachillerato-centros-privados": "evidence/2026-10-05-F3/muestreo-ola-1.md",
-    "madrid-bono-alquiler-joven": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "madrid-cheque-escuela-infantil": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "madrid-abono-transporte-65": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "madrid-bono-alquiler-joven": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+    "madrid-cheque-escuela-infantil": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+    "madrid-abono-transporte-65": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
     "madrid-abono-transporte-joven": "evidence/2026-10-05-F3/muestreo-ola-2.md",
-    "madrid-renta-minima-insercion": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "prestacion-cuidado-menor-enfermedad-grave": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "prestaciones-dependencia-saad": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "madrid-renta-minima-insercion": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
+    "prestacion-cuidado-menor-enfermedad-grave": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+    "prestaciones-dependencia-saad": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
     "bono-social-termico": "evidence/2026-10-05-F3/muestreo-ola-3.md",
-    "complemento-ayuda-infancia": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "complemento-ayuda-infancia": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
     "madrid-ayudas-nacimiento-general": "evidence/2026-10-05-F3/muestreo-ola-3.md",
-    "madrid-titulo-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "madrid-titulo-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
     "prestacion-nacimiento-cuidado-menor": "evidence/2026-10-05-F3/muestreo-ola-3.md",
     "madrid-abono-transporte-infantil": "evidence/2026-10-08-F10/muestreo-ola-11.md",
-    "madrid-ayudas-urgencia-social": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "prestacion-cuidador-no-profesional": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "madrid-ayudas-urgencia-social": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
+    "prestacion-cuidador-no-profesional": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
     "prestacion-desempleo-contributiva": "evidence/2026-10-05-F3/muestreo-ola-4.md",
     "asignacion-hijo-a-cargo": "evidence/2026-10-08-F10/muestreo-ola-11.md",
     "madrid-ayudas-alquiler-plan-estatal": "evidence/2026-10-05-F3/muestreo-ola-5.md",
     "pension-no-contributiva": "evidence/2026-10-05-F3/muestreo-ola-5.md",
     "pension-viudedad": "evidence/2026-10-05-F3/muestreo-ola-5.md",
-    "subsidio-desempleo": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "subsidio-desempleo": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
     "cese-actividad-autonomos": "evidence/2026-10-05-F3/muestreo-ola-6.md",
     "pension-incapacidad-permanente": "evidence/2026-10-08-F10/muestreo-ola-11.md",
-    "pension-jubilacion-contributiva": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "pension-jubilacion-contributiva": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
     "pension-orfandad": "evidence/2026-10-05-F3/muestreo-ola-6.md",
-    "ayto-emergencia-social": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "ayto-escuela-infantil": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "ayto-ibi-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "ayto-tarjeta-azul-discapacidad": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "ayto-emergencia-social": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
+    "ayto-escuela-infantil": "evidence/2026-10-08-F10/muestreo-ola-12c.md",
+    "ayto-ibi-familia-numerosa": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+    "ayto-tarjeta-azul-discapacidad": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
     "fuenlabrada-fuenlacarenet-2026": "evidence/2026-10-06-F3/muestreo-ola-8.md",
-    "fuenlabrada-prestaciones-sociales": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "leganes-prestaciones-especial-necesidad": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "fuenlabrada-prestaciones-sociales": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
+    "leganes-prestaciones-especial-necesidad": "evidence/2026-10-08-F10/muestreo-ola-12a.md",
     "madrid-accede-prestamo-libros": "evidence/2026-10-06-F3/muestreo-ola-8.md",
     "madrid-ayuda-pago-unico-vg": "evidence/2026-10-06-F3/muestreo-ola-8.md",
-    "mostoles-prestaciones-sociales": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "anticipos-docentes-cm": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "cm-reintegro-accidentes-trabajo": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "prestamos-personal-publico-cm": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "sermas-ortoprotesica-desplazamiento": "evidence/2026-10-08-F10/muestreo-ola-12.md",
-    "sermas-reintegro-gastos-sanitarios": "evidence/2026-10-08-F10/muestreo-ola-12.md",
+    "mostoles-prestaciones-sociales": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
+    "anticipos-docentes-cm": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+    "cm-reintegro-accidentes-trabajo": "evidence/2026-10-08-F10/muestreo-ola-12b.md",
+    "prestamos-personal-publico-cm": "evidence/2026-10-08-F10/muestreo-ola-12e.md",
+    "sermas-ortoprotesica-desplazamiento": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
+    "sermas-reintegro-gastos-sanitarios": "evidence/2026-10-08-F10/muestreo-ola-12d.md",
     "becas-generales-mefp-2026-2027": "evidence/2026-10-08-F10/muestreo-ola-11.md"
   },
   "generatedAt": "2026-10-08"

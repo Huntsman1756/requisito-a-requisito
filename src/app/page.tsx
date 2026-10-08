@@ -112,7 +112,7 @@ export default function Home() {
 
 				<div className="specimen" aria-label="Ejemplo de comprobación de una ayuda">
 					<div className="head">
-						<h3>{aidTitle(specimen.benefitSlug)}</h3>
+						<h2>{aidTitle(specimen.benefitSlug)}</h2>
 						<span className="lvl estado">Estado</span>
 					</div>
 					{sReq.map((r, i) => (

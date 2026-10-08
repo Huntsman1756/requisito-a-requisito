@@ -132,17 +132,36 @@ async function main() {
 		}
 	}
 
-	// Vídeo del flujo /comprobar/ (desktop, claro)
-	const ctx = await browser.newContext({
-		viewport: { width: 1366, height: 768 },
-		recordVideo: { dir: join(OUT_DIR, "video"), size: { width: 1366, height: 768 } },
-	});
-	const page = await ctx.newPage();
-	await completarAsistente(page);
-	await page.getByRole("link", { name: "Ver ficha completa" }).first().click();
-	await page.waitForLoadState("networkidle");
-	await ctx.close(); // cierra y escribe el webm
-	console.log(`vídeo → ${OUT_DIR}/video/*.webm`);
+	// Vídeos del flujo /comprobar/ — nombres fijos; los page@*.webm intermedios
+	// se borran tras renombrar.
+	for (const [nombre, vp, extra] of [
+		["recorrido-desktop", { width: 1366, height: 768 }, {}],
+		["recorrido-movil", { width: 390, height: 844 }, { ...devices["iPhone 14"] }],
+	] as const) {
+		const ctx = await browser.newContext({
+			viewport: vp,
+			...extra,
+			recordVideo: { dir: join(OUT_DIR, "video"), size: vp },
+		});
+		const page = await ctx.newPage();
+		await completarAsistente(page);
+		await page.getByRole("link", { name: "Ver ficha completa" }).first().click();
+		await page.waitForLoadState("networkidle");
+		await ctx.close(); // cierra y escribe el webm
+		const { readdirSync, renameSync } = await import("node:fs");
+		const webms = readdirSync(join(OUT_DIR, "video")).filter((f) =>
+			f.startsWith("page@") && f.endsWith(".webm"),
+		);
+		// El último webm escrito es el de esta pasada.
+		const ultimo = webms.sort().at(-1);
+		if (ultimo) {
+			renameSync(
+				join(OUT_DIR, "video", ultimo),
+				join(OUT_DIR, "video", `${nombre}.webm`),
+			);
+			console.log(`vídeo → ${OUT_DIR}/video/${nombre}.webm`);
+		}
+	}
 
 	await browser.close();
 	server.kill();

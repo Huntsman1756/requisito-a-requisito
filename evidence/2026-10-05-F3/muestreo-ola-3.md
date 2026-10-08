@@ -6,7 +6,7 @@ Dictamen inicial: 2 OK / 3 KO → **los 3 KO corregidos y reverificados**
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
 Esta hoja aprueba **3 regla(s)**: bono-social-termico, madrid-ayudas-nacimiento-general, prestacion-nacimiento-cuidado-menor.
-En otra hoja se aprueban: complemento-ayuda-infancia → evidence/2026-10-08-F10/muestreo-ola-12.md; madrid-titulo-familia-numerosa → evidence/2026-10-08-F10/muestreo-ola-12.md.
+En otra hoja se aprueban: complemento-ayuda-infancia → evidence/2026-10-08-F10/muestreo-ola-12a.md; madrid-titulo-familia-numerosa → evidence/2026-10-08-F10/muestreo-ola-12c.md.
 Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/muestreo-ola-3.md` — es la única vía que pone humanReview=approved.
 

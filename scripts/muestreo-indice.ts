@@ -57,14 +57,16 @@ export function buildIndice(): {
 		statSync(join(evDir, d)).isDirectory(),
 	)) {
 		for (const f of readdirSync(join(evDir, dir))) {
-			const mOla = f.match(/^muestreo-ola-(\d+)\.md$/);
+			// Las olas pueden partirse con sufijo de letra (ola-12a…12e): el orden
+			// es el número de la ola madre (las partes mandan igual que ella).
+			const mOla = f.match(/^muestreo-ola-(\d+)([a-z]?)\.md$/);
 			const mLote = f.match(/^lote-(\d+)\.md$/);
 			if (!mOla && !mLote) continue;
 			const sheet = `evidence/${dir}/${f}`;
 			const text = readFileSync(join(evDir, dir, f), "utf8");
 			hojas.push({
 				sheet,
-				wave: mOla ? `ola-${mOla[1]}` : `lote-${mLote?.[1] ?? "?"}`,
+				wave: mOla ? `ola-${mOla[1]}${mOla[2]}` : `lote-${mLote?.[1] ?? "?"}`,
 				// Orden explícito: los lotes son más antiguos que cualquier ola.
 				order: mOla ? Number(mOla[1]) : -1,
 				slugs: sheetSlugs(text, known),

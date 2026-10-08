@@ -7,7 +7,7 @@ en `2026-10-06-F3/verificacion-ola-8.md`.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
 Esta hoja aprueba **3 regla(s)**: fuenlabrada-fuenlacarenet-2026, madrid-accede-prestamo-libros, madrid-ayuda-pago-unico-vg.
-En otra hoja se aprueban: fuenlabrada-prestaciones-sociales → evidence/2026-10-08-F10/muestreo-ola-12.md; leganes-prestaciones-especial-necesidad → evidence/2026-10-08-F10/muestreo-ola-12.md; mostoles-prestaciones-sociales → evidence/2026-10-08-F10/muestreo-ola-12.md.
+En otra hoja se aprueban: fuenlabrada-prestaciones-sociales → evidence/2026-10-08-F10/muestreo-ola-12d.md; leganes-prestaciones-especial-necesidad → evidence/2026-10-08-F10/muestreo-ola-12a.md; mostoles-prestaciones-sociales → evidence/2026-10-08-F10/muestreo-ola-12d.md.
 Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-06-F3/muestreo-ola-8.md` — es la única vía que pone humanReview=approved.
 

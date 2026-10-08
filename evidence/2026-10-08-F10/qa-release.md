@@ -11,7 +11,7 @@ vigente de `muestreo-indice.json` → `buildEligibility --strict`.
 ```text
 npx tsx scripts/qa-strict.ts F:/Temp/datawardsmadrid-cierre/strict
 → lote-1 (2), ola-1 (2), ola-2 (1), ola-3 (3), ola-4 (1), ola-5 (3),
-  ola-6 (2), ola-8 (3), ola-11 (4), ola-12 (31)
+  ola-6 (2), ola-8 (3), ola-11 (4), ola-12 (29 programas / 31 RuleSets)
 → ola-7/9/10 sin vigentes (todos sus slugs mandan en hojas más recientes)
 → strict: 52 incluidas, 0 excluidas, digest 51b6b5967ae06383…
 ```

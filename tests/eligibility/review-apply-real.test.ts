@@ -105,7 +105,15 @@ describe("muestreo-indice sobre datos reales (F10-FIX-1)", () => {
 			// cubre todas (re-muestreo tras corrección, p. ej. ola-12): sigue
 			// en el índice por trazabilidad pero aprueba «nothing» y no se aplica.
 			if (h.vigenteSlugs.length === 0) {
-				expect(h.slugs.length, `${h.sheet} sin filas`).toBeGreaterThan(0);
+				// Una hoja retirada («sustituida por …») no lleva filas de «Tu
+				// turno» y no aprueba nada — se permite por trazabilidad.
+				const text = readFileSync(join(root, h.sheet), "utf8");
+				if (h.slugs.length === 0) {
+					expect(text, `${h.sheet} sin filas ni marca`).toMatch(
+						/sustituida por/i,
+					);
+					continue;
+				}
 				continue;
 			}
 			expect(

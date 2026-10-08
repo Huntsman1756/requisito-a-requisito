@@ -121,7 +121,7 @@ a { color: var(--seal); text-underline-offset: 3px }
 /* hoja de muestra con casillas y sello */
 .specimen { position: relative; background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); padding: 1.4rem 1.4rem 1.6rem; box-shadow: 0 1px 0 var(--rule), 0 18px 40px -28px rgba(20,32,47,.45) }
 .specimen .head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: .6rem; margin-bottom: .4rem }
-.specimen .head h3 { font-size: 1.15rem }
+.specimen .head h2 { font-size: 1.15rem }
 .box { display: grid; grid-template-columns: 2.2rem 1.6rem minmax(0,1fr); gap: .55rem; align-items: start; padding-block: .65rem; border-bottom: 1px solid var(--rule) }
 .box .n { font: 500 .78rem var(--f-mono); color: var(--ink-2); padding-top: .15rem }
 .tick { width: 1.45rem; height: 1.45rem; border: 2px solid currentColor; border-radius: 3px; display: grid; place-items: center; font: 800 .9rem/1 var(--f-display) }

@@ -137,7 +137,8 @@ export function applySheet(
 	};
 	// Dos formatos: `muestreo-ola-N.md` (necesita verificacion-ola-N.md en el
 	// mismo directorio) y `lote-N.md` (el fichero es a la vez hoja e informe).
-	const mOla = basename(sheetPath).match(/^muestreo-ola-(\d+)\.md$/);
+	// Olas pueden llevar sufijo de letra cuando una se parte (ola-12a…12e).
+	const mOla = basename(sheetPath).match(/^muestreo-ola-(\d+[a-z]?)\.md$/);
 	const mLote = basename(sheetPath).match(/^lote-(\d+)\.md$/);
 	if (!mOla && !mLote) {
 		res.action = "error";
