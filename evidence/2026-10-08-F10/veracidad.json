@@ -34,8 +34,8 @@
 			"ok": true
 		},
 		{
-			"texto": "479 pruebas automáticas en verde",
-			"evidencia": "cifras.json: testsTotal=479, testsPassed=479, 31 ficheros (vitest --reporter=json)",
+			"texto": "527 pruebas automáticas en verde",
+			"evidencia": "cifras.json: testsTotal=527, testsPassed=527, 38 ficheros (vitest --reporter=json); revisión del agente 08/10",
 			"ok": true
 		},
 		{
@@ -44,8 +44,8 @@
 			"ok": true
 		},
 		{
-			"texto": "E2E en 9 proyectos verdes (Chromium, WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento reducido); Firefox no arranca en este equipo",
-			"evidencia": "npx playwright test --project=desktop-chromium 13/13; proyectos en playwright.config.ts (incluye viewport 320 px); documentado en fiabilidad.md §6 (Firefox = limitación del entorno)",
+			"texto": "Firefox y WebKit E2E en CI sobre build normal, run 37823319781; release estricta pendiente en estos motores",
+			"evidencia": ".github/workflows/e2e-browsers.yml ejecuta npm run build; gh run list confirma success del run 37823319781. Matriz local previa en fiabilidad.md §6 y qa-release.md; reflow 320 px en playwright.config.ts",
 			"ok": true
 		},
 		{

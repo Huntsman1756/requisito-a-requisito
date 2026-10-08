@@ -1,5 +1,14 @@
 # QA de release — build `--strict` (F10-B2, 08/10)
 
+**Corrección de la revisión del agente (08/10):** el procedimiento original
+copiaba el bundle estricto y después ejecutaba `npm run build`, que lo
+regenera desde las reglas reales sin `--strict`. Por tanto, los resultados
+del export de las secciones 2–3 no acreditan un export estricto; se conservan
+como evidencia histórica del build normal. El ensayo del bundle en copia
+sí usa `buildEligibility --strict`. Firefox/WebKit en CI también usan el
+build normal. El nuevo ensayo con comprobación de huella se documenta en
+`revision-agente.md`.
+
 **Declaración (regla 4.12):** las aprobaciones `humanReview` son **SIMULADAS**
 en una copia de `data/eligibility/rules/` dentro de
 `F:\Temp\datawardsmadrid-cierre\strict\` — las reglas reales siguen

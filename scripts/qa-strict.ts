@@ -13,8 +13,11 @@
  *      F:/Temp/datawardsmadrid-cierre/strict)
  *
  * Las aprobaciones son SIMULADAS — se declara así en el informe (regla 4.12).
- * El resultado lo usa el flujo real: copiar bundle+manifest a
- * data/eligibility/bundle/, `npm run datos:public`, `npm run build`.
+ * Para ensayar el export: copiar bundle+manifest a
+ * data/eligibility/bundle/, `npm run datos:public`, `next build` directo.
+ * NO usar `npm run build`: regenera el bundle normal y pierde el estricto.
+ * Comprobar que out/datos/elegibilidad/bundle.json conserva el SHA256
+ * del bundle de scratch. Restaurar después con `npm run build`.
  */
 
 import { cpSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";

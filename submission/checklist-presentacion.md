@@ -13,7 +13,8 @@ Plazo: **16/10/2026** · Recomendado: presentar el **15/10**.
       firmado en la sede electrónica.
 - [ ] **Memoria descriptiva**: `submission/memoria.pdf`
       (fuente: `submission/memoria.md`; **regenerar** si cambia alguna cifra
-      con el script de F10-DEV-2. El PDF actual es del 06/10 y está desactualizado).
+      con `npm run memoria:pdf`. Es un borrador hasta incorporar el piloto
+      y las cifras de la release realmente aprobada).
 - [ ] **Acreditación de personalidad**: DNI/NIE (la sede lo pide en el
       propio formulario).
 - [ ] Consentimiento: N/A — candidatura en nombre propio.
@@ -46,7 +47,7 @@ Plazo: **16/10/2026** · Recomendado: presentar el **15/10**.
 ## 3. Antes de pulsar «enviar»
 
 - [ ] Memoria revisada y aprobada por ti (F7: tuya la firma del contenido).
-- [ ] Todas las cifras de la memoria cuadran con `evidence/2026-10-06-F7/veracidad.json` (0 sin evidencia).
+- [ ] Todas las cifras de la memoria cuadran con `evidence/2026-10-08-F10/veracidad.json` y `submission/cifras.json` (0 sin evidencia).
 - [ ] Nombre correcto en el formulario = titular del DNI.
 - [ ] La categoría marcada es **Global Tech Impact**.
 - [ ] La demo sirve la release estricta (solo reglas `approved`, ADR-050).

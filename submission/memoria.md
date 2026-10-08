@@ -18,7 +18,7 @@ cada afirmación.
 Números medidos (evidencia en el repositorio): **50 programas** comprobados
 requisito a requisito (52 RuleSets) · **166 fuentes oficiales registradas**
 (145 citadas en el bundle) · **421 programas**
-del universo de Madrid clasificados aptos para personas · **479 pruebas** automáticas en verde ·
+del universo de Madrid clasificados aptos para personas · **527 pruebas** automáticas en verde ·
 **155 enlaces** del producto verificados el 8/10 · el perfil **nunca sale del
 navegador**.
 
@@ -81,10 +81,10 @@ reusar el motor sin depender de este producto.
 - **166 fuentes oficiales registradas** (145 citadas en el bundle); cada
   extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
-- **479 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
-  WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
-  reducido). El navegador Firefox no arranca en este equipo (limitación
-  documentada del entorno, no del producto).
+- **527 pruebas** automáticas en verde. Firefox y WebKit completaron las
+  pruebas E2E en CI sobre el build normal (run 37823319781); su ejecución
+  sobre la release estricta sigue pendiente. La matriz local cubre Chromium,
+  móvil, tablet, reflow 320 px, oscuro, contraste forzado y movimiento reducido.
 - **155 URLs** del bundle verificadas el 8/10 (link-check, 0 fallidas).
 - **Auditoría de fiabilidad (8/10)**: se midió la web como producto, no solo
   el motor: vigencia de plazos contra la fecha, frescura de fuentes, muestra
@@ -97,8 +97,9 @@ reusar el motor sin depender de este producto.
 - **Release verificable**: la versión para el jurado solo incluye reglas con
   aprobación humana registrada (`--strict`, ADR-050). El ensayo en copia
   local demuestra: sin aprobaciones, el build sale **vacío** (0 de 52) en
-  lugar de vender lo no revisado; con las hojas de muestreo aplicadas por
-  `npm run review:apply`, las 52 pasan. El cierre no es una promesa: es un
+  lugar de vender lo no revisado; con marcas **simuladas en copia** y aplicadas
+  por la herramienta real `review:apply`, las 52 pasan. Las hojas reales
+  siguen pendientes de Daniel. El cierre es un
   gate que falla cerrado.
 - **Mutación dirigida**: 238 mutantes de las reglas (umbral ±1, dureza
   invertida) — **0 supervivientes** sin explicar; y barrido exhaustivo de
