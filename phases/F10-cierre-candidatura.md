@@ -32,7 +32,7 @@ este. En reglas de rigor manda siempre AGENTS.md §4.
 | **11/10 (sáb)** | F10-QA sobre el build estricto. F10-MEM-1: memoria con todo menos el piloto. F10-IMP-1/2: kit del piloto | Lista de difusión F8-3 |
 | **12/10 (dom)** | Correcciones del piloto según lleguen (F8-6) | Sesiones del piloto (F8-4) |
 | **13/10 (lun)** | Cierre de F8. F10-MEM-2: memoria final y PDF. Veracidad | Última sesión (si falta). Leer la memoria |
-| **14/10 (mar)** | **F10-REL-2: deploy de la release estricta** + comprobaciones posteriores + paquete completo + recibo de fase | Aprobar la memoria (lectura final) |
+| **14/10 (mar)** | **F10-REL-2: deploy de la release estricta** + comprobaciones posteriores + paquete completo (anexos regenerados y **sin restos**: 32 capturas y 2 vídeos) + recibo de fase | Aprobar la memoria (lectura final) |
 | **15/10 (mié)** | — (los agentes no presentan nada) | **P-1: firmar y presentar en la sede.** Descargar el justificante |
 | 16/10 | Margen absoluto. No se toca la demo | — |
 
@@ -50,7 +50,7 @@ fila en TASK_QUEUE (commit, comandos, evidencia).
 | F10-REV-2 | Aplicar las hojas que Daniel haya marcado y commitear por ola. **Solo el agente edita las reglas; Daniel solo marca casillas** | `humanReview` aprobado = recuento de reglas de las olas OK |
 | F10-REV-3 | Hojas duplicadas: `evidence/2026-10-06-F3/muestreo-ola-9.md` y `evidence/2026-10-06-F9/muestreo-ola-9.md` difieren. Dejar una sola versión válida (la que corresponde a las reglas actuales, posteriores a la Ley 4/2026) y marcar la otra como sustituida | Una sola hoja por ola |
 | F10-REL-1 | Ensayo de la release: `npm run eligibility:build:release` en local, con el recuento de reglas incluidas y excluidas. Comprobar que la web compila con ese bundle y que el nivel 2 conserva las fichas excluidas | Recuento ≥ 20 programas (ADR-040) o aviso a Daniel el 12/10 |
-| F10-REL-2 | El 14/10, Pages pasa a servir el build `--strict` (ADR-050). Cambiar el workflow de deploy para que use `eligibility:build:release` **a partir de ese commit**, no antes | Producción muestra solo reglas aprobadas, sin la etiqueta «revisión final pendiente» en el nivel 1 |
+| F10-REL-2 | El 14/10, Pages pasa a servir el build `--strict` (ADR-050). Cambiar el workflow de deploy para que use `eligibility:build:release` **a partir de ese commit**, no antes | Producción muestra solo reglas aprobadas, sin la etiqueta «revisión final pendiente» en el nivel 1. Y el paquete no puede llevar anexos sobrantes: `npm run anexos` deja exactamente 32 capturas y 2 vídeos (`recorrido-desktop.webm`, `recorrido-movil.webm`), borra antes cualquier otro fichero de esas carpetas —los `.webm` del 06/10 y las capturas con la numeración antigua incluidos— y **termina con error** si el recuento no cuadra (F10-B8) |
 
 ### 2.2 Calidad de las reglas (back) — P1
 
@@ -131,7 +131,7 @@ producto (F8 §5).
 |---|---|
 | F10-MEM-1 (11/10) | Actualizar `memoria.md`: (a) calibración v1 y v2 como resultado negativo medido y decisión de no usar el panel (ADR-050), que es evidencia de rigor; (b) cifras desde F10-DEV-1; (c) una frase sobre la elegibilidad con la respuesta de la Subdirección; (d) estructura alineada con los pesos del art. 16.2: **impacto y resultados 50 %**, ecosistema 30 % (código y datos abiertos, reglas reutilizables, licencia), escalabilidad 20 % (coste ~0, ~5 reglas al día, otras CCAA) |
 | F10-MEM-2 (13/10) | Añadir el piloto con la separación **medido / capacidad / plan**. Regenerar `memoria.pdf` (F10-DEV-2). `veracidad.json` con 0 claims sin evidencia (F7-6) |
-| F10-MEM-3 (14/10) | Paquete: `submission/` con memoria.pdf, anexos (vídeos y 6–8 capturas **regeneradas con la release estricta**), checklist actualizado y recibo `evidence/2026-10-14-F10/receipt.json` + handoff. `npm run anexos` limpia la carpeta antes de generar: en `video/` solo deben quedar `recorrido-desktop.webm` y `recorrido-movil.webm` (los `desktop-oscuro-recorrido.webm`/`movil-claro-recorrido.webm` del 06/10 se borran); lo mismo con las capturas que no se regeneren |
+| F10-MEM-3 (14/10) | Paquete: `submission/` con memoria.pdf, anexos (vídeos y 6–8 capturas **regeneradas con la release estricta**), checklist actualizado y recibo `evidence/2026-10-14-F10/receipt.json` + handoff. `npm run anexos` limpia la carpeta antes de generar: en `video/` solo deben quedar `recorrido-desktop.webm` y `recorrido-movil.webm` (los `desktop-oscuro-recorrido.webm`/`movil-claro-recorrido.webm` del 06/10 se borran); lo mismo con las capturas que no se regeneren. El propio script comprueba el recuento al terminar y falla si falta o sobra algo (F10-B8) |
 
 ## 3. Decisiones pendientes de Daniel
 
@@ -161,5 +161,5 @@ producto (F8 §5).
 - [ ] `validate:full` en verde y e2e, axe y privacidad sobre el build estricto
 - [ ] `piloto.json` (aunque tenga 0 sesiones, dicho así) y cada dato trazable
 - [ ] `memoria.pdf` regenerado; `veracidad.json` con 0 cifras huérfanas
-- [ ] Anexos regenerados con la release estricta
+- [ ] Anexos regenerados con la release estricta: `npm run anexos` termina en OK (32 capturas y 2 vídeos), sin restos del 06/10 ni capturas de la numeración antigua (F10-B8)
 - [ ] Checklist de presentación al día y recibo de fase + handoff

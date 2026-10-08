@@ -18,9 +18,16 @@ Plazo: **16/10/2026** · Recomendado: presentar el **15/10**.
       propio formulario).
 - [ ] Consentimiento: N/A — candidatura en nombre propio.
 - [ ] **Anexos** (adjuntar al registro; se regeneran el 14/10 con `npm run anexos`,
-      que borra primero cualquier .webm/.png anterior — solo deben quedar estos):
+      que borra antes cualquier fichero de esas dos carpetas que no vaya a
+      regenerar y **falla si el recuento no cuadra**: 32 capturas + 2 vídeos):
   - `submission/anexos/video/recorrido-desktop.webm`
   - `submission/anexos/video/recorrido-movil.webm`
+  - **comprobar que no queda ningún otro `.webm`** en `video/`: los
+    `desktop-oscuro-recorrido.webm` y `movil-claro-recorrido.webm` del 06/10 se
+    borran (además de la carpeta, ya no están en el repo desde el 08/10)
+  - **comprobar que en `capturas/` no quedan capturas con la numeración antigua**
+    (`*-03-resultados`, `*-04-ficha`, `*-05-explorar`, `*-06-observatorio`): son
+    del generador de F6 y no se regeneran
   - una selección de `submission/anexos/capturas/` (6–8, claro y oscuro,
     **regeneradas con la release estricta del 14/10**, F10-MEM-3)
   - URL de la demo en la memoria: https://huntsman1756.github.io/requisito-a-requisito/
