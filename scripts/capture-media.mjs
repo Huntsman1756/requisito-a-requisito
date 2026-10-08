@@ -1,4 +1,9 @@
-// F6-1/F6-2 — captura de medios para la memoria:
+// F6-1/F6-2 — captura de medios para la memoria.
+// SUSTITUIDO por scripts/anexos.ts (F10-B7): aquel usa los nombres definitivos
+// (recorrido-<dispositivo>.webm, <dispositivo>-<esquema>-NN-<página>.png). Este
+// deja la numeración antigua (03-resultados, 04-ficha, 05-explorar,
+// 06-observatorio), que la limpieza de `npm run anexos` borra. No se usa para el
+// paquete; se conserva como historia de F6.
 //  - vídeo 2-3 min del recorrido: home → comprobar → preguntas → resultados → ficha
 //  - capturas por dispositivo (desktop 1366, móvil 390) × claro/oscuro
 // Sirve el export local de out/ con scripts/serve-export.mjs.
