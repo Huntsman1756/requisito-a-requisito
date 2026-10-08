@@ -374,7 +374,12 @@ function describeAnswer(
 	if (q.type === "age" || q.type === "integer") {
 		return String((v as { min?: number }).min ?? "");
 	}
-	if (q.type === "dependents" && Array.isArray(v)) return String(v.length);
+	if (q.type === "dependents" && Array.isArray(v)) {
+		const ages = (v as { age?: { min?: number; max?: number } }[]).map((d) =>
+			d.age && d.age.min === d.age.max ? String(d.age.min) : "?",
+		);
+		return v.length === 0 ? "0" : `${v.length} · ${ages.join(", ")} años`;
+	}
 	if (q.type === "month_year") {
 		const my = v as { year: number; month: number };
 		return `${my.month}/${my.year}`;

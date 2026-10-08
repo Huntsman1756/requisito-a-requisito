@@ -26,6 +26,8 @@ export const es = {
 	"check.review.submit": "Ver mis resultados",
 	"check.error.required": "Elige una opción para continuar.",
 	"check.error.range": "Introduce un valor válido.",
+	"check.error.dependentAge":
+		"Indica la edad de cada persona a tu cargo o marca «Prefiero no decirlo».",
 
 	"q.territory.label": "¿En qué municipio de la Comunidad de Madrid estás empadronado?",
 	"q.territory.help": "Escribe el nombre del municipio y elígelo de la lista.",
@@ -60,6 +62,10 @@ export const es = {
 	"q.dependents.label": "¿Cuántas personas tienes a tu cargo?",
 	"q.dependents.help": "Hijas, hijos u otras personas que dependan de ti.",
 	"q.dependents.why": "Las ayudas familiares suelen mirar el número de personas a cargo.",
+	"q.dependents.ages": "Edad de cada persona a tu cargo",
+	"q.dependents.agesHelp":
+		"Algunas ayudas dependen de la edad (por ejemplo, menores de 14). Si prefieres no decirla, lo tendremos en cuenta como un dato que falta, nunca como un «no».",
+	"q.dependents.age": "Edad de la persona {n}",
 	"q.familyType.label": "¿Cómo es tu familia?",
 	"q.familyType.help": "Elige la que mejor describa tu situación.",
 	"q.familyType.why": "Algunas ayudas son solo para ciertos tipos de familia.",
@@ -182,6 +188,7 @@ export const es = {
 	"level2.state.CLOSED_RECURRING": "Se convoca cada año",
 	"level2.state.CLOSED": "Cerrada",
 	"level2.state.UNKNOWN": "Plazo por confirmar",
+	"explorer.badge.l1": "Comprobada requisito a requisito",
 
 	"card.youGet": "Puedes recibir",
 	"card.deadline": "Plazo",

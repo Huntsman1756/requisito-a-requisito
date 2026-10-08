@@ -10,6 +10,14 @@ import { MunicipalityCombobox } from "./MunicipalityCombobox";
 
 
 
+const MAX_DEPENDENTS = 20;
+const MAX_DEP_AGE = 130;
+
+interface DepRow {
+	age: string;
+	declined: boolean;
+}
+
 const optLabel = (q: Question, v: string): string => {
 	const o = q.options?.find((x) => x.value === v);
 	if (!o) return v;
@@ -43,18 +51,33 @@ export function QuestionStep({
 	inline,
 }: Props) {
 	const id = useId();
-	const [error, setError] = useState(false);
+	const [error, setError] = useState<I18nKey | null>(null);
 	const [draft, setDraft] = useState<string>(() => initialDraft(question, answer));
+	const [depRows, setDepRows] = useState<DepRow[]>(() => initialDepRows(answer));
 	const [ccaa, setCcaa] = useState<string>(() => initialCcaa(answer));
 	const [muni, setMuni] = useState<string>(() => initialMuni(answer));
 	const [showWhy, setShowWhy] = useState(false);
 
 	const value = answer?.state === "value" ? answer.value : undefined;
 
+	const depCount =
+		question.type === "dependents"
+			? Math.min(Math.max(0, Math.floor(Number(draft) || 0)), MAX_DEPENDENTS)
+			: 0;
+
+	const updateDep = (i: number, patch: Partial<DepRow>) => {
+		setDepRows((prev) => {
+			const next = [...prev];
+			next[i] = { ...(next[i] ?? { age: "", declined: false }), ...patch };
+			return next;
+		});
+		setError(null);
+	};
+
 	const commit = () => {
 		if (question.type === "territory") {
 			if (!muni) {
-				setError(true);
+				setError("check.error.required");
 				return;
 			}
 			onAnswer({
@@ -64,7 +87,7 @@ export function QuestionStep({
 		} else if (question.type === "age" || question.type === "integer") {
 			const n = Number(draft);
 			if (!Number.isFinite(n) || draft.trim() === "") {
-				setError(true);
+				setError("check.error.required");
 				return;
 			}
 			onAnswer({
@@ -73,30 +96,73 @@ export function QuestionStep({
 			});
 		} else if (question.type === "dependents") {
 			const n = Number(draft);
-			if (!Number.isFinite(n) || draft.trim() === "" || n < 0) {
-				setError(true);
+			if (
+				!Number.isInteger(n) ||
+				draft.trim() === "" ||
+				n < 0 ||
+				n > MAX_DEPENDENTS
+			) {
+				setError("check.error.range");
 				return;
 			}
-			const deps = Array.from({ length: n }, () => ({
-				age: { min: 0, max: 130, maxExclusive: false },
-			}));
+			const orig =
+				answer?.state === "value" && Array.isArray(answer.value)
+					? (answer.value as { disability?: unknown }[])
+					: [];
+			const deps: {
+				age: { min: number; max: number; maxExclusive: boolean };
+				disability?: "yes" | "no" | "unknown" | "declined";
+			}[] = [];
+			for (let i = 0; i < n; i++) {
+				const row = depRows[i];
+				const dis = orig[i]?.disability;
+				const keep: {
+					disability?: "yes" | "no" | "unknown" | "declined";
+				} =
+					dis === "yes" || dis === "no" || dis === "unknown" || dis === "declined"
+						? { disability: dis }
+						: {};
+				if (row?.declined) {
+					// «Prefiero no decirlo» por persona: rango desconocido (UNKNOWN ≠ NO).
+					deps.push({
+						age: { min: 0, max: MAX_DEP_AGE, maxExclusive: false },
+						...keep,
+					});
+					continue;
+				}
+				const a = Number(row?.age);
+				if (
+					!row ||
+					row.age.trim() === "" ||
+					!Number.isInteger(a) ||
+					a < 0 ||
+					a > MAX_DEP_AGE
+				) {
+					setError("check.error.dependentAge");
+					return;
+				}
+				deps.push({
+					age: { min: a, max: a, maxExclusive: false },
+					...keep,
+				});
+			}
 			onAnswer({ state: "value", value: deps });
 		} else if (question.type === "money_band") {
 			if (typeof value !== "object") {
-				setError(true);
+				setError("check.error.required");
 				return;
 			}
 			onAnswer(answer as Answer);
 		} else if (question.type === "month_year") {
 			if (!draft) {
-				setError(true);
+				setError("check.error.required");
 				return;
 			}
 			const [y, m] = draft.split("-").map(Number);
 			onAnswer({ state: "value", value: { year: y, month: m } });
 		} else {
 			if (typeof value !== "string") {
-				setError(true);
+				setError("check.error.required");
 				return;
 			}
 			onAnswer(answer as Answer);
@@ -130,7 +196,7 @@ export function QuestionStep({
 					onChange={(code) => {
 						setMuni(code);
 						setCcaa("13");
-						setError(false);
+						setError(null);
 					}}
 					onOutsideMadrid={onOutsideMadrid}
 				/>
@@ -146,7 +212,7 @@ export function QuestionStep({
 						max={question.max}
 						onChange={(e) => {
 							setDraft(e.target.value);
-							setError(false);
+							setError(null);
 						}}
 						aria-label={key(question.labelKey)}
 					/>
@@ -154,19 +220,62 @@ export function QuestionStep({
 			)}
 
 			{question.type === "dependents" && (
-				<div className="field">
-					<input
-						type="number"
-						inputMode="numeric"
-						min={0}
-						value={draft}
-						onChange={(e) => {
-							setDraft(e.target.value);
-							setError(false);
-						}}
-						aria-label={key(question.labelKey)}
-					/>
-				</div>
+				<>
+					<div className="field">
+						<input
+							type="number"
+							inputMode="numeric"
+							min={0}
+							max={MAX_DEPENDENTS}
+							value={draft}
+							onChange={(e) => {
+								setDraft(e.target.value);
+								setError(null);
+							}}
+							aria-label={key(question.labelKey)}
+						/>
+					</div>
+					{depCount > 0 && (
+						<fieldset className="dep-ages">
+							<legend className="dep-ages__legend">
+								{key("q.dependents.ages")}
+							</legend>
+							<p className="dep-ages__help">{key("q.dependents.agesHelp")}</p>
+							{Array.from({ length: depCount }, (_, i) => {
+								const row = depRows[i] ?? { age: "", declined: false };
+								return (
+									<div className="dep-row" key={`${id}-dep-${i}`}>
+										<label className="dep-row__age">
+											{t("q.dependents.age", { n: i + 1 })}
+											<input
+												className="input"
+												type="number"
+												inputMode="numeric"
+												min={0}
+												max={MAX_DEP_AGE}
+												value={row.age}
+												disabled={row.declined}
+												onChange={(e) =>
+													updateDep(i, { age: e.target.value })
+												}
+											/>
+										</label>
+										<label className="dep-row__decline">
+											<input
+												type="checkbox"
+												checked={row.declined}
+												onChange={(e) =>
+													updateDep(i, { declined: e.target.checked })
+												}
+											/>
+											{t("check.decline")}
+										</label>
+									</div>
+								);
+							})}
+						</fieldset>
+					)}
+				</>
 			)}
 
 			{question.type === "month_year" && (
@@ -176,7 +285,7 @@ export function QuestionStep({
 						value={draft}
 						onChange={(e) => {
 							setDraft(e.target.value);
-							setError(false);
+							setError(null);
 						}}
 						aria-label={key(question.labelKey)}
 					/>
@@ -192,7 +301,7 @@ export function QuestionStep({
 							checked={value === o.value}
 							onChange={() => {
 								onAnswer({ state: "value", value: o.value });
-								setError(false);
+								setError(null);
 							}}
 						/>
 						{optLabel(question, o.value)}
@@ -217,7 +326,7 @@ export function QuestionStep({
 										state: "value",
 										value: { min: lo, max: hi, maxExclusive: hi !== null },
 									});
-									setError(false);
+									setError(null);
 								}}
 							/>
 							{optLabel(question, o.value)}
@@ -227,7 +336,7 @@ export function QuestionStep({
 
 			{error && (
 				<p className="field-error" role="alert" id={`${id}-error`}>
-					{t("check.error.required")}
+					{t(error)}
 				</p>
 			)}
 
@@ -287,6 +396,25 @@ function initialDraft(q: Question, a: Answer | undefined): string {
 			: "";
 	}
 	return "";
+}
+
+// Edades ya respondidas: una edad puntual se prefill; un rango (o ausencia)
+// se muestra como «prefiero no decirlo» — nunca se inventa una edad.
+function initialDepRows(a: Answer | undefined): DepRow[] {
+	if (a?.state !== "value" || !Array.isArray(a.value)) return [];
+	return (
+		a.value as { age?: { min?: number; max?: number; maxExclusive?: boolean } }[]
+	).map((d) => {
+		const g = d?.age;
+		if (
+			g &&
+			Number.isInteger(g.min) &&
+			g.min === g.max &&
+			g.maxExclusive === false
+		)
+			return { age: String(g.min), declined: false };
+		return { age: "", declined: true };
+	});
 }
 
 function initialCcaa(a: Answer | undefined): string {

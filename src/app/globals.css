@@ -178,6 +178,13 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .input, .field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 0 1rem; border: 2px solid var(--rule); border-radius: var(--r); background: var(--sheet); color: var(--ink); font: 500 1.05rem var(--f-body) }
 .input:focus, .field input:focus, .field select:focus { border-color: var(--seal); outline: none; box-shadow: 0 0 0 3px var(--seal-soft) }
 .field-error { color: var(--no); font-size: .9rem; margin-top: .3rem }
+.dep-ages { margin-top: 1.2rem }
+.dep-ages__legend { font: 700 1rem var(--f-body); margin-bottom: .2rem }
+.dep-ages__help { font-size: .92rem; color: var(--ink-2); margin-top: 0 }
+.dep-row { display: flex; gap: 1rem; align-items: flex-end; margin-top: .7rem; flex-wrap: wrap }
+.dep-row__age { flex: 1 1 8rem; font-weight: 600; font-size: .95rem }
+.dep-row__age input { margin-top: .25rem }
+.dep-row__decline { display: flex; gap: .5rem; align-items: center; min-height: 52px; font-size: .95rem; cursor: pointer }
 .option { display: flex; gap: .7rem; align-items: flex-start; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: var(--r); margin-bottom: .5rem; cursor: pointer }
 .option input { margin-top: .2rem }
 .option:has(input:checked) { background: var(--seal-soft); border-color: var(--seal) }
@@ -279,6 +286,7 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 .explorer-item a { font-weight: 600; text-decoration: none }
 .explorer-item a:hover { text-decoration: underline }
 .explorer-meta { font: 500 .8rem var(--f-mono); color: var(--ink-2); white-space: nowrap }
+.explorer-badge { display: inline-block; margin-left: .5rem; padding: .1rem .5rem; border: 1px solid var(--seal); border-radius: 999px; color: var(--seal); font: 600 .75rem var(--f-body); vertical-align: middle }
 
 /* observatorio */
 .obs { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1.5rem; margin-top: 1.4rem }
