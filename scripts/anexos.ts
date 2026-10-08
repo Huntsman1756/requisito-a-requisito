@@ -11,7 +11,7 @@
  */
 
 import { spawn } from "node:child_process";
-import { existsSync, mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, renameSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 import { chromium, devices, type Browser, type Page } from "playwright";
 
@@ -97,6 +97,20 @@ async function main() {
 
 	mkdirSync(join(OUT_DIR, "capturas"), { recursive: true });
 	mkdirSync(join(OUT_DIR, "video"), { recursive: true });
+	// Limpieza: solo deben quedar los anexos de ESTA corrida (release estricta
+	// del 14/10) — se borran capturas/vídeos de corridas anteriores que no se
+	// regeneren, con los nombres que tengan.
+	for (const [dir, ext] of [
+		["capturas", ".png"],
+		["video", ".webm"],
+	] as const) {
+		for (const f of readdirSync(join(OUT_DIR, dir))) {
+			if (f.endsWith(ext)) {
+				unlinkSync(join(OUT_DIR, dir, f));
+				console.log(`borrado anexo antiguo: ${dir}/${f}`);
+			}
+		}
+	}
 
 	const browser: Browser = await chromium.launch();
 	for (const [disp, vp] of DISPOSITIVOS) {
@@ -148,7 +162,6 @@ async function main() {
 		await page.getByRole("link", { name: "Ver ficha completa" }).first().click();
 		await page.waitForLoadState("networkidle");
 		await ctx.close(); // cierra y escribe el webm
-		const { readdirSync, renameSync } = await import("node:fs");
 		const webms = readdirSync(join(OUT_DIR, "video")).filter((f) =>
 			f.startsWith("page@") && f.endsWith(".webm"),
 		);

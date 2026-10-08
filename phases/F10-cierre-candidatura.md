@@ -131,7 +131,7 @@ producto (F8 §5).
 |---|---|
 | F10-MEM-1 (11/10) | Actualizar `memoria.md`: (a) calibración v1 y v2 como resultado negativo medido y decisión de no usar el panel (ADR-050), que es evidencia de rigor; (b) cifras desde F10-DEV-1; (c) una frase sobre la elegibilidad con la respuesta de la Subdirección; (d) estructura alineada con los pesos del art. 16.2: **impacto y resultados 50 %**, ecosistema 30 % (código y datos abiertos, reglas reutilizables, licencia), escalabilidad 20 % (coste ~0, ~5 reglas al día, otras CCAA) |
 | F10-MEM-2 (13/10) | Añadir el piloto con la separación **medido / capacidad / plan**. Regenerar `memoria.pdf` (F10-DEV-2). `veracidad.json` con 0 claims sin evidencia (F7-6) |
-| F10-MEM-3 (14/10) | Paquete: `submission/` con memoria.pdf, anexos (vídeos y 6–8 capturas **regeneradas con la release estricta**), checklist actualizado y recibo `evidence/2026-10-14-F10/receipt.json` + handoff |
+| F10-MEM-3 (14/10) | Paquete: `submission/` con memoria.pdf, anexos (vídeos y 6–8 capturas **regeneradas con la release estricta**), checklist actualizado y recibo `evidence/2026-10-14-F10/receipt.json` + handoff. `npm run anexos` limpia la carpeta antes de generar: en `video/` solo deben quedar `recorrido-desktop.webm` y `recorrido-movil.webm` (los `desktop-oscuro-recorrido.webm`/`movil-claro-recorrido.webm` del 06/10 se borran); lo mismo con las capturas que no se regeneren |
 
 ## 3. Decisiones pendientes de Daniel
 

@@ -17,9 +17,10 @@ Plazo: **16/10/2026** · Recomendado: presentar el **15/10**.
 - [ ] **Acreditación de personalidad**: DNI/NIE (la sede lo pide en el
       propio formulario).
 - [ ] Consentimiento: N/A — candidatura en nombre propio.
-- [ ] **Anexos** (adjuntar al registro):
-  - `submission/anexos/video/desktop-oscuro-recorrido.webm`
-  - `submission/anexos/video/movil-claro-recorrido.webm`
+- [ ] **Anexos** (adjuntar al registro; se regeneran el 14/10 con `npm run anexos`,
+      que borra primero cualquier .webm/.png anterior — solo deben quedar estos):
+  - `submission/anexos/video/recorrido-desktop.webm`
+  - `submission/anexos/video/recorrido-movil.webm`
   - una selección de `submission/anexos/capturas/` (6–8, claro y oscuro,
     **regeneradas con la release estricta del 14/10**, F10-MEM-3)
   - URL de la demo en la memoria: https://huntsman1756.github.io/requisito-a-requisito/
