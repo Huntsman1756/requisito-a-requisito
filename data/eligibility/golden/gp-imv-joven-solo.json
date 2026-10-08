@@ -68,7 +68,7 @@
 			"verdict": "no_cumple",
 			"deadlineState": "ROLLING",
 			"blockers": [
-				"edad-minima"
+				"Tener al menos 23 años, o ser mayor de edad con hijos o menores a cargo"
 			],
 			"justification": [
 				{

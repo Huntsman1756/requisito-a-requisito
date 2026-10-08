@@ -66,8 +66,8 @@
 	},
 	"expectations": [
 		{
-			"benefitSlug": "madrid-beca-6000",
-			"rulesVersion": 1,
+			"benefitSlug": "madrid-becas-bachillerato-centros-privados",
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "CLOSED_RECURRING",
 			"justification": [
@@ -96,7 +96,5 @@
 	],
 	"review": {
 		"status": "pending"
-	},
-	"benefitSlug": "madrid-becas-bachillerato-centros-privados",
-	"rulesVersion": 2
+	}
 }

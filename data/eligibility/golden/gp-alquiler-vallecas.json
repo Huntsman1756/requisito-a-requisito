@@ -88,7 +88,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "madrid-ayudas-alquiler-plan-estatal",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "CLOSED_RECURRING",
 			"blockers": [],

@@ -35,9 +35,8 @@
 		}
 	],
 	"review": {
-		"status": "ok",
+		"status": "pending",
 		"by": "verificador-independiente",
-		"at": "2026-10-06",
-		"report": "evidence/2026-10-06-F3/verificacion-ola-10.md"
+		"at": "2026-10-06"
 	}
 }

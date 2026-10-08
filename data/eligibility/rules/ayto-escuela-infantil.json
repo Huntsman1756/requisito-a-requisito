@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "ayto-escuela-infantil",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-06",
 	"humanReview": {
 		"status": "pending"
@@ -61,8 +61,8 @@
 	"requirements": [
 		{
 			"id": "residir-madrid",
-			"hard": true,
-			"label": "El menor debe residir en el municipio de Madrid (o prever residir antes del inicio del curso; hay excepciones para no residentes — ver ⚠)",
+			"hard": false,
+			"label": "El menor debe residir en el municipio de Madrid (o prever residir antes del inicio del curso; hay excepciones para no residentes — ver ⚠). El cuestionario pregunta el municipio de empadronamiento: si estás empadronado fuera pero prevés residir en Madrid antes del curso, esta ayuda puede aplicarte igualmente",
 			"citation": {
 				"sourceId": "boam-20260324-bases-eim-2627",
 				"locator": "Bases, apdo. 2.1.a (Destinatarios)",
@@ -198,6 +198,16 @@
 				"locator": "Bases, capítulo III, apdo. 21.1",
 				"excerpt": "Las escuelas remitirán al Área de Gobierno del Ayuntamiento de Madrid competente en materia educativa las solicitudes que correspondan a alumnas y alumnos con necesidades educativas especiales",
 				"excerptSha256": "676ec919e2480a9f40fa28f5a8fde070af8fe553ff441b343aa9e8faa757a0ad"
+			}
+		},
+		{
+			"id": "prever-residir",
+			"label": "Basta con prever residir en el municipio de Madrid antes del inicio del curso escolar (p. ej. una mudanza en curso): el cuestionario pregunta el empadronamiento actual, no la residencia prevista — quien la tenga prevista debe solicitarlo igual",
+			"citation": {
+				"sourceId": "boam-20260324-bases-eim-2627",
+				"locator": "Bases, apdo. 2.1.a (Destinatarios)",
+				"excerpt": "los menores residentes en el municipio de Madrid o que prevean residir con anterioridad a la fecha de inicio del curso escolar",
+				"excerptSha256": "2b527f0afc9378e092f0c2342ef910fcd3de40d618d3aff5d857a0d07602533e"
 			}
 		}
 	],

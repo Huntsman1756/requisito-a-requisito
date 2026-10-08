@@ -114,7 +114,5 @@
 	],
 	"review": {
 		"status": "pending"
-	},
-	"benefitSlug": "prestaciones-dependencia-saad",
-	"rulesVersion": 2
+	}
 }

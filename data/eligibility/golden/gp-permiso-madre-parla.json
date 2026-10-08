@@ -72,7 +72,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "prestacion-nacimiento-cuidado-menor",
-			"rulesVersion": 1,
+			"rulesVersion": 2,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],

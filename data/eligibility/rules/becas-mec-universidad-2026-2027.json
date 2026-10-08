@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "becas-generales-mefp-2026-2027",
 	"standalone": false,
-	"rulesVersion": 2,
+	"rulesVersion": 3,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -48,7 +48,7 @@
 		{
 			"id": "estudiante-universitario",
 			"hard": false,
-			"label": "Cursar enseñanzas universitarias conducentes a título oficial de grado o de máster en el curso 2026-2027",
+			"label": "Cursar en el curso 2026-2027 enseñanzas universitarias conducentes a título oficial de grado o de máster en una universidad o centro español (no valen títulos propios ni doctorado — ver ⚠)",
 			"citation": {
 				"sourceId": "boe-b-2026-9261-becas-generales-2627",
 				"locator": "Extracto, «Segundo. Beneficiarios», 2.b)",
@@ -181,6 +181,16 @@
 				"locator": "Art. 24.1-2 y 24.4",
 				"excerpt": "Se podrá disfrutar de beca durante un año más de los establecidos en el plan de estudios. No obstante este plazo será de dos años para quienes cursen estudios de enseñanzas técnicas.",
 				"excerptSha256": "cdb5a927fbf972a9aa556b45196e4d749000d99f271fccc17123480a2590589b"
+			}
+		},
+		{
+			"id": "solo-titulos-oficiales-centro-espanol",
+			"label": "Solo cuentan las enseñanzas universitarias conducentes a títulos oficiales de grado o máster en una universidad o centro español: la convocatoria excluye doctorado, especialización y títulos propios. Nuestra pregunta «¿estudias ahora mismo?» no distingue el tipo de estudios — si estudias algo no oficial, este requisito puede no cumplirse",
+			"citation": {
+				"sourceId": "boe-b-2026-9261-becas-generales-2627",
+				"locator": "Extracto, «Segundo. Beneficiarios», final del apdo. 2",
+				"excerpt": "No se incluyen en esta convocatoria las becas para la realización de estudios correspondientes al tercer ciclo o doctorado, estudios de especialización ni títulos propios de las universidades",
+				"excerptSha256": "a422ccfa1c6c94f0ef253f81717e2619476e1551d21b763cdfe705db1063777a"
 			}
 		}
 	],

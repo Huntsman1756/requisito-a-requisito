@@ -67,7 +67,7 @@
 	"expectations": [
 		{
 			"benefitSlug": "becas-generales-mefp-2026-2027",
-			"rulesVersion": 2,
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "CLOSED_RECURRING",
 			"blockers": [],

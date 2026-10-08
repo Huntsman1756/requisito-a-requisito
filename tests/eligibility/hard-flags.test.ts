@@ -18,7 +18,9 @@ const EXPECTED: Record<string, boolean> = {
 	"ayto-emergencia-social.json/empadronado-madrid": true,
 	"ayto-emergencia-social.json/mayor-edad": true,
 	"ayto-emergencia-social.json/carencia-recursos": false,
-	"ayto-escuela-infantil.json/residir-madrid": true,
+	// F10-REG-6: la norma admite «prever residir» y el cuestionario solo
+	// pregunta empadronamiento ⇒ soft (hard F sería un falso negativo).
+	"ayto-escuela-infantil.json/residir-madrid": false,
 	"ayto-escuela-infantil.json/hijo-primer-ciclo": true,
 	"ayto-ibi-familia-numerosa.json/empadronado-madrid": true,
 	"ayto-ibi-familia-numerosa.json/titulo-familia-numerosa": true,

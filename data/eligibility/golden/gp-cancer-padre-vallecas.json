@@ -71,8 +71,8 @@
 	},
 	"expectations": [
 		{
-			"benefitSlug": "prestacion-cuidado-menores-cancer",
-			"rulesVersion": 1,
+			"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
+			"rulesVersion": 3,
 			"verdict": "posible",
 			"deadlineState": "ROLLING",
 			"blockers": [],
@@ -102,7 +102,5 @@
 	],
 	"review": {
 		"status": "pending"
-	},
-	"benefitSlug": "prestacion-cuidado-menor-enfermedad-grave",
-	"rulesVersion": 2
+	}
 }

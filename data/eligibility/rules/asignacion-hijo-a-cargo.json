@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "asignacion-hijo-a-cargo",
 	"standalone": true,
-	"rulesVersion": 5,
+	"rulesVersion": 6,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -183,6 +183,16 @@
 				"locator": "LGSS art. 355.1",
 				"excerpt": "Todo beneficiario estará obligado a declarar cuantas variaciones se produzcan en su familia, siempre que estas deban ser tenidas en cuenta a efectos",
 				"excerptSha256": "aad4d54d1fabbdc38a87904bed69cbe4e8a1bb4691535eec788b7e60966bebce"
+			}
+		},
+		{
+			"id": "grado-discapacidad-no-preguntado",
+			"label": "El cuestionario no pregunta el grado de discapacidad de cada persona a cargo: el requisito «causante con discapacidad» queda siempre por comprobar (⚠) y el grado lo determina el baremo oficial",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 351.a (grados exigidos por edad del causante)",
+				"excerpt": "Una asignación económica por cada hijo menor de dieciocho años de edad y afectado por una discapacidad en un grado igual o superior al 33 por ciento",
+				"excerptSha256": "5123b90e7080af11d0025fb49757969d15f8c78cb7dd09233d6f5e5a993ab0d4"
 			}
 		}
 	],

@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "subsidio-desempleo",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-05",
 	"humanReview": {
 		"status": "pending"
@@ -169,6 +169,16 @@
 				"locator": "Art. 274.3",
 				"excerpt": "Serán beneficiarios del subsidio para trabajadores mayores de cincuenta y dos años quienes cumplan los requisitos establecidos en el artículo 280",
 				"excerptSha256": "d98c5005e2758ac220f180fbf1347786d27fc9e4fa0f9dfdb369e9c59a1c8b11"
+			}
+		},
+		{
+			"id": "trabajo-tiempo-parcial",
+			"label": "También pueden acceder al subsidio quienes mantienen uno o varios contratos a tiempo parcial si la suma de jornadas es inferior a una completa y cumplen el resto de requisitos — el cuestionario no distingue el tiempo parcial dentro de «trabajo por cuenta ajena», así que quien trabaje a tiempo parcial verá este requisito como ⚠",
+			"citation": {
+				"sourceId": "boe-lgss-prestacion-familia",
+				"locator": "Art. 274.1, in fine",
+				"excerpt": "Podrán acceder a estos subsidios quienes mantengan uno o varios contratos a tiempo parcial, siempre que la suma de las jornadas trabajadas en dichos contratos sea inferior a una jornada completa y cumplan el resto de los requisitos",
+				"excerptSha256": "8f71ffe9e89037367b5179add484077d82db4a93d0f55c3d1172c90d293df7dd"
 			}
 		}
 	],

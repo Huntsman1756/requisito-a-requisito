@@ -1,7 +1,7 @@
 {
 	"benefitSlug": "ayto-tarjeta-azul-discapacidad",
 	"standalone": true,
-	"rulesVersion": 1,
+	"rulesVersion": 2,
 	"verifiedAt": "2026-10-06",
 	"humanReview": {
 		"status": "pending"
@@ -65,7 +65,7 @@
 		{
 			"id": "empadronado-municipio-madrid",
 			"hard": true,
-			"label": "Estar empadronado/a en el municipio de Madrid (la Tarjeta Azul es municipal: no basta residir en otro municipio de la Comunidad de Madrid)",
+			"label": "Estar empadronado/a en el municipio de Madrid (la norma habla de «residentes» y el Ayuntamiento lo comprueba en el padrón; la Tarjeta Azul es municipal: no basta residir en otro municipio de la Comunidad de Madrid)",
 			"citation": {
 				"sourceId": "bocm-20110525-tarjeta-azul",
 				"locator": "Anexo, apartado A)",
@@ -193,6 +193,16 @@
 				"locator": "Cuadro de importes, columna INGRESOS AÑO",
 				"excerpt": "INGRESOS AÑO Importes hasta (euros) 7.455,14 7.455,14 22.365,42 7.455,14 8.685,16 10.235,45 13.158,32 8.685,16 10.235,45 13.158,32 (03/18.285/11) BOCM-20110525-21 http://www.bocm.e",
 				"excerptSha256": "2b42ec6a5853529060b58954f95ef11a074ad8e560a582ac6e442bcaa5a712be"
+			}
+		},
+		{
+			"id": "residente-vs-empadronado",
+			"label": "La Resolución dice «residentes en Madrid»; nosotros lo comprobamos por tu municipio de empadronamiento. Si vives en Madrid sin estar empadronado/a aún, el Ayuntamiento contrastará tu dirección en el padrón al tramitar la solicitud",
+			"citation": {
+				"sourceId": "bocm-20110525-tarjeta-azul",
+				"locator": "Anexo, apartado A)",
+				"excerpt": "siendo residentes en Madrid, reúnan alguna de las condiciones siguientes",
+				"excerptSha256": "e2a1183a6acd1060f72810b3c456daaee977d2866287b1f04071e712fab764e5"
 			}
 		}
 	],

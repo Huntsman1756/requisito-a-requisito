@@ -47,7 +47,7 @@
 			"id": "cm-pensiones-no-contributivas",
 			"rank": 4,
 			"documentType": "informational",
-			"url": "https://www.comunidad.madrid/servicios/asuntos-sociales/pensiones-no-contributivas",
+			"url": "https://www.comunidad.madrid/asuntos-sociales/pensiones-no-contributivas",
 			"title": "Comunidad de Madrid — Pensiones no contributivas (página de aterrizaje que enlaza los dos trámites: incapacidad y jubilación)"
 		}
 	],
@@ -256,7 +256,7 @@
 		},
 		"channel": {
 			"managingBody": "Comunidad de Madrid — Consejería de Familia, Juventud y Asuntos Sociales, Dirección General de Servicios Sociales e Integración (gestión transferida; el pago lo hace la Tesorería General de la Seguridad Social). Dos trámites: incapacidad (ref. 34369) y jubilación (ref. 34370)",
-			"url": "https://www.comunidad.madrid/servicios/asuntos-sociales/pensiones-no-contributivas",
+			"url": "https://www.comunidad.madrid/asuntos-sociales/pensiones-no-contributivas",
 			"online": true,
 			"inPerson": true,
 			"citation": {
