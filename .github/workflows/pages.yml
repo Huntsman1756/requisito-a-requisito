@@ -24,8 +24,20 @@ jobs:
           node-version: "24"
           cache: npm
       - run: npm ci
-      # La puerta completa: types, lint, tests y build (con el bundle de elegibilidad).
-      - run: npm run validate:full
+      # Modo de publicación (variable del repo vars.RELEASE_MODE):
+      #   normal → build normal con todas las reglas (por defecto, HOY).
+      #   strict → release del jurado: solo reglas humanReview=approved y
+      #            release:verify sobre el export (fail-closed).
+      # NO activar strict antes del 14/10 (F10-REL-2, ADR-050): lo cambia
+      # Daniel o la sesión del 14 con su OK, tras aplicar las hojas.
+      - name: Validate normal (RELEASE_MODE ausente o 'normal')
+        if: vars.RELEASE_MODE != 'strict'
+        run: npm run validate:full
+        env:
+          BASE_PATH: /requisito-a-requisito
+      - name: Validate release (RELEASE_MODE == 'strict')
+        if: vars.RELEASE_MODE == 'strict'
+        run: npm run validate:release
         env:
           BASE_PATH: /requisito-a-requisito
       - uses: actions/upload-pages-artifact@v3

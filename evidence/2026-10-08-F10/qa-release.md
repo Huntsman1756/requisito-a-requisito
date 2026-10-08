@@ -73,3 +73,18 @@ en ubuntu-latest. Resultado del run CI: **verde — run 37823319781**
 - Móvil oscuro, reflow 320 px y movimiento reducido cubiertos por la matriz de
   proyectos de Playwright.
 - Medidas con ruido de máquina repetidas y anotadas; nada re-etiquetado.
+
+## 6. Ensayo estricto repetido con huella (08/10 noche, tras B7)
+
+**Declarado simulado (4.12):** aprobaciones en copia por `qa-strict.ts`.
+
+- Bundle estricto → `data/eligibility/bundle/` → `datos:public` →
+  **`next build` directo** (sin `npm run build`, que lo pisaría).
+- **Huella comprobada:** sha256(`out/datos/elegibilidad/bundle.json`) =
+  sha256(bundle estricto de scratch) = `57faef79…` — el export ES el strict.
+- `npx playwright test --project=mobile-android --project=mobile-ios
+  --project=dark` ⇒ **48/48 verdes** (incluye privacidad y tarjetas).
+- `release:verify` nuevo: puerta fail-closed sobre el export (sha, todas
+  `approved`, ≥1 regla, ≥20 programas). Tests en
+  `tests/eligibility/release-verify.test.ts`: verde con simulación, rojo sin
+  ella, rojo con bundle pisado.

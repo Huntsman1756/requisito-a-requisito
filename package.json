@@ -43,7 +43,10 @@
 		"memoria:pdf": "tsx ./scripts/memoria-pdf.ts",
 		"piloto:agregados": "tsx ./scripts/piloto-agregados.ts",
 		"muestreo:indice": "tsx ./scripts/muestreo-indice.ts",
-		"anexos": "tsx scripts/anexos.ts"
+		"anexos": "tsx scripts/anexos.ts",
+		"build:release": "npm run eligibility:build:release && npm run datos:public && next build",
+		"release:verify": "tsx ./scripts/release-verify.ts",
+		"validate:release": "npm run check && npm run lint && npm test && npm run build:release && npm run release:verify"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",

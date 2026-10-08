@@ -83,7 +83,8 @@ reusar el motor sin depender de este producto.
   verificado contra el texto normalizado de la fuente.
 - **527 pruebas** automáticas en verde. Firefox y WebKit completaron las
   pruebas E2E en CI sobre el build normal (run 37823319781); su ejecución
-  sobre la release estricta sigue pendiente. La matriz local cubre Chromium,
+  sobre la release estricta sigue pendiente **[14/10 — actualizar tras
+  e2e-browsers mode: strict]**. La matriz local cubre Chromium,
   móvil, tablet, reflow 320 px, oscuro, contraste forzado y movimiento reducido.
 - **155 URLs** del bundle verificadas el 8/10 (link-check, 0 fallidas).
 - **Auditoría de fiabilidad (8/10)**: se midió la web como producto, no solo
@@ -99,7 +100,8 @@ reusar el motor sin depender de este producto.
   local demuestra: sin aprobaciones, el build sale **vacío** (0 de 52) en
   lugar de vender lo no revisado; con marcas **simuladas en copia** y aplicadas
   por la herramienta real `review:apply`, las 52 pasan. Las hojas reales
-  siguen pendientes de Daniel. El cierre es un
+  siguen pendientes de Daniel **[14/10 — actualizar con el recuento real
+  de aprobadas]**. El cierre es un
   gate que falla cerrado.
 - **Mutación dirigida**: 238 mutantes de las reglas (umbral ±1, dureza
   invertida) — **0 supervivientes** sin explicar; y barrido exhaustivo de

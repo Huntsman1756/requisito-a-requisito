@@ -2,8 +2,19 @@ name: e2e-browsers (manual)
 
 # B2.2 — este PC no arranca Firefox/WebKit; la matriz se ejecuta en CI contra
 # el export estático (out/) generado en el propio job.
+#
+# `mode: strict` construye la ruta de release (build:release + release:verify
+# fail-closed). Sin aprobaciones humanas aplicadas, el modo strict DEBE fallar
+# — ese rojo es el comportamiento esperado y está documentado (regla 4.12).
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "normal | strict (release del jurado)"
+        required: true
+        default: normal
+        type: choice
+        options: [normal, strict]
 
 permissions:
   contents: read
@@ -20,7 +31,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps firefox webkit
-      - run: npm run build
+      - name: Build normal
+        if: inputs.mode != 'strict'
+        run: npm run build
+      - name: Build release estricto + verify (fail-closed)
+        if: inputs.mode == 'strict'
+        run: npm run build:release && npm run release:verify
       # El export estático se sirve con scripts/serve-export.mjs (lo arranca
       # el propio Playwright como webServer).
       - run: npx playwright test --project=desktop-firefox --project=desktop-webkit
