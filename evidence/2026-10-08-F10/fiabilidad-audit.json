@@ -1,0 +1,2320 @@
+{
+  "date": "2026-10-08",
+  "level1": {
+    "ruleFiles": 52,
+    "deadlines": [
+      {
+        "file": "anticipos-docentes-cm.json",
+        "slug": "anticipos-docentes-cm",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "asignacion-hijo-a-cargo.json",
+        "slug": "asignacion-hijo-a-cargo",
+        "rulesVersion": 6,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "ayto-emergencia-social.json",
+        "slug": "ayto-emergencia-social",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "ayto-escuela-infantil.json",
+        "slug": "ayto-escuela-infantil",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "OPEN",
+        "closesAt": "2027-05-30",
+        "recurrence": "annual",
+        "previousCalls": 3,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "ayto-ibi-familia-numerosa.json",
+        "slug": "ayto-ibi-familia-numerosa",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "ayto-tarjeta-azul-discapacidad.json",
+        "slug": "ayto-tarjeta-azul-discapacidad",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "opensAt": "2011-05-16",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "becas-mec-universidad-2026-2027.json",
+        "slug": "becas-generales-mefp-2026-2027",
+        "rulesVersion": 3,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "CLOSED_RECURRING",
+        "opensAt": "2026-04-07",
+        "closesAt": "2026-05-18",
+        "recurrence": "annual",
+        "previousCalls": 2,
+        "nextOpeningEstimate": "2027-04-07",
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "bono-cultural-joven.json",
+        "slug": "bono-cultural-joven",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "OPEN",
+        "opensAt": "2026-06-22",
+        "closesAt": "2026-10-31",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "bono-social-electrico.json",
+        "slug": "bono-social-electrico",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "bono-social-termico.json",
+        "slug": "bono-social-termico",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "recurrence": "annual",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "cese-actividad-autonomos.json",
+        "slug": "cese-actividad-autonomos",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "cm-reintegro-accidentes-trabajo.json",
+        "slug": "cm-reintegro-accidentes-trabajo",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "complemento-ayuda-infancia.json",
+        "slug": "complemento-ayuda-infancia",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "descuento-transporte-familia-numerosa.json",
+        "slug": "descuento-transporte-familia-numerosa",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "fuenlabrada-fuenlacarenet-2026.json",
+        "slug": "fuenlabrada-fuenlacarenet-2026",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "OPEN",
+        "opensAt": "2026-10-01",
+        "closesAt": "2027-09-30",
+        "recurrence": "none",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "fuenlabrada-prestaciones-sociales.json",
+        "slug": "fuenlabrada-prestaciones-sociales",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "imv.json",
+        "slug": "imv",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "leganes-prestaciones-especial-necesidad.json",
+        "slug": "leganes-prestaciones-especial-necesidad",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-abono-transporte-65.json",
+        "slug": "madrid-abono-transporte-65",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "opensAt": "2009-03-02",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-abono-transporte-infantil.json",
+        "slug": "madrid-abono-transporte-infantil",
+        "rulesVersion": 4,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-abono-transporte-joven.json",
+        "slug": "madrid-abono-transporte-joven",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-accede-prestamo-libros.json",
+        "slug": "madrid-accede-prestamo-libros",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "recurrence": "annual",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-ayuda-pago-unico-vg.json",
+        "slug": "madrid-ayuda-pago-unico-vg",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-ayudas-alquiler-plan-estatal.json",
+        "slug": "madrid-ayudas-alquiler-plan-estatal",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "CLOSED_RECURRING",
+        "opensAt": "2025-11-04",
+        "closesAt": "2025-12-15",
+        "recurrence": "annual",
+        "previousCalls": 3,
+        "nextOpeningEstimate": "2026-11-04",
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-ayudas-nacimiento-adopcion-multiple.json",
+        "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-ayudas-nacimiento-general.json",
+        "slug": "madrid-ayudas-nacimiento-general",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "recurrence": "annual",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-ayudas-urgencia-social.json",
+        "slug": "madrid-ayudas-urgencia-social",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-beca-comedor-escolar.json",
+        "slug": "madrid-beca-comedor-escolar",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "CLOSED_RECURRING",
+        "opensAt": "2026-04-29",
+        "closesAt": "2026-05-28",
+        "recurrence": "annual",
+        "previousCalls": 2,
+        "nextOpeningEstimate": "2027-04-29",
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-becas-bachillerato-centros-privados.json",
+        "slug": "madrid-becas-bachillerato-centros-privados",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "CLOSED_RECURRING",
+        "opensAt": "2026-05-05",
+        "closesAt": "2026-05-26",
+        "recurrence": "annual",
+        "previousCalls": 2,
+        "nextOpeningEstimate": "2027-05-05",
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-bono-alquiler-joven.json",
+        "slug": "madrid-bono-alquiler-joven",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "opensAt": "2025-02-03",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-cheque-escuela-infantil.json",
+        "slug": "madrid-cheque-escuela-infantil",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "CLOSED_RECURRING",
+        "opensAt": "2026-05-19",
+        "closesAt": "2026-06-08",
+        "recurrence": "annual",
+        "previousCalls": 2,
+        "nextOpeningEstimate": "2027-05-19",
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-renta-minima-insercion.json",
+        "slug": "madrid-renta-minima-insercion",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "madrid-titulo-familia-numerosa.json",
+        "slug": "madrid-titulo-familia-numerosa",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "mostoles-prestaciones-sociales.json",
+        "slug": "mostoles-prestaciones-sociales",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "pension-incapacidad-permanente.json",
+        "slug": "pension-incapacidad-permanente",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "pension-jubilacion-contributiva.json",
+        "slug": "pension-jubilacion-contributiva",
+        "rulesVersion": 3,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "pension-no-contributiva.json",
+        "slug": "pension-no-contributiva",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "pension-orfandad.json",
+        "slug": "pension-orfandad",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "pension-viudedad.json",
+        "slug": "pension-viudedad",
+        "rulesVersion": 3,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-cuidado-menor-enfermedad-grave.json",
+        "slug": "prestacion-cuidado-menor-enfermedad-grave",
+        "rulesVersion": 3,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-cuidador-no-profesional.json",
+        "slug": "prestacion-cuidador-no-profesional",
+        "rulesVersion": 2,
+        "validUntil": "2026-10-22",
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-cuidador-no-profesional__v-2026-10-23.json",
+        "slug": "prestacion-cuidador-no-profesional",
+        "rulesVersion": 2,
+        "validFrom": "2026-10-23",
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-desempleo-contributiva.json",
+        "slug": "prestacion-desempleo-contributiva",
+        "rulesVersion": 3,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad.json",
+        "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestacion-nacimiento-cuidado-menor.json",
+        "slug": "prestacion-nacimiento-cuidado-menor",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestaciones-dependencia-saad.json",
+        "slug": "prestaciones-dependencia-saad",
+        "rulesVersion": 2,
+        "validUntil": "2026-10-22",
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestaciones-dependencia-saad__v-2026-10-23.json",
+        "slug": "prestaciones-dependencia-saad",
+        "rulesVersion": 2,
+        "validFrom": "2026-10-23",
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "prestamos-personal-publico-cm.json",
+        "slug": "prestamos-personal-publico-cm",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "sermas-ortoprotesica-desplazamiento.json",
+        "slug": "sermas-ortoprotesica-desplazamiento",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "sermas-reintegro-gastos-sanitarios.json",
+        "slug": "sermas-reintegro-gastos-sanitarios",
+        "rulesVersion": 1,
+        "verifiedAt": "2026-10-06",
+        "ageVerifiedAtDays": 2,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "subsidio-desempleo.json",
+        "slug": "subsidio-desempleo",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      },
+      {
+        "file": "subsidio-mayores-52.json",
+        "slug": "subsidio-mayores-52",
+        "rulesVersion": 2,
+        "verifiedAt": "2026-10-05",
+        "ageVerifiedAtDays": 3,
+        "state": "ROLLING",
+        "previousCalls": 0,
+        "humanReview": "pending",
+        "flags": []
+      }
+    ],
+    "flagged": []
+  },
+  "level2Sample": {
+    "total": 401,
+    "sampled": 40,
+    "checks": [
+      {
+        "slug": "bdns-881959",
+        "accessState": "OPEN",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/881959",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-889321",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/889321",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-892553",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/892553",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-895535",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/895535",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-902503",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/902503",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-910624",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910624",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-920286",
+        "accessState": "CLOSED",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/920286",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bdns-929583",
+        "accessState": "UNKNOWN",
+        "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/929583",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260421-43",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260421-43",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260424-38",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260424-38",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260427-95",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260427-95",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260429-25",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260429-25",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260430-47",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260430-47",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "bocm-BOCM-20260505-50",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260505-50",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-ayudas-master-prevencion-riesgos-ejercito",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-13592",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-becas-maec-aecid-colegio-europa-2026",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16320",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-bocm_bocm-20260421-43",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260421-43",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-bocm_bocm-20260427-80",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260427-80",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-bocm_bocm-20260505-58",
+        "accessState": "CLOSED",
+        "url": "https://www.bocm.es/bocm-20260505-58",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2025-44313",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2025-44313",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-10825",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-10825",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-12340",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-12340",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-14182",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-14182",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-16237",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-16237",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-18666",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-18666",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-3011",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-3011",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-7115",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-7115",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-boe-b-2026-9182",
+        "accessState": "CLOSED",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-9182",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "la-ayuda-prestaciones-dependencia-saad",
+        "accessState": "ROLLING",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-21990",
+        "observed": "alive",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-15d7a23dd1",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-intermediacion-apoyo-adaptacion",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-2ace0833dc",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-estudiantes-discapacidad-25-26",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-3d6cdb069a",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/beca-excelencia-universidad-2025-2026-0",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-5a39a77a65",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-teatro-danza-2",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-6d7461da8f",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/becas-excelencia-academica-25-26",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-82604b9115",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-area-influencia-parque-guadarrama-7",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-97276a2e23",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/formacion-cap-permisos-c-d",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-b883952a49",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/participar-programa-navidad-compania",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "sede-cm-cdf8b71829",
+        "accessState": "OPEN",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-agentes-sociales-3",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": true
+      },
+      {
+        "slug": "sede-cm-e9d214fa7c",
+        "accessState": "CLOSED",
+        "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/razas-autoctonas-peligro-extincion-0",
+        "observed": "sede:plazo_finalizado",
+        "mismatch": false
+      },
+      {
+        "slug": "seed-0467c59b37",
+        "accessState": "UNKNOWN",
+        "url": "https://www.comunidad.madrid/educacion/ayudas-becas-subvenciones",
+        "observed": "http_404",
+        "mismatch": true
+      }
+    ]
+  },
+  "freshness": {
+    "totalRuns": 4,
+    "lastCiRun": {
+      "date": "2026-10-07",
+      "checked": 121,
+      "stale": [],
+      "fetchErrors": [],
+      "skippedCount": 45
+    },
+    "lastLocalRun": {
+      "date": "2026-10-06",
+      "checked": 40,
+      "stale": []
+    },
+    "lastLocalIsOlderThan48h": false,
+    "skippedByCiNotRecheckedIn48h": [],
+    "staleNow": []
+  },
+  "parameters": {
+    "report": [
+      {
+        "id": "IPREM_DIA",
+        "label": "IPREM diario",
+        "valueToday": 20,
+        "periodFrom": "2023-01-01",
+        "coversToday": true,
+        "citationSource": "boe-ley-31-2022-iprem",
+        "citationLocator": "DA 90.ª, a)"
+      },
+      {
+        "id": "IPREM_MENSUAL",
+        "label": "IPREM mensual",
+        "valueToday": 600,
+        "periodFrom": "2023-01-01",
+        "coversToday": true,
+        "citationSource": "boe-ley-31-2022-iprem",
+        "citationLocator": "DA 90.ª, b)"
+      },
+      {
+        "id": "IPREM_ANUAL_12P",
+        "label": "IPREM anual (12 pagas)",
+        "valueToday": 7200,
+        "periodFrom": "2023-01-01",
+        "coversToday": true,
+        "citationSource": "boe-ley-31-2022-iprem",
+        "citationLocator": "DA 90.ª, c)"
+      },
+      {
+        "id": "IPREM_ANUAL_14P",
+        "label": "IPREM anual con pagas extraordinarias (14 pagas)",
+        "valueToday": 8400,
+        "periodFrom": "2023-01-01",
+        "coversToday": true,
+        "citationSource": "boe-ley-31-2022-iprem",
+        "citationLocator": "DA 90.ª, d)"
+      },
+      {
+        "id": "SMI_DIA",
+        "label": "SMI diario",
+        "valueToday": 40.7,
+        "periodFrom": "2026-01-01",
+        "coversToday": true,
+        "citationSource": "boe-rd-126-2026-smi",
+        "citationLocator": "Art. 1"
+      },
+      {
+        "id": "SMI_MENSUAL",
+        "label": "SMI mensual (14 pagas)",
+        "valueToday": 1221,
+        "periodFrom": "2026-01-01",
+        "coversToday": true,
+        "citationSource": "boe-rd-126-2026-smi",
+        "citationLocator": "Art. 1"
+      },
+      {
+        "id": "SMI_ANUAL",
+        "label": "SMI anual",
+        "valueToday": 17094,
+        "periodFrom": "2026-01-01",
+        "coversToday": true,
+        "citationSource": "boe-rd-126-2026-smi",
+        "citationLocator": "Art. 3"
+      }
+    ],
+    "usedBy": {
+      "IPREM_ANUAL_12P": [
+        "ayto-emergencia-social",
+        "leganes-prestaciones-especial-necesidad",
+        "madrid-abono-transporte-65",
+        "madrid-ayudas-urgencia-social",
+        "mostoles-prestaciones-sociales"
+      ],
+      "IPREM_ANUAL_14P": [
+        "ayto-tarjeta-azul-discapacidad",
+        "bono-social-electrico",
+        "bono-social-termico",
+        "madrid-ayudas-alquiler-plan-estatal",
+        "madrid-bono-alquiler-joven"
+      ],
+      "SMI_MENSUAL": [
+        "madrid-ayuda-pago-unico-vg",
+        "subsidio-desempleo"
+      ]
+    },
+    "uncoveredByToday": []
+  },
+  "amounts": [
+    {
+      "slug": "anticipos-docentes-cm",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-resolucion-prestamos-docentes-2026",
+      "locator": "Resolución, base decimosexta.1",
+      "excerpt": "anticipos sobre mensualidades por el importe máximo de la retribución líquida mensual que perciban."
+    },
+    {
+      "slug": "asignacion-hijo-a-cargo",
+      "type": "range",
+      "minEur": 1000,
+      "maxEur": 8942.4,
+      "period": "annual",
+      "source": "boe-rd-241-2026-pensiones",
+      "locator": "Art. 24.1.a y b",
+      "excerpt": "La cuantía de la asignación económica establecida en el artículo 353.1 en el supuesto de hijo o hija menor de dieciocho años y de menor a ca"
+    },
+    {
+      "slug": "ayto-emergencia-social",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-20130704-64-ordenanza-presecon",
+      "locator": "Ordenanza, art. 8.1 (redacción de la modificación de 26/06/2013)",
+      "excerpt": "Las ayudas económicas de emergencia social son aquellas que están dirigidas a facilitar la superación de situaciones en las que concurra una"
+    },
+    {
+      "slug": "ayto-escuela-infantil",
+      "type": "fixed",
+      "minEur": 0,
+      "maxEur": 0,
+      "period": "monthly",
+      "source": "boam-20260324-1031-admision-eim-2627",
+      "locator": "Resolución, exposición de motivos (Ordenanza EIM modificada en 2019)",
+      "excerpt": "contempla la gratuidad de la cuota de escolaridad para el curso 2019/2020 y sucesivos"
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "type": "variable",
+      "period": "annual",
+      "source": "bocm-20231228-42-ibi",
+      "locator": "Art. 12.4 (cuadro de porcentajes por valor catastral y categoría)",
+      "excerpt": "Hasta 204.000 euros 90% 90% Superior a 204.000 euros y hasta 408.000 euros 50% 80% Superior a 408.000 euros 10% 30%"
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "type": "fixed",
+      "minEur": 3.7,
+      "maxEur": 3.7,
+      "period": "monthly",
+      "source": "bocm-20251231-2-precios-2026",
+      "locator": "Tabla «TÍTULO 30 DÍAS — PRECIOS APLICABLES CON DESCUENTO DESDE 1/1/2026», fila TARJETA AZUL",
+      "excerpt": "TARJETA AZUL 3,70 €"
+    },
+    {
+      "slug": "becas-generales-mefp-2026-2027",
+      "type": "variable",
+      "period": "per_course",
+      "source": "boe-b-2026-9261-becas-generales-2627",
+      "locator": "Extracto, «Cuarto. Componentes de las becas y cuantías», 1",
+      "excerpt": "a) Beca de matrícula para estudiantes universitarios y de enseñanzas artísticas superiores. La cuantía de la beca de matrícula cubrirá el im"
+    },
+    {
+      "slug": "bono-cultural-joven",
+      "type": "per_applicant",
+      "minEur": 400,
+      "maxEur": 400,
+      "period": "one_off",
+      "source": "boe-bono-cultural-2026",
+      "locator": "Extracto, apartado «Cuarto. Cuantía»",
+      "excerpt": "un importe de 400 euros por persona beneficiaria"
+    },
+    {
+      "slug": "bono-social-electrico",
+      "type": "variable",
+      "source": "boe-rdl-7-2026-bono-social",
+      "locator": "Art. 1.1",
+      "excerpt": "El descuento correspondiente al consumidor vulnerable será del 42,5 por ciento. En el caso del consumidor vulnerable severo, el descuento se"
+    },
+    {
+      "slug": "bono-social-termico",
+      "type": "variable",
+      "period": "annual",
+      "source": "bocm-20220629-29-bono-termico",
+      "locator": "Art. 4",
+      "excerpt": "La cuantía anual a asignar a cada uno de los beneficiarios del bono social térmico vendrá determinada según la categoría de consumidor vulne"
+    },
+    {
+      "slug": "cese-actividad-autonomos",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 339.1-2",
+      "excerpt": "se determinará aplicando a la base reguladora el 70 por ciento"
+    },
+    {
+      "slug": "cm-reintegro-accidentes-trabajo",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-resolucion-reintegro-accidentes-2021",
+      "locator": "Resolución — objeto",
+      "excerpt": "la solicitud de reintegro de gastos derivados de accidente de trabajo o enfermedad profesional"
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-ley-19-2021-imv",
+      "locator": "Art. 13.2.e",
+      "excerpt": "La cuantía del complemento de ayuda para la infancia contemplada en el artículo 11, apartado 6, será una cantidad mensual por cada menor de "
+    },
+    {
+      "slug": "descuento-transporte-familia-numerosa",
+      "type": "variable",
+      "source": "boe-rd-1621-2005-reglamento-fn",
+      "locator": "Art. 11.1",
+      "excerpt": "tendrán derecho a reducciones en las tarifas de transporte ferroviario de viajeros. Las reducciones serán del 20 y 50 por ciento, según se t"
+    },
+    {
+      "slug": "fuenlabrada-fuenlacarenet-2026",
+      "type": "variable",
+      "period": "monthly",
+      "source": "bocm-20260521-fuenlacarenet",
+      "locator": "Bases 2026, apartado cuarto (150/200/250 €/mes según número de menores, +25 € para familias monomarentales o monoparentales; máximo 12 mensualidades)",
+      "excerpt": "Familias con 3 (o más) menores de edad a cargo 250,00€/mes 3.000€ En caso de familias monomarentales o monoparentales tendrán una cuantía ad"
+    },
+    {
+      "slug": "fuenlabrada-prestaciones-sociales",
+      "type": "variable",
+      "period": "monthly",
+      "source": "bocm-20130920-fuenlabrada-ordenanza-prestaciones",
+      "locator": "Ordenanza, art. 7.1 (baremo por ingresos y tamaño de unidad familiar)",
+      "excerpt": "El importe de las distintas ayudas económicas, y dentro de las disponibilidades presupuestarias, estará en función de tres aspectos"
+    },
+    {
+      "slug": "imv",
+      "type": "range",
+      "minEur": 10,
+      "maxEur": 1613.92,
+      "period": "monthly",
+      "source": "boe-ley-19-2021-imv",
+      "locator": "Art. 13.1 y 13.2.b",
+      "excerpt": "siempre que la cuantía resultante sea igual o superior a 10 euros mensuales"
+    },
+    {
+      "slug": "leganes-prestaciones-especial-necesidad",
+      "type": "variable",
+      "period": "monthly",
+      "source": "bocm-20230328-leganes-ordenanza-prestaciones",
+      "locator": "Ordenanza, anexo III",
+      "excerpt": "Ayuda para el pago de alquiler o cuota hipotecaria 100 % de la cuantía máxima mensual 700 €/mes 3 meses"
+    },
+    {
+      "slug": "madrid-abono-transporte-65",
+      "type": "fixed",
+      "minEur": 3.7,
+      "maxEur": 3.7,
+      "period": "monthly",
+      "source": "bocm-20251231-2-precios-2026",
+      "locator": "Tabla «TÍTULO 30 DÍAS — PRECIOS APLICABLES CON DESCUENTO DESDE 1/1/2026», fila TARJETA AZUL",
+      "excerpt": "TARJETA AZUL 3,70 €"
+    },
+    {
+      "slug": "madrid-abono-transporte-infantil",
+      "type": "fixed",
+      "minEur": 0,
+      "maxEur": 0,
+      "period": "monthly",
+      "source": "bocm-20251231-2-precios-transporte-2026",
+      "locator": "Acuerdo, exposición — descuentos del RDL 17/2025, pág. 65",
+      "excerpt": "Gratuidad para abonos y títulos infantiles (niños nacidos entre 2012 y 2026)"
+    },
+    {
+      "slug": "madrid-abono-transporte-joven",
+      "type": "fixed",
+      "minEur": 10,
+      "maxEur": 10,
+      "period": "monthly",
+      "source": "bocm-20251231-2-precios-transporte-2026",
+      "locator": "Tabla «Abono transporte: precios aplicables con descuento desde 1/1/2026», fila Joven, columna Ordinario, pág. 66",
+      "excerpt": "10,00 € 8,00 € 8,00 € 5,00 € 6,00 € 3,00 € 3,70 € (*) 365 días de validez"
+    },
+    {
+      "slug": "madrid-accede-prestamo-libros",
+      "type": "variable",
+      "period": "annual",
+      "source": "bocm-20181214-decreto-168-accede",
+      "locator": "Decreto, art. 5.1",
+      "excerpt": "podrá disponer gratuitamente, en régimen de préstamo, de los libros de texto y material curricular equivalente al libro de texto, necesario "
+    },
+    {
+      "slug": "madrid-ayuda-pago-unico-vg",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-20221202-orden-2739-vg",
+      "locator": "Orden, normas reguladoras, art. 8.1",
+      "excerpt": "El importe de la ayuda será, con carácter general, equivalente al de seis meses de subsidio por desempleo."
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-rd-42-2022-plan-estatal",
+      "locator": "Art. 30",
+      "excerpt": "una ayuda de hasta el 50 % de la renta o precio mensual que deban satisfacer por el alquiler o cesión en uso de su vivienda o habitación hab"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+      "type": "variable",
+      "minEur": 3600,
+      "period": "one_off",
+      "source": "bocm-20231228-18-nacimiento-multiple",
+      "locator": "Art. 4",
+      "excerpt": "se abonará en un pago único de 1.800 euros por cada hijo nacido o adoptado"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-general",
+      "type": "variable",
+      "minEur": 500,
+      "period": "monthly",
+      "source": "bocm-20211227-25-nacimiento-general",
+      "locator": "Art. 4",
+      "excerpt": "el importe de la subvención será de 500 euros mensuales por hijo"
+    },
+    {
+      "slug": "madrid-ayudas-urgencia-social",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-20230801-18-cartera-ss",
+      "locator": "Anexo II, ficha 060502 — Descripción y duración",
+      "excerpt": "Conjunto de prestaciones económicas y/o en especie, de pago único, destinadas a facilitar la cobertura de necesidades originadas por circuns"
+    },
+    {
+      "slug": "madrid-beca-comedor-escolar",
+      "type": "variable",
+      "minEur": 295,
+      "period": "per_course",
+      "source": "bocm-20250508-28-comedor-modif",
+      "locator": "Art. único, punto Siete (nuevo art. 16.1); cuantías 2026-2027 en Orden 1696/2026, apdo. Cuarto: 979 €, 445 € y 295 €",
+      "excerpt": "de 295 euros para todo el curso, hasta una cuantía que cubra la totalidad del coste del servicio de comedor"
+    },
+    {
+      "slug": "madrid-becas-bachillerato-centros-privados",
+      "type": "range",
+      "minEur": 2000,
+      "maxEur": 3750,
+      "period": "per_course",
+      "source": "bocm-20260504-52-becas-bachillerato-2627",
+      "locator": "Extracto, «Quinto. Cuantía de la beca»",
+      "excerpt": "La cuantía total de la beca será de 3.750 euros anuales, a razón de 375 euros por cada uno de los meses comprendidos en el período de septie"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "type": "per_applicant",
+      "maxEur": 250,
+      "period": "monthly",
+      "source": "boe-rd-42-2022-bono-alquiler",
+      "locator": "Art. 11",
+      "excerpt": "Se concederá a las personas beneficiarias una ayuda de 250 euros mensuales con el límite del importe mensual de la renta arrendaticia o del "
+    },
+    {
+      "slug": "madrid-cheque-escuela-infantil",
+      "type": "range",
+      "minEur": 177,
+      "maxEur": 283,
+      "period": "monthly",
+      "source": "bocm-20250331-39-bases-infantil",
+      "locator": "Art. 16.4",
+      "excerpt": "de 177 euros mensuales hasta un límite máximo de 283 euros mensuales."
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "type": "range",
+      "minEur": 469.93,
+      "maxEur": 1221,
+      "period": "monthly",
+      "source": "boe-ley-6-2025-presupuestos-madrid",
+      "locator": "Art. 58",
+      "excerpt": "el importe de la Renta Mínima de Inserción se fija en las siguientes cuantías: a) Importe de la prestación mensual básica: 469,93 euros"
+    },
+    {
+      "slug": "mostoles-prestaciones-sociales",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-20220223-mostoles-ordenanza-prestaciones",
+      "locator": "Ordenanza, art. 3 (las cuantías de cada modalidad se fijan en la resolución e informe técnico)",
+      "excerpt": "Podrán ser beneficiarios/as de estas prestaciones las per- sonas o unidades familiares de convivencia en las que concurran factores de riesg"
+    },
+    {
+      "slug": "pension-incapacidad-permanente",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 196.2",
+      "excerpt": "La prestación económica correspondiente a la incapacidad permanente total consistirá en una pensión vitalicia, que podrá excepcionalmente se"
+    },
+    {
+      "slug": "pension-jubilacion-contributiva",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 210.1",
+      "excerpt": "La cuantía de la pensión de jubilación se determinará aplicando a la base reguladora, calculada conforme a lo dispuesto en el artículo prece"
+    },
+    {
+      "slug": "pension-no-contributiva",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-rd-241-2026-pensiones",
+      "locator": "Art. 21.1",
+      "excerpt": "la cuantía de las pensiones de jubilación e incapacidad, en su modalidad no contributiva, queda establecida en 8.803,20 euros anuales"
+    },
+    {
+      "slug": "pension-orfandad",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-decreto-3158-1966-orfandad",
+      "locator": "Decreto 3158/1966, art. 36.1",
+      "excerpt": "será para cada huérfano la equivalente al veinte por ciento de la base reguladora del causante"
+    },
+    {
+      "slug": "pension-viudedad",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-decreto-3158-1966-viudedad",
+      "locator": "Decreto 3158/1966, art. 31.1",
+      "excerpt": "respondiente base reguladora para la determinación de la cuantía de la pensión de viudedad será del 52 por ciento"
+    },
+    {
+      "slug": "prestacion-cuidado-menor-enfermedad-grave",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-rd-1148-2011-cancer",
+      "locator": "Art. 6.1",
+      "excerpt": "consistirá en un subsidio, de devengo diario, equivalente al 100 por 100 de la base reguladora establecida para la prestación por incapacida"
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-ley-39-2006-dependencia-pre-ley4",
+      "locator": "Art. 20",
+      "excerpt": "La cuantía de las prestaciones económicas reguladas en los artículos de esta Sección se acordará por el Consejo Territorial del Sistema para"
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-ley-39-2006-dependencia",
+      "locator": "Art. 20",
+      "excerpt": "La cuantía de las prestaciones económicas reguladas en los artículos de esta Sección se acordará por el Consejo Territorial del Sistema para"
+    },
+    {
+      "slug": "prestacion-desempleo-contributiva",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 270.2",
+      "excerpt": "el 70 por ciento durante los ciento ochenta primeros días y el 60 por ciento a partir del día ciento ochenta y uno"
+    },
+    {
+      "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+      "type": "per_applicant",
+      "minEur": 1000,
+      "maxEur": 1000,
+      "period": "one_off",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 358.1",
+      "excerpt": "consistirá en un pago único de 1.000 euros"
+    },
+    {
+      "slug": "prestacion-nacimiento-cuidado-menor",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 179.1",
+      "excerpt": "consistirá en un subsidio equivalente al 100 por ciento de la base reguladora correspondiente"
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "type": "variable",
+      "source": "boe-ley-39-2006-dependencia-pre-ley4",
+      "locator": "Art. 14.1",
+      "excerpt": "Las prestaciones de atención a la dependencia podrán tener la naturaleza de servicios y de prestaciones económicas"
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "type": "variable",
+      "source": "boe-ley-39-2006-dependencia",
+      "locator": "Art. 14.1",
+      "excerpt": "Las prestaciones de promoción de la autonomía personal y atención a las personas en situación de dependencia podrán tener naturaleza de serv"
+    },
+    {
+      "slug": "prestamos-personal-publico-cm",
+      "type": "variable",
+      "maxEur": 5000,
+      "period": "one_off",
+      "source": "bocm-convenio-unico-laboral-2025-2028",
+      "locator": "Convenio, art. 139.2",
+      "excerpt": "cuantía máxima de 5.000 euros, y el plazo máximo de amortización será de treinta y seis mensualidades consecutivas"
+    },
+    {
+      "slug": "sermas-ortoprotesica-desplazamiento",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-decreto-84-2021-ortoprotesica",
+      "locator": "Decreto, art. 1",
+      "excerpt": "regular los procedimientos de obtención de la prestación ortoprotési- ca en el ámbito de la Comunidad de Madrid, así como de las ayudas por "
+    },
+    {
+      "slug": "sermas-reintegro-gastos-sanitarios",
+      "type": "variable",
+      "period": "one_off",
+      "source": "bocm-reintegro-gastos-sanitarios-2010",
+      "locator": "Resolución 21/2010 — objeto",
+      "excerpt": "procedimiento denominado \"Solicitud de reintegro de gastos\"."
+    },
+    {
+      "slug": "subsidio-desempleo",
+      "type": "variable",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 278",
+      "excerpt": "el 95 por ciento durante los ciento ochenta primeros días, el 90 por ciento desde el día ciento ochenta y uno al día trescientos sesenta, y "
+    },
+    {
+      "slug": "subsidio-mayores-52",
+      "type": "per_applicant",
+      "period": "monthly",
+      "source": "boe-lgss-prestacion-familia",
+      "locator": "Art. 280.4",
+      "excerpt": "igual al 80 por ciento del indicador público de rentas de efectos múltiples mensual vigente en cada momento"
+    }
+  ],
+  "asymmetry": [
+    {
+      "slug": "anticipos-docentes-cm",
+      "reqId": "funcionario-docente-activo",
+      "label": "Ser funcionario, de carrera o en prácticas, de cuerpos docentes no universitarios en situación de servicio activo (no vale si tu puesto está en la relación de puestos de la Administración educativa)",
+      "fields": [
+        "employmentStatus"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(employmentStatus)"
+    },
+    {
+      "slug": "ayto-emergencia-social",
+      "reqId": "empadronado-madrid",
+      "label": "Estar empadronado/a en el municipio de Madrid (en el distrito al que se dirija la solicitud). La ordenanza solo prevé excepciones justificadas en informe social municipal",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "ayto-emergencia-social",
+      "reqId": "mayor-edad",
+      "label": "Ser mayor de edad. Los menores solo acceden si están emancipados, circunstancia que no podemos comprobar aquí",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "ayto-escuela-infantil",
+      "reqId": "hijo-primer-ciclo",
+      "label": "Tener a cargo una niña o niño en edad de primer ciclo de Educación Infantil (nacidos en 2024, 2025 o 2026; los de 2023 solo con permanencia acreditada, y los «no nacidos» con parto previsto antes del 01/01/2027 — ver ⚠)",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "reqId": "empadronado-madrid",
+      "label": "Estar empadronado en el municipio de Madrid — la bonificación se aplica de oficio en el recibo del IBI del Ayuntamiento de Madrid",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "reqId": "titulo-familia-numerosa",
+      "label": "Ser titular de familia numerosa — el título debe estar vigente en el momento del devengo del impuesto (1 de enero del ejercicio del recibo)",
+      "fields": [
+        "familyType"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(familyType)"
+    },
+    {
+      "slug": "ayto-ibi-familia-numerosa",
+      "reqId": "vivienda-habitual-propia",
+      "label": "Que tu vivienda habitual no sea de alquiler: la bonificación va sobre el recibo del IBI del sujeto pasivo (propietario, usufructuario o titular de un derecho real) — si vives de alquiler, ese recibo no es tuyo",
+      "fields": [
+        "housingStatus"
+      ],
+      "ops": [
+        "not_in"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "not_in(housingStatus)"
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "reqId": "empadronado-municipio-madrid",
+      "label": "Estar empadronado/a en el municipio de Madrid (la norma habla de «residentes» y el Ayuntamiento lo comprueba en el padrón; la Tarjeta Azul es municipal: no basta residir en otro municipio de la Comunidad de Madrid)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "reqId": "discapacidad-min-33",
+      "label": "Tener reconocida una discapacidad (en cualquiera de sus formas) con un grado igual o superior al 33 %, acreditado con el certificado emitido por la Comisión Técnica Calificadora u otro organismo competente",
+      "fields": [
+        "disability"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(disability)"
+    },
+    {
+      "slug": "ayto-tarjeta-azul-discapacidad",
+      "reqId": "renta-max-3-iprem",
+      "label": "Ingresos totales individuales de 3 × IPREM o menos: 25.200 €/año en 2026 (la tabla oficial de la Resolución computa el tope anual con el IPREM de 14 pagas). Solo cuenta tu renta individual — esta categoría no admite la escala por cargas familiares",
+      "fields": [
+        "incomeAnnual"
+      ],
+      "ops": [
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lte(incomeAnnual)"
+    },
+    {
+      "slug": "bono-cultural-joven",
+      "reqId": "nacido-en-2008",
+      "label": "Haber nacido en 2008 (cumplir 18 años durante 2026)",
+      "fields": [
+        "birthYear"
+      ],
+      "ops": [
+        "between"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "between(birthYear)"
+    },
+    {
+      "slug": "bono-social-termico",
+      "reqId": "suministro-cm",
+      "label": "Tener el punto de suministro de electricidad de tu vivienda habitual en la Comunidad de Madrid (proxy: empadronamiento en un municipio de la CM)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "cm-reintegro-accidentes-trabajo",
+      "reqId": "empleado-publico-cm",
+      "label": "Ser empleado público de la Comunidad de Madrid incluido en el Régimen General de la Seguridad Social (la CM actúa como empresa colaboradora de la Seguridad Social)",
+      "fields": [
+        "employmentStatus"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(employmentStatus)"
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "reqId": "menor-en-unidad",
+      "label": "Al menos un menor de 18 años miembro de la unidad de convivencia (en la fecha de la solicitud)",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "reqId": "residencia-espana-1a",
+      "label": "Residir legal y efectivamente en España, de forma continuada, durante al menos el año anterior a la solicitud",
+      "fields": [
+        "residenceMonths"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(residenceMonths)"
+    },
+    {
+      "slug": "complemento-ayuda-infancia",
+      "reqId": "edad-titular",
+      "label": "La persona titular debe tener al menos 23 años, o ser mayor de edad (o menor emancipada) con hijos o menores a cargo",
+      "fields": [
+        "age",
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "gte",
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age) + gte(age) + count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "descuento-transporte-familia-numerosa",
+      "reqId": "titulo-familia-numerosa",
+      "label": "Ser titular de familia numerosa",
+      "fields": [
+        "familyType"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(familyType)"
+    },
+    {
+      "slug": "fuenlabrada-fuenlacarenet-2026",
+      "reqId": "empadronado-fuenlabrada",
+      "label": "Estar empadronado/a en el municipio de Fuenlabrada con anterioridad a la aprobación de las bases y residir efectivamente durante el periodo de participación",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "fuenlabrada-fuenlacarenet-2026",
+      "reqId": "menores-a-cargo",
+      "label": "Formar parte de una unidad familiar con menores de edad a cargo que se encuentren en situación de riesgo leve, moderado o grave valorada por los Servicios Sociales municipales",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "fuenlabrada-prestaciones-sociales",
+      "reqId": "mayor-edad",
+      "label": "Ser mayor de edad (para comedor de mayores se exige ser mayor de sesenta años o pensionista; para habitabilidad de la vivienda habitual de mayores, sesenta y cinco años o sesenta con limitaciones)",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "fuenlabrada-prestaciones-sociales",
+      "reqId": "empadronado-fuenlabrada",
+      "label": "Estar empadronado/a en el municipio de Fuenlabrada. Se exceptúa a las prestaciones dirigidas a personas transeúntes, a las mujeres que han sufrido o están sufriendo violencia de género en el último año y a los supuestos de los arts. 10.3 y 11.1 de la L.O. 1/1996",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "imv",
+      "reqId": "edad-minima",
+      "label": "Tener al menos 23 años, o ser mayor de edad con hijos o menores a cargo",
+      "fields": [
+        "age",
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "gte",
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age) + gte(age) + count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "leganes-prestaciones-especial-necesidad",
+      "reqId": "empadronado-leganes-6m",
+      "label": "Estar empadronado/a en Leganés de forma ininterrumpida al menos 6 meses antes de la solicitud. Se exceptúa a las víctimas de violencia de género o intrafamiliar, a los supuestos de protección del menor (arts. 10.3 y 11.1 de la Ley 1/1996) y a las prestaciones para personas transeúntes",
+      "fields": [
+        "territory",
+        "residenceMonths"
+      ],
+      "ops": [
+        "within_territory",
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory) + gte(residenceMonths)"
+    },
+    {
+      "slug": "madrid-abono-transporte-65",
+      "reqId": "edad-65",
+      "label": "Tener 65 años cumplidos",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "madrid-abono-transporte-65",
+      "reqId": "empadronado-municipio-madrid",
+      "label": "Estar empadronado/a en el municipio de Madrid (la Tarjeta Azul es municipal: no basta residir en otro municipio de la Comunidad de Madrid)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-abono-transporte-infantil",
+      "reqId": "menor-0-14-a-cargo",
+      "label": "Tener a tu cargo al menos un menor de 15 años: los menores de 7 viajan gratis (de 4 a 6 con la tarjeta infantil gratuita; los de menos de 4, sin título) y los de 7 a 14 tienen el abono 7-14, también gratuito en 2026",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "madrid-abono-transporte-joven",
+      "reqId": "edad-min-15",
+      "label": "Tener al menos 15 años (el abono joven empieza a los 15; de 7 a 14 hay un título gratuito distinto)",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "madrid-abono-transporte-joven",
+      "reqId": "edad-max-26",
+      "label": "Ser menor de 26 años (el abono joven se puede usar hasta el día en que cumples 26)",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lt(age)"
+    },
+    {
+      "slug": "madrid-ayuda-pago-unico-vg",
+      "reqId": "residente-cm",
+      "label": "Ser residente en cualquier municipio de la Comunidad de Madrid",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "reqId": "mayoria-edad",
+      "label": "Ser mayor de edad en la fecha de la solicitud",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "reqId": "vivienda-en-madrid",
+      "label": "La vivienda alquilada (tu residencia habitual) debe estar en la Comunidad de Madrid, que gestiona estas ayudas con fondos estatales",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-ayudas-alquiler-plan-estatal",
+      "reqId": "ingresos-max-5iprem",
+      "label": "Los ingresos anuales de toda la unidad de convivencia deben ser iguales o inferiores a 3 veces el IPREM (25.200 €/año en 2026); el tope sube a 4×IPREM en familia numerosa general, unidades con discapacidad o víctimas de terrorismo, y a 5×IPREM (42.000 €/año) en familia numerosa especial o discapacidad ≥33 % — aquí comprobamos solo que tus propios ingresos no superan el tope más alto",
+      "fields": [
+        "incomeAnnual"
+      ],
+      "ops": [
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lte(incomeAnnual)"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+      "reqId": "empadronado-madrid",
+      "label": "Estar empadronado en la Comunidad de Madrid",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-adopcion-multiple",
+      "reqId": "dos-o-mas-personas-cargo",
+      "label": "Tener al menos dos hijas o hijos a cargo",
+      "fields": [
+        "dependents"
+      ],
+      "ops": [
+        "count_where_gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents)"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-general",
+      "reqId": "empadronado-municipio-cm",
+      "label": "Residir y estar empadronado/a en un municipio de la Comunidad de Madrid en el momento de la solicitud",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-ayudas-nacimiento-general",
+      "reqId": "edad-max-30",
+      "label": "Tener 30 años o menos en la fecha de presentación de la solicitud",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lte(age)"
+    },
+    {
+      "slug": "madrid-ayudas-urgencia-social",
+      "reqId": "ambito-territorial-cm",
+      "label": "La prestación cubre el territorio de la Comunidad de Madrid: debes vivir (o encontrarte) en un municipio de la CM",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-ayudas-urgencia-social",
+      "reqId": "fuera-madrid-capital",
+      "label": "Esta prestación autonómica no cubre la ciudad de Madrid, que cuenta con un dispositivo propio de emergencia social (SAMUR Social): allí la ayuda equivalente se pide a los servicios sociales del Ayuntamiento",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-beca-comedor-escolar",
+      "reqId": "hijo-en-edad-escolar",
+      "label": "Tener al menos un hijo o hija de 18 años o menos a tu cargo (la beca es para alumnado de Infantil, Primaria o ESO)",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lte(dependents.*.age)"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "reqId": "mayoria-edad",
+      "label": "Ser mayor de edad en la fecha de la solicitud",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "reqId": "edad-max-35",
+      "label": "Tener 35 años o menos en la fecha de la solicitud",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lte(age)"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "reqId": "vivienda-en-madrid",
+      "label": "Vivir en la Comunidad de Madrid (la vivienda alquilada debe ser tu residencia habitual en la región)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-bono-alquiler-joven",
+      "reqId": "ingresos-3iprem",
+      "label": "Rentas anuales iguales o inferiores a 3 veces el IPREM (25.200 € en 2026); en alquiler de vivienda cuentan las de toda la unidad de convivencia",
+      "fields": [
+        "incomeAnnual"
+      ],
+      "ops": [
+        "lte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "lte(incomeAnnual)"
+    },
+    {
+      "slug": "madrid-cheque-escuela-infantil",
+      "reqId": "hijo-menor-3",
+      "label": "Tener un hijo o hija menor de 3 años (el primer ciclo es de 0 a 3 años; la convocatoria 2026-2027 exige nacido o previsto antes del 1 de enero de 2027 — ver ⚠)",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "reqId": "residencia-permanente-cm",
+      "label": "Residir de forma permanente en la Comunidad de Madrid y estar empadronado/a en uno de sus municipios",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "reqId": "residencia-un-ano",
+      "label": "Llevar residiendo de forma efectiva e ininterrumpida en la Comunidad de Madrid al menos el año inmediatamente anterior a la solicitud (proxy: antigüedad en el empadronamiento)",
+      "fields": [
+        "residenceMonths"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(residenceMonths)"
+    },
+    {
+      "slug": "madrid-renta-minima-insercion",
+      "reqId": "edad-25-65",
+      "label": "Ser mayor de 25 años y menor de 65 — salvo si tienes menores o personas con discapacidad a cargo (válido a cualquier edad adulta) u otras vías de 18–25 y +65 años (ver ⚠)",
+      "fields": [
+        "age",
+        "dependents",
+        "dependents.*.age",
+        "dependents.*.disability"
+      ],
+      "ops": [
+        "gte",
+        "lt",
+        "gt",
+        "count_where_gte",
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age) + lt(age) + gte(age) + lt(age) + gt(age) + count_where_gte(dependents) + lt(dependents.*.age) + eq(dependents.*.disability)"
+    },
+    {
+      "slug": "madrid-titulo-familia-numerosa",
+      "reqId": "residencia-cm",
+      "label": "Residir en la Comunidad de Madrid — la CM solo expide el título a quien tiene aquí su residencia",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "madrid-titulo-familia-numerosa",
+      "reqId": "hijos-minimo",
+      "label": "Tener al menos 2 hijos o hijas a tu cargo (en el caso general la ley pide 3 o más; con solo 2 hace falta un supuesto equiparado — discapacidad, viudedad, orfandad…, ver avisos)",
+      "fields": [
+        "dependents"
+      ],
+      "ops": [
+        "count_where_gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents)"
+    },
+    {
+      "slug": "madrid-titulo-familia-numerosa",
+      "reqId": "edad-hijos",
+      "label": "Que al menos 2 de tus hijos estén en edad de computar: menores de 21 años —o hasta 25 incluidos si cursan estudios—; los hijos con discapacidad o incapacidad para trabajar computan a cualquier edad",
+      "fields": [
+        "dependents",
+        "dependents.*.age",
+        "dependents.*.disability"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lte",
+        "in"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lte(dependents.*.age) + in(dependents.*.disability)"
+    },
+    {
+      "slug": "mostoles-prestaciones-sociales",
+      "reqId": "mayor-edad",
+      "label": "Ser mayor de dieciocho años o menor emancipado; la condición de menor emancipado no podemos comprobarla aquí",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "mostoles-prestaciones-sociales",
+      "reqId": "empadronado-mostoles",
+      "label": "Estar empadronado/a en el municipio de Móstoles y residir en él de forma efectiva. Se exceptúa a víctimas de violencia doméstica o de género, a los supuestos de la Ley 1/1996 de Protección Jurídica del Menor y a las prestaciones dirigidas a personas en situación de calle",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "pension-jubilacion-contributiva",
+      "reqId": "edad-minima-52",
+      "label": "Tener 52 años cumplidos: por debajo la ley no permite jubilarse ni siquiera por la vía reducida por discapacidad, y la ordinaria y las anticipadas exigen bastante más; solo colectivos con coeficientes por penosidad (minería y similares) pueden rebajarla aún más — ver ⚠. Ten en cuenta que la edad real que te corresponde suele ser bastante mayor: en 2026 la ordinaria son 66 años y 10 meses, o 65 si acreditas 38 años y 3 meses cotizados (en el Régimen General; los regímenes especiales mineros/mar tienen coeficientes propios que aquí no evaluamos)",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    },
+    {
+      "slug": "pension-no-contributiva",
+      "reqId": "edad-65-o-discapacidad",
+      "label": "Tener 65 años o más (modalidad de jubilación), o entre 18 y 64 años con discapacidad o enfermedad crónica reconocida (modalidad de incapacidad — la PNC exige el 65 %; nuestra pregunta solo distingue a partir del 33 %, el grado real se acredita con certificado, ver ⚠)",
+      "fields": [
+        "age",
+        "disability"
+      ],
+      "ops": [
+        "gte",
+        "lt",
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age) + gte(age) + lt(age) + eq(disability)"
+    },
+    {
+      "slug": "prestacion-cuidado-menor-enfermedad-grave",
+      "reqId": "persona-a-cargo",
+      "label": "Tener a tu cargo un hijo, hija o menor en guarda con fines de adopción o acogimiento permanente, menor de 18 años (la prestación puede mantenerse hasta los 23 o 26 años si la enfermedad se diagnosticó siendo menor — ver ⚠)",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age) + count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "prestacion-cuidado-menor-enfermedad-grave",
+      "reqId": "trabajadora-afiliada-alta",
+      "label": "Trabajar (por cuenta ajena o por cuenta propia), estando afiliada/o y en alta en un régimen de la Seguridad Social",
+      "fields": [
+        "employmentStatus"
+      ],
+      "ops": [
+        "in"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "in(employmentStatus)"
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "reqId": "empadronado-cm",
+      "label": "Residir y estar empadronado en un municipio de la Comunidad de Madrid en la fecha en que se presenta la solicitud (la persona dependiente; en otra comunidad autónoma la prestación equivalente se pide ante su administración)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "prestacion-cuidador-no-profesional",
+      "reqId": "empadronado-cm",
+      "label": "Residir y estar empadronado en un municipio de la Comunidad de Madrid en la fecha en que se presenta la solicitud (la persona dependiente; en otra comunidad autónoma la prestación equivalente se pide ante su administración)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+      "reqId": "colectivo-familiar",
+      "label": "Pertenecer a una de estas situaciones: familia numerosa, monoparental, o madre/padre con discapacidad",
+      "fields": [
+        "familyType",
+        "disability"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(familyType) + eq(familyType) + eq(disability)"
+    },
+    {
+      "slug": "prestacion-nacimiento-cuidado-menor",
+      "reqId": "menor-a-cargo",
+      "label": "Tener a tu cargo un hijo o una persona menor: recién nacido/a, adoptado/a, en guarda con fines de adopción o en acogimiento familiar",
+      "fields": [
+        "dependents",
+        "dependents.*.age"
+      ],
+      "ops": [
+        "count_where_gte",
+        "lt"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "count_where_gte(dependents) + lt(dependents.*.age)"
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "reqId": "empadronado-cm",
+      "label": "Residir y estar empadronado en un municipio de la Comunidad de Madrid en la fecha en que presentas la solicitud (en otra comunidad autónoma el trámite es el mismo, pero ante su administración)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "prestaciones-dependencia-saad",
+      "reqId": "empadronado-cm",
+      "label": "Residir y estar empadronado en un municipio de la Comunidad de Madrid en la fecha en que presentas la solicitud (en otra comunidad autónoma el trámite es el mismo, pero ante su administración)",
+      "fields": [
+        "territory"
+      ],
+      "ops": [
+        "within_territory"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "within_territory(territory)"
+    },
+    {
+      "slug": "prestamos-personal-publico-cm",
+      "reqId": "personal-laboral-cm",
+      "label": "Trabajar al servicio de la Administración de la Comunidad de Madrid (el Convenio regula este derecho para el personal laboral fijo; el funcionario dispone de acuerdos sectoriales propios)",
+      "fields": [
+        "employmentStatus"
+      ],
+      "ops": [
+        "eq"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "eq(employmentStatus)"
+    },
+    {
+      "slug": "subsidio-mayores-52",
+      "reqId": "edad-52",
+      "label": "Tener 52 años cumplidos en el momento del hecho que da lugar al subsidio",
+      "fields": [
+        "age"
+      ],
+      "ops": [
+        "gte"
+      ],
+      "fieldsNotAsked": [],
+      "dependsOn": "gte(age)"
+    }
+  ]
+}

@@ -17,18 +17,20 @@ este. En reglas de rigor manda siempre AGENTS.md §4.
 | Frescura | El CI corre a diario. La tarea local llevaba bloqueada desde el 06/10 por ficheros sin commitear (corregido el 08/10) | Medio |
 | QA | 45/45 e2e en 9 de 10 proyectos (Firefox no arranca en este PC). Falta el checklist manual en dispositivos reales | Medio |
 
-**Ruta crítica:** (1) muestreo de Daniel ⇒ `humanReview` ⇒ release estricta;
+**Ruta crítica (reordenada por Daniel el 08/10):** (0) **fiabilidad primero**
+(F10-FIAB: «¿puede alguien en Madrid fiarse de lo que dice la web hoy?»);
+(1) muestreo de Daniel ⇒ `humanReview` ⇒ release estricta;
 (2) piloto ⇒ `piloto.json` ⇒ memoria. Todo lo demás es secundario.
 
 ## 1. Calendario
 
 | Día | Agente | Daniel |
 |---|---|---|
-| **08/10 (mié)** | F10-DOC (este plan). F10-REV-1: script para aprobar una ola desde su hoja. F10-IMP-1: mejorar el guion del piloto | **F8-3:** lista de 5–10 personas o entidades y envío del mensaje de difusión. **Empezar el muestreo** (lote-1 y olas 1–3) |
-| **09/10 (jue)** | F10-REG: los 7 sospechosos de la tria, en ciclo autor ⇒ verificador. F10-FRONT (Must) | Muestreo de las olas 4–10 (~20 min por ola). Cerrar las citas del piloto |
-| **10/10 (vie)** | Aplicar los muestreos (F10-REV-2). Ensayo de la release estricta en local (F10-REL-1) | Sesiones del piloto (F8-4) |
-| **11/10 (sáb)** | F10-QA. F10-MEM-1: memoria con todo menos el piloto | Sesiones del piloto. F5-M (móvil real) |
-| **12/10 (dom)** | Consolidar los datos del piloto que haya (F8-5) y corregir lo detectado (F8-6) | Sesiones del piloto |
+| **08/10 (mié)** | **F10-FIAB hecho**: auditoría (7 puntos) + correcciones + `review:apply` + ensayo estricto → `evidence/2026-10-08-F10/fiabilidad.md` (veredicto: *fiable*) | — |
+| **09/10 (jue)** | F10-FRONT (Must). Correr `npm run freshness:local` (la tarea diaria se saltó el 08/10 por árbol sucio) | **Muestreo**: lote-1 + olas 1–3 + **ola 11** (re-muestreo de las reglas tocadas en F10-REG) |
+| **10/10 (vie)** | F10-REV-2: aplicar hojas con `npm run review:apply`, un commit por ola | Muestreo olas 4–10 (~20 min por ola) |
+| **11/10 (sáb)** | F10-QA sobre el build estricto. F10-MEM-1: memoria con todo menos el piloto. F10-IMP-1/2: kit del piloto | Lista de difusión F8-3 |
+| **12/10 (dom)** | Correcciones del piloto según lleguen (F8-6) | Sesiones del piloto (F8-4) |
 | **13/10 (lun)** | Cierre de F8. F10-MEM-2: memoria final y PDF. Veracidad | Última sesión (si falta). Leer la memoria |
 | **14/10 (mar)** | **F10-REL-2: deploy de la release estricta** + comprobaciones posteriores + paquete completo + recibo de fase | Aprobar la memoria (lectura final) |
 | **15/10 (mié)** | — (los agentes no presentan nada) | **P-1: firmar y presentar en la sede.** Descargar el justificante |

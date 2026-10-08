@@ -1,6 +1,6 @@
 # Cola de tareas
 
-**Producto: Requisito a Requisito (ADR-029). Categoría: Global Tech Impact (ADR-028).** **Fase activa: F10 — cierre de la candidatura (`phases/F10-cierre-candidatura.md`, 08/10).** Ruta crítica: (1) muestreo de Daniel ⇒ `humanReview` ⇒ release `--strict` el 14/10 (ADR-050); (2) piloto ⇒ `piloto.json` ⇒ memoria. El panel NAN está cerrado (ADR-050).
+**Producto: Requisito a Requisito (ADR-029). Categoría: Global Tech Impact (ADR-028).** **Fase activa: F10 — cierre de la candidatura (`phases/F10-cierre-candidatura.md`, 08/10).** Orden actualizado (Daniel, 08/10): **primero la fiabilidad** (F10-FIAB), después el muestreo ⇒ release `--strict` el 14/10 (ADR-050) y, por último, el piloto ⇒ `piloto.json` ⇒ memoria. El panel NAN está cerrado (ADR-050).
 Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit · evidencia)` · `BLOQUEADO: motivo — quién`.
 
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
@@ -87,20 +87,20 @@ Detalle en `phases/`. Estados: `TODO` · `EN CURSO (fecha)` · `HECHO (commit ·
 | ID | Tarea | Resp. | Fecha obj. | Depende | Estado | Evidencia / notas |
 |---|---|---|---|---|---|---|
 | F10-DOC | Plan de cierre, ADR-050/051, calibración v2 commiteada, memoria, checklist y cola actualizados; la tarea local de frescura ya no se bloquea por ficheros sin seguimiento | agente | 08/10 | — | HECHO (08/10) | handoffs/2026-10-08-F10-plan.md |
-| F8-3 | Lista de 5–10 personas o entidades y envío del mensaje de difusión | **Daniel** | 09/10 | — | TODO | **Ruta crítica** |
-| F10-MUESTREO | Marcar las hojas `muestreo-ola-1..10.md` + `lote-1.md` (2 por ola, ~20 min por ola) | **Daniel** | 09/10 | — | TODO | **Ruta crítica**: sin esto, la release estricta sale vacía |
-| F10-REV-1 | `npm run review:apply -- <hoja>` con tests (vacía, KO, 2 OK, idempotencia, regla ajena) | agente | 09/10 | — | TODO | P0 |
-| F10-REV-2 | Aplicar las hojas marcadas, un commit por ola | agente | 10/10 | F10-MUESTREO, F10-REV-1 | TODO | P0 |
-| F10-REV-3 | Una sola hoja válida para la ola 9 (F3 frente a F9) | agente | 08/10 | — | TODO | P1 |
-| F10-REG-1..7 | Los 7 sospechosos de la tria, en ciclo autor ⇒ verificador | agente | 09/10 | — | TODO | P1. Antes de REV-2 o con re-muestreo |
-| F10-IMP-1 | Kit del piloto: tarea medida, contraste con la web oficial y escala de comprensión | agente | 09/10 | — | TODO | P0 |
-| F10-IMP-2 | Plantilla de `piloto.json` y script de agregados | agente | 10/10 | — | TODO | P0 |
+| F10-FIAB-A | Auditoría de fiabilidad (7 puntos, solo lectura y medida) → `evidence/2026-10-08-F10/fiabilidad.md` | agente | 08/10 | — | HECHO (08/10 · 4dcaac4…d7b678b) | **Hallazgo bloqueante corregido: /comprobar no cargaba el bundle en producción (basePath)**; goldens 47/47 local+deployed, exhaustivo 175.451 perfiles 0 violaciones, link-check 155/0, nivel-2 muestra 40/40 |
+| F10-FIAB-B | Correcciones por gravedad: bloqueante basePath, F10-FRONT-1 (cita en tarjeta no_cumple), F10-REG-1..7 (ciclo autor⇒verificador⇒merge, ola 11 re-muestreo), F10-INF-2, estimación de reapertura en pasado, `--strict` ya no acepta panelReview | agente | 08/10 | — | HECHO (08/10 · commits 4dcaac4, a26c8db, d38463c, 28cef77, 3df9a02) | verificador independiente OK ×5 (`verificacion-ola-11.md`); tests de frontera + regresión (goldens dentro de npm test) |
+| F10-FIAB-C | F10-REV-1 `review:apply` + F10-REV-3 (hoja única ola 9) + cabeceras de muestreo | agente | 08/10 | — | HECHO (08/10) | `scripts/review-apply.ts` + 8 tests (vacía/KO/2OK/idempotente/ajena); duplicada de F9 retirada; ola 11 = re-muestreo de las 7 tocadas |
+| F10-FIAB-D | Ensayo release estricta en scratch | agente | 08/10 | — | HECHO (08/10) | `--strict` real: **0 incluidas / 50 excluidas** (faltan las hojas de Daniel); con aprobaciones simuladas: 52 incluidas y web+e2e+axe verdes |
+| F10-MUESTREO | Marcar las hojas `muestreo-ola-1..10.md` + `lote-1.md` + `muestreo-ola-11.md` (re-muestreo F10-REG; 2 por ola, ~20 min por ola) | **Daniel** | 10/10 | F10-FIAB | TODO | **Ruta crítica**: sin esto, la release estricta sale vacía (medido: 0 reglas entrarían hoy) |
+| F10-REV-2 | Aplicar las hojas marcadas con `review:apply`, un commit por ola | agente | 11/10 | F10-MUESTREO, F10-FIAB-C | TODO | P0 |
+| F8-3 | Lista de 5–10 personas o entidades y envío del mensaje de difusión — **después de la fiabilidad** (decisión de Daniel) | **Daniel** | 12/10 | F10-FIAB | TODO | Piloto tras fiabilidad; el límite del piloto sigue siendo 13/10 |
+| F10-IMP-1 | Kit del piloto: tarea medida, contraste con la web oficial y escala de comprensión — después de la fiabilidad | agente | 10/10 | F10-FIAB | TODO | P0 |
 | F10-FRONT-1..5 | ClaimIt «por qué no» (verificar), banner D-10, correcciones del piloto, Should G/F, umbral en claro | agente | 12/10 | — | TODO | P1/P2 |
 | F10-DEV-1 | `npm run memoria:cifras` (cifras desde el repo) | agente | 11/10 | — | TODO | P1 |
 | F10-DEV-2 | Script versionado de `memoria.pdf` | agente | 11/10 | — | TODO | P1 |
 | F10-INF-1 | Comprobar que la tarea local corre el 09/10 (log) | agente | 09/10 | F10-DOC | TODO | |
-| F10-INF-2 | URL vigente de `cm-pensiones-no-contributivas` (404 en el CI del 06/10) | agente | 10/10 | — | TODO | |
-| F10-REL-1 | Ensayo en local de la release `--strict` (recuento ≥ 20 programas) | agente | 10/10 | F10-REV-2 | TODO | Si el 12/10 hay < 20 ⇒ D-12 |
+| F10-INF-2 | URL vigente de `cm-pensiones-no-contributivas` (404 en el CI del 06/10) | agente | 10/10 | — | HECHO (08/10 · 3df9a02) | URL trasladada a `/asuntos-sociales/pensiones-no-contributivas` (301→200, re-snapshot); el 404 de emergencia-social era artefacto del WAF de CI |
+| F10-REL-1 | Ensayo en local de la release `--strict` (recuento ≥ 20 programas) | agente | 10/10 | F10-REV-2 | HECHO parcial (08/10, F10-FIAB-D) | El mecanismo strict funciona (52 con simulación); el recuento real ≥20 queda pendiente del muestreo de Daniel — si el 12/10 hay < 20 ⇒ D-12 |
 | F10-QA-1..5 | validate:full; e2e, axe y privacidad sobre el build estricto; Firefox en CI; F5-M | agente + **Daniel** | 13/10 | F10-REL-1 | TODO | |
 | F10-MEM-1 | Memoria sin el piloto, alineada con el art. 16.2 (50/30/20) | agente | 11/10 | F10-DEV-1 | TODO | |
 | F10-MEM-2 | Memoria final con el piloto + PDF + veracidad | agente | 13/10 | F8-5 | TODO | |
