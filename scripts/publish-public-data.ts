@@ -5,6 +5,7 @@
  *  - public/datos/elegibilidad/questions.json   (catálogo de preguntas)
  *  - public/datos/elegibilidad/manifest.json    (digest + fecha + licencia)
  *  - public/datos/elegibilidad/territorio-madrid.json (municipios CM)
+ *  - public/datos/elegibilidad/nivel-1.json     (programas con regla propia)
  *  - public/datos/elegibilidad/nivel-2.json     (catálogo donante, campos mínimos)
  * Todo regenerable; fail-closed si falta el bundle.
  */
@@ -18,6 +19,8 @@ import {
 	writeFileSync,
 } from "node:fs";
 import { join } from "node:path";
+import { aidTitle } from "../src/lib/aid-titles";
+import { deadlineState } from "../src/lib/eligibility-engine/deadline";
 
 const root = process.cwd();
 const OUT = join(root, "public/datos/elegibilidad");
@@ -121,17 +124,41 @@ for (const f of readdirSync(benefitsDir).filter((x) => x.endsWith(".json"))) {
 // Ola-10: un programa con regla propia no se repite como ficha de nivel 2 —
 // la deduplicación es por URL oficial (canal de la regla o de sus fuentes).
 const rulesDir = join(root, "data/eligibility/rules");
+interface RuleLite {
+	benefitSlug: string;
+	validFrom?: string;
+	validUntil?: string;
+	application: {
+		channel: { managingBody?: string; url?: string };
+		window: Parameters<typeof deadlineState>[0];
+	};
+	sources?: { url?: string }[];
+	themes?: string[];
+	lifeEvents?: string[];
+}
+const ruleSets: RuleLite[] = [];
 const ruleUrls = new Set<string>();
 for (const f of readdirSync(rulesDir).filter((x) => x.endsWith(".json"))) {
-	const rs = JSON.parse(readFileSync(join(rulesDir, f), "utf8")) as {
-		application?: { channel?: { url?: string } };
-		sources?: { url?: string }[];
-	};
+	const rs = JSON.parse(readFileSync(join(rulesDir, f), "utf8")) as RuleLite;
+	ruleSets.push(rs);
 	if (rs.application?.channel?.url) ruleUrls.add(rs.application.channel.url);
 	for (const s of rs.sources ?? []) if (s.url) ruleUrls.add(s.url);
 }
 
-const level2 = universe
+interface Level2Out {
+	slug: string;
+	displayTitle: string;
+	managingBody?: string;
+	officialSourceUrl: string;
+	applicationStatus?: string;
+	accessState: string;
+	scope: string;
+	themes: string[];
+	lifeEvents: string[];
+	eligibilityFactors: Record<string, unknown>;
+}
+
+const level2: Level2Out[] = universe
 	.filter((p) => {
 		if (!p.officialSourceUrl) {
 			skipped.push({ f: p.id, reason: "sin officialSourceUrl" });
@@ -145,14 +172,12 @@ const level2 = universe
 		// explorador las muestra con su estado («Cerrada») y las ordena al final.
 		return true;
 	})
-	.map((p) => {
+	.map((p): Level2Out => {
 		const ficha = p.officialSourceUrl ? fichasByUrl.get(p.officialSourceUrl) : undefined;
 		return {
 			slug: p.id,
 			displayTitle: citizenTitle(p as unknown as Ficha) ?? p.title,
-			managingBody: undefined,
 			officialSourceUrl: p.officialSourceUrl as string,
-			applicationStatus: undefined,
 			accessState: p.accessState,
 			scope: p.scope,
 			themes: p.themes,
@@ -160,11 +185,8 @@ const level2 = universe
 			eligibilityFactors: ficha?.eligibilityFactors ?? {},
 		};
 	});
-writeFileSync(
-	join(OUT, "nivel-2.json"),
-	`${JSON.stringify({ items: level2 })}\n`,
-);
-// F4-L2: informe de incluidas/excluidas con motivo.
+// F4-L2: informe de incluidas/excluidas con motivo (universo, antes de las
+// entradas derivadas de reglas excluidas del bundle).
 writeFileSync(
 	join(OUT, "nivel-2-informe.json"),
 	`${JSON.stringify(
@@ -172,6 +194,72 @@ writeFileSync(
 		null,
 		2,
 	)}\n`,
+);
+
+// F10-COMP: el nivel 1 también se lista en /explorar/ (una entrada por
+// benefitSlug del BUNDLE — en --strict solo las aprobadas, ADR-050), sin
+// duplicar la entrada de nivel 2. Cada una enlaza a su ficha interna y lleva
+// la marca «comprobada requisito a requisito». Las reglas que el bundle
+// excluye (p. ej. pendientes de revisión humana en strict) reaparecen como
+// entradas de catálogo de nivel 2 con su enlace oficial (ADR-052).
+const todayIso = new Date().toISOString().slice(0, 10);
+const scopeOf = (rs: RuleLite): string => {
+	const urls = new Set([
+		rs.application?.channel?.url,
+		...(rs.sources ?? []).map((s) => s.url),
+	]);
+	const match = universe.find((p) => urls.has(p.officialSourceUrl));
+	if (match?.scope) return match.scope;
+	const body = rs.application?.channel?.managingBody ?? "";
+	if (rs.benefitSlug.startsWith("ayto-") || /^Ayuntamiento/.test(body))
+		return "municipal";
+	if (
+		/^(madrid|cm|sermas)-/.test(rs.benefitSlug) ||
+		/Comunidad de Madrid|CRTM|SERMAS/.test(body)
+	)
+		return "comunidad-madrid";
+	return "estatal";
+};
+const bundleRules = (
+	JSON.parse(bundle) as { rulesets: RuleLite[] }
+).rulesets;
+const bundleSlugs = new Set(bundleRules.map((r) => r.benefitSlug));
+const level1 = [
+	...new Map(bundleRules.map((r) => [r.benefitSlug, r])).values(),
+].map((rs) => ({
+	slug: rs.benefitSlug,
+	displayTitle: aidTitle(rs.benefitSlug),
+	managingBody: rs.application?.channel?.managingBody,
+	officialSourceUrl: rs.application?.channel?.url,
+	accessState: deadlineState(rs.application.window, todayIso).state,
+	scope: scopeOf(rs),
+	themes: rs.themes ?? [],
+	lifeEvents: rs.lifeEvents ?? [],
+}));
+const excludedRules = [
+	...new Map(ruleSets.map((r) => [r.benefitSlug, r])).values(),
+].filter((rs) => !bundleSlugs.has(rs.benefitSlug));
+for (const rs of excludedRules) {
+	if (!rs.application?.channel?.url) continue;
+	level2.push({
+		slug: rs.benefitSlug,
+		displayTitle: aidTitle(rs.benefitSlug),
+		managingBody: rs.application.channel.managingBody,
+		officialSourceUrl: rs.application.channel.url,
+		accessState: deadlineState(rs.application.window, todayIso).state,
+		scope: scopeOf(rs),
+		themes: rs.themes ?? [],
+		lifeEvents: rs.lifeEvents ?? [],
+		eligibilityFactors: {},
+	});
+}
+writeFileSync(
+	join(OUT, "nivel-2.json"),
+	`${JSON.stringify({ items: level2 })}\n`,
+);
+writeFileSync(
+	join(OUT, "nivel-1.json"),
+	`${JSON.stringify({ items: level1 })}\n`,
 );
 
 const manifest = JSON.parse(
@@ -266,6 +354,12 @@ writeFileSync(
 					file: "territorio-madrid.json",
 					schema: "(lista de municipios y CCAA)",
 					description: "Municipios de la Comunidad de Madrid y CCAA para el selector de territorio",
+				},
+				{
+					file: "nivel-1.json",
+					schema: "(programas con RuleSet)",
+					description:
+						"Programas del nivel 1 (un benefitSlug por programa) que se listan en /explorar/ con enlace a su ficha",
 				},
 				{
 					file: "nivel-2.json",

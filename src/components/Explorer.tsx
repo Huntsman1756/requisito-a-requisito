@@ -1,8 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Level2Item } from "../lib/check-data";
 import { es, type I18nKey } from "../lib/i18n/es";
+
+/** Entrada de nivel 1: tiene RuleSet propio, ficha interna y la marca
+ *  «comprobada requisito a requisito» (F10-COMP). */
+interface Level1Item extends Level2Item {
+	fichaSlug: string;
+}
+
+type ExplorerItem = Level2Item | Level1Item;
+
+const isL1 = (i: ExplorerItem): i is Level1Item => "fichaSlug" in i;
 
 const key = (k: string): string => (k in es ? es[k as I18nKey] : k);
 
@@ -48,7 +59,7 @@ const norm = (s: string) =>
 	s.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
 
 export function Explorer() {
-	const [items, setItems] = useState<Level2Item[] | null>(null);
+	const [items, setItems] = useState<ExplorerItem[] | null>(null);
 	const [theme, setTheme] = useState("");
 	const [event, setEvent] = useState("");
 	const [scope, setScope] = useState("");
@@ -56,9 +67,20 @@ export function Explorer() {
 	const [q, setQ] = useState("");
 
 	useMemo(() => {
-		fetch(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/datos/elegibilidad/nivel-2.json`)
-			.then((r) => r.json())
-			.then((d) => setItems(d.items ?? []))
+		const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+		Promise.all([
+			fetch(`${base}/datos/elegibilidad/nivel-1.json`).then((r) => r.json()),
+			fetch(`${base}/datos/elegibilidad/nivel-2.json`).then((r) => r.json()),
+		])
+			.then(([l1, l2]) =>
+				setItems([
+					// Nivel 1: la entrada enlaza a su ficha, no duplica la de nivel 2.
+					...(l1.items ?? []).map(
+						(i: Level2Item): Level1Item => ({ ...i, fichaSlug: i.slug }),
+					),
+					...(l2.items ?? []),
+				]),
+			)
 			.catch(() => setItems([]));
 	}, []);
 
@@ -75,11 +97,12 @@ export function Explorer() {
 			if (nq && !norm(i.displayTitle).includes(nq)) return false;
 			return true;
 		})
-			// UNKNOWN al final (R3-UNK)
+			// UNKNOWN al final (R3-UNK); a igual estado, primero las del nivel 1.
 			.sort(
 				(a, b) =>
 					(order[a.accessState as keyof typeof order] ?? 3) -
-					(order[b.accessState as keyof typeof order] ?? 3),
+						(order[b.accessState as keyof typeof order] ?? 3) ||
+					Number(isL1(b)) - Number(isL1(a)),
 			);
 	}, [items, theme, event, scope, state, q]);
 
@@ -105,10 +128,26 @@ export function Explorer() {
 			</p>
 			<ul className="explorer-list">
 				{filtered.slice(0, 200).map((i) => (
-					<li key={i.slug} className="explorer-item">
-						<a href={i.officialSourceUrl} rel="noopener noreferrer">
-							{i.displayTitle}
-						</a>
+					<li
+						key={`${isL1(i) ? "l1" : "l2"}-${i.slug}`}
+						className="explorer-item"
+					>
+						<span className="explorer-main">
+							{isL1(i) ? (
+								<>
+									<Link href={`/ayudas/${i.fichaSlug}/`}>
+										{i.displayTitle}
+									</Link>{" "}
+									<span className="explorer-badge">
+										{key("explorer.badge.l1")}
+									</span>
+								</>
+							) : (
+								<a href={i.officialSourceUrl} rel="noopener noreferrer">
+									{i.displayTitle}
+								</a>
+							)}
+						</span>
 						<span className="explorer-meta">
 							{key(`level2.state.${i.accessState ?? "UNKNOWN"}`)}
 							{i.scope === "comunidad-madrid"
