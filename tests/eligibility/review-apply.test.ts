@@ -139,8 +139,67 @@ describe("review:apply (F10-REV-1)", () => {
 		expect(r.approved.sort()).toEqual(["ayuda-dos@1", "ayuda-tres@1", "ayuda-uno@1"]);
 		for (const slug of ["ayuda-uno", "ayuda-dos", "ayuda-tres"]) {
 			const f = JSON.parse(readFileSync(join(env.rulesDir, `${slug}.json`), "utf8"));
-			expect(f.humanReview).toEqual({ status: "approved", by: "daniel", at: "2026-10-08" });
+			expect(f.humanReview).toMatchObject({
+				status: "approved",
+				by: "daniel",
+				at: "2026-10-08",
+			});
+			expect(f.humanReview.notes).toContain("revisadas: ayuda-uno, ayuda-tres");
+			expect(f.humanReview.notes).toContain("muestreo-ola-7.md");
 		}
+	});
+
+	it("dos OK de la MISMA regla no valen: se cuentan slugs distintos", () => {
+		const env = makeEnv();
+		plantRules(env, ["ayuda-uno", "ayuda-dos"]);
+		env.sheet("verificacion-ola-7.md", VERIF(["ayuda-uno", "ayuda-dos"]));
+		const s = env.sheet("muestreo-ola-7.md", SHEET([
+			["ayuda-uno (versión A)", "☑ OK ☐ KO"],
+			["ayuda-uno (versión B)", "☑ OK ☐ KO"], // mismo slug tras el paréntesis
+			["ayuda-dos", "☐ OK ☐ KO"],
+		]));
+		const r = applySheet(s, { rulesDirs: [env.rulesDir], today: "2026-10-08" });
+		expect(r.okMarks).toBe(1);
+		expect(r.action).toBe("nothing");
+	});
+
+	it("una fila con OK y KO a la vez cuenta como KO", () => {
+		const env = makeEnv();
+		plantRules(env, ["ayuda-uno", "ayuda-dos"]);
+		env.sheet("verificacion-ola-7.md", VERIF(["ayuda-uno", "ayuda-dos"]));
+		const s = env.sheet("muestreo-ola-7.md", SHEET([
+			["ayuda-uno", "☑ OK ☑ KO"], // ambas marcadas
+			["ayuda-dos", "☑ OK ☐ KO"],
+		]));
+		const r = applySheet(s, { rulesDirs: [env.rulesDir], today: "2026-10-08" });
+		expect(r.koMarks).toBe(1);
+		expect(r.action).toBe("nothing");
+	});
+
+	it("precedencia: un slug cuya hoja vigente es otra se salta y se avisa", () => {
+		const env = makeEnv();
+		plantRules(env, ["ayuda-uno", "ayuda-dos"]);
+		env.sheet("verificacion-ola-7.md", VERIF(["ayuda-uno", "ayuda-dos"]));
+		const indice = {
+			hojas: [],
+			vigente: { "ayuda-dos": "evidence/2026-10-08-F10/muestreo-ola-11.md" },
+		};
+		const indicePath = join(env.dir, "muestreo-indice.json");
+		writeFileSync(indicePath, JSON.stringify(indice));
+		const s = env.sheet("muestreo-ola-7.md", SHEET([
+			["ayuda-uno", "☑ OK ☐ KO"],
+			["ayuda-dos", "☑ OK ☐ KO"],
+		]));
+		const r = applySheet(s, {
+			rulesDirs: [env.rulesDir], today: "2026-10-08", indicePath,
+		});
+		expect(r.action).toBe("approved");
+		expect(r.approved).toEqual(["ayuda-uno@1"]);
+		expect(r.deferredTo["ayuda-dos"]).toBe(
+			"evidence/2026-10-08-F10/muestreo-ola-11.md",
+		);
+		expect(readFileSync(join(env.rulesDir, "ayuda-dos.json"), "utf8"))
+			.toContain('"pending"');
 	});
 
 	it("idempotente: una segunda corrida no toca nada", () => {
@@ -160,10 +219,11 @@ describe("review:apply (F10-REV-1)", () => {
 		expect(f.humanReview.at).toBe("2026-10-08");
 	});
 
-	it("una marca sobre regla ajena a la ola ⇒ error, sin escrituras", () => {
+	it("una marca sobre un slug que no es regla ⇒ error, sin escrituras", () => {
 		const env = makeEnv();
-		plantRules(env, ["ayuda-uno", "ayuda-dos", "intrusa"]);
+		plantRules(env, ["ayuda-uno", "ayuda-dos"]);
 		env.sheet("verificacion-ola-7.md", VERIF(["ayuda-uno", "ayuda-dos"]));
+		// «intrusa» no es un ruleset plantado: la fila marcada no pertenece a la ola.
 		const s = env.sheet("muestreo-ola-7.md", SHEET([
 			["ayuda-uno", "☑ OK ☐ KO"],
 			["ayuda-dos", "☑ OK ☐ KO"],
@@ -175,7 +235,7 @@ describe("review:apply (F10-REV-1)", () => {
 		expect(readFileSync(join(env.rulesDir, "ayuda-uno.json"), "utf8")).toContain('"pending"');
 	});
 
-	it("la pertenencia a la ola sale de verificacion-ola-N.md del mismo directorio", () => {
+	it("exige verificacion-ola-N.md en el mismo directorio (aunque la ola salga de la hoja)", () => {
 		const env = makeEnv();
 		plantRules(env, ["ayuda-uno", "ayuda-dos"]);
 		// sin verificacion-ola-7.md ⇒ error

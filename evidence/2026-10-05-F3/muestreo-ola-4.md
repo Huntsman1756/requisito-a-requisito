@@ -6,8 +6,10 @@ en `2026-10-05-F3/verificacion-ola-4.md`.
 **Regla ADR-040**: revisa 2 de cada ola; si alguna sale KO, revisión completa.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
-Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK y ningún KO se aprueba entera.
-Cuando acabes, ejecuta `npm run review:apply -- <ruta-de-esta-hoja>` — es la única vía que pone humanReview=approved.
+Esta hoja aprueba **2 regla(s)**: madrid-ayudas-urgencia-social, prestacion-desempleo-contributiva.
+En otra hoja se aprueban: madrid-abono-transporte-infantil → evidence/2026-10-08-F10/muestreo-ola-11.md; prestacion-cuidador-no-profesional → evidence/2026-10-06-F3/muestreo-ola-9.md.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
+Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/muestreo-ola-4.md` — es la única vía que pone humanReview=approved.
 
 ## Estado previo del verificador
 

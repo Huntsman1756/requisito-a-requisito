@@ -6,15 +6,15 @@ en `2026-10-06-F3/verificacion-ola-9.md`.
 **Regla ADR-040**: revisa 2 de cada ola; si alguna sale KO, revisión completa.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
-Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK y ningún KO se aprueba entera.
-Cuando acabes, ejecuta `npm run review:apply -- <ruta-de-esta-hoja>` — es la única vía que pone humanReview=approved.
+Esta hoja aprueba **2 regla(s)**: prestacion-cuidador-no-profesional, prestaciones-dependencia-saad.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
+Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-06-F3/muestreo-ola-9.md` — es la única vía que pone humanReview=approved.
 
 ## Estado previo del verificador
 
 | Ayuda | Verificador | Tu turno |
 |---|---|---|
-| prestaciones-dependencia-saad (versión A: hasta 22/10) | OK | ☐ OK ☐ KO |
-| prestaciones-dependencia-saad (versión B: desde 23/10) | OK | ☐ OK ☐ KO |
+| prestaciones-dependencia-saad (versiones A y B: hasta 22/10 y desde 23/10) | OK | ☐ OK ☐ KO |
 | prestacion-cuidador-no-profesional (versiones A y B) | OK | ☐ OK ☐ KO |
 
 ## Qué mirar

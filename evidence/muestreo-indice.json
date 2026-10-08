@@ -1,0 +1,322 @@
+{
+  "hojas": [
+    {
+      "sheet": "evidence/2026-10-05-F3/lote-1.md",
+      "wave": "lote-1",
+      "order": -1,
+      "slugs": [
+        "bono-cultural-joven",
+        "bono-social-electrico",
+        "descuento-transporte-familia-numerosa",
+        "madrid-ayudas-nacimiento-adopcion-multiple",
+        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+        "subsidio-mayores-52"
+      ],
+      "vigenteSlugs": [
+        "bono-cultural-joven",
+        "bono-social-electrico",
+        "descuento-transporte-familia-numerosa",
+        "madrid-ayudas-nacimiento-adopcion-multiple",
+        "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad",
+        "subsidio-mayores-52"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+      "wave": "ola-1",
+      "order": 1,
+      "slugs": [
+        "imv",
+        "madrid-beca-comedor-escolar",
+        "madrid-becas-bachillerato-centros-privados",
+        "madrid-bono-alquiler-joven",
+        "madrid-cheque-escuela-infantil"
+      ],
+      "vigenteSlugs": [
+        "imv",
+        "madrid-beca-comedor-escolar",
+        "madrid-becas-bachillerato-centros-privados",
+        "madrid-bono-alquiler-joven",
+        "madrid-cheque-escuela-infantil"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-2.md",
+      "wave": "ola-2",
+      "order": 2,
+      "slugs": [
+        "madrid-abono-transporte-65",
+        "madrid-abono-transporte-joven",
+        "madrid-renta-minima-insercion",
+        "prestacion-cuidado-menor-enfermedad-grave",
+        "prestaciones-dependencia-saad"
+      ],
+      "vigenteSlugs": [
+        "madrid-abono-transporte-65",
+        "madrid-abono-transporte-joven",
+        "madrid-renta-minima-insercion",
+        "prestacion-cuidado-menor-enfermedad-grave"
+      ],
+      "deferredSlugs": [
+        {
+          "slug": "prestaciones-dependencia-saad",
+          "a": "evidence/2026-10-06-F3/muestreo-ola-9.md"
+        }
+      ]
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+      "wave": "ola-3",
+      "order": 3,
+      "slugs": [
+        "bono-social-termico",
+        "complemento-ayuda-infancia",
+        "madrid-ayudas-nacimiento-general",
+        "madrid-titulo-familia-numerosa",
+        "prestacion-nacimiento-cuidado-menor"
+      ],
+      "vigenteSlugs": [
+        "bono-social-termico",
+        "complemento-ayuda-infancia",
+        "madrid-ayudas-nacimiento-general",
+        "madrid-titulo-familia-numerosa",
+        "prestacion-nacimiento-cuidado-menor"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-4.md",
+      "wave": "ola-4",
+      "order": 4,
+      "slugs": [
+        "madrid-abono-transporte-infantil",
+        "madrid-ayudas-urgencia-social",
+        "prestacion-cuidador-no-profesional",
+        "prestacion-desempleo-contributiva"
+      ],
+      "vigenteSlugs": [
+        "madrid-ayudas-urgencia-social",
+        "prestacion-desempleo-contributiva"
+      ],
+      "deferredSlugs": [
+        {
+          "slug": "madrid-abono-transporte-infantil",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        },
+        {
+          "slug": "prestacion-cuidador-no-profesional",
+          "a": "evidence/2026-10-06-F3/muestreo-ola-9.md"
+        }
+      ]
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-5.md",
+      "wave": "ola-5",
+      "order": 5,
+      "slugs": [
+        "asignacion-hijo-a-cargo",
+        "madrid-ayudas-alquiler-plan-estatal",
+        "pension-no-contributiva",
+        "pension-viudedad",
+        "subsidio-desempleo"
+      ],
+      "vigenteSlugs": [
+        "madrid-ayudas-alquiler-plan-estatal",
+        "pension-no-contributiva",
+        "pension-viudedad"
+      ],
+      "deferredSlugs": [
+        {
+          "slug": "asignacion-hijo-a-cargo",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        },
+        {
+          "slug": "subsidio-desempleo",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        }
+      ]
+    },
+    {
+      "sheet": "evidence/2026-10-05-F3/muestreo-ola-6.md",
+      "wave": "ola-6",
+      "order": 6,
+      "slugs": [
+        "cese-actividad-autonomos",
+        "pension-incapacidad-permanente",
+        "pension-jubilacion-contributiva",
+        "pension-orfandad"
+      ],
+      "vigenteSlugs": [
+        "cese-actividad-autonomos",
+        "pension-jubilacion-contributiva",
+        "pension-orfandad"
+      ],
+      "deferredSlugs": [
+        {
+          "slug": "pension-incapacidad-permanente",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        }
+      ]
+    },
+    {
+      "sheet": "evidence/2026-10-06-F3/muestreo-ola-7.md",
+      "wave": "ola-7",
+      "order": 7,
+      "slugs": [
+        "ayto-emergencia-social",
+        "ayto-escuela-infantil",
+        "ayto-ibi-familia-numerosa",
+        "ayto-tarjeta-azul-discapacidad"
+      ],
+      "vigenteSlugs": [
+        "ayto-emergencia-social",
+        "ayto-ibi-familia-numerosa"
+      ],
+      "deferredSlugs": [
+        {
+          "slug": "ayto-escuela-infantil",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        },
+        {
+          "slug": "ayto-tarjeta-azul-discapacidad",
+          "a": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+        }
+      ]
+    },
+    {
+      "sheet": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+      "wave": "ola-8",
+      "order": 8,
+      "slugs": [
+        "fuenlabrada-fuenlacarenet-2026",
+        "fuenlabrada-prestaciones-sociales",
+        "leganes-prestaciones-especial-necesidad",
+        "madrid-accede-prestamo-libros",
+        "madrid-ayuda-pago-unico-vg",
+        "mostoles-prestaciones-sociales"
+      ],
+      "vigenteSlugs": [
+        "fuenlabrada-fuenlacarenet-2026",
+        "fuenlabrada-prestaciones-sociales",
+        "leganes-prestaciones-especial-necesidad",
+        "madrid-accede-prestamo-libros",
+        "madrid-ayuda-pago-unico-vg",
+        "mostoles-prestaciones-sociales"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-06-F3/muestreo-ola-9.md",
+      "wave": "ola-9",
+      "order": 9,
+      "slugs": [
+        "prestacion-cuidador-no-profesional",
+        "prestaciones-dependencia-saad"
+      ],
+      "vigenteSlugs": [
+        "prestacion-cuidador-no-profesional",
+        "prestaciones-dependencia-saad"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+      "wave": "ola-10",
+      "order": 10,
+      "slugs": [
+        "anticipos-docentes-cm",
+        "cm-reintegro-accidentes-trabajo",
+        "prestamos-personal-publico-cm",
+        "sermas-ortoprotesica-desplazamiento",
+        "sermas-reintegro-gastos-sanitarios"
+      ],
+      "vigenteSlugs": [
+        "anticipos-docentes-cm",
+        "cm-reintegro-accidentes-trabajo",
+        "prestamos-personal-publico-cm",
+        "sermas-ortoprotesica-desplazamiento",
+        "sermas-reintegro-gastos-sanitarios"
+      ],
+      "deferredSlugs": []
+    },
+    {
+      "sheet": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+      "wave": "ola-11",
+      "order": 11,
+      "slugs": [
+        "asignacion-hijo-a-cargo",
+        "ayto-escuela-infantil",
+        "ayto-tarjeta-azul-discapacidad",
+        "becas-generales-mefp-2026-2027",
+        "madrid-abono-transporte-infantil",
+        "pension-incapacidad-permanente",
+        "subsidio-desempleo"
+      ],
+      "vigenteSlugs": [
+        "asignacion-hijo-a-cargo",
+        "ayto-escuela-infantil",
+        "ayto-tarjeta-azul-discapacidad",
+        "becas-generales-mefp-2026-2027",
+        "madrid-abono-transporte-infantil",
+        "pension-incapacidad-permanente",
+        "subsidio-desempleo"
+      ],
+      "deferredSlugs": []
+    }
+  ],
+  "vigente": {
+    "bono-cultural-joven": "evidence/2026-10-05-F3/lote-1.md",
+    "bono-social-electrico": "evidence/2026-10-05-F3/lote-1.md",
+    "descuento-transporte-familia-numerosa": "evidence/2026-10-05-F3/lote-1.md",
+    "madrid-ayudas-nacimiento-adopcion-multiple": "evidence/2026-10-05-F3/lote-1.md",
+    "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad": "evidence/2026-10-05-F3/lote-1.md",
+    "subsidio-mayores-52": "evidence/2026-10-05-F3/lote-1.md",
+    "imv": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+    "madrid-beca-comedor-escolar": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+    "madrid-becas-bachillerato-centros-privados": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+    "madrid-bono-alquiler-joven": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+    "madrid-cheque-escuela-infantil": "evidence/2026-10-05-F3/muestreo-ola-1.md",
+    "madrid-abono-transporte-65": "evidence/2026-10-05-F3/muestreo-ola-2.md",
+    "madrid-abono-transporte-joven": "evidence/2026-10-05-F3/muestreo-ola-2.md",
+    "madrid-renta-minima-insercion": "evidence/2026-10-05-F3/muestreo-ola-2.md",
+    "prestacion-cuidado-menor-enfermedad-grave": "evidence/2026-10-05-F3/muestreo-ola-2.md",
+    "prestaciones-dependencia-saad": "evidence/2026-10-06-F3/muestreo-ola-9.md",
+    "bono-social-termico": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+    "complemento-ayuda-infancia": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+    "madrid-ayudas-nacimiento-general": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+    "madrid-titulo-familia-numerosa": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+    "prestacion-nacimiento-cuidado-menor": "evidence/2026-10-05-F3/muestreo-ola-3.md",
+    "madrid-abono-transporte-infantil": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "madrid-ayudas-urgencia-social": "evidence/2026-10-05-F3/muestreo-ola-4.md",
+    "prestacion-cuidador-no-profesional": "evidence/2026-10-06-F3/muestreo-ola-9.md",
+    "prestacion-desempleo-contributiva": "evidence/2026-10-05-F3/muestreo-ola-4.md",
+    "asignacion-hijo-a-cargo": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "madrid-ayudas-alquiler-plan-estatal": "evidence/2026-10-05-F3/muestreo-ola-5.md",
+    "pension-no-contributiva": "evidence/2026-10-05-F3/muestreo-ola-5.md",
+    "pension-viudedad": "evidence/2026-10-05-F3/muestreo-ola-5.md",
+    "subsidio-desempleo": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "cese-actividad-autonomos": "evidence/2026-10-05-F3/muestreo-ola-6.md",
+    "pension-incapacidad-permanente": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "pension-jubilacion-contributiva": "evidence/2026-10-05-F3/muestreo-ola-6.md",
+    "pension-orfandad": "evidence/2026-10-05-F3/muestreo-ola-6.md",
+    "ayto-emergencia-social": "evidence/2026-10-06-F3/muestreo-ola-7.md",
+    "ayto-escuela-infantil": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "ayto-ibi-familia-numerosa": "evidence/2026-10-06-F3/muestreo-ola-7.md",
+    "ayto-tarjeta-azul-discapacidad": "evidence/2026-10-08-F10/muestreo-ola-11.md",
+    "fuenlabrada-fuenlacarenet-2026": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "fuenlabrada-prestaciones-sociales": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "leganes-prestaciones-especial-necesidad": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "madrid-accede-prestamo-libros": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "madrid-ayuda-pago-unico-vg": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "mostoles-prestaciones-sociales": "evidence/2026-10-06-F3/muestreo-ola-8.md",
+    "anticipos-docentes-cm": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+    "cm-reintegro-accidentes-trabajo": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+    "prestamos-personal-publico-cm": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+    "sermas-ortoprotesica-desplazamiento": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+    "sermas-reintegro-gastos-sanitarios": "evidence/2026-10-06-F3/muestreo-ola-10.md",
+    "becas-generales-mefp-2026-2027": "evidence/2026-10-08-F10/muestreo-ola-11.md"
+  },
+  "generatedAt": "2026-10-08"
+}

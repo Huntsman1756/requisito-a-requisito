@@ -4,7 +4,8 @@ Revisar cada requisito: label comprensible, condición fiel a la norma,
 extracto literal presente en la fuente, localizador correcto, enlace oficial.
 Marcar KO con motivo; con todo OK ⇒ `humanReview.status = approved`.
 **Cómo marcarla (Daniel):** al final de cada cabecera `## <ayuda>` añade `— ☑ OK` o `— ☑ KO <motivo>`.
-Un solo KO basta para que no se apruebe nada del lote; con 2 o más OK y ningún KO se aprueba entero.
+Esta hoja aprueba **6 regla(s)**: bono-cultural-joven, bono-social-electrico, descuento-transporte-familia-numerosa, madrid-ayudas-nacimiento-adopcion-multiple, prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad, subsidio-mayores-52.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/lote-1.md` — es la única vía que pone humanReview=approved.
 
 

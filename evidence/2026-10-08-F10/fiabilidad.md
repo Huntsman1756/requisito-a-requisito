@@ -177,10 +177,16 @@ commitea):
 - `--strict` sobre las reglas reales: **0 incluidas, 50 excluidas** — todas
   `ELIG_G10_HUMAN_REVIEW` (52 ficheros → 50 slugs). Hoy **ninguna** regla
   entraría en la release del jurado: faltan las hojas marcadas por Daniel.
-- `--strict` con las 52 aprobaciones simuladas: **52 incluidas, 0 excluidas**
+- `--strict` con las 52 aprobaciones **simuladas a mano** (escritas en la copia,
+  sin pasar por `review:apply` — regla 4.12): 52 incluidas, 0 excluidas
   (digest `87ad707f`). Con ese bundle, la web construye y pasa los 13 e2e +
-  axe + spec de fiabilidad en local (las tarjetas muestran «revisada» — la
-  etiqueta funciona).
+  axe + spec de fiabilidad en local. Ese ensayo demostró que el build strict y
+  la web funcionan; **no** demostró que las hojas aprueban — eso se cubre ahora
+  con el test sobre datos reales `tests/eligibility/review-apply-real.test.ts`
+  (aplica las hojas reales marcadas en copia y el build estricto real incluye
+  los 50 programas / 52 RuleSets). Además, la revisión posterior detectó que
+  la pertenencia por `verificacion-ola-N.md` era incorrecta y se reescribió
+  (F10-FIX-1: pertenencia desde la propia hoja + `muestreo-indice.json`).
 - Falta para la release real: que Daniel marque las hojas `muestreo-ola-*.md`
   (regla ADR-040: 2 por ola, 0 KO) y correr `npm run review:apply` por hoja;
   luego `pages.yml` con `--strict` (F10-REL-2, 14/10).
