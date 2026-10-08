@@ -17,7 +17,7 @@ describe("F10 completitud sobre reglas y goldens reales", () => {
 				.filter((r) => r.validPositive === 0 || r.invalid > 0)
 				.map((r) => `${r.slug}@${r.version}`),
 		).toEqual([]);
-	}, 120_000);
+	}, 600_000);
 	it("cada programa tiene un golden positivo que aún coincide con el motor", () => {
 		expect(goldenCoverage(inputs).filter((r) => !r.golden)).toEqual([]);
 	});

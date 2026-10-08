@@ -78,7 +78,7 @@ export function reachability(
 	const { fields, combos, strategy, truncated } = profileCombos(
 		rs,
 		inputs.catalog,
-		undefined,
+		Number.POSITIVE_INFINITY,
 		date,
 	);
 	const counts = { probable: 0, posible: 0, no_cumple: 0, insuficiente: 0 };

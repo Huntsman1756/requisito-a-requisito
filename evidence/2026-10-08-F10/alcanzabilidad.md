@@ -1,7 +1,7 @@
 # Alcanzabilidad — datos reales
 
 Fecha: 2026-10-08. 52 RuleSets / 50 programas. 0 versiones sin positivo válido o con fallo de invariantes.
-Combinaciones evaluadas: 259691. Fuera del esquema de perfil: 97506 (no cuentan como testigos positivos). Versiones con recorte: 1.
+Combinaciones evaluadas: 4376596. Fuera del esquema de perfil: 1744758 (no cuentan como testigos positivos). Versiones con recorte: 0.
 
 Dominio discretizado de profileCombos, no población real ni probabilidad de acceso. Las versiones futuras se evalúan en validFrom. insuficiente equivale aquí a no_se_sabe; cumple corresponde a probable. Un cero puede revelar también una laguna del generador: requiere análisis, no una corrección automática de la regla.
 
@@ -38,7 +38,7 @@ Dominio discretizado de profileCombos, no población real ni probabilidad de acc
 | madrid-becas-bachillerato-centros-privados | 2 | 2026-10-08 | 18 | 0 | 18 | 0 | 0 | 18 | 0 | cartesian |  |
 | madrid-bono-alquiler-joven | 3 | 2026-10-08 | 900 | 0 | 350 | 375 | 175 | 210 | 360 | cartesian |  |
 | madrid-cheque-escuela-infantil | 2 | 2026-10-08 | 240 | 0 | 240 | 0 | 0 | 240 | 0 | cartesian |  |
-| madrid-renta-minima-insercion | 3 | 2026-10-08 | 1495 | 0 | 1387 | 108 | 0 | 1333 | 108 | pairs+boundary (RECORTE) |  |
+| madrid-renta-minima-insercion | 3 | 2026-10-08 | 4118400 | 0 | 2471040 | 1647360 | 0 | 1647360 | 1647360 | cartesian |  |
 | madrid-titulo-familia-numerosa | 2 | 2026-10-08 | 4500 | 0 | 1350 | 3150 | 0 | 900 | 1800 | cartesian |  |
 | mostoles-prestaciones-sociales | 3 | 2026-10-08 | 100 | 0 | 100 | 0 | 0 | 60 | 40 | cartesian |  |
 | pension-incapacidad-permanente | 2 | 2026-10-08 | 5 | 0 | 5 | 0 | 0 | 5 | 0 | cartesian |  |

@@ -1311,18 +1311,18 @@
       "slug": "madrid-renta-minima-insercion",
       "version": 3,
       "today": "2026-10-08",
-      "profiles": 1495,
-      "strategy": "pairs+boundary",
-      "truncated": true,
+      "profiles": 4118400,
+      "strategy": "cartesian",
+      "truncated": false,
       "counts": {
         "probable": 0,
-        "posible": 1387,
-        "no_cumple": 108,
+        "posible": 2471040,
+        "no_cumple": 1647360,
         "insuficiente": 0
       },
       "invalid": 0,
-      "invalidProfiles": 108,
-      "validPositive": 1333,
+      "invalidProfiles": 1647360,
+      "validPositive": 1647360,
       "witness": {
         "catalogVersion": 1,
         "answers": {
