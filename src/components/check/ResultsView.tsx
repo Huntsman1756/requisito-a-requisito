@@ -540,16 +540,49 @@ function ResultCard({
 			)}
 
 			{ev.verdict === "no_cumple" && failed.length > 0 && (
-				<p>
-					{t("results.noaplica.reason", {
-						reqs: failed
-							.map(
-								(f) =>
-									rs.requirements.find((r) => r.id === f.id)?.label ?? f.id,
-							)
-							.join("; "),
-					})}
-				</p>
+				<>
+					<p>{t("results.noaplica.intro")}</p>
+					<ul className="req-list">
+						{failed.map((f) => {
+							const req = rs.requirements.find((r) => r.id === f.id);
+							return (
+								<li key={f.id} className="req req--F">
+									<span className="req-status">✗ {t("req.f")}</span>{" "}
+									{req?.label ?? f.id}
+									<details className="cite">
+										<summary
+											aria-label={`${t("req.source")}: ${req?.label ?? f.id}`}
+										>
+											{t("req.source")}
+										</summary>
+										<blockquote lang="es">
+											«{f.citation.excerpt}»
+										</blockquote>
+										<p className="cite-meta">
+											{f.citation.locator} ·{" "}
+											<a
+												href={
+													rs.sources.find(
+														(s) => s.id === f.citation.sourceId,
+													)?.url
+												}
+												rel="noopener noreferrer"
+											>
+												{t("card.gotoSource")} ↗
+											</a>
+										</p>
+									</details>
+								</li>
+							);
+						})}
+					</ul>
+					<p className="note">{t("results.noaplica.checkSource")}</p>
+					<p className="card-actions">
+						<Link className="btn-quiet" href={`/ayudas/${ev.benefitSlug}`}>
+							{t("card.fullDetail")}
+						</Link>
+					</p>
+				</>
 			)}
 
 			{!compact && (

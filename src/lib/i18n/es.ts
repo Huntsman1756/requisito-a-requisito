@@ -131,6 +131,9 @@ export const es = {
 	"results.noaplica.title": "No parece aplicarte ({n})",
 	"results.noaplica.reason":
 		"No parece aplicarte porque no cumples: {reqs}. Si crees que sí cumples, consulta la fuente oficial.",
+	"results.noaplica.intro": "No parece aplicarte porque no cumples:",
+	"results.noaplica.checkSource":
+		"Si crees que sí cumples, consulta la fuente oficial.",
 	"results.closed.toggle": "Mostrar ayudas cerradas",
 		"results.plan.total": "Podrías pedir hasta {max} € en {n, plural, one {# ayuda que encaja o en la que te falta un dato} other {# ayudas que encajan o en las que te falta un dato}}",
 	"results.plan.docs": "Con estos documentos cubres las ayudas:",
