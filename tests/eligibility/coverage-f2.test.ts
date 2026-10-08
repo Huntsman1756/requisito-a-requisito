@@ -334,9 +334,39 @@ describe("CLOSED_RECURRING (ADR-038)", () => {
 				{ opensAt: "2025-05-06", closesAt: "2025-06-06" },
 			],
 		};
-		const r = deadlineState(w, "2026-10-05");
+		const r = deadlineState(w, "2026-03-01");
 		expect(r.state).toBe("CLOSED_RECURRING");
 		expect(r.nextOpeningEstimate).toBe("2026-05-06");
+	});
+	it("estimación en el pasado ⇒ se omite (F10-FIAB: nunca una fecha segura ya cumplida)", () => {
+		const w = {
+			opensAt: "2025-05-06",
+			closesAt: "2025-06-06",
+			rolling: false,
+			recurrence: "annual" as const,
+			previousCalls: [
+				{ opensAt: "2024-05-02", closesAt: "2024-06-03" },
+				{ opensAt: "2025-05-06", closesAt: "2025-06-06" },
+			],
+		};
+		const r = deadlineState(w, "2026-10-05");
+		expect(r.state).toBe("CLOSED_RECURRING");
+		expect(r.nextOpeningEstimate).toBeUndefined();
+	});
+	it("la estimación parte de la última apertura conocida, incluida la ventana vigente", () => {
+		const w = {
+			opensAt: "2026-05-06",
+			closesAt: "2026-06-06",
+			rolling: false,
+			recurrence: "annual" as const,
+			previousCalls: [
+				{ opensAt: "2024-05-02", closesAt: "2024-06-03" },
+				{ opensAt: "2025-05-06", closesAt: "2025-06-06" },
+			],
+		};
+		const r = deadlineState(w, "2026-10-05");
+		expect(r.state).toBe("CLOSED_RECURRING");
+		expect(r.nextOpeningEstimate).toBe("2027-05-06");
 	});
 	it("ordena previousCalls aunque vengan descendientes (regresión sort no-op)", () => {
 		const w = {
@@ -349,7 +379,7 @@ describe("CLOSED_RECURRING (ADR-038)", () => {
 				{ opensAt: "2024-05-02", closesAt: "2024-06-03" },
 			],
 		};
-		const r = deadlineState(w, "2026-10-05");
+		const r = deadlineState(w, "2026-03-01");
 		expect(r.state).toBe("CLOSED_RECURRING");
 		expect(r.nextOpeningEstimate).toBe("2026-05-06");
 	});

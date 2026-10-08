@@ -45,7 +45,10 @@ export function deadlineState(w: WindowLike, today: string): DeadlineResult {
 	if (w.closesAt && today > w.closesAt) {
 		// CLOSED_RECURRING: convocatoria cerrada pero anual con ≥2 ediciones
 		// anuales consecutivas citadas (ADR-038). Estimación: la última
-		// apertura + ~1 año. Nunca se muestra como fecha segura.
+		// apertura conocida (incluida la de la ventana vigente) + ~1 año. Si el
+		// resultado ya pasó, se omite la fecha: nunca se muestra una estimación
+		// en el pasado ni se encadenan +1 año sobre un programa que pudo dejar
+		// de convocarse (F10-FIAB).
 		if (w.recurrence === "annual") {
 			const calls = [...(w.previousCalls ?? [])].sort((a, b) =>
 				a.opensAt.localeCompare(b.opensAt),
@@ -55,12 +58,16 @@ export function deadlineState(w: WindowLike, today: string): DeadlineResult {
 				calls.length >= 2 &&
 				years.every((y, i) => i === 0 || Number(y) === Number(years[i - 1]) + 1);
 			if (consecutive) {
-				const last = calls[calls.length - 1];
-				const [y, m, d] = last.opensAt.split("-").map(Number);
+				const lastKnown = [w.opensAt, calls[calls.length - 1].opensAt]
+					.filter((x): x is string => x !== undefined)
+					.sort()
+					.at(-1) as string;
+				const [y, m, d] = lastKnown.split("-").map(Number);
+				const estimate = `${y + 1}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 				return {
 					state: "CLOSED_RECURRING",
 					closesAt: w.closesAt,
-					nextOpeningEstimate: `${y + 1}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+					nextOpeningEstimate: estimate > today ? estimate : undefined,
 				};
 			}
 		}
