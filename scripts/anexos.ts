@@ -1,19 +1,38 @@
 /**
- * anexos — B5.3: regenera las capturas de `submission/anexos/` desde el
- * export estático de out/ (el del build; en la release será el --strict).
- * Se ejecuta el 14/10 contra la release; hoy se prueba con el export actual.
+ * anexos — B5.3: regenera los anexos de `submission/anexos/` desde el export
+ * estático de out/ (el del build; en la release será el --strict). Se ejecuta
+ * el 14/10 contra la release; hoy se prueba con el export actual.
  *
  * Uso: E2E_PORT=4690 npx tsx scripts/anexos.ts
  *
  * Requiere `npm run build` antes. Capturas: desktop/móvil × claro/oscuro
- * × {portada, como-funciona, resultados, ficha, explorar, observatorio}.
- * Vídeo: grabación Playwright del flujo completo de /comprobar/ (webm).
+ * × {portada, como-funciona, ficha, explorar, observatorio, datos,
+ * como-verificamos} + resultados. Vídeo: grabación Playwright del flujo
+ * completo de /comprobar/ (webm), uno por dispositivo.
+ *
+ * F10-REL-2: antes de generar, `limpiarAnexos` borra de esas dos carpetas todo
+ * lo que esta corrida no vaya a regenerar (los vídeos del 06/10 con otro
+ * nombre, las capturas con la numeración antigua, cualquier extensión). Al
+ * final, `verificarAnexos` exige el recuento exacto y el script sale con error
+ * si falta o sobra algún fichero. Los nombres esperados están en
+ * `scripts/anexos-catalogo.ts`, que es la única fuente de verdad.
  */
 
 import { spawn } from "node:child_process";
-import { existsSync, mkdirSync, readdirSync, renameSync, unlinkSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, renameSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { chromium, devices, type Browser, type Page } from "playwright";
+import {
+	DIR_CAPTURAS,
+	DIR_VIDEO,
+	DISPOSITIVOS,
+	limpiarAnexos,
+	nombresCapturas,
+	nombresVideo,
+	PAGINA_RESULTADOS,
+	PAGINAS,
+	verificarAnexos,
+} from "./anexos-catalogo";
 
 const PORT = Number(process.env.E2E_PORT ?? 4690);
 const BASE = `http://localhost:${PORT}`;
@@ -59,22 +78,6 @@ async function completarAsistente(page: Page) {
 	});
 }
 
-const PAGINAS = [
-	["portada", "/"],
-	["como-funciona", "/como-funciona/"],
-	["ficha", "/ayudas/complemento-ayuda-infancia/"],
-	["explorar", "/explorar/"],
-	["observatorio", "/observatorio/"],
-	["datos", "/datos/"],
-	["como-verificamos", "/como-verificamos/"],
-] as const;
-// «resultados» va con la numeración 08 (después de las páginas estáticas).
-
-const DISPOSITIVOS = [
-	["desktop", { width: 1366, height: 768 }],
-	["movil", { width: 390, height: 844 }],
-] as const;
-
 async function main() {
 	if (!existsSync("out/index.html")) {
 		console.error("anexos: falta out/ — ejecuta `npm run build` antes");
@@ -95,21 +98,13 @@ async function main() {
 		await new Promise((r) => setTimeout(r, 300));
 	}
 
-	mkdirSync(join(OUT_DIR, "capturas"), { recursive: true });
-	mkdirSync(join(OUT_DIR, "video"), { recursive: true });
+	mkdirSync(join(OUT_DIR, DIR_CAPTURAS), { recursive: true });
+	mkdirSync(join(OUT_DIR, DIR_VIDEO), { recursive: true });
 	// Limpieza: solo deben quedar los anexos de ESTA corrida (release estricta
-	// del 14/10) — se borran capturas/vídeos de corridas anteriores que no se
-	// regeneren, con los nombres que tengan.
-	for (const [dir, ext] of [
-		["capturas", ".png"],
-		["video", ".webm"],
-	] as const) {
-		for (const f of readdirSync(join(OUT_DIR, dir))) {
-			if (f.endsWith(ext)) {
-				unlinkSync(join(OUT_DIR, dir, f));
-				console.log(`borrado anexo antiguo: ${dir}/${f}`);
-			}
-		}
+	// del 14/10) — fuera los vídeos del 06/10, las capturas con la numeración
+	// antigua y cualquier otro fichero de estas carpetas.
+	for (const borrado of limpiarAnexos(OUT_DIR)) {
+		console.log(`borrado anexo antiguo: ${borrado}`);
 	}
 
 	const browser: Browser = await chromium.launch();
@@ -129,7 +124,7 @@ async function main() {
 				await page.screenshot({
 					path: join(
 						OUT_DIR,
-						"capturas",
+						DIR_CAPTURAS,
 						`${disp}-${scheme}-${String(i).padStart(2, "0")}-${nombre}.png`,
 					),
 					fullPage: true,
@@ -138,7 +133,11 @@ async function main() {
 			// resultados: flujo completo → captura
 			await completarAsistente(page);
 			await page.screenshot({
-				path: join(OUT_DIR, "capturas", `${disp}-${scheme}-08-resultados.png`),
+				path: join(
+					OUT_DIR,
+					DIR_CAPTURAS,
+					`${disp}-${scheme}-${PAGINA_RESULTADOS}.png`,
+				),
 				fullPage: true,
 			});
 			await ctx.close();
@@ -146,38 +145,52 @@ async function main() {
 		}
 	}
 
-	// Vídeos del flujo /comprobar/ — nombres fijos; los page@*.webm intermedios
-	// se borran tras renombrar.
-	for (const [nombre, vp, extra] of [
-		["recorrido-desktop", { width: 1366, height: 768 }, {}],
-		["recorrido-movil", { width: 390, height: 844 }, { ...devices["iPhone 14"] }],
-	] as const) {
+	// Vídeos del flujo /comprobar/ — nombres fijos, los mismos que exige
+	// `nombresVideo()`: uno por dispositivo. El page@*.webm intermedio se
+	// renombra; si Playwright no deja ninguno, el script falla en vez de enviar
+	// el paquete sin vídeo.
+	for (const [disp, vp] of DISPOSITIVOS) {
 		const ctx = await browser.newContext({
 			viewport: vp,
-			...extra,
-			recordVideo: { dir: join(OUT_DIR, "video"), size: vp },
+			...(disp === "movil" ? { ...devices["iPhone 14"] } : {}),
+			recordVideo: { dir: join(OUT_DIR, DIR_VIDEO), size: vp },
 		});
 		const page = await ctx.newPage();
 		await completarAsistente(page);
 		await page.getByRole("link", { name: "Ver ficha completa" }).first().click();
 		await page.waitForLoadState("networkidle");
 		await ctx.close(); // cierra y escribe el webm
-		const webms = readdirSync(join(OUT_DIR, "video")).filter((f) =>
-			f.startsWith("page@") && f.endsWith(".webm"),
-		);
-		// El último webm escrito es el de esta pasada.
-		const ultimo = webms.sort().at(-1);
-		if (ultimo) {
-			renameSync(
-				join(OUT_DIR, "video", ultimo),
-				join(OUT_DIR, "video", `${nombre}.webm`),
-			);
-			console.log(`vídeo → ${OUT_DIR}/video/${nombre}.webm`);
+		const ultimo = readdirSync(join(OUT_DIR, DIR_VIDEO))
+			.filter((f) => f.startsWith("page@") && f.endsWith(".webm"))
+			// Si hubiera más de uno, el de esta pasada es el más reciente.
+			.sort(
+				(a, b) =>
+					statSync(join(OUT_DIR, DIR_VIDEO, a)).mtimeMs -
+					statSync(join(OUT_DIR, DIR_VIDEO, b)).mtimeMs,
+			)
+			.at(-1);
+		if (!ultimo) {
+			throw new Error(`anexos: no se grabó el vídeo recorrido-${disp}.webm`);
 		}
+		const destino = `recorrido-${disp}.webm`;
+		renameSync(join(OUT_DIR, DIR_VIDEO, ultimo), join(OUT_DIR, DIR_VIDEO, destino));
+		console.log(`vídeo → ${OUT_DIR}/${DIR_VIDEO}/${destino}`);
 	}
 
 	await browser.close();
 	server.kill();
+
+	// Fail-closed: si falta o sobra un anexo, no hay paquete que valga.
+	const { faltan, sobran } = verificarAnexos(OUT_DIR);
+	if (faltan.length > 0 || sobran.length > 0) {
+		console.error(
+			`anexos: recuento incorrecto — faltan [${faltan.join(", ")}], sobran [${sobran.join(", ")}]`,
+		);
+		process.exit(1);
+	}
+	console.log(
+		`anexos: OK — ${nombresCapturas().length} capturas y ${nombresVideo().length} vídeos en ${OUT_DIR}`,
+	);
 }
 
 main().catch((e) => {
