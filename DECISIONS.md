@@ -432,3 +432,17 @@ referencias de GitHub y hackatones, y cuatro ideas de proyecto.
     ClaimIt, solo si el motor ya lo da con citas (F10-FRONT, Should).
   - (c) Las referencias nuevas se anotan como patrones en docs/04, sin copiar
     código. OpenFisca es AGPL y solo se estudia su arquitectura.
+## ADR-052 — El nivel 2 es un catálogo con enlace oficial, sin ficha propia
+2026-10-08 · aceptada (Claude, por delegación ADR-036; no relaja ningún criterio) ·
+La revisión de completitud del 08/10 pedía una ficha propia para cada entrada
+del nivel 2 (401 programas). Una ficha «requisito a requisito» solo existe
+cuando hay un RuleSet citado y verificado: generar 401 páginas sin regla sería
+relleno que sugiere una verificación que no se hizo. **Decisión:** el nivel 2 se
+queda como está diseñado — cada entrada aparece en `/explorar/` con su estado
+de acceso y enlace oficial HTTPS, y el nivel 1 (los programas con RuleSet) se
+lista ahí mismo identificado por `benefitSlug`, con la marca «comprobada
+requisito a requisito» y enlace a su ficha. El criterio de completitud del
+nivel 2 pasa a ser «aparece en /explorar/ con enlace oficial HTTPS»; el del
+nivel 1 es «tiene ficha en /ayudas/<benefitSlug>/ y aparece en /explorar/ sin
+duplicar su entrada de nivel 2». Si en el futuro el nivel 2 tuviera páginas
+propias, tendrían que dejar claro que no hay comprobación de requisitos.

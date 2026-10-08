@@ -41,6 +41,11 @@ if (
 const level2 = JSON.parse(
 	readFileSync("out/datos/elegibilidad/nivel-2.json", "utf8"),
 ).items as { slug: string; displayTitle: string; officialSourceUrl?: string }[];
+// ADR-052: el nivel 1 se lista en /explorar/ por benefitSlug con enlace a su
+// ficha; el nivel 2 es un catálogo con enlace oficial, sin página propia.
+const level1 = JSON.parse(
+	readFileSync("out/datos/elegibilidad/nivel-1.json", "utf8"),
+).items as { slug: string; displayTitle: string; officialSourceUrl?: string }[];
 const base = process.env.BASE_PATH ?? "";
 const url = (p: string) => `${base}${p}`;
 
@@ -74,31 +79,59 @@ test("inventario: cada programa del bundle tiene ficha y aparece en explorar", a
 		const response = await request.get(url(`/ayudas/${rs.benefitSlug}/`));
 		if (!response.ok() || !(await response.text()).includes("<h1"))
 			errors.push(`${rs.benefitSlug}: ficha no carga (${response.status()})`);
-		const item = level2.find(
-			(i) =>
-				i.slug === rs.benefitSlug ||
-				i.officialSourceUrl === rs.application.channel.url,
-		);
+		const item = level1.find((i) => i.slug === rs.benefitSlug);
 		if (!item) {
-			errors.push(
-				`${rs.benefitSlug}: no identificado en explorar por slug o canal oficial`,
-			);
+			errors.push(`${rs.benefitSlug}: no está en nivel-1.json (explorar)`);
 			continue;
 		}
+		if (level2.some((i) => i.slug === rs.benefitSlug))
+			errors.push(`${rs.benefitSlug}: duplicado también en nivel-2.json`);
 		await page
 			.getByRole("searchbox", { name: "Buscar por nombre" })
 			.fill(item.displayTitle);
+		const href = url(`/ayudas/${rs.benefitSlug}/`);
 		if (
 			!(await page
 				.locator(".explorer-list a")
 				.evaluateAll(
-					(as, href) => as.some((a) => a.getAttribute("href") === href),
-					item.officialSourceUrl,
+					(as, h) => as.some((a) => a.getAttribute("href") === h),
+					href,
 				))
 		)
-			errors.push(`${rs.benefitSlug}: búsqueda no muestra su enlace oficial`);
+			errors.push(`${rs.benefitSlug}: búsqueda no muestra el enlace a su ficha`);
+		const li = page
+			.locator(".explorer-item")
+			.filter({ hasText: item.displayTitle });
+		if (
+			!(await li
+				.locator(".explorer-badge")
+				.first()
+				.isVisible()
+				.catch(() => false))
+		)
+			errors.push(
+				`${rs.benefitSlug}: falta la marca «comprobada requisito a requisito»`,
+			);
 	}
 	await findings("inventario-nivel-1", errors);
+});
+
+test("enlaces internos: todo /ayudas/<slug>/ enlazado existe en el export", async ({
+	request,
+}) => {
+	const errors: string[] = [];
+	const hrefs = new Set<string>();
+	for (const p of ["/", "/ayudas/", "/explorar/"]) {
+		const html = await (await request.get(url(p))).text();
+		for (const m of html.matchAll(/href="([^"]*\/ayudas\/[^"#?]+?\/)"/g))
+			hrefs.add(m[1]);
+	}
+	for (const href of hrefs) {
+		const response = await request.get(href);
+		if (!response.ok())
+			errors.push(`${href}: enlace interno roto (${response.status()})`);
+	}
+	await findings("enlaces-internos-ayudas", errors);
 });
 
 test("persona positiva: cada programa se muestra en resultados de comprobar", async ({
@@ -211,7 +244,9 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 	await findings("resultados-positivos", errors);
 });
 
-test("inventario nivel 2: todas las fichas tienen página propia y enlace oficial", async ({
+// ADR-052: el nivel 2 es un catálogo con enlace oficial, sin página propia.
+// El criterio es «aparece en /explorar/ con enlace oficial HTTPS».
+test("inventario nivel 2: cada entrada aparece en explorar con enlace oficial HTTPS (ADR-052)", async ({
 	page,
 	request,
 }) => {
@@ -220,9 +255,6 @@ test("inventario nivel 2: todas las fichas tienen página propia y enlace oficia
 	await page.goto(url("/explorar/"));
 	await expect(page.locator(".explorer-count")).not.toHaveText("Cargando…");
 	for (const item of level2) {
-		const response = await request.get(url(`/ayudas/${item.slug}/`));
-		if (!response.ok())
-			errors.push(`${item.slug}: página propia ${response.status()}`);
 		if (!item.officialSourceUrl?.startsWith("https://")) {
 			errors.push(`${item.slug}: falta enlace oficial https`);
 			continue;
