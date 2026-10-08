@@ -154,18 +154,17 @@ reusar el motor sin depender de este producto.
   Medir un control automático y descartarlo cuando no alcanza el nivel exigido
   forma parte del método. Por eso este resultado negativo se incluye aquí.
 
-### Piloto (en curso, 10–13/10)
+### Piloto
 
-Kit de sesión preparado (`evidence/2026-10-06-F8/kit/`): guion con tarea
+[PILOTO — pendiente de las sesiones de Daniel; nada que inventar aquí]
+
+Kit de sesión ya preparado (`evidence/2026-10-06-F8/kit/`): guion con tarea
 medida («encuentra una ayuda para tu situación y dime qué requisito no sabes
-si cumples», tiempo y si la completa sola), contraste opcional de 3 minutos
-con la web oficial y escala de comprensión 1–5; hoja de observación sin datos
-personales, texto de consentimiento y mensaje de difusión. El objetivo son
-3–10 sesiones observadas con personas reales de Madrid; los resultados se
-consolidarán en `piloto.json` (plantilla y agregados ya preparados:
-`scripts/piloto-agregados.ts`) antes de la entrega. Por decisión del titular,
-el piloto se realizó **después de la auditoría de fiabilidad** del 8/10 —
-primero que sea fiable, luego que se pruebe.
+si cumples», con tiempo y si la completa sola), contraste opcional de 3
+minutos con la web oficial y escala de comprensión 1–5; hoja de observación
+sin datos personales, consentimiento y mensaje de difusión. Los agregados
+(`scripts/piloto-agregados.ts` → `piloto.json`) darán medianas y absolutos —
+nunca porcentajes con n<10.
 
 ## 5. Contribución al ecosistema (30 %)
 

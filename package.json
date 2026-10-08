@@ -42,7 +42,8 @@
 		"memoria:cifras": "tsx ./scripts/memoria-cifras.ts",
 		"memoria:pdf": "tsx ./scripts/memoria-pdf.ts",
 		"piloto:agregados": "tsx ./scripts/piloto-agregados.ts",
-		"muestreo:indice": "tsx ./scripts/muestreo-indice.ts"
+		"muestreo:indice": "tsx ./scripts/muestreo-indice.ts",
+		"anexos": "tsx scripts/anexos.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",
