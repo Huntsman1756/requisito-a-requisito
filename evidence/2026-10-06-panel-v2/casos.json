@@ -1,0 +1,2526 @@
+[
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 18→19)"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 18→20)"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «causante-con-discapacidad» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/req:causante-con-discapacidad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "asignacion-hijo-a-cargo/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:mayor-edad#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 18→19)"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:mayor-edad#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 18→20)"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:mayor-edad#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:empadronado-madrid#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:empadronado-madrid#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:empadronado-madrid#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:carencia-recursos#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_12P→IPREM_ANUAL_14P"
+ },
+ {
+  "caseId": "ayto-emergencia-social/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «empadronado-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:mayor-edad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:empadronado-madrid#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-emergencia-social/req:carencia-recursos#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-emergencia-social/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/req:residir-madrid#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/req:residir-madrid#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/req:residir-madrid#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residir-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/req:residir-madrid#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-escuela-infantil/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-ibi-familia-numerosa/req:empadronado-madrid#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "ayto-ibi-familia-numerosa/req:empadronado-madrid#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "ayto-ibi-familia-numerosa/req:empadronado-madrid#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "ayto-ibi-familia-numerosa/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «empadronado-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "ayto-ibi-familia-numerosa/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:renta-max-3-iprem#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:empadronado-municipio-madrid#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:empadronado-municipio-madrid#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:empadronado-municipio-madrid#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:renta-max-3-iprem#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_14P→IPREM_ANUAL_12P"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «empadronado-municipio-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:renta-max-3-iprem#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/req:empadronado-municipio-madrid#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "ayto-tarjeta-azul-discapacidad/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "becas-generales-mefp-2026-2027/req:estudiante-universitario#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "becas-generales-mefp-2026-2027/req:estudiante-universitario#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo studentStatus→dependency"
+ },
+ {
+  "caseId": "becas-generales-mefp-2026-2027/req:estudiante-universitario#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-cultural-joven/req:nacido-en-2008#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (between 2008→2009)"
+ },
+ {
+  "caseId": "bono-cultural-joven/req:nacido-en-2008#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (between 2008→2209)"
+ },
+ {
+  "caseId": "bono-cultural-joven/req:nacido-en-2008#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "bono-cultural-joven/req:nacido-en-2008#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "bono-cultural-joven/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «nacido-en-2008» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "bono-cultural-joven/req:nacido-en-2008#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-cultural-joven/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-social-electrico/req:alguna-via-vulnerable#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "bono-social-electrico/req:alguna-via-vulnerable#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "bono-social-electrico/req:alguna-via-vulnerable#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo familyType→employmentStatus"
+ },
+ {
+  "caseId": "bono-social-electrico/req:alguna-via-vulnerable#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_14P→IPREM_ANUAL_12P"
+ },
+ {
+  "caseId": "bono-social-electrico/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «alguna-via-vulnerable» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "bono-social-electrico/req:alguna-via-vulnerable#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-social-electrico/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-social-termico/req:alguna-via-vulnerable#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "bono-social-termico/req:suministro-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "bono-social-termico/req:suministro-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "bono-social-termico/req:suministro-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "bono-social-termico/req:alguna-via-vulnerable#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_14P→IPREM_ANUAL_12P"
+ },
+ {
+  "caseId": "bono-social-termico/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «suministro-cm» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "bono-social-termico/req:alguna-via-vulnerable#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-social-termico/req:suministro-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "bono-social-termico/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "cese-actividad-autonomos/req:autonomo-alta-reta#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "cese-actividad-autonomos/req:autonomo-alta-reta#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo employmentStatus→housingStatus"
+ },
+ {
+  "caseId": "cese-actividad-autonomos/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «autonomo-alta-reta» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "cese-actividad-autonomos/req:autonomo-alta-reta#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "cese-actividad-autonomos/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:residencia-espana-1a#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 12→13)"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:residencia-espana-1a#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 12→14)"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:residencia-espana-1a#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:menor-en-unidad#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:menor-en-unidad#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-titular» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:residencia-espana-1a#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/req:menor-en-unidad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "complemento-ayuda-infancia/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/req:titulo-familia-numerosa#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/req:titulo-familia-numerosa#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/req:titulo-familia-numerosa#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo familyType→employmentStatus"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «titulo-familia-numerosa» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/req:titulo-familia-numerosa#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "descuento-transporte-familia-numerosa/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "imv/req:edad-minima#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 23→24)"
+ },
+ {
+  "caseId": "imv/req:edad-minima#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 23→26)"
+ },
+ {
+  "caseId": "imv/req:edad-minima#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "imv/req:edad-minima#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "imv/req:edad-minima#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "imv/req:edad-minima#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "imv/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-minima» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "imv/req:edad-minima#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "imv/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 65→66)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 65→72)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:renta-iprem#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_12P→IPREM_ANUAL_14P"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-65» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:edad-65#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/req:renta-iprem#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-65/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/req:menor-0-14-a-cargo#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/req:menor-0-14-a-cargo#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/req:menor-0-14-a-cargo#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residencia-municipio-crtm» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/req:menor-0-14-a-cargo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-infantil/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 15→16)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 15→17)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/req:edad-min-15#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-min-15» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-abono-transporte-joven/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 18→19)"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 18→20)"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:ingresos-max-5iprem#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_14P→IPREM_ANUAL_12P"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «vivienda-en-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:mayoria-edad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/req:ingresos-max-5iprem#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-alquiler-plan-estatal/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:ingresos-referencia#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 30000→30001)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:ingresos-referencia#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 30000→27000)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:ingresos-referencia#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:empadronado-madrid#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:empadronado-madrid#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:empadronado-madrid#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «empadronado-madrid» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:ingresos-referencia#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/req:empadronado-madrid#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-adopcion-multiple/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:edad-max-30#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lte 30→31)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:edad-max-30#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lte 30→27)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:edad-max-30#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:empadronado-municipio-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:empadronado-municipio-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:empadronado-municipio-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-max-30» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:edad-max-30#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/req:empadronado-municipio-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-nacimiento-general/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:sin-recursos-basicos#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:ambito-territorial-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:ambito-territorial-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:ambito-territorial-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:sin-recursos-basicos#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_12P→IPREM_ANUAL_14P"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:sin-recursos-basicos#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-ayudas-urgencia-social/req:ambito-territorial-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:via-economica-o-colectivo#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 8400→8401)"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:via-economica-o-colectivo#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 8400→7560)"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:via-economica-o-colectivo#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:hijo-en-edad-escolar#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:hijo-en-edad-escolar#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:hijo-en-edad-escolar#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «hijo-en-edad-escolar» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:via-economica-o-colectivo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/req:hijo-en-edad-escolar#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-beca-comedor-escolar/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:renta-familiar-baja#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 35913→35914)"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:renta-familiar-baja#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 35913→32321)"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:renta-familiar-baja#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:estudiante-bachillerato#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:estudiante-bachillerato#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo studentStatus→dependency"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «estudiante-bachillerato» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:renta-familiar-baja#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/req:estudiante-bachillerato#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-becas-bachillerato-centros-privados/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 18→19)"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 18→20)"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:ingresos-3iprem#iprem",
+  "kind": "mutant",
+  "mutantType": "iprem",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "IPREM_ANUAL_14P→IPREM_ANUAL_12P"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «mayoria-edad» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:mayoria-edad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/req:ingresos-3iprem#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-bono-alquiler-joven/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:renta-limite#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 35913→35914)"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:renta-limite#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 35913→32321)"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:renta-limite#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:hijo-menor-3#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:hijo-menor-3#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:hijo-menor-3#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:renta-limite#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-cheque-escuela-infantil/req:hijo-menor-3#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-un-ano#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 12→13)"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-un-ano#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 12→14)"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-un-ano#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-permanente-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-permanente-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-permanente-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residencia-permanente-cm» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-un-ano#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/req:residencia-permanente-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-renta-minima-insercion/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/req:residencia-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/req:residencia-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/req:residencia-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «hijos-minimo» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/req:residencia-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "madrid-titulo-familia-numerosa/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 67→68)"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 67→60)"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "pension-incapacidad-permanente/req:edad-inferior-jubilacion-comunes#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 52→53)"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 52→58)"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "pension-jubilacion-contributiva/req:edad-minima-52#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:edad-65-o-discapacidad#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 65→66)"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:edad-65-o-discapacidad#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 65→72)"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:edad-65-o-discapacidad#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:edad-65-o-discapacidad#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:reside-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:reside-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:edad-65-o-discapacidad#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-no-contributiva/req:reside-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (lt 25→26)"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (lt 25→22)"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "lt→lte (cambia el límite incluido)"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "pension-orfandad/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «edad-en-fallecimiento» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "pension-orfandad/req:edad-en-fallecimiento#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-orfandad/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 65→66)"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 65→72)"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "pension-viudedad/req:edad-65-cuantia#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/req:persona-a-cargo#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/req:persona-a-cargo#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/req:persona-a-cargo#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «trabajadora-afiliada-alta» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/req:persona-a-cargo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidado-menor-enfermedad-grave/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 24→25)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 24→27)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «empadronado-cm» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 24→25)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 24→27)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residencia-espana-5y2» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:residencia-espana-5y2#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/req:empadronado-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-cuidador-no-profesional/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-desempleo-contributiva/req:situacion-legal-desempleo#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-desempleo-contributiva/req:situacion-legal-desempleo#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo employmentStatus→housingStatus"
+ },
+ {
+  "caseId": "prestacion-desempleo-contributiva/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «situacion-legal-desempleo» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestacion-desempleo-contributiva/req:situacion-legal-desempleo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-desempleo-contributiva/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad/req:colectivo-familiar#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad/req:colectivo-familiar#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad/req:colectivo-familiar#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo familyType→employmentStatus"
+ },
+ {
+  "caseId": "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad/req:colectivo-familiar#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestacion-nacimiento-cuidado-menor/req:menor-a-cargo#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestacion-nacimiento-cuidado-menor/req:menor-a-cargo#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestacion-nacimiento-cuidado-menor/req:menor-a-cargo#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo dependents→disability"
+ },
+ {
+  "caseId": "prestacion-nacimiento-cuidado-menor/req:menor-a-cargo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 24→25)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 24→27)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residencia-espana-5y2» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 24→25)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 24→27)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo territory→age"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «residencia-espana-5y2» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:residencia-espana-5y2#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/req:empadronado-cm#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "prestaciones-dependencia-saad/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "subsidio-desempleo/req:carencia-rentas#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "lte→lt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "subsidio-desempleo/req:desempleo#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "subsidio-desempleo/req:desempleo#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo employmentStatus→housingStatus"
+ },
+ {
+  "caseId": "subsidio-desempleo/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «desempleo» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "subsidio-desempleo/req:carencia-rentas#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "subsidio-desempleo/req:desempleo#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "subsidio-desempleo/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#umbral_lax",
+  "kind": "mutant",
+  "mutantType": "umbral_lax",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "umbral relajado (gte 52→53)"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#umbral_pct",
+  "kind": "mutant",
+  "mutantType": "umbral_pct",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "umbral endurecido ±10 % (gte 52→58)"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#op_swap",
+  "kind": "mutant",
+  "mutantType": "op_swap",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "gte→gt (cambia el límite incluido)"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#hard_soft",
+  "kind": "mutant",
+  "mutantType": "hard_soft",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito excluyente ablandado a soft"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#invert",
+  "kind": "mutant",
+  "mutantType": "invert",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "condición envuelta en NOT"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#field",
+  "kind": "mutant",
+  "mutantType": "field",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "campo age→incomeAnnual"
+ },
+ {
+  "caseId": "subsidio-mayores-52/completeness#removed_req",
+  "kind": "mutant",
+  "mutantType": "removed_req",
+  "fpClass": true,
+  "expected": "escalate",
+  "note": "requisito «desempleo» eliminado de la lista modelada"
+ },
+ {
+  "caseId": "subsidio-mayores-52/req:edad-52#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "subsidio-mayores-52/completeness#control",
+  "kind": "control",
+  "fpClass": false,
+  "expected": "pass",
+  "note": "ítem original verificado, sin mutar"
+ },
+ {
+  "caseId": "historical/bono-cultural-joven/req:nacido-en-2008#edad",
+  "kind": "historical",
+  "mutantType": "hist_bono_edad",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "histórico: «cumplir 18 en 2026» modelado como edad=18 (quien nace a finales de 2008 tiene 17 al solicitar ⇒ falso negativo)"
+ },
+ {
+  "caseId": "historical/descuento-transporte-familia-numerosa/req:titulo-familia-numerosa#rango3",
+  "kind": "historical",
+  "mutantType": "hist_renfe_rango3",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "histórico: requisito citado con la web de Renfe (rango 3), cuyo texto no establece la obligación de presentar el título"
+ },
+ {
+  "caseId": "historical/madrid-renta-minima-insercion/req:residencia-permanente-cm#municipio",
+  "kind": "historical",
+  "mutantType": "hist_rmi_municipio",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "histórico: la RMI exige residencia en la Comunidad, no en el municipio de Madrid (falso negativo para el resto de municipios)"
+ },
+ {
+  "caseId": "historical/madrid-renta-minima-insercion/completeness#menores",
+  "kind": "historical",
+  "mutantType": "hist_rmi_menores",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "histórico: mayoría de edad modelada como excluyente sin la excepción de menores emancipados o con beneficio de tutela"
+ },
+ {
+  "caseId": "historical/ayto-tarjeta-azul-discapacidad/req:renta-max-3-iprem#12p",
+  "kind": "historical",
+  "mutantType": "hist_azul_12p",
+  "fpClass": false,
+  "expected": "escalate",
+  "note": "histórico: tope computado con IPREM_ANUAL_12P cuando la tabla oficial usa 14 pagas (25.200 € ⇒ 21.600 €, falso negativo)"
+ }
+]
