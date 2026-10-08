@@ -1,13 +1,10 @@
-import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { aidTitle } from "../../../lib/aid-titles";
 import { formatAmount, formatWindow } from "../../../lib/format";
+import { listBenefitSlugs, loadVersion } from "../../../lib/rule-pages";
 import { condText } from "../../../lib/rule-text";
-
-const RULES_DIR = join(process.cwd(), "data/eligibility/rules");
 
 interface Rs {
 	benefitSlug: string;
@@ -37,38 +34,14 @@ interface Rs {
 // R8-VIG: un mismo slug puede tener varias versiones (`<slug>.json` y
 // `<slug>__v-AAAA-MM-DD.json`). La ficha muestra la vigente en la fecha del
 // build y un aviso con enlace a los textos cuando existe otra versión.
-function versionsOf(slug: string): Rs[] {
-	const out: Rs[] = [];
-	for (const f of readdirSync(RULES_DIR)) {
-		if (!f.endsWith(".json")) continue;
-		const base = f.slice(0, -5).replace(/__v-\d{4}-\d{2}-\d{2}$/, "");
-		if (base !== slug) continue;
-		try {
-			out.push(JSON.parse(readFileSync(join(RULES_DIR, f), "utf8")));
-		} catch {
-			// archivo ilegible: se ignora
-		}
-	}
-	return out;
-}
-
+// La clave pública es `benefitSlug`, no el nombre del fichero (F10-COMP).
 function load(slug: string): { rs: Rs; other: Rs[] } | null {
-	const all = versionsOf(slug);
-	if (all.length === 0) return null;
 	const today = new Date().toISOString().slice(0, 10);
-	const valid = all.filter(
-		(r) =>
-			(!r.validFrom || r.validFrom <= today) &&
-			(!r.validUntil || r.validUntil >= today),
-	);
-	const rs = valid[0] ?? all.find((r) => !r.validFrom) ?? all[0];
-	return { rs, other: all.filter((r) => r !== rs) };
+	return loadVersion<Rs>(slug, today);
 }
 
 export function generateStaticParams() {
-	return readdirSync(RULES_DIR)
-		.filter((f) => f.endsWith(".json") && !/__v-\d{4}-\d{2}-\d{2}/.test(f))
-		.map((f) => ({ slug: f.slice(0, -5) }));
+	return listBenefitSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({
