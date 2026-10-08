@@ -20,11 +20,28 @@ Comunidad de Madrid (ADR-021).
 
 Aplica además `F:\_Proyectos\AGENTS.md` (unidades, worktrees, temporales y caché).
 
+## 0. Ahora mismo (08/10 → 16/10): fase F10
+
+**Lee primero `phases/F10-cierre-candidatura.md`.** Ahí están el calendario por
+día, las tareas por área (back, front, dev, infra, QA y memoria), las decisiones
+pendientes de Daniel y la lista de lo que NO se hace.
+
+- **Ruta crítica 1 — revisión humana:** las 52 reglas tienen
+  `humanReview: pending`, así que la release `--strict` del jurado saldría vacía.
+  Daniel marca las hojas `muestreo-ola-*.md`, el agente las aplica
+  (`review:apply`) y el 14/10 Pages sirve el build estricto (ADR-050).
+- **Ruta crítica 2 — impacto (50 % de la nota):** piloto con personas reales
+  del 10 al 13/10 ⇒ `piloto.json` ⇒ memoria.
+- **El panel NAN está cerrado** (ADR-050). Nada de `panel:run` ni `panelReview`.
+- **No se reabre** el producto, la categoría ni la elegibilidad (ADR-051): la
+  Subdirección ya confirmó que una persona física puede concurrir a Impact.
+- Al cerrar cada sesión: evidencia commiteada, fila de TASK_QUEUE y handoff.
+
 ## 1. Orden de lectura (al empezar cada sesión)
 
 1. `TASK_QUEUE.md`: fase activa y siguiente tarea.
 2. `handoffs/`: el más reciente.
-3. `phases/Fx-*.md`: **solo** la fase activa.
+3. `phases/Fx-*.md`: **solo** la fase activa (hoy: **F10**).
 4. `docs/12-forma-de-trabajo.md`: cómo trabajar, cuándo parar y cómo recortar.
 5. Según la tarea:
    - motor → `docs/07-motor-evaluacion.md` + `schemas/`
@@ -121,7 +138,7 @@ docs/09              diseño y UX
 docs/10              QA: pirámide, matriz de navegadores/dispositivos, a11y, rendimiento, privacidad
 docs/11              back (pipeline de build), infraestructura, demo
 docs/12              forma de trabajo
-phases/F0..F7        una fase por fichero con su puerta
+phases/F0..F10       una fase por fichero con su puerta (F10 = cierre activo)
 schemas/             JSON Schema 2020-12 (contrato normativo; Zod en el código)
 templates/           ejemplos y plantillas (RuleSet, golden, recibo, handoff, checklist manual)
 docs/13              reutilización de donantes (la-ayuda, EduAyudas…)
