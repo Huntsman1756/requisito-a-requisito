@@ -30,10 +30,27 @@ Log "inicio"
 try {
 	Push-Location $repo
 
+	# Rutas que esta tarea commitea (paso 4).
+	$paths = @(
+		"data/eligibility/sources",
+		"data/eligibility/freshness-stale.json",
+		"data/freshness",
+		"data/catalog/leads-new.json"
+	)
+
 	# 1. Árbol limpio obligatorio: con trabajo a medias no se hace nada.
-	$dirty = git status --porcelain
+	# Un fichero sin seguimiento (??) fuera de $paths (p. ej. evidencia de una
+	# sesión de agente) no bloquea: el pull ff-only falla solo si lo pisaría y
+	# el paso 4 nunca lo añade. Dentro de $paths sí bloquea.
+	$status = git status --porcelain
 	if ($LASTEXITCODE -ne 0) { throw "git status falló" }
-	if ($dirty) {
+	$dirty = @($status | Where-Object {
+		if (-not $_.StartsWith("?? ")) { return $true }
+		$f = $_.Substring(3).Trim('"')
+		foreach ($p in $paths) { if ($f.StartsWith($p)) { return $true } }
+		return $false
+	})
+	if ($dirty.Count -gt 0) {
 		Log "árbol con cambios sin commitear — sin tocar nada"
 		Pop-Location
 		exit 0
@@ -63,12 +80,6 @@ try {
 	}
 
 	# 4. Stage solo de las rutas de frescura; si no hay cambios, fin.
-	$paths = @(
-		"data/eligibility/sources",
-		"data/eligibility/freshness-stale.json",
-		"data/freshness",
-		"data/catalog/leads-new.json"
-	)
 	foreach ($p in $paths) { if (Test-Path $p) { git add -- $p } }
 	git diff --cached --quiet
 	if ($LASTEXITCODE -eq 0) {
