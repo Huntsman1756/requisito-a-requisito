@@ -1,56 +1,116 @@
 {
 	"fecha": "2026-10-08",
 	"memoria": "submission/memoria.md",
-	"comentario": "Actualización F10-MEM-1 tras la sesión de fiabilidad. Las cifras cambiadas se miden con `npm run memoria:cifras` (submission/cifras.json) o con los comandos indicados.",
+	"comentario": "Veracidad vigente (sustituye al de 2026-10-06-F7): cubre TODAS las cifras de memoria.md. Las cifras medibles se reproducen con `npm run memoria:cifras` (submission/cifras.json) o con los comandos indicados.",
 	"claims": [
 		{
-			"texto": "50 ayudas comprobadas requisito a requisito",
-			"evidencia": "cifras.json: rulesetsEnBundle=52, programasNivel1=50 (los 2 __v-2026-10-23 son versiones futuras de dependencia); eligibility:build → 52 incluidas, 0 excluidas",
+			"texto": "50 programas comprobados requisito a requisito (52 RuleSets)",
+			"evidencia": "cifras.json: rulesetsEnBundle=52, programasNivel1=50 (los 2 ficheros __v-2026-10-23 son versiones futuras de dependencia)",
 			"ok": true
 		},
 		{
-			"texto": "166 fuentes oficiales verificadas/citadas",
-			"evidencia": "cifras.json: fuentesRegistradas=166 (data/eligibility/sources/*.json salvo registry.json); fuentesEnBundle=145",
+			"texto": "18 del Estado, 24 de la CM y 8 municipales",
+			"evidencia": "clasificación por fuente sobre los 50 slugs (evidence/2026-10-06-F7/veracidad.json; recuento por registry: 8 municipales + 24 CM + 18 estatales)",
 			"ok": true
 		},
 		{
-			"texto": "421 programas aptos para persona física, 779 rechazados con motivo",
+			"texto": "421 programas del universo clasificados aptos, 779 rechazados con motivo",
 			"evidencia": "cifras.json: universoAptos=421, universoRechazados=779 (data/universe/)",
 			"ok": true
 		},
 		{
 			"texto": "401 fichas publicadas en el nivel 2",
-			"evidencia": "cifras.json: fichasNivel2=401 (public/datos/elegibilidad/nivel-2.json)",
+			"evidencia": "cifras.json: fichasNivel2=401; estados OPEN 40 / ROLLING 18 / CLOSED 328 / UNKNOWN 15",
+			"ok": true
+		},
+		{
+			"texto": "166 fuentes oficiales registradas, 145 citadas en el bundle",
+			"evidencia": "cifras.json: fuentesRegistradas=166, fuentesEnBundle=145",
+			"ok": true
+		},
+		{
+			"texto": "116 requisitos modelados / 416 uncovered",
+			"evidencia": "suma de requirements/uncoveredRequirements sobre data/eligibility/rules/*.json",
 			"ok": true
 		},
 		{
 			"texto": "479 pruebas automáticas en verde",
-			"evidencia": "cifras.json: testsTotal=479 testsPassed=479 en 31 ficheros (vitest run --reporter=json)",
+			"evidencia": "cifras.json: testsTotal=479, testsPassed=479, 31 ficheros (vitest --reporter=json)",
 			"ok": true
 		},
 		{
-			"texto": "155 enlaces del producto verificados el 8/10",
-			"evidencia": "npm run link-check → 155 URL, 0 fallidas (08/10); cifras.json urlsCitadasEnBundle=155",
+			"texto": "155 enlaces del producto verificados el 8/10 (0 fallidos)",
+			"evidencia": "npm run link-check → 155 URLs, 0 fallidas; cifras.json urlsCitadasEnBundle=155",
 			"ok": true
 		},
 		{
-			"texto": "175.451 perfiles sin violación de invariantes/monotonía/determinismo",
-			"evidencia": "npm run eligibility:exhaustive sobre el bundle (local y desplegado), 08/10",
+			"texto": "E2E en 9 proyectos verdes (Chromium, WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento reducido); Firefox no arranca en este equipo",
+			"evidencia": "npx playwright test --project=desktop-chromium 13/13; proyectos en playwright.config.ts (incluye viewport 320 px); documentado en fiabilidad.md §6 (Firefox = limitación del entorno)",
 			"ok": true
 		},
 		{
-			"texto": "fallo bloqueante en Pages corregido y reverificado el mismo día",
-			"evidencia": "evidence/2026-10-08-F10/fiabilidad.md §4 y §7; commits 4dcaac4/a26c8db; fiabilidad.spec.ts 3/3 contra producción tras el deploy",
+			"texto": "axe 0 violaciones serious/critical en las 5 páginas × 9 proyectos",
+			"evidencia": "tests/e2e/a11y.spec.ts verde; corrección de contraste documentada en capturas-v2",
 			"ok": true
 		},
 		{
-			"texto": "release strict: 0 de 52 sin aprobaciones; 52 con las hojas aplicadas",
-			"evidencia": "fiabilidad.md §8 — ensayo en F:\\Temp\\datawardsmadrid-fiabilidad\\{strict-real,strict-sim}",
+			"texto": "238 mutantes dirigidos, 0 supervivientes sin explicar",
+			"evidencia": "eligibility:mutate → 238 mutantes × dominio exhaustivo, 0 sin explicar; 2 equivalentes pinneados (hard-flags.test.ts); evidence/2026-10-05-F3",
 			"ok": true
 		},
 		{
-			"texto": "45 de las 166 fuentes bloquean CI y se revalidan en local",
-			"evidencia": "data/freshness/runs.jsonl — corrida CI 07/10: 121 comprobadas, 45 saltadas, 0 errores",
+			"texto": "175.451 perfiles exhaustivos sin violación de invariantes/monotonía/determinismo",
+			"evidencia": "npm run eligibility:exhaustive sobre bundle local y desplegado, 08/10 (fiabilidad.md §4)",
+			"ok": true
+		},
+		{
+			"texto": "RAI derogada 01/11/2024 (RDL 2/2024), retirada del nivel 1",
+			"evidencia": "ADR-045; evidence/2026-10-06-F5/auditoria-vigencia-R5-RAI.md",
+			"ok": true
+		},
+		{
+			"texto": "«Beca 6000» renombrada al programa real de la CM",
+			"evidencia": "verificacion-ola-1.md; madrid-becas-bachillerato-centros-privados",
+			"ok": true
+		},
+		{
+			"texto": "10 olas con ciclo autor ⇒ verificador ⇒ merge",
+			"evidencia": "verificacion-ola-1..10.md (+ ola 11 de re-verificación F10-REG)",
+			"ok": true
+		},
+		{
+			"texto": "Panel multimodelo: v1 99,1 % detección / 97,7 % falsas alarmas; v2 94,0 / 91,8 / 75,0 %",
+			"evidencia": "evidence/2026-10-06-panel/calibracion.md (311 casos) y evidence/2026-10-06-panel-v2/calibracion.md (327 casos) + agregacion-alternativas.md; ADR-050",
+			"ok": true
+		},
+		{
+			"texto": "F9 detectó la Ley 4/2026 (BOE-A-2026-20528) y retiró las 2 reglas de dependencia el mismo día",
+			"evidencia": "evidence/2026-10-06-F9/stale-ley-39-2006.md; re-autoría verificada en verificacion-ola-9.md",
+			"ok": true
+		},
+		{
+			"texto": "45 de las 166 fuentes registradas no alcanzables desde el CI; revalidadas en corrida local",
+			"evidencia": "data/freshness/runs.jsonl — corrida CI 07/10: 121 checked, 45 skipped, 0 errores; freshness-local 08/10: 43 comprobadas, 0 stale",
+			"ok": true
+		},
+		{
+			"texto": "auditoría de fiabilidad 08/10: fallo bloqueante corregido, veredicto «fiable»",
+			"evidencia": "evidence/2026-10-08-F10/fiabilidad.md; commits 4dcaac4, a26c8db; e2e producción 3/3",
+			"ok": true
+		},
+		{
+			"texto": "release strict fail-closed: 0/52 sin aprobaciones; 52/52 aplicando las hojas en copia",
+			"evidencia": "tests/eligibility/review-apply-real.test.ts (buildEligibility --strict sobre copia con las hojas marcadas) — el ensayo manual previo simulaba sin review:apply, corregido en fiabilidad.md §8",
+			"ok": true
+		},
+		{
+			"texto": "R8-VIG: la web muestra la redacción vigente y avisa del cambio del 23/10/2026",
+			"evidencia": "verificacion-r8vig.md + tests de frontera 22/23 de octubre; invariante I11",
+			"ok": true
+		},
+		{
+			"texto": "44 personas golden, 47 expectativas, 0 diferencias (local y bundle desplegado)",
+			"evidencia": "cifras.json goldenPersonas=44 goldenExpectations=47; eligibility-goldens.ts 0 diffs; fiabilidad.md §4",
 			"ok": true
 		}
 	]

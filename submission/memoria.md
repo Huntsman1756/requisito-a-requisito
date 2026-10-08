@@ -15,8 +15,9 @@ se pierden. **Requisito a Requisito** convierte la norma en una conversación de
 cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada en
 cada afirmación.
 
-Números medidos (evidencia en el repositorio): **50 ayudas** comprobadas
-requisito a requisito · **166 fuentes oficiales** verificadas · **421 programas**
+Números medidos (evidencia en el repositorio): **50 programas** comprobados
+requisito a requisito (52 RuleSets) · **166 fuentes oficiales registradas**
+(145 citadas en el bundle) · **421 programas**
 del universo de Madrid clasificados aptos para personas · **479 pruebas** automáticas en verde ·
 **155 enlaces** del producto verificados el 8/10 · el perfil **nunca sale del
 navegador**.
@@ -57,7 +58,8 @@ reusar el motor sin depender de este producto.
 
 ### Medido (con evidencia)
 
-- **50 reglas verificadas** en el nivel 1 tras autor ⇒ verificador
+- **50 programas verificados** en el nivel 1 (52 RuleSets: la dependencia
+  tiene versión vigente y futura) tras autor ⇒ verificador
   independiente ⇒ corrección ⇒ merge ⇒ despliegue (ADR-040): 18 del Estado,
   24 de la Comunidad de Madrid y 8 municipales (Madrid, Móstoles, Leganés y
   Fuenlabrada). De las 10 olas, el verificador detectó y se corrigieron: un
@@ -76,7 +78,8 @@ reusar el motor sin depender de este producto.
   publicadas en el nivel 2 con su estado de acceso — las cerradas se
   muestran como «Cerrada» y los programas con regla propia se deduplican
   por URL oficial.
-- **166 fuentes oficiales** citadas; cada extracto lleva `excerptSha256`
+- **166 fuentes oficiales registradas** (145 citadas en el bundle); cada
+  extracto lleva `excerptSha256`
   verificado contra el texto normalizado de la fuente.
 - **479 pruebas** automáticas en verde; suite E2E en 9 proyectos (Chromium,
   WebKit, móvil, tablet, reflow 320 px, oscuro, contraste forzado, movimiento
@@ -110,7 +113,8 @@ reusar el motor sin depender de este producto.
   envío. El job diario de frescura (F9) re-descarga cada día las normas
   oficiales, compara extractos y retira automáticamente la regla afectada
   si la fuente cambia — nunca reescribe una regla. Las páginas de las sedes
-  electrónicas que bloquean el acceso automatizado (45 de las 166 fuentes)
+  electrónicas que bloquean el acceso automatizado (45 de las 166 fuentes
+  registradas)
   se revalidan periódicamente en una corrida local con la misma regla
   fail-closed; el Observatorio muestra los recuentos reales de cada ciclo.
 - **Detección real (6/10/2026)**: el job marcó cambiada la Ley 39/2006 de

@@ -74,9 +74,10 @@ function main() {
 
 	const n = ses.length;
 	console.log(`Sesiones: ${n}`);
-	if (times.length)
+	const med = median(times);
+	if (times.length && med !== null)
 		console.log(
-			`Tiempo a resultados: mediana ${mmss(median(times)!)} (${times.length} medidas)`,
+			`Tiempo a resultados: mediana ${mmss(med)} (${times.length} medidas)`,
 		);
 	console.log(
 		`Tarea completada: ${completed.length} sola, ${withHelp.length} con ayuda, ${n - completed.length - withHelp.length} no`,
