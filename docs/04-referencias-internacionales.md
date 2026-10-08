@@ -54,3 +54,20 @@ Fuentes consultadas: [simulador IMV (prensa)](https://wwwhatsnew.com/?p=373713),
 [AIReF IMV (prensa)](https://www.menorca.info/actualidad/nacional/2024/07/10/2201195/ingreso-minimo-vital-mas-mitad-hogares-solicitan.html),
 [UNE 153101 (AENOR)](https://en.tienda.aenor.com/al-dia/noticias/une-153101-une-153102-lectura-facil).
 Todas son lecturas de referencia: ninguna es evidencia para la memoria hasta que se verifique en la fuente primaria.
+
+## Revisión del 08/10: investigación externa aportada por Daniel (ADR-051)
+
+Las referencias proceden de un informe externo. **El agente no las ha consultado
+todavía**, y antes de citar cualquiera en la memoria hay que abrirla y anotar la
+fecha o el commit (docs/12 §6). Solo se toman patrones: nada de código, textos ni datos.
+
+| Referencia | Patrón | Qué hacemos aquí | Estado |
+|---|---|---|---|
+| **PolicyEngine Cliff Watch** | «¿Qué pasa si cambian mis ingresos?», es decir, los umbrales en los que se pierde una prestación | Solo con reglas ya verificadas: mostrar en la ficha el umbral citado («hasta X € de ingresos») y nunca una curva calculada. La curva necesitaría definir legalmente la renta, el ejercicio y la unidad familiar | Aparcado para después del 16/10. Hay que comprobar que la ficha ya enseña el umbral citado |
+| **PolicyEngine TANF Calculator** | Front estático con resultados precalculados y sin back | Confirma la arquitectura (export estático, coste por usuario ~0): sirve como argumento de escalabilidad en la memoria | Adoptado (ya era así) |
+| **BenefitsBridge** (Cornell, 2026) | Abandonaron el chatbot por pasos estructurados. Antipatrón: el perfil en Base64 dentro de la URL | Confirma ADR-003 y ADR-007. El test de privacidad ya prohíbe el perfil en la URL | Adoptado (ya era así) |
+| **ClaimIt** (USAII 2026) | Primero comprueba las causas de exclusión y explica por qué no y qué alternativa hay | Las tarjetas «no cumples» con el requisito que falla y su cita, más un enlace a ayudas del mismo evento vital. Su decisión con LLM **no** se adopta | Should en F10-FRONT |
+| **DigiEduHack 2025 — PathWise** | Itinerario: qué puedo pedir, qué me falta y cuál es el siguiente trámite | Ya existen el plan de acción y «qué te falta». Argumento para la memoria | Ya cubierto |
+| **ACCESS NYC** | Preguntas mínimas, lenguaje claro y cómo solicitar | Ya está en docs/15 y en ADR-041 | Ya cubierto |
+| **OpenFisca France** (AGPL) | Parámetros con fecha y escenarios reproducibles | Equivale a R8-VIG (`validFrom`/`validUntil`) y a `parameters.json` con fecha. Por la licencia AGPL, solo se estudia la arquitectura | Ya cubierto |
+| **Bank Branches AU**, **Cardinal (OCP)**, **Eurostat Big Data Hackathon 2025**, **EU Datathon 2022** | Mapas de servicios, indicadores de contratación y desigualdad ambiental | Están fuera del ámbito del producto (ADR-029) | No se adopta |
