@@ -54,7 +54,8 @@ A11y 98–100 en todas.
 Este equipo no arranca Firefox ni WebKit (la matriz local solo corre Chromium).
 Workflow manual `.github/workflows/e2e-browsers.yml` (`workflow_dispatch`):
 build del export + `playwright test --project=desktop-firefox --project=desktop-webkit`
-en ubuntu-latest. Resultado del run CI: **pendiente — se lanza tras el push**.
+en ubuntu-latest. Resultado del run CI: **verde — run 37823319781**
+(e2e en Firefox y WebKit completados sin fallos).
 
 ## 5. Declarado
 
