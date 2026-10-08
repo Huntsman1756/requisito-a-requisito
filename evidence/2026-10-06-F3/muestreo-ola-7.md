@@ -6,8 +6,8 @@ en `2026-10-06-F3/verificacion-ola-7.md`.
 **Regla ADR-040**: revisa 2 de cada ola; si alguna sale KO, revisión completa.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
-Esta hoja aprueba **2 regla(s)**: ayto-emergencia-social, ayto-ibi-familia-numerosa.
-En otra hoja se aprueban: ayto-escuela-infantil → evidence/2026-10-08-F10/muestreo-ola-11.md; ayto-tarjeta-azul-discapacidad → evidence/2026-10-08-F10/muestreo-ola-11.md.
+Esta hoja aprueba **0 regla(s)**: .
+En otra hoja se aprueban: ayto-emergencia-social → evidence/2026-10-08-F10/muestreo-ola-12.md; ayto-escuela-infantil → evidence/2026-10-08-F10/muestreo-ola-12.md; ayto-ibi-familia-numerosa → evidence/2026-10-08-F10/muestreo-ola-12.md; ayto-tarjeta-azul-discapacidad → evidence/2026-10-08-F10/muestreo-ola-12.md.
 Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-06-F3/muestreo-ola-7.md` — es la única vía que pone humanReview=approved.
 

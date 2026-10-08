@@ -7,7 +7,8 @@ umbrales, ventanas y golden con el motor real).
 **Regla ADR-040**: revisa 2 de cada ola; si alguna sale KO, revisión completa.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
-Esta hoja aprueba **5 regla(s)**: imv, madrid-beca-comedor-escolar, madrid-becas-bachillerato-centros-privados, madrid-bono-alquiler-joven, madrid-cheque-escuela-infantil.
+Esta hoja aprueba **2 regla(s)**: madrid-beca-comedor-escolar, madrid-becas-bachillerato-centros-privados.
+En otra hoja se aprueban: imv → evidence/2026-10-08-F10/muestreo-ola-12.md; madrid-bono-alquiler-joven → evidence/2026-10-08-F10/muestreo-ola-12.md; madrid-cheque-escuela-infantil → evidence/2026-10-08-F10/muestreo-ola-12.md.
 Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/muestreo-ola-1.md` — es la única vía que pone humanReview=approved.
 

@@ -4,8 +4,8 @@ Fecha: 2026-10-05 · Programas: 5 · Dictamen completo: `verificacion-ola-2.md`.
 Regla: revisa 2 de 5; cualquier KO ⇒ revisión completa de la ola.
 
 **Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
-Esta hoja aprueba **4 regla(s)**: madrid-abono-transporte-65, madrid-abono-transporte-joven, madrid-renta-minima-insercion, prestacion-cuidado-menor-enfermedad-grave.
-En otra hoja se aprueban: prestaciones-dependencia-saad → evidence/2026-10-06-F3/muestreo-ola-9.md.
+Esta hoja aprueba **1 regla(s)**: madrid-abono-transporte-joven.
+En otra hoja se aprueban: madrid-abono-transporte-65 → evidence/2026-10-08-F10/muestreo-ola-12.md; madrid-renta-minima-insercion → evidence/2026-10-08-F10/muestreo-ola-12.md; prestacion-cuidado-menor-enfermedad-grave → evidence/2026-10-08-F10/muestreo-ola-12.md; prestaciones-dependencia-saad → evidence/2026-10-08-F10/muestreo-ola-12.md.
 Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK (de reglas distintas) y ningún KO se aprueba entera.
 Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/muestreo-ola-2.md` — es la única vía que pone humanReview=approved.
 
