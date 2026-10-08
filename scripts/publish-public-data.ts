@@ -9,6 +9,7 @@
  * Todo regenerable; fail-closed si falta el bundle.
  */
 
+import { createHash } from "node:crypto";
 import {
 	existsSync,
 	mkdirSync,
@@ -192,6 +193,97 @@ writeFileSync(
 			...manifest,
 			license:
 				"Datos abiertos del proyecto Requisito a Requisito — uso libre con atribución; las citas apuntan a sus fuentes oficiales.",
+		},
+		null,
+		2,
+	)}\n`,
+);
+
+// B3-DATOS: registro de fuentes con sus huellas — los metadatos viven en un
+// JSON por fuente junto al .txt del snapshot; `textSha256` es la huella del
+// texto normalizado contra la que se verifica cada extracto citado.
+const srcDir = join(root, "data/eligibility/sources");
+const fuentes = readdirSync(srcDir)
+	.filter((f) => f.endsWith(".json") && f !== "registry.json")
+	.map((f) => JSON.parse(readFileSync(join(srcDir, f), "utf8")))
+	.map((s: {
+		id: string; url: string; fetchedAt: string; sha256: string;
+		textSha256: string; contentType: string; rank: number;
+	}) => ({
+		id: s.id, url: s.url, fetchedAt: s.fetchedAt,
+		sha256: s.sha256, textSha256: s.textSha256,
+		contentType: s.contentType, rank: s.rank,
+	}))
+	.sort((a: { id: string }, b: { id: string }) => a.id.localeCompare(b.id));
+writeFileSync(
+	join(OUT, "fuentes.json"),
+	`${JSON.stringify({ sources: fuentes }, null, 2)}\n`,
+);
+
+// Índice descriptivo de /datos/: cada fichero con su digest, bytes y esquema.
+// B3-DATOS: el test tests/datos-indice.test.ts falla si no cuadra.
+const indexFiles = (
+	names: { file: string; schema: string; description: string }[],
+) =>
+	names.map(({ file, schema, description }) => {
+		const buf = readFileSync(join(OUT, file));
+		return {
+			file,
+			description,
+			schema,
+			bytes: buf.length,
+			sha256: createHash("sha256").update(buf).digest("hex"),
+		};
+	});
+writeFileSync(
+	join(OUT, "indice.json"),
+	`${JSON.stringify(
+		{
+			version: 1,
+			generatedAt: manifest.generatedAt,
+			bundleDigest: manifest.bundleDigest,
+			license:
+				"Datos abiertos del proyecto Requisito a Requisito — uso libre con atribución; las citas apuntan a sus fuentes oficiales.",
+			files: indexFiles([
+				{
+					file: "bundle.json",
+					schema: "schemas/rule-set.schema.json",
+					description:
+						"RuleSets vigentes del nivel 1 + parámetros + metas de fuentes (lo que ejecuta el motor del asistente)",
+				},
+				{
+					file: "questions.json",
+					schema: "schemas/question-catalog.schema.json",
+					description: "Catálogo de preguntas del asistente (≤10 por perfil)",
+				},
+				{
+					file: "fuentes.json",
+					schema: "schemas/source-registry.schema.json",
+					description:
+						"Registro de fuentes oficiales con URL y sha256 del snapshot verificado",
+				},
+				{
+					file: "territorio-madrid.json",
+					schema: "(lista de municipios y CCAA)",
+					description: "Municipios de la Comunidad de Madrid y CCAA para el selector de territorio",
+				},
+				{
+					file: "nivel-2.json",
+					schema: "(fichas del universo)",
+					description:
+						"Universo de programas de Madrid sin regla propia — fichas con estado de acceso y fuente oficial",
+				},
+				{
+					file: "nivel-2-informe.json",
+					schema: "(informe)",
+					description: "Incluidas/excluidas del nivel 2 con el motivo de cada exclusión",
+				},
+				{
+					file: "manifest.json",
+					schema: "(manifiesto)",
+					description: "Digest del bundle, reglas incluidas/excluidas y fecha de generación",
+				},
+			]),
 		},
 		null,
 		2,
