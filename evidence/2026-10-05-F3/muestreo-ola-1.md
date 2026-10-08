@@ -4,10 +4,13 @@ Fecha: 2026-10-05 · Programas: 5 · Verificador independiente: dictamen complet
 en `verificacion-ola-1.md` (revisó cada cita literal contra los snapshots,
 umbrales, ventanas y golden con el motor real).
 
-**Regla ADR-040**: revisa 2 de 5; si alguna sale KO, revisión completa de la
-ola. Tras tu OK, las que hayas aprobado pasan a `humanReview.status: approved`.
+**Regla ADR-040**: revisa 2 de cada ola; si alguna sale KO, revisión completa.
 
-## Estado previo del verificador
+**Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK y ningún KO se aprueba entera.
+Cuando acabes, ejecuta `npm run review:apply -- <ruta-de-esta-hoja>` — es la única vía que pone 
+
+Estado previo del verificador
 
 | Ayuda | Verificador | Tu turno |
 |---|---|---|

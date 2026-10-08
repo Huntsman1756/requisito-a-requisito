@@ -3,6 +3,10 @@
 Fecha: 2026-10-05 · Programas: 5 · Dictamen completo: `verificacion-ola-2.md`.
 Regla: revisa 2 de 5; cualquier KO ⇒ revisión completa de la ola.
 
+**Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK y ningún KO se aprueba entera.
+Cuando acabes, ejecuta `npm run review:apply -- <ruta-de-esta-hoja>` — es la única vía que pone humanReview=approved.
+
 | Ayuda | Verificador | Tu turno |
 |---|---|---|
 | `madrid-renta-minima-insercion` (RMI) | OK con erratas | ☐ OK ☐ KO |

@@ -289,10 +289,12 @@ export function validateEligibility(opts: ValidateOptions): ValidateResult {
 			}
 		}
 
-		// G10 revisión: estricta con aprobación humana o panel calibrado (ADR-047)
+		// G10 revisión: estricta solo con aprobación humana (ADR-044). El panel
+		// quedó retirado por ADR-050: en --strict su «approved» no puede abrir
+		// la puerta. En modo no estricto un panelReview aprobado evita el aviso.
 		const humanOk = rs.humanReview.status === "approved";
 		const panelOk = rs.panelReview?.status === "approved";
-		if (!humanOk && !panelOk) {
+		if (!humanOk && (!panelOk || opts.strictHumanReview)) {
 			const msg = `humanReview.status = ${rs.humanReview.status}${panelOk === false && rs.panelReview ? ` · panelReview = ${rs.panelReview.status}` : ""}`;
 			if (opts.strictHumanReview) {
 				err("ELIG_G10_HUMAN_REVIEW", slug, msg);

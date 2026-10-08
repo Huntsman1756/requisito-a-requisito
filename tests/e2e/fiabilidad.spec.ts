@@ -99,17 +99,42 @@ test("fiabilidad: la tarjeta no_cumple muestra el requisito que falla con su cit
 	).toBeVisible();
 });
 
-test("fiabilidad: las tarjetas del nivel 1 declaran «revisión final pendiente»", async ({
+test("fiabilidad: la etiqueta de revisión de cada tarjeta refleja el estado real del bundle", async ({
 	page,
 }) => {
 	await completarAsistente(page);
-	// Hoy las 52 reglas tienen humanReview pending ⇒ todas lo declaran.
-	const states = page.locator(".aid-card .review-state");
+	// El mapa slug → humanReview.status del bundle servido es el oráculo:
+	// una tarjeta solo puede decir «revisada» si su regla está aprobada.
+	const bundle = await (
+		await page.request.get(url("/datos/elegibilidad/bundle.json"))
+	).json();
+	const pendientes = new Set(
+		(bundle.rulesets as { benefitSlug: string; humanReview?: { status?: string } }[])
+			.filter((r) => r.humanReview?.status !== "approved")
+			.map((r) => r.benefitSlug),
+	);
+	// Solo las tarjetas con motor llevan .review-state (las «no evaluable» no).
+	const states = page.locator(".aid-card:has(.review-state)");
 	const n = await states.count();
 	expect(n).toBeGreaterThan(0);
 	for (let i = 0; i < n; i++) {
-		await expect(states.nth(i)).toContainText("Comprobada con la fuente");
-		await expect(states.nth(i)).toContainText("revisión final pendiente");
+		const card = states.nth(i);
+		await expect(card.locator(".review-state")).toContainText(
+			"Comprobada con la fuente",
+		);
+		const ficha = card.locator('a[href*="/ayudas/"]').first();
+		const href = await ficha.getAttribute("href").catch(() => null);
+		const slug = href?.match(/\/ayudas\/([^/]+)/)?.[1];
+		if (slug && pendientes.has(slug)) {
+			await expect(card.locator(".review-state")).toContainText(
+				"revisión final pendiente",
+			);
+		}
+	}
+	// En el bundle público actual todo está pendiente: ninguna tarjeta puede
+	// decir «revisada». En una copia con aprobaciones simuladas sí puede.
+	if (pendientes.size === (bundle.rulesets as unknown[]).length) {
+		await expect(page.getByText("revisada por")).toHaveCount(0);
 	}
 });
 

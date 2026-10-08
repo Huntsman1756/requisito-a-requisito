@@ -4,6 +4,10 @@ Fecha: 2026-10-05 · Programas: 5 · Dictamen completo: `verificacion-ola-3.md`.
 Dictamen inicial: 2 OK / 3 KO → **los 3 KO corregidos y reverificados**
 (`eligibility:validate`: 21 rulesets, 0 errores).
 
+**Cómo marcarla (Daniel):** en cada fila de «Tu turno» sustituye `☐ OK ☐ KO` por `☑ OK ☐ KO` o `☐ OK ☑ KO`.
+Un solo KO basta para que no se apruebe nada de la ola; con 2 o más OK y ningún KO se aprueba entera.
+Cuando acabes, ejecuta `npm run review:apply -- evidence/2026-10-05-F3/muestreo-ola-3.md` — es la única vía que pone humanReview=approved.
+
 | Ayuda | Verificador | Corrección aplicada | Tu turno |
 |---|---|---|---|
 | `complemento-ayuda-infancia` | KO → resuelto | Los tramos 57,50–115 € solo aparecen en rango ≥3; `amount` pasó a `variable` | ☐ OK ☐ KO |
