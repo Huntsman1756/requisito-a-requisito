@@ -53,6 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 								<Link href="/explorar">Explorar</Link>
 								<Link href="/observatorio">Observatorio</Link>
 								<Link href="/datos">Datos</Link>
+								<Link href="/como-verificamos">Cómo lo comprobamos</Link>
 								<Link href="/como-funciona">Cómo funciona</Link>
 							</nav>
 						</details>

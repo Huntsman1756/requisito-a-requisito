@@ -10,7 +10,7 @@ export const es = {
 
 	"check.intro.title": "Descubre qué ayudas puedes pedir",
 	"check.intro.body":
-		"Responde unas preguntas y te decimos qué ayudas merece la pena comprobar. No hace falta registrarse. Tus respuestas no salen de este dispositivo.",
+		"Responde unas preguntas. Te decimos qué ayudas merece la pena comprobar. Sin registro: nada sale de este dispositivo.",
 	"check.intro.start": "Empezar",
 	"check.intro.lifeEvents": "¿Te toca una de estas? Te destacamos lo relevante.",
 	"check.intro.privacy": "Tus respuestas no salen de este dispositivo.",
@@ -29,7 +29,7 @@ export const es = {
 
 	"q.territory.label": "¿En qué municipio de la Comunidad de Madrid estás empadronado?",
 	"q.territory.help": "Escribe el nombre del municipio y elígelo de la lista.",
-	"q.territory.why": "Muchas ayudas exigen estar empadronado en un lugar concreto.",
+	"q.territory.why": "Muchas ayudas exigen estar empadronado en un lugar concreto (estar empadronado = figurar en el padrón municipal de ese pueblo o ciudad).",
 	"q.territory.placeholder": "Escribe el municipio…",
 	"q.territory.outside": "Vivo fuera de la Comunidad de Madrid",
 	"q.territory.ccaa": "Comunidad autónoma",

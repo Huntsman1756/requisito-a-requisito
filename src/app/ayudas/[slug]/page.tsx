@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { aidTitle } from "../../../lib/aid-titles";
 import { formatAmount, formatWindow } from "../../../lib/format";
+import { condText } from "../../../lib/rule-text";
 
 const RULES_DIR = join(process.cwd(), "data/eligibility/rules");
 
@@ -17,7 +18,7 @@ interface Rs {
 	versionNote?: string;
 	humanReview: { status: string };
 	sources: { id: string; rank: number; url: string; title: string }[];
-	requirements: { id: string; label: string; hard: boolean; citation: { locator: string; excerpt: string; sourceId: string } }[];
+	requirements: { id: string; label: string; hard: boolean; condition: import("../../../lib/eligibility-engine/schema").Condition; citation: { locator: string; excerpt: string; sourceId: string } }[];
 	uncoveredRequirements: { id: string; label: string; citation: { locator: string; excerpt: string; sourceId: string } }[];
 	application: {
 		window: { rolling: boolean; opensAt?: string; closesAt?: string };
@@ -125,6 +126,8 @@ export default async function Ficha({
 					<li key={r.id} className="req">
 						<strong>{r.label}</strong>{" "}
 						{!r.hard && <em>(aviso)</em>}
+						<br />
+						<small className="req-rule">Se comprueba así: {condText(r.condition)}</small>
 						<details className="cite">
 							<summary>Fuente</summary>
 							<blockquote>«{r.citation.excerpt}»</blockquote>
