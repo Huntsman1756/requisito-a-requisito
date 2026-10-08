@@ -1,9 +1,9 @@
 {
   "id": "miteco-bono-social",
   "url": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001/que-es.html",
-  "fetchedAt": "2026-10-05T11:49:00.128Z",
-  "sha256": "70956aebd17ff6d286b510ce1c13e3de8c119d6749ada9902d1887bba3e0ff4e",
-  "textSha256": "0c28de65e0e9ad0cf6ac66321eb1bc5f9710b33ac86ebcf23aaa1674c184cd3c",
+  "fetchedAt": "2026-10-08T15:25:15.120Z",
+  "sha256": "5db405131c169a626aed6c0dfbd47ed3e75b342c26402d684de17b2418682d96",
+  "textSha256": "e756125d921f3d1cf51f387d9c8ebdddcfbcfd219b8eee299fd4d68967e8fb5b",
   "contentType": "text/html;charset=utf-8",
   "rank": 3
 }
