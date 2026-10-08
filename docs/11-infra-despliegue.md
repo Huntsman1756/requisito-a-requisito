@@ -116,3 +116,29 @@ Operación:
 - Migración futura a VPS (R7-VPS): probar antes que las sedes responden
   desde la IP del VPS, cron con el mismo script, deploy key de solo
   lectura-escritura para este repo; retirar entonces la tarea de Windows.
+
+## F10 — puerta de completitud antes de la release
+
+`npm run validate:release` incluye, después del build estricto y su
+`release:verify`, dos checks sobre ese mismo export:
+
+- `completeness:verify`: barrido de cada versión (futuras en `validFrom`),
+  al menos un perfil positivo válido y un golden positivo por programa.
+  Genera `evidence/<fecha>-F10/alcanzabilidad.{md,json}`. Los porcentajes
+  describen el dominio del generador, no a la población. Se solicita el
+  cartesiano completo, sin el límite del barrido histórico. Los perfiles
+  fuera del esquema no acreditan alcanzabilidad. El test tiene hasta diez
+  minutos para completar este barrido (incluye 4,1 millones para RMI).
+- `completeness:web`: inventario de fichas y buscador, positivos por el
+  formulario real y páginas/enlaces de todo el nivel 2 en Chromium.
+  Comprueba antes la huella del bundle servido frente al export. Las personas
+  usan respuestas ficticias guardadas mediante sessionStorage y la fecha del
+  golden; se recorren las preguntas y se activa «Mostrar ayudas cerradas»
+  cuando procede. No se sustituye el motor ni se envían perfiles fuera.
+
+La suite general también incluye `tests/eligibility/completeness.test.ts`.
+El inventario de navegador falla actualmente por requisitos de completitud
+no satisfechos; véase `evidence/2026-10-08-F10/completitud.md`. No se desactiva
+la puerta ni se corrigen reglas automáticamente para conseguir un verde.
+Un `release:verify` verde acredita huella, aprobaciones y recuento, pero no
+sustituye los checks posteriores de completitud.

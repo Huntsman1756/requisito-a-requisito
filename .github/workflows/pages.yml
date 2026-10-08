@@ -35,6 +35,9 @@ jobs:
         run: npm run validate:full
         env:
           BASE_PATH: /requisito-a-requisito
+      - name: Install Chromium for release completeness
+        if: vars.RELEASE_MODE == 'strict'
+        run: npx playwright install --with-deps chromium
       - name: Validate release (RELEASE_MODE == 'strict')
         if: vars.RELEASE_MODE == 'strict'
         run: npm run validate:release
