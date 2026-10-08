@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-08",
+  "rulesetsEnBundle": 52,
+  "programasNivel1": 50,
+  "referenceDateBundle": "2026-10-08",
+  "fuentesEnBundle": 145,
+  "fuentesRegistradas": 166,
+  "urlsCitadasEnBundle": 155,
+  "universoAptos": 421,
+  "universoRechazados": 779,
+  "fichasNivel2": 401,
+  "nivel2Estados": {
+    "OPEN": 40,
+    "CLOSED": 328,
+    "UNKNOWN": 15,
+    "ROLLING": 18
+  },
+  "goldenPersonas": 44,
+  "goldenExpectations": 47,
+  "testFiles": 31,
+  "testsTotal": 479,
+  "testsPassed": 479
+}

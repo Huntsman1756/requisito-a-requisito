@@ -1,0 +1,27 @@
+{
+	"$comment": "Plantilla de piloto.json — copiar a evidence/<fecha>-F8/piloto.json y añadir una fila por sesión. Sin datos personales: id anónimo, zona aproximada, perfil genérico. Agregados: npx tsx scripts/piloto-agregados.ts <piloto.json>",
+	"piloto": {
+		"createdAt": "2026-10-08",
+		"descripcion": "Sesiones observadas del piloto F8. Cada fila es una sesión; trazable a su hoja de observación (sheet)."
+	},
+	"sessions": [
+		{
+			"id": "S01",
+			"date": "2026-10-XX",
+			"channel": "presencial | videollamada",
+			"profile": "perfil genérico en una palabra (madre-con-hijos, autonomo, joven)",
+			"consent": true,
+			"timeSeconds": 0,
+			"taskCompleted": "si | no | con-ayuda",
+			"comprehension1to5": 0,
+			"foundAidsUnknown": 0,
+			"foundAidsUnknownSlugs": [],
+			"intendsToApply": "si | no | quiza",
+			"officialSiteContrast": "si | parcial | no | no-hecha",
+			"understandingErrors": "texto literal o vacío",
+			"quote": { "permitted": false, "text": "", "attribution": "" },
+			"technicalIssue": "",
+			"sheet": "hoja-observacion.md · S__"
+		}
+	]
+}

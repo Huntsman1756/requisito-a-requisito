@@ -44,14 +44,17 @@
 
 1. **F10-MUESTREO (Daniel):** marcar `☑ OK`/`☐ KO` en `muestreo-ola-1..10.md`,
    `lote-1.md` y `muestreo-ola-11.md` (las instrucciones ya están en cada
-   cabecera). Sin esto, la release del jurado queda vacía — medido hoy.
+   cabecera; en lote-1 las marcas van al final de cada cabecera `##`). Sin esto,
+   la release del jurado queda vacía — medido hoy.
 2. **F10-REV-2 (agente):** por cada hoja marcada,
-   `npm run review:apply -- evidence/<dir>/muestreo-ola-N.md` y un commit por
-   ola. Es idempotente y rechaza marcas sobre reglas ajenas a la ola.
-3. `npm run freshness:local` el 09/10 (la tarea diaria se saltó el 08/10 por
-   árbol sucio de esta sesión — el script ahora distingue ficheros sin
-   seguimiento, pero el árbol tiene cambios reales commiteados ya).
-4. F10-IMP-1/2 (kit del piloto) una vez cerrada la fiabilidad.
+   `npm run review:apply -- evidence/<dir>/<hoja>.md` y un commit por ola. Es
+   idempotente y rechaza marcas sobre reglas ajenas a la ola.
+3. F10-REV-2 ⇒ cuando todas las olas estén aplicadas, re-ensayo strict con las
+   aprobaciones reales y de ahí a F10-QA / F10-REL-2 (14/10).
+4. Hecho también esta tarde: `npm run freshness:local` (0 stale, 27 leads),
+   F10-DEV-1 (`memoria:cifras` → `submission/cifras.json`), F10-DEV-2
+   (`memoria:pdf` con pandoc+Chromium), kit del piloto ADR-051a
+   (`evidence/2026-10-06-F8/kit/` + `piloto-template.json` + `piloto:agregados`).
 
 ## Bloqueos (quién decide)
 
