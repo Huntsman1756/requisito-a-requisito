@@ -8,6 +8,11 @@
  *   2. TODAS las reglas del bundle tienen humanReview.status "approved".
  *   3. Hay más de 0 reglas incluidas.
  *   4. Hay al menos 20 programas (benefitSlug distintos) — D-12.
+ *   5. FUENTE ÚNICA (ADR-050/G12): el conjunto de fichas /ayudas/<slug>/
+ *      exportadas == benefitSlugs del bundle; nivel-1.json == ese mismo
+ *      conjunto; y ningún HTML de out/ enlaza o nombra como ficha de
+ *      nivel 1 un slug que no esté en el bundle (puede aparecer como
+ *      catálogo de nivel 2 con enlace oficial, ADR-052).
  *
  * Falla cerrado: cualquier incumplimiento sale con código 1 y mensaje claro.
  *
@@ -15,7 +20,7 @@
  */
 
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 export interface ReleaseCheck {
@@ -69,6 +74,80 @@ export function verifyRelease(
 		errors.push(
 			`${noAprobadas.length} regla(s) sin humanReview=approved: ${noAprobadas.join(", ")}`,
 		);
+
+	// --- 5. Fuente única: el export solo publica lo que el bundle incluye ---
+	const bundleSlugs = new Set(rulesets.map((r) => r.benefitSlug));
+
+	const ayudasDir = join(outDir, "ayudas");
+	if (!existsSync(ayudasDir)) {
+		errors.push("falta out/ayudas/: no hay fichas exportadas");
+	} else {
+		const fichas = readdirSync(ayudasDir).filter(
+			(d) =>
+				statSync(join(ayudasDir, d)).isDirectory() &&
+				existsSync(join(ayudasDir, d, "index.html")),
+		);
+		for (const s of fichas)
+			if (!bundleSlugs.has(s))
+				errors.push(`ficha fuera del bundle: /ayudas/${s}/ (regla no aprobada)`);
+		for (const s of bundleSlugs)
+			if (!fichas.includes(s))
+				errors.push(`el bundle incluye ${s} pero falta su ficha /ayudas/${s}/`);
+
+		// El listado /ayudas/ muestra exactamente una tarjeta por programa del
+		// bundle (núcleo duro: ni reglas no aprobadas ni programas que faltan).
+		const indexPath = join(ayudasDir, "index.html");
+		if (!existsSync(indexPath)) {
+			errors.push("falta out/ayudas/index.html (listado)");
+		} else {
+			const cards =
+				readFileSync(indexPath, "utf8").match(/class="aid-card"/g) ?? [];
+			if (cards.length !== bundleSlugs.size)
+				errors.push(
+					`/ayudas/ muestra ${cards.length} tarjetas; el bundle tiene ${bundleSlugs.size} programas`,
+				);
+		}
+	}
+
+	const nivel1Path = join(outDir, "datos/elegibilidad/nivel-1.json");
+	if (!existsSync(nivel1Path)) {
+		errors.push(`falta ${nivel1Path}`);
+	} else {
+		const n1 = JSON.parse(readFileSync(nivel1Path, "utf8")) as {
+			items?: { slug?: string }[];
+		};
+		const n1Slugs = new Set(
+			(n1.items ?? [])
+				.map((i) => i.slug)
+				.filter((s): s is string => typeof s === "string"),
+		);
+		for (const s of n1Slugs)
+			if (!bundleSlugs.has(s))
+				errors.push(`nivel-1.json lista ${s}, que no está en el bundle`);
+		for (const s of bundleSlugs)
+			if (!n1Slugs.has(s))
+				errors.push(`nivel-1.json no lista ${s}, que sí está en el bundle`);
+	}
+
+	// Ningún HTML exportado enlaza una ficha de nivel 1 fuera del bundle.
+	const htmlFiles: string[] = [];
+	const walk = (dir: string) => {
+		for (const f of readdirSync(dir, { withFileTypes: true })) {
+			const p = join(dir, f.name);
+			if (f.isDirectory()) walk(p);
+			else if (f.name.endsWith(".html")) htmlFiles.push(p);
+		}
+	};
+	if (existsSync(outDir)) walk(outDir);
+	for (const file of htmlFiles) {
+		const html = readFileSync(file, "utf8");
+		for (const m of html.matchAll(/\/ayudas\/([a-z0-9][a-z0-9-]*)\//g)) {
+			if (!bundleSlugs.has(m[1]))
+				errors.push(
+					`${file.slice(outDir.length + 1)}: enlace a ficha fuera del bundle /ayudas/${m[1]}/`,
+				);
+		}
+	}
 
 	return {
 		ok: errors.length === 0,
