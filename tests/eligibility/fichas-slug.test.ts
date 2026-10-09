@@ -4,6 +4,10 @@
  * becas-generales-mefp-2026-2027). Test sobre los datos reales del repo
  * (regla 4.11): si un slug del bundle no tiene página, el enlace de la
  * tarjeta lleva a un 404.
+ *
+ * F10-SINGLE-SOURCE: las páginas solo pueden leer el bundle generado
+ * (data/eligibility/bundle/), nunca el directorio de reglas — en --strict el
+ * bundle lleva solo las aprobadas (ADR-050/G12).
  */
 
 import { readdirSync, readFileSync } from "node:fs";
@@ -11,36 +15,27 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
 	allRuleSets,
+	BUNDLE_PATH,
 	listBenefitSlugs,
 	loadVersion,
-	RULES_DIR,
 	versionsOf,
 } from "../../src/lib/rule-pages";
 
-describe("fichas: cada benefitSlug tiene página (datos reales)", () => {
-	const files = readdirSync(RULES_DIR).filter((f) => f.endsWith(".json"));
+describe("fichas: cada benefitSlug del bundle tiene página (datos reales)", () => {
 	const slugs = new Set(listBenefitSlugs());
+	const bundle = JSON.parse(readFileSync(BUNDLE_PATH, "utf8")) as {
+		rulesets: { benefitSlug: string }[];
+	};
 
-	it("todo fichero de reglas aporta su benefitSlug a generateStaticParams", () => {
+	it("todo RuleSet del bundle publica página con su benefitSlug", () => {
 		const missing: string[] = [];
-		for (const f of files) {
-			const rs = JSON.parse(readFileSync(join(RULES_DIR, f), "utf8")) as {
-				benefitSlug: string;
-			};
-			if (!slugs.has(rs.benefitSlug)) missing.push(`${f} → ${rs.benefitSlug}`);
+		for (const rs of bundle.rulesets) {
+			if (!slugs.has(rs.benefitSlug)) missing.push(rs.benefitSlug);
 		}
 		expect(missing).toEqual([]);
 	});
 
-	it("cada benefitSlug del bundle publicado resuelve una ficha", () => {
-		const bundle = JSON.parse(
-			readFileSync(
-				join(
-					process.cwd(),
-					"data/eligibility/bundle/eligibility-bundle.json",
-				),
-				"utf8"),
-		) as { rulesets: { benefitSlug: string }[] };
+	it("cada benefitSlug del bundle resuelve una ficha (versión vigente)", () => {
 		const today = new Date().toISOString().slice(0, 10);
 		const errors: string[] = [];
 		for (const { benefitSlug } of bundle.rulesets) {
@@ -50,9 +45,7 @@ describe("fichas: cada benefitSlug tiene página (datos reales)", () => {
 				continue;
 			}
 			if (loaded.rs.benefitSlug !== benefitSlug)
-				errors.push(
-					`${benefitSlug}: resuelve a ${loaded.rs.benefitSlug}`,
-				);
+				errors.push(`${benefitSlug}: resuelve a ${loaded.rs.benefitSlug}`);
 		}
 		expect(errors).toEqual([]);
 	});
@@ -60,9 +53,33 @@ describe("fichas: cada benefitSlug tiene página (datos reales)", () => {
 	it("las versiones de un slug comparten benefitSlug (R8-VIG)", () => {
 		const errors: string[] = [];
 		for (const rs of allRuleSets()) {
-			if (!versionsOf(rs.benefitSlug).includes(rs))
-				errors.push(rs.benefitSlug);
+			if (!versionsOf(rs.benefitSlug).includes(rs)) errors.push(rs.benefitSlug);
 		}
 		expect(errors).toEqual([]);
+	});
+});
+
+describe("fuente única: ningún fichero de src/ lee data/eligibility/rules", () => {
+	const SRC = join(process.cwd(), "src");
+
+	function* sources(dir: string): Generator<string> {
+		for (const f of readdirSync(dir, { withFileTypes: true })) {
+			const p = join(dir, f.name);
+			if (f.isDirectory()) {
+				if (f.name !== "node_modules") yield* sources(p);
+			} else if (/\.(ts|tsx|js|jsx)$/.test(f.name)) {
+				yield p;
+			}
+		}
+	}
+
+	it("grep: 0 referencias a data/eligibility/rules en src/", () => {
+		const offenders: string[] = [];
+		for (const p of sources(SRC)) {
+			const text = readFileSync(p, "utf8");
+			if (/data\/eligibility\/rules/.test(text))
+				offenders.push(p.slice(SRC.length + 1));
+		}
+		expect(offenders).toEqual([]);
 	});
 });

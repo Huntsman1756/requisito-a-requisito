@@ -19,8 +19,8 @@ const PASOS = [
 		n: "2",
 		t: "Extracto literal con huella",
 		d: "La regla no resume la norma: cita el extracto literal y guarda su sha256. Si el texto oficial cambia y el extracto desaparece, la ayuda sale del listado hasta revisarla.",
-		ev: "Un RuleSet de ejemplo: data/eligibility/rules/imv.json",
-		url: `${REPO}/blob/main/data/eligibility/rules/imv.json`,
+		ev: "El bundle publicado: data/eligibility/bundle/eligibility-bundle.json",
+		url: `${REPO}/blob/main/data/eligibility/bundle/eligibility-bundle.json`,
 	},
 	{
 		n: "3",
@@ -53,7 +53,7 @@ const PASOS = [
 	{
 		n: "7",
 		t: "Auditoría de falsos negativos",
-		d: "Los 50 programas fueron revisados uno a uno por verificadores nuevos preguntando: «¿puede la regla decirle que no a quien la norma admite?». Los hallazgos se corrigieron o declararon.",
+		d: "Cada programa con regla propia se revisó uno a uno por verificadores nuevos preguntando: «¿puede la regla decirle que no a quien la norma admite?». Los hallazgos se corrigieron o declararon.",
 		ev: "evidence/2026-10-08-F10/falsos-negativos/resumen.md",
 		url: `${REPO}/blob/main/evidence/2026-10-08-F10/falsos-negativos/resumen.md`,
 	},

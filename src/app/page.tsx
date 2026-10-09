@@ -1,25 +1,30 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import Link from "next/link";
 import { aidTitle } from "../lib/aid-titles";
 import { formatDateEs } from "../lib/format";
+import { allRuleSets } from "../lib/rule-pages";
+
+interface StatRule {
+	benefitSlug: string;
+	verifiedAt: string;
+	requirements?: { label: string; citation?: { locator?: string } }[];
+	uncoveredRequirements?: { label: string; citation?: { locator?: string } }[];
+	sources?: { id: string }[];
+}
 
 function stats() {
-	const dir = join(process.cwd(), "data/eligibility/rules");
-	// R8-VIG: los ficheros `<slug>__v-*.json` son versiones futuras del mismo
-	// programa — las ayudas se cuentan por slug, no por fichero.
-	const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
-	const slugs = new Set(
-		files.map((f) => f.slice(0, -5).replace(/__v-\d{4}-\d{2}-\d{2}$/, "")),
-	);
+	// Fuente única: el bundle (en --strict solo las reglas aprobadas, ADR-050).
+	// Las ayudas se cuentan por benefitSlug, no por versión (R8-VIG).
+	const rules = allRuleSets<StatRule>();
+	const slugs = new Set(rules.map((r) => r.benefitSlug));
 	let verified = "";
-	const specimen = JSON.parse(
-		readFileSync(join(dir, "bono-cultural-joven.json"), "utf8"),
-	);
-	for (const f of files) {
-		const d = JSON.parse(readFileSync(join(dir, f), "utf8"));
-		if (!verified || d.verifiedAt > verified) verified = d.verifiedAt;
+	for (const d of rules) {
+		if (!verified || (d.verifiedAt ?? "") > verified)
+			verified = d.verifiedAt ?? "";
 	}
+	const specimen =
+		rules.find((r) => r.benefitSlug === "bono-cultural-joven") ?? rules[0];
 	const n2 = JSON.parse(
 		readFileSync(
 			join(process.cwd(), "public/datos/elegibilidad/nivel-2.json"),
@@ -31,7 +36,7 @@ function stats() {
 		return acc;
 	}, {});
 	return {
-		specimenDomain: (specimen.sources?.[0]?.id?.split("-")[0] ?? "boe").toUpperCase(),
+		specimenDomain: (specimen?.sources?.[0]?.id?.split("-")[0] ?? "boe").toUpperCase(),
 		rules: slugs.size,
 		level2: n2.items.length,
 		verified,
@@ -65,8 +70,8 @@ const EVENTS: [string, string][] = [
 export default function Home() {
 	const { rules, level2, verified, specimen, byEvent, specimenDomain } = stats();
 	const sReq = [
-		...(specimen.requirements ?? []).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "ok", mark: "✓", al: "Requisito comprobado" })),
-		...(specimen.uncoveredRequirements ?? []).slice(0, 1).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "na", mark: "⚠", al: "No comprobable aquí" })),
+		...(specimen?.requirements ?? []).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "ok", mark: "✓", al: "Requisito comprobado" })),
+		...(specimen?.uncoveredRequirements ?? []).slice(0, 1).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "na", mark: "⚠", al: "No comprobable aquí" })),
 	].slice(0, 3);
 	return (
 		<>
@@ -110,6 +115,7 @@ export default function Home() {
 					</ul>
 				</div>
 
+				{specimen && (
 				<div className="specimen" aria-label="Ejemplo de comprobación de una ayuda">
 					<div className="head">
 						<h2>{aidTitle(specimen.benefitSlug)}</h2>
@@ -133,6 +139,7 @@ export default function Home() {
 						</small>
 					</div>
 				</div>
+				)}
 			</section>
 
 			<section className="band shell" aria-labelledby="h-eventos">

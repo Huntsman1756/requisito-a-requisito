@@ -1,16 +1,15 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { formatDateEs } from "../../lib/format";
+import { allRuleSets } from "../../lib/rule-pages";
 
 export const metadata: Metadata = { title: "Observatorio" };
 
 const OUT = "public/datos/elegibilidad";
 
 export default function Observatorio() {
-	const rulesDir = join(process.cwd(), "data/eligibility/rules");
-	const rules = readdirSync(rulesDir).filter((f) => f.endsWith(".json"));
 	const manifest = JSON.parse(
 		readFileSync(join(process.cwd(), "data/eligibility/bundle/manifest.json"), "utf8"),
 	);
@@ -20,10 +19,12 @@ export default function Observatorio() {
 	const sources = JSON.parse(
 		readFileSync(join(process.cwd(), "data/eligibility/sources/registry.json"), "utf8"),
 	);
+	// Fecha de la última verificación sobre las reglas del bundle publicado
+	// (en --strict, solo las aprobadas — ADR-050/G12).
 	let verified = "";
-	for (const f of rules) {
-		const d = JSON.parse(readFileSync(join(rulesDir, f), "utf8"));
-		if (!verified || d.verifiedAt > verified) verified = d.verifiedAt;
+	for (const d of allRuleSets<{ benefitSlug: string; verifiedAt?: string }>()) {
+		if (!verified || (d.verifiedAt ?? "") > verified)
+			verified = d.verifiedAt ?? "";
 	}
 	const byState = (l2.items as { accessState?: string }[]).reduce<Record<string, number>>((acc, i) => {
 		const k = i.accessState ?? "UNKNOWN";

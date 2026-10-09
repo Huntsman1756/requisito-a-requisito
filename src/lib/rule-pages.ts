@@ -1,16 +1,24 @@
 /**
  * rule-pages.ts — resolución slug → RuleSet para las fichas /ayudas/<slug>/.
  *
+ * ÚNICA fuente: el bundle generado (data/eligibility/bundle/). En build
+ * normal lleva todos los RuleSets; en `--strict` solo las reglas con
+ * humanReview aprobado (ADR-050/G12) — así ninguna página publica una regla
+ * que el bundle no incluye.
+ *
  * El identificador público es `benefitSlug`, que NO tiene por qué coincidir
- * con el nombre del fichero (p. ej. `becas-mec-universidad-2026-2027.json`
+ * con el nombre del fichero fuente (p. ej. `becas-mec-universidad-2026-2027`
  * publica `becas-generales-mefp-2026-2027`). Un mismo slug puede tener varias
- * versiones temporales (`__v-AAAA-MM-DD` en el nombre, R8-VIG).
+ * versiones temporales (R8-VIG: `validFrom`/`validUntil` en el bundle).
  */
 
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-export const RULES_DIR = join(process.cwd(), "data/eligibility/rules");
+export const BUNDLE_PATH = join(
+	process.cwd(),
+	"data/eligibility/bundle/eligibility-bundle.json",
+);
 
 export interface RuleSetLike {
 	benefitSlug: string;
@@ -18,49 +26,40 @@ export interface RuleSetLike {
 	validUntil?: string;
 }
 
-let cache: { dir: string; rules: RuleSetLike[] } | null = null;
+let cache: RuleSetLike[] | null = null;
 
-function readAll(dir: string): RuleSetLike[] {
-	if (cache?.dir === dir) return cache.rules;
-	const rules: RuleSetLike[] = [];
-	for (const f of readdirSync(dir)) {
-		if (!f.endsWith(".json")) continue;
-		try {
-			const rs = JSON.parse(readFileSync(join(dir, f), "utf8")) as RuleSetLike;
-			if (typeof rs.benefitSlug === "string") rules.push(rs);
-		} catch {
-			// archivo ilegible: se ignora
-		}
-	}
-	cache = { dir, rules };
-	return rules;
+function readAll(): RuleSetLike[] {
+	if (cache) return cache;
+	const bundle = JSON.parse(readFileSync(BUNDLE_PATH, "utf8")) as {
+		rulesets?: RuleSetLike[];
+	};
+	cache = (bundle.rulesets ?? []).filter(
+		(r) => typeof r.benefitSlug === "string",
+	);
+	return cache;
 }
 
-/** Todos los RuleSets del directorio (parseados una vez por proceso). */
-export function allRuleSets<T extends RuleSetLike>(dir = RULES_DIR): T[] {
-	return readAll(dir) as T[];
+/** Todos los RuleSets del bundle (una sola lectura por proceso). */
+export function allRuleSets<T extends RuleSetLike>(): T[] {
+	return readAll() as T[];
 }
 
-/** Slugs que publican página: los `benefitSlug` reales, no los nombres de fichero. */
-export function listBenefitSlugs(dir = RULES_DIR): string[] {
-	return [...new Set(readAll(dir).map((r) => r.benefitSlug))].sort();
+/** Slugs publicados: los `benefitSlug` del bundle (no los nombres de fichero). */
+export function listBenefitSlugs(): string[] {
+	return [...new Set(readAll().map((r) => r.benefitSlug))].sort();
 }
 
-/** Versiones de un slug (todas las que comparten `benefitSlug`). */
-export function versionsOf<T extends RuleSetLike>(
-	slug: string,
-	dir = RULES_DIR,
-): T[] {
-	return allRuleSets<T>(dir).filter((r) => r.benefitSlug === slug);
+/** Versiones de un slug (todas las que comparten `benefitSlug` en el bundle). */
+export function versionsOf<T extends RuleSetLike>(slug: string): T[] {
+	return allRuleSets<T>().filter((r) => r.benefitSlug === slug);
 }
 
 /** La versión vigente en `today`, o la más estable si ninguna lo está. */
 export function loadVersion<T extends RuleSetLike>(
 	slug: string,
 	today: string,
-	dir = RULES_DIR,
 ): { rs: T; other: T[] } | null {
-	const all = versionsOf<T>(slug, dir);
+	const all = versionsOf<T>(slug);
 	if (all.length === 0) return null;
 	const valid = all.filter(
 		(r) =>

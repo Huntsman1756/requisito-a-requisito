@@ -1,8 +1,7 @@
-import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { formatAmount, formatWindow } from "../../lib/format";
+import { allRuleSets, loadVersion } from "../../lib/rule-pages";
 
 export const metadata: Metadata = { title: "Ayudas del piloto" };
 
@@ -14,6 +13,8 @@ interface Source {
 }
 interface RuleListItem {
 	benefitSlug: string;
+	validFrom?: string;
+	validUntil?: string;
 	humanReview: { status: string };
 	sources: Source[];
 	application: {
@@ -37,12 +38,19 @@ const TITLES: Record<string, string> = {
 		"Descuento de tren para familias numerosas",
 };
 
+// Una tarjeta por benefitSlug (la versión vigente), todo desde el bundle:
+// en --strict solo salen las reglas aprobadas (ADR-050/G12).
 function loadRules(): RuleListItem[] {
-	const dir = join(process.cwd(), "data/eligibility/rules");
-	return readdirSync(dir)
-		.filter((f) => f.endsWith(".json"))
-		.sort()
-		.map((f) => JSON.parse(readFileSync(join(dir, f), "utf8")));
+	const today = new Date().toISOString().slice(0, 10);
+	const seen = new Set<string>();
+	const out: RuleListItem[] = [];
+	for (const { benefitSlug } of allRuleSets<RuleListItem>()) {
+		if (seen.has(benefitSlug)) continue;
+		seen.add(benefitSlug);
+		const v = loadVersion<RuleListItem>(benefitSlug, today);
+		if (v) out.push(v.rs);
+	}
+	return out.sort((a, b) => a.benefitSlug.localeCompare(b.benefitSlug));
 }
 
 const amountText = (r: RuleListItem) => (r.amount ? formatAmount(r.amount) : null);
