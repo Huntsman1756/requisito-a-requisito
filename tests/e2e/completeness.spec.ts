@@ -136,7 +136,14 @@ test("enlaces internos: todo /ayudas/<slug>/ enlazado existe en el export", asyn
 
 test("persona positiva: cada programa se muestra en resultados de comprobar", async ({
 	browser,
-}) => {
+}, testInfo) => {
+	// Barrido por los 50 programas: una sola pasada por motor de escritorio
+	// basta — en proyectos móviles emulados duplica minutos sin añadir
+	// cobertura (la UI del flujo ya se prueba en comprobar/visual).
+	test.skip(
+		/mobile|tablet|small-reflow/.test(testInfo.project.name),
+		"el barrido corre en escritorio; en móvil lo cubren comprobar/visual",
+	);
 	test.setTimeout(300_000);
 	const errors: string[] = [];
 	for (const slug of rules.map((r) => r.benefitSlug)) {

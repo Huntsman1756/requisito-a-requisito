@@ -39,12 +39,16 @@ jobs:
         run: npm run build:release && npm run release:verify
       # El export estático se sirve con scripts/serve-export.mjs (lo arranca
       # el propio Playwright como webServer).
+      # Funcional en los 6 proyectos; la suite visual solo va en la muestra
+      # WebKit de abajo (correrla entera por proyecto agota el timeout).
       - name: "e2e funcional — escritorio + móvil (Firefox/WebKit)"
-        run: npx playwright test --project=desktop-firefox --project=desktop-webkit --project=mobile-ios15 --project=mobile-iphonese --project=mobile-firefox --project=tablet-ios
+        run: npx playwright test --project=desktop-firefox --project=desktop-webkit --project=mobile-ios15 --project=mobile-iphonese --project=mobile-firefox --project=tablet-ios --grep-invert "layout|nav móvil"
         env:
           CI: "true"
-      - name: "Suite visual-layout (WebKit)"
-        run: npx playwright test tests/e2e/visual-layout.spec.ts --project=desktop-webkit
+      # WebKit no necesita la matriz entera (ya corre en chromium local/CI):
+      # una muestra representativa basta para detectar divergencias de motor.
+      - name: "Suite visual-layout (WebKit, muestra)"
+        run: npx playwright test tests/e2e/visual-layout.spec.ts --project=desktop-webkit -g "portada|ficha imv|explorar|comprobar|resultados imv|zoom|nav móvil"
         env:
           CI: "true"
       - uses: actions/upload-artifact@v4

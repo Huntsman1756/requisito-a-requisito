@@ -538,8 +538,12 @@ for (const theme of THEMES) {
 		for (const [name, path] of STATIC_PAGES) {
 			test(`layout ${name} (${theme})`, async ({ page }) => {
 				wireConsole(page, name);
-				await page.goto(url(path));
-				await page.waitForLoadState("networkidle");
+				// networkidle nunca se resuelve tras un 404 en Firefox; la
+				// página 404 es estática y con load basta.
+				const wait =
+					name === "pagina-404" ? "load" : "networkidle";
+				await page.goto(url(path), { waitUntil: wait });
+				await page.waitForLoadState(wait);
 				const all = await auditAt(page, `${name}-${theme}`, WIDTHS);
 				expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 			});

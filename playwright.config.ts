@@ -46,16 +46,18 @@ export default defineConfig({
 		{ name: "mobile-ios", use: { ...devices["iPhone 14"] } },
 		{ name: "mobile-ios15", use: { ...devices["iPhone 15"] } },
 		{ name: "mobile-iphonese", use: { ...devices["iPhone SE"] } },
-		// Firefox móvil: no hay perfiles de dispositivo Firefox; se emula con
-		// viewport + isMobile + hasTouch.
+		// Firefox móvil: no hay perfiles de dispositivo Firefox e `isMobile`
+		// NO está soportado fuera de Chromium (congela el contexto). Se emula
+		// con viewport + hasTouch + DSF, como recomienda Playwright.
 		{
 			name: "mobile-firefox",
 			use: {
 				...devices["Desktop Firefox"],
 				viewport: { width: 412, height: 915 },
-				isMobile: true,
 				hasTouch: true,
 				deviceScaleFactor: 2.625,
+				userAgent:
+					"Mozilla/5.0 (Android 14; Mobile; rv:131.0) Gecko/131.0 Firefox/131.0",
 			},
 		},
 		{ name: "tablet-ios", use: { ...devices["iPad Mini"] } },
