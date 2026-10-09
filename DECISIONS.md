@@ -446,3 +446,27 @@ nivel 2 pasa a ser «aparece en /explorar/ con enlace oficial HTTPS»; el del
 nivel 1 es «tiene ficha en /ayudas/<benefitSlug>/ y aparece en /explorar/ sin
 duplicar su entrada de nivel 2». Si en el futuro el nivel 2 tuviera páginas
 propias, tendrían que dejar claro que no hay comprobación de requisitos.
+
+## ADR-053 — Espejo público en el VPS (requisito.h1756.es), modelo pull
+2026-10-09 · aceptada (decisión de Daniel, registrada por el agente) ·
+Daniel decidió desplegar un **espejo** de la web en el VPS h1756
+(`https://requisito.h1756.es`). D-13 sigue: la URL oficial del jurado es
+GitHub Pages hasta el 16/10 — la memoria y los anexos no cambian.
+**Arquitectura:** el workflow `vps-artifact.yml` corre tras un deploy de
+Pages en verde, construye una segunda variante del export con `BASE_PATH`
+vacío por la misma ruta de modo (`validate:full` en normal;
+`validate:release` + `release:verify` en strict) y publica `site.tar.gz` +
+`manifest.json` (commit, modo, sha256 del tar, bundleDigest) en la release
+fija `vps-latest`. El VPS la descarga cada 10 min con
+`/opt/requisito/update.sh` (timer systemd, usuario `requisito` sin sudo):
+verifica sha256 del tar y del bundle, en modo strict exige
+`humanReview=approved` en todas las reglas (fail-closed, misma garantía que
+`release:verify`), y cambia `CURRENT` de forma atómica con rollback a
+`PREVIOUS` si la comprobación HTTP falla. **GitHub no guarda ninguna
+credencial del VPS** (pull puro). Servido por `nginxinc/nginx-unprivileged`
+fijado por digest, read_only, cap_drop ALL, 64 MB / 0,25 CPU, solo en la red
+`coolify` detrás de Traefik (HTTPS + Let's Encrypt); logs sin query string
+ni Referer (privacidad, regla 4.6). Como las páginas leen solo el bundle
+(ADR-050/G12, fuente única), el espejo publica exactamente el mismo
+`bundleDigest` que Pages — incluido el paso a strict del 14/10 sin
+intervención.

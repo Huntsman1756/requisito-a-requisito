@@ -1,0 +1,50 @@
+# requisito.h1756.es — espejo estático del export de Pages (ADR-053).
+# Modelo PULL: /opt/requisito/update.sh (systemd timer) descarga la release
+# fija `vps-latest` de GitHub, verifica sha256 y cambia CURRENT de forma
+# atómica. nginx resuelve el symlink en cada petición ⇒ el switch no
+# reinstala ni reinicia el contenedor.
+#
+# Instalación: /opt/requisito/compose.yml + nginx/; datos en /data/requisito/
+# (releases/<commit>/, CURRENT, PREVIOUS — uid 999 `requisito`).
+services:
+  requisito-web:
+    image: nginxinc/nginx-unprivileged:1.27-alpine@sha256:65e3e85dbaed8ba248841d9d58a899b6197106c23cb0ff1a132b7bfe0547e4c0
+    container_name: requisito-web-1
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    mem_limit: 64m
+    cpus: 0.25
+    volumes:
+      # El padre, no el symlink: si se monta CURRENT, Docker lo resuelve al
+      # arrancar y el switch atómico no tendría efecto sin restart.
+      - /data/requisito:/srv/requisito:ro
+      - /opt/requisito/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /opt/requisito/nginx/headers.conf:/etc/nginx/requisito-headers.conf:ro
+    networks:
+      coolify:
+        # Alias único por proyecto (lección de enforcement-es: «web» chocaba).
+        aliases: [requisito-web]
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: "coolify"
+      traefik.http.routers.requisito-http.rule: "Host(`requisito.h1756.es`)"
+      traefik.http.routers.requisito-http.entrypoints: "http"
+      traefik.http.routers.requisito-http.middlewares: "requisito-redirect"
+      traefik.http.middlewares.requisito-redirect.redirectscheme.scheme: "https"
+      traefik.http.middlewares.requisito-redirect.redirectscheme.permanent: "true"
+      traefik.http.routers.requisito-https.rule: "Host(`requisito.h1756.es`)"
+      traefik.http.routers.requisito-https.entrypoints: "https"
+      traefik.http.routers.requisito-https.service: "requisito"
+      traefik.http.routers.requisito-https.tls: "true"
+      traefik.http.routers.requisito-https.tls.certresolver: "letsencrypt"
+      traefik.http.services.requisito.loadbalancer.server.port: "8080"
+    # Sin puertos publicados: solo Traefik (red coolify) llega al contenedor.
+
+networks:
+  coolify:
+    external: true

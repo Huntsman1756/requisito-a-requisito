@@ -1,0 +1,11 @@
+# /etc/systemd/system/requisito-update.timer
+[Unit]
+Description=Timer del actualizador del espejo requisito.h1756.es
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+AccuracySec=30s
+
+[Install]
+WantedBy=timers.target

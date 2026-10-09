@@ -142,3 +142,45 @@ no satisfechos; véase `evidence/2026-10-08-F10/completitud.md`. No se desactiva
 la puerta ni se corrigen reglas automáticamente para conseguir un verde.
 Un `release:verify` verde acredita huella, aprobaciones y recuento, pero no
 sustituye los checks posteriores de completitud.
+
+## 5. Espejo en el VPS (ADR-053, modelo pull)
+
+`https://requisito.h1756.es` sirve **exactamente el mismo export** que Pages
+(mismo `bundleDigest`, mismo modo). La URL oficial del jurado sigue siendo
+Pages (D-13); el VPS es copia de respaldo legible.
+
+```
+push a main → Pages verde → vps-artifact.yml (workflow_run)
+   ├─ misma ruta de modo: validate:full (normal) o validate:release (strict)
+   ├─ out/ con BASE_PATH="" (raíz del subdominio)
+   ├─ vps-package.ts → artifacts/site.tar.gz + manifest.json
+   │     (commit, modo, sha256 tar, bundleDigest; fail-closed si el export
+   │      conserva el prefijo de Pages en enlaces internos)
+   └─ gh release upload vps-latest --clobber (GITHUB_TOKEN, contents:write
+      solo en ese job)
+
+VPS cada 10 min (timer systemd, usuario `requisito` sin sudo):
+   /opt/requisito/update.sh descarga manifest.json → si el commit es nuevo:
+   descarga tar, verifica sha256, extrae en /data/requisito/releases/<sha>/,
+   verifica sha256 de bundle.json, en strict exige humanReview=approved en
+   todas las reglas, cambia CURRENT con `ln -s` + `mv -T` (atómico), comprueba
+   HTTP 200 en /, /comprobar/ y una ficha + sha del bundle servido, y si algo
+   falla vuelve a PREVIOUS. Poda: solo CURRENT + PREVIOUS.
+```
+
+Fichas de despliegue versionadas en `deploy/vps/` del repo (compose, nginx,
+update.sh, units). En el VPS viven en `/opt/requisito/` y `/data/requisito/`.
+
+Operación (todas desde SSH `h1756-vps1`):
+
+- Qué commit sirve: `curl -s https://requisito.h1756.es/datos/elegibilidad/bundle.json | sha256sum`
+  y comparar con `manifest.json` de `vps-latest`; o
+  `readlink /data/requisito/CURRENT`.
+- Pausar el actualizador: `sudo systemctl stop requisito-update.timer`
+  (volver: `... start`; el servicio web sigue sirviendo lo último).
+- Rollback manual: `sudo -u requisito ln -sfn releases/$(basename $(readlink /data/requisito/PREVIOUS)) /data/requisito/CURRENT.new && sudo -u requisito mv -T /data/requisito/CURRENT.new /data/requisito/CURRENT` — nginx resuelve el symlink por petición, sin reiniciar.
+- Log: `sudo journalctl -t requisito-update` / `-u requisito-update`.
+- Tras 3 fallos seguidos queda registrado en journald; el aviso por Telegram
+  queda pendiente (no hay canal reutilizable sin nuevos secretos).
+- `REQUISITO_RELEASE_URL` (env) permite ensayar con otra release sin tocar el
+  script (así se hicieron las pruebas de fallo C3/C4).

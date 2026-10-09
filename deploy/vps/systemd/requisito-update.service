@@ -1,0 +1,17 @@
+# /etc/systemd/system/requisito-update.service
+[Unit]
+Description=Actualizador del espejo requisito.h1756.es (pull, ADR-053)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=requisito
+Group=requisito
+ExecStart=/opt/requisito/update.sh
+# Sin privilegios: el usuario solo escribe en /data/requisito.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/data/requisito
+PrivateTmp=true

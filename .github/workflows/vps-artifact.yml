@@ -1,0 +1,66 @@
+name: Artefacto VPS (espejo h1756.es)
+
+# Tras un Pages verde (workflow_run) — nunca antes: el VPS replica el mismo
+# export que el jurado ve (ADR-053). Construye una segunda variante SIN
+# BASE_PATH (el espejo sirve en la raíz de requisito.h1756.es) por la MISMA
+# ruta de modo que Pages: validate:full en normal, validate:release +
+# release:verify en strict (nunca `npm run build` tras build:release).
+# Modelo PULL: el VPS descarga la release fija `vps-latest`; GitHub no guarda
+# ninguna credencial del VPS.
+
+on:
+  workflow_run:
+    workflows: ["Deploy a GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vps-artifact:
+    if: >-
+      ${{
+        github.event_name == 'workflow_dispatch' ||
+        github.event.workflow_run.conclusion == 'success'
+      }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # gh release upload vps-latest (solo este job)
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Validate normal (RELEASE_MODE ausente o 'normal')
+        if: vars.RELEASE_MODE != 'strict'
+        run: npm run validate:full
+        env:
+          BASE_PATH: "" # espejo en la raíz del subdominio
+      - name: Install Chromium for release completeness
+        if: vars.RELEASE_MODE == 'strict'
+        run: npx playwright install --with-deps chromium
+      - name: Validate release (RELEASE_MODE == 'strict')
+        if: vars.RELEASE_MODE == 'strict'
+        run: npm run validate:release
+        env:
+          BASE_PATH: ""
+      - name: Empaquetar out/ + manifest
+        run: >-
+          npx tsx scripts/vps-package.ts out artifacts
+          "${{ github.event.workflow_run.head_sha || github.sha }}"
+          "${{ vars.RELEASE_MODE == 'strict' && 'strict' || 'normal' }}"
+      - name: Publicar en la release fija vps-latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view vps-latest >/dev/null 2>&1 || \
+            gh release create vps-latest \
+              --title "vps-latest" \
+              --notes "Artefactos del espejo requisito.h1756.es (pull, ADR-053). Actualizado por cada Pages verde."
+          gh release upload vps-latest \
+            artifacts/site.tar.gz artifacts/manifest.json --clobber
