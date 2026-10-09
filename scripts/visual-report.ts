@@ -7,7 +7,7 @@
  */
 
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { dirname, join } from "node:path";
 
 const out = process.argv[2] ?? "test-results/visual-report.md";
 const shotsDir = process.argv[3] ?? "test-results/visual";

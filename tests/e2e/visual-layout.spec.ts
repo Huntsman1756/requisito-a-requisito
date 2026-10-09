@@ -99,9 +99,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 	return page.evaluate(() => {
 		type F = { type: string; severity: "alta" | "media" | "baja"; detail: string };
 		const out: F[] = [];
-		const w = window as unknown as { __va: Record<string, number> };
-		const dbg: Record<string, number> = (w.__va = {});
-		const mark = (k: string) => (dbg[k] = Math.round(performance.now()));
 		const vw = document.documentElement.clientWidth;
 
 		// a) scroll horizontal (+ qué elementos lo provocan)
@@ -164,7 +161,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			);
 		};
 
-		mark("a-scroll");
 		const leaves: { el: Element; r: DOMRect; lines: DOMRect[]; text: string }[] = [];
 		const boxes: { el: Element; r: DOMRect; text: string }[] = [];
 		const walker = document.createTreeWalker(
@@ -211,11 +207,9 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				byTop.set(kk, arr);
 			}
 		};
-		mark("b-leaves");
 		for (const l of leaves) for (const r of l.lines) addBox(l.el, r, l.text);
 		for (const b of boxes) addBox(b.el, b.r, b.text);
 		const seenPair = new Set<Element>();
-		const seenOther = new Set<Element>();
 		for (const arr of byTop.values()) {
 			for (let i = 0; i < arr.length; i++) {
 				const a = arr[i];
@@ -245,7 +239,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
-		mark("c-solapes");
 		// c) columna estrecha / palabra fuera de la caja  e) texto cortado
 		for (const { el, r, text } of leaves) {
 			const cs = getComputedStyle(el);
@@ -286,7 +279,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
-		mark("d-cortado");
 		// d) objetivos táctiles en móvil (<44 px; <24 incumple WCAG 2.5.8).
 		// Excepción WCAG: los enlaces inline dentro de un flujo de texto no son
 		// objetivos — solo se miden controles «standalone» (display no-inline,
@@ -297,7 +289,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			);
 			for (const el of [...touch]) {
 				if (!visible(el) || el.closest("details:not([open])")) continue;
-				const cs = getComputedStyle(el);
 				// WCAG 2.5.8 inline-in-text: enlaces dentro de párrafos/celdas.
 				if (el.tagName === "A" && el.closest("p, li, dd, blockquote")) continue;
 				// radios/checkboxes: el objetivo táctil real es la etiqueta.
@@ -321,7 +312,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
-		mark("e-tactil");
 		// g) slugs técnicos como texto visible (fuera de code/pre y de URLs)
 		const slugRe = /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/g;
 		const twalker = document.createTreeWalker(
@@ -353,7 +343,6 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 			tn = twalker.nextNode();
 		}
-		mark("f-slug");
 		return out;
 	});
 }
@@ -569,7 +558,8 @@ for (const theme of THEMES) {
 			// real llega a ese paso y escribe 2 personas → filas de edad.
 			const persona = fixtures.persons.find(
 				(p) => p.slug === "madrid-abono-transporte-infantil",
-			)!;
+			);
+			if (!persona) throw new Error("persona madrid-abono-transporte-infantil no encontrada");
 			const answers = structuredClone(persona.answers);
 			delete answers.dependents;
 			await page.clock.install({

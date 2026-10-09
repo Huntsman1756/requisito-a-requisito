@@ -17,10 +17,13 @@ export const AID_TITLES: Record<string, string> = {
 	"madrid-bono-alquiler-joven": "Bono alquiler joven (Comunidad de Madrid)",
 	"madrid-becas-bachillerato-centros-privados":
 		"Becas de Bachillerato en centros privados (Comunidad de Madrid)",
-	"madrid-renta-minima-insercion": "Renta Mínima de Inserción (Comunidad de Madrid)",
+	"madrid-renta-minima-insercion":
+		"Renta Mínima de Inserción (Comunidad de Madrid)",
 	"prestaciones-dependencia-saad": "Reconocimiento de la dependencia (SAAD)",
-	"madrid-abono-transporte-joven": "Abono transporte joven (Comunidad de Madrid)",
-	"madrid-abono-transporte-65": "Tarjeta azul de transporte (+65, Madrid capital)",
+	"madrid-abono-transporte-joven":
+		"Abono transporte joven (Comunidad de Madrid)",
+	"madrid-abono-transporte-65":
+		"Tarjeta azul de transporte (+65, Madrid capital)",
 	"prestacion-cuidado-menor-enfermedad-grave":
 		"Prestación por cuidado de menores con enfermedad grave",
 	"complemento-ayuda-infancia": "Complemento de ayuda para la infancia (IMV)",
@@ -30,18 +33,22 @@ export const AID_TITLES: Record<string, string> = {
 		"Ayuda económica por nacimiento (Comunidad de Madrid)",
 	"prestacion-nacimiento-cuidado-menor":
 		"Permiso y prestación por nacimiento y cuidado del menor",
-	"becas-generales-mefp-2026-2027": "Becas del Ministerio de Educación (universidad)",
-	"madrid-abono-transporte-infantil": "Transporte público gratuito infantil (menores de 7 años)",
+	"becas-generales-mefp-2026-2027":
+		"Becas del Ministerio de Educación (universidad)",
+	"madrid-abono-transporte-infantil":
+		"Transporte público gratuito infantil (menores de 7 años)",
 	"prestacion-cuidador-no-profesional":
 		"Prestación para cuidadoras no profesionales de personas dependientes",
-	"prestacion-desempleo-contributiva": "Prestación contributiva por desempleo (SEPE)",
+	"prestacion-desempleo-contributiva":
+		"Prestación contributiva por desempleo (SEPE)",
 	"madrid-ayudas-urgencia-social":
 		"Ayudas económicas de urgencia social (Comunidad de Madrid)",
 	"pension-no-contributiva": "Pensión no contributiva (jubilación o invalidez)",
 	"subsidio-desempleo": "Subsidio por desempleo (insuficiencia de cotización)",
 	"asignacion-hijo-a-cargo": "Asignación por hijo o menor a cargo",
 	"pension-viudedad": "Pensión de viudedad",
-	"madrid-ayudas-alquiler-plan-estatal": "Ayuda al alquiler (Plan Estatal de Vivienda)",
+	"madrid-ayudas-alquiler-plan-estatal":
+		"Ayuda al alquiler (Plan Estatal de Vivienda)",
 	"cese-actividad-autonomos": "Cese de actividad de autónomos",
 	"pension-incapacidad-permanente": "Pensión de incapacidad permanente",
 	"pension-jubilacion-contributiva": "Pensión de jubilación contributiva",
