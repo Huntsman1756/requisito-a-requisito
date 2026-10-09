@@ -9,6 +9,9 @@ export default defineConfig({
 	testDir: "./tests/e2e",
 	timeout: 45_000,
 	retries: 0,
+	// La suite visual genera un test por página×tema; sin esto corren en
+	// serie dentro del mismo fichero.
+	fullyParallel: true,
 	reporter: "list",
 	use: {
 		baseURL: process.env.E2E_BASE_URL ?? `http://localhost:${port}`,

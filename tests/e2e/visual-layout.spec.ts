@@ -1,0 +1,627 @@
+/**
+ * visual-layout.spec.ts — detector de defectos de maquetación (F10-VISUAL).
+ *
+ * Recorre TODAS las páginas del export (portada, listados, las fichas del
+ * nivel 1, /comprobar/ en pasos y resultados con personas golden, páginas
+ * informativas y la 404) en una matriz de anchos × tema × zoom de texto, y
+ * en cada combinación comprueba:
+ *   a) scroll horizontal del documento;
+ *   b) solapes >2 px entre hojas de texto visibles (excluye ancestro/
+ *      descendiente y elementos ocultos);
+ *   c) columnas de texto demasiado estrechas (una palabra por línea) o
+ *      palabras que salen de su caja;
+ *   d) objetivos táctiles <44 px en móvil (WCAG 2.5.8: 24 px mínimo legal);
+ *   e) texto cortado (overflow:hidden con scrollWidth>clientWidth) y texto
+ *      sobre iconos/imágenes;
+ *   f) contraste axe (color-contrast) en claro y en oscuro;
+ *   g) slugs técnicos como texto visible;
+ *   h) errores de consola y peticiones de recursos con 404.
+ *
+ * Los hallazgos se acumulan en test-results/visual-findings-<run>.jsonl
+ * (scripts/visual-report.ts los convierte en el informe) y las capturas de
+ * las combinaciones con fallo en test-results/visual/.
+ *
+ * Matriz: por defecto se auditan todos los anchos × claro+oscuro;
+ * VISUAL_MATRIX=ci acota a los anchos de CI. El zoom 200 % se audita a
+ * 390 px en ambos temas y 400 % a 320 px (reflow WCAG).
+ */
+
+import { execFileSync } from "node:child_process";
+import { appendFileSync, mkdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+import { AxeBuilder } from "@axe-core/playwright";
+import { expect, test, type Page } from "@playwright/test";
+import type {
+	CitizenProfile,
+	RuleSet,
+} from "../../src/lib/eligibility-engine/schema";
+
+/* ---------- datos reales ---------- */
+
+const rules = [
+	...new Map(
+		(
+			JSON.parse(readFileSync("out/datos/elegibilidad/bundle.json", "utf8")) as {
+				rulesets: RuleSet[];
+			}
+		).rulesets.map((r) => [r.benefitSlug, r]),
+	).values(),
+];
+
+const fixtures = JSON.parse(
+	execFileSync(
+		process.execPath,
+		["node_modules/tsx/dist/cli.mjs", "scripts/completeness-web-data.ts"],
+		{ encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+	),
+) as {
+	persons: {
+		slug: string;
+		today: string;
+		goldenId: string;
+		answers: CitizenProfile["answers"];
+	}[];
+};
+
+const base = process.env.BASE_PATH ?? "";
+const url = (p: string) => `${base}${p}`;
+
+const FINDINGS_DIR = "test-results/visual";
+const findingsFile = join(
+	"test-results",
+	`visual-findings-${process.env.VISUAL_RUN ?? "local"}.jsonl`,
+);
+mkdirSync(FINDINGS_DIR, { recursive: true });
+
+/* ---------- matriz ---------- */
+
+const FULL_WIDTHS = [320, 360, 375, 390, 412, 768, 1024, 1366, 1920];
+const CI_WIDTHS = [320, 390, 1366];
+const WIDTHS = process.env.VISUAL_MATRIX === "ci" ? CI_WIDTHS : FULL_WIDTHS;
+const THEMES = ["light", "dark"] as const;
+
+type Severity = "alta" | "media" | "baja";
+interface Finding {
+	page: string;
+	width: number;
+	theme: string;
+	type: string;
+	severity: Severity;
+	detail: string;
+}
+
+/* ---------- auditoría en página ---------- */
+
+type RawFinding = Pick<Finding, "type" | "severity" | "detail">;
+
+// Todo el barrido se hace en una sola evaluate por combinación.
+async function audit(page: Page): Promise<RawFinding[]> {
+	return page.evaluate(() => {
+		type F = { type: string; severity: "alta" | "media" | "baja"; detail: string };
+		const out: F[] = [];
+		const vw = document.documentElement.clientWidth;
+
+		// a) scroll horizontal (+ qué elementos lo provocan)
+		const sw = document.documentElement.scrollWidth;
+		if (sw > vw + 1) {
+			const culprits: string[] = [];
+			for (const el of [...document.body.querySelectorAll("*")]) {
+				const r = el.getBoundingClientRect();
+				if (r.right > vw + 1 && r.width > 0) {
+					const id =
+						`${el.tagName.toLowerCase()}${el.id ? "#" + el.id : ""}${el.className && typeof el.className === "string" ? "." + el.className.split(" ")[0] : ""}`;
+					culprits.push(`${id} right=${Math.round(r.right)}`);
+					if (culprits.length >= 5) break;
+				}
+			}
+			out.push({
+				type: "scroll-x",
+				severity: "alta",
+				detail: `scrollWidth ${sw} > viewport ${vw} — ${culprits.join(" | ")}`,
+			});
+		}
+
+		const skipTags = new Set([
+			"SCRIPT", "STYLE", "NOSCRIPT", "TEMPLATE", "META", "LINK", "HEAD",
+			"TITLE", "BR", "WBR", "OPTION",
+		]);
+		const visible = (el: Element) => {
+			const s = getComputedStyle(el);
+			if (s.display === "none" || s.visibility !== "visible") return false;
+			const r = el.getBoundingClientRect();
+			return r.width > 0.5 && r.height > 0.5;
+		};
+		const directText = (el: Element) =>
+			[...el.childNodes].some(
+				(c) => c.nodeType === 3 && (c.textContent ?? "").trim().length > 0,
+			);
+		// Hoja de texto: tiene texto directo y ningún hijo de bloque visible.
+		const isLeaf = (el: Element) => {
+			if (!directText(el)) return false;
+			for (const c of [...el.children]) {
+				const d = getComputedStyle(c).display;
+				if (
+					!d.startsWith("inline") &&
+					d !== "contents" &&
+					!["SVG", "IMG", "INPUT"].includes(c.tagName)
+				)
+					return false;
+			}
+			return true;
+		};
+
+		// Rects por línea: un <a> que parte línea devuelve una caja envolvente
+		// que «solapa» falsamente con sus vecinos; los fragmentos de Range
+		// dan una caja por línea real.
+		const lineRects = (el: Element): DOMRect[] => {
+			const range = document.createRange();
+			range.selectNodeContents(el);
+			return [...range.getClientRects()].filter(
+				(r) => r.width > 0.5 && r.height > 0.5,
+			);
+		};
+
+		const leaves: { el: Element; r: DOMRect; lines: DOMRect[]; text: string }[] = [];
+		const boxes: { el: Element; r: DOMRect; text: string }[] = [];
+		const walker = document.createTreeWalker(
+			document.body,
+			NodeFilter.SHOW_ELEMENT,
+		);
+		let n = walker.nextNode();
+		while (n) {
+			const el = n as Element;
+			// Contenido de <details> cerrado y texto solo-lector: Chromium
+			// conserva sus rects de layout aunque no se pinten — falsos
+			// positivos de solape/overflow si se miden.
+			if (el.closest("details:not([open])") || el.closest(".sr-only, [hidden]"))
+				continue;
+			if (!skipTags.has(el.tagName) && visible(el)) {
+				if (isLeaf(el)) {
+					const r = el.getBoundingClientRect();
+					leaves.push({
+						el,
+						r,
+						lines: lineRects(el),
+						text: (el.textContent ?? "").trim().replace(/\s+/g, " ").slice(0, 60),
+					});
+				} else if (["SVG", "IMG", "VIDEO", "IFRAME"].includes(el.tagName)) {
+					// texto sobre iconos/imágenes (e)
+					boxes.push({ el, r: el.getBoundingClientRect(), text: el.tagName });
+				}
+			}
+			n = walker.nextNode();
+		}
+
+		// b) solapes entre hojas por fragmento de línea (buckets verticales)
+		const byTop = new Map<number, { el: Element; r: DOMRect; text: string }[]>();
+		const addBox = (el: Element, r: DOMRect, text: string) => {
+			const k = Math.floor(r.top / 40);
+			for (const kk of [k - 1, k, k + 1]) {
+				const arr = byTop.get(kk) ?? [];
+				arr.push({ el, r, text });
+				byTop.set(kk, arr);
+			}
+		};
+		for (const l of leaves) for (const r of l.lines) addBox(l.el, r, l.text);
+		for (const b of boxes) addBox(b.el, b.r, b.text);
+		const seenPair = new Set<string>();
+		for (const arr of byTop.values()) {
+			for (let i = 0; i < arr.length; i++) {
+				const a = arr[i];
+				for (let j = i + 1; j < arr.length; j++) {
+					const b = arr[j];
+					if (
+						a.el === b.el ||
+						a.el.contains(b.el) ||
+						b.el.contains(a.el) ||
+						a.el.compareDocumentPosition(b.el) &
+							Node.DOCUMENT_POSITION_DISCONNECTED
+					)
+						continue;
+					const ox = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
+					const oy =
+						Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);
+					if (ox > 2 && oy > 2) {
+						const id = `${a.text}|${b.text}|${Math.round(a.r.top)}`;
+						if (seenPair.has(id)) continue;
+						seenPair.add(id);
+						out.push({
+							type: "solape",
+							severity: "alta",
+							detail: `«${a.text}» x «${b.text}» (${Math.round(ox)}×${Math.round(oy)} px)`,
+						});
+					}
+				}
+			}
+		}
+
+		// c) columna estrecha / palabra fuera de la caja  e) texto cortado
+		for (const { el, r, text } of leaves) {
+			const cs = getComputedStyle(el);
+			const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2;
+			const lines = r.height / lh;
+			// columna de una palabra por línea: muchas líneas en muy poco ancho
+			if (text.length > 24 && r.width < 110 && lines >= 4)
+				out.push({
+					type: "columna-estrecha",
+					severity: "alta",
+					detail: `«${text.slice(0, 40)}…» ${Math.round(r.width)} px de ancho, ~${Math.round(lines)} líneas`,
+				});
+			// texto cortado
+			if (
+				el.scrollWidth > el.clientWidth + 1 &&
+				["hidden", "clip"].includes(cs.overflowX)
+			)
+				out.push({
+					type: "texto-cortado",
+					severity: "alta",
+					detail: `«${text.slice(0, 40)}…» scrollWidth ${el.scrollWidth} > ${el.clientWidth}`,
+				});
+			// palabra fuera de la caja (texto que desborda a la derecha)
+			if (el.scrollWidth > el.clientWidth + 4 && cs.overflowX === "visible") {
+				const range = document.createRange();
+				for (const c of [...el.childNodes]) {
+					if (c.nodeType !== 3 || !(c.textContent ?? "").trim()) continue;
+					range.selectNodeContents(c);
+					for (const rect of [...range.getClientRects()]) {
+						if (rect.right > r.right + 4 || rect.left < r.left - 4)
+							out.push({
+								type: "palabra-fuera",
+								severity: "alta",
+								detail: `«${text.slice(0, 40)}…» desborda ${Math.round(rect.right - r.right)} px`,
+							});
+					}
+				}
+			}
+		}
+
+		// d) objetivos táctiles en móvil (<44 px; <24 incumple WCAG 2.5.8).
+		// Excepción WCAG: los enlaces inline dentro de un flujo de texto no son
+		// objetivos — solo se miden controles «standalone» (display no-inline,
+		// nav, botones, campos, summary…).
+		if (vw <= 820 || navigator.maxTouchPoints > 0) {
+			const touch = document.querySelectorAll(
+				"a, button, input, select, textarea, summary, [role=button], [role=link], label[for]",
+			);
+			for (const el of [...touch]) {
+				if (!visible(el) || el.closest("details:not([open])")) continue;
+				const cs = getComputedStyle(el);
+				// WCAG 2.5.8 inline-in-text: enlaces dentro de párrafos/celdas.
+				if (el.tagName === "A" && el.closest("p, li, dd, blockquote")) continue;
+				const r = el.getBoundingClientRect();
+				if (r.width > 0.5 && r.height > 0.5 && (r.width < 44 || r.height < 44)) {
+					const severe = r.width < 24 || r.height < 24;
+					out.push({
+						type: "tactil-pequeno",
+						severity: severe ? "alta" : "media",
+						detail: `${el.tagName.toLowerCase()} «${(el.textContent ?? "").trim().slice(0, 30)}» ${Math.round(r.width)}×${Math.round(r.height)}`,
+					});
+				}
+			}
+		}
+
+		// g) slugs técnicos como texto visible (fuera de code/pre y de URLs)
+		const slugRe = /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/g;
+		const twalker = document.createTreeWalker(
+			document.body,
+			NodeFilter.SHOW_TEXT,
+		);
+		let tn = twalker.nextNode();
+		while (tn) {
+			const t = tn.textContent ?? "";
+			const parent = tn.parentElement;
+			if (
+				parent &&
+				!parent.closest(
+					"code, pre, a[href], script, style, details:not([open]), .sr-only",
+				) &&
+				/[a-z]/.exec(t)
+			) {
+				for (const m of t.matchAll(slugRe)) {
+					const w = m[0];
+					if (/^\d{4}-\d{2}-\d{2}/.test(w) || /^sha/.test(w)) continue;
+					out.push({
+						type: "slug-visible",
+						severity: "media",
+						detail: `«${w}» en «${t.trim().slice(0, 50)}»`,
+					});
+				}
+			}
+			tn = twalker.nextNode();
+		}
+		return out;
+	});
+}
+
+/* ---------- captura y registro ---------- */
+
+function record(
+	page: string,
+	width: number,
+	theme: string,
+	found: RawFinding[],
+) {
+	for (const f of found)
+		appendFileSync(
+			findingsFile,
+			JSON.stringify({ page, width, theme, ...f }) + "\n",
+		);
+	return found;
+}
+
+async function shot(page: Page, name: string) {
+	const file = `${name.replace(/[^a-z0-9]+/gi, "_").slice(0, 120)}.png`;
+	await page.screenshot({
+		path: join(FINDINGS_DIR, file),
+		fullPage: true,
+	});
+	return file;
+}
+
+async function auditAt(
+	page: Page,
+	name: string,
+	widths: number[],
+	opts: { shotOnFail?: boolean; axe?: boolean } = {},
+): Promise<Finding[]> {
+	const all: Finding[] = [];
+	const theme = (await page.evaluate(() =>
+		getComputedStyle(document.documentElement).colorScheme.includes("dark")
+			? "dark"
+			: "light",
+	)) as string;
+	for (const w of widths) {
+		await page.setViewportSize({ width: w, height: 844 });
+		await page.waitForTimeout(120);
+		const f = await audit(page);
+		record(name, w, theme, f);
+		all.push(...f.map((x) => ({ page: name, width: w, theme, ...x })));
+		if (f.length && opts.shotOnFail !== false)
+			await shot(page, `${name}-${w}-${theme}`);
+	}
+	if (opts.axe !== false) {
+		const res = await new AxeBuilder({ page })
+			.withRules(["color-contrast"])
+			.analyze();
+		for (const v of res.violations)
+			for (const node of v.nodes.slice(0, 8))
+				record(name, 0, theme, [
+					{
+						type: "contraste",
+						severity: "media",
+						detail: `${node.target.join(" ")} — ${v.help}`,
+					},
+				]);
+	}
+	return all;
+}
+
+function wireConsole(page: Page, name: string) {
+	page.on("console", (msg) => {
+		if (msg.type() !== "error") return;
+		record(name, -1, "-", [
+			{
+				type: "consola",
+				severity: "media",
+				detail: msg.text().slice(0, 160),
+			},
+		]);
+	});
+	page.on("response", (res) => {
+		if (res.status() === 404 && res.request().resourceType() !== "document")
+			record(name, -1, "-", [
+				{
+					type: "recurso-404",
+					severity: "media",
+					detail: res.url().slice(-120),
+				},
+			]);
+	});
+}
+
+/* ---------- páginas ---------- */
+
+const STATIC_PAGES: [string, string][] = [
+	["portada", "/"],
+	["ayudas", "/ayudas/"],
+	["explorar", "/explorar/"],
+	["observatorio", "/observatorio/"],
+	["datos", "/datos/"],
+	["como-funciona", "/como-funciona/"],
+	["como-verificamos", "/como-verificamos/"],
+	["pagina-404", "/__404_inexistente__/"],
+];
+
+/* Estados de /comprobar/: intro, paso de dependientes con edades y
+ * resultados con 5 personas golden distintas. */
+const RESULT_PERSONAS = [
+	"imv",
+	"bono-cultural-joven",
+	"madrid-abono-transporte-infantil",
+	"madrid-renta-minima-insercion",
+	"prestaciones-dependencia-saad",
+];
+
+async function seedAndGoto(
+	page: Page,
+	answers: CitizenProfile["answers"],
+	step: number,
+) {
+	await page.addInitScript(
+		({ answers0, step0 }) =>
+			sessionStorage.setItem(
+				"rr_check_handoff",
+				JSON.stringify({
+					answers: answers0,
+					step: step0,
+					savedAt: new Date().toISOString(),
+				}),
+			),
+		{ answers0: answers, step0: step },
+	);
+	await page.goto(url("/comprobar/"));
+	await page.getByRole("button", { name: "Empezar", exact: true }).click();
+}
+
+/** Avanza con «Siguiente» hasta la revisión y abre resultados. */
+async function reachResults(page: Page, maxClicks = 15) {
+	for (let i = 0; i < maxClicks; i++) {
+		if (
+			await page
+				.getByRole("button", { name: "Ver mis resultados", exact: true })
+				.isVisible()
+		)
+			break;
+		await page
+			.getByRole("button", { name: "Siguiente", exact: true })
+			.click();
+		await page.waitForTimeout(120);
+	}
+	await page
+		.getByRole("button", { name: "Ver mis resultados", exact: true })
+		.click();
+	await page.getByRole("heading", { name: "Tus resultados" }).waitFor({
+		timeout: 15_000,
+	});
+}
+
+
+
+for (const theme of THEMES) {
+	test.describe(`tema ${theme}`, () => {
+		test.use({ colorScheme: theme });
+		// 9 anchos × auditoría + axe por página: holgura frente a los 45 s.
+		test.setTimeout(120_000);
+
+		for (const [name, path] of STATIC_PAGES) {
+			test(`layout ${name} (${theme})`, async ({ page }) => {
+				wireConsole(page, name);
+				await page.goto(url(path));
+				await page.waitForLoadState("networkidle");
+				const all = await auditAt(page, `${name}-${theme}`, WIDTHS);
+				expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+			});
+		}
+
+		for (const rs of rules) {
+			test(`layout ficha ${rs.benefitSlug} (${theme})`, async ({ page }) => {
+				wireConsole(page, `ficha-${rs.benefitSlug}`);
+				await page.goto(url(`/ayudas/${rs.benefitSlug}/`));
+				await page.waitForLoadState("networkidle");
+				const all = await auditAt(
+					page,
+					`ficha-${rs.benefitSlug}-${theme}`,
+					WIDTHS,
+				);
+				expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+			});
+		}
+
+		test(`layout comprobar-intro (${theme})`, async ({ page }) => {
+			wireConsole(page, "comprobar-intro");
+			await page.goto(url("/comprobar/"));
+			await page.getByRole("button", { name: "Empezar", exact: true }).waitFor();
+			const all = await auditAt(page, `comprobar-intro-${theme}`, WIDTHS);
+			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+		});
+
+		test(`layout comprobar-dependientes (${theme})`, async ({ page }) => {
+			wireConsole(page, "comprobar-dependientes");
+			// Todas las respuestas sembradas menos «dependents»: la navegación
+			// real llega a ese paso y escribe 2 personas → filas de edad.
+			const persona = fixtures.persons.find(
+				(p) => p.slug === "madrid-abono-transporte-infantil",
+			)!;
+			const answers = structuredClone(persona.answers);
+			delete answers.dependents;
+			await page.clock.install({
+				time: new Date(`${persona.today}T12:00:00Z`),
+			});
+			await seedAndGoto(page, answers, 0);
+			for (let i = 0; i < 15; i++) {
+				if (
+					await page.getByText(/personas a tu cargo/i).first().isVisible()
+				)
+					break;
+				await page
+					.getByRole("button", { name: "Siguiente", exact: true })
+					.click();
+				await page.waitForTimeout(120);
+			}
+			// Dos personas a cargo ⇒ dos campos de edad en el mismo paso.
+			const count = page.locator('input[type="number"]').first();
+			await count.fill("2");
+			await page.waitForTimeout(150);
+			const all = await auditAt(
+				page,
+				`comprobar-dependientes-${theme}`,
+				WIDTHS,
+			);
+			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+		});
+
+		for (const slug of RESULT_PERSONAS) {
+			test(`layout resultados ${slug} (${theme})`, async ({ page }) => {
+				wireConsole(page, `resultados-${slug}`);
+				const persona = fixtures.persons.find((p) => p.slug === slug);
+				test.skip(!persona, `sin fixture para ${slug}`);
+				if (!persona) return;
+				await page.clock.install({
+					time: new Date(`${persona.today}T12:00:00Z`),
+				});
+				await seedAndGoto(page, persona.answers, 0);
+				await reachResults(page);
+				const all = await auditAt(
+					page,
+					`resultados-${slug}-${theme}`,
+					WIDTHS,
+				);
+				expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+			});
+		}
+
+		// Zoom de texto 200 % (a 390 px) y 400 % a 320 px (reflow WCAG 1.4.10).
+		test(`layout zoom-200 portada+ficha (${theme})`, async ({ page }) => {
+			wireConsole(page, "zoom200");
+			for (const [name, path] of [
+				["portada", "/"],
+				["ficha-imv", "/ayudas/imv/"],
+				["explorar", "/explorar/"],
+			] as const) {
+				await page.goto(url(path));
+				await page.waitForLoadState("networkidle");
+				await page.setViewportSize({ width: 390, height: 844 });
+				await page.evaluate(
+					() => (document.documentElement.style.fontSize = "200%"),
+				);
+				await page.waitForTimeout(150);
+				const all = await audit(page);
+				record(`${name}-zoom200`, 390, theme, all);
+				expect(
+					all.filter((f) => f.severity !== "baja"),
+					`${name} zoom 200 %`,
+				).toEqual([]);
+			}
+		});
+
+		test(`layout zoom-400 reflow 320 (${theme})`, async ({ page }) => {
+			wireConsole(page, "zoom400");
+			await page.goto(url("/"));
+			await page.waitForLoadState("networkidle");
+			await page.setViewportSize({ width: 320, height: 640 });
+			await page.evaluate(
+				() => (document.documentElement.style.fontSize = "400%"),
+			);
+			await page.waitForTimeout(150);
+			const all = await audit(page);
+			record("portada-zoom400", 320, theme, all);
+			// A 400 % los solapes puntuales quedan como media; el scroll-x sigue
+			// siendo alta (reflow).
+			expect(
+				all.filter(
+					(f) => f.severity === "alta" || f.type === "scroll-x",
+				),
+			).toEqual([]);
+		});
+	});
+}
