@@ -16,7 +16,8 @@ cuál no se puede saber y **qué te falta** — con la fuente oficial enlazada e
 cada afirmación.
 
 Números medidos (evidencia en el repositorio): **50 programas** comprobados
-requisito a requisito (52 RuleSets) · **166 fuentes oficiales registradas**
+requisito a requisito (52 RuleSets) **[14/10 — cifra del strict: recuento de
+benefitSlugs del bundle estricto servido]** · **166 fuentes oficiales registradas**
 (145 citadas en el bundle) · **421 programas**
 del universo de Madrid clasificados aptos para personas · **527 pruebas** automáticas en verde ·
 **155 enlaces** del producto verificados el 8/10 · el perfil **nunca sale del
@@ -39,7 +40,9 @@ lectura por él y le lleva directamente al simulador o a la sede oficial.
 Un asistente estático (sin servidor, sin cuentas, sin registro) que:
 
 1. Pregunta lo mínimo (≤ 10 preguntas, con «No lo sé» y «Prefiero no decirlo»).
-2. Evalúa **50 ayudas comprobadas** y 401 fichas del catálogo en nivel 2.
+2. Evalúa **50 ayudas comprobadas** y 401 fichas del catálogo en nivel 2
+   **[14/10 — cifra del strict: ayudas evaluadas = programas del bundle
+   estricto; nivel 2 = 401 + las no aprobadas, que reaparecen como catálogo]**.
 3. Responde por ayuda: qué requisitos cumples (✓), cuáles no (✗), cuáles no se
    pueden saber sin más datos (?) y cuáles quedan fuera de alcance del
    cuestionario (⚠).
@@ -59,7 +62,9 @@ reusar el motor sin depender de este producto.
 ### Medido (con evidencia)
 
 - **50 programas verificados** en el nivel 1 (52 RuleSets: la dependencia
-  tiene versión vigente y futura) tras autor ⇒ verificador
+  tiene versión vigente y futura) **[14/10 — cifra del strict: «verificados»
+  se mantiene (trabajo hecho); «publicados en la release» = programas del
+  bundle estricto servido]** tras autor ⇒ verificador
   independiente ⇒ corrección ⇒ merge ⇒ despliegue (ADR-040): 18 del Estado,
   24 de la Comunidad de Madrid y 8 municipales (Madrid, Móstoles, Leganés y
   Fuenlabrada). De las 10 olas, el verificador detectó y se corrigieron: un

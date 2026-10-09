@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-08",
+  "at": "2026-10-09",
   "rulesetsEnBundle": 52,
   "programasNivel1": 50,
-  "referenceDateBundle": "2026-10-08",
+  "referenceDateBundle": "2026-10-09",
   "fuentesEnBundle": 145,
   "fuentesRegistradas": 166,
   "urlsCitadasEnBundle": 155,
@@ -15,9 +15,9 @@
     "UNKNOWN": 15,
     "ROLLING": 18
   },
-  "goldenPersonas": 44,
-  "goldenExpectations": 47,
-  "testFiles": 38,
-  "testsTotal": 527,
-  "testsPassed": 527
+  "goldenPersonas": 50,
+  "goldenExpectations": 53,
+  "testFiles": 43,
+  "testsTotal": 556,
+  "testsPassed": 556
 }
