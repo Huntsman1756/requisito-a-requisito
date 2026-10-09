@@ -5,8 +5,10 @@ import { expect, type Page } from "@playwright/test";
  *  «otra situación», cuenta propia, no estudia, ingresos >25.200 €,
  *  alquiler. Comparten el helper caso-daniel.spec y
  *  resultados-legibles.spec. */
+const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
+
 export async function completarCasoDaniel(page: Page) {
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await page.getByRole("button", { name: "Empezar" }).click();
 	// municipio: Ajalvir
 	const box = page.getByRole("combobox");

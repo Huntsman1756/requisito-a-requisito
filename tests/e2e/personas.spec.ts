@@ -15,6 +15,8 @@ import { expect, type Page, test } from "@playwright/test";
 
 import { PERSONAS } from "../fixtures/personas.mjs";
 
+const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
+
 // Etiquetas exactas de las preguntas que TODOS los perfiles responden —
 // ninguna puede reaparecer en «Te faltan datos». (La pregunta de precisión
 // de ingresos «…pasan de X €» es una pregunta NUEVA y sí puede salir.)
@@ -42,7 +44,7 @@ async function completar(page: Page, answers: unknown) {
 			}),
 		);
 	}, answers);
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await page.getByRole("button", { name: "Empezar", exact: true }).click();
 	for (let i = 0; i < 18; i++) {
 		if (
