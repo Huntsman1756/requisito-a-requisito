@@ -38,7 +38,9 @@ export default function Datos() {
 					{indice.files.map((f) => (
 						<li key={f.file}>
 							<span className="label">
-								<Link href={`/datos/elegibilidad/${f.file}`}>{f.file}</Link>
+								{/* <a>, no Link: los .json son descargas estáticas; el
+									prefetch RSC de Next pediría <file>.txt → 404. */}
+								<a href={`/datos/elegibilidad/${f.file}`}>{f.file}</a>
 							</span>
 							<span>
 								{f.description}

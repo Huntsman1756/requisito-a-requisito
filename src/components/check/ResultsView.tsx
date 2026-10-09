@@ -12,7 +12,7 @@ import type {
 } from "../../lib/eligibility-engine/schema";
 
 type Question = QuestionCatalog["questions"][number];
-import { aidTitle } from "../../lib/aid-titles";
+import { aidTitle, humanizeSlugs } from "../../lib/aid-titles";
 import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import { formatDateEs, formatAmount } from "../../lib/format";
@@ -601,7 +601,7 @@ function ResultCard({
 													? `✗ ${t("req.f")}`
 													: `? ${t("req.u")}`}
 									</span>{" "}
-									{req?.label}
+									{humanizeSlugs(req?.label ?? "")}
 									{req && (
 										<details className="cite">
 											<summary aria-label={`${t("req.source")}: ${req.label}`}>{t("req.source")}</summary>
@@ -628,7 +628,7 @@ function ResultCard({
 						})}
 						{ev.uncovered.map((u, i) => (
 							<li key={`u-${i}`} className="req req--warn">
-								<span className="req-status">⚠ {t("req.uncovered")}</span> {u}
+								<span className="req-status">⚠ {t("req.uncovered")}</span> {humanizeSlugs(u)}
 							</li>
 						))}
 					</ul>

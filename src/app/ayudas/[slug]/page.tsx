@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { aidTitle } from "../../../lib/aid-titles";
+import { aidTitle, humanizeSlugs } from "../../../lib/aid-titles";
 import { formatAmount, formatWindow } from "../../../lib/format";
 import { listBenefitSlugs, loadVersion } from "../../../lib/rule-pages";
 import { condText } from "../../../lib/rule-text";
@@ -97,7 +97,7 @@ export default async function Ficha({
 			<ul className="req-list">
 				{rs.requirements.map((r) => (
 					<li key={r.id} className="req">
-						<strong>{r.label}</strong>{" "}
+						<strong>{humanizeSlugs(r.label)}</strong>{" "}
 						{!r.hard && <em>(aviso)</em>}
 						<br />
 						<small className="req-rule">Se comprueba así: {condText(r.condition)}</small>
@@ -121,7 +121,7 @@ export default async function Ficha({
 					<ul className="req-list">
 						{rs.uncoveredRequirements.map((u) => (
 							<li key={u.id} className="req req--warn">
-								⚠ {u.label}
+								⚠ {humanizeSlugs(u.label)}
 								<details className="cite">
 									<summary>Fuente</summary>
 									<blockquote>«{u.citation.excerpt}»</blockquote>
@@ -188,9 +188,9 @@ export default async function Ficha({
 			<p className="legal">
 				Esto no determina tu derecho a la ayuda. La decisión corresponde al
 				organismo competente. Datos abiertos:{" "}
-				<Link href="/datos/elegibilidad/manifest.json" rel="noopener noreferrer">
+				<a href="/datos/elegibilidad/manifest.json" rel="noopener noreferrer">
 					datos abiertos del sitio
-				</Link>
+				</a>
 				.
 			</p>
 			<p className="ficha-nav">

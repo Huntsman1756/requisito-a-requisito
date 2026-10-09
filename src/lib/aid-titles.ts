@@ -79,3 +79,13 @@ export const AID_TITLES: Record<string, string> = {
 };
 
 export const aidTitle = (slug: string): string => AID_TITLES[slug] ?? slug;
+
+const SLUG_TOKEN = /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/g;
+
+/**
+ * Sustituye identificadores internos («madrid-abono-transporte-65») por su
+ * título ciudadano al pintar textos de regla. No toca el dato de la regla:
+ * solo la capa de presentación.
+ */
+export const humanizeSlugs = (text: string): string =>
+	text.replace(SLUG_TOKEN, (m) => AID_TITLES[m] ?? m);

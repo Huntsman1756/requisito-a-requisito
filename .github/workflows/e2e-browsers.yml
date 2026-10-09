@@ -22,7 +22,7 @@ permissions:
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,7 +39,12 @@ jobs:
         run: npm run build:release && npm run release:verify
       # El export estático se sirve con scripts/serve-export.mjs (lo arranca
       # el propio Playwright como webServer).
-      - run: npx playwright test --project=desktop-firefox --project=desktop-webkit
+      - name: "e2e funcional — escritorio + móvil (Firefox/WebKit)"
+        run: npx playwright test --project=desktop-firefox --project=desktop-webkit --project=mobile-ios15 --project=mobile-iphonese --project=mobile-firefox --project=tablet-ios
+        env:
+          CI: "true"
+      - name: "Suite visual-layout (WebKit)"
+        run: npx playwright test tests/e2e/visual-layout.spec.ts --project=desktop-webkit
         env:
           CI: "true"
       - uses: actions/upload-artifact@v4

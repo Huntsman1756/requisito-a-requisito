@@ -42,7 +42,22 @@ export default defineConfig({
 			use: { ...devices["Desktop Safari"], viewport: { width: 1440, height: 900 } },
 		},
 		{ name: "mobile-android", use: { ...devices["Pixel 7"] } },
+		{ name: "mobile-android-s9", use: { ...devices["Galaxy S9+"] } },
 		{ name: "mobile-ios", use: { ...devices["iPhone 14"] } },
+		{ name: "mobile-ios15", use: { ...devices["iPhone 15"] } },
+		{ name: "mobile-iphonese", use: { ...devices["iPhone SE"] } },
+		// Firefox móvil: no hay perfiles de dispositivo Firefox; se emula con
+		// viewport + isMobile + hasTouch.
+		{
+			name: "mobile-firefox",
+			use: {
+				...devices["Desktop Firefox"],
+				viewport: { width: 412, height: 915 },
+				isMobile: true,
+				hasTouch: true,
+				deviceScaleFactor: 2.625,
+			},
+		},
 		{ name: "tablet-ios", use: { ...devices["iPad Mini"] } },
 		{
 			name: "small-reflow",

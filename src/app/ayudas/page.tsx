@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { aidTitle } from "../../lib/aid-titles";
+import { aidTitle, humanizeSlugs } from "../../lib/aid-titles";
 import { formatAmount, formatWindow } from "../../lib/format";
 import { allRuleSets, loadVersion } from "../../lib/rule-pages";
 
@@ -90,7 +90,7 @@ export default function Ayudas() {
 						<ul>
 							{r.requirements.map((req) => (
 								<li key={req.id}>
-									{req.label}
+									{humanizeSlugs(req.label)}
 									{!req.hard && " (aviso)"}
 								</li>
 							))}
@@ -100,7 +100,7 @@ export default function Ayudas() {
 								<h3>También exige (⚠ no comprobable aquí)</h3>
 								<ul>
 									{r.uncoveredRequirements.map((u) => (
-										<li key={u.id}>⚠ {u.label}</li>
+										<li key={u.id}>⚠ {humanizeSlugs(u.label)}</li>
 									))}
 								</ul>
 							</>

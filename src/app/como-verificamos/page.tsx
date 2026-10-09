@@ -76,7 +76,7 @@ export default function ComoVerificamos() {
 						</h2>
 						<p>{p.d}</p>
 						<p className="note">
-							Evidencia: {p.ev} —{" "}
+							Evidencia: <code>{p.ev}</code> —{" "}
 							<a href={p.url} rel="noopener noreferrer">ver en el repositorio ↗</a>
 						</p>
 					</li>
