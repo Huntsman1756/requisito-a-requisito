@@ -63,6 +63,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="es">
 			<head>
 				<meta httpEquiv="Content-Security-Policy" content={CSP} />
+				{/* F10-PERF: precarga de las fuentes del primer pintado — con
+					font-display:swap el LCP del texto saltaba a ~3,4 s cuando
+					llegaba el woff2 (Lighthouse móvil). */}
+				{["ahn-r.woff2", "ahn-b.woff2", "ahn-ExtraBold.woff2"].map((f) => (
+					<link
+						key={f}
+						rel="preload"
+						href={`${BP}/fonts/${f}`}
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+				))}
 				<style dangerouslySetInnerHTML={{ __html: FONTS_CSS }} />
 			</head>
 			<body>

@@ -41,15 +41,27 @@ export interface Level2Item {
 	eligibilityFactors: Record<string, unknown>;
 }
 
-export interface CheckData {
-	bundle: Bundle;
+export interface IntroData {
 	questions: QuestionCatalog;
 	territory: {
 		municipalities: { code: string; name: string }[];
 		ccaa: { code: string; name: string }[];
 	};
+	/** Campos que usa alguna regla (campos-usados.json): para elegir las
+	 * preguntas no hace falta descargar el bundle. */
+	fields: Set<string>;
+	parameters: Parameters;
+}
+
+export interface ResultsData {
+	bundle: Bundle;
 	level2: Level2Item[];
 	manifestDigest: string;
+}
+
+export interface CheckData extends ResultsData {
+	questions: QuestionCatalog;
+	territory: IntroData["territory"];
 }
 
 // BASE_PATH no se inyecta en el bundle del cliente (solo NEXT_PUBLIC_*); sin
@@ -63,21 +75,36 @@ async function get<T>(path: string): Promise<T> {
 	return r.json() as Promise<T>;
 }
 
-export async function loadCheckData(): Promise<CheckData> {
-	const [bundle, questions, territory, level2, manifest] = await Promise.all([
-		get<Bundle>("/datos/elegibilidad/bundle.json"),
+// F10-PERF: la intro solo necesita preguntas + territorio + campos usados
+// (unos 15 KB). El bundle (~900 KB), el nivel 2 y el manifiesto se piden al
+// llegar a la revisión o a resultados — el primer paso pesa mucho menos.
+export async function loadIntroData(): Promise<IntroData> {
+	const [questions, territory, campos] = await Promise.all([
 		get<QuestionCatalog>("/datos/elegibilidad/questions.json"),
 		get<{
 			municipalities: { code: string; name: string }[];
 			ccaa: { code: string; name: string }[];
 		}>("/datos/elegibilidad/territorio-madrid.json"),
+		get<{ fields: string[]; parameters: Parameters }>(
+			"/datos/elegibilidad/campos-usados.json",
+		),
+	]);
+	return {
+		questions,
+		territory,
+		fields: new Set(campos.fields),
+		parameters: campos.parameters,
+	};
+}
+
+export async function loadResultsData(): Promise<ResultsData> {
+	const [bundle, level2, manifest] = await Promise.all([
+		get<Bundle>("/datos/elegibilidad/bundle.json"),
 		get<{ items: Level2Item[] }>("/datos/elegibilidad/nivel-2.json"),
 		get<{ bundleDigest: string }>("/datos/elegibilidad/manifest.json"),
 	]);
 	return {
 		bundle,
-		questions,
-		territory,
 		level2: level2.items,
 		manifestDigest: manifest.bundleDigest,
 	};

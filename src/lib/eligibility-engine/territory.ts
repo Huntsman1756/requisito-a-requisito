@@ -1,111 +1,22 @@
 /**
  * Jerarquía territorial INE (docs/07 §3.3): CCAA ⊃ provincia ⊃ municipio.
  * within_territory: T = seguro dentro, F = seguro fuera, U = falta detalle.
+ *
+ * INE completo (tests y scripts de Node). El cliente del asistente usa
+ * territory-lite.ts — importar este módulo en la web metería ~734 KB de
+ * datos en el chunk (F10-PERF).
  */
 
 import territoryJson from "../../../data/eligibility/territory.json";
+import { createTerritoryApi, type TerritoryData } from "./territory-core";
 
-interface TerritoryData {
-	source: Record<string, unknown>;
-	ccaa: { code: string; name: string }[];
-	provinces: { code: string; name: string; ccaa: string }[];
-	municipalities: { code: string; name: string; province: string }[];
-}
+export type { Territory } from "./territory-core";
 
-const territory = territoryJson as TerritoryData;
+const api = createTerritoryApi(territoryJson as TerritoryData);
 
-export interface Territory {
-	ccaa?: string;
-	province?: string;
-	municipality?: string;
-}
-
-const provCcaa = new Map(territory.provinces.map((p) => [p.code, p.ccaa]));
-const munSet = new Set(territory.municipalities.map((m) => m.code));
-const provSet = new Set(territory.provinces.map((p) => p.code));
-const ccaaSet = new Set(territory.ccaa.map((c) => c.code));
-
-export function ccaaOfProvince(province: string): string | null {
-	return provCcaa.get(province) ?? null;
-}
-
-export function municipalityExists(code: string): boolean {
-	return munSet.has(code);
-}
-
-export function provinceExists(code: string): boolean {
-	return provSet.has(code);
-}
-
-export function ccaaExists(code: string): boolean {
-	return ccaaSet.has(code);
-}
-
-export function territoryName(t: Territory): string | null {
-	if (t.municipality) {
-		return (
-			territory.municipalities.find((m) => m.code === t.municipality)?.name ?? null
-		);
-	}
-	if (t.province) {
-		return territory.provinces.find((p) => p.code === t.province)?.name ?? null;
-	}
-	if (t.ccaa) {
-		return territory.ccaa.find((c) => c.code === t.ccaa)?.name ?? null;
-	}
-	return null;
-}
-
-/** Deriva el nivel más fino disponible del usuario. */
-function resolve(t: Territory): {
-	ccaa: string | null;
-	province: string | null;
-	municipality: string | null;
-} {
-	const municipality = t.municipality && munSet.has(t.municipality) ? t.municipality : null;
-	const province =
-		(t.province && provSet.has(t.province) ? t.province : null) ??
-		(municipality ? municipality.slice(0, 2) : null);
-	const ccaa =
-		(t.ccaa && ccaaSet.has(t.ccaa) ? t.ccaa : null) ??
-		(province ? ccaaOfProvince(province) : null);
-	return { ccaa, province, municipality };
-}
-
-type TFU = "T" | "F" | "U";
-
-/**
- * ¿El territorio del usuario está dentro del de la regla?
- * La regla pide un nivel concreto (ccaa/province/municipality); el usuario da
- * lo que sabe. Si el dato del usuario es más grueso que lo pedido y podría
- * contener o no el territorio exigido ⇒ U.
- */
-export function withinTerritory(user: Territory, rule: Territory): TFU {
-	const u = resolve(user);
-
-	// La regla exige el nivel que declara y todos sus ancestros: un municipio
-	// implica su provincia y su CCAA; una provincia, su CCAA.
-	const ruleProv =
-		rule.province ?? (rule.municipality ? rule.municipality.slice(0, 2) : undefined);
-	const ruleCcaa =
-		rule.ccaa ?? (ruleProv !== undefined ? ccaaOfProvince(ruleProv) : null);
-
-	if (!ruleCcaa && !ruleProv && !rule.municipality) return "T";
-	if (rule.municipality && !munSet.has(rule.municipality)) return "F";
-
-	if (ruleCcaa) {
-		if (u.ccaa === null) return "U";
-		if (u.ccaa !== ruleCcaa) return "F";
-	}
-	if (ruleProv) {
-		if (u.province === null) return "U";
-		if (u.province !== ruleProv) return "F";
-	}
-	if (rule.municipality) {
-		// El usuario sabe su provincia/CCAA pero no el municipio:
-		// el municipio exigido puede o no ser el suyo.
-		if (u.municipality === null) return "U";
-		if (u.municipality !== rule.municipality) return "F";
-	}
-	return "T";
-}
+export const ccaaOfProvince = api.ccaaOfProvince;
+export const municipalityExists = api.municipalityExists;
+export const provinceExists = api.provinceExists;
+export const ccaaExists = api.ccaaExists;
+export const territoryName = api.territoryName;
+export const withinTerritory = api.withinTerritory;

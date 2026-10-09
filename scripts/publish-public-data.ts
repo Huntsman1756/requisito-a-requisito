@@ -21,6 +21,8 @@ import {
 import { join } from "node:path";
 import { aidTitle } from "../src/lib/aid-titles";
 import { deadlineState } from "../src/lib/eligibility-engine/deadline";
+import type { RuleSet } from "../src/lib/eligibility-engine/schema";
+import { usedFields } from "../src/lib/used-fields";
 
 const root = process.cwd();
 const OUT = join(root, "public/datos/elegibilidad");
@@ -262,6 +264,18 @@ writeFileSync(
 	`${JSON.stringify({ items: level1 })}\n`,
 );
 
+// F10-PERF: el asistente filtra el catálogo de preguntas por los campos
+// que consulta alguna regla. Esta lista (unos bytes, más los parámetros
+// públicos tipo IPREM que usan los showIf) le evita descargar el bundle
+// completo (~900 KB) antes de llegar a resultados.
+writeFileSync(
+	join(OUT, "campos-usados.json"),
+	`${JSON.stringify({
+		fields: [...usedFields(bundleRules as unknown as RuleSet[])].sort(),
+		parameters: (JSON.parse(bundle) as { parameters: unknown }).parameters,
+	})}\n`,
+);
+
 const manifest = JSON.parse(
 	readFileSync(
 		join(root, "data/eligibility/bundle/manifest.json"),
@@ -376,6 +390,12 @@ writeFileSync(
 					file: "manifest.json",
 					schema: "(manifiesto)",
 					description: "Digest del bundle, reglas incluidas/excluidas y fecha de generación",
+				},
+				{
+					file: "campos-usados.json",
+					schema: "(lista de campos del perfil)",
+					description:
+						"Campos del perfil que consulta alguna regla — el asistente elige preguntas sin descargar el bundle",
 				},
 			]),
 		},

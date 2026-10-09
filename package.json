@@ -48,7 +48,8 @@
 		"release:verify": "tsx ./scripts/release-verify.ts",
 		"validate:release": "npm run check && npm run lint && npm test && npm run build:release && npm run release:verify && npm run completeness:verify && npm run completeness:web",
 		"completeness:verify": "tsx scripts/completeness-report.ts --bundle out/datos/elegibilidad/bundle.json",
-		"completeness:web": "playwright test tests/e2e/completeness.spec.ts --project=desktop-chromium"
+		"completeness:web": "playwright test tests/e2e/completeness.spec.ts --project=desktop-chromium",
+		"territory:lite": "tsx scripts/territory-lite.ts"
 	},
 	"dependencies": {
 		"js-yaml": "^5.4.2",

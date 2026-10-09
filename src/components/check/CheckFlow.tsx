@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { evaluateRuleSet } from "../../lib/eligibility-engine/evaluate";
+import dynamic from "next/dynamic";
 import { evalCondition } from "../../lib/eligibility-engine/operators";
 import type {
 	CitizenProfile,
@@ -10,7 +10,13 @@ import type {
 } from "../../lib/eligibility-engine/schema";
 
 type Question = QuestionCatalog["questions"][number];
-import { type CheckData, loadCheckData } from "../../lib/check-data";
+import {
+	type CheckData,
+	type IntroData,
+	type ResultsData,
+	loadIntroData,
+	loadResultsData,
+} from "../../lib/check-data";
 import { BUNDLE_DIGEST } from "../../generated/bundle-digest";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import {
@@ -18,14 +24,18 @@ import {
 	readHandoff,
 	writeHandoff,
 } from "../../lib/profile-store";
-import { usedFields } from "../../lib/used-fields";
 import type { Answer } from "./QuestionStep";
 import { EXAMPLES } from "../../lib/examples";
 import { QuestionStep } from "./QuestionStep";
-import { ResultsView } from "./ResultsView";
+
+// F10-PERF: el motor de evaluación y la vista de resultados van en un chunk
+// aparte — se descargan al llegar a resultados, no con la primera pregunta.
+const ResultsView = dynamic(
+	() => import("./ResultsView").then((m) => m.ResultsView),
+	{ ssr: false },
+);
 
 type Phase =
-	| "loading"
 	| "error"
 	| "intro"
 	| "questions"
@@ -36,8 +46,11 @@ type Phase =
 const key = (k: string): string => (k in es ? es[k as I18nKey] : k);
 
 export function CheckFlow() {
-	const [phase, setPhase] = useState<Phase>("loading");
-	const [data, setData] = useState<CheckData | null>(null);
+	// F10-PERF: la fase inicial es «intro» — su marcado es estático y sale en
+	// el HTML exportado (LCP inmediato); los datos llegan en segundo plano.
+	const [phase, setPhase] = useState<Phase>("intro");
+	const [intro, setIntro] = useState<IntroData | null>(null);
+	const [results, setResults] = useState<ResultsData | null>(null);
 	const [answers, setAnswers] = useState<CitizenProfile["answers"]>({});
 	const [step, setStep] = useState(0);
 	const [editReturn, setEditReturn] = useState<Phase | null>(null);
@@ -46,11 +59,24 @@ export function CheckFlow() {
 	const [example, setExample] = useState<string | null>(null);
 	const searchParams = useSearchParams();
 	const mainRef = useRef<HTMLDivElement>(null);
+	const resultsReq = useRef<Promise<ResultsData> | null>(null);
+
+	// El bundle y el nivel 2 solo hacen falta en resultados: se piden al
+	// llegar a la revisión (o al entrar con ?ejemplo=) para que el primer
+	// paso del asistente no descargue ~900 KB.
+	const ensureResults = () => {
+		if (!resultsReq.current)
+			resultsReq.current = loadResultsData().then((r) => {
+				setResults(r);
+				return r;
+			});
+		return resultsReq.current;
+	};
 
 	useEffect(() => {
-		loadCheckData()
+		loadIntroData()
 			.then((d) => {
-				setData(d);
+				setIntro(d);
 				const ev0 = searchParams.get("evento");
 				if (ev0) setLifeEvent(ev0);
 				const ex = searchParams.get("ejemplo");
@@ -59,6 +85,7 @@ export function CheckFlow() {
 					if (p) {
 						setExample(p.id);
 						setAnswers(p.answers);
+						ensureResults();
 						setPhase("results");
 						return;
 					}
@@ -73,11 +100,12 @@ export function CheckFlow() {
 			.catch(() => setPhase("error"));
 	}, []);
 
-	// Preguntas necesarias: solo campos que alguna regla usa.
+	// Preguntas necesarias: solo campos que alguna regla usa (la lista viaja
+	// en campos-usados.json; el bundle completo llega con los resultados).
 	const questions = useMemo<Question[]>(() => {
-		if (!data) return [];
-		const fields = usedFields(data.bundle.rulesets);
-		return data.questions.questions
+		if (!intro) return [];
+		const { fields } = intro;
+		return intro.questions.questions
 			// q.field es el campo que la pregunta escribe; `derives` declara los
 			// derivados que las reglas consultan (p. ej. residenceMonths desde
 			// residenceSince). Sin esto la pregunta nunca saldría.
@@ -87,41 +115,58 @@ export function CheckFlow() {
 					(q.derives ?? []).some((d) => fields.has(d)),
 			)
 			.sort((a, b) => a.order - b.order);
-	}, [data]);
+	}, [intro]);
 
 	const evalCtx = useMemo(
 		() =>
-			data
+			intro && results
 				? {
-						parameters: data.bundle.parameters,
-						catalog: data.questions,
+						parameters: results.bundle.parameters,
+						catalog: intro.questions,
 						referenceDate: new Date().toISOString().slice(0, 10),
 						today: new Date().toISOString().slice(0, 10),
-						bundleDigest: data.manifestDigest,
+						bundleDigest: results.manifestDigest,
 						expectedBundleDigest: BUNDLE_DIGEST,
 					}
 				: null,
-		[data],
+		[intro, results],
+	);
+
+	// Los showIf solo miran respuestas (parámetros incluidos en
+	// campos-usados.json por si alguno los usara); no esperan al bundle.
+	const showCtx = useMemo(
+		() =>
+			intro
+				? {
+						parameters: intro.parameters,
+						referenceDate: new Date().toISOString().slice(0, 10),
+						today: new Date().toISOString().slice(0, 10),
+					}
+				: null,
+		[intro],
 	);
 
 	// Paso visible según showIf sobre las respuestas actuales.
 	const visibleQuestions = useMemo(() => {
-		if (!evalCtx) return [];
+		if (!showCtx) return [];
 		return questions.filter((q) => {
 			if (!q.showIf) return true;
-			const r = evalCondition(q.showIf, { answers }, evalCtx);
+			const r = evalCondition(q.showIf, { answers }, showCtx);
 			return r.status !== "F";
 		});
-	}, [questions, answers, evalCtx]);
+	}, [questions, answers, showCtx]);
 
 	const focusMain = () =>
 		setTimeout(() => mainRef.current?.querySelector("h1")?.setAttribute("tabindex", "-1"), 0);
 
 	const goTo = (p: Phase, nextStep?: number) => {
 		if (nextStep !== undefined) setStep(nextStep);
+		// Al llegar a la revisión ya se ve el final: pedir el bundle y el
+		// nivel 2 para que «Ver mis resultados» sea instantáneo.
+		if (p === "review" || p === "results") ensureResults();
 		setPhase(p);
 		if (typeof window !== "undefined") window.scrollTo(0, 0);
-		if (data) {
+		if (intro) {
 			writeHandoff({
 				step: nextStep ?? step,
 				answers,
@@ -155,19 +200,22 @@ export function CheckFlow() {
 		else goTo("questions", step - 1);
 	};
 
-	const profile: CitizenProfile | null =
-		data && evalCtx
-			? { catalogVersion: data.questions.catalogVersion, answers }
+	const profile: CitizenProfile | null = intro
+		? { catalogVersion: intro.questions.catalogVersion, answers }
+		: null;
+
+	const data: CheckData | null =
+		intro && results
+			? {
+					bundle: results.bundle,
+					level2: results.level2,
+					manifestDigest: results.manifestDigest,
+					questions: intro.questions,
+					territory: intro.territory,
+				}
 			: null;
 
-	if (phase === "loading")
-		return (
-			<div className="shell" aria-busy="true">
-				<p>Cargando…</p>
-			</div>
-		);
-
-	if (phase === "error" || !data || !evalCtx || !profile)
+	if (phase === "error")
 		return (
 			<div className="shell">
 				<h1>{t("error.title")}</h1>
@@ -189,7 +237,13 @@ export function CheckFlow() {
 						comprobar. No hace falta registrarse.
 					</p>
 					<p>
-						<button type="button" className="cta" onClick={() => goTo("questions", 0)}>
+						<button
+							type="button"
+							className="cta"
+							disabled={!intro}
+							aria-busy={!intro}
+							onClick={() => goTo("questions", 0)}
+						>
 							{t("check.intro.start")}
 						</button>
 					</p>
@@ -222,7 +276,7 @@ export function CheckFlow() {
 				</section>
 			)}
 
-			{phase === "questions" && visibleQuestions[step] && (
+			{phase === "questions" && intro && visibleQuestions[step] && (
 				<>
 					<div
 						className="progress"
@@ -248,8 +302,8 @@ export function CheckFlow() {
 						key={visibleQuestions[step].id + step}
 						question={visibleQuestions[step]}
 						answer={answers[visibleQuestions[step].field] as Answer | undefined}
-						municipalities={data.territory.municipalities}
-						ccaaList={data.territory.ccaa}
+						municipalities={intro.territory.municipalities}
+						ccaaList={intro.territory.ccaa}
 						onAnswer={(a) => onAnswer(visibleQuestions[step].field, a)}
 						onContinue={continueFromStep}
 						onBack={backFromStep}
@@ -258,7 +312,7 @@ export function CheckFlow() {
 				</>
 			)}
 
-			{phase === "review" && (
+			{phase === "review" && intro && (
 				<section aria-labelledby="review-title">
 					<h1 id="review-title">{t("check.review.title")}</h1>
 					<ul className="review-list">
@@ -269,7 +323,7 @@ export function CheckFlow() {
 									<span className="review-q">{key(q.labelKey)}</span>
 									<span className="review-a">
 								{describeAnswer(q, a, (code) => {
-									const m = data.territory.municipalities.find(
+									const m = intro.territory.municipalities.find(
 										(x) => x.code === code,
 									);
 									return m?.name ?? code;
@@ -318,7 +372,12 @@ export function CheckFlow() {
 				</section>
 			)}
 
-			{phase === "results" && (
+			{phase === "results" && (!data || !evalCtx || !profile) && (
+				<p className="lede" aria-busy="true">
+					Preparando tus resultados…
+				</p>
+			)}
+			{phase === "results" && data && evalCtx && profile && (
 				<>
 					{example && (
 						<p className="pilot-banner example-banner" role="status">

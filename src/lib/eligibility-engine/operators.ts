@@ -23,7 +23,8 @@ import type {
 	ConditionLeaf,
 	Parameters,
 } from "./schema";
-import { type Territory, withinTerritory } from "./territory";
+import { withinTerritory } from "./territory-lite";
+import type { Territory } from "./territory-core";
 
 export type Uncertainty =
 	| "unasked"
