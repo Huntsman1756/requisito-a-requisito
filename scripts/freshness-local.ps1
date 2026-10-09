@@ -14,7 +14,11 @@
 # Volver:  schtasks /Change /TN "Requisito-FreshnessLocal" /ENABLE
 # Quitar:  schtasks /Delete /TN "Requisito-FreshnessLocal" /F
 
-$ErrorActionPreference = "Stop"
+# "Continue", no "Stop": en PowerShell 5.1, `git ... 2>&1` convierte cada línea
+# de stderr (p. ej. el «From https://…» normal de git fetch) en un error, y con
+# "Stop" abortaba el script entero (09/10: ERROR: From https://github.com/…).
+# Los fallos de git/npm se detectan siempre por $LASTEXITCODE.
+$ErrorActionPreference = "Continue"
 $repo = "F:\_Proyectos\datawardsmadrid"
 $logDir = "F:\AgentState\datawardsmadrid"
 $log = Join-Path $logDir "freshness-local.log"
@@ -60,6 +64,7 @@ try {
 	# subió ayer), intentar rebase + push ANTES de revalidar; si no puede,
 	# se registra y se para (no se acumulan más commits locales).
 	git fetch origin main 2>&1 | Out-Null
+	if ($LASTEXITCODE -ne 0) { throw "git fetch falló" }
 	$ahead = [int](git rev-list --count "origin/main..HEAD")
 	if ($ahead -gt 0) {
 		Log "rama local adelantada $ahead — intento de rebase + push previo"
