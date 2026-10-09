@@ -2,1236 +2,1028 @@
  "daniel": {
   "desktop": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (25)"
+    "Podría encajar",
+    "Otras 25 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ayuda al alquiler (Plan Estatal de Vivienda) Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 30.000 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3271,
+   "solosi": 8,
+   "folded": 25,
+   "sentence": "1 ayuda podría encajarte; 25 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (25)"
+    "Podría encajar",
+    "Otras 25 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ayuda al alquiler (Plan Estatal de Vivienda) Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 30.000 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4855,
+   "solosi": 8,
+   "folded": 25,
+   "sentence": "1 ayuda podría encajarte; 25 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   }
  },
  "jubilada-70-pension-baja": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 636,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3131,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 699,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4588,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "madre-sola-30-2hijos": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Título oficial de familia numerosa Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Descuento de tren para familias numerosas Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Descuento de tren para familias numerosas Encaja"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5536,
+   "solosi": 16,
+   "folded": 17,
+   "sentence": "5 ayudas encajan contigo; 17 sin descartar, plegadas; 16 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Título oficial de familia numerosa Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Descuento de tren para familias numerosas Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Descuento de tren para familias numerosas Encaja"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 7219,
+   "solosi": 16,
+   "folded": 17,
+   "sentence": "5 ayudas encajan contigo; 17 sin descartar, plegadas; 16 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   }
  },
  "joven-22-alquila": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Abono transporte joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible"
+    "Abono transporte joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3730,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "2 ayudas encajan contigo; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 31 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Abono transporte joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible"
+    "Abono transporte joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5093,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "2 ayudas encajan contigo; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 31 relacionadas sin comprobar"
   }
  },
  "parado-45": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Podría encajar",
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Subsidio por desempleo (insuficiencia de cotización) — solo si has agotado la prestación contributiva o estás desempleado sin derecho a ella Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Prestación contributiva por desempleo (SEPE) — solo si has cotizado por desempleo al menos 360 días en los últimos 6 años Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Renta Mínima de Inserción (Comunidad de Madrid) — solo si los ingresos de tu unidad de convivencia están por debajo de la cuantía de la RMI; si ya has pedido y te han denegado las pensiones o prestaciones previas Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4350,
+   "solosi": 9,
+   "folded": 17,
+   "sentence": "1 ayuda encaja contigo; 2 ayudas podrían encajarte; 17 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Podría encajar",
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Subsidio por desempleo (insuficiencia de cotización) — solo si has agotado la prestación contributiva o estás desempleado sin derecho a ella Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Prestación contributiva por desempleo (SEPE) — solo si has cotizado por desempleo al menos 360 días en los últimos 6 años Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Renta Mínima de Inserción (Comunidad de Madrid) — solo si los ingresos de tu unidad de convivencia están por debajo de la cuantía de la RMI; si ya has pedido y te han denegado las pensiones o prestaciones previas Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 653,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5990,
+   "solosi": 9,
+   "folded": 17,
+   "sentence": "1 ayuda encaja contigo; 2 ayudas podrían encajarte; 17 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   }
  },
  "estudiante-21": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6222,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "3 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 8266,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "3 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   }
  },
  "discapacidad-45": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (23)"
+    "Podría encajar",
+    "Otras 23 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 636,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 3712,
+   "solosi": 7,
+   "folded": 23,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 23 sin descartar, plegadas; 7 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (23)"
+    "Podría encajar",
+    "Otras 23 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 699,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 5276,
+   "solosi": 7,
+   "folded": 23,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 23 sin descartar, plegadas; 7 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   }
  },
  "cuidadora-60-coslada": {
   "desktop": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (23)"
+    "Otras 23 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
-   "open": [
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
-   ],
+   "open": [],
+   "cardMax": 0,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 2144,
+   "solosi": 9,
+   "folded": 23,
+   "sentence": "23 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 29 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (23)"
+    "Otras 23 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
-   "open": [
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
-   ],
+   "open": [],
+   "cardMax": 0,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3064,
+   "solosi": 9,
+   "folded": 23,
+   "sentence": "23 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 29 relacionadas sin comprobar"
   }
  },
  "fnumerosa-mostoles": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (20)"
+    "Podría encajar",
+    "Otras 20 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Título oficial de familia numerosa Encaja",
     "Bono social térmico Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
     "Descuento de tren para familias numerosas Encaja",
-    "Beca de comedor escolar (Comunidad de Madrid) — solo si tu hijo o hija tiene plaza en el comedor de su centro Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 584,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 5299,
+   "solosi": 12,
+   "folded": 20,
+   "sentence": "4 ayudas encajan contigo; 1 ayuda podría encajarte; 20 sin descartar, plegadas; 12 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (20)"
+    "Podría encajar",
+    "Otras 20 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Título oficial de familia numerosa Encaja",
     "Bono social térmico Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
     "Descuento de tren para familias numerosas Encaja",
-    "Beca de comedor escolar (Comunidad de Madrid) — solo si tu hijo o hija tiene plaza en el comedor de su centro Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 671,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 7029,
+   "solosi": 12,
+   "folded": 20,
+   "sentence": "4 ayudas encajan contigo; 1 ayuda podría encajarte; 20 sin descartar, plegadas; 12 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   }
  },
  "autonoma-35": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 612,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 2885,
+   "solosi": 5,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 5 solo si se da una situación concreta; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 676,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 4063,
+   "solosi": 5,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 5 solo si se da una situación concreta; 32 relacionadas sin comprobar"
   }
  },
  "pareja-40-bebe": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Podría encajar",
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Escuelas infantiles municipales (Ayuntamiento de Madrid) Posible"
    ],
+   "cardMax": 584,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 3607,
+   "solosi": 10,
+   "folded": 21,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 21 sin descartar, plegadas; 10 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Podría encajar",
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Escuelas infantiles municipales (Ayuntamiento de Madrid) Posible"
    ],
+   "cardMax": 671,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 5161,
+   "solosi": 10,
+   "folded": 21,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 21 sin descartar, plegadas; 10 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   }
  },
  "viudo-75": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 636,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3131,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 699,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4588,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "migrante-residencia-2a": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3085,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "1 ayuda encaja contigo; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 30 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4331,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "1 ayuda encaja contigo; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 30 relacionadas sin comprobar"
   }
  },
  "docente-50": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos por accidente de trabajo (empleados públicos CM) — solo si has recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 500,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 2595,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos por accidente de trabajo (empleados públicos CM) — solo si has recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 586,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 3533,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 29 relacionadas sin comprobar"
   }
  },
  "parado-larga-54": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Podría encajar",
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Subsidio por desempleo (insuficiencia de cotización) — solo si has agotado la prestación contributiva o estás desempleado sin derecho a ella Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Prestación contributiva por desempleo (SEPE) — solo si has cotizado por desempleo al menos 360 días en los últimos 6 años Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Renta Mínima de Inserción (Comunidad de Madrid) — solo si los ingresos de tu unidad de convivencia están por debajo de la cuantía de la RMI; si ya has pedido y te han denegado las pensiones o prestaciones previas Posible",
-    "Subsidio por desempleo de mayores de 52 años — solo si has agotado tu prestación contributiva o estás en desempleo sin derecho a ella; si cumples lo que pediría la jubilación contributiva salvo la edad Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4350,
+   "solosi": 11,
+   "folded": 17,
+   "sentence": "1 ayuda encaja contigo; 2 ayudas podrían encajarte; 17 sin descartar, plegadas; 11 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (17)"
+    "Podría encajar",
+    "Otras 17 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Subsidio por desempleo (insuficiencia de cotización) — solo si has agotado la prestación contributiva o estás desempleado sin derecho a ella Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Prestación contributiva por desempleo (SEPE) — solo si has cotizado por desempleo al menos 360 días en los últimos 6 años Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Renta Mínima de Inserción (Comunidad de Madrid) — solo si los ingresos de tu unidad de convivencia están por debajo de la cuantía de la RMI; si ya has pedido y te han denegado las pensiones o prestaciones previas Posible",
-    "Subsidio por desempleo de mayores de 52 años — solo si has agotado tu prestación contributiva o estás en desempleo sin derecho a ella; si cumples lo que pediría la jubilación contributiva salvo la edad Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 653,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5990,
+   "solosi": 11,
+   "folded": 17,
+   "sentence": "1 ayuda encaja contigo; 2 ayudas podrían encajarte; 17 sin descartar, plegadas; 11 solo si se da una situación concreta; 1 dato por responder; 34 relacionadas sin comprobar"
   }
  },
  "pensionista-66-sin-cotizacion": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Podría encajar",
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
     "Tarjeta azul de transporte (+65, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4997,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "2 ayudas encajan contigo; 2 ayudas podrían encajarte; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Podría encajar",
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono social térmico Encaja",
     "Tarjeta azul de transporte (+65, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Ingreso Mínimo Vital Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 653,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6657,
+   "solosi": 8,
+   "folded": 21,
+   "sentence": "2 ayudas encajan contigo; 2 ayudas podrían encajarte; 21 sin descartar, plegadas; 8 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "pareja-26-hijo": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (18)"
+    "Otras 18 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
-    "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Transporte público gratuito infantil (menores de 7 años) Encaja"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4415,
+   "solosi": 15,
+   "folded": 18,
+   "sentence": "3 ayudas encajan contigo; 18 sin descartar, plegadas; 15 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (18)"
+    "Otras 18 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
-    "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible"
+    "Transporte público gratuito infantil (menores de 7 años) Encaja"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5995,
+   "solosi": 15,
+   "folded": 18,
+   "sentence": "3 ayudas encajan contigo; 18 sin descartar, plegadas; 15 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   }
  },
  "bico-19-universidad": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6222,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "3 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 8266,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "3 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   }
  },
  "incapacidad-58": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (20)"
+    "Podría encajar",
+    "Otras 20 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 636,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3891,
+   "solosi": 12,
+   "folded": 20,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 20 sin descartar, plegadas; 12 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (20)"
+    "Podría encajar",
+    "Otras 20 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 699,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 5574,
+   "solosi": 12,
+   "folded": 20,
+   "sentence": "1 ayuda encaja contigo; 1 ayuda podría encajarte; 20 sin descartar, plegadas; 12 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "alquiler-vallecas-30": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (25)"
+    "Otras 25 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 612,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 2859,
+   "solosi": 5,
+   "folded": 25,
+   "sentence": "1 ayuda encaja contigo; 25 sin descartar, plegadas; 5 solo si se da una situación concreta; 28 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (25)"
+    "Otras 25 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Bono alquiler joven (Comunidad de Madrid) Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible"
+    "Bono alquiler joven (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 676,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 4037,
+   "solosi": 5,
+   "folded": 25,
+   "sentence": "1 ayuda encaja contigo; 25 sin descartar, plegadas; 5 solo si se da una situación concreta; 28 relacionadas sin comprobar"
   }
  },
  "viudo-65-hijos": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Título oficial de familia numerosa Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de viudedad — solo si ha fallecido tu cónyuge o pareja de hecho Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Título oficial de familia numerosa Encaja"
    ],
+   "cardMax": 636,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 3624,
+   "solosi": 11,
+   "folded": 24,
+   "sentence": "2 ayudas encajan contigo; 24 sin descartar, plegadas; 11 solo si se da una situación concreta; 33 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Título oficial de familia numerosa Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de viudedad — solo si ha fallecido tu cónyuge o pareja de hecho Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Título oficial de familia numerosa Encaja"
    ],
+   "cardMax": 699,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 5050,
+   "solosi": 11,
+   "folded": 24,
+   "sentence": "2 ayudas encajan contigo; 24 sin descartar, plegadas; 11 solo si se da una situación concreta; 33 relacionadas sin comprobar"
   }
  },
  "empleada-publica-44": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Préstamo sin intereses para personal de la CM (hasta 5.000 €) — solo si tienes que afrontar un gasto imprevisto o extraordinario Posible",
-    "Reintegro de gastos por accidente de trabajo (empleados públicos CM) — solo si has recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible"
+    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 500,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 2595,
+   "solosi": 6,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 6 solo si se da una situación concreta; 25 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Préstamo sin intereses para personal de la CM (hasta 5.000 €) — solo si tienes que afrontar un gasto imprevisto o extraordinario Posible",
-    "Reintegro de gastos por accidente de trabajo (empleados públicos CM) — solo si has recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible"
+    "Anticipo de nómina para funcionarios docentes (Comunidad de Madrid) Encaja"
    ],
+   "cardMax": 586,
    "missing": [],
-   "related": 10
+   "related": 10,
+   "height": 3533,
+   "solosi": 6,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 6 solo si se da una situación concreta; 25 relacionadas sin comprobar"
   }
  },
  "joven-18-bono": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
     "Bono Cultural Joven 2026 Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6776,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "4 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Bono alquiler joven (Comunidad de Madrid) Encaja",
     "Abono transporte joven (Comunidad de Madrid) Encaja",
     "Bono social térmico Encaja",
     "Bono Cultural Joven 2026 Encaja",
-    "Ayuda económica por nacimiento (Comunidad de Madrid) — solo si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022 Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Becas de Bachillerato en centros privados (Comunidad de Madrid) — solo si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM Posible",
-    "Ayudas económicas de emergencia social (Ayuntamiento de Madrid) — solo si te encuentras en una situación de emergencia social o de especial necesidad Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
     "Becas del Ministerio de Educación (universidad) Posible",
     "Bono Social Eléctrico Posible",
     "Préstamo de libros de texto — Programa ACCEDE (Comunidad de Madrid) Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 5639,16 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 8826,
+   "solosi": 9,
+   "folded": 16,
+   "sentence": "4 ayudas encajan contigo; 3 ayudas podrían encajarte; 16 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 39 relacionadas sin comprobar"
   }
  },
  "mayor-80-dependencia": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Prestación para cuidadoras no profesionales de personas dependientes — solo si eres cónyuge o pariente hasta el tercer grado de la persona dependiente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 636,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3131,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 36 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (24)"
+    "Otras 24 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
-    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja",
-    "Prestación para cuidadoras no profesionales de personas dependientes — solo si eres cónyuge o pariente hasta el tercer grado de la persona dependiente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
+    "Tarjeta azul de transporte (personas con discapacidad, Madrid capital) Encaja"
    ],
+   "cardMax": 699,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4614,
+   "solosi": 9,
+   "folded": 24,
+   "sentence": "1 ayuda encaja contigo; 24 sin descartar, plegadas; 9 solo si se da una situación concreta; 1 dato por responder; 36 relacionadas sin comprobar"
   }
  },
  "familia-alquiler-3hijos": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
@@ -1239,34 +1031,24 @@
     "Bono social térmico Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
     "Descuento de tren para familias numerosas Encaja",
-    "Beca de comedor escolar (Comunidad de Madrid) — solo si tu hijo o hija tiene plaza en el comedor de su centro Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6191,
+   "solosi": 15,
+   "folded": 16,
+   "sentence": "5 ayudas encajan contigo; 1 ayuda podría encajarte; 16 sin descartar, plegadas; 15 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (16)"
+    "Podría encajar",
+    "Otras 16 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
@@ -1274,137 +1056,97 @@
     "Bono social térmico Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
     "Descuento de tren para familias numerosas Encaja",
-    "Beca de comedor escolar (Comunidad de Madrid) — solo si tu hijo o hija tiene plaza en el comedor de su centro Posible",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Cheque escuela infantil (Comunidad de Madrid) — solo si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Asignación por hijo o menor a cargo — solo si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres Posible",
-    "Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid) — solo si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024; cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024 Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Bono Social Eléctrico Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 8054,
+   "solosi": 15,
+   "folded": 16,
+   "sentence": "5 ayudas encajan contigo; 1 ayuda podría encajarte; 16 sin descartar, plegadas; 15 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "autonomo-62-baja": {
   "desktop": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
-   "open": [
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
-   ],
+   "open": [],
+   "cardMax": 0,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 2170,
+   "solosi": 10,
+   "folded": 21,
+   "sentence": "21 sin descartar, plegadas; 10 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
-    "Solo si se da lo que define la ayuda",
-    "No se pueden descartar — faltan varios datos (21)"
+    "Otras 21 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
-   "open": [
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Cese de actividad de autónomos — solo si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género; cuando el cese no sea por voluntad propia Posible",
-    "Pensión de jubilación contributiva — solo cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada; si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15 Posible"
-   ],
+   "open": [],
+   "cardMax": 0,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 3222,
+   "solosi": 10,
+   "folded": 21,
+   "sentence": "21 sin descartar, plegadas; 10 solo si se da una situación concreta; 1 dato por responder; 32 relacionadas sin comprobar"
   }
  },
  "discap-33-alquiler": {
   "desktop": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (19)"
+    "Podría encajar",
+    "Otras 19 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 612,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 4526,
+   "solosi": 14,
+   "folded": 19,
+   "sentence": "2 ayudas encajan contigo; 1 ayuda podría encajarte; 19 sin descartar, plegadas; 14 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   },
   "mobile": {
    "groups": [
     "Encajan contigo",
-    "Solo si se da lo que define la ayuda",
-    "Podrían encajar — falta confirmar algún dato",
-    "No se pueden descartar — faltan varios datos (19)"
+    "Podría encajar",
+    "Otras 19 que no podemos descartar — faltan varios datos",
+    "Solo si se da lo que define la ayuda"
    ],
    "open": [
     "Ayuda al alquiler (Plan Estatal de Vivienda) Encaja",
     "Transporte público gratuito infantil (menores de 7 años) Encaja",
-    "Complemento de ayuda para la infancia (IMV) — solo con unos ingresos por debajo del 300 % de los umbrales del IMV Posible",
-    "Reconocimiento de la dependencia (SAAD) — solo si necesitas de forma permanente la atención de otra persona para las actividades básicas Posible",
-    "Permiso y prestación por nacimiento y cuidado del menor — solo si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente Posible",
-    "Ingreso Mínimo Vital — solo si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola) Posible",
-    "Pensión de incapacidad permanente — solo si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez) Posible",
-    "Pensión de orfandad — solo si ha fallecido tu padre o tu madre Posible",
-    "Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad) — solo si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí) Posible",
-    "Reintegro de gastos sanitarios — farmacia, urgencias o desplazamiento (SERMAS) — solo si has pagado de más o adelantado un gasto sanitario reintegrable Posible",
-    "Reintegro de prestación ortoprotésica y desplazamiento sanitario (SERMAS) — solo si un especialista te ha prescrito material ortoprotésico del catálogo Posible",
-    "Ayuda económica de pago único (víctimas de violencia de género, CM) — solo si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe) Posible",
-    "Bono social térmico — solo si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad Posible",
-    "Bono Social Eléctrico — solo si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV) Posible",
-    "Pensión no contributiva (jubilación o invalidez) — solo si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente); si tus ingresos anuales están por debajo del límite de la PNC Posible",
-    "Prestación por cuidado de menores con enfermedad grave — solo si tu hijo o hija tiene cáncer u otra enfermedad grave; si reduces tu jornada de trabajo al menos un 50 % para cuidarlo Posible",
     "Asignación por hijo o menor a cargo Posible"
    ],
+   "cardMax": 676,
    "missing": [
     "Para alguna ayuda falta saber si tus ingresos anuales pasan de 8803,2 €. Responder"
    ],
-   "related": 10
+   "related": 10,
+   "height": 6297,
+   "solosi": 14,
+   "folded": 19,
+   "sentence": "2 ayudas encajan contigo; 1 ayuda podría encajarte; 19 sin descartar, plegadas; 14 solo si se da una situación concreta; 1 dato por responder; 35 relacionadas sin comprobar"
   }
  }
 }
