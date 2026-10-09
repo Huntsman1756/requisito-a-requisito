@@ -101,6 +101,12 @@ async function audit(page: Page): Promise<RawFinding[]> {
 		const out: F[] = [];
 		const vw = document.documentElement.clientWidth;
 
+		// La cabecera es sticky: si el test dejó la página desplazada, sus
+		// rects solapan con el contenido en coordenadas de viewport aunque el
+		// layout sea correcto. Se mide siempre con scroll a 0, sin la
+		// animación de scroll-behavior:smooth (mediaríamos a mitad de viaje).
+		window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
 		// a) scroll horizontal (+ qué elementos lo provocan)
 		const sw = document.documentElement.scrollWidth;
 		if (sw > vw + 1) {
