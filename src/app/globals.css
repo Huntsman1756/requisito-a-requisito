@@ -7,17 +7,10 @@
  * design/prototipo/requisito-a-requisito.html.
  */
 
-/* ---------- fuentes autoalojadas (OFL) ---------- */
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 400; font-display: swap; src: url("/requisito-a-requisito/fonts/ahn-r.woff2") format("woff2"); }
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 500; font-display: swap; src: url("/requisito-a-requisito/fonts/ahn-Medium.woff2") format("woff2"); }
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 700; font-display: swap; src: url("/requisito-a-requisito/fonts/ahn-b.woff2") format("woff2"); }
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 800; font-display: swap; src: url("/requisito-a-requisito/fonts/ahn-ExtraBold.woff2") format("woff2"); }
-@font-face { font-family: "Atkinson Hyperlegible Mono"; font-weight: 400; font-display: swap; src: url("/requisito-a-requisito/fonts/ahm-r.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Sans Condensed"; font-weight: 500; font-display: swap; src: url("/requisito-a-requisito/fonts/IBMPlexSansCondensed-Medium.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Sans Condensed"; font-weight: 600; font-display: swap; src: url("/requisito-a-requisito/fonts/IBMPlexSansCondensed-SemiBold.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-display: swap; src: url("/requisito-a-requisito/fonts/ibm-plex-mono-400.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-display: swap; src: url("/requisito-a-requisito/fonts/ibm-plex-mono-500.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 600; font-display: swap; src: url("/requisito-a-requisito/fonts/ibm-plex-mono-600.woff2") format("woff2"); }
+/* ---------- fuentes autoalojadas (OFL) ----------
+ * Los @font-face se inyectan desde src/app/layout.tsx (inline) para que
+ * la ruta respete BASE_PATH: /fonts/ en el espejo, /<repo>/fonts/ en Pages.
+ */
 
 /* ---------- tokens ---------- */
 :root {

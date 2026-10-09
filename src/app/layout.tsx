@@ -13,6 +13,28 @@ const CSP = [
 	"base-uri 'none'",
 ].join("; ");
 
+// Las @font-face van inline para respetar el basePath del export: en Pages
+// las fuentes viven bajo /<repo>/ y en el espejo (requisito.h1756.es) en la
+// raíz — la ruta absoluta fija rompía el mirror. CSP permite style inline.
+const BP = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const FONTS_CSS = [
+	'"Atkinson Hyperlegible Next",400,"ahn-r.woff2"',
+	'"Atkinson Hyperlegible Next",500,"ahn-Medium.woff2"',
+	'"Atkinson Hyperlegible Next",700,"ahn-b.woff2"',
+	'"Atkinson Hyperlegible Next",800,"ahn-ExtraBold.woff2"',
+	'"Atkinson Hyperlegible Mono",400,"ahm-r.woff2"',
+	'"IBM Plex Sans Condensed",500,"IBMPlexSansCondensed-Medium.woff2"',
+	'"IBM Plex Sans Condensed",600,"IBMPlexSansCondensed-SemiBold.woff2"',
+	'"IBM Plex Mono",400,"ibm-plex-mono-400.woff2"',
+	'"IBM Plex Mono",500,"ibm-plex-mono-500.woff2"',
+	'"IBM Plex Mono",600,"ibm-plex-mono-600.woff2"',
+]
+	.map((s) => {
+		const [family, weight, file] = s.split(",");
+		return `@font-face{font-family:${family};font-weight:${weight};font-display:swap;src:url("${BP}/fonts/${file}") format("woff2")}`;
+	})
+	.join("\n");
+
 export const metadata: Metadata = {
 	title: {
 		default: "Requisito a Requisito",
@@ -27,6 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="es">
 			<head>
 				<meta httpEquiv="Content-Security-Policy" content={CSP} />
+				<style dangerouslySetInnerHTML={{ __html: FONTS_CSS }} />
 			</head>
 			<body>
 				<a className="skip-link" href="#contenido">
