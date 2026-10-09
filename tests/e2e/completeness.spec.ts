@@ -229,10 +229,15 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 			await page
 				.getByRole("button", { name: "Ver mis resultados", exact: true })
 				.click();
+			await page.waitForSelector(".aid-card", { timeout: 15000 });
 			const closed = page.getByRole("button", {
 				name: /Mostrar ayudas cerradas/,
 			});
 			if (await closed.isVisible()) await closed.click();
+			// El grupo «no se puede descartar» va plegado desde F10-RES: se abre
+			// para comprobar que la ayuda golden aparece también ahí.
+			for (const d of await page.locator(".results-closed > summary").all())
+				await d.click();
 			const card = page
 				.locator(".results-list .aid-card")
 				.filter({ has: page.locator(`a[href="${url(`/ayudas/${slug}/`)}"]`) });

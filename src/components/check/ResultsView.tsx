@@ -29,16 +29,12 @@ import {
 	uncoveredCount,
 	worstOf,
 } from "../../lib/matrix";
-/** «Encaja»: veredicto probable, o posible con todos los requisitos duros
- *  comprobables en T (el resto son condiciones del trámite, mostradas ⚠). */
-function isEncaja({ ev }: { ev: EvaluationResult }): boolean {
-	return (
-		ev.verdict === "probable" ||
-		(ev.verdict === "posible" &&
-			ev.requirements.every((r) => !r.hard || r.status === "T") &&
-			ev.requirements.some((r) => r.hard && r.status === "T"))
-	);
-}
+import {
+	groupResults,
+	isEncaja as encaja,
+	MAX_OPEN_UNKNOWNS,
+} from "../../lib/results-order";
+const isEncaja = ({ ev }: { ev: EvaluationResult }) => encaja(ev);
 
 const EVENT_LABELS: Record<string, string> = {
 	tener_hijo: "Voy a tener un hijo",
@@ -55,12 +51,6 @@ import type { Answer } from "./QuestionStep";
 import { QuestionStep } from "./QuestionStep";
 
 const key = (k: string): string => (k in es ? es[k as I18nKey] : k);
-const VERDICT_ORDER = [
-	"probable",
-	"posible",
-	"insuficiente",
-	"no_cumple",
-] as const;
 
 interface Props {
 	data: CheckData;
@@ -118,14 +108,17 @@ export function ResultsView({
 			({ ev }) => ev.verdict === v && ev.selfCheck.passed,
 		);
 	const notEvaluable = evaluations.filter(({ ev }) => !ev.selfCheck.passed);
-	const visible = VERDICT_ORDER.flatMap((v) =>
-		byVerdict(v).filter(
-			({ ev }) => showClosed || ev.deadline.state !== "CLOSED",
-		),
-	);
 	const closedCount = evaluations.filter(
 		({ ev }) => ev.deadline.state === "CLOSED",
 	).length;
+
+	// F10-RES: orden por utilidad, no por letra del nombre — la agrupación
+	// vive en lib/results-order.ts (test sobre datos reales del bundle).
+	const groups = groupResults(evaluations, showClosed);
+	const { encajas, posiblesPocas, noDescartar, faltanDatos, noCumple } = groups;
+	// Orden en pantalla: encaja → posible con pocas incógnitas → no se puede
+	// descartar (plegada) → faltan datos → no aplica (plegada).
+	const visible = [...encajas, ...posiblesPocas, ...noDescartar, ...faltanDatos];
 
 	// Datos que faltan: unión de missing de todas las evaluaciones.
 	const missing = useMemo(() => {
@@ -299,15 +292,49 @@ export function ResultsView({
 				</aside>
 			)}
 
+			{encajas.length > 0 && (
+				<h2 className="results-group">{key("results.group.encaja")}</h2>
+			)}
 			<div className="results-list">
-				{visible
-					.filter(({ ev }) => ev.verdict !== "no_cumple")
-					.map(({ rs, ev }) => (
-						<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} />
-					))}
+				{encajas.map(({ rs, ev }) => (
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} />
+				))}
 			</div>
 
-			{byVerdict("no_cumple").length > 0 && (
+			{posiblesPocas.length > 0 && (
+				<h2 className="results-group">{key("results.group.posible")}</h2>
+			)}
+			<div className="results-list">
+				{posiblesPocas.map(({ rs, ev }) => (
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} />
+				))}
+			</div>
+
+			{noDescartar.length > 0 && (
+				<details className="results-closed" id="no-descartar">
+					<summary>
+						<h2 className="results-group">
+							{key("results.group.noDescartar")} ({noDescartar.length})
+						</h2>
+					</summary>
+					<div className="results-list">
+						{noDescartar.map(({ rs, ev }) => (
+							<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} compact />
+						))}
+					</div>
+				</details>
+			)}
+
+			{faltanDatos.length > 0 && (
+				<h2 className="results-group">{key("results.group.insuficiente")}</h2>
+			)}
+			<div className="results-list">
+				{faltanDatos.map(({ rs, ev }) => (
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} compact />
+				))}
+			</div>
+
+			{noCumple.length > 0 && (
 				<div className="nocumple">
 					<button
 						type="button"
@@ -316,12 +343,12 @@ export function ResultsView({
 						onClick={() => setShowNoCumple((v) => !v)}
 					>
 						{t("results.noaplica.title", {
-							n: byVerdict("no_cumple").length,
+							n: noCumple.length,
 						})} — ver por qué
 					</button>
 					{showNoCumple && (
 						<ul className="results-list">
-							{byVerdict("no_cumple").map(({ rs, ev }) => (
+							{noCumple.map(({ rs, ev }) => (
 								<li key={ev.benefitSlug}>
 									<ResultCard rs={rs} ev={ev} compact />
 								</li>
@@ -709,6 +736,14 @@ function ResultCard({
 						</p>
 					)}
 				</>
+			)}
+
+			{compact && (
+				<p className="card-actions">
+					<Link className="btn-quiet" href={`/ayudas/${ev.benefitSlug}`}>
+						{t("card.fullDetail")}
+					</Link>
+				</p>
 			)}
 
 			<p className="card-foot">

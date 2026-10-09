@@ -134,6 +134,10 @@ export const es = {
 	"results.level2.title": "También podrían interesarte",
 	"results.level2.note":
 		"Relacionada con tu situación. No hemos comprobado sus requisitos: revisa la ficha.",
+	"results.group.encaja": "Encajan contigo",
+	"results.group.posible": "Podrían encajar — falta confirmar algún dato",
+	"results.group.noDescartar": "No se pueden descartar — faltan varios datos",
+	"results.group.insuficiente": "No tenemos datos suficientes",
 	"results.noaplica.title": "No parece aplicarte ({n})",
 	"results.noaplica.reason":
 		"No parece aplicarte porque no cumples: {reqs}. Si crees que sí cumples, consulta la fuente oficial.",

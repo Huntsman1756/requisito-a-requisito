@@ -53,7 +53,13 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 
 	// Resultados
 	await expect(page.getByRole("heading", { name: "Tus resultados" })).toBeVisible({ timeout: 15000 });
-	await expect(page.getByText("Familia numerosa").first()).toBeVisible();
+	// «Familia numerosa» puede ir en el grupo abierto o en el plegado
+	// «no se puede descartar»: el criterio es que aparezca en resultados.
+	for (const d of await page.locator(".results-closed > summary").all())
+		await d.click();
+	await expect(
+		page.getByRole("heading", { name: /familias? numerosas?/i }).first(),
+	).toBeVisible();
 	// Guardia I7: si el self-check cae, todas las tarjetas serían «No evaluable».
 	await expect(page.getByText("No evaluable")).toHaveCount(0);
 	await expect(page.getByText(/Posible|Probable|Encaja/).first()).toBeVisible();
