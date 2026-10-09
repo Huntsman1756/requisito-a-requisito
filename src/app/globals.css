@@ -55,10 +55,11 @@
 
 * { box-sizing: border-box }
 html { scroll-behavior: smooth }
-body { background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--f-body); margin: 0; padding-inline: 16px }
-h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15 }
+body { background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--f-body); margin: 0; padding-inline: 16px; overflow-wrap: break-word }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; overflow-wrap: anywhere }
 h1 { font-weight: 800; letter-spacing: -0.02em }
 h2 { font-weight: 800; letter-spacing: -0.015em }
+h1 + h2 { margin-top: 1.4rem }
 p { margin: 0 0 0.75rem }
 a { color: var(--seal); text-underline-offset: 3px }
 :focus-visible { outline: 3px solid var(--seal); outline-offset: 2px; border-radius: 2px }
@@ -75,10 +76,16 @@ a { color: var(--seal); text-underline-offset: 3px }
 /* ---------- barra superior ---------- */
 .top, .site-header { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule) }
 .site-header__inner { max-width: var(--shell); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; flex-wrap: wrap }
-.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink) }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); min-height: 44px }
 .brand-mark { width: 30px; height: 30px; flex: none }
-.brand-name { font: 800 1.12rem/1 var(--f-display); letter-spacing: -0.01em; white-space: nowrap }
+.brand-name { font: 800 1.12rem/1.1 var(--f-display); letter-spacing: -0.01em; min-width: 0; overflow-wrap: anywhere }
 .site-nav { display: flex; gap: 1.1rem; flex-wrap: wrap }
+.site-nav a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: .15rem }
+/* Un <details> cerrado oculta visualmente sus hijos pero Chromium los
+ * layouta igual (rects reales que ensanchan el min-content de la tarjeta
+ * → scroll-x a 320 px). display:none explícito es el comportamiento real
+ * de <details> cerrado. */
+details:not([open]) > :not(summary) { display: none }
 /* Dos navs: la inline solo existe en escritorio; el <details> solo en
  * móvil. (Un solo <details> cerrado dejaba la nav con ancho 0 y los enlaces
  * sangraban sobre el banner — y los hijos de un details cerrado no se
@@ -107,7 +114,8 @@ a { color: var(--seal); text-underline-offset: 3px }
 .hero h1 { font-size: clamp(2rem, 4.2vw, 3.2rem); font-weight: 800; letter-spacing: -0.025em }
 .hero h1 em { font-style: normal; color: var(--seal) }
 .cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.6rem }
-.btn, .cta a, .cta button { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: 0 1.25rem; border-radius: var(--r); font: 700 1rem var(--f-body); text-decoration: none; border: 2px solid var(--seal); cursor: pointer }
+a.cta, button.cta { margin-top: 0 }
+.btn, a.cta, button.cta, .cta a, .cta button { display: inline-flex; align-items: center; gap: min(.5rem, 2vw); min-height: 48px; padding: 0 min(1.25rem, 6vw); max-width: 100%; overflow-wrap: anywhere; text-align: center; border-radius: var(--r); font: 700 1rem var(--f-body); text-decoration: none; border: 2px solid var(--seal); cursor: pointer }
 .btn-primary, .btn.primary, .cta .cta { background: var(--seal); color: #fff }
 .btn-primary { background: var(--seal); color: var(--sheet); border-color: var(--seal) }
 @media (prefers-color-scheme: dark) {
@@ -117,16 +125,16 @@ a { color: var(--seal); text-underline-offset: 3px }
 }
 :root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn.primary, :root[data-theme="dark"] .cta .cta { color: #0E141C }
 .btn-ghost, .btn.ghost { background: transparent; color: var(--seal) }
-.btn-quiet { background: transparent; color: var(--seal); border: 1px solid var(--rule); min-height: 44px; padding: 0 1rem; border-radius: var(--r); font: 600 .95rem var(--f-body); cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; text-decoration: none }
-.promises { display: grid; gap: .45rem; margin-top: 1.6rem; padding: 0; list-style: none }
+.btn-quiet { background: transparent; color: var(--seal); border: 1px solid var(--rule); min-height: 44px; padding: 0 min(1rem, 6vw); max-width: 100%; overflow-wrap: anywhere; border-radius: var(--r); font: 600 .95rem var(--f-body); cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; text-decoration: none }
+.promises { display: grid; grid-template-columns: minmax(0,1fr); gap: .45rem; margin-top: 1.6rem; padding: 0; list-style: none }
 .promises li { display: flex; gap: .6rem; align-items: flex-start; font-size: .98rem }
 .promises svg { flex: none; margin-top: .2rem; color: var(--seal) }
 
 /* hoja de muestra con casillas y sello */
 .specimen { position: relative; background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); padding: 1.4rem 1.4rem 1.6rem; box-shadow: 0 1px 0 var(--rule), 0 18px 40px -28px rgba(20,32,47,.45) }
-.specimen .head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: .6rem; margin-bottom: .4rem }
+.specimen .head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: .6rem; margin-bottom: .4rem }
 .specimen .head h2 { font-size: 1.15rem }
-.box { display: grid; grid-template-columns: 2.2rem 1.6rem minmax(0,1fr); gap: .55rem; align-items: start; padding-block: .65rem; border-bottom: 1px solid var(--rule) }
+.box { display: grid; grid-template-columns: min(2.2rem, 12%) min(1.6rem, 10%) minmax(0,1fr); gap: .55rem; align-items: start; padding-block: .65rem; border-bottom: 1px solid var(--rule) }
 .box .n { font: 500 .78rem var(--f-mono); color: var(--ink-2); padding-top: .15rem }
 .tick { width: 1.45rem; height: 1.45rem; border: 2px solid currentColor; border-radius: 3px; display: grid; place-items: center; font: 800 .9rem/1 var(--f-display) }
 .tick.ok { color: var(--ok); background: var(--ok-soft) }
@@ -145,7 +153,7 @@ section.band, .band { padding-block: 2.6rem; border-top: 1px solid var(--rule) }
 
 /* eventos vitales: lista de dos columnas */
 .events { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 2.5rem }
-.events a { display: grid; grid-template-columns: 2.6rem minmax(0,1fr) auto; align-items: center; gap: .9rem; padding-block: .9rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink) }
+.events a { display: grid; grid-template-columns: min(2.6rem, 14%) minmax(0,1fr) auto; align-items: center; gap: .9rem; padding-block: .9rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink) }
 .events a:hover .ev-t { color: var(--seal) }
 .ev-i { width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--tint); display: grid; place-items: center; color: var(--seal) }
 .ev-t { font-weight: 700 }
@@ -157,7 +165,7 @@ section.band, .band { padding-block: 2.6rem; border-top: 1px solid var(--rule) }
 .example-links { list-style: none; padding: 0 }
 .example-links li { padding: .5rem 0 }
 .example-links a { font-weight: 600 }
-.chip { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 1rem; border: 1px solid var(--rule); background: var(--sheet); border-radius: 999px; color: var(--ink); font: 500 .95rem var(--f-body); cursor: pointer }
+.chip { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 min(1rem, 6vw); max-width: 100%; min-width: 0; overflow-wrap: anywhere; border: 1px solid var(--rule); background: var(--sheet); border-radius: 999px; color: var(--ink); font: 500 .95rem var(--f-body); cursor: pointer }
 .chip--on, .chip[aria-pressed="true"] { border-color: var(--seal); background: var(--seal-soft); color: var(--ink) }
 
 /* proceso: secuencia numerada real */
@@ -192,6 +200,7 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .option { display: flex; gap: .7rem; align-items: flex-start; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: var(--r); margin-bottom: .5rem; cursor: pointer }
 .option input { margin-top: .2rem }
 .option:has(input:checked) { background: var(--seal-soft); border-color: var(--seal) }
+.question__why { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .4rem; background: none; border: 0; color: var(--seal); font: 600 .95rem var(--f-body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer }
 .alt, .question__alt { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.1rem }
 .alt button, .question__alt button { min-height: 44px; padding: 0 1rem; border: 1px dashed var(--ink-2); border-radius: var(--r); background: transparent; color: var(--ink); font: 500 .95rem var(--f-body); cursor: pointer }
 .nav-q, .question__actions { display: flex; justify-content: space-between; gap: .8rem; margin-top: 1.6rem; flex-wrap: wrap }
@@ -209,14 +218,14 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .res-head { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: end }
 .persona { font: 500 .9rem var(--f-label); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2) }
 .tally { display: flex; gap: 1.6rem; flex-wrap: wrap; margin-top: 1rem }
-.tally div { display: grid }
+.tally div { display: grid; gap: .15rem }
 .tally b { font: 800 2rem/1 var(--f-display); font-variant-numeric: tabular-nums }
 .tally .ok b { color: var(--ok) } .tally .doubt b { color: var(--doubt) } .tally .seal-c b { color: var(--seal) }
 .missing-panel, .missing { margin-top: 1.6rem; border-left: 4px solid var(--doubt); background: var(--doubt-soft); padding: 1rem 1.2rem; border-radius: 0 var(--r) var(--r) 0; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap }
 .missing-panel p { max-width: 38rem; margin: 0 }
 
 /* ficha-resultado estilo expediente */
-.results-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.2rem }
+.results-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: minmax(0,1fr); gap: 1.2rem }
 .card, .aid-card { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); padding: 0 }
 .card > *, .aid-card > * { padding-inline: 1.2rem }
 .card h2, .aid-card h2 { font-size: 1.25rem; margin: 0 }
@@ -285,16 +294,16 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 
 /* explorador */
 .explorer-filters { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 }
-.explorer-filters input[type="search"] { flex: 1 1 200px; padding: .55rem .75rem; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
-.explorer-filter { display: flex; flex-direction: column; gap: .25rem; font-size: .85rem; color: var(--ink-2) }
-.explorer-filter select { padding: .5rem; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
+.explorer-filters input[type="search"] { flex: 1 1 200px; min-width: 0; max-width: 100%; padding: .55rem .75rem; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
+.explorer-filter { display: flex; flex-direction: column; gap: .25rem; min-width: 0; max-width: 100%; font-size: .85rem; color: var(--ink-2) }
+.explorer-filter select { padding: .5rem; min-width: 0; max-width: 100%; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
 .explorer-count { color: var(--ink-2) }
-.explorer-list { list-style: none; padding: 0; display: grid; gap: .5rem }
+.explorer-list { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0,1fr); gap: .5rem }
 .explorer-item { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; flex-wrap: wrap; padding: .65rem .9rem; border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet) }
 .explorer-main { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .5rem }
 .explorer-item a { font-weight: 600; text-decoration: none }
 .explorer-item a:hover { text-decoration: underline }
-.explorer-meta { font: 500 .8rem var(--f-mono); color: var(--ink-2); white-space: nowrap }
+.explorer-meta { font: 500 .8rem var(--f-mono); color: var(--ink-2); overflow-wrap: break-word }
 .explorer-badge { display: inline-block; padding: .1rem .5rem; border: 1px solid var(--seal); border-radius: 999px; color: var(--seal); font: 600 .75rem var(--f-body); vertical-align: middle }
 
 /* observatorio */
@@ -303,16 +312,20 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 .obs b { display: block; font: 800 1.9rem/1.05 var(--f-display); font-variant-numeric: tabular-nums }
 .log { margin-top: 1.6rem; border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet) }
 .log ul { list-style: none; margin: 0; padding: 0 }
-.log li { display: grid; grid-template-columns: 6.5rem 7rem minmax(0,1fr); gap: 1rem; padding: .6rem 1rem; border-bottom: 1px solid var(--rule); font-size: .93rem }
+.log li { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: .4rem 1rem; padding: .6rem 1rem; border-bottom: 1px solid var(--rule); font-size: .93rem }
+@media (min-width: 861px) {
+	.log li:has(> :nth-child(3)) { grid-template-columns: max-content 7rem minmax(0,1fr) }
+}
+.log code, .log .note { overflow-wrap: anywhere }
 
 /* listas genéricas de ayudas */
-.aid-list { list-style: none; padding: 0; display: grid; gap: .8rem; margin-top: 1rem }
+.aid-list { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0,1fr); gap: .8rem; margin-top: 1rem }
 .aid-meta { font: 400 .85rem var(--f-mono); color: var(--ink-2) }
 .coverage { margin-top: 2rem }
 .bullets { padding-left: 1.2rem }
 .bullets li { margin-bottom: .35rem }
 .review-list { list-style: none; padding: 0 }
-.review-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--rule) }
+.review-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--rule); flex-wrap: wrap }
 .review-q { font-weight: 700 }
 .review-a { color: var(--ink-2) }
 
@@ -332,6 +345,19 @@ footer, .site-footer { border-top: 1px solid var(--rule); margin-top: 3rem; padd
 @media (max-width: 860px) {
 	.hero, .two { grid-template-columns: minmax(0,1fr) }
 	.steps, .events { grid-template-columns: minmax(0,1fr) }
+	.events a { grid-template-columns: min(2.2rem, 14%) minmax(0,1fr) }
+	.events .ev-c { grid-column: 2; white-space: normal }
+	.box { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: .7rem }
+	.box p { flex-basis: 100%; margin-top: .15rem }
+	.site-footer .shell, .site-footer > div { flex-direction: column; gap: .6rem }
+	/* A zoom 200–400 % todo es «estrecho»: permitir que los ítems flex/grid
+	 * encojan por debajo de su min-content y que las palabras se partan
+	 * dentro de su caja (si no, su min-width:auto desborda el viewport). */
+	.hero > *, .specimen, .band > *, .site-footer span, .site-footer a { min-width: 0 }
+	.specimen .head, .promises li, .site-footer span { overflow-wrap: anywhere }
+	.box p { min-width: 0; overflow-wrap: anywhere }
+	.specimen { padding-inline: min(1.4rem, 6vw) }
+	.card > *, .aid-card > *, .screen, .question { padding-inline: min(1.2rem, 6vw) }
 	.obs { grid-template-columns: repeat(2, minmax(0,1fr)) }
 	.seal { right: 6px }
 	.log li { grid-template-columns: minmax(0,1fr) }
