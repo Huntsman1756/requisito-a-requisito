@@ -19,6 +19,7 @@ interface RuleListItem {
 	validFrom?: string;
 	validUntil?: string;
 	humanReview: { status: string };
+	panelReview?: { status: string };
 	sources: Source[];
 	application: {
 		channel: { managingBody: string; url: string; online: boolean };
@@ -60,12 +61,17 @@ export default function Ayudas() {
 			<ul className="aid-list">
 				{rules.map((r) => (
 					<li key={r.benefitSlug} className="aid-card">
-						<h2>
-							{aidTitle(r.benefitSlug)}{" "}
-							<span className="tag tag--review">
-								Verificado con la fuente
-							</span>
-						</h2>
+						<h2>{aidTitle(r.benefitSlug)}</h2>
+						<p className="review-state note">
+							Comprobada con la fuente
+							{r.humanReview?.status === "approved" && " · revisada"}
+							{r.humanReview?.status !== "approved" &&
+								r.panelReview?.status === "approved" &&
+								" · revisada por un panel independiente"}
+							{r.humanReview?.status !== "approved" &&
+								r.panelReview?.status !== "approved" &&
+								" · revisión final pendiente"}
+						</p>
 						<dl className="aid-meta">
 							<div>
 								<dt>Plazo</dt>

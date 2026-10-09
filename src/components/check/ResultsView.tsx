@@ -320,7 +320,7 @@ export function ResultsView({
 						})} — ver por qué
 					</button>
 					{showNoCumple && (
-						<ul>
+						<ul className="results-list">
 							{byVerdict("no_cumple").map(({ rs, ev }) => (
 								<li key={ev.benefitSlug}>
 									<ResultCard rs={rs} ev={ev} compact />

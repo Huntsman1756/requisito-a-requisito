@@ -318,6 +318,123 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
+		// i) estilos por defecto del navegador dentro de <main> — la misma
+		// clase de fallo que dejó /ayudas/ sin maquetar (dl mono+40 px, h3
+		// enormes, marca suelta). Comprobaciones de estilo CALCULADO, no de
+		// markup: funcionan aunque el elemento no lleve clase.
+		const main = document.querySelector("main");
+		if (main) {
+			// i.1) ul/ol con la sangría del navegador. La UA da 40 px
+			// ABSOLUTOS (no escala con el zoom de texto); la nuestra es rem
+			// — se detecta exactamente 40, no «mucho».
+			for (const el of [...main.querySelectorAll("ul, ol")]) {
+				if (!visible(el) || el.closest("details:not([open])")) continue;
+				const s = getComputedStyle(el);
+				if (Math.abs(parseFloat(s.paddingInlineStart) - 40) < 0.5)
+					out.push({
+						type: "lista-sin-estilo",
+						severity: "alta",
+						detail: `${el.tagName.toLowerCase()} con sangría UA ${s.paddingInlineStart} — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
+					});
+			}
+			// i.2) dd/blockquote con la sangría del navegador
+			for (const el of [...main.querySelectorAll("dd, blockquote")]) {
+				if (!visible(el) || el.closest("details:not([open])")) continue;
+				const s = getComputedStyle(el);
+				if (Math.abs(parseFloat(s.marginInlineStart) - 40) < 0.5)
+					out.push({
+						type: "sangria-navegador",
+						severity: "alta",
+						detail: `${el.tagName.toLowerCase()} con sangría UA ${s.marginInlineStart} — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
+					});
+			}
+			// i.3) tabla sin estilo propio (border-spacing del navegador)
+			for (const el of [...main.querySelectorAll("table")]) {
+				if (!visible(el)) continue;
+				const s = getComputedStyle(el);
+				if (s.borderCollapse === "separate" && parseFloat(s.borderSpacing) >= 1.5)
+					out.push({
+						type: "tabla-sin-estilo",
+						severity: "media",
+						detail: `table con border-spacing ${s.borderSpacing} (UA)`,
+					});
+			}
+			// i.4) escala de titulares: el título de una tarjeta nunca puede
+			// igualar o superar al h1 de página; y ningún h1-h4 queda con el
+			// tamaño mínimo del navegador.
+			const h1Size = Math.max(
+				...[...main.querySelectorAll("h1")].map((h) =>
+					parseFloat(getComputedStyle(h).fontSize),
+				),
+				0,
+			);
+			if (h1Size > 0) {
+				for (const el of [...main.querySelectorAll(".card h2, .aid-card h2, .dossier h3")]) {
+					if (!visible(el)) continue;
+					const s = parseFloat(getComputedStyle(el).fontSize);
+					if (s >= h1Size)
+						out.push({
+							type: "titulo-tarjeta-grande",
+							severity: "alta",
+							detail: `${el.tagName.toLowerCase()} de tarjeta a ${s}px ≥ h1 ${h1Size}px — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
+						});
+				}
+				// .question__title es el título de cada paso del asistente
+				// (22-29 px por diseño), no el h1 de página.
+				if (h1Size < 26 && !main.querySelector("h1.question__title"))
+					out.push({
+						type: "h1-pequeno",
+						severity: "media",
+						detail: `h1 de página a ${h1Size}px (<26 px)`,
+					});
+			}
+			// i.5) texto en monoespaciada fuera de los sitios de docs/16 §3
+			// (citas, localizadores, contadores, <code>): señal de elemento sin
+			// estilo propio.
+			const MONO_OK =
+				"code, pre, .mono, .cite, .card-foot, .specimen, .seal, .progress, .events, .explorer-meta, .step-n, .verify-step, .matrix, .matrix-mobile, .legend, .log, .combobox, .dep-row, .obs";
+			for (const { el, text } of leaves) {
+				const cs = getComputedStyle(el);
+				if (
+					/mono|consolas|courier/i.test(cs.fontFamily) &&
+					main.contains(el) &&
+					!el.closest(MONO_OK)
+				)
+					out.push({
+						type: "mono-fuera-de-sitio",
+						severity: "media",
+						detail: `«${text.slice(0, 40)}» en ${cs.fontFamily.slice(0, 50)}`,
+					});
+			}
+			// i.6) color de texto fuera de los tokens de :root (docs/16 §2).
+			// Se resuelven todos los --* a su rgb() y se admite además el
+			// blanco/#0E141C de los botones primarios.
+			const probe = document.createElement("i");
+			probe.style.display = "none";
+			document.body.appendChild(probe);
+			const allowed = new Set(["rgb(255, 255, 255)", "rgb(14, 20, 28)", "rgb(14, 32, 47)"]);
+			for (const prop of [
+				"--ink", "--ink-2", "--seal", "--ok", "--doubt", "--no", "--na",
+				"--lvl-estado", "--lvl-cm", "--lvl-ayto", "--sheet",
+			]) {
+				probe.style.color = `var(${prop})`;
+				allowed.add(getComputedStyle(probe).color);
+			}
+			probe.remove();
+			for (const { el, text } of leaves) {
+				if (!main.contains(el)) continue;
+				// El color lavado de un control deshabilitado es deliberado.
+				if (el.closest("[disabled], [aria-disabled=true]")) continue;
+				const c = getComputedStyle(el).color;
+				if (!allowed.has(c))
+					out.push({
+						type: "color-fuera-paleta",
+						severity: "media",
+						detail: `«${text.slice(0, 40)}» color ${c}`,
+					});
+			}
+		}
+
 		// g) slugs técnicos como texto visible (fuera de code/pre y de URLs)
 		const slugRe = /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/g;
 		const twalker = document.createTreeWalker(
@@ -586,7 +703,11 @@ for (const theme of THEMES) {
 		test(`layout comprobar-intro (${theme})`, async ({ page }) => {
 			wireConsole(page, "comprobar-intro");
 			await page.goto(url("/comprobar/"));
-			await page.getByRole("button", { name: "Empezar", exact: true }).waitFor();
+			// El botón existe desde el SSR pero está deshabilitado hasta que
+			// cargan las preguntas: auditar con la página ya habilitada.
+			await expect(
+				page.getByRole("button", { name: "Empezar", exact: true }),
+			).toBeEnabled();
 			const all = await auditAt(page, `comprobar-intro-${theme}`, WIDTHS);
 			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 		});

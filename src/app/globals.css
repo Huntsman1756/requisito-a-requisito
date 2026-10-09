@@ -56,10 +56,30 @@
 * { box-sizing: border-box }
 html { scroll-behavior: smooth }
 body { background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--f-body); margin: 0; padding-inline: 16px; overflow-wrap: break-word }
-h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; overflow-wrap: anywhere }
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; overflow-wrap: anywhere }
 h1 { font-weight: 800; letter-spacing: -0.02em }
 h2 { font-weight: 800; letter-spacing: -0.015em }
 h1 + h2 { margin-top: 1.4rem }
+/* Escala de titulares dentro del contenido (docs/16 §5): el h1 de página
+ * es siempre mayor que el título de una tarjeta. Sin reglas propias, h2-h4
+ * heredaban los tamaños del navegador (2em/1.5em/1em) — el mismo fallo que
+ * dejaba los dl de /ayudas/ sin maquetar. Las clases de componente
+ * (.band h2, .aid-card h2, .steps h3…) ajustan donde hace falta. */
+main h1 { font-size: clamp(1.9rem, 3.6vw, 2.7rem) }
+main h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem) }
+main h3 { font-size: 1.12rem }
+main h4 { font-size: 1rem }
+main * + h2 { margin-top: 1.7rem }
+main * + h3, main * + h4 { margin-top: 1.3rem }
+/* Elementos sin clase dentro del contenido: los valores del navegador
+ * (sangría de 40 px, sin espaciado propio, cite sin marco) delataban
+ * contenido sin maquetar. :where() deja la especificidad en 0-0-1 para que
+ * cualquier clase de componente siga ganando. */
+main :where(ul:not([class]), ol:not([class])) { padding-left: 1.35rem; margin: .5rem 0 1rem }
+main :where(ul:not([class]), ol:not([class])) > li { margin-bottom: .35rem }
+main :where(blockquote:not([class])) { margin: .6rem 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .98rem }
+code { font: 400 .94em var(--f-mono); background: var(--tint); padding: .05em .3em; border-radius: 3px; overflow-wrap: anywhere }
+summary { cursor: pointer }
 p { margin: 0 0 0.75rem }
 a { color: var(--seal); text-underline-offset: 3px }
 :focus-visible { outline: 3px solid var(--seal); outline-offset: 2px; border-radius: 2px }
@@ -118,14 +138,20 @@ details:not([open]) > :not(summary) { display: none }
 .cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.6rem }
 a.cta, button.cta { margin-top: 0 }
 .btn, a.cta, button.cta, .cta a, .cta button { display: inline-flex; align-items: center; gap: min(.5rem, 2vw); min-height: 48px; padding: 0 min(1.25rem, 6vw); max-width: 100%; overflow-wrap: anywhere; text-align: center; border-radius: var(--r); font: 700 1rem var(--f-body); text-decoration: none; border: 2px solid var(--seal); cursor: pointer }
-.btn-primary, .btn.primary, .cta .cta { background: var(--seal); color: #fff }
+.btn[disabled], button.cta[disabled], .cta button[disabled] { opacity: .55; cursor: wait }
+/* El CTA va relleno aunque el botón no esté dentro de un contenedor .cta:
+ * antes, «Empezar»/«Siguiente»/el enlace al canal salían con el color de
+ * texto del navegador (negro) en vez del blanco del sello. */
+.btn-primary, .btn.primary, .cta .cta, a.cta, button.cta { background: var(--seal); color: #fff }
 .btn-primary { background: var(--seal); color: var(--sheet); border-color: var(--seal) }
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) .btn-primary,
 	:root:not([data-theme="light"]) .btn.primary,
-	:root:not([data-theme="light"]) .cta .cta { color: #0E141C }
+	:root:not([data-theme="light"]) .cta .cta,
+	:root:not([data-theme="light"]) a.cta,
+	:root:not([data-theme="light"]) button.cta { color: #0E141C }
 }
-:root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn.primary, :root[data-theme="dark"] .cta .cta { color: #0E141C }
+:root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn.primary, :root[data-theme="dark"] .cta .cta, :root[data-theme="dark"] a.cta, :root[data-theme="dark"] button.cta { color: #0E141C }
 .btn-ghost, .btn.ghost { background: transparent; color: var(--seal) }
 .btn-quiet { background: transparent; color: var(--seal); border: 1px solid var(--rule); min-height: 44px; padding: 0 min(1rem, 6vw); max-width: 100%; overflow-wrap: anywhere; border-radius: var(--r); font: 600 .95rem var(--f-body); cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; text-decoration: none }
 .promises { display: grid; grid-template-columns: minmax(0,1fr); gap: .45rem; margin-top: 1.6rem; padding: 0; list-style: none }
@@ -230,7 +256,7 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .results-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: minmax(0,1fr); gap: 1.2rem }
 .card, .aid-card { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); padding: 0 }
 .card > *, .aid-card > * { padding-inline: 1.2rem }
-.card h2, .aid-card h2 { font-size: 1.25rem; margin: 0 }
+.card h2, .aid-card h2 { font-size: 1.25rem; margin: .35rem 0 0 }
 .card-badges { display: flex; gap: .4rem; align-items: center; padding-top: 1rem; flex-wrap: wrap }
 .badge, .lvl { display: inline-block; font: 600 .7rem/1 var(--f-label); letter-spacing: .07em; text-transform: uppercase; padding: .25rem .45rem; border: 1.5px solid currentColor; border-radius: 3px }
 .badge--scope, .lvl.estado { color: var(--lvl-estado) }
@@ -322,7 +348,31 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 
 /* listas genéricas de ayudas */
 .aid-list { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0,1fr); gap: .8rem; margin-top: 1rem }
-.aid-meta { font: 400 .85rem var(--f-mono); color: var(--ink-2) }
+/* Datos clave de una tarjeta (dl como en el expediente del prototipo):
+ * etiqueta en condensada mayúscula, valor en cuerpo. Antes iba entero en
+ * mono con la sangría de 40 px del navegador — parecía sin maquetar. */
+.aid-meta { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: .45rem 1.2rem; margin: 1rem 0 .2rem; padding-top: .9rem; border-top: 1px solid var(--rule); font-size: .95rem; color: var(--ink) }
+.aid-meta > div { display: contents }
+.aid-meta dt { font: 600 .76rem/1.45 var(--f-label); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2) }
+.aid-meta dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+/* A 320 px el dt «Dónde se solicita» dejaba al dd en una columna de ~100 px
+ * (una palabra por línea): se apilan, como en el expediente del prototipo. */
+@media (max-width: 560px) {
+	.aid-meta { grid-template-columns: minmax(0,1fr) }
+	.aid-meta dt { padding-top: .25rem }
+}
+/* Tarjeta del listado /ayudas/: aire arriba y abajo y epígrafes en
+ * etiqueta condensada (los h3 salían con el tamaño del navegador). */
+.aid-card > :first-child { padding-top: 1.1rem }
+.aid-card > :last-child { padding-bottom: 1.1rem }
+.aid-card h3 { font: 600 .8rem/1.3 var(--f-label); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin: 1.1rem 0 .4rem }
+.aid-card .review-state { margin-top: .25rem }
+/* cadena de verificación de /como-verificamos/ */
+.verify-chain { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.3rem }
+.verify-step { border-top: 2px solid var(--ink); padding-top: .9rem }
+.verify-step h2 { font-size: 1.15rem; margin-top: 0; display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap }
+.verify-step .step-n { font: 500 .85rem var(--f-mono); color: var(--seal); border: 1.5px solid var(--seal); border-radius: 3px; padding: .12rem .45rem }
+.verify-step p { max-width: 42rem }
 .coverage { margin-top: 2rem }
 .bullets { padding-left: 1.2rem }
 .bullets li { margin-bottom: .35rem }
