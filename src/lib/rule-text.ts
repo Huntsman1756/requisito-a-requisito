@@ -5,7 +5,27 @@
  * traducir, el generador lo dice (nunca se inventa).
  */
 
+import territory from "../../data/eligibility/territory.json";
+import parametersJson from "../../data/eligibility/parameters.json";
 import type { Condition } from "./eligibility-engine/schema";
+
+const MUNICIPALITY = new Map(
+	territory.municipalities.map((m) => [m.code, m.name]),
+);
+const CCAA = new Map(territory.ccaa.map((c) => [c.code, c.name]));
+const PARAM_LABEL = new Map(
+	parametersJson.parameters.map((p) => [p.id, p.label]),
+);
+
+const EUR = new Intl.NumberFormat("es-ES", {
+	style: "currency",
+	currency: "EUR",
+	maximumFractionDigits: 2,
+});
+/** Campos cuyos valores numéricos son euros. */
+const MONEY_FIELDS = new Set(["incomeAnnual"]);
+/** Campos cuyo sujeto es plural («tus ingresos son…», «las personas…»). */
+const PLURAL_FIELDS = new Set(["incomeAnnual", "dependents", "residenceMonths"]);
 
 const FIELD_LABEL: Record<string, string> = {
 	territory: "tu lugar de empadronamiento",
@@ -61,14 +81,14 @@ const VALUE_LABEL: Record<string, Record<string, string>> = {
 	},
 };
 
-const OP_TEXT: Record<string, string> = {
-	eq: "es",
-	gte: "es al menos",
-	lte: "es como máximo",
-	gt: "es más de",
-	lt: "es menos de",
-	in: "está entre",
-	neq: "no es",
+const OP_TEXT: Record<string, [string, string]> = {
+	eq: ["es", "son"],
+	gte: ["es al menos", "son al menos"],
+	lte: ["es como máximo", "son como máximo"],
+	gt: ["es más de", "son más de"],
+	lt: ["es menos de", "son menos de"],
+	in: ["está entre", "están entre"],
+	neq: ["no es", "no son"],
 };
 
 const FIELD_OF: Record<string, string> = {
@@ -79,12 +99,15 @@ const FIELD_OF: Record<string, string> = {
 function valueText(field: string, v: unknown): string {
 	const lab = VALUE_LABEL[field]?.[String(v)];
 	if (lab) return lab;
-	if (typeof v === "number") return String(v);
+	if (typeof v === "number")
+		return MONEY_FIELDS.has(field) ? EUR.format(v) : String(v);
 	if (field === "territory" && v && typeof v === "object") {
 		const t = v as { ccaa?: string; province?: string; municipality?: string };
-		if (t.municipality) return `en el municipio ${t.municipality}`;
-		if (t.province) return `en la provincia ${t.province}`;
-		if (t.ccaa) return t.ccaa === "13" ? "en la Comunidad de Madrid" : `en la CCAA ${t.ccaa}`;
+		if (t.municipality)
+			return `en ${MUNICIPALITY.get(t.municipality) ?? `el municipio ${t.municipality}`}`;
+		if (t.province)
+			return t.province === "28" ? "en la provincia de Madrid" : `en la provincia ${t.province}`;
+		if (t.ccaa) return t.ccaa === "13" ? "en la Comunidad de Madrid" : `en ${CCAA.get(t.ccaa) ?? `la CCAA ${t.ccaa}`}`;
 	}
 	return JSON.stringify(v);
 }
@@ -100,10 +123,15 @@ function leaf(c: Extract<Condition, { field: string }>): string {
 		const sub = c.where ? `, donde ${condText(c.where)}` : "";
 		return `${f} cuentan ${dir} ${n} que cumplan${sub}`;
 	}
-	const op = OP_TEXT[c.op] ?? c.op;
+	const pair = OP_TEXT[c.op];
+	const op = pair
+		? pair[PLURAL_FIELDS.has(c.field) ? 1 : 0]
+		: String(c.op);
 	const v =
 		c.param !== undefined
-			? `${c.multiplier ?? 1} veces ${c.param}`
+			? (c.multiplier ?? 1) === 1
+				? `el ${PARAM_LABEL.get(c.param) ?? c.param}`
+				: `${c.multiplier} × ${PARAM_LABEL.get(c.param) ?? c.param}`
 			: Array.isArray(c.value)
 				? c.value.map((x) => valueText(c.field, x)).join(" o ")
 				: valueText(c.field, c.value);
