@@ -11,11 +11,23 @@ escala de títulos, paleta de tokens, página vacía, 404 con cuerpo).
 |---|---|
 | Local `out/` (serve-export, puerto 4399) — desktop-chromium | **136/136 verde** |
 | Local `out/` — mobile-iphonese | **136/136 verde** |
+| Ambas pasadas tras el fix de fuentes (`a81f1f0`) | **272/272 verde** |
+| Pages (`/requisito-a-requisito`, 47f4cb4) — desktop-chromium | **136/136 verde** |
+| Espejo (`requisito.h1756.es`) — desktop-chromium | 128/136 en la primera pasada, durante la ventana del pull atómico (CSS viejo + HTML nuevo). Verificación puntual tras el swap: fichas y listas con estilo correcto. Pendiente pasada completa sobre `a81f1f0` |
 | Vitest (incluye results-order sobre bundle real) | **567/567, 46 ficheros** |
 | Funcional + completeness desktop-chromium | 8/8 |
-| CI del push 47f4cb4: «Deploy a GitHub Pages» | build+deploy verdes (37949217233) |
-| CI manual «e2e-browsers» (chromium+firefox+webkit) | lanzado 15:15 UTC, run 37950337125 |
-| Espejo | en espera del pull del VPS (~10 min tras el artefacto 37950146690) |
+| CI del push: «Deploy a GitHub Pages» | build+deploy verdes (37949217233 y ss.) |
+| CI manual «e2e-browsers» (chromium+firefox+webkit) | **verde en 8990210** (37951847211); primer run rojo por el enlace duplicado (corregido) |
+
+## El hallazgo grande de la sesión
+
+**El sitio nunca cargó sus fuentes en producción.** `layout.tsx` generaba
+`src:url("/fonts/"ahn-r.woff2"")` — comillas corruptas por el `split(",")`
+de `FONTS_CSS`. Las 10 caras de `document.fonts` estaban vacías: todo el
+sitio se pintó siempre con la fuente del sistema. Ningún check lo veía:
+los preloads respondían 200 y el fallback tipográfico es parecido a
+Atkinson a tamaños pequeños. Corregido en `a81f1f0` con guarda permanente
+en el audit (`fuente-sin-cargar`, severidad alta).
 
 ## Defectos reales encontrados y corregidos en esta pasada
 
@@ -41,6 +53,10 @@ Severidad según el audit (alta > media > baja).
   espera `document.fonts.ready`.
 - `.aid-meta` en dos columnas a 320 px dejaba valores en ~100 px → una
   columna bajo 560 px.
+- **Fuentes del diseño nunca cargadas** (ver sección dedicada): comillas
+  corruptas en el `src:url(...)` del `@font-face` inline.
+- Enlace a ficha duplicado en las tarjetas `no_cumple` compactas → strict
+  mode roto en fiabilidad.spec en los 3 navegadores del CI.
 - Observatorio mostraba el token `CLOSED` en inglés → «Cerrado».
 - `pension-viudedad` rompía el export por una fuente sin título →
   fallback al dominio.
@@ -63,8 +79,7 @@ de la revisión humana en `visual-rev/` y del agrupado en
 
 ## Pendiente de esta fila
 
-- Suite visual sobre Pages y el espejo cuando el VPS actualice
-  (`manifest.json` → `sha256` del bundle servido debe coincidir con
-  `47f4cb4`'s export).
-- Resultado del run e2e-browsers 37950337125 (los 3 navegadores en CI).
-- Lighthouse en el espejo para / , /comprobar/ , una ficha y /explorar/.
+- Pasada completa sobre el espejo cuando el VPS sirva `a81f1f0` (el
+  artefacto de `8990210` está en curso; el de `a81f1f0` lo seguirá).
+- Lighthouse en el espejo para / , /comprobar/ , una ficha y /explorar/
+  (ya medido en local comprimido: 100 / 92 / 100 / 97).
