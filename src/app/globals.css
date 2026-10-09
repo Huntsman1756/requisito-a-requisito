@@ -355,7 +355,8 @@ footer, .site-footer { border-top: 1px solid var(--rule); margin-top: 3rem; padd
 	/* A zoom 200–400 % todo es «estrecho»: permitir que los ítems flex/grid
 	 * encojan por debajo de su min-content y que las palabras se partan
 	 * dentro de su caja (si no, su min-width:auto desborda el viewport). */
-	.hero > *, .specimen, .band > *, .site-footer span, .site-footer a { min-width: 0 }
+	.hero > *, .specimen, .band > *, .site-footer span, .site-footer a, .top > * { min-width: 0 }
+	.nav-menu summary { padding-inline: min(1rem, 6vw) }
 	.specimen .head, .promises li, .site-footer span { overflow-wrap: anywhere }
 	.box p { min-width: 0; overflow-wrap: anywhere }
 	.specimen { padding-inline: min(1.4rem, 6vw) }
