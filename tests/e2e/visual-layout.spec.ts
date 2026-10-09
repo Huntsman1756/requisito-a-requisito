@@ -331,7 +331,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			if (
 				parent &&
 				!parent.closest(
-					"code, pre, a[href], script, style, details:not([open]), .sr-only",
+					"code, pre, a[href], script, style, noscript, details:not([open]), .sr-only",
 				) &&
 				/[a-z]/.exec(t)
 			) {
