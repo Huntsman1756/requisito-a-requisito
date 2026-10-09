@@ -43,6 +43,21 @@ jobs:
         run: npm run validate:release
         env:
           BASE_PATH: /requisito-a-requisito
+      # QA visual en cada push: la matriz completa de layout (chromium)
+      # sobre el export recién construido — que un cambio no rompa la
+      # maquetación otra vez (F10-VIS).
+      - name: Install Chromium (QA visual)
+        run: npx playwright install --with-deps chromium
+      - name: Suite visual-layout (matriz completa, chromium)
+        run: npx playwright test tests/e2e/visual-layout.spec.ts --project=desktop-chromium
+        env:
+          BASE_PATH: /requisito-a-requisito
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: visual-layout-report
+          path: test-results/
+          retention-days: 14
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
