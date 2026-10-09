@@ -101,7 +101,7 @@ details:not([open]) > :not(summary) { display: none }
 }
 /* El summary no lleva display:none: .nav-menu ya está oculta por completo
  * fuera de ≤640 px; ocultar aquí el summary dejaba el móvil sin menú. */
-.nav-menu summary { list-style: none; font: 600 .95rem var(--f-label); letter-spacing: .05em; text-transform: uppercase; color: var(--seal); border: 1px solid var(--rule); border-radius: var(--r); min-height: 44px; padding: 0 1rem; align-items: center; gap: .5rem; cursor: pointer }
+.nav-menu summary { list-style: none; font: 600 .95rem var(--f-label); letter-spacing: .05em; text-transform: uppercase; color: var(--seal); border: 1px solid var(--rule); border-radius: var(--r); min-height: 44px; padding: 0 1rem; align-items: center; gap: .5rem; cursor: pointer; max-width: 100%; min-width: 0; overflow-wrap: anywhere; text-align: center }
 .nav-menu summary::before { content: "≡"; font-size: 1.1rem }
 .site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .98rem }
 .site-nav a:hover { color: var(--seal) }
