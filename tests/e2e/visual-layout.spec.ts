@@ -419,6 +419,15 @@ async function auditAt(
 function wireConsole(page: Page, name: string) {
 	page.on("console", (msg) => {
 		if (msg.type() !== "error") return;
+		// La página 404 produce el error «Failed to load resource…» para el
+		// documento principal — es su respuesta, no un recurso roto.
+		if (
+			msg.location().url &&
+			page.url() &&
+			msg.location().url === page.url() &&
+			/Failed to load resource/.test(msg.text())
+		)
+			return;
 		record(name, -1, "-", [
 			{
 				type: "consola",
