@@ -35,6 +35,20 @@ const FONTS_CSS = [
 	})
 	.join("\n");
 
+function NavLinks() {
+	return (
+		<>
+			<Link href="/comprobar">Comprobar</Link>
+			<Link href="/ayudas">Ayudas</Link>
+			<Link href="/explorar">Explorar</Link>
+			<Link href="/observatorio">Observatorio</Link>
+			<Link href="/datos">Datos</Link>
+			<Link href="/como-verificamos">Cómo lo comprobamos</Link>
+			<Link href="/como-funciona">Cómo funciona</Link>
+		</>
+	);
+}
+
 export const metadata: Metadata = {
 	title: {
 		default: "Requisito a Requisito",
@@ -68,16 +82,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							</svg>
 							<span className="brand-name">Requisito a Requisito</span>
 						</Link>
+						{/* Nav duplicada: inline en escritorio, <details> en móvil.
+							El <details> cerrado no se puede reabrir por CSS y dejaba la
+							nav de escritorio con ancho 0 solapando el banner. */}
+						<nav className="site-nav site-nav--wide" aria-label="Principal">
+							<NavLinks />
+						</nav>
 						<details className="nav-menu">
 							<summary>Menú</summary>
 							<nav className="site-nav" aria-label="Principal">
-								<Link href="/comprobar">Comprobar</Link>
-								<Link href="/ayudas">Ayudas</Link>
-								<Link href="/explorar">Explorar</Link>
-								<Link href="/observatorio">Observatorio</Link>
-								<Link href="/datos">Datos</Link>
-								<Link href="/como-verificamos">Cómo lo comprobamos</Link>
-								<Link href="/como-funciona">Cómo funciona</Link>
+								<NavLinks />
 							</nav>
 						</details>
 					</div>

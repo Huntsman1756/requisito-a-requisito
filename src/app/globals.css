@@ -79,16 +79,27 @@ a { color: var(--seal); text-underline-offset: 3px }
 .brand-mark { width: 30px; height: 30px; flex: none }
 .brand-name { font: 800 1.12rem/1 var(--f-display); letter-spacing: -0.01em; white-space: nowrap }
 .site-nav { display: flex; gap: 1.1rem; flex-wrap: wrap }
-.nav-menu summary { display: none; list-style: none; font: 600 .95rem var(--f-label); letter-spacing: .05em; text-transform: uppercase; color: var(--seal); border: 1px solid var(--rule); border-radius: var(--r); min-height: 44px; padding: 0 1rem; align-items: center; gap: .5rem; cursor: pointer }
-.nav-menu summary::before { content: "≡"; font-size: 1.1rem }
+/* Dos navs: la inline solo existe en escritorio; el <details> solo en
+ * móvil. (Un solo <details> cerrado dejaba la nav con ancho 0 y los enlaces
+ * sangraban sobre el banner — y los hijos de un details cerrado no se
+ * pueden reabrir por CSS.) */
+.nav-menu { display: none }
 @media (max-width: 640px) {
+	.site-nav--wide { display: none }
+	.nav-menu { display: block }
 	.nav-menu summary { display: inline-flex }
 	.nav-menu:not([open]) .site-nav { display: none }
-	.nav-menu[open] .site-nav { display: flex; flex-direction: column; gap: .6rem; width: 100%; padding-top: .7rem; border-top: 1px solid var(--rule); margin-top: .5rem }
+	.nav-menu[open] .site-nav { display: flex; flex-direction: column; gap: .4rem; width: 100%; padding-top: .7rem; border-top: 1px solid var(--rule); margin-top: .5rem }
+	.nav-menu .site-nav a { display: block; padding-block: .55rem; min-height: 44px }
 }
+.nav-menu summary { display: none; list-style: none; font: 600 .95rem var(--f-label); letter-spacing: .05em; text-transform: uppercase; color: var(--seal); border: 1px solid var(--rule); border-radius: var(--r); min-height: 44px; padding: 0 1rem; align-items: center; gap: .5rem; cursor: pointer }
+.nav-menu summary::before { content: "≡"; font-size: 1.1rem }
 .site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .98rem }
 .site-nav a:hover { color: var(--seal) }
 .pilot-banner { font: 500 .8rem/1.3 var(--f-label); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); padding-block: .45rem; border-bottom: 1px dashed var(--rule); text-align: center }
+/* Un <a> inline que parte línea genera una caja envolvente que pisa a los
+ * vecinos; inline-block lo convierte en pieza entera que no se parte. */
+.pilot-banner a, .ficha-nav a { display: inline-block }
 .example-banner { color: var(--doubt); border-bottom-color: var(--doubt); display: flex; gap: .6rem; align-items: center; justify-content: center; flex-wrap: wrap; text-transform: none; font-family: var(--f-body); font-size: .9rem; letter-spacing: 0 }
 
 /* ---------- portada ---------- */
@@ -220,14 +231,18 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .verdict-line { color: var(--ink-2) }
 .future { color: var(--ink-2) }
 .req-list { list-style: none; padding: 0; margin: .6rem 0 }
-.req { display: grid; grid-template-columns: 1.6rem minmax(0,1fr); gap: .55rem; align-items: start; padding-block: .4rem; border-bottom: 1px solid var(--rule); font-size: .98rem }
+/* Bloque, no grid de dos columnas: el grid de 1.6rem enviaba la etiqueta y
+ * el <details> de la cita a la columna estrecha (una palabra por línea en
+ * móvil). La insignia de estado va inline y el resto fluye debajo. */
+.req { padding-block: .4rem; border-bottom: 1px solid var(--rule); font-size: .98rem }
 .req:last-child { border-bottom: 0 }
 .req-status { font-weight: 700 }
+.req-rule { display: block; color: var(--ink-2); overflow-wrap: anywhere }
 .req--warn .req-status { color: var(--doubt) }
 .cite { margin-top: .4rem }
-.cite summary { cursor: pointer; color: var(--seal); font-weight: 500; font-size: .9rem }
-.cite-meta { font: 400 .8rem var(--f-mono); color: var(--ink-2); margin-top: .3rem }
-.cite blockquote { margin: .5rem 0 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .95rem }
+.cite summary { cursor: pointer; color: var(--seal); font-weight: 500; font-size: .9rem; display: inline-flex; align-items: center; min-height: 44px }
+.cite-meta { font: 400 .8rem var(--f-mono); color: var(--ink-2); margin-top: .3rem; overflow-wrap: anywhere }
+.cite blockquote { margin: .5rem 0 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .95rem; overflow-wrap: break-word }
 .card-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .8rem; padding-bottom: 1.1rem }
 .card-foot { border-top: 1px solid var(--rule); padding-block: .8rem; margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font: 400 .82rem var(--f-mono); color: var(--ink-2) }
 .nocumple { opacity: .75 }
@@ -276,10 +291,11 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 .explorer-count { color: var(--ink-2) }
 .explorer-list { list-style: none; padding: 0; display: grid; gap: .5rem }
 .explorer-item { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; flex-wrap: wrap; padding: .65rem .9rem; border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet) }
+.explorer-main { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .5rem }
 .explorer-item a { font-weight: 600; text-decoration: none }
 .explorer-item a:hover { text-decoration: underline }
 .explorer-meta { font: 500 .8rem var(--f-mono); color: var(--ink-2); white-space: nowrap }
-.explorer-badge { display: inline-block; margin-left: .5rem; padding: .1rem .5rem; border: 1px solid var(--seal); border-radius: 999px; color: var(--seal); font: 600 .75rem var(--f-body); vertical-align: middle }
+.explorer-badge { display: inline-block; padding: .1rem .5rem; border: 1px solid var(--seal); border-radius: 999px; color: var(--seal); font: 600 .75rem var(--f-body); vertical-align: middle }
 
 /* observatorio */
 .obs { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1.5rem; margin-top: 1.4rem }

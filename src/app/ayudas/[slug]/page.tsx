@@ -193,7 +193,7 @@ export default async function Ficha({
 				</Link>
 				.
 			</p>
-			<p>
+			<p className="ficha-nav">
 				<Link href="/ayudas">← Volver a las ayudas</Link> ·{" "}
 				<Link href="/comprobar">Comprueba si te aplica</Link>
 			</p>

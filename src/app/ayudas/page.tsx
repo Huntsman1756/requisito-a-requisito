@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { aidTitle } from "../../lib/aid-titles";
 import { formatAmount, formatWindow } from "../../lib/format";
 import { allRuleSets, loadVersion } from "../../lib/rule-pages";
 
-export const metadata: Metadata = { title: "Ayudas del piloto" };
+export const metadata: Metadata = {
+	title: "Ayudas comprobadas requisito a requisito",
+};
 
 interface Source {
 	id: string;
@@ -25,18 +28,6 @@ interface RuleListItem {
 	requirements: { id: string; label: string; hard: boolean }[];
 	uncoveredRequirements: { id: string; label: string }[];
 }
-
-const TITLES: Record<string, string> = {
-	"bono-cultural-joven": "Bono Cultural Joven 2026",
-	"bono-social-electrico": "Bono Social Eléctrico",
-	"madrid-ayudas-nacimiento-adopcion-multiple":
-		"Ayuda por nacimiento o adopción múltiple (Comunidad de Madrid)",
-	"prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad":
-		"Prestación por nacimiento o adopción (familia numerosa, monoparental o discapacidad)",
-	"subsidio-mayores-52": "Subsidio por desempleo de mayores de 52 años",
-	"descuento-transporte-familia-numerosa":
-		"Descuento de tren para familias numerosas",
-};
 
 // Una tarjeta por benefitSlug (la versión vigente), todo desde el bundle:
 // en --strict solo salen las reglas aprobadas (ADR-050/G12).
@@ -60,7 +51,7 @@ export default function Ayudas() {
 	const rules = loadRules();
 	return (
 		<section className="shell" aria-labelledby="titulo">
-			<h1 id="titulo">Ayudas del piloto</h1>
+			<h1 id="titulo">Ayudas comprobadas requisito a requisito</h1>
 			<p className="lede">
 				Cada ayuda lista sus requisitos con el texto oficial literal que los
 				sustenta. Todo lo marcado con ⚠ no se puede comprobar con las
@@ -70,7 +61,7 @@ export default function Ayudas() {
 				{rules.map((r) => (
 					<li key={r.benefitSlug} className="aid-card">
 						<h2>
-							{TITLES[r.benefitSlug] ?? r.benefitSlug}{" "}
+							{aidTitle(r.benefitSlug)}{" "}
 							<span className="tag tag--review">
 								Verificado con la fuente
 							</span>
