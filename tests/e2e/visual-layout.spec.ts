@@ -559,6 +559,26 @@ for (const theme of THEMES) {
 			});
 		}
 
+		// Funcional: a ≤640 px existe el botón «Menú», abre la nav y sus
+		// enlaces son táctiles. (El 09/10 el summary llevaba display:none —
+		// el móvil quedaba sin navegación y ningún chequeo lo vio.)
+		test(`nav móvil accesible (${theme})`, async ({ page }) => {
+			await page.setViewportSize({ width: 320, height: 640 });
+			await page.goto(url("/"));
+			// <summary> no expone role=button en Chromium: es el disparador
+			// del <details> nativo.
+			const menu = page.locator(".nav-menu summary");
+			await expect(menu).toBeVisible();
+			const box = await menu.boundingBox();
+			expect(box && box.height).toBeGreaterThanOrEqual(44);
+			await menu.click();
+			const nav = page.locator(".nav-menu .site-nav");
+			await expect(nav).toBeVisible();
+			const first = nav.getByRole("link").first();
+			const fb = await first.boundingBox();
+			expect(fb && fb.height).toBeGreaterThanOrEqual(44);
+		});
+
 		test(`layout comprobar-intro (${theme})`, async ({ page }) => {
 			wireConsole(page, "comprobar-intro");
 			await page.goto(url("/comprobar/"));
