@@ -99,6 +99,9 @@ async function audit(page: Page): Promise<RawFinding[]> {
 	return page.evaluate(() => {
 		type F = { type: string; severity: "alta" | "media" | "baja"; detail: string };
 		const out: F[] = [];
+		const w = window as unknown as { __va: Record<string, number> };
+		const dbg: Record<string, number> = (w.__va = {});
+		const mark = (k: string) => (dbg[k] = Math.round(performance.now()));
 		const vw = document.documentElement.clientWidth;
 
 		// a) scroll horizontal (+ qué elementos lo provocan)
@@ -161,6 +164,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			);
 		};
 
+		mark("a-scroll");
 		const leaves: { el: Element; r: DOMRect; lines: DOMRect[]; text: string }[] = [];
 		const boxes: { el: Element; r: DOMRect; text: string }[] = [];
 		const walker = document.createTreeWalker(
@@ -173,9 +177,14 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			// Contenido de <details> cerrado y texto solo-lector: Chromium
 			// conserva sus rects de layout aunque no se pinten — falsos
 			// positivos de solape/overflow si se miden.
-			if (el.closest("details:not([open])") || el.closest(".sr-only, [hidden]"))
-				continue;
-			if (!skipTags.has(el.tagName) && visible(el)) {
+			const skipped =
+				el.closest("details:not([open])") !== null ||
+				el.closest(".sr-only, [hidden]") !== null;
+			if (
+				!skipped &&
+				!skipTags.has(el.tagName) &&
+				visible(el)
+			) {
 				if (isLeaf(el)) {
 					const r = el.getBoundingClientRect();
 					leaves.push({
@@ -202,39 +211,41 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				byTop.set(kk, arr);
 			}
 		};
+		mark("b-leaves");
 		for (const l of leaves) for (const r of l.lines) addBox(l.el, r, l.text);
 		for (const b of boxes) addBox(b.el, b.r, b.text);
-		const seenPair = new Set<string>();
+		const seenPair = new Set<Element>();
+		const seenOther = new Set<Element>();
 		for (const arr of byTop.values()) {
 			for (let i = 0; i < arr.length; i++) {
 				const a = arr[i];
+				if (seenPair.has(a.el)) continue;
 				for (let j = i + 1; j < arr.length; j++) {
 					const b = arr[j];
 					if (
 						a.el === b.el ||
 						a.el.contains(b.el) ||
-						b.el.contains(a.el) ||
-						a.el.compareDocumentPosition(b.el) &
-							Node.DOCUMENT_POSITION_DISCONNECTED
+						b.el.contains(a.el)
 					)
 						continue;
 					const ox = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
 					const oy =
 						Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);
 					if (ox > 2 && oy > 2) {
-						const id = `${a.text}|${b.text}|${Math.round(a.r.top)}`;
-						if (seenPair.has(id)) continue;
-						seenPair.add(id);
+						seenPair.add(a.el);
+						seenPair.add(b.el);
 						out.push({
 							type: "solape",
 							severity: "alta",
 							detail: `«${a.text}» x «${b.text}» (${Math.round(ox)}×${Math.round(oy)} px)`,
 						});
+						break;
 					}
 				}
 			}
 		}
 
+		mark("c-solapes");
 		// c) columna estrecha / palabra fuera de la caja  e) texto cortado
 		for (const { el, r, text } of leaves) {
 			const cs = getComputedStyle(el);
@@ -275,6 +286,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
+		mark("d-cortado");
 		// d) objetivos táctiles en móvil (<44 px; <24 incumple WCAG 2.5.8).
 		// Excepción WCAG: los enlaces inline dentro de un flujo de texto no son
 		// objetivos — solo se miden controles «standalone» (display no-inline,
@@ -288,6 +300,15 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				const cs = getComputedStyle(el);
 				// WCAG 2.5.8 inline-in-text: enlaces dentro de párrafos/celdas.
 				if (el.tagName === "A" && el.closest("p, li, dd, blockquote")) continue;
+				// radios/checkboxes: el objetivo táctil real es la etiqueta.
+				if (
+					el.tagName === "INPUT" &&
+					["radio", "checkbox"].includes(
+						(el as HTMLInputElement).type,
+					) &&
+					el.closest("label")
+				)
+					continue;
 				const r = el.getBoundingClientRect();
 				if (r.width > 0.5 && r.height > 0.5 && (r.width < 44 || r.height < 44)) {
 					const severe = r.width < 24 || r.height < 24;
@@ -300,6 +321,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 		}
 
+		mark("e-tactil");
 		// g) slugs técnicos como texto visible (fuera de code/pre y de URLs)
 		const slugRe = /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/g;
 		const twalker = document.createTreeWalker(
@@ -319,6 +341,8 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			) {
 				for (const m of t.matchAll(slugRe)) {
 					const w = m[0];
+					// Teléfonos/referencias solo-numéricas no son slugs.
+					if (!/[a-z]/.test(w)) continue;
 					if (/^\d{4}-\d{2}-\d{2}/.test(w) || /^sha/.test(w)) continue;
 					out.push({
 						type: "slug-visible",
@@ -329,6 +353,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			}
 			tn = twalker.nextNode();
 		}
+		mark("f-slug");
 		return out;
 	});
 }
@@ -463,19 +488,32 @@ async function seedAndGoto(
 	await page.getByRole("button", { name: "Empezar", exact: true }).click();
 }
 
-/** Avanza con «Siguiente» hasta la revisión y abre resultados. */
-async function reachResults(page: Page, maxClicks = 15) {
+/** Avanza con «Siguiente» hasta la revisión y abre resultados. Si la
+ * respuesta sembrada es unknown/declined, «Siguiente» no avanza (valida el
+ * valor) — entonces toca pulsar «No lo sé» / «Prefiero no decirlo». */
+async function reachResults(page: Page, maxClicks = 18) {
 	for (let i = 0; i < maxClicks; i++) {
-		if (
-			await page
-				.getByRole("button", { name: "Ver mis resultados", exact: true })
-				.isVisible()
-		)
-			break;
+		const ver = page.getByRole("button", {
+			name: "Ver mis resultados",
+			exact: true,
+		});
+		if (await ver.isVisible().catch(() => false)) break;
+		const heading = await page
+			.evaluate(() => document.querySelector("fieldset, .question")?.textContent?.slice(0, 80) ?? "");
 		await page
 			.getByRole("button", { name: "Siguiente", exact: true })
 			.click();
-		await page.waitForTimeout(120);
+		await page.waitForTimeout(140);
+		const after = await page
+			.evaluate(() => document.querySelector("fieldset, .question")?.textContent?.slice(0, 80) ?? "");
+		if (after === heading) {
+			// Paso sin valor posible: probar las salidas alternativas.
+			const alt = page.getByRole("button", { name: "No lo sé", exact: true });
+			const decline = page.getByRole("button", { name: "Prefiero no decirlo", exact: true });
+			if (await alt.isVisible().catch(() => false)) await alt.click();
+			else if (await decline.isVisible().catch(() => false)) await decline.click();
+			await page.waitForTimeout(140);
+		}
 	}
 	await page
 		.getByRole("button", { name: "Ver mis resultados", exact: true })
