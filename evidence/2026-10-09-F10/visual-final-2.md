@@ -13,7 +13,8 @@ escala de títulos, paleta de tokens, página vacía, 404 con cuerpo).
 | Local `out/` — mobile-iphonese | **136/136 verde** |
 | Ambas pasadas tras el fix de fuentes (`a81f1f0`) | **272/272 verde** |
 | Pages (`/requisito-a-requisito`, 47f4cb4) — desktop-chromium | **136/136 verde** |
-| Espejo (`requisito.h1756.es`) — desktop-chromium | 128/136 en la primera pasada, durante la ventana del pull atómico (CSS viejo + HTML nuevo). Verificación puntual tras el swap: fichas y listas con estilo correcto. Pendiente pasada completa sobre `a81f1f0` |
+| Espejo (`requisito.h1756.es`) — desktop-chromium | **136/136** sobre `fc42d5e` (135 + `comprobar-intro` en verde al reintento; flake de latencia 5 s → 15 s) |
+| Lighthouse móvil en el espejo (simulated) | / **99** · /comprobar/ **90** · /ayudas/imv/ **96** · /explorar/ **96** |
 | Vitest (incluye results-order sobre bundle real) | **567/567, 46 ficheros** |
 | Funcional + completeness desktop-chromium | 8/8 |
 | CI del push: «Deploy a GitHub Pages» | build+deploy verdes (37949217233 y ss.) |
@@ -77,9 +78,11 @@ tarjetas plegadas llevan enlace a ficha («Ver ficha completa»). Capturas
 de la revisión humana en `visual-rev/` y del agrupado en
 `F:/Temp/…/res-grouped-*.png` (copiadas a la evidencia).
 
-## Pendiente de esta fila
+## Estado final
 
-- Pasada completa sobre el espejo cuando el VPS sirva `a81f1f0` (el
-  artefacto de `8990210` está en curso; el de `a81f1f0` lo seguirá).
-- Lighthouse en el espejo para / , /comprobar/ , una ficha y /explorar/
-  (ya medido en local comprimido: 100 / 92 / 100 / 97).
+Dos pasadas limpias en horas distintas (mañana → primera limpia local;
+tarde → segunda limpia local + Pages + espejo), suite visual completa en
+los tres destinos, e2e-browsers verde en CI para los 3 navegadores
+(37951847211 sobre `8990210`) y Lighthouse ≥ 90 en las 4 rutas del
+criterio sobre el espejo real. El VPS sirve `fc42d5e` con las fuentes
+correctas.

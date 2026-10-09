@@ -743,7 +743,9 @@ for (const theme of THEMES) {
 			// cargan las preguntas: auditar con la página ya habilitada.
 			await expect(
 				page.getByRole("button", { name: "Empezar", exact: true }),
-			).toBeEnabled();
+				// Contra Pages/espejo el JSON de preguntas tarda más que el
+				// default de 5 s: flake de latencia, no de layout.
+			).toBeEnabled({ timeout: 15_000 });
 			const all = await auditAt(page, `comprobar-intro-${theme}`, WIDTHS);
 			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 		});
