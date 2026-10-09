@@ -11,164 +11,9 @@
  *   3. La página de resultados carga y muestra grupos.
  */
 
-import { expect, test, type Page } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
-const V = (value: unknown) => ({ state: "value", value });
-const T = (m: string) => V({ ccaa: "13", province: "28", municipality: m });
-const AGE = (n: number) => V({ min: n, max: n, maxExclusive: false });
-const DEP = (...ages: number[]) =>
-	V(ages.map((a) => ({ age: { min: a, max: a, maxExclusive: false } })));
-const INC = (a: number, b: number | null) => V({ min: a, max: b });
-const BY = (y: number) => V({ min: y, max: y, maxExclusive: false });
-
-const BASE_ANSWERS = {
-	residenceSince: V({ year: 2000, month: 1 }),
-	familyType: V("general"),
-	studentStatus: V("no"),
-	disability: V("no"),
-	dependency: V("no"),
-};
-
-const PERSONAS: Record<string, unknown> = {
-	daniel: {
-		...BASE_ANSWERS, territory: T("28002"), residenceSince: V({ year: 2026, month: 7 }),
-		age: AGE(56), dependents: DEP(18), employmentStatus: V("autonomo"),
-		incomeAnnual: INC(25200, null), housingStatus: V("alquiler"),
-	},
-	"jubilada-70-pension-baja": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1990, month: 1 }),
-		age: AGE(70), dependents: DEP(), employmentStatus: V("jubilado"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("propiedad"),
-	},
-	"madre-sola-30-2hijos": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2015, month: 1 }),
-		age: AGE(30), dependents: DEP(3, 6), familyType: V("monoparental"),
-		employmentStatus: V("asalariado"), incomeAnnual: INC(8400, 16800), housingStatus: V("alquiler"),
-	},
-	"joven-22-alquila": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2022, month: 1 }),
-		age: AGE(22), dependents: DEP(), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("alquiler"),
-	},
-	"parado-45": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2005, month: 1 }),
-		age: AGE(45), dependents: DEP(), employmentStatus: V("desempleado"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("alquiler"),
-	},
-	"estudiante-21": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2005, month: 1 }),
-		age: AGE(21), birthYear: BY(2005), dependents: DEP(),
-		employmentStatus: V("general"), studentStatus: V("si"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("general"),
-	},
-	"discapacidad-45": {
-		...BASE_ANSWERS, territory: T("28079"),
-		age: AGE(45), dependents: DEP(), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(16800, 25200), disability: V("gte33"), housingStatus: V("propiedad"),
-	},
-	"cuidadora-60-coslada": {
-		...BASE_ANSWERS, territory: T("28040"),
-		age: AGE(60), dependents: DEP(), employmentStatus: V("general"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("propiedad"),
-	},
-	"fnumerosa-mostoles": {
-		...BASE_ANSWERS, territory: T("28092"), residenceSince: V({ year: 2010, month: 1 }),
-		age: AGE(45), dependents: DEP(7, 10, 14, 17), familyType: V("familia-numerosa"),
-		employmentStatus: V("asalariado"), incomeAnnual: INC(16800, 25200), housingStatus: V("propiedad"),
-	},
-	"autonoma-35": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2018, month: 1 }),
-		age: AGE(35), dependents: DEP(), employmentStatus: V("autonomo"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("alquiler"),
-	},
-	"pareja-40-bebe": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2008, month: 1 }),
-		age: AGE(40), dependents: DEP(0), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("propiedad"),
-	},
-	"viudo-75": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1990, month: 1 }),
-		age: AGE(75), dependents: DEP(), employmentStatus: V("jubilado"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("propiedad"),
-	},
-	"migrante-residencia-2a": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2024, month: 6 }),
-		age: AGE(33), dependents: DEP(), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("alquiler"),
-	},
-	"docente-50": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1998, month: 1 }),
-		age: AGE(50), dependents: DEP(15), employmentStatus: V("docente"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("propiedad"),
-	},
-	"parado-larga-54": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1995, month: 1 }),
-		age: AGE(54), dependents: DEP(), employmentStatus: V("desempleado"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("propiedad"),
-	},
-	"pensionista-66-sin-cotizacion": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1990, month: 1 }),
-		age: AGE(66), dependents: DEP(), employmentStatus: V("general"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("propiedad"),
-	},
-	"pareja-26-hijo": {
-		...BASE_ANSWERS, territory: T("28092"), residenceSince: V({ year: 2020, month: 1 }),
-		age: AGE(26), dependents: DEP(1), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("alquiler"),
-	},
-	"bico-19-universidad": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2015, month: 1 }),
-		age: AGE(19), birthYear: BY(2007), dependents: DEP(),
-		employmentStatus: V("general"), studentStatus: V("si"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("general"),
-	},
-	"incapacidad-58": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1998, month: 1 }),
-		age: AGE(58), dependents: DEP(), employmentStatus: V("general"),
-		incomeAnnual: INC(8400, 16800), disability: V("gte33"), housingStatus: V("propiedad"),
-	},
-	"alquiler-vallecas-30": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2019, month: 1 }),
-		age: AGE(30), dependents: DEP(), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("alquiler"),
-	},
-	"viudo-65-hijos": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1990, month: 1 }),
-		age: AGE(65), dependents: DEP(17, 20), employmentStatus: V("jubilado"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("propiedad"),
-	},
-	"empleada-publica-44": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2005, month: 1 }),
-		age: AGE(44), dependents: DEP(), employmentStatus: V("empleado-publico"),
-		incomeAnnual: INC(16800, 25200), housingStatus: V("propiedad"),
-	},
-	"joven-18-bono": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 2015, month: 1 }),
-		age: AGE(18), birthYear: BY(2008), dependents: DEP(),
-		employmentStatus: V("general"), studentStatus: V("si"),
-		incomeAnnual: INC(0, 8400), housingStatus: V("general"),
-	},
-	"mayor-80-dependencia": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1980, month: 1 }),
-		age: AGE(80), dependents: DEP(), employmentStatus: V("jubilado"),
-		incomeAnnual: INC(8400, 16800), dependency: V("reconocida"), housingStatus: V("propiedad"),
-	},
-	"familia-alquiler-3hijos": {
-		...BASE_ANSWERS, territory: T("28065"), residenceSince: V({ year: 2012, month: 1 }),
-		age: AGE(38), dependents: DEP(2, 5, 9), familyType: V("familia-numerosa"),
-		employmentStatus: V("asalariado"), incomeAnnual: INC(8400, 16800), housingStatus: V("alquiler"),
-	},
-	"autonomo-62-baja": {
-		...BASE_ANSWERS, territory: T("28079"), residenceSince: V({ year: 1990, month: 1 }),
-		age: AGE(62), dependents: DEP(), employmentStatus: V("autonomo"),
-		incomeAnnual: INC(8400, 16800), housingStatus: V("propiedad"),
-	},
-	"discap-33-alquiler": {
-		...BASE_ANSWERS, territory: T("28092"), residenceSince: V({ year: 2010, month: 1 }),
-		age: AGE(36), dependents: DEP(4), employmentStatus: V("asalariado"),
-		incomeAnnual: INC(8400, 16800), disability: V("gte33"), housingStatus: V("alquiler"),
-	},
-};
+import { PERSONAS } from "../fixtures/personas.mjs";
 
 // Etiquetas exactas de las preguntas que TODOS los perfiles responden —
 // ninguna puede reaparecer en «Te faltan datos». (La pregunta de precisión
@@ -190,13 +35,20 @@ async function completar(page: Page, answers: unknown) {
 	await page.addInitScript((a) => {
 		sessionStorage.setItem(
 			"rr_check_handoff",
-			JSON.stringify({ answers: a, step: 0, savedAt: new Date().toISOString() }),
+			JSON.stringify({
+				answers: a,
+				step: 0,
+				savedAt: new Date().toISOString(),
+			}),
 		);
 	}, answers);
 	await page.goto("/comprobar/");
 	await page.getByRole("button", { name: "Empezar", exact: true }).click();
 	for (let i = 0; i < 18; i++) {
-		if (await page.getByText("Revisa tus respuestas").count()) break;
+		if (
+			await page.getByRole("heading", { name: "Revisa tus respuestas" }).count()
+		)
+			break;
 		const before = await page.evaluate(
 			() => document.querySelector("fieldset, .question")?.textContent ?? "",
 		);
@@ -218,9 +70,7 @@ async function completar(page: Page, answers: unknown) {
 			await page.waitForTimeout(140);
 		}
 	}
-	await page
-		.getByRole("button", { name: "Ver mis resultados" })
-		.click();
+	await page.getByRole("button", { name: "Ver mis resultados" }).click();
 	await page
 		.getByRole("heading", { name: "Tus resultados" })
 		.waitFor({ timeout: 20_000 });
