@@ -65,6 +65,22 @@ const DERIVED: Record<
 		derive: (v, ref) =>
 			isMonthYear(v) ? residenceMonthsInterval(v, ref) : undefined,
 	},
+	// F10-RES-2 §2.1: la edad respondida fija el año de nacimiento en un
+	// rango de 2 años (el cumpleaños puede caer a cualquier lado de la
+	// fecha de referencia). Una respuesta directa a «año de nacimiento»
+	// siempre manda (ver answerOf).
+	birthYear: {
+		from: "age",
+		derive: (v, ref) => {
+			const iv = toInterval(v);
+			if (!iv || iv.min === null || iv.max === null) return undefined;
+			const y = Number(ref.slice(0, 4));
+			if (!Number.isFinite(y)) return undefined;
+			// Edad E a fecha Y ⇒ nació entre Y-E-1 y Y-E inclusive
+			// (maxExclusive false: el año alto sí pertenece al rango).
+			return { min: y - iv.max - 1, max: y - iv.min, maxExclusive: false };
+		},
+	},
 };
 
 function isMonthYear(v: unknown): v is { year: number; month: number } {
@@ -103,14 +119,19 @@ function threshold(leaf: ConditionLeaf, ctx: EvalCtx): number | undefined {
 }
 
 function answerOf(profile: MiniProfile, field: string, ctx: EvalCtx): Answer | undefined {
+	// La respuesta directa siempre manda (p. ej. birthYear preguntado a
+	// menores de 21 cuando la edad no basta para decidir).
+	const direct = profile.answers[field];
+	if (direct?.state === "value") return direct;
 	const derived = DERIVED[field];
 	if (derived) {
 		const a = profile.answers[derived.from];
-		if (a?.state !== "value") return a;
-		const v = derived.derive(a.value, ctx.referenceDate);
-		return v === undefined ? undefined : { state: "value", value: v };
+		if (a?.state === "value") {
+			const v = derived.derive(a.value, ctx.referenceDate);
+			if (v !== undefined) return { state: "value", value: v };
+		}
 	}
-	return profile.answers[field];
+	return direct;
 }
 
 function leafResult(

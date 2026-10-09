@@ -5,10 +5,17 @@
  * primeras».
  */
 
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { evaluateRuleSet } from "../../src/lib/eligibility-engine/evaluate";
 import { pickValidVersions } from "../../src/lib/eligibility-engine/versions";
-import { groupResults, isEncaja, nU } from "../../src/lib/results-order";
+import {
+	groupResults,
+	isEncaja,
+	nU,
+	type CondMap,
+} from "../../src/lib/results-order";
 import type {
 	CitizenProfile,
 	RuleSet,
@@ -17,6 +24,26 @@ import { readInputs } from "../../scripts/completeness";
 
 const inputs = readInputs(process.cwd());
 const TODAY = "2026-10-09";
+
+// La capa de presentación REAL del repo (data/presentation): el test corre
+// sobre lo que se publica, no sobre un duplicado.
+const COND: CondMap = Object.fromEntries(
+	Object.entries(
+		(
+			JSON.parse(
+				readFileSync(
+					join(
+						process.cwd(),
+						"data/presentation/condiciones-definitorias.json",
+					),
+					"utf8",
+				),
+			) as {
+				rules: Record<string, { condiciones?: { req: string; texto: string }[] }>;
+			}
+		).rules,
+	).map(([slug, r]) => [slug, r.condiciones ?? []]),
+);
 
 type A = CitizenProfile["answers"];
 const V = (value: unknown) => ({ state: "value", value }) as never;
@@ -135,7 +162,11 @@ const ABSURDAS: Record<string, string[]> = {
 		"bono-cultural-joven",
 	],
 	"monoparental-38": [...JUBILACION_52, "bono-cultural-joven"],
-	"estudiante-20": [...JUBILACION_52, "pension-orfandad", "pension-viudedad"],
+	// orfandad/viudedad para una estudiante de 20 no son absurdas con la
+	// agrupación «Solo si…»: la tarjeta declara «solo si ha fallecido tu
+	// padre o tu madre» / «tu cónyuge o pareja de hecho» — condiciones que
+	// el perfil no descarta (una estudiante de 20 puede ser huérfana).
+	"estudiante-20": [...JUBILACION_52],
 	"autonomo-44": [...JUBILACION_52, ...SIN_DEPENDENTES, "bono-cultural-joven", "prestacion-desempleo-contributiva"],
 	"vg-34": [...JUBILACION_52, "bono-cultural-joven"],
 	// bono-alquiler-joven llega hasta los 35: con 33 no es absurdo.
@@ -158,19 +189,25 @@ function evalAll(answers: A) {
 describe("orden de resultados (F10-RES, datos reales)", () => {
 	it("encaja antes que posible-pocas, posible antes que plegadas y faltan datos", () => {
 		for (const [name, a] of TIPICOS) {
-			const g = groupResults(evalAll(a), false);
-			const open = [...g.encajas, ...g.posiblesPocas];
+			const g = groupResults(evalAll(a), false, COND);
+			const open = [...g.encajas, ...g.soloSi, ...g.posiblesPocas];
 			// abierto: sin ningún requisito en F
 			for (const { ev } of open)
 				expect(
 					ev.requirements.every((r) => r.status !== "F"),
 					`${name}: ${ev.benefitSlug} abierto con requisito en F`,
 				).toBe(true);
-			// plegadas: solo posibles con F blanda o muchas U
+			// encajas: ninguna condición definitoria sin resolver
+			for (const { rs, ev } of g.encajas)
+				expect(
+					isEncaja(rs, ev, COND[ev.benefitSlug]),
+					`${name}: ${ev.benefitSlug} en Encaja con definitoria en U`,
+				).toBe(true);
+			// plegadas: solo posibles sin definitoria pendiente y con F
+			// blanda o muchas U
 			for (const { ev } of g.noDescartar)
 				expect(
 					ev.verdict === "posible" &&
-						!isEncaja(ev) &&
 						(ev.requirements.some((r) => r.status === "F") || nU(ev) > 2),
 					`${name}: ${ev.benefitSlug} plegada sin motivo`,
 				).toBe(true);
@@ -178,13 +215,14 @@ describe("orden de resultados (F10-RES, datos reales)", () => {
 	});
 
 	it("una blanda en F no puede salir como «Encaja»", () => {
-		const g = groupResults(evalAll(base({ age: AGE(44), dependents: DEP() })), false);
-		const nacimiento = evalAll(base({ age: AGE(44), dependents: DEP() })).find(
+		const evals = evalAll(base({ age: AGE(44), dependents: DEP() }));
+		const g = groupResults(evals, false, COND);
+		const nacimiento = evals.find(
 			(x) => x.ev.benefitSlug === "madrid-ayudas-nacimiento-adopcion-multiple",
 		);
 		expect(nacimiento).toBeDefined();
 		// 0 personas a cargo ⇒ la blanda «2 o más a cargo» da F ⇒ no «Encaja».
-		expect(isEncaja(nacimiento!.ev)).toBe(false);
+		expect(isEncaja(nacimiento!.rs, nacimiento!.ev, COND[nacimiento!.ev.benefitSlug])).toBe(false);
 		expect(
 			g.noDescartar.some(
 				(x) => x.ev.benefitSlug === "madrid-ayudas-nacimiento-adopcion-multiple",
@@ -192,10 +230,61 @@ describe("orden de resultados (F10-RES, datos reales)", () => {
 		).toBe(true);
 	});
 
+	it("F10-RES-2: el caso de Daniel — ni jubilación ni cuidado de menores en «Encaja»", () => {
+		// Ajalvir, empadronado 07/2026, 56 años, 1 persona a cargo de 18,
+		// otra situación, autónomo, no estudia, >25.200 €, alquiler.
+		const daniel = base({
+			territory: T("28002"),
+			residenceSince: V({ year: 2026, month: 7 }),
+			age: AGE(56),
+			dependents: DEP(18),
+			employmentStatus: V("autonomo"),
+			incomeAnnual: { state: "value", value: { min: 25200, max: null } } as never,
+			housingStatus: V("alquiler"),
+		});
+		const g = groupResults(evalAll(daniel), false, COND);
+		const encajaSlugs = g.encajas.map((x) => x.ev.benefitSlug);
+		expect(encajaSlugs).not.toContain("pension-jubilacion-contributiva");
+		expect(encajaSlugs).not.toContain("prestacion-cuidado-menor-enfermedad-grave");
+		// Van a «Solo si…» con su condición definitoria como titular.
+		const jub = g.soloSi.find(
+			(x) => x.ev.benefitSlug === "pension-jubilacion-contributiva",
+		);
+		expect(jub).toBeDefined();
+		expect(jub!.conds.map((c) => c.req)).toContain("edad-ordinaria-exigible");
+		const cancer = g.soloSi.find(
+			(x) => x.ev.benefitSlug === "prestacion-cuidado-menor-enfermedad-grave",
+		);
+		expect(cancer).toBeDefined();
+		expect(cancer!.conds.map((c) => c.req)).toContain("enfermedad-grave-acreditada");
+		// Orfandad: «solo si ha fallecido tu padre o tu madre».
+		expect(
+			g.soloSi.some((x) => x.ev.benefitSlug === "pension-orfandad"),
+		).toBe(true);
+		// Bono Cultural Joven: la edad (56) deriva el año ⇒ no_cumple, no «faltan datos».
+		const bono = evalAll(daniel).find(
+			(x) => x.ev.benefitSlug === "bono-cultural-joven",
+		);
+		expect(bono!.ev.verdict).toBe("no_cumple");
+	});
+
+	it("«solo si…» nunca queda vacío de texto", () => {
+		for (const [name, a] of TIPICOS) {
+			const g = groupResults(evalAll(a), false, COND);
+			for (const s of g.soloSi) {
+				expect(
+					s.conds.length,
+					`${name}: ${s.ev.benefitSlug} en SoloSi sin condición`,
+				).toBeGreaterThan(0);
+				for (const c of s.conds) expect(c.texto.length).toBeGreaterThan(10);
+			}
+		}
+	});
+
 	it("ninguna ayuda claramente absurda en las 10 primeras (perfiles típicos)", () => {
 		for (const [name, a] of TIPICOS) {
-			const g = groupResults(evalAll(a), false);
-			const top10 = [...g.encajas, ...g.posiblesPocas]
+			const g = groupResults(evalAll(a), false, COND);
+			const top10 = [...g.encajas, ...g.soloSi, ...g.posiblesPocas]
 				.slice(0, 10)
 				.map((x) => x.ev.benefitSlug);
 			for (const slug of ABSURDAS[name] ?? []) {
@@ -207,9 +296,9 @@ describe("orden de resultados (F10-RES, datos reales)", () => {
 		}
 	});
 
-	it("dentro de cada grupo abierto: más requisitos cumplidos primero", () => {
+	it("dentro de cada grupo abierto: orden consistente con su criterio", () => {
 		for (const [name, a] of TIPICOS) {
-			const g = groupResults(evalAll(a), false);
+			const g = groupResults(evalAll(a), false, COND);
 			for (const grp of [g.encajas, g.posiblesPocas, g.noDescartar]) {
 				const ts = grp.map(
 					(x) => x.ev.requirements.filter((r) => r.status === "T").length,
@@ -219,6 +308,12 @@ describe("orden de resultados (F10-RES, datos reales)", () => {
 					`${name}: grupo desordenado`,
 				).toEqual(ts);
 			}
+			// soloSi ordena por nº de condiciones definitorias pendientes.
+			const conds = g.soloSi.map((x) => x.conds.length);
+			expect(
+				[...conds].sort((x, y) => x - y),
+				`${name}: SoloSi desordenado`,
+			).toEqual(conds);
 		}
 	});
 });

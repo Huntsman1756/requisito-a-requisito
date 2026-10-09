@@ -799,6 +799,87 @@ for (const theme of THEMES) {
 			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 		});
 
+		test(`layout comprobar-revision (${theme})`, async ({ page }) => {
+			wireConsole(page, "comprobar-revision");
+			// F10-RES-2 §3.1: la pantalla «Revisa tus respuestas» debe ser una
+			// rejilla consistente — pregunta arriba, respuesta debajo, y el
+			// botón «Cambiar» alineado a la misma x en TODAS las filas.
+			const persona = fixtures.persons.find(
+				(p) => p.slug === "madrid-abono-transporte-infantil",
+			);
+			if (!persona) throw new Error("persona no encontrada");
+			await page.clock.install({
+				time: new Date(`${persona.today}T12:00:00Z`),
+			});
+			await seedAndGoto(page, persona.answers, 0);
+			for (let i = 0; i < 18; i++) {
+				if (await page.getByText("Revisa tus respuestas").count()) break;
+				const before = await page.evaluate(
+					() =>
+						document.querySelector("fieldset, .question")?.textContent ?? "",
+				);
+				await page
+					.getByRole("button", { name: "Siguiente", exact: true })
+					.click();
+				await page.waitForTimeout(150);
+				const after = await page.evaluate(
+					() =>
+						document.querySelector("fieldset, .question")?.textContent ?? "",
+				);
+				if (after === before) {
+					const alt = page.getByRole("button", {
+						name: "No lo sé",
+						exact: true,
+					});
+					const dec = page.getByRole("button", {
+						name: "Prefiero no decirlo",
+						exact: true,
+					});
+					if (await alt.isVisible().catch(() => false)) await alt.click();
+					else if (await dec.isVisible().catch(() => false)) await dec.click();
+					await page.waitForTimeout(140);
+				}
+			}
+			await expect(
+				page.getByText("Revisa tus respuestas"),
+			).toBeVisible();
+			for (const w of WIDTHS) {
+				await page.setViewportSize({ width: w, height: 844 });
+				await page.evaluate(() => document.fonts.ready);
+				await page.waitForTimeout(120);
+				const boxes = await page.evaluate(() =>
+					[...document.querySelectorAll(".review-list li")].map((li) => {
+						const q = li.querySelector(".review-q")!.getBoundingClientRect();
+						const a = li.querySelector(".review-a")!.getBoundingClientRect();
+						const b = li
+							.querySelector(".btn-quiet")!
+							.getBoundingClientRect();
+						return { q: q.y, a: a.y, bx: b.x };
+					}),
+				);
+				// Todas las filas: pregunta arriba, respuesta debajo, «Cambiar»
+				// a la misma x (±2 px de tolerancia por subpíxel).
+				const xs = boxes.map((b) => b.bx);
+				const ref = xs[0];
+				for (let i = 0; i < boxes.length; i++) {
+					expect(
+						Math.abs(xs[i] - ref),
+						`Cambiar de la fila ${i} desalineado a ${w}px`,
+					).toBeLessThanOrEqual(2);
+					expect(
+						boxes[i].a,
+						`fila ${i}: respuesta por encima de la pregunta a ${w}px`,
+					).toBeGreaterThanOrEqual(boxes[i].q);
+				}
+			}
+			const all = await auditAt(
+				page,
+				`comprobar-revision-${theme}`,
+				WIDTHS,
+			);
+			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
+		});
+
 		for (const slug of RESULT_PERSONAS) {
 			test(`layout resultados ${slug} (${theme})`, async ({ page }) => {
 				wireConsole(page, `resultados-${slug}`);

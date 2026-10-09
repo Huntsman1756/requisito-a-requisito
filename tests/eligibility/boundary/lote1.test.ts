@@ -74,6 +74,26 @@ describe("frontera: bono-cultural-joven", () => {
 		expect(ev.verdict).not.toBe("probable");
 		expect(ev.verdict).toBe("insuficiente");
 	});
+	// F10-RES-2 §2.1: la edad respondida fija el año de nacimiento en un
+	// rango de 2 años (cumpleaños a ambos lados de la fecha de referencia).
+	it("edad ⇒ año de nacimiento derivado: 56 años ⇒ 1969–1970 ⇒ F", () => {
+		expect(statusOf("bono-cultural-joven", { age: age(56) }, "nacido-en-2008")).toBe("F");
+	});
+	it("18 años a 05/10/2026 ⇒ nació en 2007 u 2008 ⇒ U (sigue preguntando el año)", () => {
+		expect(statusOf("bono-cultural-joven", { age: age(18) }, "nacido-en-2008")).toBe("U");
+	});
+	it("19 años a 05/10/2026 ⇒ 2006–2007 ⇒ F", () => {
+		expect(statusOf("bono-cultural-joven", { age: age(19) }, "nacido-en-2008")).toBe("F");
+	});
+	it("el año respondido directo manda sobre el derivado de la edad", () => {
+		expect(
+			statusOf(
+				"bono-cultural-joven",
+				{ age: age(56), birthYear: year(2008) },
+				"nacido-en-2008",
+			),
+		).toBe("T");
+	});
 	it("nacido en nov-2007 ⇒ no_cumple (golden F3-FIX)", () => {
 		const ev = verdictOf("bono-cultural-joven", { birthYear: year(2007) });
 		expect(ev.verdict).toBe("no_cumple");

@@ -57,6 +57,8 @@ export interface ResultsData {
 	bundle: Bundle;
 	level2: Level2Item[];
 	manifestDigest: string;
+	/** Capa de presentación F10-RES-2: condición definitoria por regla. */
+	condiciones: Record<string, { req: string; texto: string }[] | undefined>;
 }
 
 export interface CheckData extends ResultsData {
@@ -98,14 +100,26 @@ export async function loadIntroData(): Promise<IntroData> {
 }
 
 export async function loadResultsData(): Promise<ResultsData> {
-	const [bundle, level2, manifest] = await Promise.all([
+	const [bundle, level2, manifest, cond] = await Promise.all([
 		get<Bundle>("/datos/elegibilidad/bundle.json"),
 		get<{ items: Level2Item[] }>("/datos/elegibilidad/nivel-2.json"),
 		get<{ bundleDigest: string }>("/datos/elegibilidad/manifest.json"),
+		get<{
+			rules: Record<
+				string,
+				{ condiciones?: { req: string; texto: string }[] }
+			>;
+		}>("/datos/elegibilidad/condiciones-definitorias.json"),
 	]);
 	return {
 		bundle,
 		level2: level2.items,
 		manifestDigest: manifest.bundleDigest,
+		condiciones: Object.fromEntries(
+			Object.entries(cond.rules).map(([slug, r]) => [
+				slug,
+				r.condiciones ?? [],
+			]),
+		),
 	};
 }

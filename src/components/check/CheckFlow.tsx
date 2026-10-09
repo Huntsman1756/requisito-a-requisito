@@ -210,6 +210,7 @@ export function CheckFlow() {
 					bundle: results.bundle,
 					level2: results.level2,
 					manifestDigest: results.manifestDigest,
+					condiciones: results.condiciones,
 					questions: intro.questions,
 					territory: intro.territory,
 				}
@@ -291,11 +292,11 @@ export function CheckFlow() {
 								width: `${((step + 1) / visibleQuestions.length) * 100}%`,
 							}}
 						/>
+						{/* F10-RES-2 §3.3: el total cambia según el perfil («1 de 12»
+						    al empezar, «10 de 10» al final). Mejor «Pregunta N» sin
+						    total — la barra ya muestra el avance relativo. */}
 						<p className="progress__label">
-							{t("check.progress", {
-								n: step + 1,
-								total: visibleQuestions.length,
-							})}
+							{t("check.progressN", { n: step + 1 })}
 						</p>
 					</div>
 					<QuestionStep
@@ -426,8 +427,10 @@ function describeAnswer(
 	const v = a.value;
 	if (q.type === "territory") {
 		const tv = v as { municipality?: string; ccaa?: string };
-		if (tv.municipality && resolveMuni)
-			return `${resolveMuni(tv.municipality)} (${tv.municipality})`;
+		// F10-RES-2 §3.2: el número es el código INE, no un CP — no se
+		// muestra crudo junto al nombre («Ajalvir (28002)» parecía código
+		// postal). El nombre ya distingue el municipio.
+		if (tv.municipality && resolveMuni) return resolveMuni(tv.municipality);
 		return tv.municipality ?? tv.ccaa ?? "";
 	}
 	if (q.type === "age" || q.type === "integer") {

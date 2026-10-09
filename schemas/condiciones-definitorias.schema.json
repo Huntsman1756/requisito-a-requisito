@@ -1,0 +1,43 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://requisito.h1756.es/schemas/condiciones-definitorias.json",
+	"title": "Condiciones definitorias por regla (capa de presentación)",
+	"description": "Para cada benefitSlug: ids de requisito que DEFINEN la situación de la ayuda (no el trámite) y un texto corto en positivo que la describe. Es presentación (F10-RES-2): no cambia veredictos. Ids válidos contra el bundle: cada id debe existir en requirements o uncoveredRequirements de su RuleSet.",
+	"type": "object",
+	"required": ["version", "rules"],
+	"properties": {
+		"version": { "type": "integer", "const": 1 },
+		"comentario": { "type": "string" },
+		"rules": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"required": ["condiciones"],
+				"properties": {
+					"condiciones": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"required": ["req", "texto"],
+							"properties": {
+								"req": {
+									"type": "string",
+									"pattern": "^[a-z0-9][a-z0-9-]*$"
+								},
+								"texto": {
+									"type": "string",
+									"minLength": 12,
+									"pattern": "^(si |cuando |con |tras )"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"nota": { "type": "string" }
+				},
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false
+}

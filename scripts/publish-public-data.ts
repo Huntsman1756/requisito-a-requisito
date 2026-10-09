@@ -48,6 +48,16 @@ const questions = readFileSync(
 );
 writeFileSync(join(OUT, "questions.json"), questions);
 
+// F10-RES-2 §1.1: capa de presentación — condiciones definitorias por
+// regla. Es texto y agrupado; los veredictos no cambian.
+writeFileSync(
+	join(OUT, "condiciones-definitorias.json"),
+	readFileSync(
+		join(root, "data/presentation/condiciones-definitorias.json"),
+		"utf8",
+	),
+);
+
 // Municipios de la provincia de Madrid para el selector de territorio.
 const territory = JSON.parse(
 	readFileSync(join(root, "data/eligibility/territory.json"), "utf8"),
@@ -396,6 +406,12 @@ writeFileSync(
 					schema: "(lista de campos del perfil)",
 					description:
 						"Campos del perfil que consulta alguna regla — el asistente elige preguntas sin descargar el bundle",
+				},
+				{
+					file: "condiciones-definitorias.json",
+					schema: "schemas/condiciones-definitorias.schema.json",
+					description:
+						"Capa de presentación: requisito que define la situación de cada ayuda y su texto «solo si…» (no cambia veredictos)",
 				},
 			]),
 		},

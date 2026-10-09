@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "comentario": "Capa de presentación (F10-RES-2). No toca reglas ni veredictos: para cada benefitSlug, qué requisitos DEFINEN la situación de la ayuda y un texto corto en positivo («si…», «cuando…») que se enseña cuando quedan en U. Slugs con dos versiones (prestacion-cuidador-no-profesional, prestaciones-dependencia-saad) comparten entrada: los ids elegidos existen en ambas.",
+  "rules": {
+    "anticipos-docentes-cm": {
+      "condiciones": [
+        {
+          "req": "funcionario-docente-activo",
+          "texto": "si eres funcionario o funcionaria docente no universitario de la CM, en activo o en prácticas"
+        }
+      ]
+    },
+    "asignacion-hijo-a-cargo": {
+      "condiciones": [
+        {
+          "req": "causante-con-discapacidad",
+          "texto": "si tienes a tu cargo un hijo o menor con discapacidad, o si eres una persona mayor de 18 años con discapacidad que estuvo a cargo de sus padres"
+        }
+      ]
+    },
+    "ayto-emergencia-social": {
+      "condiciones": [
+        {
+          "req": "situacion-emergencia-social",
+          "texto": "si te encuentras en una situación de emergencia social o de especial necesidad"
+        }
+      ]
+    },
+    "ayto-escuela-infantil": {
+      "condiciones": [
+        {
+          "req": "hijo-primer-ciclo",
+          "texto": "si tienes a tu cargo una niña o niño de primer ciclo (nacidos en 2024, 2025 o 2026)"
+        }
+      ]
+    },
+    "ayto-ibi-familia-numerosa": {
+      "condiciones": [
+        {
+          "req": "titulo-familia-numerosa",
+          "texto": "si tienes el título de familia numerosa vigente"
+        },
+        {
+          "req": "sujeto-pasivo-titularidad",
+          "texto": "si eres el sujeto pasivo del IBI de tu vivienda habitual (propietario, usufructuario o titular del recibo)"
+        }
+      ]
+    },
+    "ayto-tarjeta-azul-discapacidad": {
+      "condiciones": [
+        {
+          "req": "discapacidad-min-33",
+          "texto": "si tienes una discapacidad reconocida igual o superior al 33 %, o si en tu familia convive una persona mayor de edad con dependencia reconocida"
+        }
+      ]
+    },
+    "becas-generales-mefp-2026-2027": {
+      "condiciones": [
+        {
+          "req": "estudiante-universitario",
+          "texto": "si vas a cursar enseñanzas universitarias oficiales (grado o máster) en el curso 2026-2027"
+        }
+      ]
+    },
+    "bono-cultural-joven": {
+      "condiciones": [
+        {
+          "req": "nacido-en-2008",
+          "texto": "si naciste en 2008 (cumples 18 años durante 2026)"
+        }
+      ]
+    },
+    "bono-social-electrico": {
+      "condiciones": [
+        {
+          "req": "alguna-via-vulnerable",
+          "texto": "si tu hogar encaja en alguna vía de consumidor vulnerable (renta, pensión mínima, familia numerosa o IMV)"
+        }
+      ]
+    },
+    "bono-social-termico": {
+      "condiciones": [
+        {
+          "req": "alguna-via-vulnerable",
+          "texto": "si tu hogar encaja en alguna vía de consumidor vulnerable del bono social de electricidad"
+        }
+      ]
+    },
+    "cese-actividad-autonomos": {
+      "condiciones": [
+        {
+          "req": "autonomo-alta-reta",
+          "texto": "si eres autónomo afiliado y en alta en el RETA"
+        },
+        {
+          "req": "situacion-legal-cese",
+          "texto": "si has cesado tu actividad por una causa legal: inviabilidad, fuerza mayor, pérdida de licencia o violencia de género"
+        },
+        {
+          "req": "cese-involuntario",
+          "texto": "cuando el cese no sea por voluntad propia"
+        }
+      ]
+    },
+    "cm-reintegro-accidentes-trabajo": {
+      "condiciones": [
+        {
+          "req": "empleado-publico-cm",
+          "texto": "si eres empleado público de la Comunidad de Madrid"
+        },
+        {
+          "req": "asistencia-por-accidente",
+          "texto": "si has recibido asistencia sanitaria por accidente de trabajo o enfermedad profesional"
+        }
+      ]
+    },
+    "complemento-ayuda-infancia": {
+      "condiciones": [
+        {
+          "req": "menor-en-unidad",
+          "texto": "si en tu unidad de convivencia hay al menos un menor de 18 años"
+        },
+        {
+          "req": "umbrales-economicos-ampliados",
+          "texto": "con unos ingresos por debajo del 300 % de los umbrales del IMV"
+        }
+      ]
+    },
+    "descuento-transporte-familia-numerosa": {
+      "condiciones": [
+        {
+          "req": "titulo-familia-numerosa",
+          "texto": "si tienes el título de familia numerosa"
+        }
+      ]
+    },
+    "fuenlabrada-fuenlacarenet-2026": {
+      "condiciones": [
+        {
+          "req": "menores-a-cargo",
+          "texto": "si en tu familia hay menores en una situación de riesgo valorada por los Servicios Sociales"
+        },
+        {
+          "req": "derivacion-servicios-sociales",
+          "texto": "si los Servicios Sociales de Fuenlabrada te han derivado al proyecto #FuenlaCareNet"
+        }
+      ]
+    },
+    "fuenlabrada-prestaciones-sociales": {
+      "condiciones": [
+        {
+          "req": "grave-necesidad-valoracion",
+          "texto": "si acreditas una situación de grave necesidad ante el trabajador social"
+        }
+      ]
+    },
+    "imv": {
+      "condiciones": [
+        {
+          "req": "ingresos-inferiores-renta-garantizada",
+          "texto": "si tus ingresos anuales están por debajo de la renta garantizada (8.803,20 € en 2026 para una persona sola)"
+        }
+      ]
+    },
+    "leganes-prestaciones-especial-necesidad": {
+      "condiciones": [
+        {
+          "req": "situacion-necesidad",
+          "texto": "si acreditas una situación de necesidad ante el trabajador social"
+        }
+      ]
+    },
+    "madrid-abono-transporte-65": {
+      "condiciones": [
+        {
+          "req": "edad-65",
+          "texto": "si tienes 65 años o más, eres pensionista o persona dependiente"
+        }
+      ]
+    },
+    "madrid-abono-transporte-infantil": {
+      "condiciones": [
+        {
+          "req": "menor-0-14-a-cargo",
+          "texto": "si tienes a tu cargo un menor de 15 años"
+        }
+      ]
+    },
+    "madrid-abono-transporte-joven": {
+      "condiciones": [
+        {
+          "req": "edad-min-15",
+          "texto": "si tienes al menos 15 años"
+        },
+        {
+          "req": "edad-max-26",
+          "texto": "si tienes menos de 26 años"
+        }
+      ]
+    },
+    "madrid-accede-prestamo-libros": {
+      "condiciones": [
+        {
+          "req": "alumno-centro-sostenido",
+          "texto": "si estudias Primaria, ESO, FPB o Educación Especial en un centro público o concertado de la CM"
+        }
+      ]
+    },
+    "madrid-ayuda-pago-unico-vg": {
+      "condiciones": [
+        {
+          "req": "titulo-vg-vigente",
+          "texto": "si tienes vigente un título que acredita la situación de violencia de género (sentencia, orden de protección o informe)"
+        }
+      ]
+    },
+    "madrid-ayudas-alquiler-plan-estatal": {
+      "condiciones": [
+        {
+          "req": "contrato-alquiler",
+          "texto": "si eres titular de un contrato de arrendamiento, cesión de uso o habitación"
+        }
+      ]
+    },
+    "madrid-ayudas-nacimiento-adopcion-multiple": {
+      "condiciones": [
+        {
+          "req": "parto-adopcion-multiple",
+          "texto": "si has tenido o adoptado dos o más hijos a la vez a partir del 1 de enero de 2024"
+        },
+        {
+          "req": "nacidos-desde-2024",
+          "texto": "cuando hayan nacido o se hayan adoptado a partir del 1 de enero de 2024"
+        }
+      ]
+    },
+    "madrid-ayudas-nacimiento-general": {
+      "condiciones": [
+        {
+          "req": "edad-max-30",
+          "texto": "si tienes 30 años o menos"
+        },
+        {
+          "req": "situacion-beneficiaria",
+          "texto": "si estás embarazada desde la semana 21, has sido madre o has adoptado un menor a partir del 1 de enero de 2022"
+        }
+      ]
+    },
+    "madrid-ayudas-urgencia-social": {
+      "condiciones": [
+        {
+          "req": "situacion-urgencia-emergencia",
+          "texto": "si estás en una situación de urgencia o emergencia social sobrevenida"
+        }
+      ]
+    },
+    "madrid-beca-comedor-escolar": {
+      "condiciones": [
+        {
+          "req": "hijo-en-edad-escolar",
+          "texto": "si tienes a tu cargo un hijo o hija de 18 años o menos"
+        },
+        {
+          "req": "plaza-comedor",
+          "texto": "si tu hijo o hija tiene plaza en el comedor de su centro"
+        }
+      ]
+    },
+    "madrid-becas-bachillerato-centros-privados": {
+      "condiciones": [
+        {
+          "req": "bachillerato-regimen-privado-centro-autorizado-cm",
+          "texto": "si el alumno cursa Bachillerato en régimen privado en un centro autorizado de la CM"
+        }
+      ]
+    },
+    "madrid-bono-alquiler-joven": {
+      "condiciones": [
+        {
+          "req": "edad-max-35",
+          "texto": "si tienes 35 años o menos"
+        },
+        {
+          "req": "alquiler-o-condiciones",
+          "texto": "si tienes un contrato de alquiler de vivienda o habitación, o reúnes condiciones para firmarlo"
+        }
+      ]
+    },
+    "madrid-cheque-escuela-infantil": {
+      "condiciones": [
+        {
+          "req": "matriculado-centro-privado",
+          "texto": "si tu hijo o hija está matriculado o con reserva de plaza en un centro privado de Infantil"
+        }
+      ]
+    },
+    "madrid-renta-minima-insercion": {
+      "condiciones": [
+        {
+          "req": "edad-25-65",
+          "texto": "si tienes entre 25 y 64 años (con excepciones tasadas)"
+        },
+        {
+          "req": "ingresos-inferiores-rmi",
+          "texto": "si los ingresos de tu unidad de convivencia están por debajo de la cuantía de la RMI"
+        },
+        {
+          "req": "solicitud-previa-prestaciones",
+          "texto": "si ya has pedido y te han denegado las pensiones o prestaciones previas"
+        }
+      ]
+    },
+    "madrid-titulo-familia-numerosa": {
+      "condiciones": [
+        {
+          "req": "hijos-minimo",
+          "texto": "si tienes al menos 2 hijos o hijas a tu cargo (con 3 o más en el caso general)"
+        }
+      ]
+    },
+    "mostoles-prestaciones-sociales": {
+      "condiciones": [
+        {
+          "req": "carencia-ingresos",
+          "texto": "si tu familia carece de ingresos suficientes para cubrir las necesidades básicas"
+        },
+        {
+          "req": "sin-recurso-en-otras-administraciones",
+          "texto": "si no puedes atender tu necesidad con recursos tuyos ni con ayuda de otras administraciones"
+        }
+      ]
+    },
+    "pension-incapacidad-permanente": {
+      "condiciones": [
+        {
+          "req": "grado-declarado-inss",
+          "texto": "si el INSS te ha declarado una incapacidad permanente (parcial, total, absoluta o gran invalidez)"
+        }
+      ]
+    },
+    "pension-jubilacion-contributiva": {
+      "condiciones": [
+        {
+          "req": "edad-ordinaria-exigible",
+          "texto": "cuando alcances la edad ordinaria (66 años y 10 meses en 2026) o cumplas una vía anticipada"
+        },
+        {
+          "req": "cotizacion-15-anos",
+          "texto": "si has cotizado al menos 15 años, con 2 de ellos dentro de los últimos 15"
+        }
+      ]
+    },
+    "pension-no-contributiva": {
+      "condiciones": [
+        {
+          "req": "edad-65-o-discapacidad",
+          "texto": "si tienes 65 años o más, o entre 18 y 64 años con una discapacidad o enfermedad crónica reconocida"
+        },
+        {
+          "req": "sin-pension-contributiva",
+          "texto": "si no tienes derecho a una pensión contributiva (no has cotizado lo suficiente)"
+        },
+        {
+          "req": "carencia-rentas",
+          "texto": "si tus ingresos anuales están por debajo del límite de la PNC"
+        }
+      ]
+    },
+    "pension-orfandad": {
+      "condiciones": [
+        {
+          "req": "filiacion-causante",
+          "texto": "si ha fallecido tu padre o tu madre"
+        }
+      ]
+    },
+    "pension-viudedad": {
+      "condiciones": [
+        {
+          "req": "ser-viudo-viuda",
+          "texto": "si ha fallecido tu cónyuge o pareja de hecho"
+        }
+      ]
+    },
+    "prestacion-cuidado-menor-enfermedad-grave": {
+      "condiciones": [
+        {
+          "req": "enfermedad-grave-acreditada",
+          "texto": "si tu hijo o hija tiene cáncer u otra enfermedad grave"
+        },
+        {
+          "req": "reduccion-jornada-50",
+          "texto": "si reduces tu jornada de trabajo al menos un 50 % para cuidarlo"
+        }
+      ]
+    },
+    "prestacion-cuidador-no-profesional": {
+      "condiciones": [
+        {
+          "req": "dependencia-reconocida",
+          "texto": "si la persona a la que cuidas tiene la dependencia reconocida oficialmente"
+        },
+        {
+          "req": "vinculo-familiar-cuidador",
+          "texto": "si eres cónyuge o pariente hasta el tercer grado de la persona dependiente"
+        }
+      ]
+    },
+    "prestacion-desempleo-contributiva": {
+      "condiciones": [
+        {
+          "req": "situacion-legal-desempleo",
+          "texto": "si has perdido el empleo o te han suspendido el contrato por una causa legal"
+        },
+        {
+          "req": "cotizacion-minima-360",
+          "texto": "si has cotizado por desempleo al menos 360 días en los últimos 6 años"
+        }
+      ]
+    },
+    "prestacion-nacimiento-adopcion-familia-numerosa-monoparental-discapacidad": {
+      "condiciones": [
+        {
+          "req": "colectivo-familiar",
+          "texto": "si tu familia es numerosa, monoparental o un progenitor tiene una discapacidad reconocida"
+        },
+        {
+          "req": "nacimiento-en-espana",
+          "texto": "si acabas de tener un hijo o hija en España (o la adopción se ha constituido aquí)"
+        }
+      ]
+    },
+    "prestacion-nacimiento-cuidado-menor": {
+      "condiciones": [
+        {
+          "req": "duracion-y-disfrute-permiso",
+          "texto": "si acabas de tener un hijo o hija, adoptarlo o recibirlo en guarda o acogimiento — el permiso va ligado al nacimiento o la admisión reciente"
+        }
+      ]
+    },
+    "prestaciones-dependencia-saad": {
+      "condiciones": [
+        {
+          "req": "situacion-dependencia-grado",
+          "texto": "si necesitas de forma permanente la atención de otra persona para las actividades básicas"
+        }
+      ]
+    },
+    "prestamos-personal-publico-cm": {
+      "condiciones": [
+        {
+          "req": "personal-laboral-cm",
+          "texto": "si trabajas al servicio de la Administración de la Comunidad de Madrid (personal laboral o funcionario de administración y servicios)"
+        },
+        {
+          "req": "gasto-imprevisto-justificado",
+          "texto": "si tienes que afrontar un gasto imprevisto o extraordinario"
+        }
+      ]
+    },
+    "sermas-ortoprotesica-desplazamiento": {
+      "condiciones": [
+        {
+          "req": "prescripcion-especialista",
+          "texto": "si un especialista te ha prescrito material ortoprotésico del catálogo"
+        }
+      ]
+    },
+    "sermas-reintegro-gastos-sanitarios": {
+      "condiciones": [
+        {
+          "req": "gasto-acreditado",
+          "texto": "si has pagado de más o adelantado un gasto sanitario reintegrable"
+        }
+      ]
+    },
+    "subsidio-desempleo": {
+      "condiciones": [
+        {
+          "req": "desempleo",
+          "texto": "si estás en desempleo total o trabajas a tiempo parcial"
+        },
+        {
+          "req": "hecho-causante",
+          "texto": "si has agotado la prestación contributiva o estás desempleado sin derecho a ella"
+        }
+      ]
+    },
+    "subsidio-mayores-52": {
+      "condiciones": [
+        {
+          "req": "edad-52",
+          "texto": "si tienes 52 años o más"
+        },
+        {
+          "req": "desempleo",
+          "texto": "si estás en desempleo total o trabajas a tiempo parcial"
+        },
+        {
+          "req": "hecho-causante",
+          "texto": "si has agotado tu prestación contributiva o estás en desempleo sin derecho a ella"
+        },
+        {
+          "req": "requisitos-jubilacion-salvo-edad",
+          "texto": "si cumples lo que pediría la jubilación contributiva salvo la edad"
+        }
+      ]
+    }
+  }
+}

@@ -30,11 +30,13 @@ import {
 	worstOf,
 } from "../../lib/matrix";
 import {
+	definingU,
 	groupResults,
+	incomeThresholdU,
 	isEncaja as encaja,
 	MAX_OPEN_UNKNOWNS,
+	type ResultEntry,
 } from "../../lib/results-order";
-const isEncaja = ({ ev }: { ev: EvaluationResult }) => encaja(ev);
 
 const EVENT_LABELS: Record<string, string> = {
 	tener_hijo: "Voy a tener un hijo",
@@ -78,6 +80,9 @@ export function ResultsView({
 	const [showClosed, setShowClosed] = useState(false);
 	const [showNoCumple, setShowNoCumple] = useState(false);
 	const [inlineField, setInlineField] = useState<string | null>(null);
+	const condMap = data.condiciones;
+	const isEncaja = ({ rs, ev }: ResultEntry) =>
+		encaja(rs, ev, condMap[ev.benefitSlug]);
 	const [showAllL2, setShowAllL2] = useState(false);
 	const [showMatrix, setShowMatrix] = useState(false);
 	const [copied, setCopied] = useState(false);
@@ -114,13 +119,28 @@ export function ResultsView({
 
 	// F10-RES: orden por utilidad, no por letra del nombre — la agrupación
 	// vive en lib/results-order.ts (test sobre datos reales del bundle).
-	const groups = groupResults(evaluations, showClosed);
-	const { encajas, posiblesPocas, noDescartar, faltanDatos, noCumple } = groups;
-	// Orden en pantalla: encaja → posible con pocas incógnitas → no se puede
-	// descartar (plegada) → faltan datos → no aplica (plegada).
-	const visible = [...encajas, ...posiblesPocas, ...noDescartar, ...faltanDatos];
+	const groups = groupResults(evaluations, showClosed, condMap);
+	const { encajas, soloSi, posiblesPocas, noDescartar, faltanDatos, noCumple } =
+		groups;
+	// Orden en pantalla: encaja → «solo si…» → posible con pocas incógnitas
+	// → no se puede descartar (plegada) → faltan datos → no aplica.
+	const visible = [
+		...encajas,
+		...soloSi,
+		...posiblesPocas,
+		...noDescartar,
+		...faltanDatos,
+	];
 
-	// Datos que faltan: unión de missing de todas las evaluaciones.
+	// F10-RES-2 §2: «Te faltan datos» nunca reabre una pregunta ya
+	// respondida con las mismas opciones. incomeAnnual respondida en la
+	// franja abierta sí puede resolver con una pregunta de precisión al
+	// umbral real que queda en U.
+	const incomeX = useMemo(
+		() =>
+			incomeThresholdU(evaluations, profile, evalCtx),
+		[evaluations, profile, evalCtx],
+	);
 	const missing = useMemo(() => {
 		const map = new Map<string, { field: string; questionId: string; unlocks: number }>();
 		for (const { ev } of evaluations) {
@@ -129,21 +149,32 @@ export function ResultsView({
 				if (!cur || m.unlocks > cur.unlocks) map.set(m.field, m);
 			}
 		}
-		return [...map.values()];
-	}, [evaluations]);
+		return [...map.values()].filter((m) => {
+			const a = profile.answers[m.field];
+			if (a?.state !== "value") return true;
+			// Ya respondida: solo se ofrece si hay precisión útil.
+			return m.field === "incomeAnnual" && incomeX !== undefined;
+		});
+	}, [evaluations, profile, incomeX]);
 
 	const missingAids = new Set(
 		evaluations.flatMap(({ ev }) => ev.missing.map(() => ev.benefitSlug)),
 	).size;
 
 	const level2 = useMemo(
-		() => matchLevel2(data.level2, profile.answers),
-		[data, profile],
+		() =>
+			matchLevel2(
+				data.level2,
+				profile.answers,
+				data.territory.municipalities,
+				lifeEvent,
+			),
+		[data, profile, lifeEvent],
 	);
 
 	const probables = evaluations.filter(isEncaja).length;
 	const posibles = evaluations.filter(
-		({ ev }) => ev.verdict === "posible" && !isEncaja({ ev }),
+		(x) => x.ev.verdict === "posible" && !isEncaja(x),
 	).length + evaluations.filter(({ ev }) => ev.verdict === "insuficiente").length;
 
 	// Plan de acción (docs/15 D): valor, documentos agrupados, calendario.
@@ -213,8 +244,8 @@ export function ResultsView({
 			`${t("app.name")} — ${t("results.title")}`,
 			"",
 			...visible.map(
-				({ ev }) =>
-					`• ${aidTitle(ev.benefitSlug)}: ${isEncaja({ ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}`,
+				({ rs, ev }) =>
+					`• ${aidTitle(ev.benefitSlug)}: ${isEncaja({ rs, ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}`,
 			),
 			"",
 			t("legal.notice"),
@@ -253,9 +284,80 @@ export function ResultsView({
 						{missing.map((m) => {
 							const q = questions.find((x) => x.field === m.field);
 							if (!q) return null;
+							// §2.2: ingresos ya respondidos en la franja abierta →
+							// pregunta de precisión al umbral real, no la misma
+							// pregunta con las mismas opciones.
+							const precision =
+								m.field === "incomeAnnual" &&
+								profile.answers[m.field]?.state === "value" &&
+								incomeX !== undefined;
 							return (
 								<li key={m.field}>
-									{inlineField === m.field ? (
+									{precision ? (
+										inlineField === m.field ? (
+											<div className="precision-q">
+												<p>
+													{t("results.missing.incomePrecision", {
+														x: `${incomeX.toLocaleString("es-ES")} €`,
+													})}
+												</p>
+												<button
+													type="button"
+													className="cta"
+													onClick={() => {
+														onSetAnswer("incomeAnnual", {
+															state: "value",
+															value: { min: incomeX, max: null },
+														});
+														setInlineField(null);
+														onAnnounce(t("results.missing.recalc"));
+													}}
+												>
+													{t("results.missing.incomeGe", {
+														x: `${incomeX.toLocaleString("es-ES")} €`,
+													})}
+												</button>{" "}
+												<button
+													type="button"
+													className="btn-quiet"
+													onClick={() => {
+														const aInc = profile.answers.incomeAnnual;
+														const cur = aInc?.state === "value" ? (aInc.value as { min?: number | null }) : undefined;
+														onSetAnswer("incomeAnnual", {
+															state: "value",
+															value: { min: cur?.min ?? null, max: incomeX },
+														});
+														setInlineField(null);
+														onAnnounce(t("results.missing.recalc"));
+													}}
+												>
+													{t("results.missing.incomeLt", {
+														x: `${incomeX.toLocaleString("es-ES")} €`,
+													})}
+												</button>{" "}
+												<button
+													type="button"
+													className="btn-quiet"
+													onClick={() => setInlineField(null)}
+												>
+													{key("check.decline")}
+												</button>
+											</div>
+										) : (
+											<>
+												{t("results.missing.incomePrecision", {
+													x: `${incomeX.toLocaleString("es-ES")} €`,
+												})}{" "}
+												<button
+													type="button"
+													className="btn-quiet"
+													onClick={() => setInlineField(m.field)}
+												>
+													{t("results.missing.answer")}
+												</button>
+											</>
+										)
+									) : inlineField === m.field ? (
 										<QuestionStep
 											inline
 											question={q}
@@ -297,16 +399,34 @@ export function ResultsView({
 			)}
 			<div className="results-list">
 				{encajas.map(({ rs, ev }) => (
-					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} />
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} />
 				))}
 			</div>
+
+			{soloSi.length > 0 && (
+				<>
+					<h2 className="results-group">{key("results.group.soloSi")}</h2>
+					<p className="note">{key("results.group.soloSi.note")}</p>
+					<div className="results-list">
+						{soloSi.map(({ rs, ev, conds }) => (
+							<ResultCard
+								key={ev.benefitSlug}
+								rs={rs}
+								ev={ev}
+								condMap={condMap}
+								soloSi={conds.map((c) => c.texto).join("; ")}
+							/>
+						))}
+					</div>
+				</>
+			)}
 
 			{posiblesPocas.length > 0 && (
 				<h2 className="results-group">{key("results.group.posible")}</h2>
 			)}
 			<div className="results-list">
 				{posiblesPocas.map(({ rs, ev }) => (
-					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} />
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} />
 				))}
 			</div>
 
@@ -319,7 +439,7 @@ export function ResultsView({
 					</summary>
 					<div className="results-list">
 						{noDescartar.map(({ rs, ev }) => (
-							<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} compact />
+							<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} compact />
 						))}
 					</div>
 				</details>
@@ -330,7 +450,7 @@ export function ResultsView({
 			)}
 			<div className="results-list">
 				{faltanDatos.map(({ rs, ev }) => (
-					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} compact />
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} compact />
 				))}
 			</div>
 
@@ -350,7 +470,7 @@ export function ResultsView({
 						<ul className="results-list">
 							{noCumple.map(({ rs, ev }) => (
 								<li key={ev.benefitSlug}>
-									<ResultCard rs={rs} ev={ev} compact />
+									<ResultCard rs={rs} ev={ev} condMap={condMap} compact />
 								</li>
 							))}
 						</ul>
@@ -390,7 +510,7 @@ export function ResultsView({
 			)}
 
 			{evaluations.length > 1 && (
-				<RequirementMatrix evaluations={evaluations} />
+				<RequirementMatrix evaluations={evaluations} condMap={condMap} />
 			)}
 
 			{actionEvals.length > 0 && (
@@ -510,10 +630,16 @@ function ResultCard({
 	rs,
 	ev,
 	compact,
+	soloSi,
+	condMap,
 }: {
 	rs: RuleSet;
 	ev: EvaluationResult;
 	compact?: boolean;
+	/** Texto «solo si …» cuando la tarjeta está en el grupo de
+	 *  condiciones definitorias sin resolver (F10-RES-2 §1.2). */
+	soloSi?: string;
+	condMap: Record<string, { req: string; texto: string }[] | undefined>;
 }) {
 	const [open, setOpen] = useState(false);
 	const failed = ev.requirements.filter((r) => r.status === "F" && r.hard);
@@ -535,8 +661,9 @@ function ResultCard({
 				<DeadlinePill ev={ev} />
 			</p>
 			<h2>
-				{aidTitle(ev.benefitSlug)}{" "}
-				<span className={pill}>{isEncaja({ ev }) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
+				{aidTitle(ev.benefitSlug)}
+				{soloSi && <span className="solo-si"> — solo {soloSi}</span>}{" "}
+				<span className={pill}>{encaja(rs, ev, condMap[ev.benefitSlug]) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
 			</h2>
 			<p className="review-state note">
 				Comprobada con la fuente
@@ -555,7 +682,7 @@ function ResultCard({
 				</p>
 			)}
 			<p className="verdict-line">
-						{isEncaja({ ev }) && ev.verdict !== "probable"
+						{encaja(rs, ev, condMap[ev.benefitSlug]) && ev.verdict !== "probable"
 							? "Cumples todo lo comprobable; quedan condiciones del trámite por verificar"
 							: key(`verdict.line.${ev.verdict}`)}
 					</p>
@@ -784,8 +911,10 @@ function DeadlinePill({ ev }: { ev: EvaluationResult }) {
 /** Matriz requisito a requisito por dimensiones del perfil (R2-MAT). */
 function RequirementMatrix({
 	evaluations,
+	condMap,
 }: {
 	evaluations: { rs: RuleSet; ev: EvaluationResult }[];
+	condMap: Record<string, { req: string; texto: string }[] | undefined>;
 }) {
 	const [open, setOpen] = useState(false);
 	const [cell, setCell] = useState<{ aid: string; dim: string } | null>(null);
@@ -800,10 +929,10 @@ function RequirementMatrix({
 		: st === "W" ? { cls: "na", sym: "⚠", txt: "No comprobable aquí" }
 		: { cls: "na", sym: "–", txt: "No aplica" };
 
-	const verdictLabel = (ev: EvaluationResult) =>
-		isEncaja({ ev }) ? "Encaja" : ev.verdict === "posible" ? "Falta un dato" : ev.verdict === "insuficiente" ? "Le faltan datos" : "No te aplica";
-	const verdictCls = (ev: EvaluationResult) =>
-		isEncaja({ ev }) ? "v-ok" : ev.verdict === "posible" || ev.verdict === "insuficiente" ? "v-doubt" : "v-no";
+	const verdictLabel = (rs: RuleSet, ev: EvaluationResult) =>
+		encaja(rs, ev, condMap[ev.benefitSlug]) ? "Encaja" : ev.verdict === "posible" ? "Falta un dato" : ev.verdict === "insuficiente" ? "Le faltan datos" : "No te aplica";
+	const verdictCls = (rs: RuleSet, ev: EvaluationResult) =>
+		encaja(rs, ev, condMap[ev.benefitSlug]) ? "v-ok" : ev.verdict === "posible" || ev.verdict === "insuficiente" ? "v-doubt" : "v-no";
 
 	return (
 		<>
@@ -823,7 +952,7 @@ function RequirementMatrix({
 						<div className="matrix-mobile" aria-hidden="true">
 							{shown.map(({ rs, ev }) => (
 								<details key={ev.benefitSlug}>
-									<summary>{aidTitle(ev.benefitSlug)} — {verdictLabel(ev)}</summary>
+									<summary>{aidTitle(ev.benefitSlug)} — {verdictLabel(rs, ev)}</summary>
 									<ul>
 										{ev.requirements.map((r) => {
 											const t = tickFor(r.status);
@@ -888,8 +1017,8 @@ function RequirementMatrix({
 											)}
 										</td>
 										<td>
-											<span className={`verdict ${verdictCls(ev)}`}>
-												{verdictLabel(ev)}
+											<span className={`verdict ${verdictCls(rs, ev)}`}>
+												{verdictLabel(rs, ev)}
 											</span>
 										</td>
 									</tr>
