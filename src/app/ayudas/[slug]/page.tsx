@@ -178,9 +178,10 @@ export default async function Ficha({
 				{rs.sources.map((s) => (
 					<li key={s.id}>
 						<a href={s.url} rel="noopener noreferrer">
-							{s.title}
-						</a>{" "}
-
+							{(s.title ?? "").trim() ||
+								s.url.replace(/^https?:\/\//, "").split("/")[0] ||
+								"Fuente oficial"}
+						</a>
 					</li>
 				))}
 			</ul>

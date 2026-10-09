@@ -46,7 +46,16 @@ const server = createServer((request, response) => {
 		}
 		const stat = statSync(path);
 		if (!stat.isFile()) {
-			response.writeHead(404).end();
+			// Como GitHub Pages: el 404 sirve el /404.html del export, no un
+			// cuerpo vacío.
+			const nf = resolve(root, "404.html");
+			const nstat = statSync(nf);
+			response.writeHead(404, {
+				"content-type": "text/html; charset=utf-8",
+				"content-length": nstat.size,
+				"x-content-type-options": "nosniff",
+			});
+			createReadStream(nf).pipe(response);
 			return;
 		}
 		response.writeHead(200, {
@@ -62,7 +71,18 @@ const server = createServer((request, response) => {
 			.on("error", () => response.destroy())
 			.pipe(response);
 	} catch {
-		response.writeHead(404).end();
+		try {
+			const nf = resolve(root, "404.html");
+			const nstat = statSync(nf);
+			response.writeHead(404, {
+				"content-type": "text/html; charset=utf-8",
+				"content-length": nstat.size,
+				"x-content-type-options": "nosniff",
+			});
+			createReadStream(nf).pipe(response);
+		} catch {
+			response.writeHead(404).end();
+		}
 	}
 });
 server.keepAliveTimeout = 60_000;

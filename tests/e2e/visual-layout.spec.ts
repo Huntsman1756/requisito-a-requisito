@@ -324,6 +324,14 @@ async function audit(page: Page): Promise<RawFinding[]> {
 		// markup: funcionan aunque el elemento no lleve clase.
 		const main = document.querySelector("main");
 		if (main) {
+			// i.0) página vacía: un <main> sin h1 ni apenas texto pasaba el
+			// audit sin el menor hallazgo (el 404 daba cuerpo vacío).
+			if (!main.querySelector("h1") && leaves.length < 5)
+				out.push({
+					type: "pagina-vacia",
+					severity: "alta",
+					detail: `main sin h1 y solo ${leaves.length} nodos de texto visibles`,
+				});
 			// i.1) ul/ol con la sangría del navegador. La UA da 40 px
 			// ABSOLUTOS (no escala con el zoom de texto); la nuestra es rem
 			// — se detecta exactamente 40, no «mucho».

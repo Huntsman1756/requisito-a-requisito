@@ -84,12 +84,13 @@ export default function Observatorio() {
 				<ul>
 					{Object.entries(byState as Record<string, number>).map(([k, v]) => (
 						<li key={k}>
-							<span className="label">{{ OPEN: "Plazo abierto", ROLLING: "Plazo continuo", UPCOMING: "Próxima", CLOSED_RECURRING: "Se convoca cada año", UNKNOWN: "Por confirmar" }[k] ?? k}</span>
+							<span className="label">{{ OPEN: "Plazo abierto", ROLLING: "Plazo continuo", UPCOMING: "Próxima", CLOSED: "Cerrado", CLOSED_RECURRING: "Se convoca cada año", UNKNOWN: "Por confirmar" }[k] ?? k}</span>
 							<span className="mono">{v} programas</span>
 							<span>
 								{k === "OPEN" && "Plazo abierto ahora mismo"}
 								{k === "ROLLING" && "Se puede pedir en cualquier momento"}
 								{k === "UPCOMING" && "Anunciada; plazo aún no abierto"}
+								{k === "CLOSED" && "Plazo terminado"}
 								{k === "CLOSED_RECURRING" && "Cerrada; se convoca cada año"}
 								{k === "UNKNOWN" && "Estado por confirmar"}
 							</span>

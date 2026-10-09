@@ -87,8 +87,9 @@ const OP_TEXT: Record<string, [string, string]> = {
 	lte: ["es como máximo", "son como máximo"],
 	gt: ["es más de", "son más de"],
 	lt: ["es menos de", "son menos de"],
-	in: ["está entre", "están entre"],
+	in: ["es una de", "son unas de"],
 	neq: ["no es", "no son"],
+	not_in: ["no es una de", "no son unas de"],
 };
 
 const FIELD_OF: Record<string, string> = {
@@ -117,6 +118,8 @@ function leaf(c: Extract<Condition, { field: string }>): string {
 	// Sub-label del propio RuleSet, si lo hay, manda sobre la traducción.
 	if (c.label) return String(c.label);
 	if (c.op === "within_territory") return `${f} está ${valueText(c.field, c.value)}`;
+	if (c.op === "between" && Array.isArray(c.value))
+		return `${f} ${PLURAL_FIELDS.has(c.field) ? "están" : "está"} entre ${valueText(c.field, c.value[0])} y ${valueText(c.field, c.value[1])}`;
 	if (c.op === "count_where_gte") {
 		const n = c.count ?? 1;
 		const dir = "al menos";
