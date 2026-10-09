@@ -17,8 +17,9 @@ móvil.
 | desktop-chromium (local, export) | 136/136 ✓ | 0 |
 | small-reflow 320 px | 136/136 ✓ | 0 |
 | mobile-android (Pixel 7 emulado) | 136/136 ✓ | 0 |
-| Firefox/WebKit/móviles/tablet | CI e2e-browsers (run 37921466756) | pendiente lectura |
-| Espejo https://requisito.h1756.es | smoke + axe + flujo: 16/16 ✓ | pendiente pasada final |
+| e2e-browsers CI (run 37928414630) | 116 funcional firefox/webkit/móviles/tablet + 18 muestra visual WebKit ✓ | 0 |
+| Pages CI por push (run 37930002984) | matriz visual completa 136/136 como puerta | 0 |
+| Espejo https://requisito.h1756.es | menú móvil y zoom 400 % verificados en vivo; bundle == Pages | 0 |
 
 Evolución: informe inicial → 62 patrones; tras el lote de correcciones →
 23; iteración final → **0 hallazgos de severidad alta/media**.
@@ -61,5 +62,6 @@ interesarte» ya existía (cap 10 + «ver más», marcada sin comprobar).
 - Slug dentro del texto de una regla (`madrid-abono-transporte-65`) — se
   presenta humanizado; el dato es de Daniel → `visual-para-daniel.md`.
 - Aviso Telegram del updater VPS tras 3 fallos (sin canal sin secretos).
-- Segunda pasada al espejo + run CI e2e-browsers → cerrar filas de
-  TASK_QUEUE cuando estén verdes.
+- Criterio de salida FASE 6: exige **dos** pasadas limpias en horas
+  distintas — ésta es la primera (09/10 ~12:30 UTC). La segunda corre
+  en la próxima sesión (TASK_QUEUE F10-VIS-2).
