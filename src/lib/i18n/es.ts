@@ -12,14 +12,16 @@ export const es = {
 	"check.intro.body":
 		"Responde unas preguntas. Te decimos qué ayudas merece la pena comprobar. Sin registro: nada sale de este dispositivo.",
 	"check.intro.start": "Empezar",
-	"check.intro.lifeEvents": "¿Te toca una de estas? Te destacamos lo relevante.",
+	"check.intro.lifeEvents":
+		"¿Te toca una de estas? Te destacamos lo relevante.",
 	"check.intro.privacy": "Tus respuestas no salen de este dispositivo.",
 	"check.progress": "Pregunta {n} de {total}",
 	"check.progressN": "Pregunta {n}",
 	"check.back": "Atrás",
 	"check.next": "Siguiente",
 	"check.unknown": "No lo sé",
-	"check.unknownAck": "Sin problema. Te diremos qué ayudas dependen de este dato.",
+	"check.unknownAck":
+		"Sin problema. Te diremos qué ayudas dependen de este dato.",
 	"check.decline": "Prefiero no decirlo",
 	"check.why": "¿Por qué te lo preguntamos?",
 	"check.review.title": "Revisa tus respuestas",
@@ -30,9 +32,11 @@ export const es = {
 	"check.error.dependentAge":
 		"Indica la edad de cada persona a tu cargo o marca «Prefiero no decirlo».",
 
-	"q.territory.label": "¿En qué municipio de la Comunidad de Madrid estás empadronado?",
+	"q.territory.label":
+		"¿En qué municipio de la Comunidad de Madrid estás empadronado?",
 	"q.territory.help": "Escribe el nombre del municipio y elígelo de la lista.",
-	"q.territory.why": "Muchas ayudas exigen estar empadronado en un lugar concreto (estar empadronado = figurar en el padrón municipal de ese pueblo o ciudad).",
+	"q.territory.why":
+		"Muchas ayudas exigen estar empadronado en un lugar concreto (estar empadronado = figurar en el padrón municipal de ese pueblo o ciudad).",
 	"q.territory.placeholder": "Escribe el municipio…",
 	"q.territory.outside": "Vivo fuera de la Comunidad de Madrid",
 	"q.territory.ccaa": "Comunidad autónoma",
@@ -53,7 +57,8 @@ export const es = {
 	"q.housing.o.otra": "Otra situación (cedida, con familia, etc.)",
 	"q.residenceSince.label": "¿Desde cuándo estás empadronado ahí?",
 	"q.residenceSince.help": "Mes y año aproximados.",
-	"q.residenceSince.why": "Algunas ayudas piden un tiempo mínimo de empadronamiento.",
+	"q.residenceSince.why":
+		"Algunas ayudas piden un tiempo mínimo de empadronamiento.",
 	"q.age.label": "¿Qué edad tienes?",
 	"q.age.help": "En años cumplidos.",
 	"q.age.why": "Hay ayudas que solo valen para ciertas edades.",
@@ -62,7 +67,8 @@ export const es = {
 	"q.birthYear.why": "Algunas ayudas piden un año de nacimiento concreto.",
 	"q.dependents.label": "¿Cuántas personas tienes a tu cargo?",
 	"q.dependents.help": "Hijas, hijos u otras personas que dependan de ti.",
-	"q.dependents.why": "Las ayudas familiares suelen mirar el número de personas a cargo.",
+	"q.dependents.why":
+		"Las ayudas familiares suelen mirar el número de personas a cargo.",
 	"q.dependents.ages": "Edad de cada persona a tu cargo",
 	"q.dependents.agesHelp":
 		"Algunas ayudas dependen de la edad (por ejemplo, menores de 14). Si prefieres no decirla, lo tendremos en cuenta como un dato que falta, nunca como un «no».",
@@ -91,7 +97,8 @@ export const es = {
 	"q.studentStatus.o.si": "Sí",
 	"q.studentStatus.o.no": "No",
 	"q.income.label": "¿Cuántos ingresos anuales tienes?",
-	"q.income.help": "Elige la franja que mejor encaje; con esto basta para comprobar la mayoría de los límites.",
+	"q.income.help":
+		"Elige la franja que mejor encaje; con esto basta para comprobar la mayoría de los límites.",
 	"q.income.why": "Casi todas las ayudas tienen un tope de ingresos.",
 	"q.income.o.b0": "Hasta 8.400 €",
 	"q.income.o.b1": "De 8.400 € a 16.800 €",
@@ -105,7 +112,8 @@ export const es = {
 	"q.disability.o.no": "No",
 	"q.dependency.label": "¿Tienes reconocida la dependencia?",
 	"q.dependency.help": "La valoración oficial de la Ley de Dependencia.",
-	"q.dependency.why": "Algunas ayudas exigen la dependencia reconocida o en trámite.",
+	"q.dependency.why":
+		"Algunas ayudas exigen la dependencia reconocida o en trámite.",
 	"q.dependency.o.reconocida": "Sí, reconocida",
 	"q.dependency.o.en_tramite": "Está en trámite",
 	"q.dependency.o.no": "No",
@@ -120,19 +128,33 @@ export const es = {
 	"ccaa.other": "Otra comunidad autónoma",
 
 	"results.title": "Tus resultados",
-	"results.summary":
-		"{probables, plural, one {# ayuda probable} other {# ayudas probables}} · {posibles, plural, one {# posible} other {# posibles}} · {missing, plural, one {# dato por responder, que desbloquearía {missingAids} ayuda más} other {# datos por responder, que desbloquearían {missingAids} ayudas más}}",
 	"results.summary.none":
 		"Con tus respuestas no hemos encontrado ayudas de este grupo. Esto no significa que no existan: revisa el catálogo completo.",
+	"results.sentence.encaja":
+		"{n, plural, one {# ayuda encaja contigo} other {# ayudas encajan contigo}}",
+	"results.sentence.podria":
+		"{n, plural, one {# ayuda podría encajarte} other {# ayudas podrían encajarte}}",
+	"results.sentence.noDescartar":
+		"{n, plural, one {# sin descartar, plegada} other {# sin descartar, plegadas}}",
+	"results.sentence.solosi":
+		"{n, plural, one {# solo si se da una situación concreta} other {# solo si se da una situación concreta}}",
+	"results.sentence.faltan":
+		"{n, plural, one {# dato por responder} other {# datos por responder}}",
+	"results.sentence.relacionadas":
+		"{n, plural, one {# relacionada sin comprobar} other {# relacionadas sin comprobar}}",
 	"results.missing.title": "Te faltan datos",
-	"results.missing.body": "Si respondes esto, podremos revisar {n, plural, one {# ayuda más} other {# ayudas más}}.",
-		"tally.probables": "encajan contigo",
-	"tally.posibles": "dependen de un dato",
-	"tally.missing": "por responder",
+	"results.missing.body":
+		"Si respondes esto, podremos revisar {n, plural, one {# ayuda más} other {# ayudas más}}.",
+	"tally.probables": "encajan contigo",
+	"tally.posibles": "podrían encajar",
+	"tally.noDescartar": "sin descartar, plegadas",
+	"tally.solosi": "«solo si…»",
+	"tally.missing": "datos por responder",
 	"tally.level2": "relacionadas, sin comprobar",
 	"results.missing.answer": "Responder",
 	"results.missing.recalc": "Hemos recalculado tus resultados.",
-	"results.missing.incomePrecision": "Para alguna ayuda falta saber si tus ingresos anuales pasan de {x}.",
+	"results.missing.incomePrecision":
+		"Para alguna ayuda falta saber si tus ingresos anuales pasan de {x}.",
 	"results.missing.incomeGe": "{x} o más al año",
 	"results.missing.incomeLt": "Menos de {x} al año",
 	"results.level2.title": "También podrían interesarte",
@@ -140,10 +162,16 @@ export const es = {
 		"Relacionada con tu situación. No hemos comprobado sus requisitos: revisa la ficha.",
 	"results.group.encaja": "Encajan contigo",
 	"results.group.soloSi": "Solo si se da lo que define la ayuda",
-	"results.group.soloSi.note": "Estas ayudas solo valen para una situación concreta que no podemos comprobar con tus respuestas. Si es tu caso, te interesan.",
-	"results.group.posible": "Podrían encajar — falta confirmar algún dato",
-	"results.group.noDescartar": "No se pueden descartar — faltan varios datos",
-	"results.group.insuficiente": "No tenemos datos suficientes",
+	"results.group.soloSi.note":
+		"Estas ayudas solo valen para una situación concreta que no podemos comprobar con tus respuestas. Si es tu caso, te interesan.",
+	"results.group.soloSi.more": "Ver las {n} restantes",
+	"results.group.posible": "Podría encajar",
+	"results.group.posible.note":
+		"Con lo que has contado podría ser; queda algún dato por comprobar.",
+	"results.group.posible.more":
+		"Otras {n} que no podemos descartar — faltan varios datos",
+	"results.group.faltan.aids":
+		"Estas ayudas dependen de lo que falta por responder:",
 	"results.noaplica.title": "No parece aplicarte ({n})",
 	"results.noaplica.reason":
 		"No parece aplicarte porque no cumples: {reqs}. Si crees que sí cumples, consulta la fuente oficial.",
@@ -151,8 +179,14 @@ export const es = {
 	"results.noaplica.checkSource":
 		"Si crees que sí cumples, consulta la fuente oficial.",
 	"results.closed.toggle": "Mostrar ayudas cerradas",
-		"results.plan.total": "Podrías pedir hasta {max} € en {n, plural, one {# ayuda que encaja o en la que te falta un dato} other {# ayudas que encajan o en las que te falta un dato}}",
+	"results.plan.total":
+		"Podrías pedir hasta {max} € en {n, plural, one {# ayuda que encaja o podría encajar} other {# ayudas que encajan o podrían encajar}}",
+	"results.plan.noAmount":
+		"Estas ayudas no publican una cuantía única: el importe se calcula en cada solicitud. Consulta cada ficha.",
+	"results.plan.empty":
+		"De momento ninguna ayuda encaja o podría encajar con lo que has contado. Revisa «Solo si…» o responde los datos que faltan.",
 	"results.plan.docs": "Con estos documentos cubres las ayudas:",
+	"results.plan.docs.more": "Ver los {n} documentos restantes",
 	"results.plan.ics": "Añadir plazos a mi calendario (.ics)",
 	"results.actions.copy": "Copiar resumen",
 	"results.actions.copyDone": "Resumen copiado.",
@@ -201,6 +235,9 @@ export const es = {
 	"explorer.badge.l1": "Comprobada requisito a requisito",
 
 	"card.youGet": "Puedes recibir",
+	"card.meets": "Lo que ya cumples",
+	"card.toCheck": "Lo que falta por comprobar",
+	"card.allReqs": "Ver todos los requisitos ({n})",
 	"card.deadline": "Plazo",
 	"card.docs": "Necesitarás",
 	"card.effort": "Tiempo aproximado",
@@ -231,7 +268,10 @@ export const es = {
 
 export type I18nKey = keyof typeof es;
 
-export function t(key: I18nKey, params?: Record<string, string | number>): string {
+export function t(
+	key: I18nKey,
+	params?: Record<string, string | number>,
+): string {
 	let s: string = es[key];
 	if (params) {
 		for (const [k, v] of Object.entries(params)) {

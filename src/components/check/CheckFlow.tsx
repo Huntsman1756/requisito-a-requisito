@@ -173,7 +173,17 @@ export function CheckFlow() {
 				savedAt: new Date().toISOString(),
 			});
 		}
-		setAnnounce(t("check.progress", { n: (nextStep ?? step) + 1, total: visibleQuestions.length }));
+		// F10-RES-3 §4: el anuncio es el del nuevo paso, nunca «Pregunta N
+		// de M» al llegar a resultados (antes sonaba «Pregunta 10 de 10»).
+		setAnnounce(
+			p === "questions"
+				? t("check.progressN", { n: (nextStep ?? step) + 1 })
+				: p === "review"
+					? t("check.review.title")
+					: p === "results"
+						? t("results.title")
+						: "",
+		);
 	};
 
 	const onAnswer = (field: string, a: Answer) => {

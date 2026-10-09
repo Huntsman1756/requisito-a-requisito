@@ -293,8 +293,8 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .cite summary { cursor: pointer; color: var(--seal); font-weight: 500; font-size: .9rem; display: inline-flex; align-items: center; min-height: 44px }
 .cite-meta { font: 400 .8rem var(--f-mono); color: var(--ink-2); margin-top: .3rem; overflow-wrap: anywhere }
 .cite blockquote { margin: .5rem 0 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .95rem; overflow-wrap: break-word }
-.card-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .8rem; padding-bottom: 1.1rem }
-.card-foot { border-top: 1px solid var(--rule); padding-block: .8rem; margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font: 400 .82rem var(--f-mono); color: var(--ink-2) }
+.card-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .8rem; padding-bottom: .3rem }
+.card-foot { border-top: 1px solid var(--rule); padding-block: .55rem; margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font: 400 .82rem var(--f-mono); color: var(--ink-2) }
 .nocumple { opacity: .75 }
 /* F10-RES: grupos de resultados — separación visible entre «encaja»,
  * «posible con pocas incógnitas», «no se puede descartar» (plegada) y
@@ -307,6 +307,36 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .results-closed[open] > summary::before { content: "▾" }
 .results-closed .results-group { margin: 0 }
 .results-closed .results-list { margin-top: 1rem }
+
+/* F10-RES-3: resumen en lenguaje claro dentro del role=status, y listas
+ * compactas de una línea (solo-si, no-descartar, faltan-datos). */
+.results-sentence { flex-basis: 100%; margin: .5rem 0 0; color: var(--ink-2); font-size: 1rem; max-width: 44rem }
+.row-list { list-style: none; padding: 0; margin: .6rem 0 0 }
+.row-list li { padding: .5rem 0; border-bottom: 1px solid var(--rule) }
+.row-list li:last-child { border-bottom: 0 }
+/* «una línea por ayuda»: título enlazado a la ficha + condición como
+ * texto corrido, recortado con elipsis — la ficha lleva el detalle. */
+.row-line { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-2) }
+.row-line a { font-weight: 700 }
+.results-closed--inline { margin-top: .2rem; border-top: 0; padding-top: 0 }
+.results-closed--inline > summary { color: var(--seal); font-weight: 600; min-height: 44px; align-items: center }
+/* Mini-listas de la tarjeta resumida: ✓/⚠/«?» inline, sin cita
+ * desplegable (el detalle completo está plegado debajo). */
+.req-mini { margin: .15rem 0 .4rem }
+/* Una línea por requisito, con elipsis: el texto íntegro está en
+ * «Ver todos los requisitos (N)», plegado justo debajo. */
+.req-mini .req { padding-block: .12rem; border-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.req-more { margin-top: .3rem; border-top: 1px solid var(--rule); padding-top: .4rem }
+.req-more > summary { min-height: 44px; display: inline-flex; align-items: center; color: var(--seal); font-weight: 700; list-style: none }
+.req-more > summary::-webkit-details-marker { display: none }
+.req-more > summary::before { content: "▸"; margin-right: .5rem; color: var(--ink-2) }
+.req-more[open] > summary::before { content: "▾" }
+.req-more .aid-meta { margin-top: .8rem }
+.faltan-block { margin-top: .6rem }
+/* Recorte a 2 líneas (el organismo gestor y el pie «comprobada…» son
+ * largos; el enlace a la sede/fuente sigue entero). */
+.clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.card-ficha { font-weight: 600; align-self: center; flex: none }
 
 /* matriz requisito a requisito: la firma */
 .matrix-toggle { margin-top: 1.4rem }
@@ -390,8 +420,19 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
  * etiqueta condensada (los h3 salían con el tamaño del navegador). */
 .aid-card > :first-child { padding-top: 1.1rem }
 .aid-card > :last-child { padding-bottom: 1.1rem }
-.aid-card h3 { font: 600 .8rem/1.3 var(--f-label); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin: 1.1rem 0 .4rem }
+.aid-card h3 { font: 600 .8rem/1.3 var(--f-label); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin: .55rem 0 .1rem }
 .aid-card .review-state { margin-top: .25rem }
+
+/* Meta de la tarjeta resumida (F10-RES-3 §1): líneas «Etiqueta: valor»
+ * en vez de la rejilla dt/dd — viene detrás de `.aid-meta > div` a
+ * propósito para ganar a su `display: contents`. */
+.aid-meta--compact, .aid-meta--compact > div { display: block }
+.aid-meta--compact { margin: .6rem 0 .1rem; padding-top: .5rem }
+.aid-meta--compact > div { padding-block: .18rem }
+.aid-meta--compact dt { display: inline }
+.aid-meta--compact dt::after { content: ": " }
+.aid-meta--compact dd { display: inline }
+.aid-meta--compact > div.clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
 /* cadena de verificación de /como-verificamos/ */
 .verify-chain { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.3rem }
 .verify-step { border-top: 2px solid var(--ink); padding-top: .9rem }
