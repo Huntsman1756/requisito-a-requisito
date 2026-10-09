@@ -77,6 +77,15 @@ main * + h3, main * + h4 { margin-top: 1.3rem }
  * cualquier clase de componente siga ganando. */
 main :where(ul:not([class]), ol:not([class])) { padding-left: 1.35rem; margin: .5rem 0 1rem }
 main :where(ul:not([class]), ol:not([class])) > li { margin-bottom: .35rem }
+/* Marcador propio (guión del color institucional) en vez del disco del
+ * navegador: docs/16 no usa viñetas de serie en ninguna parte. En las ol
+ * el número es contenido — solo se retoca el color del marcador. */
+main :where(ul:not([class])) { list-style: none }
+/* Las listas plegadas en <details> llevan ya su propio marcador por
+ * elemento (los ticks ✓/?/✗ de los requisitos): sin guión ni disco. */
+main :where(ul:not([class])):not(details *) > li { position: relative; padding-left: 1rem }
+main :where(ul:not([class])):not(details *) > li::before { content: "—"; position: absolute; left: 0; color: var(--seal); font-weight: 700 }
+main :where(ol:not([class])) > li::marker { color: var(--seal); font-weight: 700 }
 main :where(blockquote:not([class])) { margin: .6rem 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .98rem }
 code { font: 400 .94em var(--f-mono); background: var(--tint); padding: .05em .3em; border-radius: 3px; overflow-wrap: anywhere }
 summary { cursor: pointer }

@@ -112,6 +112,11 @@
 			"texto": "44 personas golden, 47 expectativas, 0 diferencias (local y bundle desplegado)",
 			"evidencia": "cifras.json goldenPersonas=44 goldenExpectations=47; eligibility-goldens.ts 0 diffs; fiabilidad.md §4",
 			"ok": true
+		},
+		{
+			"texto": "8 ayudas tienen requisitos que el cuestionario aún no comprueba (violencia de género, embarazo, dependencia de un familiar, viudedad…); se muestran como no descartables",
+			"evidencia": "evidence/2026-10-09-F10/resultados-para-daniel.md (R1–R8); decisión de no añadir preguntas/hojas antes del 16/10 en ADR-054",
+			"ok": true
 		}
 	]
 }

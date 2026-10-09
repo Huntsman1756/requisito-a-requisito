@@ -357,6 +357,19 @@ async function audit(page: Page): Promise<RawFinding[]> {
 						severity: "alta",
 						detail: `${el.tagName.toLowerCase()} con sangría UA ${s.paddingInlineStart} — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
 					});
+				// i.1b) marcador de serie del navegador: en «Documentación» y
+				// «Fuentes oficiales» de la ficha aparecía el disco/círculo
+				// hueco por defecto. El diseño usa guión propio o sin
+				// marcador; disc/circle/square es la UA sin tocar.
+				if (
+					el.tagName === "UL" &&
+					["disc", "circle", "square"].includes(s.listStyleType)
+				)
+					out.push({
+						type: "marcador-navegador",
+						severity: "media",
+						detail: `ul con list-style ${s.listStyleType} — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
+					});
 			}
 			// i.2) dd/blockquote con la sangría del navegador
 			for (const el of [...main.querySelectorAll("dd, blockquote")]) {

@@ -470,3 +470,18 @@ ni Referer (privacidad, regla 4.6). Como las páginas leen solo el bundle
 (ADR-050/G12, fuente única), el espejo publica exactamente el mismo
 `bundleDigest` que Pages — incluido el paso a strict del 14/10 sin
 intervención.
+
+## ADR-054 — Los 8 requisitos no comprobables NO se cambian antes del 16/10
+2026-10-09 · aceptada (decisión de Daniel, registrada por el agente) ·
+La medición por ruta real de F10-RES (`resultados-ruta-real.md`) listó 8
+reglas cuyo requisito definitorio no se puede comprobar con las 10
+preguntas actuales (violencia de género, gestación/parto reciente,
+dependencia de un familiar, viudedad, personas a cargo blandas…),
+documentadas una a una con cita en
+`evidence/2026-10-09-F10/resultados-para-daniel.md`. **Daniel decidió no
+tocarlas antes del cierre**: ni preguntas nuevas (son datos sensibles,
+candidatas a `declined`), ni hojas de revisión nuevas, ni cambio de duro/
+blando — todo eso queda **diferido a después de la candidatura**. Hoy esas
+ayudas salen como «no se pueden descartar», plegadas y con el motivo
+explicado, coherente con UNKNOWN ≠ NO (regla 4.3). Reabrir tras el 16/10
+con una ola dedicada si Daniel lo decide.

@@ -195,6 +195,11 @@ nunca porcentajes con n<10.
 - Extensible por vertical (vivienda, empleo, dependencia) y por territorio:
   las olas 7–8 ya incorporan programas de cuatro ayuntamientos (Madrid,
   Móstoles, Leganés y Fuenlabrada).
+- Límite honesto medido: 8 ayudas tienen requisitos que el cuestionario aún
+  no comprueba (violencia de género, embarazo, dependencia de un familiar,
+  viudedad…); se muestran como no descartables, plegadas y explicadas —
+  UNKNOWN ≠ NO (lista en `evidence/2026-10-09-F10/resultados-para-daniel.md`,
+  ADR-054).
 
 ## 7. Garantías
 
