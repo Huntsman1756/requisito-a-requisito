@@ -134,7 +134,12 @@ Para leer un donante sin depender de su working tree:
 14. **Push y CI:** los workflows que hacen commit en `main` (frescura) integran
     antes de subir (`git pull --rebase` + reintento). Un agente que vea un job
     del CI en rojo lo investiga en esa misma sesión y no lo da por bueno porque
-    el deploy esté en verde.
+    el deploy esté en verde. **Un `git push` nunca va en la misma orden que una
+    tubería** (`git pull --rebase | tail -1 && git push` lanza el push aunque el
+    pull falle, porque `&&` mira el código de `tail`): primero `git pull --rebase`
+    solo, comprobar que sale con código 0, y `git push` en otra orden. Nunca push
+    forzado (`--force`, `-f`, `+rama`). En Claude Code lo bloquea
+    `.claude/hooks/push-guard.js`; los demás agentes lo cumplen por esta regla.
 
 ## 5. Cerrar tarea y fase
 
