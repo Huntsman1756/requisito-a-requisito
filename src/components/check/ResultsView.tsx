@@ -738,7 +738,9 @@ function ResultCard({
 				</>
 			)}
 
-			{compact && (
+			{/* compact: la variante no_cumple ya lleva su enlace a ficha en el
+			    bloque de requisitos fallados; no lo dupliquemos (strict). */}
+			{compact && ev.verdict !== "no_cumple" && (
 				<p className="card-actions">
 					<Link className="btn-quiet" href={`/ayudas/${ev.benefitSlug}`}>
 						{t("card.fullDetail")}
