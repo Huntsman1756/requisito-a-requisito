@@ -324,6 +324,19 @@ async function audit(page: Page): Promise<RawFinding[]> {
 		// markup: funcionan aunque el elemento no lleve clase.
 		const main = document.querySelector("main");
 		if (main) {
+			// i.00) las fuentes del diseño cargaron de verdad. El 09/10 el
+			// @font-face inline salía con comillas corruptas y NINGÚN check
+			// lo vio: preloads 200 pero document.fonts vacío y todo el sitio
+			// con la fuente del sistema.
+			const cargada = [...document.fonts].some(
+				(f) => f.family.includes("Atkinson") && f.status === "loaded",
+			);
+			if (!cargada)
+				out.push({
+					type: "fuente-sin-cargar",
+					severity: "alta",
+					detail: `document.fonts sin Atkinson cargada (${document.fonts.size} caras registradas)`,
+				});
 			// i.0) página vacía: un <main> sin h1 ni apenas texto pasaba el
 			// audit sin el menor hallazgo (el 404 daba cuerpo vacío).
 			if (!main.querySelector("h1") && leaves.length < 5)

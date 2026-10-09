@@ -30,8 +30,11 @@ const FONTS_CSS = [
 	'"IBM Plex Mono",600,"ibm-plex-mono-600.woff2"',
 ]
 	.map((s) => {
+		// family y file van entrecomillados en los datos; el archivo NO debe
+		// llevar las comillas dentro de url("…") — si no, el src queda
+		// url("/fonts/"ahn-r.woff2"") y el @font-face entero se descarta.
 		const [family, weight, file] = s.split(",");
-		return `@font-face{font-family:${family};font-weight:${weight};font-display:swap;src:url("${BP}/fonts/${file}") format("woff2")}`;
+		return `@font-face{font-family:${family};font-weight:${weight};font-display:swap;src:url("${BP}/fonts/${file.replaceAll('"', "")}") format("woff2")}`;
 	})
 	.join("\n");
 
