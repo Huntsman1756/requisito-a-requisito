@@ -417,6 +417,10 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			// i.6) color de texto fuera de los tokens de :root (docs/16 §2).
 			// Se resuelven todos los --* a su rgb() y se admite además el
 			// blanco/#0E141C de los botones primarios.
+			// Resolver cada token en :root directamente: en algunos contextos
+			// (emulación móvil) `var()` en un elemento fantasma no se resolvía
+			// y todo el texto saltaba como fuera de paleta — falso positivo.
+			const rootCs = getComputedStyle(document.documentElement);
 			const probe = document.createElement("i");
 			probe.style.display = "none";
 			document.body.appendChild(probe);
@@ -425,7 +429,9 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				"--ink", "--ink-2", "--seal", "--ok", "--doubt", "--no", "--na",
 				"--lvl-estado", "--lvl-cm", "--lvl-ayto", "--sheet",
 			]) {
-				probe.style.color = `var(${prop})`;
+				const raw = rootCs.getPropertyValue(prop).trim();
+				if (!raw) continue;
+				probe.style.color = raw;
 				allowed.add(getComputedStyle(probe).color);
 			}
 			probe.remove();
@@ -496,10 +502,16 @@ function record(
 
 async function shot(page: Page, name: string) {
 	const file = `${name.replace(/[^a-z0-9]+/gi, "_").slice(0, 120)}.png`;
-	await page.screenshot({
-		path: join(FINDINGS_DIR, file),
-		fullPage: true,
-	});
+	try {
+		await page.screenshot({
+			path: join(FINDINGS_DIR, file),
+			fullPage: true,
+		});
+	} catch {
+		// Chromium no admite capturas > 32767 px: en páginas de resultados muy
+		// largas el hallazgo se documenta igualmente; la captura es del viewport.
+		await page.screenshot({ path: join(FINDINGS_DIR, file) });
+	}
 	return file;
 }
 
@@ -517,6 +529,9 @@ async function auditAt(
 	)) as string;
 	for (const w of widths) {
 		await page.setViewportSize({ width: w, height: 844 });
+		// Las métricas de texto cambian al llegar la webfont: sin esta espera
+		// el detector ve solapes de ~2 px que no existen una vez cargada.
+		await page.evaluate(() => document.fonts.ready);
 		await page.waitForTimeout(120);
 		const f = await audit(page);
 		record(name, w, theme, f);

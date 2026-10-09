@@ -322,6 +322,7 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 /* plan de acción */
 .action-plan, .plan { background: var(--sheet); border: 1px solid var(--rule); border-top: 2px solid var(--ink); border-radius: var(--r); padding: 1rem 1.2rem 1.2rem; margin: 1.5rem 0 }
 .plan-total, .amount { font: 800 2.1rem/1.05 var(--f-display); font-variant-numeric: tabular-nums; margin: .4rem 0 }
+.action-plan > h2 + .plan-total { margin-top: .65rem } /* h2 compacto + trazo de la «p»: aire mínimo */
 .plan-docs { color: var(--ink-2) }
 
 /* nivel 2 */
