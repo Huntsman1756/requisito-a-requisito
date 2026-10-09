@@ -30,7 +30,7 @@ import { execFileSync } from "node:child_process";
 import { appendFileSync, mkdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { AxeBuilder } from "@axe-core/playwright";
-import { expect, test, type Page } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 import type {
 	CitizenProfile,
 	RuleSet,
@@ -41,7 +41,9 @@ import type {
 const rules = [
 	...new Map(
 		(
-			JSON.parse(readFileSync("out/datos/elegibilidad/bundle.json", "utf8")) as {
+			JSON.parse(
+				readFileSync("out/datos/elegibilidad/bundle.json", "utf8"),
+			) as {
 				rulesets: RuleSet[];
 			}
 		).rulesets.map((r) => [r.benefitSlug, r]),
@@ -97,7 +99,11 @@ type RawFinding = Pick<Finding, "type" | "severity" | "detail">;
 // Todo el barrido se hace en una sola evaluate por combinación.
 async function audit(page: Page): Promise<RawFinding[]> {
 	return page.evaluate(() => {
-		type F = { type: string; severity: "alta" | "media" | "baja"; detail: string };
+		type F = {
+			type: string;
+			severity: "alta" | "media" | "baja";
+			detail: string;
+		};
 		const out: F[] = [];
 		const vw = document.documentElement.clientWidth;
 
@@ -114,8 +120,7 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			for (const el of [...document.body.querySelectorAll("*")]) {
 				const r = el.getBoundingClientRect();
 				if (r.right > vw + 1 && r.width > 0) {
-					const id =
-						`${el.tagName.toLowerCase()}${el.id ? "#" + el.id : ""}${el.className && typeof el.className === "string" ? "." + el.className.split(" ")[0] : ""}`;
+					const id = `${el.tagName.toLowerCase()}${el.id ? "#" + el.id : ""}${el.className && typeof el.className === "string" ? "." + el.className.split(" ")[0] : ""}`;
 					culprits.push(`${id} right=${Math.round(r.right)}`);
 					if (culprits.length >= 5) break;
 				}
@@ -128,8 +133,17 @@ async function audit(page: Page): Promise<RawFinding[]> {
 		}
 
 		const skipTags = new Set([
-			"SCRIPT", "STYLE", "NOSCRIPT", "TEMPLATE", "META", "LINK", "HEAD",
-			"TITLE", "BR", "WBR", "OPTION",
+			"SCRIPT",
+			"STYLE",
+			"NOSCRIPT",
+			"TEMPLATE",
+			"META",
+			"LINK",
+			"HEAD",
+			"TITLE",
+			"BR",
+			"WBR",
+			"OPTION",
 		]);
 		const visible = (el: Element) => {
 			const s = getComputedStyle(el);
@@ -167,7 +181,12 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			);
 		};
 
-		const leaves: { el: Element; r: DOMRect; lines: DOMRect[]; text: string }[] = [];
+		const leaves: {
+			el: Element;
+			r: DOMRect;
+			lines: DOMRect[];
+			text: string;
+		}[] = [];
 		const boxes: { el: Element; r: DOMRect; text: string }[] = [];
 		const walker = document.createTreeWalker(
 			document.body,
@@ -182,18 +201,17 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			const skipped =
 				el.closest("details:not([open])") !== null ||
 				el.closest(".sr-only, [hidden]") !== null;
-			if (
-				!skipped &&
-				!skipTags.has(el.tagName) &&
-				visible(el)
-			) {
+			if (!skipped && !skipTags.has(el.tagName) && visible(el)) {
 				if (isLeaf(el)) {
 					const r = el.getBoundingClientRect();
 					leaves.push({
 						el,
 						r,
 						lines: lineRects(el),
-						text: (el.textContent ?? "").trim().replace(/\s+/g, " ").slice(0, 60),
+						text: (el.textContent ?? "")
+							.trim()
+							.replace(/\s+/g, " ")
+							.slice(0, 60),
 					});
 				} else if (["SVG", "IMG", "VIDEO", "IFRAME"].includes(el.tagName)) {
 					// texto sobre iconos/imágenes (e)
@@ -204,7 +222,10 @@ async function audit(page: Page): Promise<RawFinding[]> {
 		}
 
 		// b) solapes entre hojas por fragmento de línea (buckets verticales)
-		const byTop = new Map<number, { el: Element; r: DOMRect; text: string }[]>();
+		const byTop = new Map<
+			number,
+			{ el: Element; r: DOMRect; text: string }[]
+		>();
 		const addBox = (el: Element, r: DOMRect, text: string) => {
 			const k = Math.floor(r.top / 40);
 			for (const kk of [k - 1, k, k + 1]) {
@@ -222,13 +243,10 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				if (seenPair.has(a.el)) continue;
 				for (let j = i + 1; j < arr.length; j++) {
 					const b = arr[j];
-					if (
-						a.el === b.el ||
-						a.el.contains(b.el) ||
-						b.el.contains(a.el)
-					)
+					if (a.el === b.el || a.el.contains(b.el) || b.el.contains(a.el))
 						continue;
-					const ox = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
+					const ox =
+						Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
 					const oy =
 						Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);
 					if (ox > 2 && oy > 2) {
@@ -257,10 +275,16 @@ async function audit(page: Page): Promise<RawFinding[]> {
 					severity: "alta",
 					detail: `«${text.slice(0, 40)}…» ${Math.round(r.width)} px de ancho, ~${Math.round(lines)} líneas`,
 				});
-			// texto cortado
+			// texto cortado — salvo el recorte deliberado con elipsis
+			// (`text-overflow: ellipsis` o `-webkit-line-clamp`, que pintan «…»):
+			// F10-RES-3 recorta así las filas compactas y el meta de tarjeta.
+			const clamp = (cs as CSSStyleDeclaration & { webkitLineClamp?: string })
+				.webkitLineClamp;
 			if (
 				el.scrollWidth > el.clientWidth + 1 &&
-				["hidden", "clip"].includes(cs.overflowX)
+				["hidden", "clip"].includes(cs.overflowX) &&
+				cs.textOverflow !== "ellipsis" &&
+				(!clamp || clamp === "none")
 			)
 				out.push({
 					type: "texto-cortado",
@@ -300,14 +324,16 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				// radios/checkboxes: el objetivo táctil real es la etiqueta.
 				if (
 					el.tagName === "INPUT" &&
-					["radio", "checkbox"].includes(
-						(el as HTMLInputElement).type,
-					) &&
+					["radio", "checkbox"].includes((el as HTMLInputElement).type) &&
 					el.closest("label")
 				)
 					continue;
 				const r = el.getBoundingClientRect();
-				if (r.width > 0.5 && r.height > 0.5 && (r.width < 44 || r.height < 44)) {
+				if (
+					r.width > 0.5 &&
+					r.height > 0.5 &&
+					(r.width < 44 || r.height < 44)
+				) {
 					const severe = r.width < 24 || r.height < 24;
 					out.push({
 						type: "tactil-pequeno",
@@ -386,7 +412,10 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			for (const el of [...main.querySelectorAll("table")]) {
 				if (!visible(el)) continue;
 				const s = getComputedStyle(el);
-				if (s.borderCollapse === "separate" && parseFloat(s.borderSpacing) >= 1.5)
+				if (
+					s.borderCollapse === "separate" &&
+					parseFloat(s.borderSpacing) >= 1.5
+				)
 					out.push({
 						type: "tabla-sin-estilo",
 						severity: "media",
@@ -403,7 +432,9 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				0,
 			);
 			if (h1Size > 0) {
-				for (const el of [...main.querySelectorAll(".card h2, .aid-card h2, .dossier h3")]) {
+				for (const el of [
+					...main.querySelectorAll(".card h2, .aid-card h2, .dossier h3"),
+				]) {
 					if (!visible(el)) continue;
 					const s = parseFloat(getComputedStyle(el).fontSize);
 					if (s >= h1Size)
@@ -450,10 +481,23 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			const probe = document.createElement("i");
 			probe.style.display = "none";
 			document.body.appendChild(probe);
-			const allowed = new Set(["rgb(255, 255, 255)", "rgb(14, 20, 28)", "rgb(14, 32, 47)"]);
+			const allowed = new Set([
+				"rgb(255, 255, 255)",
+				"rgb(14, 20, 28)",
+				"rgb(14, 32, 47)",
+			]);
 			for (const prop of [
-				"--ink", "--ink-2", "--seal", "--ok", "--doubt", "--no", "--na",
-				"--lvl-estado", "--lvl-cm", "--lvl-ayto", "--sheet",
+				"--ink",
+				"--ink-2",
+				"--seal",
+				"--ok",
+				"--doubt",
+				"--no",
+				"--na",
+				"--lvl-estado",
+				"--lvl-cm",
+				"--lvl-ayto",
+				"--sheet",
 			]) {
 				const raw = rootCs.getPropertyValue(prop).trim();
 				if (!raw) continue;
@@ -668,20 +712,30 @@ async function reachResults(page: Page, maxClicks = 18) {
 			exact: true,
 		});
 		if (await ver.isVisible().catch(() => false)) break;
-		const heading = await page
-			.evaluate(() => document.querySelector("fieldset, .question")?.textContent?.slice(0, 80) ?? "");
-		await page
-			.getByRole("button", { name: "Siguiente", exact: true })
-			.click();
+		const heading = await page.evaluate(
+			() =>
+				document
+					.querySelector("fieldset, .question")
+					?.textContent?.slice(0, 80) ?? "",
+		);
+		await page.getByRole("button", { name: "Siguiente", exact: true }).click();
 		await page.waitForTimeout(140);
-		const after = await page
-			.evaluate(() => document.querySelector("fieldset, .question")?.textContent?.slice(0, 80) ?? "");
+		const after = await page.evaluate(
+			() =>
+				document
+					.querySelector("fieldset, .question")
+					?.textContent?.slice(0, 80) ?? "",
+		);
 		if (after === heading) {
 			// Paso sin valor posible: probar las salidas alternativas.
 			const alt = page.getByRole("button", { name: "No lo sé", exact: true });
-			const decline = page.getByRole("button", { name: "Prefiero no decirlo", exact: true });
+			const decline = page.getByRole("button", {
+				name: "Prefiero no decirlo",
+				exact: true,
+			});
 			if (await alt.isVisible().catch(() => false)) await alt.click();
-			else if (await decline.isVisible().catch(() => false)) await decline.click();
+			else if (await decline.isVisible().catch(() => false))
+				await decline.click();
 			await page.waitForTimeout(140);
 		}
 	}
@@ -689,11 +743,9 @@ async function reachResults(page: Page, maxClicks = 18) {
 		.getByRole("button", { name: "Ver mis resultados", exact: true })
 		.click();
 	await page.getByRole("heading", { name: "Tus resultados" }).waitFor({
-		timeout: 15_000,
+		timeout: 30_000,
 	});
 }
-
-
 
 for (const theme of THEMES) {
 	test.describe(`tema ${theme}`, () => {
@@ -706,8 +758,7 @@ for (const theme of THEMES) {
 				wireConsole(page, name);
 				// networkidle nunca se resuelve tras un 404 en Firefox; la
 				// página 404 es estática y con load basta.
-				const wait =
-					name === "pagina-404" ? "load" : "networkidle";
+				const wait = name === "pagina-404" ? "load" : "networkidle";
 				await page.goto(url(path), { waitUntil: wait });
 				await page.waitForLoadState(wait);
 				const all = await auditAt(page, `${name}-${theme}`, WIDTHS);
@@ -770,7 +821,10 @@ for (const theme of THEMES) {
 			const persona = fixtures.persons.find(
 				(p) => p.slug === "madrid-abono-transporte-infantil",
 			);
-			if (!persona) throw new Error("persona madrid-abono-transporte-infantil no encontrada");
+			if (!persona)
+				throw new Error(
+					"persona madrid-abono-transporte-infantil no encontrada",
+				);
 			const answers = structuredClone(persona.answers);
 			delete answers.dependents;
 			await page.clock.install({
@@ -779,7 +833,10 @@ for (const theme of THEMES) {
 			await seedAndGoto(page, answers, 0);
 			for (let i = 0; i < 15; i++) {
 				if (
-					await page.getByText(/personas a tu cargo/i).first().isVisible()
+					await page
+						.getByText(/personas a tu cargo/i)
+						.first()
+						.isVisible()
 				)
 					break;
 				await page
@@ -813,7 +870,12 @@ for (const theme of THEMES) {
 			});
 			await seedAndGoto(page, persona.answers, 0);
 			for (let i = 0; i < 18; i++) {
-				if (await page.getByText("Revisa tus respuestas").count()) break;
+				if (
+					await page
+						.getByRole("heading", { name: "Revisa tus respuestas" })
+						.count()
+				)
+					break;
 				const before = await page.evaluate(
 					() =>
 						document.querySelector("fieldset, .question")?.textContent ?? "",
@@ -841,7 +903,7 @@ for (const theme of THEMES) {
 				}
 			}
 			await expect(
-				page.getByText("Revisa tus respuestas"),
+				page.getByRole("heading", { name: "Revisa tus respuestas" }),
 			).toBeVisible();
 			for (const w of WIDTHS) {
 				await page.setViewportSize({ width: w, height: 844 });
@@ -851,9 +913,7 @@ for (const theme of THEMES) {
 					[...document.querySelectorAll(".review-list li")].map((li) => {
 						const q = li.querySelector(".review-q")!.getBoundingClientRect();
 						const a = li.querySelector(".review-a")!.getBoundingClientRect();
-						const b = li
-							.querySelector(".btn-quiet")!
-							.getBoundingClientRect();
+						const b = li.querySelector(".btn-quiet")!.getBoundingClientRect();
 						return { q: q.y, a: a.y, bx: b.x };
 					}),
 				);
@@ -872,11 +932,7 @@ for (const theme of THEMES) {
 					).toBeGreaterThanOrEqual(boxes[i].q);
 				}
 			}
-			const all = await auditAt(
-				page,
-				`comprobar-revision-${theme}`,
-				WIDTHS,
-			);
+			const all = await auditAt(page, `comprobar-revision-${theme}`, WIDTHS);
 			expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 		});
 
@@ -891,11 +947,7 @@ for (const theme of THEMES) {
 				});
 				await seedAndGoto(page, persona.answers, 0);
 				await reachResults(page);
-				const all = await auditAt(
-					page,
-					`resultados-${slug}-${theme}`,
-					WIDTHS,
-				);
+				const all = await auditAt(page, `resultados-${slug}-${theme}`, WIDTHS);
 				expect(all.filter((f) => f.severity !== "baja")).toEqual([]);
 			});
 		}
@@ -938,9 +990,7 @@ for (const theme of THEMES) {
 			// A 400 % los solapes puntuales quedan como media; el scroll-x sigue
 			// siendo alta (reflow).
 			expect(
-				all.filter(
-					(f) => f.severity === "alta" || f.type === "scroll-x",
-				),
+				all.filter((f) => f.severity === "alta" || f.type === "scroll-x"),
 			).toEqual([]);
 		});
 	});

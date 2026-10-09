@@ -15,7 +15,7 @@
  * el mismo spec corre en local (out/) y en producción
  * (…/requisito-a-requisito).
  */
-import { expect, test, type Page } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
 const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
 const url = (p: string) => `${BASE}${p}`;
@@ -59,7 +59,10 @@ async function completarAsistente(page: Page) {
 	await page.getByLabel("No", { exact: true }).check();
 	await page.getByRole("button", { name: "Siguiente" }).click();
 	// vivienda
-	await page.getByLabel(/propiedad|situaci.n/i).first().check();
+	await page
+		.getByLabel(/propiedad|situaci.n/i)
+		.first()
+		.check();
 	await page.getByRole("button", { name: "Siguiente" }).click();
 	await expect(
 		page.getByRole("heading", { name: "Revisa tus respuestas" }),
@@ -109,10 +112,19 @@ test("fiabilidad: la etiqueta de revisión de cada tarjeta refleja el estado rea
 		await page.request.get(url("/datos/elegibilidad/bundle.json"))
 	).json();
 	const pendientes = new Set(
-		(bundle.rulesets as { benefitSlug: string; humanReview?: { status?: string } }[])
+		(
+			bundle.rulesets as {
+				benefitSlug: string;
+				humanReview?: { status?: string };
+			}[]
+		)
 			.filter((r) => r.humanReview?.status !== "approved")
 			.map((r) => r.benefitSlug),
 	);
+	// F10-RES-3: puede no haber tarjetas abiertas (todo en filas
+	// compactas) — se abre «No parece aplicarte» para tener tarjetas.
+	const noaplica = page.getByRole("button", { name: /No parece aplicarte/ });
+	if (await noaplica.isVisible()) await noaplica.click();
 	// Solo las tarjetas con motor llevan .review-state (las «no evaluable» no).
 	const states = page.locator(".aid-card:has(.review-state)");
 	const n = await states.count();
@@ -151,7 +163,9 @@ test("fiabilidad: privacidad — el perfil no sale del navegador", async ({
 	});
 	await completarAsistente(page);
 	// 1. Ninguna petición sale del propio sitio (ni telemetría ni terceros).
-	const externos = seen.filter((r) => !r.url.startsWith(BASE || "http://localhost"));
+	const externos = seen.filter(
+		(r) => !r.url.startsWith(BASE || "http://localhost"),
+	);
 	// en local BASE="" → filtramos por el origin real de la página
 	const origin = new URL(page.url()).origin;
 	const fueraDelSitio = seen.filter(
@@ -160,7 +174,13 @@ test("fiabilidad: privacidad — el perfil no sale del navegador", async ({
 	expect(fueraDelSitio.map((r) => r.url)).toEqual([]);
 	expect(externos.length >= 0).toBe(true);
 	// 2. Ninguna URL ni cuerpo contiene respuestas del perfil.
-	const perfil = ["28079", '"age"', "banda-8400-16800", "asalariado", "familia"];
+	const perfil = [
+		"28079",
+		'"age"',
+		"banda-8400-16800",
+		"asalariado",
+		"familia",
+	];
 	for (const r of seen) {
 		for (const p of perfil) {
 			expect(r.url).not.toContain(p);

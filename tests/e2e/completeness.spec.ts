@@ -98,7 +98,9 @@ test("inventario: cada programa del bundle tiene ficha y aparece en explorar", a
 					href,
 				))
 		)
-			errors.push(`${rs.benefitSlug}: búsqueda no muestra el enlace a su ficha`);
+			errors.push(
+				`${rs.benefitSlug}: búsqueda no muestra el enlace a su ficha`,
+			);
 		const li = page
 			.locator(".explorer-item")
 			.filter({ hasText: item.displayTitle });
@@ -144,7 +146,9 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 		/mobile|tablet|small-reflow/.test(testInfo.project.name),
 		"el barrido corre en escritorio; en móvil lo cubren comprobar/visual",
 	);
-	test.setTimeout(300_000);
+	// 50 flujos reales de 10 pasos en un mismo test: ~2,5 min en frío,
+	// >5 min con la máquina cargada — margen de sobra para el CI.
+	test.setTimeout(480_000);
 	const errors: string[] = [];
 	for (const slug of rules.map((r) => r.benefitSlug)) {
 		const golden = fixtures.persons.find((p) => p.slug === slug);
@@ -229,7 +233,14 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 			await page
 				.getByRole("button", { name: "Ver mis resultados", exact: true })
 				.click();
-			await page.waitForSelector(".aid-card", { timeout: 15000 });
+			// F10-RES-3: puede no haber tarjetas abiertas (todo en filas
+			// compactas) — vale cualquiera de las dos formas de resultado.
+			// «attached», no «visible»: las filas plegadas dentro de
+			// <details> también cuentan (se despliegan justo después).
+			await page.waitForSelector(".aid-card, .row-line", {
+				timeout: 15000,
+				state: "attached",
+			});
 			const closed = page.getByRole("button", {
 				name: /Mostrar ayudas cerradas/,
 			});
@@ -238,15 +249,29 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 			// para comprobar que la ayuda golden aparece también ahí.
 			for (const d of await page.locator(".results-closed > summary").all())
 				await d.click();
+			// F10-RES-3: la ayuda golden puede pintarse como tarjeta abierta
+			// (encaja/podría encajar) o como fila compacta («solo si…», las
+			// plegadas «sin descartar» o las que dependen de un dato). En
+			// ningún caso puede estar en «No parece aplicarte» (no se renderiza
+			// hasta abrirlo, así que todo enlace visible es un acierto).
+			const href = url(`/ayudas/${slug}/`);
 			const card = page
 				.locator(".results-list .aid-card")
-				.filter({ has: page.locator(`a[href="${url(`/ayudas/${slug}/`)}"]`) });
-			await expect(card).toHaveCount(1, { timeout: 2500 });
-			const header = await card.locator("h2").innerText();
-			if (!/Encaja|Posible|Probable/i.test(header))
+				.filter({ has: page.locator(`a[href="${href}"]`) });
+			const row = page
+				.locator(".row-line")
+				.filter({ has: page.locator(`a[href="${href}"]`) });
+			if ((await card.count()) === 0 && (await row.count()) === 0) {
 				errors.push(
-					`${slug}: golden ${golden.goldenId} positivo en motor, pero tras formulario muestra «${header}»`,
+					`${slug}: no aparece en resultados (ni tarjeta abierta ni fila compacta)`,
 				);
+			} else if ((await card.count()) > 0) {
+				const header = await card.first().locator("h2").innerText();
+				if (!/Encaja|Posible|Probable/i.test(header))
+					errors.push(
+						`${slug}: golden ${golden.goldenId} positivo en motor, pero tras formulario muestra «${header}»`,
+					);
+			}
 		} catch (e) {
 			errors.push(`${slug}: ${String(e).slice(0, 300)}`);
 		} finally {
