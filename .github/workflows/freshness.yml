@@ -2,7 +2,7 @@ name: Freshness diario (F9)
 
 on:
   schedule:
-    - cron: "0 5 * * *" # 06:00 Europe/Madrid (CET)
+    - cron: "0 5 * * *" # 06:00 Europe/Madrid en invierno (CET); 07:00 en verano (CEST) — GitHub corre en UTC
   workflow_dispatch:
 
 permissions:

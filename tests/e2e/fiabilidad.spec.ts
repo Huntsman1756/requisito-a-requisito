@@ -163,16 +163,12 @@ test("fiabilidad: privacidad — el perfil no sale del navegador", async ({
 	});
 	await completarAsistente(page);
 	// 1. Ninguna petición sale del propio sitio (ni telemetría ni terceros).
-	const externos = seen.filter(
-		(r) => !r.url.startsWith(BASE || "http://localhost"),
-	);
-	// en local BASE="" → filtramos por el origin real de la página
+	// Se filtra por el origin real de la página (en local BASE="").
 	const origin = new URL(page.url()).origin;
 	const fueraDelSitio = seen.filter(
 		(r) => !r.url.startsWith(origin) && !r.url.startsWith(BASE || origin),
 	);
 	expect(fueraDelSitio.map((r) => r.url)).toEqual([]);
-	expect(externos.length >= 0).toBe(true);
 	// 2. Ninguna URL ni cuerpo contiene respuestas del perfil.
 	const perfil = [
 		"28079",

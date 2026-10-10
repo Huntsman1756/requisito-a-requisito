@@ -114,7 +114,8 @@ export function packageVps(
 		encoding: "utf8",
 		maxBuffer: 64 * 1024 * 1024,
 	});
-	if (!list.split("\n").some((l) => l === "./index.html" || l === "index.html"))
+	// bsdtar (Windows) lista con CRLF; GNU tar con LF. /\r?\n/ cubre ambos.
+	if (!list.split(/\r?\n/).some((l) => l === "./index.html" || l === "index.html"))
 		throw new Error("vps-package: el tar no contiene ./index.html");
 
 	const manifest: VpsManifest = {

@@ -66,7 +66,6 @@ interface RunRecord {
 	skipped?: string[];
 	leads: number;
 	bundleDigest: string | null;
-	deployOk: boolean;
 }
 
 async function get(url: string): Promise<{ bytes: Buffer; contentType: string }> {
@@ -314,8 +313,22 @@ async function main() {
 		fetchErrors: res.fetchErrors,
 		skipped: res.skipped,
 		leads: leads.length,
-		bundleDigest: null,
-		deployOk: false,
+		// Digest del bundle vigente en data/eligibility/bundle/manifest.json
+		// (útil para cruzar cada corrida con el digest publicado).
+		bundleDigest: (() => {
+			try {
+				return (
+					JSON.parse(
+						readFileSync(
+							join(root, "data/eligibility/bundle/manifest.json"),
+							"utf8",
+						),
+					) as { bundleDigest?: string }
+				).bundleDigest ?? null;
+			} catch {
+				return null;
+			}
+		})(),
 	};
 	if (!DRY) appendFileSync(join(FRESH_DIR, "runs.jsonl"), `${JSON.stringify(rec)}\n`);
 	// código de salida: anomalía → 2 (la corrida queda señalada); el gate
