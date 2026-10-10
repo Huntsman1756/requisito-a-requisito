@@ -775,7 +775,7 @@ function ResultCard({
 				<DeadlinePill ev={ev} />
 			</p>
 			<h2>
-				<Link href={`/ayudas/${ev.benefitSlug}`}>{aidTitle(ev.benefitSlug)}</Link>{" "}
+				{aidTitle(ev.benefitSlug)}{" "}
 				<span className={pill}>{encaja(rs, ev, condMap[ev.benefitSlug]) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
 			</h2>
 			{rs.versionNote && (
@@ -1033,7 +1033,7 @@ function ResultCard({
 					{rs.humanReview?.status !== "approved" &&
 						rs.panelReview?.status !== "approved" &&
 						" · revisión final pendiente"}{" "}
-					· {rs.sources[0] ? domainBadge(rs.sources[0].url) : ""} ·{" "}
+					·{" "}
 					{t("card.verifiedAt", { date: formatDateEsShort(ev.verifiedAt) })}
 					{rs.sources[0] && fresh[rs.sources[0].id] && (
 						<>
@@ -1041,6 +1041,16 @@ function ResultCard({
 							{t("card.sourceCheckedAt", {
 								date: formatDateEsShort(fresh[rs.sources[0].id]),
 							})}
+						</>
+					)}
+					{/* no_cumple ya lleva su enlace a ficha en el bloque de
+					    requisitos fallados; duplicarlo aquí rompe strict-mode. */}
+					{ev.verdict !== "no_cumple" && (
+						<>
+							{" · "}
+							<Link href={`/ayudas/${ev.benefitSlug}`}>
+								{t("card.fullDetail")}
+							</Link>
 						</>
 					)}
 				</span>
