@@ -140,11 +140,6 @@
   "source": "sede-cm"
  },
  {
-  "title": "Comunicación de datos bancarios para la ayuda del Bono Social Térmico",
-  "reason": "trámite interno de la convocatoria",
-  "source": "sede-cm"
- },
- {
   "title": "Ayudas para nuevos establecimientos en municipios pequeños en los que ya existe la actividad comercial ",
   "reason": "destinada a entidades locales",
   "source": "sede-cm"
@@ -175,13 +170,43 @@
   "source": "sede-cm"
  },
  {
-  "title": "Ayudas de apoyo a la incorporación de socios a empresas de economía social",
+  "title": "Aplicación de Estrategias de Desarrollo Local Participativo LEADER 2023-27. Proyectos de terceros",
+  "reason": "desarrollo local o entidades",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Aportación de documentación de convenio para formación y profesionalización del comercio y servicios",
+  "reason": "trámite interno de la convocatoria",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Ayudas a establecimientos afectados por obras públicas de infraestructuras",
+  "reason": "actividad agraria/económica",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Anticipos para funcionarios de cuerpos docentes no universitarios (2026)",
+  "reason": "interno del empleado público",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Subvenciones a empresas de prácticas de Certificados de Profesionalidad con Prácticas Ampliadas (CPPA 24-27)",
   "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
  },
  {
-  "title": "Aplicación de Estrategias de Desarrollo Local Participativo LEADER 2023-27. Proyectos de terceros",
+  "title": "Justificación de las ayudas del Plan de Cooperación a las Obras y Servicios Municipales",
+  "reason": "trámite interno de la convocatoria",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Ayudas para actuaciones del Plan de Cooperación a las Obras y Servicios Municipales",
   "reason": "desarrollo local o entidades",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Ayudas de apoyo a la incorporación de socios a empresas de economía social",
+  "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
  },
  {
@@ -195,33 +220,8 @@
   "source": "sede-cm"
  },
  {
-  "title": "Aportación de documentación de convenio para formación y profesionalización del comercio y servicios",
+  "title": "Comunicación de datos bancarios para la ayuda del Bono Social Térmico",
   "reason": "trámite interno de la convocatoria",
-  "source": "sede-cm"
- },
- {
-  "title": "Ayudas para actuaciones del Plan de Cooperación a las Obras y Servicios Municipales",
-  "reason": "desarrollo local o entidades",
-  "source": "sede-cm"
- },
- {
-  "title": "Ayudas a establecimientos afectados por obras públicas de infraestructuras",
-  "reason": "actividad agraria/económica",
-  "source": "sede-cm"
- },
- {
-  "title": "Justificación de las ayudas del Plan de Cooperación a las Obras y Servicios Municipales",
-  "reason": "trámite interno de la convocatoria",
-  "source": "sede-cm"
- },
- {
-  "title": "Anticipos para funcionarios de cuerpos docentes no universitarios (2026)",
-  "reason": "interno del empleado público",
-  "source": "sede-cm"
- },
- {
-  "title": "Subvenciones a empresas de prácticas de Certificados de Profesionalidad con Prácticas Ampliadas (CPPA 24-27)",
-  "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
  },
  {
@@ -485,11 +485,6 @@
   "source": "sede-cm"
  },
  {
-  "title": "Ayudas a empresas audiovisuales para desarrollar proyectos audiovisuales (2026)",
-  "reason": "destinada a empresas/autónomos",
-  "source": "sede-cm"
- },
- {
   "title": "Ayudas bienales para el fomento de estructuras de empresas de teatro y de danza (2026 y 2027)",
   "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
@@ -497,6 +492,11 @@
  {
   "title": "Ayudas a ayuntamientos para Patios Abiertos, extraescolares y días no lectivos (2026-2027)",
   "reason": "destinada a entidades locales",
+  "source": "sede-cm"
+ },
+ {
+  "title": "Ayudas a empresas audiovisuales para desarrollar proyectos audiovisuales (2026)",
+  "reason": "destinada a empresas/autónomos",
   "source": "sede-cm"
  },
  {
@@ -1247,11 +1247,6 @@
  {
   "title": "Subvención a municipios para actividades de ocio y tiempo libre educativo (2024)",
   "reason": "destinada a entidades locales",
-  "source": "sede-cm"
- },
- {
-  "title": "Subvención a entidades para proyectos formativos y sensibilización juvenil (2024)",
-  "reason": "destinada a entidades",
   "source": "sede-cm"
  },
  {

@@ -209,7 +209,7 @@ export function Explorer() {
 							{i.scope === "comunidad-madrid"
 								? " · Comunidad de Madrid"
 								: i.scope === "municipal"
-									? " · Municipal"
+									? ` · ${i.municipality ?? "Municipal"}`
 									: " · Estatal"}
 						</span>
 					</li>

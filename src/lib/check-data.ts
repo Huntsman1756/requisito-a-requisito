@@ -36,6 +36,8 @@ export interface Level2Item {
 	/** Estado de acceso (docs/14 §2): OPEN/ROLLING/UPCOMING/CLOSED_RECURRING/UNKNOWN. */
 	accessState?: string;
 	scope?: string;
+	/** Municipio (o mancomunidad) cuando scope === "municipal" (F10-CAT-MUNI). */
+	municipality?: string;
 	themes?: string[];
 	lifeEvents?: string[];
 	eligibilityFactors: Record<string, unknown>;

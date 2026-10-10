@@ -1,0 +1,185 @@
+{
+ "generatedAt": "2026-10-10",
+ "items": [
+  {
+   "title": "Ayudas por emergencia social (procedimiento H045)",
+   "url": "https://www.mostoles.es/SEDE_ELECTRONICA/es/sede/procedimientos-administrativos/indice-procedimientos-administrativos",
+   "municipality": "Móstoles",
+   "accessState": "ROLLING",
+   "note": "Sede electrónica de Móstoles; H045 — prestaciones económicas de emergencia social (ordenanza BOCM 28/07/2016)",
+   "httpStatus": 200,
+   "sha256": "9c6636cf5ab638bcf29853acf1705e9a680071c259928fc07a83a8fb2913c6a4",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayudas sociales y de emergencia (convocatorias de Servicios Sociales)",
+   "url": "https://serviciossociales.ayto-alcaladehenares.es/exclusion-social/",
+   "municipality": "Alcalá de Henares",
+   "accessState": "ROLLING",
+   "note": "Portal municipal de Servicios Sociales; listado de convocatorias de ayudas vigentes",
+   "httpStatus": 200,
+   "sha256": "a7c7758a1cffe99571372bc7409c8d5e1fa1f4978394dc30c01443fb6820b90c",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Parque municipal de vivienda en alquiler (registro de solicitantes)",
+   "url": "https://vivienda.ayto-alcaladehenares.es/registro-de-solicitantes-de-vivienda/",
+   "municipality": "Alcalá de Henares",
+   "accessState": "ROLLING",
+   "note": "Ordenanza del parque municipal de vivienda; inscripción abierta",
+   "httpStatus": 200,
+   "sha256": "878e7d7a34c4ebe36c8a738f872f58ce17ce25cf6a35d13bae0d96ca59dd9a69",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Cheques sociales de la Tarjeta Ciudad (comercios adheridos)",
+   "url": "https://tarjetaciudad.getafe.es/TarjetaCiudadGetafe/servicios",
+   "municipality": "Getafe",
+   "accessState": "ROLLING",
+   "note": "Portal oficial de la Tarjeta Ciudad de Getafe; saldo social para comercios locales",
+   "httpStatus": 200,
+   "sha256": "88d7475e3552b3d7bc03ad8c91e155e6e044d7331393427d8f747b89e578859f",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Prestaciones y servicios sociales municipales",
+   "url": "https://www.leganes.org/servicios-sociales",
+   "municipality": "Leganés",
+   "accessState": "ROLLING",
+   "note": "Área de Servicios Sociales; asistencia material básica y programas de atención",
+   "httpStatus": 200,
+   "sha256": "119cc555a4f59fb655304d7a9260176439a6a444bd401e756372ff3b7e2d3dfc",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Prestaciones económicas de emergencia social",
+   "url": "https://www.ayto-alcorcon.es/es/prestaciones-servicios-sociales",
+   "municipality": "Alcorcón",
+   "accessState": "ROLLING",
+   "note": "Fondo de emergencia social: alimentación, vivienda, suministros, alojamiento urgente y material escolar (ordenanza BOCM 25/08/2022)",
+   "httpStatus": 200,
+   "sha256": "376b2b7d49a0ffd1a7a7007af9c79c9bc463a8f9e52dece1d0ce1b3555122490",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayudas «Cheque Hogar» para gastos de la vivienda habitual",
+   "url": "https://www.ayto-alcorcon.es/sites/default/files/2026-05/CONVOCATORIA%20CHEQUE%20HOGAR%202026%20%28PDF%29.pdf",
+   "municipality": "Alcorcón",
+   "accessState": "UNKNOWN",
+   "note": "Convocatoria 2026 (PDF oficial): alquiler, suministros e IBI de la vivienda habitual",
+   "httpStatus": 200,
+   "sha256": "174a8725191a18e627525faf051787718aa0f2c66b916b0cb65f37211a3f08e2",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayuda económica municipal (necesidades básicas, alquiler y suministros)",
+   "url": "https://www.ayto-torrejon.es/tramites/servicios-sociales/solicitud-de-ayuda-economica-municipal",
+   "municipality": "Torrejón de Ardoz",
+   "accessState": "ROLLING",
+   "note": "Trámite oficial; bases de prestaciones y ayudas sociales de carácter económico",
+   "httpStatus": 200,
+   "sha256": "f267a44279362a5baa46adbe020113f4685269ef1304d45b1dedcb0ce4dc7104",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "«Mejor Comemos en Casa» — alimentos a domicilio para mayores y dependientes",
+   "url": "https://www.ayto-torrejon.es/tramites/servicios-sociales/concesion-de-ayudas-para-la-participacion-en-el-programa-social-mejor",
+   "municipality": "Torrejón de Ardoz",
+   "accessState": "UNKNOWN",
+   "note": "Convocatoria de ayudas en especie; mayores de 65 o dependencia/discapacidad ≥66 %",
+   "httpStatus": 200,
+   "sha256": "b8b1f023e2952ebeb3ff53bfb8eb2e1e09d6f1738d5d6f59e98d61de51ef713e",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayudas económicas individuales para personas mayores",
+   "url": "https://www.ayuntamientoparla.es/servicios/servicios-generales/servicios-para-personas-mayores/ayudas-economicas-y-gestion-de-pensiones-no-contributivas",
+   "municipality": "Parla",
+   "accessState": "ROLLING",
+   "note": "Delegación de Bienestar Social; ayudas no periódicas para mayores sin recursos",
+   "httpStatus": 200,
+   "sha256": "779d6200734849144660e35f5543fde8487d9733659e386c1a01ee7fd2790169",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Servicios sociales municipales (ayudas de emergencia social)",
+   "url": "https://www.alcobendas.org/es/temas/bienestar-social/servicios-sociales",
+   "municipality": "Alcobendas",
+   "accessState": "ROLLING",
+   "note": "Página municipal de Servicios Sociales; incluye ayudas de emergencia social",
+   "httpStatus": 200,
+   "sha256": "36d6ab7f6c23c754e3cf19c432d18c9f2f0104c3c246ef37a2f83ccb80997391",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayudas de adaptaciones domiciliarias para mayores y pensionistas",
+   "url": "https://www.alcobendas.org/es/temas/bienestar-social",
+   "municipality": "Alcobendas",
+   "accessState": "UNKNOWN",
+   "note": "Página de Bienestar Social; convocatorias vigentes de adaptaciones domiciliarias y autonomía personal",
+   "httpStatus": 200,
+   "sha256": "4d8cab26e2200fdc314986594c1a733e4852de7a3c38462d24e56fe2507e90fb",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayudas por nacimiento, adopción y acogimiento",
+   "url": "https://www.pozuelodealarcon.org/hechos-vitales/nace-un-hijo/beneficios-fiscales-y-ayudas",
+   "municipality": "Pozuelo de Alarcón",
+   "accessState": "ROLLING",
+   "note": "Beneficios fiscales y ayudas municipales por nacimiento; incluye bonificaciones de familias numerosas",
+   "httpStatus": 200,
+   "sha256": "d788e3d96501635c072c1d364d5b88ccdfac3dbcac07d5d0b19ec6d19da9b261",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Prestaciones sociales de carácter económico (urgencia y emergencia social)",
+   "url": "https://www.lasrozas.es/sites/default/files/inline-files/ORDENANZA%20PREST.SOC_.ECONOMICAS_BOCM_25012024.pdf",
+   "municipality": "Las Rozas de Madrid",
+   "accessState": "ROLLING",
+   "note": "Ordenanza municipal (BOCM 25/01/2024); prestaciones temporales en urgencia/emergencia",
+   "httpStatus": 200,
+   "sha256": "9fc526591dce4e5d6058d20f7f109d906c613f7eb8ff151dc3f9dbc6db56169f",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Solicitud de servicios y ayudas sociales municipales",
+   "url": "https://sede.ssreyes.es/documents/1678104/274ee638-4e79-91ce-ea80-8a5a33d0e71c",
+   "municipality": "San Sebastián de los Reyes",
+   "accessState": "ROLLING",
+   "note": "Sede electrónica; formulario oficial de ayudas económicas y servicios sociales",
+   "httpStatus": 200,
+   "sha256": "b26a5b6030e3be28bb517af9d6da2974c2d4290c2523b4b6d2bfee10f96c7d53",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayuda económica de emergencia social",
+   "url": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales/",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "ROLLING",
+   "note": "Trámite oficial; ayudas temporales para necesidades básicas (ordenanza 21/03/2023)",
+   "httpStatus": 200,
+   "sha256": "5c9bd4687b9c01babd6e56a6ddc42ac1916973b070e923ef2c9b9ebe9ed81e17",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Beca municipal de comedor escolar",
+   "url": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales-beca-municipal-de-comerdor-escolar/",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "ROLLING",
+   "note": "Complementaria a la de la CM; infantil y primaria en centros públicos del municipio",
+   "httpStatus": 200,
+   "sha256": "57491876d0063c24962b0685f8e9356e63a3046b0163eafed43c76c1ad9c24e5",
+   "fetchedAt": "2026-10-10"
+  },
+  {
+   "title": "Ayuda para el mantenimiento de la vivienda habitual",
+   "url": "https://www.rivasciudad.es/tramite/ayuda-municipal-para-afrontar-obligaciones-derivadas-del-mantenimiento-de-la-vivienda-que-constituya-el-domicilio-habitual-2/",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "UNKNOWN",
+   "note": "Plan de ayudas 2026 (plazo 01–30/04/2026); tres líneas de ayuda",
+   "httpStatus": 200,
+   "sha256": "3292694883b3daffd89eb4a80f57fc0606c9c60317fb93d48f0f057c983850ff",
+   "fetchedAt": "2026-10-10"
+  }
+ ]
+}

@@ -1,27 +1,6 @@
 {
- "generatedAt": "2026-10-06",
+ "generatedAt": "2026-10-10",
  "programs": [
-  {
-   "id": "sede-cm-cdf8b71829",
-   "title": "Subvenciones para planes de formación en materia de diálogo social y negociación colectiva (2026)",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-agentes-sociales-3",
-   "themes": [
-    "educacion"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-agentes-sociales-3"
-   },
-   "dedupedWith": [
-    "sede-cm-af37f698db",
-    "sede-cm-e4e1820fdb"
-   ]
-  },
   {
    "id": "sede-cm-eadefd4b02",
    "title": "Ayudas para el programa de orientación, formación e inserción laboral con compromiso de contratación (2026)",
@@ -58,6 +37,19 @@
    "dedupedWith": [
     "sede-cm-ae7525c836"
    ]
+  },
+  {
+   "id": "sede-cm-c09c3df84f",
+   "title": "Ayudas para promoción y comunicación de productos vinícolas en terceros países (2027)",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-promocion-vinos-terceros-paises",
+   "themes": [],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-promocion-vinos-terceros-paises"
+   }
   },
   {
    "id": "sede-cm-9cca25e34f",
@@ -175,36 +167,6 @@
    }
   },
   {
-   "id": "sede-cm-b5a3521813",
-   "title": "Reintegro de gastos por farmacia, asistencia sanitaria o desplazamiento",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios",
-   "themes": [
-    "salud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios"
-   }
-  },
-  {
-   "id": "sede-cm-546ec0c21a",
-   "title": "Ayudas de pago único para mujeres víctimas de violencia de género",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia",
-   "themes": [
-    "violencia_genero"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia"
-   }
-  },
-  {
    "id": "sede-cm-17c1873c91",
    "title": "Ayudas previas a la jubilación ordinaria",
    "scope": "comunidad-madrid",
@@ -232,23 +194,6 @@
    "source": {
     "kind": "sede-cm",
     "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-victimas-terrorismo"
-   }
-  },
-  {
-   "id": "sede-cm-e2c56789b1",
-   "title": "Cambio o permuta de vivienda pública",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/cambio-o-permuta-vivienda-publica",
-   "themes": [
-    "vivienda"
-   ],
-   "lifeEvents": [
-    "independizarse_vivienda"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/cambio-o-permuta-vivienda-publica"
    }
   },
   {
@@ -311,74 +256,6 @@
    "source": {
     "kind": "sede-cm",
     "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-transporte-publico-0"
-   }
-  },
-  {
-   "id": "sede-cm-641e3b6ed1",
-   "title": "Subvenciones para el abono de cuotas a la Seguridad Social a los perceptores de la prestación por desempleo en su modalidad de pago único",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-abono-cuotas-seguridad-social",
-   "themes": [
-    "empleo",
-    "transporte"
-   ],
-   "lifeEvents": [
-    "perder_empleo"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-abono-cuotas-seguridad-social"
-   }
-  },
-  {
-   "id": "sede-cm-2eeb939425",
-   "title": "Ayudas económicas de pago mensual por gestación, nacimiento de hijo o adopción de menores en la Comunidad de Madrid",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad",
-   "themes": [
-    "familia_infancia"
-   ],
-   "lifeEvents": [
-    "tener_hijo"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad"
-   }
-  },
-  {
-   "id": "sede-cm-4d513f437e",
-   "title": "Ayudas para la salida de centros de la Red para la Violencia de Género",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-salida-centros-violencia-genero",
-   "themes": [
-    "violencia_genero"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-salida-centros-violencia-genero"
-   }
-  },
-  {
-   "id": "sede-cm-826b8e1ed0",
-   "title": "Ayudas a la conciliación para trabajadores desempleados que participen en acciones de formación profesional para el empleo financiadas con fondos públicos",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-conciliacion-acciones-formativas",
-   "themes": [
-    "educacion",
-    "empleo"
-   ],
-   "lifeEvents": [
-    "estudiar"
-   ],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-conciliacion-acciones-formativas"
    }
   },
   {
@@ -448,19 +325,18 @@
    }
   },
   {
-   "id": "sede-cm-f5b875f19e",
-   "title": "Ayudas económicas de pago único destinadas a los hijos menores de edad de mujeres asesinadas por violencia de género de la Comunidad de Madrid ",
+   "id": "sede-cm-d00f5128b7",
+   "title": "Subvención directa de la Dirección General de Salud Pública para acciones de prevención de salud pública",
    "scope": "comunidad-madrid",
    "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-orfandad-violencia-genero",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/subvencion-directa-dg-salud-publica",
    "themes": [
-    "familia_infancia",
-    "violencia_genero"
+    "salud"
    ],
    "lifeEvents": [],
    "source": {
     "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-orfandad-violencia-genero"
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/subvencion-directa-dg-salud-publica"
    }
   },
   {
@@ -482,39 +358,20 @@
    }
   },
   {
-   "id": "sede-cm-fe58be0feb",
-   "title": "Bono Social Térmico (2024)",
+   "id": "sede-cm-2eeb939425",
+   "title": "Ayudas económicas de pago mensual por gestación, nacimiento de hijo o adopción de menores en la Comunidad de Madrid",
    "scope": "comunidad-madrid",
    "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2024",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad",
    "themes": [
-    "energia_suministros"
+    "familia_infancia"
    ],
    "lifeEvents": [
-    "ingresos_bajos"
+    "tener_hijo"
    ],
    "source": {
     "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2024"
-   },
-   "dedupedWith": [
-    "sede-cm-cba5aa56fb",
-    "seed-10dc4d76c1"
-   ]
-  },
-  {
-   "id": "sede-cm-60822e256e",
-   "title": "Ayudas para jóvenes desempleados que cursan certificados profesionales",
-   "scope": "comunidad-madrid",
-   "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-jovenes-desempleados-0",
-   "themes": [
-    "cultura_juventud"
-   ],
-   "lifeEvents": [],
-   "source": {
-    "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-jovenes-desempleados-0"
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-economicas-natalidad"
    }
   },
   {
@@ -552,18 +409,88 @@
    }
   },
   {
-   "id": "sede-cm-d00f5128b7",
-   "title": "Subvención directa de la Dirección General de Salud Pública para acciones de prevención de salud pública",
+   "id": "sede-cm-cba5aa56fb",
+   "title": "Bono Social Térmico (2025)",
    "scope": "comunidad-madrid",
    "accessState": "OPEN",
-   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/subvencion-directa-dg-salud-publica",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2025",
    "themes": [
-    "salud"
+    "energia_suministros"
+   ],
+   "lifeEvents": [
+    "ingresos_bajos"
+   ],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/bono-social-termico-2025"
+   },
+   "dedupedWith": [
+    "sede-cm-fe58be0feb",
+    "seed-10dc4d76c1"
+   ]
+  },
+  {
+   "id": "sede-cm-60822e256e",
+   "title": "Ayudas para jóvenes desempleados que cursan certificados profesionales",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-jovenes-desempleados-0",
+   "themes": [
+    "cultura_juventud"
    ],
    "lifeEvents": [],
    "source": {
     "kind": "sede-cm",
-    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/subvencion-directa-dg-salud-publica"
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-jovenes-desempleados-0"
+   }
+  },
+  {
+   "id": "sede-cm-f5b875f19e",
+   "title": "Ayudas económicas de pago único destinadas a los hijos menores de edad de mujeres asesinadas por violencia de género de la Comunidad de Madrid ",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-orfandad-violencia-genero",
+   "themes": [
+    "familia_infancia",
+    "violencia_genero"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-orfandad-violencia-genero"
+   }
+  },
+  {
+   "id": "sede-cm-4d513f437e",
+   "title": "Ayudas para la salida de centros de la Red para la Violencia de Género",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-salida-centros-violencia-genero",
+   "themes": [
+    "violencia_genero"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-salida-centros-violencia-genero"
+   }
+  },
+  {
+   "id": "sede-cm-826b8e1ed0",
+   "title": "Ayudas a la conciliación para trabajadores desempleados que participen en acciones de formación profesional para el empleo financiadas con fondos públicos",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-conciliacion-acciones-formativas",
+   "themes": [
+    "educacion",
+    "empleo"
+   ],
+   "lifeEvents": [
+    "estudiar"
+   ],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-conciliacion-acciones-formativas"
    }
   },
   {
@@ -580,6 +507,71 @@
    }
   },
   {
+   "id": "sede-cm-546ec0c21a",
+   "title": "Ayudas de pago único para mujeres víctimas de violencia de género",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia",
+   "themes": [
+    "violencia_genero"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-mujeres-victimas-violencia"
+   }
+  },
+  {
+   "id": "sede-cm-641e3b6ed1",
+   "title": "Subvenciones para el abono de cuotas a la Seguridad Social a los perceptores de la prestación por desempleo en su modalidad de pago único",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-abono-cuotas-seguridad-social",
+   "themes": [
+    "empleo",
+    "transporte"
+   ],
+   "lifeEvents": [
+    "perder_empleo"
+   ],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayuda-abono-cuotas-seguridad-social"
+   }
+  },
+  {
+   "id": "sede-cm-b5a3521813",
+   "title": "Reintegro de gastos por farmacia, asistencia sanitaria o desplazamiento",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios",
+   "themes": [
+    "salud"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/reintegro-gastos-sanitarios"
+   }
+  },
+  {
+   "id": "sede-cm-e2c56789b1",
+   "title": "Cambio o permuta de vivienda pública",
+   "scope": "comunidad-madrid",
+   "accessState": "OPEN",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/cambio-o-permuta-vivienda-publica",
+   "themes": [
+    "vivienda"
+   ],
+   "lifeEvents": [
+    "independizarse_vivienda"
+   ],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/cambio-o-permuta-vivienda-publica"
+   }
+  },
+  {
    "id": "sede-cm-e07458e62b",
    "title": "Ayudas Tarifa Cero para autónomos",
    "scope": "comunidad-madrid",
@@ -591,6 +583,27 @@
     "kind": "sede-cm",
     "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-tarifa-cero"
    }
+  },
+  {
+   "id": "sede-cm-cdf8b71829",
+   "title": "Subvenciones para planes de formación en materia de diálogo social y negociación colectiva (2026)",
+   "scope": "comunidad-madrid",
+   "accessState": "CLOSED",
+   "officialSourceUrl": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-agentes-sociales-3",
+   "themes": [
+    "educacion"
+   ],
+   "lifeEvents": [
+    "estudiar"
+   ],
+   "source": {
+    "kind": "sede-cm",
+    "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/ayudas-formacion-agentes-sociales-3"
+   },
+   "dedupedWith": [
+    "sede-cm-af37f698db",
+    "sede-cm-e4e1820fdb"
+   ]
   },
   {
    "id": "sede-cm-4d914ecf74",
@@ -1767,6 +1780,360 @@
     "kind": "sede-cm",
     "url": "https://sede.comunidad.madrid/ayudas-becas-subvenciones/participar-programa-navidad-compania"
    }
+  },
+  {
+   "id": "sede-municipal-543b2994b5",
+   "title": "Ayudas por emergencia social (procedimiento H045)",
+   "scope": "municipal",
+   "municipality": "Móstoles",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.mostoles.es/SEDE_ELECTRONICA/es/sede/procedimientos-administrativos/indice-procedimientos-administrativos",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.mostoles.es/SEDE_ELECTRONICA/es/sede/procedimientos-administrativos/indice-procedimientos-administrativos"
+   },
+   "seedNote": "Sede electrónica de Móstoles; H045 — prestaciones económicas de emergencia social (ordenanza BOCM 28/07/2016)",
+   "sourceSha256": "9c6636cf5ab638bcf29853acf1705e9a680071c259928fc07a83a8fb2913c6a4",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-1958eda6e6",
+   "title": "Ayudas sociales y de emergencia (convocatorias de Servicios Sociales)",
+   "scope": "municipal",
+   "municipality": "Alcalá de Henares",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://serviciossociales.ayto-alcaladehenares.es/exclusion-social/",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://serviciossociales.ayto-alcaladehenares.es/exclusion-social/"
+   },
+   "seedNote": "Portal municipal de Servicios Sociales; listado de convocatorias de ayudas vigentes",
+   "sourceSha256": "a7c7758a1cffe99571372bc7409c8d5e1fa1f4978394dc30c01443fb6820b90c",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-0f7773400d",
+   "title": "Parque municipal de vivienda en alquiler (registro de solicitantes)",
+   "scope": "municipal",
+   "municipality": "Alcalá de Henares",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://vivienda.ayto-alcaladehenares.es/registro-de-solicitantes-de-vivienda/",
+   "themes": [
+    "vivienda"
+   ],
+   "lifeEvents": [
+    "independizarse_vivienda"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://vivienda.ayto-alcaladehenares.es/registro-de-solicitantes-de-vivienda/"
+   },
+   "seedNote": "Ordenanza del parque municipal de vivienda; inscripción abierta",
+   "sourceSha256": "878e7d7a34c4ebe36c8a738f872f58ce17ce25cf6a35d13bae0d96ca59dd9a69",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-54fbeb6681",
+   "title": "Cheques sociales de la Tarjeta Ciudad (comercios adheridos)",
+   "scope": "municipal",
+   "municipality": "Getafe",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://tarjetaciudad.getafe.es/TarjetaCiudadGetafe/servicios",
+   "themes": [],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://tarjetaciudad.getafe.es/TarjetaCiudadGetafe/servicios"
+   },
+   "seedNote": "Portal oficial de la Tarjeta Ciudad de Getafe; saldo social para comercios locales",
+   "sourceSha256": "88d7475e3552b3d7bc03ad8c91e155e6e044d7331393427d8f747b89e578859f",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-75d8689f96",
+   "title": "Prestaciones y servicios sociales municipales",
+   "scope": "municipal",
+   "municipality": "Leganés",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.leganes.org/servicios-sociales",
+   "themes": [],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.leganes.org/servicios-sociales"
+   },
+   "seedNote": "Área de Servicios Sociales; asistencia material básica y programas de atención",
+   "sourceSha256": "119cc555a4f59fb655304d7a9260176439a6a444bd401e756372ff3b7e2d3dfc",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-99ff33d108",
+   "title": "Prestaciones económicas de emergencia social",
+   "scope": "municipal",
+   "municipality": "Alcorcón",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.ayto-alcorcon.es/es/prestaciones-servicios-sociales",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.ayto-alcorcon.es/es/prestaciones-servicios-sociales"
+   },
+   "seedNote": "Fondo de emergencia social: alimentación, vivienda, suministros, alojamiento urgente y material escolar (ordenanza BOCM 25/08/2022)",
+   "sourceSha256": "376b2b7d49a0ffd1a7a7007af9c79c9bc463a8f9e52dece1d0ce1b3555122490",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-a1d75ca3fe",
+   "title": "Ayudas «Cheque Hogar» para gastos de la vivienda habitual",
+   "scope": "municipal",
+   "municipality": "Alcorcón",
+   "accessState": "UNKNOWN",
+   "officialSourceUrl": "https://www.ayto-alcorcon.es/sites/default/files/2026-05/CONVOCATORIA%20CHEQUE%20HOGAR%202026%20%28PDF%29.pdf",
+   "themes": [
+    "vivienda"
+   ],
+   "lifeEvents": [
+    "independizarse_vivienda"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.ayto-alcorcon.es/sites/default/files/2026-05/CONVOCATORIA%20CHEQUE%20HOGAR%202026%20%28PDF%29.pdf"
+   },
+   "seedNote": "Convocatoria 2026 (PDF oficial): alquiler, suministros e IBI de la vivienda habitual",
+   "sourceSha256": "174a8725191a18e627525faf051787718aa0f2c66b916b0cb65f37211a3f08e2",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-fb12dfaecf",
+   "title": "Ayuda económica municipal (necesidades básicas, alquiler y suministros)",
+   "scope": "municipal",
+   "municipality": "Torrejón de Ardoz",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.ayto-torrejon.es/tramites/servicios-sociales/solicitud-de-ayuda-economica-municipal",
+   "themes": [
+    "vivienda"
+   ],
+   "lifeEvents": [
+    "independizarse_vivienda"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.ayto-torrejon.es/tramites/servicios-sociales/solicitud-de-ayuda-economica-municipal"
+   },
+   "seedNote": "Trámite oficial; bases de prestaciones y ayudas sociales de carácter económico",
+   "sourceSha256": "f267a44279362a5baa46adbe020113f4685269ef1304d45b1dedcb0ce4dc7104",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-9408acfe82",
+   "title": "«Mejor Comemos en Casa» — alimentos a domicilio para mayores y dependientes",
+   "scope": "municipal",
+   "municipality": "Torrejón de Ardoz",
+   "accessState": "UNKNOWN",
+   "officialSourceUrl": "https://www.ayto-torrejon.es/tramites/servicios-sociales/concesion-de-ayudas-para-la-participacion-en-el-programa-social-mejor",
+   "themes": [
+    "mayores"
+   ],
+   "lifeEvents": [
+    "mayor_65"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.ayto-torrejon.es/tramites/servicios-sociales/concesion-de-ayudas-para-la-participacion-en-el-programa-social-mejor"
+   },
+   "seedNote": "Convocatoria de ayudas en especie; mayores de 65 o dependencia/discapacidad ≥66 %",
+   "sourceSha256": "b8b1f023e2952ebeb3ff53bfb8eb2e1e09d6f1738d5d6f59e98d61de51ef713e",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-64922b2590",
+   "title": "Ayudas económicas individuales para personas mayores",
+   "scope": "municipal",
+   "municipality": "Parla",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.ayuntamientoparla.es/servicios/servicios-generales/servicios-para-personas-mayores/ayudas-economicas-y-gestion-de-pensiones-no-contributivas",
+   "themes": [
+    "mayores"
+   ],
+   "lifeEvents": [
+    "mayor_65"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.ayuntamientoparla.es/servicios/servicios-generales/servicios-para-personas-mayores/ayudas-economicas-y-gestion-de-pensiones-no-contributivas"
+   },
+   "seedNote": "Delegación de Bienestar Social; ayudas no periódicas para mayores sin recursos",
+   "sourceSha256": "779d6200734849144660e35f5543fde8487d9733659e386c1a01ee7fd2790169",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-1a25a1860d",
+   "title": "Servicios sociales municipales (ayudas de emergencia social)",
+   "scope": "municipal",
+   "municipality": "Alcobendas",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.alcobendas.org/es/temas/bienestar-social/servicios-sociales",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.alcobendas.org/es/temas/bienestar-social/servicios-sociales"
+   },
+   "seedNote": "Página municipal de Servicios Sociales; incluye ayudas de emergencia social",
+   "sourceSha256": "36d6ab7f6c23c754e3cf19c432d18c9f2f0104c3c246ef37a2f83ccb80997391",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-4f6d1b0c39",
+   "title": "Ayudas de adaptaciones domiciliarias para mayores y pensionistas",
+   "scope": "municipal",
+   "municipality": "Alcobendas",
+   "accessState": "UNKNOWN",
+   "officialSourceUrl": "https://www.alcobendas.org/es/temas/bienestar-social",
+   "themes": [
+    "mayores"
+   ],
+   "lifeEvents": [
+    "mayor_65"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.alcobendas.org/es/temas/bienestar-social"
+   },
+   "seedNote": "Página de Bienestar Social; convocatorias vigentes de adaptaciones domiciliarias y autonomía personal",
+   "sourceSha256": "4d8cab26e2200fdc314986594c1a733e4852de7a3c38462d24e56fe2507e90fb",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-91b274e329",
+   "title": "Ayudas por nacimiento, adopción y acogimiento",
+   "scope": "municipal",
+   "municipality": "Pozuelo de Alarcón",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.pozuelodealarcon.org/hechos-vitales/nace-un-hijo/beneficios-fiscales-y-ayudas",
+   "themes": [
+    "familia_infancia"
+   ],
+   "lifeEvents": [
+    "tener_hijo"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.pozuelodealarcon.org/hechos-vitales/nace-un-hijo/beneficios-fiscales-y-ayudas"
+   },
+   "seedNote": "Beneficios fiscales y ayudas municipales por nacimiento; incluye bonificaciones de familias numerosas",
+   "sourceSha256": "d788e3d96501635c072c1d364d5b88ccdfac3dbcac07d5d0b19ec6d19da9b261",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-accaebac5a",
+   "title": "Prestaciones sociales de carácter económico (urgencia y emergencia social)",
+   "scope": "municipal",
+   "municipality": "Las Rozas de Madrid",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.lasrozas.es/sites/default/files/inline-files/ORDENANZA%20PREST.SOC_.ECONOMICAS_BOCM_25012024.pdf",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.lasrozas.es/sites/default/files/inline-files/ORDENANZA%20PREST.SOC_.ECONOMICAS_BOCM_25012024.pdf"
+   },
+   "seedNote": "Ordenanza municipal (BOCM 25/01/2024); prestaciones temporales en urgencia/emergencia",
+   "sourceSha256": "9fc526591dce4e5d6058d20f7f109d906c613f7eb8ff151dc3f9dbc6db56169f",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-0e8c7f2150",
+   "title": "Solicitud de servicios y ayudas sociales municipales",
+   "scope": "municipal",
+   "municipality": "San Sebastián de los Reyes",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://sede.ssreyes.es/documents/1678104/274ee638-4e79-91ce-ea80-8a5a33d0e71c",
+   "themes": [],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://sede.ssreyes.es/documents/1678104/274ee638-4e79-91ce-ea80-8a5a33d0e71c"
+   },
+   "seedNote": "Sede electrónica; formulario oficial de ayudas económicas y servicios sociales",
+   "sourceSha256": "b26a5b6030e3be28bb517af9d6da2974c2d4290c2523b4b6d2bfee10f96c7d53",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-2786f5253a",
+   "title": "Ayuda económica de emergencia social",
+   "scope": "municipal",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales/",
+   "themes": [
+    "ingresos_minimos"
+   ],
+   "lifeEvents": [],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales/"
+   },
+   "seedNote": "Trámite oficial; ayudas temporales para necesidades básicas (ordenanza 21/03/2023)",
+   "sourceSha256": "5c9bd4687b9c01babd6e56a6ddc42ac1916973b070e923ef2c9b9ebe9ed81e17",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-a8710d45dc",
+   "title": "Beca municipal de comedor escolar",
+   "scope": "municipal",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "ROLLING",
+   "officialSourceUrl": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales-beca-municipal-de-comerdor-escolar/",
+   "themes": [
+    "educacion"
+   ],
+   "lifeEvents": [
+    "estudiar"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.rivasciudad.es/tramite/solicitud-de-ayuda-economica-de-emergencia-social-de-los-servicios-sociales-municipales-beca-municipal-de-comerdor-escolar/"
+   },
+   "seedNote": "Complementaria a la de la CM; infantil y primaria en centros públicos del municipio",
+   "sourceSha256": "57491876d0063c24962b0685f8e9356e63a3046b0163eafed43c76c1ad9c24e5",
+   "sourceCheckedAt": "2026-10-10"
+  },
+  {
+   "id": "sede-municipal-6d0891d98a",
+   "title": "Ayuda para el mantenimiento de la vivienda habitual",
+   "scope": "municipal",
+   "municipality": "Rivas-Vaciamadrid",
+   "accessState": "UNKNOWN",
+   "officialSourceUrl": "https://www.rivasciudad.es/tramite/ayuda-municipal-para-afrontar-obligaciones-derivadas-del-mantenimiento-de-la-vivienda-que-constituya-el-domicilio-habitual-2/",
+   "themes": [
+    "vivienda"
+   ],
+   "lifeEvents": [
+    "independizarse_vivienda"
+   ],
+   "source": {
+    "kind": "sede-municipal",
+    "url": "https://www.rivasciudad.es/tramite/ayuda-municipal-para-afrontar-obligaciones-derivadas-del-mantenimiento-de-la-vivienda-que-constituya-el-domicilio-habitual-2/"
+   },
+   "seedNote": "Plan de ayudas 2026 (plazo 01–30/04/2026); tres líneas de ayuda",
+   "sourceSha256": "3292694883b3daffd89eb4a80f57fc0606c9c60317fb93d48f0f057c983850ff",
+   "sourceCheckedAt": "2026-10-10"
   },
   {
    "id": "la-ayuda-ayudas-atrae-talento-investigador",
@@ -4178,9 +4545,30 @@
    }
   },
   {
+   "id": "bdns-934649",
+   "title": "Convocatoria de ayudas por nacimiento, adopción y manutención de menores de 3 años periodo subvencionable 2025. Convocatoria 2026.",
+   "scope": "municipal",
+   "municipality": "Boadilla del Monte",
+   "accessState": "UNKNOWN",
+   "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934649",
+   "themes": [
+    "familia_infancia"
+   ],
+   "lifeEvents": [
+    "tener_hijo"
+   ],
+   "source": {
+    "kind": "bdns",
+    "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/934649"
+   },
+   "body": "BOADILLA DEL MONTE — AYUNTAMIENTO DE BOADILLA DEL MONTE",
+   "receivedAt": "2026-10-09"
+  },
+  {
    "id": "bdns-931872",
    "title": "Acuerdo de Junta de Gobierno Local 18-09-2026, por el que se convocan Ayudas a mujeres víctimas de violencia de género del municipio de Alcalá de Henares, correspondientes al año 2026.",
    "scope": "municipal",
+   "municipality": "Alcalá de Henares",
    "accessState": "UNKNOWN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/931872",
    "themes": [
@@ -4232,6 +4620,7 @@
    "id": "bdns-929583",
    "title": "AYUDAS ECONÓMICA PARA LA ATENCIÓN DE NECESIDADES SOCIOECONÓMICAS, INDIVIDUALES Y/O FAMILIARES 2026",
    "scope": "municipal",
+   "municipality": "Arroyomolinos",
    "accessState": "UNKNOWN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/929583",
    "themes": [],
@@ -4266,6 +4655,7 @@
    "id": "bdns-927046",
    "title": "SUBVENCIONES Y AYUDAS ECONÓMICAS A PERSONAS Y ENTIDADES DEPORTIVAS DE BOADILLA DEL MONTE, CONVOCATORIA 2026",
    "scope": "municipal",
+   "municipality": "Boadilla del Monte",
    "accessState": "UNKNOWN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/927046",
    "themes": [
@@ -4283,6 +4673,7 @@
    "id": "bdns-926809",
    "title": "CONVOCATORIA DE BECAS PARA LA ESCOLARIZACIÓN Y CONCILIACIÓN PARA EL CURSO 2026-2027 DEL AYUNTAMIENTO DE BOADILLA DEL MONTE.",
    "scope": "municipal",
+   "municipality": "Boadilla del Monte",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/926809",
    "themes": [
@@ -4322,6 +4713,7 @@
    "id": "bdns-925409",
    "title": "CONVOCATORIA DE AYUDAS DEL AYUNTAMIENTO DE MAJADAHONDA A PERSONAS MAYORES EMPADRONADAS Y RESIDENTES EN LA LOCALIDAD PARA TRATAMIENTOS PODOLOGICOS",
    "scope": "municipal",
+   "municipality": "Majadahonda",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/925409",
    "themes": [
@@ -4341,6 +4733,7 @@
    "id": "bdns-923879",
    "title": "CONVOCATORIA SUBVENCIÓN PEÑAS ROMERAS",
    "scope": "municipal",
+   "municipality": "El Escorial",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/923879",
    "themes": [],
@@ -4356,6 +4749,7 @@
    "id": "bdns-923358",
    "title": "Subvención “San Juan de Dios para Ayudas Sociales 2026”",
    "scope": "municipal",
+   "municipality": "Ciempozuelos",
    "accessState": "UNKNOWN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/923358",
    "themes": [],
@@ -4510,6 +4904,7 @@
    "id": "bdns-911073",
    "title": "CONVOCATORIA DE SUBVENCIONES, A TRAVÉS DEL PROCEDIMIENTO DE CONCURRENCIA COMPETITIVA DE AYUDAS COMPLEMENTARIAS DE EDUCACIÓN A LAS FAMILIAS PARA LA ADQUISICIÓN DE RECURSOS DIDÁCTICOS Y MATERIAL ESCOLAR PARA EL CURSO ESCOLAR 2026/2027",
    "scope": "municipal",
+   "municipality": "Pozuelo de Alarcón",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911073",
    "themes": [
@@ -4530,6 +4925,7 @@
    "id": "bdns-911002",
    "title": "Aprobación el 27.05.2026, por Junta Gobierno Local, de Convocatoria de subvenciones, mediante procedimiento de concurrencia competitiva, de ayudas A FAMILIAS PARA CAMPAMENTOS DE VERANO 2026",
    "scope": "municipal",
+   "municipality": "Pozuelo de Alarcón",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/911002",
    "themes": [
@@ -4547,6 +4943,7 @@
    "id": "bdns-910642",
    "title": "Ayudas para víctimas de Violencia de Género",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales \"Las Vegas\"",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910642",
    "themes": [
@@ -4564,6 +4961,7 @@
    "id": "bdns-910634",
    "title": "Ayudas para garantizar el derecho básico de alimentación, ocio y cultura de los menores durante las vacaciones escolares y la conciliación de la vida familiar y laboral",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales \"Las Vegas\"",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910634",
    "themes": [
@@ -4585,6 +4983,7 @@
    "id": "bdns-910624",
    "title": "Ayudas contra la exclusión social y la pobreza infantil",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales \"Las Vegas\"",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910624",
    "themes": [],
@@ -4600,6 +4999,7 @@
    "id": "bdns-910617",
    "title": "Ayudas de Apoyo a la Integración",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales \"Las Vegas\"",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/910617",
    "themes": [],
@@ -4724,6 +5124,7 @@
    "id": "bdns-904286",
    "title": "Certificado sesión ordinaria del Consejo de Administración del EPE Alcalá Desarrollo de fecha 04/05/2026, por el que se aprueban las bases de la convocatoria de las ayudas de acción social 2025 ,para los trabajadores del EPE Alcalá Desarrollo.",
    "scope": "municipal",
+   "municipality": "Alcalá de Henares",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/904286",
    "themes": [],
@@ -4777,6 +5178,7 @@
    "id": "bdns-902242",
    "title": "BASES PARA EL OTORGAMIENTO DE PRESTACIONES ECONOMICAS PUNTUALES DE PAGO UNICO (AYUDAS COMPLEMENTARIAS) PARA LA MEJORA DE LAS CONDICIONES DE HABITABILIDAD DE LA VIVIENDA DE PERSONAS MAYORES Y/O CON DISCAPACIDAD EJERCICIO 2026",
    "scope": "municipal",
+   "municipality": "Arroyomolinos",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/902242",
    "themes": [
@@ -4801,6 +5203,7 @@
    "id": "bdns-901929",
    "title": "CONVOCATORIA DE AYUDAS DEL AYUNTAMIENTO DE BOADILLA DEL MONTE PARA VÍCTIMAS DE VIOLENCIA DE GÉNERO CORRESPONDIENTE A 2026",
    "scope": "municipal",
+   "municipality": "Boadilla del Monte",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/901929",
    "themes": [
@@ -4894,6 +5297,7 @@
    "id": "bdns-899087",
    "title": "CONVOCATORIA DE PRESTACIONES SOCIALES DE CARÁCTER ECONÓMICO A PERSONAS EN SITUACIÓN DE EXCLUSIÓN SOCIAL/AYUDAS DE SUMINISTROS / AYUDAS DE HABITABILIDAD PARA EL AÑO 2026",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales del Este de Madrid (Missem)",
    "accessState": "OPEN",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/899087",
    "themes": [],
@@ -5042,6 +5446,7 @@
    "id": "bdns-893390",
    "title": "CONVOCATORIA PARA EL OTORGAMIENTO PARA PRESTACIONES ECONÓMICAS PUNTUALES DE PAGO UNICO (AYUDAS COMPLEMENTARIAS) PARA LA MEJORA DE LAS CONDICIONES DE HABITABILIDAD DE LA VIVIENDA DE PERSONAS MAYORES Y/O CON DISCAPACIDAD, EJERCICIO 2026",
    "scope": "municipal",
+   "municipality": "Mancomunidad de Servicios del Suroeste de Madrid",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/893390",
    "themes": [
@@ -5120,6 +5525,7 @@
    "id": "bdns-892553",
    "title": "AYUDA ADQUISICION MATERIAL ESCOLAR YLIBROS DE TEXTO 2026-2027",
    "scope": "municipal",
+   "municipality": "El Escorial",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/892553",
    "themes": [
@@ -5139,6 +5545,7 @@
    "id": "bdns-891685",
    "title": "Convocatoria 2026 ayudas para la mejora de las condiciones de habitabilidad de la vivienda de personas mayores, personas en situación de dependencia y/o con discapacidad.",
    "scope": "municipal",
+   "municipality": "Mancomunidad de Servicios Sociales Mejorada-Velilla",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/891685",
    "themes": [
@@ -5431,6 +5838,7 @@
    "id": "bdns-882824",
    "title": "CONVOCATORIA AYUDAS POR NACIMIENTO, ADOPCIÓN Y ACOGIDA DE MENORES 2026",
    "scope": "municipal",
+   "municipality": "El Escorial",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/882824",
    "themes": [
@@ -5450,6 +5858,7 @@
    "id": "bdns-882038",
    "title": "AYUDAS ECONÓMICAS A VÍCTIMAS DE VIOLENCIA DE GÉNERO 2026",
    "scope": "municipal",
+   "municipality": "Mancomunidad Intermunicipal de Servicios Sociales \"La Encina\"",
    "accessState": "CLOSED",
    "officialSourceUrl": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/882038",
    "themes": [

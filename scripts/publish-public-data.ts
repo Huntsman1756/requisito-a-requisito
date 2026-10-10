@@ -127,11 +127,14 @@ const universe = JSON.parse(
 	id: string;
 	title: string;
 	scope: string;
+	municipality?: string;
 	accessState: string;
 	officialSourceUrl?: string;
 	themes: string[];
 	lifeEvents: string[];
 	source: { kind: string; url?: string };
+	sourceSha256?: string;
+	sourceCheckedAt?: string;
 }[];
 const fichasByUrl = new Map<string, Ficha>();
 for (const f of readdirSync(benefitsDir).filter((x) => x.endsWith(".json"))) {
@@ -166,6 +169,7 @@ interface Level2Out {
 	slug: string;
 	displayTitle: string;
 	managingBody?: string;
+	municipality?: string;
 	officialSourceUrl: string;
 	applicationStatus?: string;
 	accessState: string;
@@ -173,6 +177,7 @@ interface Level2Out {
 	themes: string[];
 	lifeEvents: string[];
 	eligibilityFactors: Record<string, unknown>;
+	provenance?: { sha256: string; checkedAt: string };
 }
 
 const level2: Level2Out[] = universe
@@ -194,12 +199,16 @@ const level2: Level2Out[] = universe
 		return {
 			slug: p.id,
 			displayTitle: citizenTitle(p as unknown as Ficha) ?? p.title,
+			...(p.municipality ? { municipality: p.municipality } : {}),
 			officialSourceUrl: p.officialSourceUrl as string,
 			accessState: p.accessState,
 			scope: p.scope,
 			themes: p.themes,
 			lifeEvents: p.lifeEvents,
 			eligibilityFactors: ficha?.eligibilityFactors ?? {},
+			...(p.sourceSha256 && p.sourceCheckedAt
+				? { provenance: { sha256: p.sourceSha256, checkedAt: p.sourceCheckedAt } }
+				: {}),
 		};
 	});
 // F4-L2: informe de incluidas/excluidas con motivo (universo, antes de las

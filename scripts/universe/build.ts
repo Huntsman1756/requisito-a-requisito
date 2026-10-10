@@ -124,6 +124,42 @@ function fichasItems(): RawItem[] {
 	return out;
 }
 
+// ---------- semilla municipal (F10-CAT-MUNI) ----------
+// Entradas curadas + verificadas por scripts/universe/municipal-seed.ts:
+// sedes de municipios con ayudas recurrentes a personas que la BDNS no
+// registra como convocatoria. Solo entran las que respondieron 2xx.
+function municipalSeedItems(): RawItem[] {
+	const p = join(ROOT, "data/universe/municipal-seed.json");
+	if (!existsSync(p)) return [];
+	const raw = JSON.parse(readFileSync(p, "utf8")) as {
+		items: {
+			title: string;
+			url: string;
+			municipality: string;
+			accessState: string;
+			note?: string;
+			httpStatus: number | null;
+			sha256: string | null;
+			fetchedAt: string;
+		}[];
+	};
+	return raw.items
+		.filter((i) => i.httpStatus !== null && i.httpStatus < 400)
+		.map((i) => ({
+			title: i.title,
+			url: i.url,
+			sourceKind: "sede-municipal",
+			scope: "municipal" as const,
+			municipality: i.municipality,
+			accessState: i.accessState,
+			extra: {
+				seedNote: i.note,
+				sourceSha256: i.sha256,
+				sourceCheckedAt: i.fetchedAt,
+			},
+		}));
+}
+
 // ---------- BOCM pipeline ----------
 function bocmItems(): RawItem[] {
 	const cand = join(LA_AYUDA, "data/pipeline/candidates.jsonl");
@@ -204,10 +240,11 @@ async function main() {
 	}
 	const fichas = fichasItems();
 	const bocm = bocmItems();
-	console.log(`[universe] la-ayuda:${fichas.length} bocm:${bocm.length} seed:${SEED.length}`);
+	const muni = municipalSeedItems();
+	console.log(`[universe] la-ayuda:${fichas.length} bocm:${bocm.length} seed:${SEED.length} muni-seed:${muni.length}`);
 
 	const { programs, rejected } = mergePrograms(
-		[...sede, ...bdns, ...fichas, ...bocm, ...SEED],
+		[...sede, ...bdns, ...fichas, ...bocm, ...muni, ...SEED],
 		TODAY,
 	);
 	mkdirSync(join(ROOT, "data/universe"), { recursive: true });

@@ -12,6 +12,8 @@ export interface RawItem {
 	/** p. ej. "sede-cm" | "bdns" | "la-ayuda" | "pipeline-bocm" | "seed" */
 	sourceKind: string;
 	scope: "comunidad-madrid" | "municipal" | "estatal";
+	/** Nombre del municipio (o mancomunidad) cuando scope === "municipal". */
+	municipality?: string;
 	accessState?: string;
 	id?: string;
 	nivel1?: string;
@@ -24,6 +26,7 @@ export interface Program {
 	id: string;
 	title: string;
 	scope: string;
+	municipality?: string;
 	accessState: string;
 	officialSourceUrl?: string;
 	themes: string[];
@@ -144,10 +147,11 @@ export function progKey(title: string): string {
 /** Orden de preferencia de fuente para dedupe (menor = mejor). */
 const SRC_ORDER: Record<string, number> = {
 	"sede-cm": 0,
-	"la-ayuda": 1,
-	bdns: 2,
-	"pipeline-bocm": 3,
-	seed: 4,
+	"sede-municipal": 1,
+	"la-ayuda": 2,
+	bdns: 3,
+	"pipeline-bocm": 4,
+	seed: 5,
 };
 
 /** Resolución determinista de UNKNOWN (R3-UNK):
@@ -206,6 +210,7 @@ export function mergePrograms(items: RawItem[], today = "9999-12-31"): {
 			id,
 			title: r.title,
 			scope: r.scope,
+			...(r.municipality ? { municipality: r.municipality } : {}),
 			accessState:
 				r.accessState && r.accessState !== "UNKNOWN"
 					? r.accessState
@@ -216,7 +221,9 @@ export function mergePrograms(items: RawItem[], today = "9999-12-31"): {
 			source: { kind: r.sourceKind, url: r.url },
 			...(r.extra ?? {}),
 		};
-		const k = progKey(r.title);
+		// La dedupe es por título+municipio: «ayudas de emergencia social»
+		// en Getafe y en Rivas son dos programas distintos.
+		const k = `${progKey(r.title)}|${r.municipality ?? ""}`;
 		const prev = byKey.get(k);
 		if (prev) {
 			prev.dedupedWith = [...(prev.dedupedWith ?? []), id];
@@ -262,6 +269,26 @@ export function bdnsPublicUrl(numeroConvocatoria: string): string {
 	return `https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/${numeroConvocatoria}`;
 }
 
+const CONNECTORS = new Set(["de", "del", "la", "las", "los", "el", "y", "e", "en"]);
+
+/** «ESCORIAL, EL» → «El Escorial»; «RIVAS-VACIAMADRID» → «Rivas-Vaciamadrid»;
+ *  «ALCALÁ DE HENARES» → «Alcalá de Henares». Conectores en minúscula salvo
+ *  al inicio («El Escorial», «Las Rozas»). Las mancomunidades se quedan con
+ *  su nombre en la misma forma. */
+export function municipalityFromBody(nivel2: string): string {
+	const m = nivel2.replace(/\s+/g, " ").trim();
+	const inv = /^(.+),\s*(EL|LA|LOS|LAS)$/i.exec(m);
+	const base = inv ? `${inv[2]} ${inv[1]}` : m;
+	return base
+		.toLowerCase()
+		.replace(/(^|\s|["“«()/-])(\w)/g, (_s, sep, c) => `${sep}${c.toUpperCase()}`)
+		.split(" ")
+		.map((w, i) =>
+			i > 0 && CONNECTORS.has(w.toLowerCase()) ? w.toLowerCase() : w,
+		)
+		.join(" ");
+}
+
 export function mapBdnsRecord(c: {
 	id: number;
 	numeroConvocatoria: string;
@@ -285,6 +312,9 @@ export function mapBdnsRecord(c: {
 		url: bdnsPublicUrl(c.numeroConvocatoria),
 		sourceKind: "bdns",
 		scope,
+		...(scope === "municipal"
+			? { municipality: municipalityFromBody(c.nivel2) }
+			: {}),
 		accessState: "UNKNOWN",
 		extra: {
 			body: `${c.nivel2} — ${c.nivel3}`,
