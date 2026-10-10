@@ -72,4 +72,13 @@ Awards 2026** (CM, Orden 566/2026). Reutiliza código y datos de proyectos
 propios estatales (`la-ayuda`, `EduAyudas`) sin modificarlos — ver
 `docs/13-reutilizacion-donantes.md` y `data/catalog/provenance.json`.
 
-Contribuir: ver `AGENTS.md` (contrato del repo) y `TASK_QUEUE.md` (cola viva).
+Contribuir: este repo publica el producto, los datos, las evidencias
+(`evidence/`) y las decisiones (`DECISIONS.md`). El material de proceso
+(cola, fases, handoffs, memoria) vive en un taller privado y no se sube aquí.
+
+## Cómo se ha construido
+
+Cada regla pasa por autor ⇒ verificador independiente ⇒ hoja de muestreo con
+aprobación humana; solo entonces entra en la release del jurado. Las
+evidencias están en `evidence/` (cada afirmación de la memoria apunta a un
+informe o a una cifra medida) y las decisiones en `DECISIONS.md`.

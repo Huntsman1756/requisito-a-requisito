@@ -14,7 +14,12 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const root = process.cwd();
-const memoria = readFileSync(join(root, "submission/memoria.md"), "utf8");
+// D-14: `submission/` (memoria incluida) vive en el taller privado; en el
+// clone público/CI no está y el test de cifras huérfanas se omite de forma
+// explícita (queda marcado skipped, no en silencio).
+const MEMORIA = join(root, "submission/memoria.md");
+const hasMemoria = existsSync(MEMORIA);
+const memoria = hasMemoria ? readFileSync(MEMORIA, "utf8") : "";
 
 /** Último veracidad.json (los directorios de evidencia ordenan por fecha). */
 function veracidadVigente(): { path: string; text: string } {
@@ -52,7 +57,9 @@ for (const m of memoria.matchAll(/\b\d+(?:[.,]\d+)*\b/g)) {
 }
 
 describe("veracidad (F7-6 / regla 4.13)", () => {
-	it("toda cifra de la memoria aparece en el veracidad vigente", () => {
+	it("toda cifra de la memoria aparece en el veracidad vigente", (ctx) => {
+		// En el clone público no hay submission/: omisión explícita (D-14).
+		if (!hasMemoria) return ctx.skip();
 		const { path, text } = veracidadVigente();
 		const norm = normaliza(text);
 		const huerfanas = [...nums].filter(

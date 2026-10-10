@@ -28,3 +28,21 @@ nul
 
 # Caché del panel (respuestas de modelos)
 .cache/
+
+# Taller privado (D-14): el proceso interno vive en _taller/ (repo privado
+# requisito-a-requisito-taller); estas rutas quedan en el árbol de trabajo
+# pero ya no se siguen en el repo público.
+_taller/
+AGENTS.md
+CLAUDE.md
+TASK_QUEUE.md
+handoffs/
+phases/
+prompts/
+.claude/
+submission/
+templates/handoff.md
+docs/00-contexto-convocatoria.md
+docs/01-estrategia.md
+docs/05-memoria-esqueleto.md
+docs/06-consulta-elegibilidad.md

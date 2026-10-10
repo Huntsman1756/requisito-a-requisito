@@ -132,12 +132,18 @@ describe("anexos: lo que debe dejar la corrida del 14/10", () => {
 });
 
 describe("anexos: el repo tal como está (F10-REL-2)", () => {
-	it("no deja anexos sobrantes en submission/anexos/", () => {
+	// D-14: `submission/` vive en el taller privado; en el clone público/CI
+	// estos tests se omiten marcados skipped (explícito, no en silencio).
+	const hasSubmission = existsSync(join(process.cwd(), "submission"));
+
+	it("no deja anexos sobrantes en submission/anexos/", (ctx) => {
+		if (!hasSubmission) return ctx.skip();
 		const { sobran } = verificarAnexos(join(process.cwd(), "submission/anexos"));
 		expect(sobran).toEqual([]);
 	});
 
-	it("en video/ no hay nada o están los dos vídeos de la corrida", () => {
+	it("en video/ no hay nada o están los dos vídeos de la corrida", (ctx) => {
+		if (!hasSubmission) return ctx.skip();
 		const dir = join(process.cwd(), "submission/anexos", DIR_VIDEO);
 		const hay = existsSync(dir)
 			? readdirSync(dir)

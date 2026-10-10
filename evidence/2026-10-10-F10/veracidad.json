@@ -15,11 +15,13 @@
     },
     {
       "texto": "441 programas del universo clasificados aptos, 778 rechazados con motivo",
-      "evidencia": "cifras.json: universoAptos=441, universoRechazados=778 (data/universe/)"
+      "evidencia": "cifras.json: universoAptos=441, universoRechazados=778 (data/universe/)",
+      "ok": true
     },
     {
       "texto": "419 fichas publicadas en el nivel 2",
-      "evidencia": "cifras.json: fichasNivel2=419; estados OPEN 39 / ROLLING 31 / CLOSED 329 / UNKNOWN 20"
+      "evidencia": "cifras.json: fichasNivel2=419; estados OPEN 39 / ROLLING 31 / CLOSED 329 / UNKNOWN 20",
+      "ok": true
     },
     {
       "texto": "166 fuentes oficiales registradas, 145 citadas en el bundle",
@@ -33,7 +35,8 @@
     },
     {
       "texto": "601 pruebas automáticas en verde",
-      "evidencia": "cifras.json: testsTotal=601, testsPassed=601, testFiles=51 (vitest 10/10)"
+      "evidencia": "cifras.json: testsTotal=601, testsPassed=601, testFiles=51 (vitest 10/10)",
+      "ok": true
     },
     {
       "texto": "155 enlaces del producto verificados el 8/10 (0 fallidos)",
@@ -107,7 +110,8 @@
     },
     {
       "texto": "50 personas golden, 53 expectativas, 0 diferencias (local y bundle desplegado)",
-      "evidencia": "cifras.json: goldenPersonas=50, goldenExpectations=53"
+      "evidencia": "cifras.json: goldenPersonas=50, goldenExpectations=53",
+      "ok": true
     },
     {
       "texto": "8 ayudas tienen requisitos que el cuestionario aún no comprueba (violencia de género, embarazo, dependencia de un familiar, viudedad…); se muestran como no descartables",
