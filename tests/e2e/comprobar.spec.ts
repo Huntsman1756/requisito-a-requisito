@@ -1,10 +1,12 @@
 import { expect, test } from "@playwright/test";
 
+const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
+
 // Recorrido feliz del asistente piloto: introducción → preguntas → resultados.
 test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 	const failedRequests: string[] = [];
 	page.on("requestfailed", (r) => failedRequests.push(r.url()));
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await expect(
 		page.getByRole("heading", { name: /Descubre qué ayudas/ }),
 	).toBeVisible({ timeout: 15000 });
@@ -67,7 +69,7 @@ test("comprobar: flujo completo hasta resultados", async ({ page }) => {
 });
 
 test("comprobar: quien vive fuera de la CM recibe salida honesta", async ({ page }) => {
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await page.getByRole("button", { name: "Empezar" }).click();
 	await page.getByRole("combobox").fill("Sevilla");
 	await expect(page.getByText(/fuera de la Comunidad de Madrid/)).toBeVisible();
@@ -76,13 +78,13 @@ test("comprobar: quien vive fuera de la CM recibe salida honesta", async ({ page
 test("comprobar: sin JS el enlace al catálogo está", async ({ browser }) => {
 	const ctx = await browser.newContext({ javaScriptEnabled: false });
 	const page = await ctx.newPage();
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await expect(page.getByRole("link", { name: /explorar|ayudas/i }).first()).toBeVisible();
 	await ctx.close();
 });
 
 test("sin números repetidos en los textos visibles (R2-I18N)", async ({ page }) => {
-	await page.goto("/");
+	await page.goto(`${BASE}/`);
 	const body = await page.locator("body").innerText();
 	expect(body).not.toMatch(/\b(\d+) \1\b/);
 });

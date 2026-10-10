@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
+
 /**
  * preferencias.spec.ts — feedback 10/10: selector de tema, continuación de
  * una comprobación anterior y «Limpiar filtros» del explorador.
@@ -17,7 +19,7 @@ test.describe("tema claro / oscuro / automático", () => {
 	test("el selector fuerza el tema y lo recuerda al recargar", async ({
 		page,
 	}) => {
-		await page.goto("/");
+		await page.goto(`${BASE}/`);
 		await abrirMenuSiMovil(page);
 		const picker = page.getByRole("group", { name: "Tema de color" }).first();
 		await expect(picker).toBeVisible();
@@ -44,7 +46,7 @@ test.describe("tema claro / oscuro / automático", () => {
 	});
 
 	test("el tema oscuro por selector colorea la página", async ({ page }) => {
-		await page.goto("/");
+		await page.goto(`${BASE}/`);
 		await abrirMenuSiMovil(page);
 		await page.getByRole("button", { name: /Oscuro/ }).first().click();
 		const bg = await page.evaluate(
@@ -74,7 +76,7 @@ test.describe("continuar o empezar de cero", () => {
 		page,
 	}) => {
 		await seed(page);
-		await page.goto("/comprobar/");
+		await page.goto(`${BASE}/comprobar/`);
 		await expect(
 			page.getByText("¿Seguir con tus respuestas o empezar de cero?"),
 		).toBeVisible();
@@ -88,7 +90,7 @@ test.describe("continuar o empezar de cero", () => {
 
 	test("«Empezar de cero» borra el perfil del navegador", async ({ page }) => {
 		await seed(page);
-		await page.goto("/comprobar/");
+		await page.goto(`${BASE}/comprobar/`);
 		await page
 			.getByRole("button", { name: "Empezar de cero" })
 			.click();
@@ -117,7 +119,7 @@ test.describe("continuar o empezar de cero", () => {
 				}),
 			),
 		);
-		await page.goto("/comprobar/");
+		await page.goto(`${BASE}/comprobar/`);
 		await page
 			.getByRole("button", { name: "Seguir con mis respuestas" })
 			.click();
@@ -132,10 +134,13 @@ test.describe("explorar: filtros", () => {
 	test("«Limpiar filtros» solo aparece con filtros activos y los quita", async ({
 		page,
 	}) => {
-		await page.goto("/explorar/");
+		await page.goto(`${BASE}/explorar/`);
 		const clear = page.getByRole("button", { name: "Limpiar filtros" });
 		const count = page.locator(".explorer-count");
 		await expect(clear).toHaveCount(0);
+		// El catálogo carga por fetch: esperar a que salga de «Cargando…»
+		// (en despliegues con latencia puede tardar unos segundos).
+		await expect(count).not.toHaveText("Cargando…", { timeout: 20000 });
 		const total = await count.innerText();
 
 		// Filtro de búsqueda: la etiqueta visible existe y filtra.
@@ -156,7 +161,7 @@ test.describe("explorar: filtros", () => {
 	}) => {
 		const vp = page.viewportSize();
 		test.skip(!vp || vp.width > 860, "solo móvil");
-		await page.goto("/explorar/");
+		await page.goto(`${BASE}/explorar/`);
 		const summary = page.locator(".explorer-advanced > summary");
 		await expect(summary).toBeVisible();
 		await page.getByLabel("Buscar por nombre o palabra").fill("alquiler");

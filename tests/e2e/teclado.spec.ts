@@ -1,12 +1,14 @@
 import { expect, test } from "@playwright/test";
 
+const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
+
 // B2.3 — /comprobar/ solo con teclado y con zoom al 200 % (360×640 y 390×844,
 // claro y oscuro ya cubiertos por los proyectos mobile/dark).
 
 test("comprobar: flujo completo solo con teclado (Tab + Enter)", async ({
 	page,
 }) => {
-	await page.goto("/comprobar/");
+	await page.goto(`${BASE}/comprobar/`);
 	await expect(
 		page.getByRole("heading", { name: /Descubre qué ayudas/ }),
 	).toBeVisible({ timeout: 15000 });
@@ -42,7 +44,7 @@ for (const [w, h] of [
 			deviceScaleFactor: 2,
 		});
 		const page = await ctx.newPage();
-		await page.goto("/comprobar/");
+		await page.goto(`${BASE}/comprobar/`);
 		await expect(
 			page.getByRole("heading", { name: /Descubre qué ayudas/ }),
 		).toBeVisible({ timeout: 15000 });
