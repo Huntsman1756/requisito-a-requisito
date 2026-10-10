@@ -414,6 +414,9 @@ async function audit(page: Page): Promise<RawFinding[]> {
 			// suelto en la esquina, por encima de «PLAZO ABIERTO». Se detecta
 			// comparando la posición esperada del marcador (esquina superior del
 			// padding box) con el primer rect de texto real del li.
+			// Umbrales en em: con zoom de texto (fontSize en el root) el
+			// half-leading y el guión crecen a la par; un umbral fijo en px
+			// daría falsos positivos a 200 %.
 			for (const li of [...main.querySelectorAll("li")]) {
 				if (!visible(li) || li.closest("details:not([open])")) continue;
 				const b = getComputedStyle(li, "::before");
@@ -443,9 +446,11 @@ async function audit(page: Page): Promise<RawFinding[]> {
 				probe.remove();
 				const markerRight =
 					rLi.left + (parseFloat(b.left) || 0) + mw;
+				const em =
+					parseFloat(getComputedStyle(li).fontSize) || 16;
 				if (
-					first.top - markerTop > 4 ||
-					markerRight > first.left + 1
+					first.top - markerTop > Math.max(4, em * 0.35) ||
+					markerRight > first.left + Math.max(1, em * 0.08)
 				)
 					out.push({
 						type: "marcador-sobre-texto",
