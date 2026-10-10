@@ -408,6 +408,51 @@ async function audit(page: Page): Promise<RawFinding[]> {
 						detail: `${el.tagName.toLowerCase()} con sangría UA ${s.marginInlineStart} — «${(el.textContent ?? "").trim().slice(0, 40)}»`,
 					});
 			}
+			// i.2b) marcador «—» montado sobre el texto: el bug del 10/10. El
+			// ::before absoluto de las listas de contenido caía en listas con
+			// diseño propio (.log de /observatorio/ y /datos/): quedaba un guión
+			// suelto en la esquina, por encima de «PLAZO ABIERTO». Se detecta
+			// comparando la posición esperada del marcador (esquina superior del
+			// padding box) con el primer rect de texto real del li.
+			for (const li of [...main.querySelectorAll("li")]) {
+				if (!visible(li) || li.closest("details:not([open])")) continue;
+				const b = getComputedStyle(li, "::before");
+				if (!b.content || b.content === "none" || b.content === "normal")
+					continue;
+				if (b.position !== "absolute") continue;
+				const ch = b.content.replace(/^["']|["']$/g, "");
+				if (!ch.trim()) continue;
+				const range = document.createRange();
+				range.selectNodeContents(li);
+				const first = [...range.getClientRects()].find(
+					(r) => r.width > 0.5 && r.height > 0.5,
+				);
+				if (!first) continue;
+				const rLi = li.getBoundingClientRect();
+				const borderTop = parseFloat(getComputedStyle(li).borderTopWidth) || 0;
+				// Marcador sobre la primera línea (su Y esperada está >4 px por
+				// encima del texto) o pisándolo por la izquierda.
+				const markerTop = rLi.top + borderTop;
+				const probe = document.createElement("span");
+				probe.style.cssText =
+					"position:absolute;visibility:hidden;white-space:pre";
+				probe.style.font = b.font;
+				probe.textContent = ch;
+				li.appendChild(probe);
+				const mw = probe.getBoundingClientRect().width;
+				probe.remove();
+				const markerRight =
+					rLi.left + (parseFloat(b.left) || 0) + mw;
+				if (
+					first.top - markerTop > 4 ||
+					markerRight > first.left + 1
+				)
+					out.push({
+						type: "marcador-sobre-texto",
+						severity: "alta",
+						detail: `::before «${ch}» mal posicionado en li — «${(li.textContent ?? "").trim().slice(0, 40)}»`,
+					});
+			}
 			// i.3) tabla sin estilo propio (border-spacing del navegador)
 			for (const el of [...main.querySelectorAll("table")]) {
 				if (!visible(el)) continue;
@@ -699,7 +744,7 @@ async function seedAndGoto(
 		{ answers0: answers, step0: step },
 	);
 	await page.goto(url("/comprobar/"));
-	await page.getByRole("button", { name: "Empezar", exact: true }).click();
+	await page.getByRole("button", { name: "Empezar", exact: true }).or(page.getByRole("button", { name: "Seguir con mis respuestas" })).click();
 }
 
 /** Avanza con «Siguiente» hasta la revisión y abre resultados. Si la

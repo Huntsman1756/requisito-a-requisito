@@ -45,7 +45,7 @@ async function completar(page: Page, answers: unknown) {
 		);
 	}, answers);
 	await page.goto(`${BASE}/comprobar/`);
-	await page.getByRole("button", { name: "Empezar", exact: true }).click();
+	await page.getByRole("button", { name: "Empezar", exact: true }).or(page.getByRole("button", { name: "Seguir con mis respuestas" })).click();
 	for (let i = 0; i < 18; i++) {
 		if (
 			await page.getByRole("heading", { name: "Revisa tus respuestas" }).count()

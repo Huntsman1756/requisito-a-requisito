@@ -175,7 +175,7 @@ test("persona positiva: cada programa se muestra en resultados de comprobar", as
 				answers,
 			);
 			await page.goto(url("/comprobar/"));
-			await page.getByRole("button", { name: "Empezar", exact: true }).click();
+			await page.getByRole("button", { name: "Empezar", exact: true }).or(page.getByRole("button", { name: "Seguir con mis respuestas" })).click();
 			for (let i = 0; i < fixtures.questionCount + 1; i++) {
 				if (
 					await page

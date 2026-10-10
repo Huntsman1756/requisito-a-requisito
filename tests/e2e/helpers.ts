@@ -7,9 +7,20 @@ import { expect, type Page } from "@playwright/test";
  *  resultados-legibles.spec. */
 const BASE = (process.env.E2E_BASE_URL ?? "").replace(/\/$/, "");
 
+/** En /comprobar/: si hay respuestas guardadas (handoff sembrado o una
+ *  comprobación anterior), la portada muestra «Seguir con mis respuestas»;
+ *  si no, «Empezar». Este helper acepta cualquiera de los dos. */
+export async function empezar(page: Page) {
+	const start = page.getByRole("button", { name: "Empezar", exact: true });
+	const resume = page.getByRole("button", {
+		name: "Seguir con mis respuestas",
+	});
+	await start.or(resume).click();
+}
+
 export async function completarCasoDaniel(page: Page) {
 	await page.goto(`${BASE}/comprobar/`);
-	await page.getByRole("button", { name: "Empezar" }).click();
+	await empezar(page);
 	// municipio: Ajalvir
 	const box = page.getByRole("combobox");
 	await box.fill("Ajalvir");
