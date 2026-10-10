@@ -59,6 +59,9 @@ export interface ResultsData {
 	manifestDigest: string;
 	/** Capa de presentación F10-RES-2: condición definitoria por regla. */
 	condiciones: Record<string, { req: string; texto: string }[] | undefined>;
+	/** Última revalidación correcta por fuente (frescura.json); {} si el
+	 *  fichero no responde — nunca se inventa una fecha. */
+	freshness: Record<string, string>;
 }
 
 export interface CheckData extends ResultsData {
@@ -100,7 +103,7 @@ export async function loadIntroData(): Promise<IntroData> {
 }
 
 export async function loadResultsData(): Promise<ResultsData> {
-	const [bundle, level2, manifest, cond] = await Promise.all([
+	const [bundle, level2, manifest, cond, frescura] = await Promise.all([
 		get<Bundle>("/datos/elegibilidad/bundle.json"),
 		get<{ items: Level2Item[] }>("/datos/elegibilidad/nivel-2.json"),
 		get<{ bundleDigest: string }>("/datos/elegibilidad/manifest.json"),
@@ -110,11 +113,16 @@ export async function loadResultsData(): Promise<ResultsData> {
 				{ condiciones?: { req: string; texto: string }[] }
 			>;
 		}>("/datos/elegibilidad/condiciones-definitorias.json"),
+		// Publicado desde runs.jsonl; si falta (build antiguo), sin fechas.
+		get<{ sources?: Record<string, string> }>(
+			"/datos/elegibilidad/frescura.json",
+		).catch(() => ({ sources: {} })),
 	]);
 	return {
 		bundle,
 		level2: level2.items,
 		manifestDigest: manifest.bundleDigest,
+		freshness: frescura.sources ?? {},
 		condiciones: Object.fromEntries(
 			Object.entries(cond.rules).map(([slug, r]) => [
 				slug,

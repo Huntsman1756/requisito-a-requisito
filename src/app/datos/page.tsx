@@ -34,20 +34,22 @@ export default function Datos() {
 
 			<h2 style={{ marginTop: "2rem" }}>Ficheros</h2>
 			<div className="log">
-				<ul>
+				<ul className="log-rows">
 					{indice.files.map((f) => (
 						<li key={f.file}>
-							<span className="label">
+							<span className="mono">
 								{/* <a>, no Link: los .json son descargas estáticas; el
 									prefetch RSC de Next pediría <file>.txt → 404. */}
 								<a href={`/datos/elegibilidad/${f.file}`}>{f.file}</a>
+							</span>
+							<span className="label">
+								{f.bytes.toLocaleString("es-ES")} B
 							</span>
 							<span>
 								{f.description}
 								<br />
 								<span className="note">
-									{f.bytes.toLocaleString("es-ES")} B · sha256{" "}
-									<code>{f.sha256.slice(0, 16)}…</code> · esquema:{" "}
+									sha256 <code>{f.sha256.slice(0, 16)}…</code> · esquema:{" "}
 									<code>{f.schema}</code>
 								</span>
 							</span>

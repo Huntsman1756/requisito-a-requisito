@@ -3,6 +3,7 @@ import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { formatDateEs } from "../../lib/format";
+import { type FreshnessRun, lastAutoRun } from "../../lib/freshness";
 import { allRuleSets } from "../../lib/rule-pages";
 
 export const metadata: Metadata = { title: "Observatorio" };
@@ -39,30 +40,27 @@ export default function Observatorio() {
 	// Frescura: últimas corridas del job (data/freshness/runs.jsonl).
 	// La diaria de CI cubre las normas; la local (R7-LOCAL) cubre las sedes
 	// que bloquean el CI. Se muestran las dos fechas.
-	let lastCi: { date: string; checked: number; skipped?: string[]; stale: string[] } | null = null;
-	let lastLocal: { date: string; checked: number; stale: string[] } | null = null;
+	let runs: FreshnessRun[] = [];
 	try {
-		const lines = readFileSync(join(process.cwd(), "data/freshness/runs.jsonl"), "utf8")
+		runs = readFileSync(join(process.cwd(), "data/freshness/runs.jsonl"), "utf8")
 			.trim()
-			.split("\n");
-		for (const l of lines) {
-			const r = JSON.parse(l) as {
-				date: string;
-				runner?: string;
-				checked: number;
-				skipped?: string[];
-				stale: string[];
-			};
-			if (r.runner === "local") lastLocal = r;
-			else lastCi = r;
-		}
+			.split("\n")
+			.filter(Boolean)
+			.map((l) => JSON.parse(l) as FreshnessRun);
 	} catch {
-		lastCi = null;
+		runs = [];
+	}
+	let lastCi: FreshnessRun | null = null;
+	let lastLocal: FreshnessRun | null = null;
+	for (const r of runs) {
+		if (r.runner === "local") lastLocal = r;
+		else lastCi = r;
 	}
 	const lastRun = lastCi;
+	const lastAuto = lastAutoRun(runs);
 	const dailyCount = lastRun ? lastRun.checked : null;
 	const periodicCount = lastRun ? (lastRun.skipped?.length ?? 0) : null;
-	const staleCount = lastRun ? lastRun.stale.length : null;
+	const staleCount = lastRun ? (lastRun.stale ?? []).length : null;
 
 	return (
 		<section className="shell band" aria-labelledby="observatorio-title" style={{ borderTop: 0 }}>
@@ -81,7 +79,7 @@ export default function Observatorio() {
 
 			<h2 style={{ marginTop: "2rem" }}>Catálogo por estado de acceso</h2>
 			<div className="log">
-				<ul>
+				<ul className="log-rows">
 					{Object.entries(byState as Record<string, number>).map(([k, v]) => (
 						<li key={k}>
 							<span className="label">{{ OPEN: "Plazo abierto", ROLLING: "Plazo continuo", UPCOMING: "Próxima", CLOSED: "Cerrado", CLOSED_RECURRING: "Se convoca cada año", UNKNOWN: "Por confirmar" }[k] ?? k}</span>
@@ -100,6 +98,12 @@ export default function Observatorio() {
 			</div>
 
 			<h2 style={{ marginTop: "2rem" }}>Frescura de las fuentes</h2>
+			{lastAuto && (
+				<p>
+					Última revisión automática de fuentes:{" "}
+					<strong>{formatDateEs(lastAuto.date)}</strong>
+				</p>
+			)}
 			{lastRun ? (
 				<>
 					<div className="obs">

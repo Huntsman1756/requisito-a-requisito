@@ -286,7 +286,7 @@ export function ResultsView({
 			)}
 			<div className="results-list">
 				{encajas.map(({ rs, ev }) => (
-					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} />
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} fresh={data.freshness} />
 				))}
 			</div>
 
@@ -301,7 +301,7 @@ export function ResultsView({
 			)}
 			<div className="results-list">
 				{posiblesPocas.map(({ rs, ev }) => (
-					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} />
+					<ResultCard key={ev.benefitSlug} rs={rs} ev={ev} condMap={condMap} fresh={data.freshness} />
 				))}
 			</div>
 			{noDescartar.length > 0 && (
@@ -392,7 +392,7 @@ export function ResultsView({
 						<ul className="results-list">
 							{noCumple.map(({ rs, ev }) => (
 								<li key={ev.benefitSlug}>
-									<ResultCard rs={rs} ev={ev} condMap={condMap} compact />
+									<ResultCard rs={rs} ev={ev} condMap={condMap} fresh={data.freshness} compact />
 								</li>
 							))}
 						</ul>
@@ -624,7 +624,7 @@ function MissingPanel({
 		<aside className="missing-panel" aria-labelledby="missing-title">
 			<h2 id="missing-title">{t("results.missing.title")}</h2>
 			<p>{t("results.missing.body", { n: missingAids })}</p>
-			<ul>
+			<ul className="missing-fields">
 				{missing.map((m) => {
 					const q = questions.find((x) => x.field === m.field);
 					if (!q) return null;
@@ -747,11 +747,13 @@ function ResultCard({
 	ev,
 	compact,
 	condMap,
+	fresh,
 }: {
 	rs: RuleSet;
 	ev: EvaluationResult;
 	compact?: boolean;
 	condMap: Record<string, { req: string; texto: string }[] | undefined>;
+	fresh: Record<string, string>;
 }) {
 	const [open, setOpen] = useState(false);
 	const failed = ev.requirements.filter((r) => r.status === "F" && r.hard);
@@ -979,7 +981,16 @@ function ResultCard({
 						</p>
 						{open && (
 							<p className="why">
-								{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })} ·{" "}
+								{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })}
+								{rs.sources[0] && fresh[rs.sources[0].id] && (
+									<>
+										{" · "}
+										{t("card.sourceCheckedAt", {
+											date: formatDateEs(fresh[rs.sources[0].id]),
+										})}
+									</>
+								)}{" "}
+								·{" "}
 								{rs.sources
 									.filter((s) => s.rank <= 2)
 									.map((s) => domainBadge(s.url))
@@ -1013,7 +1024,7 @@ function ResultCard({
 			)}
 
 			<p className="card-foot">
-				<span className="clamp2 review-state">
+				<span className="review-state">
 					Comprobada con la fuente
 					{rs.humanReview?.status === "approved" && " · revisada"}
 					{rs.humanReview?.status !== "approved" &&
@@ -1024,6 +1035,14 @@ function ResultCard({
 						" · revisión final pendiente"}{" "}
 					· {rs.sources[0] ? domainBadge(rs.sources[0].url) : ""} ·{" "}
 					{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })}
+					{rs.sources[0] && fresh[rs.sources[0].id] && (
+						<>
+							{" · "}
+							{t("card.sourceCheckedAt", {
+								date: formatDateEs(fresh[rs.sources[0].id]),
+							})}
+						</>
+					)}
 					{!compact && (
 						<>
 							{" · "}
@@ -1193,7 +1212,7 @@ function RequirementMatrix({
 							<p className="label">
 								{aidTitle(cell.aid)} · {DIMENSIONS.find((d) => d.id === cell.dim)?.label}
 							</p>
-							<ul>
+							<ul className="cite-rows">
 								{(() => {
 									const row = evaluations.find(({ ev }) => ev.benefitSlug === cell.aid);
 									if (!row) return null;

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Level2Item } from "../lib/check-data";
 import { es, type I18nKey } from "../lib/i18n/es";
 
@@ -65,6 +65,18 @@ export function Explorer() {
 	const [scope, setScope] = useState("");
 	const [state, setState] = useState("");
 	const [q, setQ] = useState("");
+	// En escritorio los filtros van abiertos; en móvil quedan plegados en
+	// «Filtrar (N activos)». El estado se fija tras hidratar para que el
+	// HTML exportado (open) coincida y en móvil se cierre solo.
+	const [filtersOpen, setFiltersOpen] = useState(true);
+
+	useEffect(() => {
+		const mq = window.matchMedia("(min-width: 861px)");
+		const apply = () => setFiltersOpen(mq.matches);
+		apply();
+		mq.addEventListener("change", apply);
+		return () => mq.removeEventListener("change", apply);
+	}, []);
 
 	useMemo(() => {
 		const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -106,20 +118,64 @@ export function Explorer() {
 			);
 	}, [items, theme, event, scope, state, q]);
 
+	const activeFilters =
+		(theme ? 1 : 0) +
+		(event ? 1 : 0) +
+		(scope ? 1 : 0) +
+		(state ? 1 : 0) +
+		(q.trim() ? 1 : 0);
+	const clearFilters = () => {
+		setTheme("");
+		setEvent("");
+		setScope("");
+		setState("");
+		setQ("");
+	};
+
 	return (
 		<>
 			<form className="explorer-filters" aria-label="Filtros" onSubmit={(e) => e.preventDefault()}>
-				<input
-					type="search"
-					placeholder="Buscar…"
-					value={q}
-					onChange={(e) => setQ(e.target.value)}
-					aria-label="Buscar por nombre"
-				/>
-				<Filter label="Tema" value={theme} options={THEMES} onChange={setTheme} />
-				<Filter label="Evento vital" value={event} options={EVENTS} onChange={setEvent} />
-				<Filter label="Ámbito" value={scope} options={SCOPES} onChange={setScope} />
-				<Filter label="Estado" value={state} options={STATES} onChange={setState} />
+				<label className="explorer-filter explorer-search">
+					Buscar por nombre o palabra
+					<span className="explorer-search__box">
+						<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+							<circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" strokeWidth="2" />
+							<path d="M13 13l4.2 4.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+						</svg>
+						<input
+							type="search"
+							placeholder="p. ej. alquiler, beca, familia numerosa"
+							value={q}
+							onChange={(e) => setQ(e.target.value)}
+						/>
+					</span>
+				</label>
+				<details
+					className="explorer-advanced"
+					open={filtersOpen}
+					onToggle={(e) => setFiltersOpen(e.currentTarget.open)}
+				>
+					<summary>
+						Filtrar
+						{activeFilters > 0 &&
+							` (${activeFilters} ${activeFilters === 1 ? "activo" : "activos"})`}
+					</summary>
+					<div className="explorer-advanced__grid">
+						<Filter label="Tema" value={theme} options={THEMES} onChange={setTheme} />
+						<Filter label="Evento vital" value={event} options={EVENTS} onChange={setEvent} />
+						<Filter label="Ámbito" value={scope} options={SCOPES} onChange={setScope} />
+						<Filter label="Estado" value={state} options={STATES} onChange={setState} />
+					</div>
+				</details>
+				{activeFilters > 0 && (
+					<button
+						type="button"
+						className="btn-quiet explorer-clear"
+						onClick={clearFilters}
+					>
+						Limpiar filtros
+					</button>
+				)}
 			</form>
 			<p role="status" className="explorer-count">
 				{items === null

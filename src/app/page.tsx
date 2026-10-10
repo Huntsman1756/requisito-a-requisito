@@ -35,11 +35,24 @@ function stats() {
 		for (const e of i.lifeEvents ?? []) acc[e] = (acc[e] ?? 0) + 1;
 		return acc;
 	}, {});
+	let freshRun = "";
+	try {
+		freshRun =
+			(JSON.parse(
+				readFileSync(
+					join(process.cwd(), "public/datos/elegibilidad/frescura.json"),
+					"utf8",
+				),
+			) as { lastAutoRunAt?: string | null }).lastAutoRunAt ?? "";
+	} catch {
+		freshRun = "";
+	}
 	return {
 		specimenDomain: (specimen?.sources?.[0]?.id?.split("-")[0] ?? "boe").toUpperCase(),
 		rules: slugs.size,
 		level2: n2.items.length,
 		verified,
+		freshRun,
 		specimen,
 		byEvent,
 	};
@@ -68,7 +81,7 @@ const EVENTS: [string, string][] = [
 ];
 
 export default function Home() {
-	const { rules, level2, verified, specimen, byEvent, specimenDomain } = stats();
+	const { rules, level2, verified, freshRun, specimen, byEvent, specimenDomain } = stats();
 	const sReq = [
 		...(specimen?.requirements ?? []).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "ok", mark: "✓", al: "Requisito comprobado" })),
 		...(specimen?.uncoveredRequirements ?? []).slice(0, 1).map((r: { label: string; citation?: { locator?: string } }) => ({ label: r.label, locator: r.citation?.locator, tick: "na", mark: "⚠", al: "No comprobable aquí" })),
@@ -209,8 +222,16 @@ export default function Home() {
 				</ol>
 				<p className="note" style={{ marginTop: "1.4rem" }}>
 					{rules} ayudas comprobadas requisito a requisito y {level2} del
-					catálogo con fuente oficial. Última verificación:{" "}
-					{formatDateEs(verified)}. <Link href="/observatorio">Observatorio</Link>
+					catálogo con fuente oficial. Regla verificada con la fuente:{" "}
+					{formatDateEs(verified)}
+					{freshRun && (
+						<>
+							{" "}
+							· Última revisión automática de fuentes:{" "}
+							{formatDateEs(freshRun)}
+						</>
+					)}
+					. <Link href="/observatorio">Observatorio</Link>
 				</p>
 			</section>
 		</>

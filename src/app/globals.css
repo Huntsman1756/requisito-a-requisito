@@ -183,6 +183,24 @@ a.cta, button.cta { margin-top: 0 }
 .seal { position: absolute; right: -10px; bottom: -22px; transform: rotate(-7deg); border: 3px double var(--seal); color: var(--seal); background: color-mix(in srgb, var(--sheet) 86%, transparent); padding: .45rem .8rem .5rem; border-radius: 4px; text-align: center; font: 700 .74rem/1.25 var(--f-label); letter-spacing: .09em; text-transform: uppercase }
 .seal small { display: block; font: 500 .7rem var(--f-mono); letter-spacing: 0; text-transform: none }
 
+/* selector de tema (claro / oscuro / automático): preferencia de vista en
+ * localStorage rr_theme — no es dato del perfil y no se envía a ningún
+ * sitio. En escritorio va en la cabecera; en móvil dentro del menú. */
+.theme-picker { display: inline-flex; border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; background: var(--sheet) }
+.theme-opt { border: 0; background: transparent; color: var(--ink-2); font: 600 .78rem var(--f-label); letter-spacing: .05em; text-transform: uppercase; padding: .45rem .7rem; min-height: 44px; display: inline-flex; align-items: center; gap: .35rem; cursor: pointer }
+.theme-opt + .theme-opt { border-left: 1px solid var(--rule) }
+.theme-opt[aria-pressed="true"] { background: var(--seal-soft); color: var(--seal) }
+.theme-slot--wide { display: none }
+@media (min-width: 641px) { .theme-slot--wide { display: block } }
+@media (max-width: 640px) {
+	.nav-menu .theme-picker { width: 100%; margin-top: .6rem }
+	.nav-menu .theme-opt { flex: 1; justify-content: center }
+}
+
+/* continuación de una comprobación anterior (rr_check_handoff) */
+.resume { margin-top: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--rule); border-left: 4px solid var(--seal); border-radius: 0 var(--r) var(--r) 0; background: var(--sheet) }
+.resume .cta { margin-top: .6rem }
+
 /* bandas de contenido */
 section.band, .band { padding-block: 2.6rem; border-top: 1px solid var(--rule) }
 .band h2 { font-size: clamp(1.45rem, 2.6vw, 1.9rem); letter-spacing: -0.015em }
@@ -355,6 +373,13 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 .legend span { display: inline-flex; gap: .4rem; align-items: center }
 .legend .tick { width: 1.1rem; height: 1.1rem; font-size: .7rem }
 .cite-panel { margin-top: 1rem; background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--seal); border-radius: 0 var(--r) var(--r) 0; padding: 1rem 1.2rem }
+/* Listas con diseño propio: llevan clase para que el marcador «—» de las
+ * listas de contenido (main ul:not([class])) no se les cuele — el guión
+ * quedaba montado sobre «PLAZO ABIERTO» y duplicaba los ticks de la cita
+ * (feedback 10/10). */
+.cite-rows { list-style: none; padding: 0; margin: .3rem 0 0 }
+.missing-fields { list-style: none; padding: 0; margin: .4rem 0 0 }
+.log-rows { list-style: none; margin: 0; padding: 0 }
 .cite-panel blockquote { margin: .5rem 0 0; font-size: 1rem }
 .cite-panel mark { background: var(--seal-soft); color: var(--ink); padding: 0 .15rem; border-radius: 2px }
 
@@ -376,10 +401,32 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; font-si
 .actions { display: flex; gap: .7rem; flex-wrap: wrap; margin: 1.4rem 0 }
 
 /* explorador */
-.explorer-filters { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 }
-.explorer-filters input[type="search"] { flex: 1 1 200px; min-width: 0; max-width: 100%; padding: .55rem .75rem; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
+.explorer-filters { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0; align-items: flex-end }
+.explorer-filters input[type="search"] { width: 100%; min-width: 0; max-width: 100%; padding: .55rem .75rem .55rem 2.3rem; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
+.explorer-search { flex: 1 1 16rem; max-width: 28rem }
+.explorer-search__box { position: relative; display: block }
+.explorer-search__box svg { position: absolute; left: .75rem; top: 50%; transform: translateY(-50%); width: 1.05rem; height: 1.05rem; color: var(--ink-2); pointer-events: none }
 .explorer-filter { display: flex; flex-direction: column; gap: .25rem; min-width: 0; max-width: 100%; font-size: .85rem; color: var(--ink-2) }
 .explorer-filter select { padding: .5rem; min-width: 0; max-width: 100%; border: 2px solid var(--rule); border-radius: var(--r); font: inherit; min-height: 44px; background: var(--sheet); color: var(--ink) }
+/* En escritorio el <details> no existe visualmente: ocupa el resto de la
+ * fila y los selects fluyen dentro. En móvil se pliega en «Filtrar (N)». */
+.explorer-advanced { flex: 2 1 34rem }
+.explorer-advanced > summary { list-style: none; display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 1rem; border: 1px solid var(--rule); border-radius: var(--r); font: 600 .95rem var(--f-body); color: var(--seal); cursor: pointer }
+.explorer-advanced > summary::after { content: "▸"; color: var(--ink-2) }
+.explorer-advanced[open] > summary::after { content: "▾" }
+.explorer-advanced__grid { display: flex; flex-wrap: wrap; gap: .75rem }
+.explorer-advanced__grid .explorer-filter { flex: 1 1 11rem }
+@media (min-width: 861px) {
+	.explorer-advanced > summary { display: none }
+	/* Si el details quedara cerrado (p. ej. estado previo), no se ocultan
+	 * los filtros en escritorio. */
+	.explorer-advanced:not([open]) .explorer-advanced__grid { display: flex }
+}
+@media (max-width: 860px) {
+	.explorer-search { flex: 1 1 100%; max-width: none }
+	.explorer-advanced { flex: 1 1 100% }
+	.explorer-advanced__grid { margin-top: .75rem }
+}
 .explorer-count { color: var(--ink-2) }
 .explorer-list { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0,1fr); gap: .5rem }
 .explorer-item { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; flex-wrap: wrap; padding: .65rem .9rem; border: 1px solid var(--rule); border-radius: var(--r); background: var(--sheet) }

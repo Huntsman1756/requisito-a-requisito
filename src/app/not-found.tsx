@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
 	return (
-		<section aria-labelledby="nf-title">
+		<section className="shell band" aria-labelledby="nf-title" style={{ borderTop: 0 }}>
 			<h1 id="nf-title">Esta página no existe</h1>
 			<p className="lede">
 				Puede que la dirección esté mal escrita o que la página se haya

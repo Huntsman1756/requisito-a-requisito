@@ -27,6 +27,7 @@ import {
 } from "node:fs";
 import { join } from "node:path";
 import { extractText } from "./eligibility-snapshot";
+import { CI_UNREACHABLE_HOSTS } from "../src/lib/freshness";
 import { normalizeText } from "../src/lib/eligibility-engine/text-normalize";
 
 const root = process.cwd();
@@ -103,14 +104,8 @@ function excerptsForSource(sourceId: string): string[] {
 // real; comunidad.madrid responde 404 al mismo tráfico (verificado:
 // 200 desde red residencial). Contarían como stale/errores falsos;
 // se verifican en corridas locales con FRESHNESS_LOCAL=1.
-const CI_UNREACHABLE_HOSTS = new Set([
-	"www.seg-social.es",
-	"prestaciones.seg-social.es",
-	"sede.seg-social.gob.es",
-	"www.comunidad.madrid",
-	"sede.comunidad.madrid",
-	"comunidad.madrid",
-]);
+// El conjunto vive en src/lib/freshness.ts (fuente única: también lo usa
+// la publicación de frescura.json).
 const unreachableHosts = new Set(
 	process.env.FRESHNESS_LOCAL === "1" ? [] : [...CI_UNREACHABLE_HOSTS],
 );

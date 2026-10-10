@@ -21,6 +21,7 @@ import { BUNDLE_DIGEST } from "../../generated/bundle-digest";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
 import {
 	clearAll,
+	type Handoff,
 	readHandoff,
 	writeHandoff,
 } from "../../lib/profile-store";
@@ -53,6 +54,10 @@ export function CheckFlow() {
 	const [results, setResults] = useState<ResultsData | null>(null);
 	const [answers, setAnswers] = useState<CitizenProfile["answers"]>({});
 	const [step, setStep] = useState(0);
+	// Respuestas de una comprobación anterior (sessionStorage rr_check_handoff):
+	// si existen, la portada de /comprobar/ pregunta si seguir o empezar de
+	// cero en vez de reutilizarlas en silencio (feedback 10/10).
+	const [saved, setSaved] = useState<Handoff | null>(null);
 	const [editReturn, setEditReturn] = useState<Phase | null>(null);
 	const [announce, setAnnounce] = useState("");
 	const [lifeEvent, setLifeEvent] = useState<string | null>(null);
@@ -91,7 +96,8 @@ export function CheckFlow() {
 					}
 				}
 				const saved = readHandoff();
-				if (saved) {
+				if (saved && Object.keys(saved.answers ?? {}).length > 0) {
+					setSaved(saved);
 					setAnswers(saved.answers);
 					setStep(saved.step);
 				}
@@ -159,17 +165,24 @@ export function CheckFlow() {
 	const focusMain = () =>
 		setTimeout(() => mainRef.current?.querySelector("h1")?.setAttribute("tabindex", "-1"), 0);
 
-	const goTo = (p: Phase, nextStep?: number) => {
+	const goTo = (
+		p: Phase,
+		nextStep?: number,
+		opts?: { persist?: boolean; answers?: CitizenProfile["answers"] },
+	) => {
 		if (nextStep !== undefined) setStep(nextStep);
 		// Al llegar a la revisión ya se ve el final: pedir el bundle y el
 		// nivel 2 para que «Ver mis resultados» sea instantáneo.
 		if (p === "review" || p === "results") ensureResults();
 		setPhase(p);
 		if (typeof window !== "undefined") window.scrollTo(0, 0);
-		if (intro) {
+		// persist:false — al borrar o empezar de cero no se reescribe el
+		// handoff con las respuestas viejas (antes «Borrar mis respuestas»
+		// volvía a guardarlas en el mismo clic).
+		if (intro && opts?.persist !== false) {
 			writeHandoff({
 				step: nextStep ?? step,
-				answers,
+				answers: opts?.answers ?? answers,
 				savedAt: new Date().toISOString(),
 			});
 		}
@@ -221,6 +234,7 @@ export function CheckFlow() {
 					level2: results.level2,
 					manifestDigest: results.manifestDigest,
 					condiciones: results.condiciones,
+					freshness: results.freshness,
 					questions: intro.questions,
 					territory: intro.territory,
 				}
@@ -247,17 +261,57 @@ export function CheckFlow() {
 						Responde unas preguntas y te decimos qué ayudas merece la pena
 						comprobar. No hace falta registrarse.
 					</p>
-					<p>
-						<button
-							type="button"
-							className="cta"
-							disabled={!intro}
-							aria-busy={!intro}
-							onClick={() => goTo("questions", 0)}
-						>
-							{t("check.intro.start")}
-						</button>
-					</p>
+					{saved ? (
+						<div className="resume">
+							<p>{t("check.resume.ask")}</p>
+							<p className="cta">
+								<button
+									type="button"
+									className="cta"
+									disabled={!intro}
+									aria-busy={!intro}
+									onClick={() => {
+										const target = Math.min(
+											saved.step,
+											Math.max(visibleQuestions.length - 1, 0),
+										);
+										if (saved.step >= visibleQuestions.length)
+											goTo("review");
+										else goTo("questions", target);
+										setSaved(null);
+									}}
+								>
+									{t("check.resume.continue")}
+								</button>
+								<button
+									type="button"
+									className="btn-quiet"
+									onClick={() => {
+										clearAll();
+										setSaved(null);
+										setAnswers({});
+										setLifeEvent(null);
+										setStep(0);
+										goTo("questions", 0, { persist: false });
+									}}
+								>
+									{t("check.resume.fresh")}
+								</button>
+							</p>
+						</div>
+					) : (
+						<p>
+							<button
+								type="button"
+								className="cta"
+								disabled={!intro}
+								aria-busy={!intro}
+								onClick={() => goTo("questions", 0)}
+							>
+								{t("check.intro.start")}
+							</button>
+						</p>
+					)}
 					<fieldset className="life-events">
 						<legend>{t("check.intro.lifeEvents")}</legend>
 						{(
@@ -415,7 +469,7 @@ export function CheckFlow() {
 						setExample(null);
 						setAnswers({});
 						setStep(0);
-						goTo("intro");
+						goTo("intro", undefined, { persist: false });
 					}}
 					onAnnounce={setAnnounce}
 				/>

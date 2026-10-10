@@ -27,6 +27,10 @@ export const es = {
 	"check.review.title": "Revisa tus respuestas",
 	"check.review.edit": "Cambiar",
 	"check.review.submit": "Ver mis resultados",
+	"check.resume.ask":
+		"¿Seguir con tus respuestas o empezar de cero?",
+	"check.resume.continue": "Seguir con mis respuestas",
+	"check.resume.fresh": "Empezar de cero",
 	"check.error.required": "Elige una opción para continuar.",
 	"check.error.range": "Introduce un valor válido.",
 	"check.error.dependentAge":
@@ -246,7 +250,8 @@ export const es = {
 	"card.gotoSource": "Ver la fuente oficial",
 	"card.gotoSimulator": "Compruébalo con el simulador oficial",
 	"card.fullDetail": "Ver ficha completa",
-	"card.verifiedAt": "Verificado el {date}",
+	"card.verifiedAt": "Regla verificada con la fuente: {date}",
+	"card.sourceCheckedAt": "Fuente revisada automáticamente: {date}",
 
 	"legal.notice":
 		"Esto no determina tu derecho a la ayuda. La decisión corresponde al organismo competente.",

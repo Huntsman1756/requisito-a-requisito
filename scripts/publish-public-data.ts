@@ -22,6 +22,11 @@ import { join } from "node:path";
 import { aidTitle } from "../src/lib/aid-titles";
 import { deadlineState } from "../src/lib/eligibility-engine/deadline";
 import type { RuleSet } from "../src/lib/eligibility-engine/schema";
+import {
+	type FreshnessRun,
+	lastAutoRun,
+	lastOkBySource,
+} from "../src/lib/freshness";
 import { usedFields } from "../src/lib/used-fields";
 
 const root = process.cwd();
@@ -315,9 +320,25 @@ writeFileSync(
 // JSON por fuente junto al .txt del snapshot; `textSha256` es la huella del
 // texto normalizado contra la que se verifica cada extracto citado.
 const srcDir = join(root, "data/eligibility/sources");
-const fuentes = readdirSync(srcDir)
+// Frescura automática por fuente (data/freshness/runs.jsonl): la web
+// muestra «Fuente revisada automáticamente: <fecha>» con la última corrida
+// en la que ESA fuente se comprobó con resultado correcto. Sin corrida no
+// hay fecha — nada se inventa (feedback 10/10, regla 4.12).
+const runs: FreshnessRun[] = existsSync(
+	join(root, "data/freshness/runs.jsonl"),
+)
+	? readFileSync(join(root, "data/freshness/runs.jsonl"), "utf8")
+			.trim()
+			.split("\n")
+			.filter(Boolean)
+			.map((l) => JSON.parse(l) as FreshnessRun)
+	: [];
+const fuentesMeta = readdirSync(srcDir)
 	.filter((f) => f.endsWith(".json") && f !== "registry.json")
-	.map((f) => JSON.parse(readFileSync(join(srcDir, f), "utf8")))
+	.map((f) => JSON.parse(readFileSync(join(srcDir, f), "utf8")));
+const lastOk = lastOkBySource(runs, fuentesMeta);
+const lastRun = lastAutoRun(runs);
+const fuentes = fuentesMeta
 	.map((s: {
 		id: string; url: string; fetchedAt: string; sha256: string;
 		textSha256: string; contentType: string; rank: number;
@@ -325,11 +346,24 @@ const fuentes = readdirSync(srcDir)
 		id: s.id, url: s.url, fetchedAt: s.fetchedAt,
 		sha256: s.sha256, textSha256: s.textSha256,
 		contentType: s.contentType, rank: s.rank,
+		lastRevalidatedAt: lastOk[s.id] ?? null,
 	}))
 	.sort((a: { id: string }, b: { id: string }) => a.id.localeCompare(b.id));
 writeFileSync(
 	join(OUT, "fuentes.json"),
 	`${JSON.stringify({ sources: fuentes }, null, 2)}\n`,
+);
+writeFileSync(
+	join(OUT, "frescura.json"),
+	`${JSON.stringify(
+		{
+			lastAutoRunAt: lastRun?.date ?? null,
+			generatedAt: manifest.generatedAt,
+			sources: lastOk,
+		},
+		null,
+		2,
+	)}\n`,
 );
 
 // Índice descriptivo de /datos/: cada fichero con su digest, bytes y esquema.
@@ -412,6 +446,12 @@ writeFileSync(
 					schema: "schemas/condiciones-definitorias.schema.json",
 					description:
 						"Capa de presentación: requisito que define la situación de cada ayuda y su texto «solo si…» (no cambia veredictos)",
+				},
+				{
+					file: "frescura.json",
+					schema: "(frescura automática)",
+					description:
+						"Última revisión automática de fuentes: fecha de la última corrida y última revalidación correcta por fuente (data/freshness/runs.jsonl)",
 				},
 			]),
 		},

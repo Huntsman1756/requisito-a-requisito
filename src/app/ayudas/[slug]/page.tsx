@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -40,6 +42,26 @@ function load(slug: string): { rs: Rs; other: Rs[] } | null {
 	return loadVersion<Rs>(slug, today);
 }
 
+// Última revalidación correcta por fuente (frescura.json, del build): la
+// ficha muestra «Fuente revisada automáticamente: <fecha>» por cada fuente.
+function sourceFreshness(): Record<string, string> {
+	try {
+		return (
+			JSON.parse(
+				readFileSync(
+					join(
+						process.cwd(),
+						"public/datos/elegibilidad/frescura.json",
+					),
+					"utf8",
+				),
+			) as { sources?: Record<string, string> }
+		).sources ?? {};
+	} catch {
+		return {};
+	}
+}
+
 export function generateStaticParams() {
 	return listBenefitSlugs().map((slug) => ({ slug }));
 }
@@ -64,12 +86,13 @@ export default async function Ficha({
 
 	const w = rs.application.window;
 	const src = (id: string) => rs.sources.find((s) => s.id === id);
+	const fresh = sourceFreshness();
 
 	return (
 		<article className="shell" aria-labelledby="titulo">
 			<h1 id="titulo">{aidTitle(slug)}</h1>
 			<p className="lede">
-				{formatWindow(w)} · Verificado con la fuente el{" "}
+				{formatWindow(w)} · Regla verificada con la fuente:{" "}
 				{new Date(rs.verifiedAt).toLocaleDateString("es-ES", {
 					day: "numeric",
 					month: "long",
@@ -182,6 +205,17 @@ export default async function Ficha({
 								s.url.replace(/^https?:\/\//, "").split("/")[0] ||
 								"Fuente oficial"}
 						</a>
+						{fresh[s.id] && (
+							<span className="note">
+								{" "}
+								· Fuente revisada automáticamente:{" "}
+								{new Date(fresh[s.id]).toLocaleDateString("es-ES", {
+									day: "numeric",
+									month: "long",
+									year: "numeric",
+								})}
+							</span>
+						)}
 					</li>
 				))}
 			</ul>

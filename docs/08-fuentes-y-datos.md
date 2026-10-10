@@ -92,6 +92,11 @@ de ecosistema (30%).
     en `sessionStorage` y el perfil local **con consentimiento explícito**
     (`mb_user_profile`, `localStorage`). Si el usuario no lo ha aceptado, nada en
     `localStorage`. Botón visible «Borrar mis respuestas», que limpia ambos.
+  - **Preferencia de vista, no del perfil:** el tema claro/oscuro/automático
+    se guarda en `localStorage` como `rr_theme`. No contiene ningún dato del
+    perfil, nunca se envía (no hay telemetría, URL ni cookies que la
+    transporten) y «Borrar mis respuestas» no la toca: borra el perfil, no
+    la vista. El test de privacidad exige que toda clave local sea `rr_*`.
   - El «share hash» explícito existente **no** se habilita para las respuestas del
     orientador en esta entrega (riesgo de compartir datos sensibles sin querer).
   - Al portar: las bandas gruesas del donante (`ageGroup` joven/adulto/senior,

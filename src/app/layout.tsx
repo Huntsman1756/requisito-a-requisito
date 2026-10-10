@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import type { ReactNode } from "react";
+import { ThemePicker } from "../components/ThemePicker";
+import { formatDateEs } from "../lib/format";
 import "./globals.css";
 
 const CSP = [
@@ -61,11 +65,38 @@ export const metadata: Metadata = {
 		"Ayudas públicas en la Comunidad de Madrid, comprobadas con la fuente oficial. Cada afirmación enlaza al texto oficial.",
 };
 
+// Última revisión automática de fuentes (data/freshness/runs.jsonl →
+// frescura.json, publicado en el build). Si no hay corrida, no hay fecha —
+// el pie muestra el texto sin inventarla.
+function lastSourceCheck(): string | null {
+	try {
+		const f = JSON.parse(
+			readFileSync(
+				join(process.cwd(), "public/datos/elegibilidad/frescura.json"),
+				"utf8",
+			),
+		) as { lastAutoRunAt?: string | null };
+		return f.lastAutoRunAt ?? null;
+	} catch {
+		return null;
+	}
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
+	const lastCheck = lastSourceCheck();
 	return (
-		<html lang="es">
+		<html lang="es" suppressHydrationWarning>
 			<head>
 				<meta httpEquiv="Content-Security-Policy" content={CSP} />
+				{/* Tema de vista (rr_theme, solo localStorage — nunca se envía):
+					se aplica antes del primer pintado para que no haya parpadeo.
+					La CSP actual permite 'unsafe-inline' en script-src. */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html:
+							'try{var t=localStorage.getItem("rr_theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}',
+					}}
+				/>
 				{/* F10-PERF: precarga de las fuentes del primer pintado — con
 					font-display:swap el LCP del texto saltaba a ~3,4 s cuando
 					llegaba el woff2 (Lighthouse móvil). */}
@@ -104,10 +135,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 						<nav className="site-nav site-nav--wide" aria-label="Principal">
 							<NavLinks />
 						</nav>
+						<div className="theme-slot--wide">
+							<ThemePicker />
+						</div>
 						<details className="nav-menu">
 							<summary>Menú</summary>
 							<nav className="site-nav" aria-label="Principal">
 								<NavLinks />
+								<ThemePicker />
 							</nav>
 						</details>
 					</div>
@@ -130,6 +165,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							Requisito a Requisito · proyecto ciudadano independiente · código
 							y reglas abiertos
 						</span>
+						{lastCheck && (
+							<span>
+								Última revisión automática de fuentes:{" "}
+								{formatDateEs(lastCheck)}
+							</span>
+						)}
 						<span>No somos una administración pública.</span>
 					</div>
 				</footer>
