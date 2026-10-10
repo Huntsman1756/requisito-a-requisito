@@ -71,3 +71,43 @@ fecha o el commit (docs/12 §6). Solo se toman patrones: nada de código, textos
 | **ACCESS NYC** | Preguntas mínimas, lenguaje claro y cómo solicitar | Ya está en docs/15 y en ADR-041 | Ya cubierto |
 | **OpenFisca France** (AGPL) | Parámetros con fecha y escenarios reproducibles | Equivale a R8-VIG (`validFrom`/`validUntil`) y a `parameters.json` con fecha. Por la licencia AGPL, solo se estudia la arquitectura | Ya cubierto |
 | **Bank Branches AU**, **Cardinal (OCP)**, **Eurostat Big Data Hackathon 2025**, **EU Datathon 2022** | Mapas de servicios, indicadores de contratación y desigualdad ambiental | Están fuera del ámbito del producto (ADR-029) | No se adopta |
+
+## Revisión del 10/10: patrones de front de los buscadores de referencia (F10)
+
+Todas las páginas se consultaron el 10/10/2026. Solo se toman patrones:
+nada de código, textos ni CSS. Lo que ya estaba en el producto se marca
+«ya cubierto»; lo aplicable antes del 12/10 va en «aplicado»; el resto,
+«siguiente paso» (queda para la memoria).
+
+| Referencia | Patrones concretos | Qué hacemos |
+|---|---|---|
+| **GOV.UK** «Check benefits and financial support you can get» | 1) Aviso de alcance honesto antes de empezar («This tool does not include all the ways you can get help…»). 2) Un único CTA «Check what you can get». 3) Enlaza calculadoras de terceros en vez de reinventarlas | 1) y 3) ya cubierto (scope del Observatorio; enlazamos simuladores oficiales en la ficha, ADR-018). 2) refuerza la portada con dos caminos explícitos (comprobar vs explorar) — ya lo teníamos |
+| **USAGov** Benefit Finder | 1) Filtro por categorías vitales (casillas) como primera pantalla, antes de cualquier pregunta. 2) Par explícito «Apply selections / Clear selections» | 1) ya cubierto por los eventos vitales de /explorar/. 2) **aplicado**: botón «Limpiar filtros» visible solo con filtros activos (feedback 10/10) |
+| **ACCESS NYC** | 1) Doble entrada: «I'm not sure what I qualify for» (screener) vs «I know what benefits I need» (solicitud directa). 2) Coste anunciado arriba: «Get matched with up to 30 benefits in 5–10 minutes». 3) Newsletter de avisos de plazos | 1) ya cubierto (Comprobar vs Explorar). 2) **aplicado**: la portada dice «≤ 3 min»… verificar que el claim sigue medido; si no, quitarlo. 3) siguiente paso (aviso de plazos por correo requiere backend; aparcado) |
+| **mes-aides / 1jeune1solution** (Francia) | 1) Resultados ordenados por importe con el total estimado arriba. 2) Barra de progreso persistente entre preguntas. 3) Página-resumen «toutes mes aides» imprimible | 2) ya cubierto (progreso por pasos). 1) y 3) siguiente paso: ordenar resultados por un orden útil documentado (relevancia/plazo) y ofrecer una vista imprimible; el importe solo si la fuente lo respalda (MyFriendBen en la tabla de arriba) |
+| **Canada** Benefits Finder | 1) Filtros facetados por «tipo de ayuda» × «audiencia» explicando la lógica AND. 2) Nota de alcance honesta: «federal benefits only» con enlaces a buscadores provinciales. 3) «See all 157 results without filtering» — escape del cuestionario. 4) Aviso de estafas | 2) ya cubierto (marcamos CM/municipal/estatal por ámbito). 3) ya cubierto: /explorar/ lista todo sin filtrar. 1) los «perfiles» facetados encajan con nuestros filtros de tema/evento — ya cubierto. 4) siguiente paso (aviso de suplantación en /como-funciona/) |
+| **GetCalFresh** (Code for America) | 1) Remisión honesta: «You can't apply on this website» + enlace al portal oficial. 2) «Get support from a real person» — canal humano. 3) Guías por situación especial (estudiantes, inmigrantes, SSI) | 1) ya cubierto (cada tarjeta enlaza la sede oficial; nunca simulamos la solicitud). 2) no aplicable (no hay equipo humano; lo suplimos con /como-funciona/ y «qué te falta»). 3) siguiente paso: fichas-guía por evento vital |
+| **Payment and Service Finder** (Australia) | No se pudo abrir (la página exige JS y el acceso automatizado da timeout) | Anotado como pendiente; si no se puede consultar no se cita en la memoria |
+| **Buscador de la CM** (sede.comunidad.madrid) | 1) Facetas con recuento por valor (tema/tipo/perfil/consejería/estado). 2) «Borrar filtros» como reset global. 3) Urgencia por ficha: «Últimos días» + fechas de inicio/fin. 4) Requiere JS | 2) **aplicado** («Limpiar filtros»). 3) parcialmente cubierto: nivel 2 ya muestra estado de plazo; **aplicado** el énfasis en plazo en la ficha. 1) siguiente paso (recuento por faceta). 4) contraste para la memoria: nuestra web funciona sin JS salvo el asistente |
+| **Punto de Acceso General** (administracion.gob.es) | Índice de índices: la puerta única delega en sedes sectoriales | ya cubierto: cada fuente enlaza su sede oficial, no hacemos de meta-buscador de trámites |
+| **Simuladores de la Seguridad Social** (Tu Seguridad Social) | 1) Simulación sobre los datos reales del usuario (requiere certificado/cl@ve). 2) Informe PDF descargable del resultado. 3) Escenarios «qué pasa si» (adelantar/retrasar, cambiar bases) | ya cubierto por ADR-018 (la ficha enlaza el simulador oficial como acción principal; nunca competimos con él). 2) siguiente paso: exportar la comprobación a un texto descargable |
+| **Proyectos abiertos tipo benefit-finder** (OpenFisca, aides-jeunes, MyFriendBen, BenefitsBridge, ClaimIt) | Recopilados en las tablas anteriores | nada nuevo aplicable antes del 12/10; se mantienen las decisiones (estructurado > chatbot; sin perfil en URL; AGPL solo se estudia) |
+
+### Aplicado en esta sesión (pequeño y de bajo riesgo)
+
+- «Limpiar filtros» visible solo con filtros activos (USAGov / CM).
+- En móvil, filtros plegados en «Filtrar (N activos)» — el patrón de facets
+  colapsadas que usan ACCESS NYC y el buscador de la CM en pantallas
+  pequeñas.
+- «¿Seguir con tus respuestas o empezar de cero?» — el patrón
+  «continuar donde lo dejaste» que hacen mes-aides (guarda la simulación)
+  y GetCalFresh («For returning visitors»), pero **más estricto en
+  privacidad**: preguntar antes de reutilizar y ofrecer borrar.
+
+### Siguiente paso (anotado para la memoria, no para el 12/10)
+
+- Vista imprimible / descargable de la comprobación (mes-aides, seg-social).
+- Aviso anti-estafas y de suplantación en /como-funciona/ (Canada).
+- Recuento por faceta en los filtros de /explorar/ (CM, Canada).
+- Guías por situación especial (GetCalFresh); umbral citado visible en
+  resultados (PolicyEngine Cliff Watch — ya en la tabla de arriba).
