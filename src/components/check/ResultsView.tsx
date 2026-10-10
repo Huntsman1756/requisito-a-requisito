@@ -15,7 +15,7 @@ type Question = QuestionCatalog["questions"][number];
 import { aidTitle, humanizeSlugs } from "../../lib/aid-titles";
 import type { CheckData } from "../../lib/check-data";
 import { es, type I18nKey, t } from "../../lib/i18n/es";
-import { formatDateEs, formatAmount } from "../../lib/format";
+import { formatDateEs, formatDateEsShort, formatAmount } from "../../lib/format";
 import { matchLevel2 } from "../../lib/level2";
 import {
 	notEvaluableNow,
@@ -1034,21 +1034,13 @@ function ResultCard({
 						rs.panelReview?.status !== "approved" &&
 						" · revisión final pendiente"}{" "}
 					· {rs.sources[0] ? domainBadge(rs.sources[0].url) : ""} ·{" "}
-					{t("card.verifiedAt", { date: formatDateEs(ev.verifiedAt) })}
+					{t("card.verifiedAt", { date: formatDateEsShort(ev.verifiedAt) })}
 					{rs.sources[0] && fresh[rs.sources[0].id] && (
 						<>
 							{" · "}
 							{t("card.sourceCheckedAt", {
-								date: formatDateEs(fresh[rs.sources[0].id]),
+								date: formatDateEsShort(fresh[rs.sources[0].id]),
 							})}
-						</>
-					)}
-					{!compact && (
-						<>
-							{" · "}
-							<Link href={`/ayudas/${ev.benefitSlug}`}>
-								{t("card.fullDetail")}
-							</Link>
 						</>
 					)}
 				</span>

@@ -312,7 +312,7 @@ legend, .question__title { font: 800 clamp(1.3rem, 2.6vw, 1.7rem)/1.2 var(--f-di
 .cite-meta { font: 400 .8rem var(--f-mono); color: var(--ink-2); margin-top: .3rem; overflow-wrap: anywhere }
 .cite blockquote { margin: .5rem 0 0; padding: .6rem .9rem; border-left: 3px solid var(--seal); background: var(--tint); font-size: .95rem; overflow-wrap: break-word }
 .card-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .8rem; padding-bottom: .3rem }
-.card-foot { border-top: 1px solid var(--rule); padding-block: .55rem; margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font: 400 .82rem var(--f-mono); color: var(--ink-2) }
+.card-foot { border-top: 1px solid var(--rule); padding-block: .4rem; margin-top: .5rem; display: flex; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; font: 400 .72rem/1.3 var(--f-mono); color: var(--ink-2) }
 .nocumple { opacity: .75 }
 /* F10-RES: grupos de resultados — separación visible entre «encaja»,
  * «posible con pocas incógnitas», «no se puede descartar» (plegada) y

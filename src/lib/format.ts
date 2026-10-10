@@ -22,6 +22,15 @@ export function formatDateEs(iso: string): string {
 	return `${Number(d)} de ${MONTHS[Number(mo) - 1]} de ${y}`;
 }
 
+/** Variante corta («5 oct 2026») para metadatos en espacios estrechos
+ *  (pie de las tarjetas de resultados). */
+export function formatDateEsShort(iso: string): string {
+	const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+	if (!m) return iso;
+	const [, y, mo, d] = m;
+	return `${Number(d)} ${MONTHS[Number(mo) - 1].slice(0, 3)} ${y}`;
+}
+
 export function formatWindow(w: {
 	rolling: boolean;
 	opensAt?: string;
