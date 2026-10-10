@@ -9,7 +9,7 @@ import {
 	extractItems,
 	type PanelItem,
 } from "../../scripts/review-panel/items";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { RuleSet } from "../../src/lib/eligibility-engine/schema";
 
@@ -71,7 +71,11 @@ describe("panel: agregación determinista (docs/17 §5)", () => {
 	});
 });
 
-describe("panel: runPanel con respuestas simuladas (sin red)", () => {
+// D-14: `prompts/` vive en el taller privado; en el clone público/CI estos
+// tests se omiten marcados skipped (explícito, no en silencio).
+const hasPrompts = existsSync(join(process.cwd(), "prompts/panel-v1.md"));
+
+describe.skipIf(!hasPrompts)("panel: runPanel con respuestas simuladas (sin red)", () => {
 	it("todas PASS ⇒ ruleset aprobado; una duda ⇒ escalado", async () => {
 		const items: PanelItem[] = [
 			{ ...item, ruleSlug: "buena", itemId: "r1" },
