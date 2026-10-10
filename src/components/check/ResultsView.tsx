@@ -775,7 +775,7 @@ function ResultCard({
 				<DeadlinePill ev={ev} />
 			</p>
 			<h2>
-				{aidTitle(ev.benefitSlug)}{" "}
+				<Link href={`/ayudas/${ev.benefitSlug}`}>{aidTitle(ev.benefitSlug)}</Link>{" "}
 				<span className={pill}>{encaja(rs, ev, condMap[ev.benefitSlug]) ? "Encaja" : key(`verdict.${ev.verdict}`)}</span>
 			</h2>
 			{rs.versionNote && (
