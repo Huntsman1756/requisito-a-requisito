@@ -1,0 +1,138 @@
+{
+  "fecha": "2026-10-10",
+  "memoria": "submission/memoria.md",
+  "comentario": "Acumula veracidad del 08/10 con cifras medidas el 10/10 (cifras.json regenerado por memoria:cifras). Nuevas: catálogo municipal nivel 2 y frescura por fuente.",
+  "claims": [
+    {
+      "texto": "50 programas comprobados requisito a requisito (52 RuleSets)",
+      "evidencia": "cifras.json: rulesetsEnBundle=52, programasNivel1=50 (los 2 ficheros __v-2026-10-23 son versiones futuras de dependencia)",
+      "ok": true
+    },
+    {
+      "texto": "18 del Estado, 24 de la CM y 8 municipales",
+      "evidencia": "clasificación por fuente sobre los 50 slugs (evidence/2026-10-06-F7/veracidad.json; recuento por registry: 8 municipales + 24 CM + 18 estatales)",
+      "ok": true
+    },
+    {
+      "texto": "441 programas del universo clasificados aptos, 778 rechazados con motivo",
+      "evidencia": "cifras.json: universoAptos=441, universoRechazados=778 (data/universe/)"
+    },
+    {
+      "texto": "419 fichas publicadas en el nivel 2",
+      "evidencia": "cifras.json: fichasNivel2=419; estados OPEN 39 / ROLLING 31 / CLOSED 329 / UNKNOWN 20"
+    },
+    {
+      "texto": "166 fuentes oficiales registradas, 145 citadas en el bundle",
+      "evidencia": "cifras.json: fuentesRegistradas=166, fuentesEnBundle=145",
+      "ok": true
+    },
+    {
+      "texto": "116 requisitos modelados / 416 uncovered",
+      "evidencia": "suma de requirements/uncoveredRequirements sobre data/eligibility/rules/*.json",
+      "ok": true
+    },
+    {
+      "texto": "601 pruebas automáticas en verde",
+      "evidencia": "cifras.json: testsTotal=601, testsPassed=601, testFiles=51 (vitest 10/10)"
+    },
+    {
+      "texto": "155 enlaces del producto verificados el 8/10 (0 fallidos)",
+      "evidencia": "npm run link-check → 155 URLs, 0 fallidas; cifras.json urlsCitadasEnBundle=155",
+      "ok": true
+    },
+    {
+      "texto": "Firefox y WebKit E2E en CI sobre build normal, run 37823319781; release estricta pendiente en estos motores",
+      "evidencia": ".github/workflows/e2e-browsers.yml ejecuta npm run build; gh run list confirma success del run 37823319781. Matriz local previa en fiabilidad.md §6 y qa-release.md; reflow 320 px en playwright.config.ts",
+      "ok": true
+    },
+    {
+      "texto": "axe 0 violaciones serious/critical en las 5 páginas × 9 proyectos",
+      "evidencia": "tests/e2e/a11y.spec.ts verde; corrección de contraste documentada en capturas-v2",
+      "ok": true
+    },
+    {
+      "texto": "238 mutantes dirigidos, 0 supervivientes sin explicar",
+      "evidencia": "eligibility:mutate → 238 mutantes × dominio exhaustivo, 0 sin explicar; 2 equivalentes pinneados (hard-flags.test.ts); evidence/2026-10-05-F3",
+      "ok": true
+    },
+    {
+      "texto": "175.451 perfiles exhaustivos sin violación de invariantes/monotonía/determinismo",
+      "evidencia": "npm run eligibility:exhaustive sobre bundle local y desplegado, 08/10 (fiabilidad.md §4)",
+      "ok": true
+    },
+    {
+      "texto": "RAI derogada 01/11/2024 (RDL 2/2024), retirada del nivel 1",
+      "evidencia": "ADR-045; evidence/2026-10-06-F5/auditoria-vigencia-R5-RAI.md",
+      "ok": true
+    },
+    {
+      "texto": "«Beca 6000» renombrada al programa real de la CM",
+      "evidencia": "verificacion-ola-1.md; madrid-becas-bachillerato-centros-privados",
+      "ok": true
+    },
+    {
+      "texto": "10 olas con ciclo autor ⇒ verificador ⇒ merge",
+      "evidencia": "verificacion-ola-1..10.md (+ ola 11 de re-verificación F10-REG)",
+      "ok": true
+    },
+    {
+      "texto": "Panel multimodelo: v1 99,1 % detección / 97,7 % falsas alarmas; v2 94,0 / 91,8 / 75,0 %",
+      "evidencia": "evidence/2026-10-06-panel/calibracion.md (311 casos) y evidence/2026-10-06-panel-v2/calibracion.md (327 casos) + agregacion-alternativas.md; ADR-050",
+      "ok": true
+    },
+    {
+      "texto": "F9 detectó la Ley 4/2026 (BOE-A-2026-20528) y retiró las 2 reglas de dependencia el mismo día",
+      "evidencia": "evidence/2026-10-06-F9/stale-ley-39-2006.md; re-autoría verificada en verificacion-ola-9.md",
+      "ok": true
+    },
+    {
+      "texto": "45 de las 166 fuentes registradas no alcanzables desde el CI; revalidadas en corrida local",
+      "evidencia": "data/freshness/runs.jsonl — corrida CI 07/10: 121 checked, 45 skipped, 0 errores; freshness-local 08/10: 43 comprobadas, 0 stale",
+      "ok": true
+    },
+    {
+      "texto": "auditoría de fiabilidad 08/10: fallo bloqueante corregido, veredicto «fiable»",
+      "evidencia": "evidence/2026-10-08-F10/fiabilidad.md; commits 4dcaac4, a26c8db; e2e producción 3/3",
+      "ok": true
+    },
+    {
+      "texto": "release strict fail-closed: 0/52 sin aprobaciones; 52/52 aplicando las hojas en copia",
+      "evidencia": "tests/eligibility/review-apply-real.test.ts (buildEligibility --strict sobre copia con las hojas marcadas) — el ensayo manual previo simulaba sin review:apply, corregido en fiabilidad.md §8",
+      "ok": true
+    },
+    {
+      "texto": "R8-VIG: la web muestra la redacción vigente y avisa del cambio del 23/10/2026",
+      "evidencia": "verificacion-r8vig.md + tests de frontera 22/23 de octubre; invariante I11",
+      "ok": true
+    },
+    {
+      "texto": "50 personas golden, 53 expectativas, 0 diferencias (local y bundle desplegado)",
+      "evidencia": "cifras.json: goldenPersonas=50, goldenExpectations=53"
+    },
+    {
+      "texto": "8 ayudas tienen requisitos que el cuestionario aún no comprueba (violencia de género, embarazo, dependencia de un familiar, viudedad…); se muestran como no descartables",
+      "evidencia": "evidence/2026-10-09-F10/resultados-para-daniel.md (R1–R8); decisión de no añadir preguntas/hojas antes del 16/10 en ADR-054",
+      "ok": true
+    },
+    {
+      "texto": "41 ayudas municipales en el universo (antes 22), 40 fichas de nivel 2 en 16 municipios y 5 mancomunidades",
+      "evidencia": "cifras.json: fichasNivel2Municipal=40, municipiosConFichas=21; desglose por municipio en evidence/2026-10-10-F10/catalogo-municipal.md",
+      "ok": true
+    },
+    {
+      "texto": "18 fuentes municipales verificadas con huella sha256 (18/18 respondieron 200 el 10/10/2026)",
+      "evidencia": "data/universe/municipal-seed.json (httpStatus, sha256, fetchedAt por entrada); nivel-2.json provenance",
+      "ok": true
+    },
+    {
+      "texto": "4 personas del barrido ven ayudas municipales nuevas (3 en Móstoles, 1 en Getafe)",
+      "evidencia": "evidence/2026-10-10-F10/catalogo-municipal.md §relevancia; municipios de tests/fixtures/personas.mjs",
+      "ok": true
+    },
+    {
+      "texto": "La frescura por fuente publicada (frescura.json) coincide con data/freshness/runs.jsonl",
+      "evidencia": "tests/frescura.test.ts (4 tests: lastAutoRunAt, por fuente, fuentes.json, fechas reales)",
+      "ok": true
+    }
+  ]
+}

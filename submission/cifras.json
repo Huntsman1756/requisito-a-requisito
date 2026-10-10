@@ -1,23 +1,25 @@
 {
-  "at": "2026-10-09",
+  "at": "2026-10-10",
   "rulesetsEnBundle": 52,
   "programasNivel1": 50,
-  "referenceDateBundle": "2026-10-09",
+  "referenceDateBundle": "2026-10-10",
   "fuentesEnBundle": 145,
   "fuentesRegistradas": 166,
   "urlsCitadasEnBundle": 155,
-  "universoAptos": 421,
-  "universoRechazados": 779,
-  "fichasNivel2": 401,
+  "universoAptos": 441,
+  "universoRechazados": 778,
+  "fichasNivel2": 419,
   "nivel2Estados": {
-    "OPEN": 40,
-    "CLOSED": 328,
-    "UNKNOWN": 15,
-    "ROLLING": 18
+    "OPEN": 39,
+    "CLOSED": 329,
+    "ROLLING": 31,
+    "UNKNOWN": 20
   },
+  "fichasNivel2Municipal": 40,
+  "municipiosConFichas": 21,
   "goldenPersonas": 50,
   "goldenExpectations": 53,
-  "testFiles": 43,
-  "testsTotal": 556,
-  "testsPassed": 556
+  "testFiles": 51,
+  "testsTotal": 601,
+  "testsPassed": 601
 }

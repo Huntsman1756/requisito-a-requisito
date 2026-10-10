@@ -27,7 +27,7 @@ const bundle = read("public/datos/elegibilidad/bundle.json") as {
 	parameters: Record<string, unknown>;
 };
 const nivel2 = read("public/datos/elegibilidad/nivel-2.json") as {
-	items: { accessState?: string }[];
+	items: { accessState?: string; scope?: string; municipality?: string }[];
 };
 const universe = read("data/universe/programs.json") as {
 	programs: unknown[];
@@ -90,6 +90,10 @@ const cifras = {
 	universoRechazados: rejected.length,
 	fichasNivel2: nivel2.items.length,
 	nivel2Estados: access,
+	fichasNivel2Municipal: nivel2.items.filter((i) => i.scope === "municipal").length,
+	municipiosConFichas: new Set(
+		nivel2.items.map((i) => i.municipality).filter(Boolean),
+	).size,
 	goldenPersonas: goldenFiles.length,
 	goldenExpectations: expectations,
 	testFiles: tests.files,
